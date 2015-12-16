@@ -1,0 +1,39 @@
+//
+// @name Navigation bar
+// @description The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.
+//
+// @state .current - Indicates the currently active menu item
+//
+// @markup
+// <nav class="navbar">
+//     <div class="container">
+//         <div class="grid">
+//             <div class="grid-sm-12">
+//                 <ul class="nav nav-justify">
+//                     <li><a href="#">Home</a></li>
+//                     <li><a href="#">Link 1</a></li>
+//                     <li><a href="#">Link 2</a></li>
+//                     <li><a href="#">Link 3</a></li>
+//                 </ul>
+//             </div>
+//         </div>
+//     </div>
+// </nav>
+//
+
+
+.navbar {
+    background-color: $palette-red-4;
+    font-size: 1.15rem;
+
+    a {
+        display: block;
+        padding: 16px 0;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

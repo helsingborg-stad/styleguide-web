@@ -1,0 +1,30 @@
+<section>
+    <h2 class="underline">{{ name }}</h2>
+
+    {% if description %}
+        <p>{{ description }}</p>
+    {% endif %}
+
+    {% if state %}
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            {% if state|length > 1 %}
+                {% for s in state %}
+                    <li><code>{{ s.name }}</code> - {{ s.description }}</li>
+                {% endfor %}
+            {% else %}
+                <li><code>{{ state.name }}</code> - {{ state.description }}</li>
+            {% endif %}
+        </ul>
+    </aside>
+    {% endif %}
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+            {{ markup.example | safe }}
+        </div>
+        <pre><code class="html">{{ markup.escaped }}</code></pre>
+    </div>
+</section>

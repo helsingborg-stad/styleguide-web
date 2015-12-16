@@ -1,0 +1,94 @@
+//
+// @name Stripe
+// @description The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it's only for demonstration purpose.
+//
+// @markup
+// <div class="stripe">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>
+//
+// <div class="stripe stripe-red">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>
+//
+// <div class="stripe stripe-blue">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>
+//
+// <div class="stripe stripe-green">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>
+//
+// <div class="stripe stripe-purple">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>
+//
+
+@mixin stripe($color-1: $palette-red-1, $color-2: $palette-red-2, $color-3: $palette-red-3, $color-4: $palette-red-4, $color-5: $palette-red-5) {
+    div {
+        width: 100%;
+        height: (100% / 5);
+    }
+
+    div:nth-child(1) {
+        background-color: $color-1;
+    }
+
+    div:nth-child(2) {
+        background-color: $color-2;
+    }
+
+    div:nth-child(3) {
+        background-color: $color-3;
+    }
+
+    div:nth-child(4) {
+        background-color: $color-4;
+    }
+
+    div:nth-child(5) {
+        background-color: $color-5;
+    }
+}
+
+.stripe {
+    @include stripe(#7b7b7b, #959595, #afafaf, #cacaca, #e5e5e5);
+    width: 25px;
+    height: 100%;
+}
+
+.stripe-red {
+    @include stripe;
+}
+
+.stripe-blue {
+    @include stripe($palette-blue-1, $palette-blue-2, $palette-blue-3, $palette-blue-4, $palette-blue-5);
+}
+
+.stripe-green {
+    @include stripe($palette-green-1, $palette-green-2, $palette-green-3, $palette-green-4, $palette-green-5);
+}
+
+.stripe-purple {
+    @include stripe($palette-purple-1, $palette-purple-2, $palette-purple-3, $palette-purple-4, $palette-purple-5);
+}

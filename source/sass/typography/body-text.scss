@@ -1,0 +1,22 @@
+//
+// @name Body text
+//
+// @markup
+// <article>
+//      <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>
+//      <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>
+//      <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>
+// </article>
+//
+
+article {
+    p {
+        & + p {
+            margin-top: 15px;
+        }
+    }
+}
+
+strong {
+    font-weight: bold;
+}

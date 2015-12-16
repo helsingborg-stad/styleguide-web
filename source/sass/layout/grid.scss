@@ -1,0 +1,126 @@
+//
+// @name Grid
+// @description HbgPrime's grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.
+//
+// @markup
+// <div class="grid grid-example">
+//     <div class="grid-md-3">grid-md-3</div>
+//     <div class="grid-md-9">grid-md-9</div>
+// </div>
+//
+
+// *
+// * 1. Grid container/row
+// * 2. Grid columns
+// *
+
+// ***************************************************************
+// *** 1. Grid container/row
+// ***************************************************************
+.grid {
+    width: auto;
+    @extend .clearfix;
+
+    @media #{$screen-xs} {
+        .grid {
+            margin-left: -($grid-gutter-xs / 2);
+            margin-right: -($grid-gutter-xs / 2);
+        }
+    }
+
+    @media #{$screen-sm} {
+        .grid {
+            margin-left: -($grid-gutter-sm / 2);
+            margin-right: -($grid-gutter-sm / 2);
+        }
+    }
+
+    @media #{$screen-md} {
+        .grid {
+            margin-left: -($grid-gutter-md / 2);
+            margin-right: -($grid-gutter-md / 2);
+        }
+    }
+
+    @media #{$screen-lg} {
+        .grid {
+            margin-left: -($grid-gutter-lg / 2);
+            margin-right: -($grid-gutter-lg / 2);
+        }
+    }
+}
+
+// ***************************************************************
+// *** 2. Grid columns
+// ***************************************************************
+
+// X-Small screens
+@media #{$screen-xs-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-xs-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Small screens
+@media #{$screen-sm-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-sm-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Medium screens
+@media #{$screen-md-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-md-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Large screens and up
+@media #{$screen-lg-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-lg-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// General
+[class*="grid-"] {
+    padding-left: $grid-gutter-xs / 2;
+    padding-right: $grid-gutter-xs / 2;
+
+    @media #{$screen-sm} {
+        padding-left: $grid-gutter-sm / 2;
+        padding-right: $grid-gutter-sm / 2;
+    }
+
+    @media #{$screen-md} {
+        padding-left: $grid-gutter-md / 2;
+        padding-right: $grid-gutter-md / 2;
+    }
+
+    @media #{$screen-lg} {
+        padding-left: $grid-gutter-lg / 2;
+        padding-right: $grid-gutter-lg / 2;
+    }
+}
+
+.grid-example [class*="grid-"] {
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    overflow: hidden;
+}

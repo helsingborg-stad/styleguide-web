@@ -1,0 +1,555 @@
+<!doctype html>
+<html class="no-js" lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HbgPrime</title>
+    <meta name="description" content="HbgPrime is the official css bootstrap of Helsingborg Stad">
+
+    <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/hbg-prime.dev.css">
+
+    <style>
+        body {
+            margin: 60px 0;
+        }
+
+        #main-menu {
+            margin-top: 20px;
+        }
+
+        section + section {
+            margin-top: 30px;
+        }
+
+        .states li + li {
+            margin-top: 8px;
+        }
+
+        .navbar {
+            padding: 0 20px;
+        }
+
+        .nav-aside {
+            max-width: 350px;
+        }
+
+        .stripe {
+            height: 400px;
+        }
+
+        .stripe {
+            display: inline-block;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+        document.createElement('hgroup');
+    </script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <noscript>
+        <style>
+            .alert-noscript {display: block !important;}
+        </style>
+    </noscript>
+</head>
+<body id="style-guide">
+    <div class="container">
+        <div class="grid">
+            <div class="grid-md-3">
+                <nav id="main-menu">
+                    <ul class="nav-aside">
+                        <li><a href="#">Scaffolding</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">Grid</a></li>
+                        <li><a href="#">Stripe</a></li>
+                        <li><a href="#">Navigation</a></li>
+                        <li><a href="#">Button</a></li>
+                        <li><a href="#">Utility</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="grid-md-9">
+                <section>
+    <h2 class="underline">Container</h2>
+
+    
+        <p>A container with a maximum width of <code>$screen-lg-max</code></p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+            <div class="container"></div>
+        </div>
+        <pre><code class="html">&lt;div class="container"&gt;&lt;/div&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Grid</h2>
+
+    
+        <p>HbgPrime's grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <div class="grid grid-example">
+     <div class="grid-md-3">grid-md-3</div>
+     <div class="grid-md-9">grid-md-9</div>
+ </div>
+        </div>
+        <pre><code class="html"> &lt;div class="grid grid-example"&gt;
+     &lt;div class="grid-md-3"&gt;grid-md-3&lt;/div&gt;
+     &lt;div class="grid-md-9"&gt;grid-md-9&lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Body text</h2>
+
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <article>
+      <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>
+      <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>
+      <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>
+ </article>
+        </div>
+        <pre><code class="html"> &lt;article&gt;
+      &lt;p&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;
+      &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;
+      &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;
+ &lt;/article&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Headings</h2>
+
+    
+        <p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>
+    
+
+    
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            
+                
+                    <li><code>.highlight</code> - Will highlight any heading in the current theme color</li>
+                
+                    <li><code>.underline</code> - Underlines the heading</li>
+                
+            
+        </ul>
+    </aside>
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <h1>Heading 1</h1>
+ <h2>Heading 2</h2>
+ <h3>Heading 3</h3>
+ <h4>Heading 4</h4>
+        </div>
+        <pre><code class="html"> &lt;h1&gt;Heading 1&lt;/h1&gt;
+ &lt;h2&gt;Heading 2&lt;/h2&gt;
+ &lt;h3&gt;Heading 3&lt;/h3&gt;
+ &lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Clearfix</h2>
+
+    
+        <p>Used to clear floats.</p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+            <div class="clearfix"></div>
+        </div>
+        <pre><code class="html">&lt;div class="clearfix"&gt;&lt;/div&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Underline</h2>
+
+    
+        <p>Underlines text</p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+            <span class="underline">Underlined</span>
+        </div>
+        <pre><code class="html">&lt;span class="underline"&gt;Underlined&lt;/span&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Button</h2>
+
+    
+        <p>Buttons</p>
+    
+
+    
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            
+                
+                    <li><code>:disabled</code> - Disabled button</li>
+                
+                    <li><code>.btn-sm</code> - Small button</li>
+                
+                    <li><code>.btn-lg</code> - Large button</li>
+                
+                    <li><code>.btn-submit</code> - Submit button</li>
+                
+            
+        </ul>
+    </aside>
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <button class="btn">Default button</button>
+ <button class="btn btn-submit">Submit button</button>
+ <button class="btn btn-lg btn-submit">Large submit button</button>
+        </div>
+        <pre><code class="html"> &lt;button class="btn"&gt;Default button&lt;/button&gt;
+ &lt;button class="btn btn-submit"&gt;Submit button&lt;/button&gt;
+ &lt;button class="btn btn-lg btn-submit"&gt;Large submit button&lt;/button&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Breadcrumbs</h2>
+
+    
+        <p>Breadcrumbs</p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <ul class="breadcrumbs">
+     <li><a href="#">Parent node</a></li>
+     <li><a href="#">First child node</a></li>
+     <li>Current node</li>
+ </ul>
+        </div>
+        <pre><code class="html"> &lt;ul class="breadcrumbs"&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Parent node&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#"&gt;First child node&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;Current node&lt;/li&gt;
+ &lt;/ul&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Navigation</h2>
+
+    
+        <p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>
+    
+
+    
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            
+                
+                    <li><code>.has-children</code> - Indicates if a menu item has children (sub menu)</li>
+                
+                    <li><code>.current-node</code> - Indicates the currently active parent node</li>
+                
+                    <li><code>.current</code> - Indicates currently active menu item</li>
+                
+            
+        </ul>
+    </aside>
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <nav>
+     <ul class="nav-aside">
+         <li><a href="#">Link 1</a></li>
+         <li class="has-children"><a href="#">Link 2</a></li>
+         <li class="current-node has-children">
+             <a href="#">Link 3</a>
+             <ul class="sub-menu">
+                 <li><a href="#">Sublink 1</a></li>
+                 <li class="current"><a href="#">Sublink 2</a></li>
+                 <li><a href="#">Sublink 3</a></li>
+             </ul>
+         </li>
+         <li><a href="#">Link 4</a></li>
+     </ul>
+ </nav>
+        </div>
+        <pre><code class="html"> &lt;nav&gt;
+     &lt;ul class="nav-aside"&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+         &lt;li class="has-children"&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+         &lt;li class="current-node has-children"&gt;
+             &lt;a href="#"&gt;Link 3&lt;/a&gt;
+             &lt;ul class="sub-menu"&gt;
+                 &lt;li&gt;&lt;a href="#"&gt;Sublink 1&lt;/a&gt;&lt;/li&gt;
+                 &lt;li class="current"&gt;&lt;a href="#"&gt;Sublink 2&lt;/a&gt;&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="#"&gt;Sublink 3&lt;/a&gt;&lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/nav&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Navigation bar</h2>
+
+    
+        <p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>
+    
+
+    
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            
+                <li><code>.current</code> - Indicates the currently active menu item</li>
+            
+        </ul>
+    </aside>
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <nav class="navbar">
+     <div class="container">
+         <div class="grid">
+             <div class="grid-sm-12">
+                 <ul class="nav nav-justify">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Link 1</a></li>
+                     <li><a href="#">Link 2</a></li>
+                     <li><a href="#">Link 3</a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </nav>
+        </div>
+        <pre><code class="html"> &lt;nav class="navbar"&gt;
+     &lt;div class="container"&gt;
+         &lt;div class="grid"&gt;
+             &lt;div class="grid-sm-12"&gt;
+                 &lt;ul class="nav nav-justify"&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+     &lt;/div&gt;
+ &lt;/nav&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Navigation tabs</h2>
+
+    
+        <p>Horizontal navigation tabs</p>
+    
+
+    
+    <aside class="states">
+        <h3>Modifiers and states</h3>
+        <ul class="states">
+            
+                <li><code>.current</code> - The currently active tab</li>
+            
+        </ul>
+    </aside>
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <nav>
+     <ul class="nav nav-tabs">
+         <li><a href="#">Tab 1</a></li>
+         <li><a href="#">Tab 2</a></li>
+         <li><a href="#">Tab 3</a></li>
+     </ul>
+ </nav>
+        </div>
+        <pre><code class="html"> &lt;nav&gt;
+     &lt;ul class="nav nav-tabs"&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/nav&gt;</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2 class="underline">Stripe</h2>
+
+    
+        <p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it's only for demonstration purpose.</p>
+    
+
+    
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="markup-preview">
+             <div class="stripe">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+ <div class="stripe stripe-red">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+ <div class="stripe stripe-blue">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+ <div class="stripe stripe-green">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+ <div class="stripe stripe-purple">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+        </div>
+        <pre><code class="html"> &lt;div class="stripe"&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="stripe stripe-red"&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="stripe stripe-blue"&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="stripe stripe-green"&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="stripe stripe-purple"&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+     &lt;div&gt;&lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+    </div>
+</section>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+
+    <script>
+        $(function(){
+            $('pre code').each(function(){
+                var lines = $(this).text().split('\n').length - 1;
+                var $numbering = $('<ul/>').addClass('line-numbers');
+
+                $(this)
+                    .addClass('has-numbering')
+                    .parent()
+                    .prepend($numbering);
+
+                for (i = 1; i <= lines + 1; i++){
+                    $numbering.append($('<li/>').text(i));
+                }
+            });
+
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+</body>
+</html>

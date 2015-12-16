@@ -1,0 +1,48 @@
+.markup-preview {
+    border: 1px solid $creamy-darker;
+    border-bottom: 0;
+    padding: 1em;
+    box-shadow: inset 0 0 10px rgba(#000, .1);
+}
+
+pre {
+    position: relative;
+    overflow: auto;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    font-size: 1em;
+    line-height: 130%;
+
+    .line-numbers {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        padding: .6em;
+        text-align: center;
+        background-color: lighten($creamy-darker, 3%);
+        border-right: 1px solid $creamy-darker;
+        font-size: .8em;
+    }
+
+    code {
+        background: transparent;
+    }
+
+    code.has-numbering {
+        margin-left: 40px;
+    }
+}
+
+code {
+    font-family: $code-font-family;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    padding: 3px 6px;
+}
+
+.hljs {
+    background-color: transparent;
+    border: none;
+}

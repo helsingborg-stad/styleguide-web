@@ -1,0 +1,55 @@
+//
+// @name Button
+// @description Buttons
+//
+// @state :disabled - Disabled button
+// @state .btn-sm - Small button
+// @state .btn-lg - Large button
+// @state .btn-submit - Submit button
+//
+// @markup
+// <button class="btn">Default button</button>
+// <button class="btn btn-submit">Submit button</button>
+// <button class="btn btn-lg btn-submit">Large submit button</button>
+//
+
+
+// ***************************************************************
+// *** 1. Button base
+// ***************************************************************
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    background-color: $creamy-darker;
+    border: none;
+    font-size: .9em;
+    color: $base-font-color;
+    text-decoration: none;
+
+    &:active {
+        box-shadow: inset 0 0 8px rgba(#000, .2);
+    }
+}
+
+// ***************************************************************
+// *** 2. Button size
+// ***************************************************************
+.btn-sm {
+    padding: 3px 6px;
+    font-size: .8em;
+}
+
+.btn-lg {
+    padding: 8px 13px;
+    font-size: 1.1em;
+}
+
+// ***************************************************************
+// *** 3. Button types
+// ***************************************************************
+.btn-submit {
+    background-color: $palette-red-3;
+    color: #fff;
+    border: none;
+}

@@ -1,0 +1,117 @@
+//
+// @name Navigation
+// @description Vertical navigation a.k.a sidebar navigation with nestled sub menu support.
+//
+// @state .has-children - Indicates if a menu item has children (sub menu)
+// @state .current-node - Indicates the currently active parent node
+// @state .current - Indicates currently active menu item
+//
+// @markup
+// <nav>
+//     <ul class="nav-aside">
+//         <li><a href="#">Link 1</a></li>
+//         <li class="has-children"><a href="#">Link 2</a></li>
+//         <li class="current-node has-children">
+//             <a href="#">Link 3</a>
+//             <ul class="sub-menu">
+//                 <li><a href="#">Sublink 1</a></li>
+//                 <li class="current"><a href="#">Sublink 2</a></li>
+//                 <li><a href="#">Sublink 3</a></li>
+//             </ul>
+//         </li>
+//         <li><a href="#">Link 4</a></li>
+//     </ul>
+// </nav>
+//
+
+// ***************************************************************
+// *** 1. Sidebar navigation
+// ***************************************************************
+.nav-aside {
+    border: 1px solid $creamy-darker;
+
+    li {
+        position: relative;
+    }
+
+    li + li {
+        border-top: 1px solid $creamy-darker;
+    }
+
+    a {
+        display: block;
+        padding: 6px 10px;
+        font-size: 1rem;
+        color: $base-font-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $palette-red-4;
+        }
+    }
+
+    // Indicates if a item has children
+    .has-children {
+        > a::after {
+            position: absolute;
+            right: 10px;
+            top: 11px;
+            @include hbg-icon($icon-plus-square);
+            font-size: 1em;
+            color: $gray-light;
+        }
+    }
+
+    // Indicates currently active menu item that has children
+    .has-children.current,
+    .has-children.current-node {
+        > a::after {
+            position: absolute;
+            right: 12px;
+            top: 11px;
+            @include hbg-icon($icon-caret-down);
+            font-size: 1em;
+            color: $gray-light;
+        }
+    }
+
+    // Current
+    .current,
+    .current-node {
+        background-color: $creamy;
+    }
+
+    .current > a {
+        color: $palette-red-4;
+    }
+
+    .sub-menu .current > a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        bottom: 0;
+        width: 8px;
+        display: block;
+        background-color: $palette-red-4;
+    }
+
+    // Sub menu
+    .sub-menu {
+        background-color: $creamy;
+        border-top: 1px solid $creamy-darker;
+        border-left: 8px solid $creamy-darker;
+    }
+}
+
+// ***************************************************************
+// *** 2. Navigation modifiers
+// ***************************************************************
+.nav-justify {
+    display: table;
+    width: 100%;
+
+    li {
+        display: table-cell;
+    }
+}
