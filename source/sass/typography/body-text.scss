@@ -9,14 +9,98 @@
 // </article>
 //
 
-article {
-    p {
-        & + p {
-            margin-top: 15px;
-        }
-    }
-}
+$content-gutter: 15px; 
 
-strong {
-    font-weight: bold;
+article {
+	
+	strong, b {
+		font-weight: bold; 
+	}
+	
+	h1,h2,h3,h4,h5,h6,h7 {
+		line-height: 140%; 
+		padding-bottom: .5em; 
+		margin: 0; 
+		
+		&.heading {
+			line-height: 120%; 
+			color: #000; 
+			font-size: 2.4em; 
+		}
+	}
+	
+	ul,ol,p {
+		line-height: 170%; 
+		font-size: 1.02em; 
+		padding-bottom: 1em;
+		margin-bottom: 0;
+		&:last-child {
+			padding-bottom: 0; 
+		} 
+	}
+	
+	p + h2, p + h3,p + h4, p + h5, p + h6, p + h7,
+	ol + h2, ol + h3,ol + h4, ol + h5, ol + h6, ol + h7,
+	ul + h2, ul + h3,ul + h4, ul + h5, ul + h6, ul + h7,
+	blockquote +  h2, blockquote +  h3,blockquote +  h4, blockquote +  h5, blockquote +  h6, blockquote +  h7 {
+		padding-top: $content-gutter*2;
+	}
+	
+	h1 {
+		font-size: 1.8em; 
+	}
+	
+	h2 {
+		font-size: 1.4em; 
+	}
+	
+	h3 {
+		font-size: 1.3em; 
+	}
+	
+	h4 {
+		font-size: 1.2em; 
+	}
+	
+	h5 {
+		font-size: 1.1em; 
+	}
+	
+	h6 {
+		font-size: 1.1em; 
+	}
+	
+	h7 {
+		font-size: 1.1em; 
+	}
+	
+	blockquote {
+		border-left: 3px solid #ccc;
+		margin-bottom: $content-gutter;
+		padding: 20px 35px;
+		quotes: "\201C""\201D""\2018""\2019";
+	}
+	blockquote:before {
+		color: #ccc;
+		content: open-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+	
+	blockquote:after {
+		color: #ccc;
+		content: close-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-left: 0.25em;
+		vertical-align: -0.4em;
+	}
+	
+	blockquote p {
+		display: inline;
+		margin: 0; 
+	}
+	
 }
