@@ -1,6 +1,9 @@
 //
 // @name Navigation
 // @description Vertical navigation a.k.a sidebar navigation with nestled sub menu support.
+// @author Kristoffer Svanmark
+//
+// @page Navigation/Sidebar navigation
 //
 // @state .has-children - Indicates if a menu item has children (sub menu)
 // @state .current-node - Indicates the currently active parent node
@@ -113,5 +116,15 @@
 
     li {
         display: table-cell;
+    }
+}
+
+.nav-horizontal {
+    li {
+        display: inline-block;
+
+        & + li {
+            margin-left: 15px;
+        }
     }
 }

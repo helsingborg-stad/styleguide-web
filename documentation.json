@@ -1,0 +1,341 @@
+{
+ "nav": {
+  "layout": [
+   "container",
+   "grid"
+  ],
+  "other": [
+   "general"
+  ],
+  "buttons": [
+   "general"
+  ],
+  "stripe": [
+   "general"
+  ],
+  "navigation": [
+   "breadcrumbs",
+   "sidebar navigation",
+   "navbar",
+   "tabs"
+  ]
+ },
+ "pages": {
+  "layout": {
+   "container": [
+    {
+     "name": "Container",
+     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Container"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container\"></div>",
+       "path": "~/source/sass/layout/container.scss",
+       "example": "\n<div class=\"container\"></div>",
+       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "grid": [
+    {
+     "name": "Grid",
+     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Grid"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
+       "path": "~/source/sass/layout/grid.scss",
+       "example": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "other": {
+   "general": [
+    {
+     "name": "Body text",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "path": "~/source/sass/typography/body-text.scss",
+       "example": "\n<article>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;p&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;\n     &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;\n     &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    },
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "state": [
+      {
+       "name": ".highlight",
+       "escaped": "highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>",
+       "path": "~/source/sass/typography/headings.scss",
+       "example": "\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>",
+       "escaped": "\n&lt;h1&gt;Heading 1&lt;/h1&gt;\n&lt;h2&gt;Heading 2&lt;/h2&gt;\n&lt;h3&gt;Heading 3&lt;/h3&gt;\n&lt;h4&gt;Heading 4&lt;/h4&gt;"
+      }
+     ]
+    },
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats.</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/utility/clearfix.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    },
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"underline\">Underlined</span>",
+       "path": "~/source/sass/utility/underline.scss",
+       "example": "\n<span class=\"underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "buttons": {
+   "general": [
+    {
+     "name": "Button",
+     "description": "<p>Buttons</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "general"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-submit",
+       "escaped": "btn-submit",
+       "description": "Submit button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-submit\">Submit button</button>\n<button class=\"btn btn-lg btn-submit\">Large submit button</button>",
+       "path": "~/source/sass/component/button/button.scss",
+       "example": "\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-submit\">Submit button</button>\n<button class=\"btn btn-lg btn-submit\">Large submit button</button>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-submit\"&gt;Submit button&lt;/button&gt;\n&lt;button class=\"btn btn-lg btn-submit\"&gt;Large submit button&lt;/button&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "navigation": {
+   "breadcrumbs": [
+    {
+     "name": "Breadcrumbs",
+     "description": "<p>Indicate the current page&#39;s location within a navigational hierarchy using breadcrumbs.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Breadcrumbs"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Parent node</a></li>\n    <li><a href=\"#\">First child node</a></li>\n    <li>Current node</li>\n</ul>",
+       "path": "~/source/sass/component/navigation/breadcrumb.scss",
+       "example": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Parent node</a></li>\n    <li><a href=\"#\">First child node</a></li>\n    <li>Current node</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"breadcrumbs\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Parent node&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;First child node&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;Current node&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "sidebar navigation": [
+    {
+     "name": "Navigation",
+     "description": "<p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Sidebar navigation"
+      }
+     ],
+     "state": [
+      {
+       "name": ".has-children",
+       "escaped": "has-children",
+       "description": "Indicates if a menu item has children (sub menu)"
+      },
+      {
+       "name": ".current-node",
+       "escaped": "current-node",
+       "description": "Indicates the currently active parent node"
+      },
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Link 1</a></li>\n        <li class=\"has-children\"><a href=\"#\">Link 2</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Link 3</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Sublink 1</a></li>\n                <li class=\"current\"><a href=\"#\">Sublink 2</a></li>\n                <li><a href=\"#\">Sublink 3</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Link 4</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/nav.scss",
+       "example": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Link 1</a></li>\n        <li class=\"has-children\"><a href=\"#\">Link 2</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Link 3</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Sublink 1</a></li>\n                <li class=\"current\"><a href=\"#\">Sublink 2</a></li>\n                <li><a href=\"#\">Sublink 3</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Link 4</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav-aside\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Link 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"has-children\"&gt;&lt;a href=\"#\"&gt;Link 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"current-node has-children\"&gt;\n            &lt;a href=\"#\"&gt;Link 3&lt;/a&gt;\n            &lt;ul class=\"sub-menu\"&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Sublink 1&lt;/a&gt;&lt;/li&gt;\n                &lt;li class=\"current\"&gt;&lt;a href=\"#\"&gt;Sublink 2&lt;/a&gt;&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Sublink 3&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Link 4&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "navbar": [
+    {
+     "name": "Navigation bar",
+     "description": "<p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Navbar"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates the currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav class=\"navbar\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Home</a></li>\n                    <li><a href=\"#\">Link 1</a></li>\n                    <li><a href=\"#\">Link 2</a></li>\n                    <li><a href=\"#\">Link 3</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "path": "~/source/sass/component/navigation/navbar.scss",
+       "example": "\n<nav class=\"navbar\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Home</a></li>\n                    <li><a href=\"#\">Link 1</a></li>\n                    <li><a href=\"#\">Link 2</a></li>\n                    <li><a href=\"#\">Link 3</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "escaped": "\n&lt;nav class=\"navbar\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-sm-12\"&gt;\n                &lt;ul class=\"nav nav-justify\"&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Home&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Link 1&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Link 2&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Link 3&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "tabs": [
+    {
+     "name": "Navigation tabs",
+     "description": "<p>Horizontal navigation tabs</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Tabs"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active tab"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/tabs.scss",
+       "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
