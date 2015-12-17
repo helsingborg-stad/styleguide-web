@@ -1,5 +1,5 @@
 <section>
-    <h2 class="underline">{{ name }}</h2>
+    <h2 class="underline" id="{{ name | replace(" ", "-") | lower }}">{{ name }}</h2>
 
     {% if description %}
         <p>{{ description }}</p>

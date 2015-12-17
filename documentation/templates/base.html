@@ -21,7 +21,7 @@
         }
 
         section + section {
-            margin-top: 30px;
+            margin-top: 100px;
         }
 
         .states li + li {
@@ -70,13 +70,9 @@
             <div class="grid-md-3">
                 <nav id="main-menu">
                     <ul class="nav-aside">
-                        <li><a href="#">Scaffolding</a></li>
-                        <li><a href="#">Typography</a></li>
-                        <li><a href="#">Grid</a></li>
-                        <li><a href="#">Stripe</a></li>
-                        <li><a href="#">Navigation</a></li>
-                        <li><a href="#">Button</a></li>
-                        <li><a href="#">Utility</a></li>
+                        {% for b in blocks %}
+                            <li><a href="#{{ b.name | replace(" ", "-") | lower }}">{{ b.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </nav>
             </div>
