@@ -9,7 +9,9 @@ var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
+
 var dss = require('gulp-docs');
+//var mustache = require("gulp-mustache");
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -44,36 +46,36 @@ gulp.task('scripts', function() {
 });
 
 // Documented Style Sheets
-gulp.task('dss', function(file) {
+gulp.task('dss', function() {
     return gulp.src([
-                'source/sass/**/*.scss',
-                '!source/sass/config/*.scss',
-                '!source/sass/hbg-prime.scss'
-            ])
-            .pipe(dss({
-                fileName: "documentation",
-                parsers: {
-                    // @state :hover - When the button is hovered over.
-                    state: function(i, line, block, file, endOfBlock) {
-                        var values = line.split(' - '),
-                        states = (values[0]) ? (values[0].replace(":::", ":").replace("::", ":")) : "";
+            'source/sass/**/*.scss',
+            '!source/sass/config/*.scss',
+            '!source/sass/hbg-prime.scss'
+        ])
+        .pipe(dss({
+            fileName: "documentation",
+            parsers: {
+                // @state :hover - When the button is hovered over.
+                state: function(i, line, block, file, endOfBlock) {
+                    var values = line.split(' - '),
+                    states = (values[0]) ? (values[0].replace(":::", ":").replace("::", ":")) : "";
 
-                        return {
-                            name: states,
-                            escaped: states.replace(":", " :").replace(".", " ").trim(),
-                            description: (values[1]) ? values[1].trim() : ""
-                        };
-                    }
+                    return {
+                        name: states,
+                        escaped: states.replace(":", " :").replace(".", " ").trim(),
+                        description: (values[1]) ? values[1].trim() : ""
+                    };
                 }
-            }))
-            .pipe(gulp.dest('docs/'));
+            }
+        }))
+        .pipe(gulp.dest(''));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['scripts']);
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'dss']);
-    gulp.watch('documentation/templates/*.html', ['dss']);
+    gulp.watch('templates/*.mustache', ['dss']);
 });
 
 // Default Task
