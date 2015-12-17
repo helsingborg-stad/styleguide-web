@@ -9,7 +9,7 @@ var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
-var dss = require('gulp-dss');
+var dss = require('gulp-docs');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -51,10 +51,22 @@ gulp.task('dss', function(file) {
                 '!source/sass/hbg-prime.scss'
             ])
             .pipe(dss({
-              output: 'index.html',
-              templatePath: 'documentation/templates'
+                fileName: "documentation",
+                parsers: {
+                    // @state :hover - When the button is hovered over.
+                    state: function(i, line, block, file, endOfBlock) {
+                        var values = line.split(' - '),
+                        states = (values[0]) ? (values[0].replace(":::", ":").replace("::", ":")) : "";
+
+                        return {
+                            name: states,
+                            escaped: states.replace(":", " :").replace(".", " ").trim(),
+                            description: (values[1]) ? values[1].trim() : ""
+                        };
+                    }
+                }
             }))
-            .pipe(gulp.dest('documentation/'));
+            .pipe(gulp.dest('docs/'));
 });
 
 // Watch Files For Changes
