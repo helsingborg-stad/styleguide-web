@@ -1,3 +1,14 @@
+//
+// @name Text alignment
+// @description Aligns text
+//
+// @page Typography/Text alignment
+//
+// @markup
+// <div class="text-left">Left aligned text</div>
+// <div class="text-center">Center aligned text</div>
+// <div class="text-right">Right aligned text</div>
+//
 .text-left {
     text-align: left;
 }
@@ -10,6 +21,28 @@
     text-align: right;
 }
 
+//
+// @name Highlight
+// @description Highlights text
+//
+// @page Typography/Highlight
+//
+// @markup
+// <span class="text-highlight">Underlined</span>
+//
 .text-highlight {
     color: $palette-red-4;
+}
+
+//
+// @name Underline
+// @description Underlines text
+//
+// @page Typography/Underline
+//
+// @markup
+// <span class="text-underline">Underlined</span>
+//
+.text-underline {
+    text-decoration: underline;
 }

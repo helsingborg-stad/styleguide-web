@@ -9,9 +9,7 @@ var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
-
 var dss = require('gulp-docs');
-//var mustache = require("gulp-mustache");
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {

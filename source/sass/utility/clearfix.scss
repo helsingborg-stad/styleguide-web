@@ -2,10 +2,11 @@
 // @name Clearfix
 // @description Used to clear floats.
 //
+// @page Layout/Clearfix
+//
 // @markup
 // <div class="clearfix"></div>
 //
-
 .clearfix {
     &:after {
         content: "";
