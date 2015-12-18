@@ -9,6 +9,7 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.dev.css">
+    <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
@@ -29,7 +30,12 @@
         }
 
         #logotype {
-            margin-top: 9px;
+            margin-top: 11px;
+        }
+
+        .stripe {
+            display: inline-block;
+            height: 400px;
         }
     </style>
 
@@ -68,6 +74,26 @@
             </div>
         </div>
     </div>
-    <script src="/dist/js/app.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <!--<script src="/dist/js/app.min.js"></script>-->
+
+    <script>
+        $(function(){
+            $('pre code').each(function(){
+                var lines = $(this).text().split('\n').length - 1;
+                var $numbering = $('<ul/>').addClass('line-numbers');
+                $(this)
+                    .addClass('has-numbering')
+                    .parent()
+                    .prepend($numbering);
+                for (i = 1; i <= lines + 1; i++){
+                    $numbering.append($('<li/>').text(i));
+                }
+            });
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
 </body>
 </html>

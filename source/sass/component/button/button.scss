@@ -1,43 +1,78 @@
 //
-// @name Button
-// @description Buttons
-// @author Kristoffer Svanmark
+// @name Button base
+// @description The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.
 //
-// @page Buttons
+// @page Buttons/Base
 //
 // @state :disabled - Disabled button
 // @state .btn-sm - Small button
 // @state .btn-lg - Large button
-// @state .btn-submit - Submit button
 //
 // @markup
-// <button class="btn">Default button</button>
-// <button class="btn btn-submit">Submit button</button>
-// <button class="btn btn-lg btn-submit">Large submit button</button>
+// <button class="btn">Button base</button>
+// <a class="btn" href="#">Button base</a>
 //
 
-
-// ***************************************************************
-// *** 1. Button base
-// ***************************************************************
 .btn {
     display: inline-block;
     vertical-align: middle;
     padding: 5px 10px;
     background-color: $creamy-darker;
-    border: none;
+    border: 0;
     font-size: .9em;
     color: $base-font-color;
     text-decoration: none;
+    line-height: $base-line-height;
+
+    &:hover,
+    &:focus {
+        background-color: darken($creamy-darker, 3%);
+    }
 
     &:active {
-        box-shadow: inset 0 0 8px rgba(#000, .2);
+        box-shadow: inset 0 0 8px rgba(#000, .3);
     }
 }
 
-// ***************************************************************
-// *** 2. Button size
-// ***************************************************************
+//
+// @name Button: Primary
+// @description Buttons
+//
+// @page Buttons/Primary
+//
+// @state :disabled - Disabled button
+// @state .btn-sm - Small button
+// @state .btn-lg - Large button
+//
+// @markup
+// <button class="btn btn-primary">Primary button</button>
+//
+
+.btn-primary {
+    background-color: $palette-red-3;
+    color: #fff;
+    border: none;
+
+    &:hover,
+    &:focus {
+        background-color: darken($palette-red-3, 3%);
+    }
+}
+
+//
+// @name Button size
+// @description Buttons
+//
+// @page Buttons/Sizes
+//
+// @state .btn-sm - Small button
+// @state .btn-lg - Large button
+//
+// @markup
+// <button class="btn btn-sm">Small button</button>
+// <button class="btn">Default button</button>
+// <button class="btn btn-lg">Large button</button>
+//
 .btn-sm {
     padding: 3px 6px;
     font-size: .8em;
@@ -46,13 +81,4 @@
 .btn-lg {
     padding: 8px 13px;
     font-size: 1.1em;
-}
-
-// ***************************************************************
-// *** 3. Button types
-// ***************************************************************
-.btn-submit {
-    background-color: $palette-red-3;
-    color: #fff;
-    border: none;
 }

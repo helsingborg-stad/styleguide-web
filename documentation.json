@@ -1,103 +1,43 @@
 {
  "nav": {
-  "other": [
-   "general"
-  ],
   "layout": [
    "container",
-   "grid"
+   "grid",
+   "clearfix"
+  ],
+  "utilities": [
+   "margin resetters"
+  ],
+  "typography": [
+   "text alignment",
+   "highlight",
+   "underline",
+   "article",
+   "headings",
+   "unordered list",
+   "ordered list"
   ],
   "buttons": [
-   "general"
-  ],
-  "stripe": [
-   "general"
+   "base",
+   "primary",
+   "sizes"
   ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
    "navbar",
    "tabs"
+  ],
+  "stripe": [
+   "general"
   ]
  },
  "pages": {
-  "other": {
-   "general": [
-    {
-     "name": "Body text",
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
-       "path": "~/source/sass/typography/body-text.scss",
-       "example": "\n<article>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;p&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;\n     &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;\n     &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    },
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "state": [
-      {
-       "name": ".highlight",
-       "escaped": "highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>",
-       "path": "~/source/sass/typography/headings.scss",
-       "example": "\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>",
-       "escaped": "\n&lt;h1&gt;Heading 1&lt;/h1&gt;\n&lt;h2&gt;Heading 2&lt;/h2&gt;\n&lt;h3&gt;Heading 3&lt;/h3&gt;\n&lt;h4&gt;Heading 4&lt;/h4&gt;"
-      }
-     ]
-    },
-    {
-     "name": "Clearfix",
-     "description": "<p>Used to clear floats.</p>\n",
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/utility/clearfix.scss",
-       "example": "\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    },
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text</p>\n",
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"underline\">Underlined</span>",
-       "path": "~/source/sass/utility/underline.scss",
-       "example": "\n<span class=\"underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "layout": {
    "container": [
     {
      "name": "Container",
      "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
-     "author": "Kristoffer Svanmark",
      "page": [
       {
        "nav": "Layout",
@@ -120,7 +60,6 @@
     {
      "name": "Grid",
      "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
-     "author": "Kristoffer Svanmark",
      "page": [
       {
        "nav": "Layout",
@@ -138,18 +77,250 @@
       }
      ]
     }
+   ],
+   "clearfix": [
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Clearfix"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/utility/clearfix.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "utilities": {
+   "margin resetters": [
+    {
+     "name": "Margin resetters",
+     "description": "<p>Set margins to zero</p>\n",
+     "state": [
+      {
+       "name": ".no-margin-top",
+       "escaped": "no-margin-top",
+       "description": "Sets top margin to zero"
+      },
+      {
+       "name": ".no-margin-right",
+       "escaped": "no-margin-right",
+       "description": "Sets right margin to zero"
+      },
+      {
+       "name": ".no-margin-bottom",
+       "escaped": "no-margin-bottom",
+       "description": "Sets bottom margin to zero"
+      },
+      {
+       "name": ".no-margin-left",
+       "escaped": "no-margin-left",
+       "description": "Sets left margin to zero"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Margin resetters"
+      }
+     ]
+    }
+   ]
+  },
+  "typography": {
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Underlined</span>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<span class=\"text-highlight\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "article": [
+    {
+     "name": "Article",
+     "description": "<p>A full article with heading and body text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Article"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "path": "~/source/sass/typography/article.scss",
+       "example": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p>Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Lorem ipsum&lt;/h1&gt;\n     &lt;p&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam. Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;\n     &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. Nulla sit amet erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;\n     &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    }
+   ],
+   "headings": [
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
+       "path": "~/source/sass/typography/list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
+       "path": "~/source/sass/typography/list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
    ]
   },
   "buttons": {
-   "general": [
+   "base": [
     {
-     "name": "Button",
-     "description": "<p>Buttons</p>\n",
-     "author": "Kristoffer Svanmark",
+     "name": "Button base",
+     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
      "page": [
       {
        "nav": "Buttons",
-       "section": "general"
+       "section": "Base"
       }
      ],
      "state": [
@@ -167,46 +338,89 @@
        "name": ".btn-lg",
        "escaped": "btn-lg",
        "description": "Large button"
-      },
-      {
-       "name": ".btn-submit",
-       "escaped": "btn-submit",
-       "description": "Submit button"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-submit\">Submit button</button>\n<button class=\"btn btn-lg btn-submit\">Large submit button</button>",
+       "modifier": "\n<button class=\"btn\">Button base</button>\n<a class=\"btn\" href=\"#\">Button base</a>",
        "path": "~/source/sass/component/button/button.scss",
-       "example": "\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-submit\">Submit button</button>\n<button class=\"btn btn-lg btn-submit\">Large submit button</button>",
-       "escaped": "\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-submit\"&gt;Submit button&lt;/button&gt;\n&lt;button class=\"btn btn-lg btn-submit\"&gt;Large submit button&lt;/button&gt;"
+       "example": "\n<button class=\"btn\">Button base</button>\n<a class=\"btn\" href=\"#\">Button base</a>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;a class=\"btn\" href=\"#\"&gt;Button base&lt;/a&gt;"
       }
      ]
     }
-   ]
-  },
-  "stripe": {
-   "general": [
+   ],
+   "primary": [
     {
-     "name": "Stripe",
-     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
-     "author": "Kristoffer Svanmark",
+     "name": "Button: Primary",
+     "description": "<p>Buttons</p>\n",
      "page": [
       {
-       "nav": "Stripe",
-       "section": "general"
+       "nav": "Buttons",
+       "section": "Primary"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "path": "~/source/sass/component/stripe/stripe.scss",
-       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>",
+       "path": "~/source/sass/component/button/button.scss",
+       "example": "\n<button class=\"btn btn-primary\">Primary button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "sizes": [
+    {
+     "name": "Button size",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Sizes"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "path": "~/source/sass/component/button/button.scss",
+       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
       }
      ]
     }
@@ -332,6 +546,31 @@
        "path": "~/source/sass/component/navigation/tabs.scss",
        "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
        "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

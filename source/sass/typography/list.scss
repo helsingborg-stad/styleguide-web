@@ -1,0 +1,62 @@
+//
+// @name Unordered list
+// @description Stanrdard unordered list.
+//
+// @state .unordered-list - Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>
+//
+// @page Typography/Unordered list
+//
+// @markup
+// <ul class="unordered-list">
+//     <li>First list item</li>
+//     <li>Second list item</li>
+//     <li>Third list item</li>
+// </ul>
+//
+article ul,
+.unordered-list {
+    padding-left: $content-gutter * 2;
+
+    li {
+        position: relative;
+
+        & + li {
+            margin-top: 5px;
+        }
+
+        &::before {
+            position: absolute;
+            left: -20px;
+            top: .55em;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: $palette-red-3;
+        }
+    }
+}
+
+article + ul,
+article ul + ul,
+.unordered-list + .unordered-list {
+    margin-top: $content-gutter;
+}
+
+//
+// @name Ordered list
+// @description Stanrdard ordered list.
+//
+// @page Typography/Ordered list
+//
+// @markup
+// <ol class="ordered-list">
+//     <li>First list item</li>
+//     <li>Second list item</li>
+//     <li>Third list item</li>
+// </ol>
+//
+article ol,
+.ordered-list {
+    padding-left: $content-gutter * 2;
+    list-style-type: decimal;
+}

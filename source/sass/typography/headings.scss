@@ -2,14 +2,18 @@
 // @name Headings
 // @description Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.
 //
-// @state .highlight - Will highlight any heading in the current theme color
+// @page Typography/Headings
+//
+// @state .text-highlight - Will highlight any heading in the current theme color
 // @state .underline - Underlines the heading
 //
 // @markup
-// <h1>Heading 1</h1>
-// <h2>Heading 2</h2>
-// <h3>Heading 3</h3>
-// <h4>Heading 4</h4>
+// <h1 id="anchor-1" class="{$state}">Heading 1</h1>
+// <h2 id="anchor-2">Heading 2</h2>
+// <h3 id="anchor-3">Heading 3</h3>
+// <h4 id="anchor-4">Heading 4</h4>
+// <h5 id="anchor-5">Heading 5</h5>
+// <h6 id="anchor-6">Heading 6</h6>
 //
 
 h1, .h1,
@@ -18,37 +22,42 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-weight: 500;
+    font-weight: bold;
+    line-height: 140%;
+    padding-bottom: .3em;
+    margin: 0;
 
     &.underline {
-        padding-bottom: 10px;
-        margin-bottom: 20px;
         border-bottom: 1px solid $creamy-darker;
+        padding-bottom: .1em;
+        margin-bottom: .5em;
     }
 }
 
 h1, .h1 {
     font-size: 2.2rem;
     color: #ae0b05;
-    margin-top: 0;
 }
 
 h2, .h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
 }
 
 h3, .h3 {
     font-size: 1.5rem;
-    margin-top: 15px;
 }
 
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h4, .h4 {
     font-size: 1.2rem;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+h5, .h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+    font-weight: 500;
 }
