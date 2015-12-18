@@ -104,6 +104,7 @@
 //
 // @markup
 // <button class="btn btn-block">Block button</button>
+// <button class="btn btn-block btn-primary">Block button</button>
 //
 
 .btn-block {
@@ -111,4 +112,8 @@
     padding: $content-gutter;
     width: 100%;
     text-align: center;
+}
+
+.btn-block + .btn-block {
+    margin-top: $content-gutter;
 }

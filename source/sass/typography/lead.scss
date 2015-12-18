@@ -1,0 +1,14 @@
+//
+// @name Lead
+// @description A large paragraph to use as article lead.
+//
+// @page Typography/Lead
+//
+// @markup
+// <p class="lead">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>
+//
+
+.lead {
+    font-size: 1.2em;
+    font-weight: 500;
+}

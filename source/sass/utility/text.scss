@@ -1,6 +1,6 @@
 //
 // @name Text alignment
-// @description Aligns text
+// @description Aligns text.
 //
 // @page Typography/Text alignment
 //
@@ -8,6 +8,7 @@
 // <div class="text-left">Left aligned text</div>
 // <div class="text-center">Center aligned text</div>
 // <div class="text-right">Right aligned text</div>
+// <div class="text-justify">Justified text</div>
 //
 .text-left {
     text-align: left;
@@ -21,14 +22,18 @@
     text-align: right;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 //
 // @name Highlight
-// @description Highlights text
+// @description Highlights text.
 //
 // @page Typography/Highlight
 //
 // @markup
-// <span class="text-highlight">Underlined</span>
+// <span class="text-highlight">Highlighted</span>
 //
 .text-highlight {
     color: $palette-red-4;
@@ -36,7 +41,7 @@
 
 //
 // @name Underline
-// @description Underlines text
+// @description Underlines text.
 //
 // @page Typography/Underline
 //
@@ -45,4 +50,74 @@
 //
 .text-underline {
     text-decoration: underline;
+}
+
+//
+// @name Mark
+// @description Mark text to make it stand out.
+//
+// @page Typography/Mark
+//
+// @state .mark-yellow - Mark with yellow color
+// @state .mark-blue - Mark with blue color
+// @state .mark-green - Mark with green color
+// @state .mark-red - Mark with red color
+// @state .mark-purple - Mark with purple color
+//
+// @markup
+// One of the words in this sentence is <mark>marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-yellow">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-blue">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-green">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-red">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-purple">marked</mark>.
+//
+mark {
+    background-color: $creamy-darker;
+    padding: $mark-padding;
+}
+
+.mark-yellow {
+    background-color: $mark-yellow;
+    padding: $mark-padding;
+}
+
+.mark-blue {
+    background-color: $mark-blue;
+    padding: $mark-padding;
+}
+
+.mark-green {
+    background-color: $mark-green;
+    padding: $mark-padding;
+}
+
+.mark-red {
+    background-color: $mark-red;
+    padding: $mark-padding;
+}
+
+.mark-purple {
+    background-color: $mark-purple;
+    padding: $mark-padding;
+}
+
+//
+// @name Small
+// @description Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.
+//
+// @page Typography/Small
+//
+// @markup
+// <small>This is a small text</small>
+//
+small,
+.small {
+    font-size: .8em;
+}
+
+// Misc
+
+strong {
+    font-weight: bold;
 }

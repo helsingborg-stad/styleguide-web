@@ -1,7 +1,7 @@
 .markup-preview {
+    padding: $content-gutter;
     border: 1px solid $creamy-darker;
     border-bottom: 0;
-    padding: 1em;
     box-shadow: inset 0 0 10px rgba(#000, .1);
 }
 
@@ -47,6 +47,13 @@ code {
     background-color: $creamy;
     border: 1px solid $creamy-darker;
     border-radius: 3px;
+}
+
+.code-source-file {
+    border: 1px solid $creamy-darker;
+    border-top: none;
+    padding: $content-gutter / 2 $content-gutter;
+    font-size: .8em;
 }
 
 .hljs {

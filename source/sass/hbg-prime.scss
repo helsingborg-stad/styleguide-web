@@ -17,16 +17,19 @@
 @import 'layout/container';
 @import 'layout/grid';
 @import 'layout/section';
+@import 'layout/float';
 
 // ***************************************************************
 // *** Typography
 // ***************************************************************
-@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 @import "http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Fira+Sans";
 
 @import 'typography/headings';
+@import 'typography/lead';
 @import 'typography/article';
 @import 'typography/list';
+@import 'typography/link';
 
 // ***************************************************************
 // *** Components
@@ -45,6 +48,5 @@
 // ***************************************************************
 // *** Utilities
 // ***************************************************************
-@import 'utility/clearfix';
 @import 'utility/text';
 @import 'utility/margin';

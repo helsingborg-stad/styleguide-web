@@ -5,6 +5,11 @@
 *:after,
 *:before {
     box-sizing: border-box;
+}
+
+*:not(.fa),
+*:not(.fa):after,
+*:not(.fa):before {
     font-family: $base-font-family;
 }
 
