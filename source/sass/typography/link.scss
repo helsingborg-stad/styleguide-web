@@ -1,0 +1,25 @@
+a {
+    color: $palette-red-4;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+article a {
+    color: $palette-blue-2;
+    text-decoration: underline;
+
+    &:hover{
+        color: $palette-blue-5;
+    }
+
+    &:visited {
+        color: $palette-purple-2;
+
+        &:hover {
+            color: $palette-purple-5;
+        }
+    }
+}

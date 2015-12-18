@@ -10,19 +10,22 @@
 //
 // @markup
 // <button class="btn">Button base</button>
-// <a class="btn" href="#">Button base</a>
+// <button class="btn disabled">Button base</button>
 //
 
 .btn {
     display: inline-block;
     vertical-align: middle;
-    padding: 5px 10px;
+    padding: $btn-padding;
     background-color: $creamy-darker;
     border: 0;
-    font-size: .9em;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
     color: $base-font-color;
-    text-decoration: none;
     line-height: $base-line-height;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
 
     &:hover,
     &:focus {
@@ -31,6 +34,12 @@
 
     &:active {
         box-shadow: inset 0 0 8px rgba(#000, .3);
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: .5;
+        cursor: no-drop;
     }
 }
 
@@ -46,6 +55,7 @@
 //
 // @markup
 // <button class="btn btn-primary">Primary button</button>
+// <button class="btn btn-primary disabled">Primary button</button>
 //
 
 .btn-primary {
@@ -73,12 +83,37 @@
 // <button class="btn">Default button</button>
 // <button class="btn btn-lg">Large button</button>
 //
+
 .btn-sm {
-    padding: 3px 6px;
-    font-size: .8em;
+    padding: $btn-sm-padding;
+    font-size: $btn-sm-font-size;
+    font-weight: $btn-sm-font-weight;
 }
 
 .btn-lg {
-    padding: 8px 13px;
-    font-size: 1.1em;
+    padding: $btn-lg-padding;
+    font-size: $btn-lg-font-size;
+    font-weight: $btn-lg-font-weight;
+}
+
+//
+// @name Block button
+// @description Block button spans the full width of the container
+//
+// @page Buttons/Block button
+//
+// @markup
+// <button class="btn btn-block">Block button</button>
+// <button class="btn btn-block btn-primary">Block button</button>
+//
+
+.btn-block {
+    display: block;
+    padding: $content-gutter;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-block + .btn-block {
+    margin-top: $content-gutter;
 }

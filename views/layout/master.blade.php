@@ -8,8 +8,8 @@
     <title>Helsingborg Style Guide</title>
     <meta name="description" content="">
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.dev.css">
     <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.dev.css">
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
@@ -37,6 +37,10 @@
             display: inline-block;
             height: 400px;
         }
+
+        .states ul li + li {
+            margin-top: 5px;
+        }
     </style>
 
     <noscript>
@@ -54,10 +58,7 @@
                 </div>
                 <div class="grid-md-9">
                     <ul class="nav nav-horizontal text-right">
-                        <li><a href="#">Helsingborg.se</a></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
+                        <li><a href="http://www.helsingborg.se">Visit Helsingborg.se</a></li>
                     </ul>
                 </div>
             </div>

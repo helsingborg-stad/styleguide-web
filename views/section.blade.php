@@ -29,5 +29,12 @@
     </div>
 
     <pre><code class="html">{{ trim($section[0]->markup[0]->escaped) }}</code></pre>
+
+    <div class="code-source-file clearfix">
+        <div class="pull-left"><strong>Source file:</strong> {{ $section[0]->markup[0]->path }}</div>
+        <div class="pull-right">
+            <a class="link-item link-item-github" href="https://github.com/helsingborg-stad/styleguide-web/blob/master/{{ str_replace('~/', '', $section[0]->markup[0]->path) }}">View source on GitHub</a>
+        </div>
+    </div>
 </section>
 @endif
