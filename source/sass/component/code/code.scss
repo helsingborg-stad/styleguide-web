@@ -19,15 +19,18 @@ pre {
         left: 0;
         bottom: 0;
         width: 40px;
-        padding: .6em;
+        padding: .5em .6em;
         text-align: center;
         background-color: lighten($creamy-darker, 3%);
         border-right: 1px solid $creamy-darker;
         font-size: .8em;
+        line-height: $base-line-height;
     }
 
     code {
         background: transparent;
+        font-size: .8em;
+        line-height: $base-line-height;
     }
 
     code.has-numbering {
@@ -36,13 +39,18 @@ pre {
 }
 
 code {
+    display: inline-block;
+    padding: 1px 4px;
     font-family: $code-font-family;
+    font-size: .9em;
+    line-height: 1.4em;
     background-color: $creamy;
     border: 1px solid $creamy-darker;
-    padding: 3px 6px;
+    border-radius: 3px;
 }
 
 .hljs {
     background-color: transparent !important;
     border: none;
+    padding: .5em 1em;
 }

@@ -5,22 +5,23 @@
    "grid",
    "clearfix"
   ],
-  "utilities": [
-   "margin resetters"
-  ],
   "typography": [
-   "text alignment",
-   "highlight",
-   "underline",
    "article",
    "headings",
    "unordered list",
-   "ordered list"
+   "ordered list",
+   "text alignment",
+   "highlight",
+   "underline"
+  ],
+  "utilities": [
+   "margin resetters"
   ],
   "buttons": [
    "base",
    "primary",
-   "sizes"
+   "sizes",
+   "block button"
   ],
   "navigation": [
    "breadcrumbs",
@@ -101,109 +102,7 @@
     }
    ]
   },
-  "utilities": {
-   "margin resetters": [
-    {
-     "name": "Margin resetters",
-     "description": "<p>Set margins to zero</p>\n",
-     "state": [
-      {
-       "name": ".no-margin-top",
-       "escaped": "no-margin-top",
-       "description": "Sets top margin to zero"
-      },
-      {
-       "name": ".no-margin-right",
-       "escaped": "no-margin-right",
-       "description": "Sets right margin to zero"
-      },
-      {
-       "name": ".no-margin-bottom",
-       "escaped": "no-margin-bottom",
-       "description": "Sets bottom margin to zero"
-      },
-      {
-       "name": ".no-margin-left",
-       "escaped": "no-margin-left",
-       "description": "Sets left margin to zero"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Utilities",
-       "section": "Margin resetters"
-      }
-     ]
-    }
-   ]
-  },
   "typography": {
-   "text alignment": [
-    {
-     "name": "Text alignment",
-     "description": "<p>Aligns text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text alignment"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
-       "path": "~/source/sass/utility/text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "highlight": [
-    {
-     "name": "Highlight",
-     "description": "<p>Highlights text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Highlight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-highlight\">Underlined</span>",
-       "path": "~/source/sass/utility/text.scss",
-       "example": "\n<span class=\"text-highlight\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "underline": [
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Underline"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
-       "path": "~/source/sass/utility/text.scss",
-       "example": "\n<span class=\"text-underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
    "article": [
     {
      "name": "Article",
@@ -310,6 +209,108 @@
       }
      ]
     }
+   ],
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Underlined</span>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<span class=\"text-highlight\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "utilities": {
+   "margin resetters": [
+    {
+     "name": "Margin resetters",
+     "description": "<p>Set margins to zero</p>\n",
+     "state": [
+      {
+       "name": ".no-margin-top",
+       "escaped": "no-margin-top",
+       "description": "Sets top margin to zero"
+      },
+      {
+       "name": ".no-margin-right",
+       "escaped": "no-margin-right",
+       "description": "Sets right margin to zero"
+      },
+      {
+       "name": ".no-margin-bottom",
+       "escaped": "no-margin-bottom",
+       "description": "Sets bottom margin to zero"
+      },
+      {
+       "name": ".no-margin-left",
+       "escaped": "no-margin-left",
+       "description": "Sets left margin to zero"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Margin resetters"
+      }
+     ]
+    }
    ]
   },
   "buttons": {
@@ -344,10 +345,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<button class=\"btn\">Button base</button>\n<a class=\"btn\" href=\"#\">Button base</a>",
+       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
        "path": "~/source/sass/component/button/button.scss",
-       "example": "\n<button class=\"btn\">Button base</button>\n<a class=\"btn\" href=\"#\">Button base</a>",
-       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;a class=\"btn\" href=\"#\"&gt;Button base&lt;/a&gt;"
+       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;"
       }
      ]
     }
@@ -383,10 +384,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>",
+       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
        "path": "~/source/sass/component/button/button.scss",
-       "example": "\n<button class=\"btn btn-primary\">Primary button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;"
+       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
       }
      ]
     }
@@ -421,6 +422,28 @@
        "path": "~/source/sass/component/button/button.scss",
        "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
        "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "block button": [
+    {
+     "name": "Block button",
+     "description": "<p>Block button spans the full width of the container</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Block button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-block\">Block button</button>",
+       "path": "~/source/sass/component/button/button.scss",
+       "example": "\n<button class=\"btn btn-block\">Block button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;"
       }
      ]
     }
