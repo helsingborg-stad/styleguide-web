@@ -1,0 +1,27 @@
+{
+ "nav": {
+  "other": [
+   "general"
+  ]
+ },
+ "pages": {
+  "other": {
+   "general": [
+    {
+     "name": "EqualHeight",
+     "description": "<p>Sets element heights equally to the heighest value.</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n</div>",
+       "path": "~/source/js/helpers/equalHeight.js",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

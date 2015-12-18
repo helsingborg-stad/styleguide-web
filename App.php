@@ -11,7 +11,7 @@ class App
     public function __construct()
     {
         $this->page = isset($_GET['p']) ? $_GET['p'] : 'home';
-        $this->documentation = json_decode(file_get_contents('documentation.json'));
+        $this->documentation = json_decode(file_get_contents(DOCUMENTATION_SASS_PATH));
 
         $this->loadPage();
     }

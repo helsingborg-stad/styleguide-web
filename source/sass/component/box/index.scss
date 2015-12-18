@@ -1,25 +1,8 @@
-.box {
-    padding: $content-gutter / 3;
-}
-
-.box-container {
-    padding-top: $content-gutter / 1.5;
-    padding-bottom: $content-gutter / 1.5;
-    padding-left: $content-gutter;
-    padding-right: $content-gutter;
-    font-size: .9em;
-    line-height: $base-line-height;
-}
-
-.box-image {
-    width: 100%;
-}
-
 //
-// @name Index box
+// @name Index
 // @description Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.
 //
-// @page Content/Index
+// @page Boxes/Index
 //
 // @markup
 // <div class="grid">

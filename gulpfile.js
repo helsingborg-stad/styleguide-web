@@ -36,22 +36,47 @@ gulp.task('scripts', function() {
     return gulp.src([
                 'source/js/**/*.js',
             ])
-            .pipe(concat('modularity.dev.js'))
+            .pipe(concat('hbg-prime.dev.js'))
             .pipe(gulp.dest('dist/js'))
-            .pipe(rename('modularity.min.js'))
+            .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('dist/js'));
 });
 
 // Documented Style Sheets
-gulp.task('dss', function() {
+gulp.task('dss-sass', function() {
     return gulp.src([
             'source/sass/**/*.scss',
             '!source/sass/config/*.scss',
             '!source/sass/hbg-prime.scss'
         ])
         .pipe(dss({
-            fileName: "documentation",
+            fileName: "documentation-sass",
+            parsers: {
+                // @state :hover - When the button is hovered over.
+                state: function(i, line, block, file, endOfBlock) {
+                    var values = line.split(' - '),
+                    states = (values[0]) ? (values[0].replace(":::", ":").replace("::", ":")) : "";
+
+                    return {
+                        name: states,
+                        escaped: states.replace(":", " :").replace(".", " ").trim(),
+                        description: (values[1]) ? values[1].trim() : ""
+                    };
+                }
+            }
+        }))
+        .pipe(gulp.dest(''));
+});
+
+// Documented JS
+gulp.task('dss-js', function() {
+    return gulp.src([
+            'source/js/**/*.js',
+            '!source/js/app.js',
+        ])
+        .pipe(dss({
+            fileName: "documentation-js",
             parsers: {
                 // @state :hover - When the button is hovered over.
                 state: function(i, line, block, file, endOfBlock) {
@@ -71,11 +96,10 @@ gulp.task('dss', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('source/js/**/*.js', ['scripts']);
-    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'dss']);
-    gulp.watch('templates/*.mustache', ['dss']);
+    gulp.watch('source/js/**/*.js', ['scripts', 'dss-js']);
+    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'dss-sass']);
 });
 
 // Default Task
-gulp.task('default', ['sass-dist', 'sass-dev', 'scripts', 'dss', 'watch']);
+gulp.task('default', ['sass-dist', 'sass-dev', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 

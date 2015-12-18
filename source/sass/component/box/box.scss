@@ -1,0 +1,20 @@
+.box {
+    padding: $content-gutter / 3;
+}
+
+.box + .box {
+    margin-top: $content-gutter;
+}
+
+.box-container {
+    padding-top: $content-gutter / 1.5;
+    padding-bottom: $content-gutter / 1.5;
+    padding-left: $content-gutter;
+    padding-right: $content-gutter;
+    font-size: .9em;
+    line-height: $base-line-height;
+}
+
+.box-image {
+    width: 100%;
+}

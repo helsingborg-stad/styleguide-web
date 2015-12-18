@@ -1,0 +1,51 @@
+//
+// @name Filled
+// @description Filled box. Typically used in sidebars.
+//
+// @page Boxes/Filled
+//
+// @state .box-filled-1 - Use the first stripe color as background-color
+// @state .box-filled-2 - Use the second stripe color as background-color
+// @state .box-filled-3 - Use the third stripe color as background-color
+// @state .box-filled-4 - Use the fourth stripe color as background-color
+// @state .box-filled-5 - Use the fifth stripe color as background-color
+//
+// @markup
+// <div class="box box-filled">
+//     <div class="box-container">
+//         <h5>Title</h5>
+//         <p>This is a filled box. This box is typically used in the sidebar to display "widgets" or secondary information.</p>
+//     </div>
+// </div>
+// <div class="box box-filled box-filled-3">
+//     <div class="box-container">
+//         <h5>Title</h5>
+//         <p>This is a filled box. This box is typically used in the sidebar to display "widgets" or secondary information.</p>
+//     </div>
+// </div>
+//
+
+.box-filled {
+    background-color: $palette-red-2;
+    color: #fff;
+}
+
+.box-filled-1 {
+    background-color: $palette-red-1;
+}
+
+.box-filled-2 {
+    background-color: $palette-red-2;
+}
+
+.box-filled-3 {
+    background-color: $palette-red-3;
+}
+
+.box-filled-4 {
+    background-color: $palette-red-4;
+}
+
+.box-filled-4 {
+    background-color: $palette-red-4;
+}
