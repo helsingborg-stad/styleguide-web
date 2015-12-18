@@ -5,12 +5,13 @@
 *:after,
 *:before {
     box-sizing: border-box;
+    font-family: $base-font-family;
 }
 
 // ***************************************************************
 // *** 2. Base typography
 // ***************************************************************
-body {
+html, body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
