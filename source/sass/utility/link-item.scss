@@ -1,0 +1,46 @@
+//
+// @name Link item
+// @description Prepends a link indicator icon before the link text.
+//
+// @page Utilities/Link item
+//
+// @state .link-item-outbound - Will show icon for outbound link instead of regular link item arrow
+// @state .link-item-light - Lighter link item icon and text color (for use with dark backgrounds)
+//
+// @markup
+// <a href="#" class="link-item">Inbound link item</a><br>
+// <a href="#" class="link-item link-item-outbound">Outbound link item</a>
+//
+.link-item {
+    $padding-left: 20px;
+    position: relative;
+    left: 20px;
+    padding-right: $padding-left;
+
+    &::before {
+        @include hbg-icon($icon-link-arrow);
+        display: inline-block;
+        margin-right: 6px;
+        color: rgba(0,0,0,.4);
+        margin-left: -$padding-left;
+        text-decoration: none;
+    }
+}
+
+.link-item-outbound {
+    &::before {
+        @include hbg-icon($icon-link-outbound);
+    }
+}
+
+.link-item-github {
+    &::before {
+        @include hbg-icon($icon-github);
+    }
+}
+
+.link-item-light {
+    &::before {
+        color: rgba(255,255,255,.7);
+    }
+}

@@ -33,7 +33,7 @@
     <div class="code-source-file clearfix">
         <div class="pull-left"><strong>Source file:</strong> {{ $section[0]->markup[0]->path }}</div>
         <div class="pull-right">
-            <a href="https://github.com/helsingborg-stad/styleguide-web/blob/master/{{ str_replace('~/', '', $section[0]->markup[0]->path) }}"><i class="fa fa-github"></i> View source on Github</a>
+            <a class="link-item link-item-github" href="https://github.com/helsingborg-stad/styleguide-web/blob/master/{{ str_replace('~/', '', $section[0]->markup[0]->path) }}">View source on GitHub</a>
         </div>
     </div>
 </section>

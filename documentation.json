@@ -20,6 +20,7 @@
    "small"
   ],
   "utilities": [
+   "link item",
    "margin resetters"
   ],
   "buttons": [
@@ -27,6 +28,9 @@
    "primary",
    "sizes",
    "block button"
+  ],
+  "content": [
+   "index"
   ],
   "navigation": [
    "breadcrumbs",
@@ -420,6 +424,40 @@
    ]
   },
   "utilities": {
+   "link item": [
+    {
+     "name": "Link item",
+     "description": "<p>Prepends a link indicator icon before the link text.</p>\n",
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Link item"
+      }
+     ],
+     "state": [
+      {
+       "name": ".link-item-outbound",
+       "escaped": "link-item-outbound",
+       "description": "Will show icon for outbound link instead of regular link item arrow"
+      },
+      {
+       "name": ".link-item-light",
+       "escaped": "link-item-light",
+       "description": "Lighter link item icon and text color (for use with dark backgrounds)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
+       "path": "~/source/sass/utility/link-item.scss",
+       "example": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
+       "escaped": "\n&lt;a href=\"#\" class=\"link-item\"&gt;Inbound link item&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" class=\"link-item link-item-outbound\"&gt;Outbound link item&lt;/a&gt;"
+      }
+     ]
+    }
+   ],
    "margin resetters": [
     {
      "name": "Margin resetters",
@@ -586,6 +624,30 @@
        "path": "~/source/sass/component/button/button.scss",
        "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
        "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "content": {
+   "index": [
+    {
+     "name": "Index box",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Content",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
