@@ -1,0 +1,80 @@
+//
+// @name Modals
+// @description Modal box
+// @author Sebastian Thulin
+//
+// @page Special/Modals
+//
+// @state .current - The currently active tab
+//
+// @markup
+// <div class="modal modal-backdrop" tabindex="-1" role="dialog">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+//         <h2 class="modal-title">Modal title</h2>
+//       </div>
+//       <div class="modal-body">
+//         <p></p>
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Save changes</button>
+//       </div>
+//     </div><!-- /.modal-content -->
+// </div><!-- /.modal -->
+//
+
+.modal {
+	@include center(); 
+	background: #fff;
+	z-index: 700;
+	margin: 0 auto; 
+	width: 70%; 
+	overflow: auto; 
+	
+	padding: $content-gutter;
+    font-size: .9em;
+    line-height: $base-line-height;
+	
+	.modal-header {
+		border-bottom: 1px solid $creamy-darker; 
+	}
+	
+	&.large {
+		width: 100%; 
+	}
+	
+	&.medium {
+		width: 70%; 
+	}
+	
+	&.small {
+		width: 50%; 
+	}
+	
+	&[class^="modal-backdrop-"], &[class*=" modal-backdrop-"] {
+		outline: 5000px solid rgba($palette-red-1,.9); 
+	}
+	
+}
+
+.modal-backdrop-1 {
+    outline-color: $palette-red-1;
+}
+
+.modal-backdrop-2 {
+    outline-color: $palette-red-2;
+}
+
+.modal-backdrop-3 {
+    outline-color: $palette-red-3;
+}
+
+.modal-backdrop-4 {
+    outline-color: $palette-red-4;
+}
+
+.modal-backdrop-4 {
+    outline-color: $palette-red-4;
+}

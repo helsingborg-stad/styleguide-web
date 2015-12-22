@@ -41,6 +41,13 @@
         .states ul li + li {
             margin-top: 5px;
         }
+        
+        .markup-preview {
+	        position: relative; 
+	        overflow: hidden; 
+	        min-height: 200px; 
+        }
+        
     </style>
 
     <noscript>
