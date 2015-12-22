@@ -1,4 +1,5 @@
-<h2 id="{{ \HbgStyleGuide\Helper\String::slug($section[0]->name) }}" class="underline text-highlight">{{ $section[0]->name }}</h2>
+
+<h2 id="{{ \HbgStyleGuide\Helper\FormatString::slug($section[0]->name) }}" class="underline text-highlight">{{ $section[0]->name }}</h2>
 
 @if ($section[0]->description)
 <section>

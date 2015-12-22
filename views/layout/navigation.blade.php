@@ -6,7 +6,7 @@
                 @if ($pageNow == $item && $subitems)
                     <ul class="sub-menu">
                     @foreach ($subitems as $subitem)
-                        <li><a href="#{{ \HbgStyleGuide\Helper\String::slug($subitem) }}">{{ ucfirst($subitem) }}</a></li>
+                        <li><a href="#{{ \HbgStyleGuide\Helper\FormatString::slug($subitem) }}">{{ ucfirst($subitem) }}</a></li>
                     @endforeach
                     </ul>
                 @endif

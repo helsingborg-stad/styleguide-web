@@ -2,7 +2,7 @@
 
 namespace HbgStyleGuide\Helper;
 
-class String
+class FormatString
 {
     public static function slug($title, $separator = '-')
     {
