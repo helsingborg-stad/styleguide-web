@@ -5,17 +5,22 @@
 //
 // @page Special/Modals
 //
-// @state .current - The currently active tab
+// @state .modal-backdrop-1 - Stripe color 1 as backdrop 
+// @state .modal-backdrop-2 - Stripe color 2 as backdrop 
+// @state .modal-backdrop-3 - Stripe color 3 as backdrop 
+// @state .modal-backdrop-4 - Stripe color 4 as backdrop 
+// @state .modal-backdrop-5 - Stripe color 5 as backdrop 
 //
 // @markup
-// <div class="modal modal-backdrop" tabindex="-1" role="dialog">
+// <input type="checkbox" name="modal-trigger-state" value="1" />
+// <div class="modal modal-backdrop-2" tabindex="-1" role="dialog">
 //     <div class="modal-content">
 //       <div class="modal-header">
 //         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 //         <h2 class="modal-title">Modal title</h2>
 //       </div>
 //       <div class="modal-body">
-//         <p></p>
+//         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 //       </div>
 //       <div class="modal-footer">
 //         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -25,56 +30,94 @@
 // </div><!-- /.modal -->
 //
 
+/* Action css */ 
+[name="modal-trigger-state"]:checked + .modal {
+	display: block !important; 
+}
+
 .modal {
-	@include center(); 
-	background: #fff;
+	
 	z-index: 700;
 	margin: 0 auto; 
-	width: 70%; 
-	overflow: auto; 
+	display: none; 
 	
-	padding: $content-gutter;
-    font-size: .9em;
-    line-height: $base-line-height;
+    .modal-content {
+	    @include center(); 
+		background: #fff;
+	    line-height: $base-line-height;
+		border: 1px solid $creamy-darker;
+		z-index: 800; 
+		
+		&.large {
+			width: 100%; 
+		}
+		
+		&.medium {
+			width: 70%; 
+		}
+		
+		&.small {
+			width: 50%; 
+		} 
+		
+	}
 	
 	.modal-header {
 		border-bottom: 1px solid $creamy-darker; 
+		padding: 1em; 
+		
+		h1,h2,h3,h4,h5,h6 {
+			padding-bottom: 0; 
+		}
+		
+		.close {
+			position: absolute; 
+			top: 0; 
+			right: 0; 
+			height: 2em; 
+			width: 2em; 
+			margin: -1em; 
+			line-height: 2em; 
+			text-align: center; 
+			padding: 0; 
+			
+		}
 	}
 	
-	&.large {
-		width: 100%; 
+	.modal-body {
+		padding: 1em; 
 	}
 	
-	&.medium {
-		width: 70%; 
+	.modal-footer {
+		border-top: 1px solid $creamy-darker; 
+		padding: 1em; 
 	}
 	
-	&.small {
-		width: 50%; 
-	}
-	
-	&[class^="modal-backdrop-"], &[class*=" modal-backdrop-"] {
-		outline: 5000px solid rgba($palette-red-1,.9); 
+	&[class*='modal-backdrop-']:after, 
+	&[class^=' modal-backdrop-']:after {
+		@include cover(); 
+		position: fixed; 
+		content: ""; 
 	}
 	
 }
 
-.modal-backdrop-1 {
-    outline-color: $palette-red-1;
+.modal-backdrop-1:after {
+    background-color: rgba($palette-red-1,.9);
 }
 
-.modal-backdrop-2 {
-    outline-color: $palette-red-2;
+.modal-backdrop-2:after {
+    background-color: rgba($palette-red-2,.9);
 }
 
-.modal-backdrop-3 {
-    outline-color: $palette-red-3;
+.modal-backdrop-3:after {
+    background-color: rgba($palette-red-3,.9);
 }
 
-.modal-backdrop-4 {
-    outline-color: $palette-red-4;
+.modal-backdrop-4:after {
+    background-color: rgba($palette-red-4,.9);
 }
 
-.modal-backdrop-4 {
-    outline-color: $palette-red-4;
+.modal-backdrop-4:after {
+    background-color: rgba($palette-red-4,.9);
 }

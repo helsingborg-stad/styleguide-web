@@ -7,25 +7,21 @@
    "clearfix",
    "grid"
   ],
-  "utilities": [
-   "link item",
-   "margin resetters"
-  ],
   "typography": [
-   "text alignment",
-   "highlight",
-   "underline",
-   "mark",
-   "small",
    "article",
    "headings",
    "lead",
    "unordered list",
-   "ordered list"
+   "ordered list",
+   "text alignment",
+   "highlight",
+   "underline",
+   "mark",
+   "small"
   ],
-  "boxes": [
-   "filled",
-   "index"
+  "utilities": [
+   "link item",
+   "margin resetters"
   ],
   "buttons": [
    "base",
@@ -33,14 +29,18 @@
    "sizes",
    "block button"
   ],
-  "special": [
-   "modals"
+  "boxes": [
+   "filled",
+   "index"
   ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
    "navbar",
    "tabs"
+  ],
+  "special": [
+   "modals"
   ],
   "stripe": [
    "general"
@@ -159,77 +159,136 @@
     }
    ]
   },
-  "utilities": {
-   "link item": [
+  "typography": {
+   "article": [
     {
-     "name": "Link item",
-     "description": "<p>Prepends a link indicator icon before the link text.</p>\n",
+     "name": "Article",
+     "description": "<p>A full article with heading, lead and body text</p>\n",
      "page": [
       {
-       "nav": "Utilities",
-       "section": "Link item"
-      }
-     ],
-     "state": [
-      {
-       "name": ".link-item-outbound",
-       "escaped": "link-item-outbound",
-       "description": "Will show icon for outbound link instead of regular link item arrow"
-      },
-      {
-       "name": ".link-item-light",
-       "escaped": "link-item-light",
-       "description": "Lighter link item icon and text color (for use with dark backgrounds)"
+       "nav": "Typography",
+       "section": "Article"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
-       "path": "~/source/sass/utility/link-item.scss",
-       "example": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
-       "escaped": "\n&lt;a href=\"#\" class=\"link-item\"&gt;Inbound link item&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" class=\"link-item link-item-outbound\"&gt;Outbound link item&lt;/a&gt;"
+       "modifier": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>\n     <p>Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. <a href=\"#\">Nulla sit amet</a> erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "path": "~/source/sass/typography/article.scss",
+       "example": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>\n     <p>Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. <a href=\"#\">Nulla sit amet</a> erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Lorem ipsum&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.&lt;/p&gt;\n     &lt;p&gt;Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;\n     &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. &lt;a href=\"#\"&gt;Nulla sit amet&lt;/a&gt; erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;\n     &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;\n&lt;/article&gt;"
       }
      ]
     }
    ],
-   "margin resetters": [
+   "headings": [
     {
-     "name": "Margin resetters",
-     "description": "<p>Set margins to zero</p>\n",
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
      "state": [
       {
-       "name": ".no-margin-top",
-       "escaped": "no-margin-top",
-       "description": "Sets top margin to zero"
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
       },
       {
-       "name": ".no-margin-right",
-       "escaped": "no-margin-right",
-       "description": "Sets right margin to zero"
-      },
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
       {
-       "name": ".no-margin-bottom",
-       "escaped": "no-margin-bottom",
-       "description": "Sets bottom margin to zero"
-      },
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "lead": [
+    {
+     "name": "Lead",
+     "description": "<p>A large paragraph to use as article lead.</p>\n",
+     "page": [
       {
-       "name": ".no-margin-left",
-       "escaped": "no-margin-left",
-       "description": "Sets left margin to zero"
+       "nav": "Typography",
+       "section": "Lead"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>",
+       "path": "~/source/sass/typography/lead.scss",
+       "example": "\n<p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>",
+       "escaped": "\n&lt;p class=\"lead\"&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.&lt;/p&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
       }
      ],
      "page": [
       {
-       "nav": "Utilities",
-       "section": "Margin resetters"
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
+       "path": "~/source/sass/typography/list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
-   ]
-  },
-  "typography": {
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
+       "path": "~/source/sass/typography/list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
+   ],
    "text alignment": [
     {
      "name": "Text alignment",
@@ -366,205 +425,73 @@
       }
      ]
     }
-   ],
-   "article": [
-    {
-     "name": "Article",
-     "description": "<p>A full article with heading, lead and body text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Article"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>\n     <p>Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. <a href=\"#\">Nulla sit amet</a> erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
-       "path": "~/source/sass/typography/article.scss",
-       "example": "\n<article>\n     <h1>Lorem ipsum</h1>\n     <p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>\n     <p>Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.</p>\n     <p>Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. <a href=\"#\">Nulla sit amet</a> erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.</p>\n     <p>Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Lorem ipsum&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.&lt;/p&gt;\n     &lt;p&gt;Integer dignissim, augue ac ornare viverra, nulla neque tincidunt ipsum, ac vulputate turpis eros scelerisque dolor. Integer at turpis quam.&lt;/p&gt;\n     &lt;p&gt;Phasellus auctor malesuada diam, ac tincidunt neque venenatis eu. &lt;a href=\"#\"&gt;Nulla sit amet&lt;/a&gt; erat eleifend magna tincidunt faucibus at in lorem. Quisque nisi felis, vulputate non nibh a, euismod posuere ante. Morbi nec purus sed magna sollicitudin aliquet. Aliquam pulvinar sem at sagittis ullamcorper.&lt;/p&gt;\n     &lt;p&gt;Maecenas bibendum suscipit ante, at pretium risus aliquet vel. Aenean efficitur diam et dui aliquam, eu scelerisque elit luctus. Praesent luctus varius felis sit amet tincidunt. In pharetra mattis tempus. Nullam bibendum id nisi hendrerit condimentum.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    }
-   ],
-   "headings": [
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Headings"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-highlight",
-       "escaped": "text-highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "path": "~/source/sass/typography/headings.scss",
-       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
-      }
-     ]
-    }
-   ],
-   "lead": [
-    {
-     "name": "Lead",
-     "description": "<p>A large paragraph to use as article lead.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Lead"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>",
-       "path": "~/source/sass/typography/lead.scss",
-       "example": "\n<p class=\"lead\">Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.</p>",
-       "escaped": "\n&lt;p class=\"lead\"&gt;Nulla et libero fermentum nisl tempor suscipit quis quis lacus. Sed lacus nisi, condimentum eget sem at, euismod vestibulum quam.&lt;/p&gt;"
-      }
-     ]
-    }
-   ],
-   "unordered list": [
-    {
-     "name": "Unordered list",
-     "description": "<p>Stanrdard unordered list.</p>\n",
-     "state": [
-      {
-       "name": ".unordered-list",
-       "escaped": "unordered-list",
-       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Unordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
-       "path": "~/source/sass/typography/list.scss",
-       "example": "\n<ul class=\"unordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "ordered list": [
-    {
-     "name": "Ordered list",
-     "description": "<p>Stanrdard ordered list.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Ordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
-       "path": "~/source/sass/typography/list.scss",
-       "example": "\n<ol class=\"ordered-list\">\n    <li>First list item</li>\n    <li>Second list item</li>\n    <li>Third list item</li>\n</ol>",
-       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;First list item&lt;/li&gt;\n    &lt;li&gt;Second list item&lt;/li&gt;\n    &lt;li&gt;Third list item&lt;/li&gt;\n&lt;/ol&gt;"
-      }
-     ]
-    }
    ]
   },
-  "boxes": {
-   "filled": [
+  "utilities": {
+   "link item": [
     {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "name": "Link item",
+     "description": "<p>Prepends a link indicator icon before the link text.</p>\n",
      "page": [
       {
-       "nav": "Boxes",
-       "section": "Filled"
+       "nav": "Utilities",
+       "section": "Link item"
       }
      ],
      "state": [
       {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
+       "name": ".link-item-outbound",
+       "escaped": "link-item-outbound",
+       "description": "Will show icon for outbound link instead of regular link item arrow"
       },
       {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
+       "name": ".link-item-light",
+       "escaped": "link-item-light",
+       "description": "Lighter link item icon and text color (for use with dark backgrounds)"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
+       "path": "~/source/sass/utility/link-item.scss",
+       "example": "\n<a href=\"#\" class=\"link-item\">Inbound link item</a><br>\n<a href=\"#\" class=\"link-item link-item-outbound\">Outbound link item</a>",
+       "escaped": "\n&lt;a href=\"#\" class=\"link-item\"&gt;Inbound link item&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" class=\"link-item link-item-outbound\"&gt;Outbound link item&lt;/a&gt;"
       }
      ]
     }
    ],
-   "index": [
+   "margin resetters": [
     {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
-     "page": [
+     "name": "Margin resetters",
+     "description": "<p>Set margins to zero</p>\n",
+     "state": [
       {
-       "nav": "Boxes",
-       "section": "Index"
+       "name": ".no-margin-top",
+       "escaped": "no-margin-top",
+       "description": "Sets top margin to zero"
+      },
+      {
+       "name": ".no-margin-right",
+       "escaped": "no-margin-right",
+       "description": "Sets right margin to zero"
+      },
+      {
+       "name": ".no-margin-bottom",
+       "escaped": "no-margin-bottom",
+       "description": "Sets bottom margin to zero"
+      },
+      {
+       "name": ".no-margin-left",
+       "escaped": "no-margin-left",
+       "description": "Sets left margin to zero"
       }
      ],
-     "markup": [
+     "page": [
       {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "nav": "Utilities",
+       "section": "Margin resetters"
       }
      ]
     }
@@ -706,33 +633,74 @@
     }
    ]
   },
-  "special": {
-   "modals": [
+  "boxes": {
+   "filled": [
     {
-     "name": "Modals",
-     "description": "<p>Modal box</p>\n",
-     "author": "Sebastian Thulin",
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
      "page": [
       {
-       "nav": "Special",
-       "section": "Modals"
+       "nav": "Boxes",
+       "section": "Filled"
       }
      ],
      "state": [
       {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active tab"
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"modal modal-backdrop\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p></p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
-       "path": "~/source/sass/component/modal/modal.scss",
-       "example": "\n<div class=\"modal modal-backdrop\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p></p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;div class=\"modal modal-backdrop\" tabindex=\"-1\" role=\"dialog\"&gt;\n    &lt;div class=\"modal-content\"&gt;\n      &lt;div class=\"modal-header\"&gt;\n        &lt;button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"&gt;&lt;span aria-hidden=\"true\"&gt;&times;&lt;/span&gt;&lt;/button&gt;\n        &lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-body\"&gt;\n        &lt;p&gt;&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-footer\"&gt;\n        &lt;button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"&gt;Close&lt;/button&gt;\n        &lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
+       "modifier": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/filled.scss",
+       "example": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -858,6 +826,58 @@
        "path": "~/source/sass/component/navigation/tabs.scss",
        "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
        "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "special": {
+   "modals": [
+    {
+     "name": "Modals",
+     "description": "<p>Modal box</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Modals"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-2",
+       "escaped": "modal-backdrop-2",
+       "description": "Stripe color 2 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-3",
+       "escaped": "modal-backdrop-3",
+       "description": "Stripe color 3 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-4",
+       "escaped": "modal-backdrop-4",
+       "description": "Stripe color 4 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-5",
+       "escaped": "modal-backdrop-5",
+       "description": "Stripe color 5 as backdrop"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
+       "path": "~/source/sass/component/modal/modal.scss",
+       "example": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" /&gt;\n&lt;div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\"&gt;\n    &lt;div class=\"modal-content\"&gt;\n      &lt;div class=\"modal-header\"&gt;\n        &lt;button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"&gt;&lt;span aria-hidden=\"true\"&gt;&times;&lt;/span&gt;&lt;/button&gt;\n        &lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-body\"&gt;\n        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-footer\"&gt;\n        &lt;button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"&gt;Close&lt;/button&gt;\n        &lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
