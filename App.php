@@ -16,6 +16,10 @@ class App
         $this->loadPage();
     }
 
+    /**
+     * Loads a page and it's navigation
+     * @return bool Returns true when the page is loaded
+     */
     public function loadPage()
     {
         // Navigation
@@ -34,9 +38,16 @@ class App
         return true;
     }
 
+    /**
+     * Reads the navigation from the json
+     * @return object Navigation
+     */
     public function loadNavigation()
     {
-        return $this->documentation->nav;
+        $nav = (array)$this->documentation->nav;
+        ksort($nav);
+
+        return (object)$nav;
     }
 
     /**
