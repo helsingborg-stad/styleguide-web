@@ -37,7 +37,6 @@
 
 .modal {
 	display: none;
-	z-index: $level-10;
 	margin: 0 auto;
 
 	&[class*='modal-backdrop-']:after,
@@ -45,6 +44,7 @@
 		@include cover();
 		position: fixed;
 		content: "";
+		z-index: $level-9;
 	}
 }
 
@@ -81,7 +81,7 @@
 .modal-content {
     @include center();
 
-    z-index: $level-8;
+    z-index: $level-10;
 	background: #fff;
     line-height: $base-line-height;
 	border: 1px solid $creamy-darker;
