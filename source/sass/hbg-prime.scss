@@ -13,6 +13,14 @@
 @import 'mixin/positioning';
 
 // ***************************************************************
+// *** Utilities
+// ***************************************************************
+@import 'utility/text';
+@import 'utility/margin';
+@import 'utility/link-item';
+@import 'utility/interaction';
+
+// ***************************************************************
 // *** Layout
 // ***************************************************************
 @import 'layout/reset';
@@ -46,6 +54,7 @@
 @import 'component/navigation/breadcrumb';
 
 @import 'component/modal/modal';
+@import 'component/accordion/accordion';
 
 @import 'component/stripe/stripe';
 
@@ -56,11 +65,3 @@
 @import 'component/table/table';
 
 @import 'component/footer/footer';
-
-
-// ***************************************************************
-// *** Utilities
-// ***************************************************************
-@import 'utility/text';
-@import 'utility/margin';
-@import 'utility/link-item';

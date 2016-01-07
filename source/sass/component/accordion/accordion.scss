@@ -1,0 +1,84 @@
+//
+// @name Accordion
+// @description CSS-only solution for toggeling content section visibility.
+//
+// @page Special/Accordion
+//
+// @state .accordion-icon - Use plus/minus signs to indicate toggaleable element
+//
+// @markup
+// <div class="accordion accordion-icon">
+//     <section class="accordion-section">
+//         <input type="checkbox" id="accordion-section-1">
+//         <label class="accordion-toggle" for="accordion-section-1">
+//             <h2 class="underline">First</h2>
+//         </label>
+//         <div class="accordion-content">
+//             This is the content of the first accordion section
+//         </div>
+//     </section>
+//     <section class="accordion-section">
+//         <input type="checkbox" id="accordion-section-2">
+//         <label class="accordion-toggle" for="accordion-section-2">
+//             <h2 class="underline">Second</h2>
+//         </label>
+//         <div class="accordion-content">
+//             This is the content of the second accordion section
+//         </div>
+//     </section>
+//     <section class="accordion-section">
+//         <input type="checkbox" id="accordion-section-3">
+//         <label class="accordion-toggle" for="accordion-section-3">
+//             <h2 class="underline">Third</h2>
+//         </label>
+//         <div class="accordion-content">
+//             This is the content of the third accordion section
+//         </div>
+//     </section>
+// </div>
+
+.accordion {
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+.accordion-icon {
+    .accordion-toggle {
+        position: relative;
+
+        &:before {
+            @include hbg-icon($icon-plus-square);
+            @include center(false, true);
+            right: 0;
+            font-size: 1em;
+            color: $gray-light;
+        }
+    }
+}
+
+.accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before {
+    @include hbg-icon($icon-minus-square);
+}
+
+.accordion-toggle {
+    @extend .no-select;
+    display: block;
+    cursor: pointer;
+
+    * {
+        @extend .no-select;
+    }
+}
+
+.accordion-content {
+    display: block;
+
+    input[type="checkbox"] ~ & {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ & {
+        display: block;
+    }
+}
