@@ -5,7 +5,7 @@
 // @page Special/Accordion
 //
 // @state .accordion-icon - Use plus/minus signs to indicate toggaleable element
-// @state .accordion-boxes - Make boxes around alternatives 
+// @state .accordion-boxes - Make boxes around alternatives
 // @state .accordion-list - Show accordion as list (with alternating colors)
 //
 // @markup
@@ -71,84 +71,84 @@
 
 .accordion-boxes,
 .accordion-list {
-	
+
 	.accordion-toggle,
 	.accordion-content {
-		padding: $grid-gutter-sm/2 $grid-gutter-sm; 
-		
+		padding: $grid-gutter-sm/2 $grid-gutter-sm;
+
 		&:before {
-			right: $grid-gutter-sm; 
+			right: $grid-gutter-sm;
 		}
 	}
-	
+
 	.accordion-content {
-		padding-top: $grid-gutter-sm; 
-		padding-bottom: $grid-gutter-sm; 
+		padding-top: $grid-gutter-sm;
+		padding-bottom: $grid-gutter-sm;
 	}
-	
+
 	&.boxes-medium,
 	&.list-medium {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-md/2 $grid-gutter-md; 
-			
+			padding: $grid-gutter-md/2 $grid-gutter-md;
+
 			&:before {
-				right: $grid-gutter-md; 
+				right: $grid-gutter-md;
 			}
 		}
-		
+
 		.accordion-content {
-			padding-top: $grid-gutter-md; 
-			padding-bottom: $grid-gutter-md; 
+			padding-top: $grid-gutter-md;
+			padding-bottom: $grid-gutter-md;
 		}
 	}
-	
+
 	&.boxes-large,
 	&.list-large {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-lg/2 $grid-gutter-lg; 
-			
+			padding: $grid-gutter-lg/2 $grid-gutter-lg;
+
 			&:before {
-				right: $grid-gutter-lg; 
+				right: $grid-gutter-lg;
 			}
 		}
-		
+
 		.accordion-content {
-			padding-top: $grid-gutter-lg; 
-			padding-bottom: $grid-gutter-lg; 
+			padding-top: $grid-gutter-lg;
+			padding-bottom: $grid-gutter-lg;
 		}
 	}
-	
+
 	.accordion-section {
-		border: 1px solid $creamy-darker; 
+		border: 1px solid $creamy-darker;
 	}
-	
+
 	.accordion-content {
-		border-top: 1px solid $creamy-darker; 
+		border-top: 1px solid $creamy-darker;
 	}
-	
+
 	.accordion-toggle {
-	
+
 		h1, h2, h3, h4, h5,h6 {
-			font-size: 1.4em; 
-			padding: 0; 
-			margin: 0; 
+			font-size: 1.4em;
+			padding: 0;
+			margin: 0;
 		}
-		
+
 	}
-	
+
 }
 
 .accordion-list {
 	.accordion-section + .accordion-section {
-		margin-top: 0; 
-		border-top: none; 
+		margin-top: 0;
+		border-top: none;
 	}
-	
+
 	.accordion-section:nth-child(odd) {
-		background: rgba(#000,.01); 
-	} 
+		background: rgba(#000,.01);
+	}
 }
 
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
