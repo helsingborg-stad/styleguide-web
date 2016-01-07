@@ -5,11 +5,11 @@
 //
 // @page Special/Modals
 //
-// @state .modal-backdrop-1 - Stripe color 1 as backdrop 
-// @state .modal-backdrop-2 - Stripe color 2 as backdrop 
-// @state .modal-backdrop-3 - Stripe color 3 as backdrop 
-// @state .modal-backdrop-4 - Stripe color 4 as backdrop 
-// @state .modal-backdrop-5 - Stripe color 5 as backdrop 
+// @state .modal-backdrop-1 - Stripe color 1 as backdrop
+// @state .modal-backdrop-2 - Stripe color 2 as backdrop
+// @state .modal-backdrop-3 - Stripe color 3 as backdrop
+// @state .modal-backdrop-4 - Stripe color 4 as backdrop
+// @state .modal-backdrop-5 - Stripe color 5 as backdrop
 //
 // @markup
 // <input type="checkbox" name="modal-trigger-state" value="1" />
@@ -30,76 +30,73 @@
 // </div><!-- /.modal -->
 //
 
-/* Action css */ 
+/* Action css */
 [name="modal-trigger-state"]:checked + .modal {
-	display: block !important; 
+	display: block !important;
 }
 
 .modal {
-	
-	z-index: 700;
-	margin: 0 auto; 
-	display: none; 
-	
-    .modal-content {
-	    @include center(); 
-		background: #fff;
-	    line-height: $base-line-height;
-		border: 1px solid $creamy-darker;
-		z-index: 800; 
-		
-		&.large {
-			width: 100%; 
-		}
-		
-		&.medium {
-			width: 70%; 
-		}
-		
-		&.small {
-			width: 50%; 
-		} 
-		
-	}
-	
-	.modal-header {
-		border-bottom: 1px solid $creamy-darker; 
-		padding: 1em; 
-		
-		h1,h2,h3,h4,h5,h6 {
-			padding-bottom: 0; 
-		}
-		
-		.close {
-			position: absolute; 
-			top: 0; 
-			right: 0; 
-			height: 2em; 
-			width: 2em; 
-			margin: -1em; 
-			line-height: 2em; 
-			text-align: center; 
-			padding: 0; 
-			
-		}
-	}
-	
-	.modal-body {
-		padding: 1em; 
-	}
-	
-	.modal-footer {
-		border-top: 1px solid $creamy-darker; 
-		padding: 1em; 
-	}
-	
-	&[class*='modal-backdrop-']:after, 
+	display: none;
+	z-index: $level-10;
+	margin: 0 auto;
+
+	&[class*='modal-backdrop-']:after,
 	&[class^=' modal-backdrop-']:after {
-		@include cover(); 
-		position: fixed; 
-		content: ""; 
+		@include cover();
+		position: fixed;
+		content: "";
 	}
-	
+}
+
+.modal-header {
+	padding: 1em;
+	border-bottom: 1px solid $creamy-darker;
+
+	h1, h2, h3, h4, h5, h6 {
+		padding-bottom: 0;
+	}
+
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 2em;
+		width: 2em;
+		margin: -1em;
+		line-height: 2em;
+		text-align: center;
+		padding: 0;
+	}
+}
+
+.modal-body {
+	padding: 1em;
+}
+
+.modal-footer {
+	padding: 1em;
+	border-top: 1px solid $creamy-darker;
+}
+
+.modal-content {
+    @include center();
+
+    z-index: $level-8;
+	background: #fff;
+    line-height: $base-line-height;
+	border: 1px solid $creamy-darker;
+
+	&.modal-content-large {
+		width: 100%;
+	}
+
+	&.modal-content-medium {
+		width: 70%;
+	}
+
+	&.modal-content-small {
+		width: 50%;
+	}
 }
 
 .modal-backdrop-1:after {

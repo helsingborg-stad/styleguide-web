@@ -539,10 +539,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
        "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
