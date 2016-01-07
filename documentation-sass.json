@@ -30,7 +30,8 @@
   ],
   "boxes": [
    "filled",
-   "index"
+   "index",
+   "panel"
   ],
   "buttons": [
    "base",
@@ -702,6 +703,40 @@
        "path": "~/source/sass/component/box/index.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "panel": [
+    {
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-container\">\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-container\">\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-container\">\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-container\">\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

@@ -1,3 +1,55 @@
-.box-panel {
+//
+// @name Panel
+// @description Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.
+//
+// @page Boxes/Panel
+//
+// @state .box-panel-primary - Promary look (Default)
+// @state .box-panel-secondary - Secondary look
+//
+// @markup
+// <div class="grid">
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-primary">
+//             <h4 class="box-title">Primary panel box</h4>
+//             <div class="box-container">
+//                 <p>This is a index box. This box is typically used to link to a sub section.</p>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-secondary">
+//             <h4 class="box-title">Secondary panel box</h4>
+//             <div class="box-container">
+//                 <p>This is a index box. This box is typically used to link to a sub section.</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
 
+.box-panel {
+    display: block;
+    padding: 0;
+
+    .box-title {
+        padding: $content-gutter/1.5 $content-gutter;
+        margin: 0;
+        background-color: $palette-red-4;
+        color: #fff;
+    }
+
+    .box-container {
+        border: 1px solid $creamy-darker;
+        border-top: 0;
+    }
+}
+
+.box-panel-secondary {
+    .box-title {
+        padding-left: 0;
+        background-color: transparent;
+        border-bottom: 3px solid $palette-red-2;
+        color: $palette-red-2;
+    }
 }
