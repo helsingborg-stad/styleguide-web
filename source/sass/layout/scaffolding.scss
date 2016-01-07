@@ -7,12 +7,6 @@
     box-sizing: border-box;
 }
 
-*:not(.fa),
-*:not(.fa):after,
-*:not(.fa):before {
-    font-family: $base-font-family;
-}
-
 // ***************************************************************
 // *** 2. Base typography
 // ***************************************************************
@@ -21,4 +15,9 @@ html, body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $base-font-color;
+}
+
+strong,
+b {
+    font-weight: bold;
 }
