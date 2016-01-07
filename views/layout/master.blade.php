@@ -33,7 +33,7 @@
             margin-top: 11px;
         }
 
-        .stripe {
+        .markup-preview > .stripe {
             display: inline-block;
             height: 400px;
         }

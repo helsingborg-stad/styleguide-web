@@ -38,6 +38,9 @@
    "sizes",
    "block button"
   ],
+  "hero": [
+   "hero"
+  ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
@@ -825,6 +828,30 @@
        "path": "~/source/sass/component/button/button.scss",
        "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
        "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"background-image:url('http://www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg');\">\n    <div class=\"stripe stripe-red\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/hero/hero.scss",
+       "example": "\n<div class=\"hero\" style=\"background-image:url('http://www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg');\">\n    <div class=\"stripe stripe-red\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"background-image:url('http://www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg');\"&gt;\n    &lt;div class=\"stripe stripe-red\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
