@@ -7,6 +7,7 @@
 @import 'config/icons';
 @import 'config/button';
 @import 'config/z-index';
+@import 'config/table';
 
 @import 'mixin/mixins';
 @import 'mixin/positioning';
@@ -51,6 +52,8 @@
 @import 'component/box/box';
 @import 'component/box/index';
 @import 'component/box/filled';
+
+@import 'component/table/table';
 
 
 // ***************************************************************

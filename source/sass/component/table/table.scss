@@ -1,0 +1,119 @@
+//
+// @name Table
+// @description
+//
+// @page Tables/Basic
+//
+// @state .table-sm - Small table
+// @state .table-lg - Large table
+// @state .table-striped - Zebra striped table
+// @state .table-hover - Highlight table row on hover
+//
+// @markup
+// <table class="table-striped table-hover">
+//     <thead>
+//         <tr>
+//             <th>Point of interest</th>
+//             <th>Distance</th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//         <tr>
+//             <td>Stortorget</td>
+//             <td>1 km</td>
+//         </tr>
+//         <tr>
+//             <td>Sundstorget</td>
+//             <td>2 km</td>
+//         </tr>
+//         <tr>
+//             <td>Knutpunkten</td>
+//             <td>2 km</td>
+//         </tr>
+//     </tbody>
+//     <tfoot>
+//         <tr>
+//             <td colspan="3"><small>Note: This is example data.</small></td>
+//         </tr>
+//     </tfoot>
+// </table>
+//
+
+table {
+    width: 100%;
+    border: 1px solid $creamy-darker;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 1px solid $creamy-darker;
+    background-color: #fff;
+}
+
+tbody {
+    background-color: $creamy;
+}
+
+tfoot {
+    background-color: #fff;
+
+    thead + & {
+        border-bottom: 1px solid $creamy-darker;
+    }
+
+    tbody + & {
+        border-top: 1px solid $creamy-darker;
+    }
+}
+
+th {
+    padding: $table-cell-padding;
+    text-align: left;
+    font-weight: bold;
+
+    & + th {
+        border-left: 1px solid $creamy-darker;
+    }
+}
+
+td {
+    padding: $table-cell-padding;
+
+    & + td {
+        border-left: 1px solid $creamy-darker;
+    }
+}
+
+.table-striped {
+    tbody {
+        tr:nth-child(even) {
+            background-color: $table-zebra-alter-color;
+        }
+    }
+}
+
+.table-hover {
+    tbody {
+        tr:hover {
+            background-color: $table-highlight-color;
+        }
+    }
+}
+
+.table-sm {
+    font-size: .8em;
+    line-height: $base-line-height;
+
+    th, td {
+        padding: $table-cell-padding-sm;
+    }
+}
+
+.table-lg {
+    font-size: 1.1em;
+    line-height: $base-line-height;
+
+    th, td {
+        padding: $table-cell-padding-lg;
+    }
+}
