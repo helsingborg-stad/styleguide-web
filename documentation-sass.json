@@ -28,15 +28,15 @@
    "accordion",
    "modals"
   ],
-  "boxes": [
-   "filled",
-   "index"
-  ],
   "buttons": [
    "base",
    "primary",
    "sizes",
    "block button"
+  ],
+  "boxes": [
+   "filled",
+   "index"
   ],
   "navigation": [
    "breadcrumbs",
@@ -541,16 +541,26 @@
        "name": ".accordion-icon",
        "escaped": "accordion-icon",
        "description": "Use plus/minus signs to indicate toggaleable element"
+      },
+      {
+       "name": ".accordion-boxes",
+       "escaped": "accordion-boxes",
+       "description": "Make boxes around alternatives"
+      },
+      {
+       "name": ".accordion-list",
+       "escaped": "accordion-list",
+       "description": "Show accordion as list (with alternating colors)"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"accordion accordion-icon\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2 class=\"underline\">First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2 class=\"underline\">Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2 class=\"underline\">Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n</div>",
+       "modifier": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
        "path": "~/source/sass/component/accordion/accordion.scss",
-       "example": "\n<div class=\"accordion accordion-icon\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2 class=\"underline\">First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2 class=\"underline\">Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2 class=\"underline\">Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n</div>",
-       "escaped": "\n&lt;div class=\"accordion accordion-icon\"&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h2 class=\"underline\"&gt;First&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the first accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h2 class=\"underline\"&gt;Second&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the second accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h2 class=\"underline\"&gt;Third&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the third accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
+       "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
+       "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h2&gt;First&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the first accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h2&gt;Second&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the second accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h2&gt;Third&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the third accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h2&gt;Fourth&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the fourth accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -558,7 +568,7 @@
    "modals": [
     {
      "name": "Modals",
-     "description": "<p>Modal box</p>\n",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
      "author": "Sebastian Thulin",
      "page": [
       {
@@ -595,7 +605,7 @@
       {
        "name": ".modal-large",
        "escaped": "modal-large",
-       "description": "Big modal (100% width)"
+       "description": "Big modal (100% width, 100vh height)"
       },
       {
        "name": ".modal-medium",
@@ -616,79 +626,6 @@
        "path": "~/source/sass/component/modal/modal.scss",
        "example": "\n<a href=\"#target-modal\">Modal!</a>\n<div id=\"target-modal\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Modal title</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n       \t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n     \t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
        "escaped": "\n&lt;a href=\"#target-modal\"&gt;Modal!&lt;/a&gt;\n&lt;div id=\"target-modal\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n       \t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "boxes": {
-   "filled": [
-    {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Filled"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "index": [
-    {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Index"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -825,6 +762,79 @@
        "path": "~/source/sass/component/button/button.scss",
        "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
        "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "boxes": {
+   "filled": [
+    {
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Filled"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/filled.scss",
+       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

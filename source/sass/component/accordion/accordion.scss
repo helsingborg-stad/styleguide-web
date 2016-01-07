@@ -5,13 +5,15 @@
 // @page Special/Accordion
 //
 // @state .accordion-icon - Use plus/minus signs to indicate toggaleable element
+// @state .accordion-boxes - Make boxes around alternatives 
+// @state .accordion-list - Show accordion as list (with alternating colors)
 //
 // @markup
-// <div class="accordion accordion-icon">
+// <div class="accordion accordion-icon accordion-list">
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
-//             <h2 class="underline">First</h2>
+//             <h2>First</h2>
 //         </label>
 //         <div class="accordion-content">
 //             This is the content of the first accordion section
@@ -20,7 +22,7 @@
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-2">
 //         <label class="accordion-toggle" for="accordion-section-2">
-//             <h2 class="underline">Second</h2>
+//             <h2>Second</h2>
 //         </label>
 //         <div class="accordion-content">
 //             This is the content of the second accordion section
@@ -29,10 +31,19 @@
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-3">
 //         <label class="accordion-toggle" for="accordion-section-3">
-//             <h2 class="underline">Third</h2>
+//             <h2>Third</h2>
 //         </label>
 //         <div class="accordion-content">
 //             This is the content of the third accordion section
+//         </div>
+//     </section>
+//		<section class="accordion-section">
+//         <input type="radio" name="active-section" id="accordion-section-4">
+//         <label class="accordion-toggle" for="accordion-section-4">
+//             <h2>Fourth</h2>
+//         </label>
+//         <div class="accordion-content">
+//             This is the content of the fourth accordion section
 //         </div>
 //     </section>
 // </div>
@@ -56,6 +67,74 @@
             color: $gray-light;
         }
     }
+}
+
+.accordion-boxes,
+.accordion-list {
+	
+	.accordion-toggle,
+	.accordion-content {
+		padding: $grid-gutter-sm/2 $grid-gutter-sm; 
+		
+		&:before {
+			right: $grid-gutter-sm; 
+		}
+	}
+
+	
+	&.boxes-medium,
+	&.list-medium {
+		.accordion-toggle,
+		.accordion-content {
+			padding: $grid-gutter-md/2 $grid-gutter-md; 
+			
+			&:before {
+				right: $grid-gutter-md; 
+			}
+		}
+	}
+	
+	&.boxes-large,
+	&.list-large {
+		.accordion-toggle,
+		.accordion-content {
+			padding: $grid-gutter-lg/2 $grid-gutter-lg; 
+			
+			&:before {
+				right: $grid-gutter-lg; 
+			}
+		}
+	}
+	
+	.accordion-section {
+		border: 1px solid $creamy-darker; 
+	}
+	
+	.accordion-content {
+		border-top: 1px solid $creamy-darker; 
+	}
+	
+	.accordion-toggle {
+	
+		h1, h2, h3, h4, h5,h6 {
+			font-size: 1.4em; 
+			padding: 0; 
+			margin: 0; 
+		}
+		
+	}
+	
+}
+
+.accordion-list {
+	.accordion-section + .accordion-section {
+		margin-top: 0; 
+		border-top: none; 
+	}
+	
+	.accordion-section:nth-child(odd) {
+		background: rgba(#000,.01); 
+	} 
 }
 
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
