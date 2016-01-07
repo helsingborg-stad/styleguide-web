@@ -12,20 +12,20 @@
 // @state .modal-backdrop-5 - Stripe color 5 as backdrop
 //
 // @markup
-// <input type="checkbox" name="modal-trigger-state" value="1" />
+// <input type="checkbox" name="modal-trigger-state" id="modal-example-toggle" value="1" />
 // <div class="modal modal-backdrop-2" tabindex="-1" role="dialog">
 //     <div class="modal-content">
-//       <div class="modal-header">
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-//         <h2 class="modal-title">Modal title</h2>
-//       </div>
-//       <div class="modal-body">
-//         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Save changes</button>
-//       </div>
+//         <div class="modal-header">
+//             <label aria-label="Close" role="button" class="btn btn-default" for="modal-example-toggle"><span aria-hidden="true">&times;</span></label>
+//             <h2 class="modal-title">Modal title</h2>
+//         </div>
+//         <div class="modal-body">
+//             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//         </div>
+//         <div class="modal-footer">
+//             <label role="button" class="btn btn-default" for="modal-example-toggle">Close</label>
+//             <button type="button" class="btn btn-primary">Save changes</button>
+//         </div>
 //     </div><!-- /.modal-content -->
 // </div><!-- /.modal -->
 //
@@ -39,13 +39,11 @@
 	display: none;
 	margin: 0 auto;
 
-	&[class*='modal-backdrop-']:after,
-	&[class^=' modal-backdrop-']:after {
-		@include cover();
-		position: fixed;
-		content: "";
-		z-index: $level-9;
-	}
+	@include cover();
+	position: fixed;
+	z-index: $level-9;
+
+	overflow: auto;
 }
 
 .modal-header {
@@ -99,22 +97,22 @@
 	}
 }
 
-.modal-backdrop-1:after {
+.modal-backdrop-1 {
     background-color: rgba($palette-red-1,.9);
 }
 
-.modal-backdrop-2:after {
+.modal-backdrop-2 {
     background-color: rgba($palette-red-2,.9);
 }
 
-.modal-backdrop-3:after {
+.modal-backdrop-3 {
     background-color: rgba($palette-red-3,.9);
 }
 
-.modal-backdrop-4:after {
+.modal-backdrop-4 {
     background-color: rgba($palette-red-4,.9);
 }
 
-.modal-backdrop-4:after {
-    background-color: rgba($palette-red-4,.9);
+.modal-backdrop-5 {
+    background-color: rgba($palette-red-5,.9);
 }
