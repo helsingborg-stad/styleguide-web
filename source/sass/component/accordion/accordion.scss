@@ -80,7 +80,11 @@
 			right: $grid-gutter-sm; 
 		}
 	}
-
+	
+	.accordion-content {
+		padding-top: $grid-gutter-sm; 
+		padding-bottom: $grid-gutter-sm; 
+	}
 	
 	&.boxes-medium,
 	&.list-medium {
@@ -91,6 +95,11 @@
 			&:before {
 				right: $grid-gutter-md; 
 			}
+		}
+		
+		.accordion-content {
+			padding-top: $grid-gutter-md; 
+			padding-bottom: $grid-gutter-md; 
 		}
 	}
 	
@@ -103,6 +112,11 @@
 			&:before {
 				right: $grid-gutter-lg; 
 			}
+		}
+		
+		.accordion-content {
+			padding-top: $grid-gutter-lg; 
+			padding-bottom: $grid-gutter-lg; 
 		}
 	}
 	
