@@ -23,24 +23,24 @@
    "link item",
    "margin resetters"
   ],
+  "boxes": [
+   "filled",
+   "index"
+  ],
   "buttons": [
    "base",
    "primary",
    "sizes",
    "block button"
   ],
-  "boxes": [
-   "filled",
-   "index"
+  "special": [
+   "modals"
   ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
    "navbar",
    "tabs"
-  ],
-  "special": [
-   "modals"
   ],
   "stripe": [
    "general"
@@ -497,6 +497,79 @@
     }
    ]
   },
+  "boxes": {
+   "filled": [
+    {
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Filled"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/filled.scss",
+       "example": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "buttons": {
    "base": [
     {
@@ -633,74 +706,53 @@
     }
    ]
   },
-  "boxes": {
-   "filled": [
+  "special": {
+   "modals": [
     {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "name": "Modals",
+     "description": "<p>Modal box</p>\n",
+     "author": "Sebastian Thulin",
      "page": [
       {
-       "nav": "Boxes",
-       "section": "Filled"
+       "nav": "Special",
+       "section": "Modals"
       }
      ],
      "state": [
       {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
       },
       {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
+       "name": ".modal-backdrop-2",
+       "escaped": "modal-backdrop-2",
+       "description": "Stripe color 2 as backdrop"
       },
       {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
+       "name": ".modal-backdrop-3",
+       "escaped": "modal-backdrop-3",
+       "description": "Stripe color 3 as backdrop"
       },
       {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
+       "name": ".modal-backdrop-4",
+       "escaped": "modal-backdrop-4",
+       "description": "Stripe color 4 as backdrop"
       },
       {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
+       "name": ".modal-backdrop-5",
+       "escaped": "modal-backdrop-5",
+       "description": "Stripe color 5 as backdrop"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "index": [
-    {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Index"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
+       "path": "~/source/sass/component/modal/modal.scss",
+       "example": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" /&gt;\n&lt;div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\"&gt;\n    &lt;div class=\"modal-content\"&gt;\n      &lt;div class=\"modal-header\"&gt;\n        &lt;button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"&gt;&lt;span aria-hidden=\"true\"&gt;&times;&lt;/span&gt;&lt;/button&gt;\n        &lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-body\"&gt;\n        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-footer\"&gt;\n        &lt;button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"&gt;Close&lt;/button&gt;\n        &lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
@@ -826,58 +878,6 @@
        "path": "~/source/sass/component/navigation/tabs.scss",
        "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
        "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "special": {
-   "modals": [
-    {
-     "name": "Modals",
-     "description": "<p>Modal box</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Modals"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-2",
-       "escaped": "modal-backdrop-2",
-       "description": "Stripe color 2 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-3",
-       "escaped": "modal-backdrop-3",
-       "description": "Stripe color 3 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-4",
-       "escaped": "modal-backdrop-4",
-       "description": "Stripe color 4 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-5",
-       "escaped": "modal-backdrop-5",
-       "description": "Stripe color 5 as backdrop"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
-       "path": "~/source/sass/component/modal/modal.scss",
-       "example": "\n<input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" />\n<div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h2 class=\"modal-title\">Modal title</h2>\n      </div>\n      <div class=\"modal-body\">\n        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div><!-- /.modal-content -->\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;input type=\"checkbox\" name=\"modal-trigger-state\" value=\"1\" /&gt;\n&lt;div class=\"modal modal-backdrop-2\" tabindex=\"-1\" role=\"dialog\"&gt;\n    &lt;div class=\"modal-content\"&gt;\n      &lt;div class=\"modal-header\"&gt;\n        &lt;button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"&gt;&lt;span aria-hidden=\"true\"&gt;&times;&lt;/span&gt;&lt;/button&gt;\n        &lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-body\"&gt;\n        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"modal-footer\"&gt;\n        &lt;button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"&gt;Close&lt;/button&gt;\n        &lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
