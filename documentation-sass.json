@@ -43,11 +43,11 @@
    "navbar",
    "tabs"
   ],
-  "tables": [
-   "basic"
-  ],
   "stripe": [
    "general"
+  ],
+  "tables": [
+   "basic"
   ]
  },
  "pages": {
@@ -176,10 +176,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n            </div>\n        </div>\n    </div>\n</footer>",
+       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
        "path": "~/source/sass/component/footer/footer.scss",
-       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n            </div>\n        </div>\n    </div>\n</footer>",
-       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
+       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
       }
      ],
      "helsingborg.se</a></li>": ""
@@ -910,6 +910,31 @@
     }
    ]
   },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "tables": {
    "basic": [
     {
@@ -951,31 +976,6 @@
        "path": "~/source/sass/component/table/table.scss",
        "example": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
        "escaped": "\n&lt;table class=\"table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Point of interest&lt;/th&gt;\n            &lt;th&gt;Distance&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Stortorget&lt;/td&gt;\n            &lt;td&gt;1 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Sundstorget&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Knutpunkten&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Note: This is example data.&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "stripe": {
-   "general": [
-    {
-     "name": "Stripe",
-     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Stripe",
-       "section": "general"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "path": "~/source/sass/component/stripe/stripe.scss",
-       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
