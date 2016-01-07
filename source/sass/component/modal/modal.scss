@@ -11,40 +11,49 @@
 // @state .modal-backdrop-4 - Stripe color 4 as backdrop
 // @state .modal-backdrop-5 - Stripe color 5 as backdrop
 //
-// @markup
-// <input type="checkbox" name="modal-trigger-state" value="1" />
-// <div class="modal modal-backdrop-2" tabindex="-1" role="dialog">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-//         <h2 class="modal-title">Modal title</h2>
-//       </div>
-//       <div class="modal-body">
-//         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Save changes</button>
-//       </div>
-//     </div><!-- /.modal-content -->
-// </div><!-- /.modal -->
+// @state .modal-large - Big modal (100% width)
+// @state .modal-medium - Medium modal (70% width)
+// @state .modal-small - Small modal (50% width)
 //
-
-/* Action css */
-[name="modal-trigger-state"]:checked + .modal {
-	display: block !important;
-}
+// @markup
+// 	<a href="#target-modal">Modal!</a>
+// 	<div id="target-modal" class="modal modal-backdrop-2 modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
+//		<div class="modal-content">
+//     		<div class="modal-header">
+//				<a class="btn btn-close" href="#close">&otimes;</a>
+//         		<h2 class="modal-title">Modal title</h2>
+//       	</div>
+//       	<div class="modal-body">
+//         		<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//       	</div>
+//       	<div class="modal-footer">
+//         		<a href="#close" class="btn btn-default">Close</a>
+//         		<button type="button" class="btn btn-primary">Save changes</button>
+//       	</div>
+//     	</div><!-- /.modal-content -->
+//		<a href="#close" class="backdrop"></a>
+// 	</div><!-- /.modal -->
+//
 
 .modal {
 	display: none;
 	margin: 0 auto;
+	opacity: 0; 
 
-	&[class*='modal-backdrop-']:after,
-	&[class^=' modal-backdrop-']:after {
+	/* Backdrops */ 
+	&[class*='modal-backdrop-'] .backdrop,
+	&[class^=' modal-backdrop-'] .backdrop{
 		@include cover();
 		position: fixed;
 		content: "";
 		z-index: $level-9;
+		display: block; 
+	}
+	
+	/* Css open/close logic */ 
+	&:target {
+		opacity: 1; 
+		display: block !important; 
 	}
 }
 
@@ -56,7 +65,7 @@
 		padding-bottom: 0;
 	}
 
-	.close {
+	.btn-close {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -66,7 +75,10 @@
 		line-height: 2em;
 		text-align: center;
 		padding: 0;
+		border-radius: 50%;
+		border: .2em solid #fff; 
 	}
+	
 }
 
 .modal-body {
@@ -80,41 +92,44 @@
 
 .modal-content {
     @include center();
-
     z-index: $level-10;
 	background: #fff;
     line-height: $base-line-height;
 	border: 1px solid $creamy-darker;
-
-	&.modal-content-large {
-		width: 100%;
-	}
-
-	&.modal-content-medium {
-		width: 70%;
-	}
-
-	&.modal-content-small {
-		width: 50%;
-	}
 }
 
-.modal-backdrop-1:after {
+/* Modifiers - size */ 
+
+.modal-large .modal-content {
+	width: 100%;
+}
+
+.modal-medium .modal-content {
+	width: 70%;
+}
+
+.modal-small .modal-content {
+	width: 50%;
+}
+
+/* Modifiers - color */ 
+
+.modal-backdrop-1 .backdrop {
     background-color: rgba($palette-red-1,.9);
 }
 
-.modal-backdrop-2:after {
+.modal-backdrop-2 .backdrop  {
     background-color: rgba($palette-red-2,.9);
 }
 
-.modal-backdrop-3:after {
+.modal-backdrop-3 .backdrop  {
     background-color: rgba($palette-red-3,.9);
 }
 
-.modal-backdrop-4:after {
+.modal-backdrop-4 .backdrop  {
     background-color: rgba($palette-red-4,.9);
 }
 
-.modal-backdrop-4:after {
+.modal-backdrop-4 .backdrop  {
     background-color: rgba($palette-red-4,.9);
 }
