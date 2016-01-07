@@ -17,10 +17,10 @@
 //
 // @markup
 // 	<a href="#target-modal">Modal!</a>
-// 	<div id="target-modal" class="modal modal-backdrop-2 modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
+// 	<div id="target-modal" class="modal modal-backdrop-black modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
 //		<div class="modal-content">
 //     		<div class="modal-header">
-//				<a class="btn btn-close" href="#close">&otimes;</a>
+//				<a class="btn btn-close" href="#close"></a>
 //         		<h2 class="modal-title">Modal title</h2>
 //       	</div>
 //       	<div class="modal-body">
@@ -77,6 +77,17 @@
 		padding: 0;
 		border-radius: 50%;
 		border: .2em solid #fff; 
+		box-shadow: 0 1px 1px rgba(#000,.2); 
+		background: $creamy; 
+		
+		
+		&:after {
+			@include cover(); 
+			content: "\00d7"; 
+			font-size: 1.5em; 
+			line-height: 1; 
+			color: #000; 
+		}
 	}
 	
 }
@@ -95,7 +106,7 @@
     z-index: $level-10;
 	background: #fff;
     line-height: $base-line-height;
-	border: 1px solid $creamy-darker;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .2); 
 }
 
 /* Modifiers - size */ 
@@ -106,6 +117,14 @@
 
 .modal-medium .modal-content {
 	width: 70%;
+	
+	@media screen and #{$screen-xs} {
+		width: 100%; 
+	}
+	
+	@media screen and #{$screen-sm} {
+		width: 90%; 
+	}
 }
 
 .modal-small .modal-content {
@@ -118,18 +137,42 @@
     background-color: rgba($palette-red-1,.9);
 }
 
+.modal-backdrop-1 .btn-close:after {
+    color: darken($palette-red-1, 10%); 
+}
+
 .modal-backdrop-2 .backdrop  {
     background-color: rgba($palette-red-2,.9);
+}
+
+.modal-backdrop-2 .btn-close:after {
+    color: darken($palette-red-2, 10%); 
 }
 
 .modal-backdrop-3 .backdrop  {
     background-color: rgba($palette-red-3,.9);
 }
 
-.modal-backdrop-4 .backdrop  {
-    background-color: rgba($palette-red-4,.9);
+.modal-backdrop-3 .btn-close:after {
+    color: darken($palette-red-3, 10%); 
 }
 
 .modal-backdrop-4 .backdrop  {
     background-color: rgba($palette-red-4,.9);
+}
+
+.modal-backdrop-4 .btn-close:after {
+    color: darken($palette-red-4, 10%); 
+}
+
+.modal-backdrop-black .backdrop  {
+    background-color: rgba(#000,.9);
+}
+
+.modal-backdrop-white .backdrop  {
+    background-color: rgba(#fff,.9);
+}
+
+.modal-backdrop-white .modal-content {
+	border: 1px solid $creamy-darker; 
 }
