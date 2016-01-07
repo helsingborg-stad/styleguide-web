@@ -1,6 +1,6 @@
 //
 // @name Accordion
-// @description CSS-only solution for toggeling content section visibility.
+// @description CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.
 //
 // @page Special/Accordion
 //
@@ -9,7 +9,7 @@
 // @markup
 // <div class="accordion accordion-icon">
 //     <section class="accordion-section">
-//         <input type="checkbox" id="accordion-section-1">
+//         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
 //             <h2 class="underline">First</h2>
 //         </label>
@@ -18,7 +18,7 @@
 //         </div>
 //     </section>
 //     <section class="accordion-section">
-//         <input type="checkbox" id="accordion-section-2">
+//         <input type="radio" name="active-section" id="accordion-section-2">
 //         <label class="accordion-toggle" for="accordion-section-2">
 //             <h2 class="underline">Second</h2>
 //         </label>
@@ -27,7 +27,7 @@
 //         </div>
 //     </section>
 //     <section class="accordion-section">
-//         <input type="checkbox" id="accordion-section-3">
+//         <input type="radio" name="active-section" id="accordion-section-3">
 //         <label class="accordion-toggle" for="accordion-section-3">
 //             <h2 class="underline">Third</h2>
 //         </label>
@@ -38,7 +38,8 @@
 // </div>
 
 .accordion {
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    input[type="radio"] {
         display: none;
     }
 }
@@ -57,7 +58,8 @@
     }
 }
 
-.accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before {
+.accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
+.accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
     @include hbg-icon($icon-minus-square);
 }
 
@@ -74,11 +76,13 @@
 .accordion-content {
     display: block;
 
-    input[type="checkbox"] ~ & {
+    input[type="checkbox"] ~ &,
+    input[type="radio"] ~ & {
         display: none;
     }
 
-    input[type="checkbox"]:checked ~ & {
+    input[type="checkbox"]:checked ~ &,
+    input[type="radio"]:checked ~ & {
         display: block;
     }
 }
