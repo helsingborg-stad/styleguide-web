@@ -11,6 +11,7 @@
 
 @import 'mixin/mixins';
 @import 'mixin/positioning';
+@import 'mixin/forms';
 
 // ***************************************************************
 // *** Utilities
@@ -66,5 +67,11 @@
 @import 'component/box/panel';
 
 @import 'component/table/table';
+
+@import 'component/form/general';
+@import 'component/form/input';
+@import 'component/form/select';
+
+@import 'component/search/search-form';
 
 @import 'component/footer/footer';

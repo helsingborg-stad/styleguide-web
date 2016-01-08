@@ -1,0 +1,96 @@
+//
+// @name Form
+// @description Basic form
+//
+// @page Forms/Basic form
+//
+// @markup
+// <form method="post" action="/">
+//     <div class="form-group">
+//         <label for="name">Name</label>
+//         <input type="text" name="name" id="name" placeholder="Name">
+//     </div>
+//     <div class="form-group">
+//         <label for="email">Email address</label>
+//         <input type="email" name="email" id="email" placeholder="Email">
+//     </div>
+//     <div class="form-group">
+//         <label for="language">Place</label>
+//         <select name="places" id="places">
+//             <option value="Sundstorget">Sundstorget</option>
+//             <option value="Stortorget">Stortorget</option>
+//             <option value="Gustav Adolfs torg">Gustav Adolfs torg</option>
+//             <option value="Hamntorget">Hamntorget</option>
+//             <option value="Kungstorget">Kungstorget</option>
+//             <option value="Henry Dunkers plats">Henry Dunkers plats</option>
+//         </select>
+//     </div>
+//     <div class="form-group">
+//         <input type="submit" class="btn btn-primary" value="Send">
+//     </div>
+// </form>
+//
+
+form {
+    @include input-placeholder($gray, 1, 300);
+}
+
+.form-group {
+    display: block;
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+
+    & + .form-group {
+        margin-top: $content-gutter;
+    }
+}
+
+//
+// @name Horizontal form
+// @description A basic horizontal form
+//
+// @page Forms/Horizontal form
+//
+// @markup
+// <form method="post" action="/" class="form-horizontal">
+//     <div class="form-group">
+//         <label for="name">Name</label>
+//         <input type="text" name="name" id="name" placeholder="Name">
+//     </div>
+//     <div class="form-group">
+//         <label for="email">Email address</label>
+//         <input type="email" name="email" id="email" placeholder="Email">
+//     </div>
+//     <div class="form-group">
+//         <input type="submit" class="btn btn-primary" value="Send">
+//     </div>
+// </form>
+//
+
+.form-horizontal {
+    .form-group {
+        display: inline-block;
+        vertical-align: middle;
+
+        & + .form-group {
+            margin-top: 0;
+            margin-left: $content-gutter;
+        }
+
+        label,
+        input,
+        select,
+        textarea {
+            display: inline-block;
+            width: auto;
+        }
+
+        label {
+            margin-right: 5px;
+        }
+    }
+}
