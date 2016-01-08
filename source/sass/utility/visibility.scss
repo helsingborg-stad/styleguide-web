@@ -1,0 +1,24 @@
+
+	.hidden-xs:not(:target) {
+		@media screen and #{$screen-xs} {
+			display: none !important;  	
+		}
+	}
+	
+	.hidden-sm:not(:target) {
+		@media screen and #{$screen-sm} {
+			display: none !important;
+		}
+	}
+	
+	.hidden-md:not(:target) {
+		@media screen and #{$screen-md} {
+			display: none !important; 
+		}
+	}
+	
+	.hidden-lg:not(:target) {
+		@media screen and #{$screen-lg} {
+			display: none !important;
+		}
+	}

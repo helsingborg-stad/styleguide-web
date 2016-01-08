@@ -1,0 +1,45 @@
+
+	ul.paginated-items {
+		
+		display: block; 
+		list-style: none; 
+		text-align: center; 
+		list-style: none; 
+		padding: 0; 
+		
+		> li {
+	        padding: 0 10px;
+	        display: inline-block;
+	        
+	        a {
+	            @include nice-text();
+	            @include font-heading(); 
+	            @include transition(background 300ms, color 400ms, border 400ms); 
+	            color: $dark-gray; 
+	            padding: 10px 0;
+	            font-size: 17px;
+	            display: block; 
+	            
+	            border: 2px solid $dark-gray; 
+	            padding: 4px 18px;
+	            
+	            padding-left: 13px; 
+	            padding-right: 13px; 
+	        }
+
+			&.cat-item-none {
+				display: none !important; 
+			}
+			
+	    }
+	    
+	    a:hover,
+		li.active a {
+            background: $brand;
+            border-color: $brand;
+            color: $white;
+            text-decoration: none; 
+		}
+		
+	}
+	
