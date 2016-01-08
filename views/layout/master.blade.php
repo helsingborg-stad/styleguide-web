@@ -107,7 +107,7 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
-    <!--<script src="/dist/js/app.min.js"></script>-->
+    <script src="/dist/js/hbg-prime.min.js"></script>
 
     <script>
         $(function(){
