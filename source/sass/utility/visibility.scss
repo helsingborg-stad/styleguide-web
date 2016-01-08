@@ -1,23 +1,23 @@
 
-	.hidden-xs:not(:target) {
+	.hidden-xs {
 		@media screen and #{$screen-xs} {
 			display: none !important;  	
 		}
 	}
 	
-	.hidden-sm:not(:target) {
+	.hidden-sm {
 		@media screen and #{$screen-sm} {
 			display: none !important;
 		}
 	}
 	
-	.hidden-md:not(:target) {
+	.hidden-md {
 		@media screen and #{$screen-md} {
 			display: none !important; 
 		}
 	}
 	
-	.hidden-lg:not(:target) {
+	.hidden-lg {
 		@media screen and #{$screen-lg} {
 			display: none !important;
 		}
