@@ -36,6 +36,7 @@
   "boxes": [
    "filled",
    "index",
+   "news",
    "panel"
   ],
   "buttons": [
@@ -55,20 +56,20 @@
   "hero": [
    "hero"
   ],
-  "search": [
-   "search form"
-  ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
    "navbar",
    "tabs"
   ],
-  "tables": [
-   "basic"
+  "search": [
+   "search form"
   ],
   "stripe": [
    "general"
+  ],
+  "tables": [
+   "basic"
   ]
  },
  "pages": {
@@ -722,6 +723,16 @@
        "name": ".gutter-margin",
        "escaped": "gutter-margin",
        "description": "Add gutter as margin instead of padding"
+      },
+      {
+       "name": ".gutter-vertical",
+       "escaped": "gutter-vertical",
+       "description": "Only vertical gutter"
+      },
+      {
+       "name": ".gutter-horizontal",
+       "escaped": "gutter-horizontal",
+       "description": "Only horizontal gutter"
       }
      ],
      "page": [
@@ -907,6 +918,28 @@
        "path": "~/source/sass/component/box/index.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "news": [
+    {
+     "name": "News",
+     "description": "<p>Used to feature news stories.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "News"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Ledia jobb i Helsingborgs stad</h5>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/news.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Ledia jobb i Helsingborgs stad</h5>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-news\"&gt;\n            &lt;img src=\"http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg\" alt=\"Kommunalanställd\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"link-item link-item-light\"&gt;Ledia jobb i Helsingborgs stad&lt;/h5&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -1240,30 +1273,6 @@
     }
    ]
   },
-  "search": {
-   "search form": [
-    {
-     "name": "Search form",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "",
-       "path": "~/source/sass/component/search/search-form.scss",
-       "example": "",
-       "escaped": ""
-      }
-     ]
-    }
-   ]
-  },
   "navigation": {
    "breadcrumbs": [
     {
@@ -1389,6 +1398,55 @@
     }
    ]
   },
+  "search": {
+   "search form": [
+    {
+     "name": "Search form",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "",
+       "path": "~/source/sass/component/search/search-form.scss",
+       "example": "",
+       "escaped": ""
+      }
+     ]
+    }
+   ]
+  },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "tables": {
    "basic": [
     {
@@ -1417,6 +1475,11 @@
        "description": "Zebra striped table"
       },
       {
+       "name": ".table-bordered",
+       "escaped": "table-bordered",
+       "description": "Borders between rows"
+      },
+      {
        "name": ".table-hover",
        "escaped": "table-hover",
        "description": "Highlight table row on hover"
@@ -1430,31 +1493,6 @@
        "path": "~/source/sass/component/table/table.scss",
        "example": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
        "escaped": "\n&lt;table class=\"table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Point of interest&lt;/th&gt;\n            &lt;th&gt;Distance&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Stortorget&lt;/td&gt;\n            &lt;td&gt;1 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Sundstorget&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Knutpunkten&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Note: This is example data.&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "stripe": {
-   "general": [
-    {
-     "name": "Stripe",
-     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Stripe",
-       "section": "general"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "path": "~/source/sass/component/stripe/stripe.scss",
-       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

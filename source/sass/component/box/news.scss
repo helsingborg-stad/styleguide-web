@@ -1,0 +1,39 @@
+//
+// @name News
+// @description Used to feature news stories.
+//
+// @page Boxes/News
+//
+// @markup
+// <div class="grid">
+//     <div class="grid-lg-6">
+//         <a href="#" class="box box-news">
+//             <img src="http:\/\/www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg" alt="Kommunalanställd">
+//             <div class="box-content">
+//                 <h5 class="link-item link-item-light">Ledia jobb i Helsingborgs stad</h5>
+//             </div>
+//         </a>
+//     </div>
+// </div>
+//
+
+.box-news {
+    background-color: $palette-red-2;
+    color: #fff;
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .box-content {
+        padding: $content-gutter;
+    }
+}

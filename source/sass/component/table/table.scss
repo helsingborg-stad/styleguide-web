@@ -7,6 +7,7 @@
 // @state .table-sm - Small table
 // @state .table-lg - Large table
 // @state .table-striped - Zebra striped table
+// @state .table-bordered - Borders between rows
 // @state .table-hover - Highlight table row on hover
 //
 // @markup
@@ -89,6 +90,14 @@ td {
     tbody {
         tr:nth-child(even) {
             background-color: $table-zebra-alter-color;
+        }
+    }
+}
+
+.table-bordered {
+    tbody {
+        tr + tr {
+            border-top: 1px solid $creamy-darker;
         }
     }
 }
