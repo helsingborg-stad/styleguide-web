@@ -49,6 +49,11 @@ textarea {
         @extend .disabled;
         background-color: $creamy;
     }
+
+    &.form-control-lg {
+        padding: $content-gutter $content-gutter * 1.2;
+        font-size: 1.2em;
+    }
 }
 
 label.checkbox,
@@ -81,7 +86,7 @@ label.radio {
 //
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"], {
     apperance: none;
     display: inline-block;
     vertical-align: middle;

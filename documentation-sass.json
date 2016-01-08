@@ -21,8 +21,14 @@
    "small"
   ],
   "utilities": [
+   "disabled",
    "link item",
    "margin resetters"
+  ],
+  "boxes": [
+   "filled",
+   "index",
+   "panel"
   ],
   "special": [
    "accordion",
@@ -34,10 +40,13 @@
    "sizes",
    "block button"
   ],
-  "boxes": [
-   "filled",
-   "index",
-   "panel"
+  "forms": [
+   "basic form",
+   "horizontal form",
+   "input group",
+   "input",
+   "checkboxes",
+   "select"
   ],
   "hero": [
    "hero"
@@ -47,6 +56,9 @@
    "sidebar navigation",
    "navbar",
    "tabs"
+  ],
+  "search": [
+   "search form"
   ],
   "stripe": [
    "general"
@@ -460,6 +472,28 @@
    ]
   },
   "utilities": {
+   "disabled": [
+    {
+     "name": "Disabled",
+     "description": "<p>Prevents clicking on any element and fades it out.</p>\n",
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Disabled"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled-3 disabled\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/utility/interaction.scss",
+       "example": "\n<div class=\"box box-filled-3 disabled\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3 disabled\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
    "link item": [
     {
      "name": "Link item",
@@ -529,11 +563,118 @@
     }
    ]
   },
+  "boxes": {
+   "filled": [
+    {
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Filled"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/filled.scss",
+       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "panel": [
+    {
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "special": {
    "accordion": [
     {
      "name": "Accordion",
-     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</p>\n",
+     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</small></p>\n",
      "page": [
       {
        "nav": "Special",
@@ -771,108 +912,135 @@
     }
    ]
   },
-  "boxes": {
-   "filled": [
+  "forms": {
+   "basic form": [
     {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "name": "Form",
+     "description": "<p>Basic form</p>\n",
      "page": [
       {
-       "nav": "Boxes",
-       "section": "Filled"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
+       "nav": "Forms",
+       "section": "Basic form"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"language\">Place</label>\n        <select name=\"places\" id=\"places\">\n            <option value=\"Sundstorget\">Sundstorget</option>\n            <option value=\"Stortorget\">Stortorget</option>\n            <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n            <option value=\"Hamntorget\">Hamntorget</option>\n            <option value=\"Kungstorget\">Kungstorget</option>\n            <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "path": "~/source/sass/component/form/general.scss",
+       "example": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"language\">Place</label>\n        <select name=\"places\" id=\"places\">\n            <option value=\"Sundstorget\">Sundstorget</option>\n            <option value=\"Stortorget\">Stortorget</option>\n            <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n            <option value=\"Hamntorget\">Hamntorget</option>\n            <option value=\"Kungstorget\">Kungstorget</option>\n            <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "escaped": "\n&lt;form method=\"post\" action=\"/\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"language\"&gt;Place&lt;/label&gt;\n        &lt;select name=\"places\" id=\"places\"&gt;\n            &lt;option value=\"Sundstorget\"&gt;Sundstorget&lt;/option&gt;\n            &lt;option value=\"Stortorget\"&gt;Stortorget&lt;/option&gt;\n            &lt;option value=\"Gustav Adolfs torg\"&gt;Gustav Adolfs torg&lt;/option&gt;\n            &lt;option value=\"Hamntorget\"&gt;Hamntorget&lt;/option&gt;\n            &lt;option value=\"Kungstorget\"&gt;Kungstorget&lt;/option&gt;\n            &lt;option value=\"Henry Dunkers plats\"&gt;Henry Dunkers plats&lt;/option&gt;\n        &lt;/select&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
       }
      ]
     }
    ],
-   "index": [
+   "horizontal form": [
     {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "name": "Horizontal form",
+     "description": "<p>A basic horizontal form</p>\n",
      "page": [
       {
-       "nav": "Boxes",
-       "section": "Index"
+       "nav": "Forms",
+       "section": "Horizontal form"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "path": "~/source/sass/component/form/general.scss",
+       "example": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "escaped": "\n&lt;form method=\"post\" action=\"/\" class=\"form-horizontal\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
       }
      ]
     }
    ],
-   "panel": [
+   "input group": [
     {
-     "name": "Panel",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "name": "Input group",
+     "description": "<p>Grouped input combination. Use <code>.input-group-addon</code> to append text or use <code>.input-group-addon-btn</code> to append buttons.</p>\n",
      "page": [
       {
-       "nav": "Boxes",
-       "section": "Panel"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-panel-primary",
-       "escaped": "box-panel-primary",
-       "description": "Promary look (Default)"
-      },
-      {
-       "name": ".box-panel-secondary",
-       "escaped": "box-panel-secondary",
-       "description": "Secondary look"
+       "nav": "Forms",
+       "section": "Input group"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/panel.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "path": "~/source/sass/component/form/input-group.scss",
+       "example": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "escaped": "\n&lt;div class=\"input-group\"&gt;\n    &lt;span class=\"input-group-addon\"&gt;&lt;i class=\"fa fa-user\"&gt;&lt;/i&gt;&lt;/span&gt;\n    &lt;input type=\"text\" name=\"keyword\" class=\"form-control\"&gt;\n    &lt;span class=\"input-group-addon-btn\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/span&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "input": [
+    {
+     "name": "Inputs",
+     "description": "<p>Input fields</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Input"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\"></textarea>\n</div>",
+       "path": "~/source/sass/component/form/input.scss",
+       "example": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\"></textarea>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"firstname\"&gt;First name&lt;/label&gt;\n    &lt;input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\"&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"disabledInput\"&gt;Disabled input&lt;/label&gt;\n    &lt;input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"textarea\"&gt;Textarea&lt;/label&gt;\n    &lt;textarea id=\"textarea\"&gt;&lt;/textarea&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "checkboxes": [
+    {
+     "name": "Checkboxes and radiobuttons",
+     "description": "",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Checkboxes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
+       "path": "~/source/sass/component/form/input.scss",
+       "example": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"checkbox\"&gt;\n        &lt;input type=\"checkbox\"&gt; Check me\n    &lt;/label&gt;\n    &lt;label class=\"checkbox disabled\"&gt;\n        &lt;input type=\"checkbox\" disabled&gt; But you can't check me\n    &lt;/label&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 1\n    &lt;/label&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 2\n    &lt;/label&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "select": [
+    {
+     "name": "Select",
+     "description": "<p>Select field. Single and multiple choises.</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Select"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<select name=\"places\" id=\"places\">\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>\n<select name=\"places\" id=\"places\" disabled>\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>\n<select name=\"places\" id=\"places\" multiple>\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>",
+       "path": "~/source/sass/component/form/select.scss",
+       "example": "\n<select name=\"places\" id=\"places\">\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>\n<select name=\"places\" id=\"places\" disabled>\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>\n<select name=\"places\" id=\"places\" multiple>\n    <option value=\"Sundstorget\">Sundstorget</option>\n    <option value=\"Stortorget\">Stortorget</option>\n    <option value=\"Gustav Adolfs torg\">Gustav Adolfs torg</option>\n    <option value=\"Hamntorget\">Hamntorget</option>\n    <option value=\"Kungstorget\">Kungstorget</option>\n    <option value=\"Henry Dunkers plats\">Henry Dunkers plats</option>\n</select>",
+       "escaped": "\n&lt;select name=\"places\" id=\"places\"&gt;\n    &lt;option value=\"Sundstorget\"&gt;Sundstorget&lt;/option&gt;\n    &lt;option value=\"Stortorget\"&gt;Stortorget&lt;/option&gt;\n    &lt;option value=\"Gustav Adolfs torg\"&gt;Gustav Adolfs torg&lt;/option&gt;\n    &lt;option value=\"Hamntorget\"&gt;Hamntorget&lt;/option&gt;\n    &lt;option value=\"Kungstorget\"&gt;Kungstorget&lt;/option&gt;\n    &lt;option value=\"Henry Dunkers plats\"&gt;Henry Dunkers plats&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"places\" id=\"places\" disabled&gt;\n    &lt;option value=\"Sundstorget\"&gt;Sundstorget&lt;/option&gt;\n    &lt;option value=\"Stortorget\"&gt;Stortorget&lt;/option&gt;\n    &lt;option value=\"Gustav Adolfs torg\"&gt;Gustav Adolfs torg&lt;/option&gt;\n    &lt;option value=\"Hamntorget\"&gt;Hamntorget&lt;/option&gt;\n    &lt;option value=\"Kungstorget\"&gt;Kungstorget&lt;/option&gt;\n    &lt;option value=\"Henry Dunkers plats\"&gt;Henry Dunkers plats&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"places\" id=\"places\" multiple&gt;\n    &lt;option value=\"Sundstorget\"&gt;Sundstorget&lt;/option&gt;\n    &lt;option value=\"Stortorget\"&gt;Stortorget&lt;/option&gt;\n    &lt;option value=\"Gustav Adolfs torg\"&gt;Gustav Adolfs torg&lt;/option&gt;\n    &lt;option value=\"Hamntorget\"&gt;Hamntorget&lt;/option&gt;\n    &lt;option value=\"Kungstorget\"&gt;Kungstorget&lt;/option&gt;\n    &lt;option value=\"Henry Dunkers plats\"&gt;Henry Dunkers plats&lt;/option&gt;\n&lt;/select&gt;"
       }
      ]
     }
@@ -1022,6 +1190,30 @@
        "path": "~/source/sass/component/navigation/tabs.scss",
        "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
        "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "search": {
+   "search form": [
+    {
+     "name": "Search form",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "",
+       "path": "~/source/sass/component/search/search-form.scss",
+       "example": "",
+       "escaped": ""
       }
      ]
     }
