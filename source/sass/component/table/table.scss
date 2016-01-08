@@ -78,6 +78,7 @@ th {
 
 td {
     padding: $cell-padding;
+    vertical-align: middle;
 
     & + td {
         border-left: 1px solid $creamy-darker;
@@ -102,7 +103,6 @@ td {
 
 .table-sm {
     font-size: .8em;
-    line-height: $base-line-height;
 
     th, td {
         padding: $cell-padding-sm;
@@ -111,7 +111,6 @@ td {
 
 .table-lg {
     font-size: 1.1em;
-    line-height: $base-line-height;
 
     th, td {
         padding: $cell-padding-lg;

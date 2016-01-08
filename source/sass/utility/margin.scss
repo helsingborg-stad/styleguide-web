@@ -25,3 +25,48 @@
 .no-margin-left {
     margin-left: 0;
 }
+
+//
+// @name Gutter
+// @description Gutters any element.
+//
+// @state .gutter - Standard gutter
+// @state .gutter-sm - Smaller gutter
+// @state .gutter-lg - Larger gutter
+// @state .gutter-xl - Extra large gutter
+// @state .gutter-margin - Add gutter as margin instead of padding
+//
+// @page Utilities/Gutter
+//
+
+.gutter:not(.gutter-margin) {
+    padding: $content-gutter;
+}
+
+.gutter.gutter-margin {
+    margin: $content-gutter;
+}
+
+.gutter-sm:not(.gutter-margin) {
+    padding: $content-gutter / 1.5;
+}
+
+.gutter-sm.gutter-margin {
+    margin: $content-gutter / 1.5;
+}
+
+.gutter-lg:not(.gutter-margin) {
+    padding: $content-gutter * 1.5;
+}
+
+.gutter-lg.gutter-margin {
+    margin: $content-gutter * 1.5;
+}
+
+.gutter-xl:not(.gutter-margin) {
+    padding: $content-gutter * 3;
+}
+
+.gutter-xl.gutter-margin {
+    margin: $content-gutter * 3;
+}

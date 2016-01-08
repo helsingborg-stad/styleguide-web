@@ -1,6 +1,6 @@
 //
 // @name Modals
-// @description CSS only modal box (exception for positioning). 
+// @description CSS only modal box (exception for positioning).
 // @author Sebastian Thulin
 //
 // @page Special/Modals
@@ -46,35 +46,35 @@
 //
 
 .modal {
-	@include cover(); 
-	position: fixed; 
+	@include cover();
+	position: fixed;
 	display: none;
 	margin: 0 auto;
-	opacity: 0; 
-	overflow: auto; 
-	z-index: $level-top; 
+	opacity: 0;
+	overflow: auto;
+	z-index: $level-top;
 
-	/* Backdrops */ 
+	/* Backdrops */
 	&[class*='modal-backdrop-'] .backdrop,
 	&[class^=' modal-backdrop-'] .backdrop{
 		@include cover();
 		position: fixed;
 		content: "";
 		z-index: $level-9;
-		display: block; 
+		display: block;
 	}
-	
-	/* Css open/close logic */ 
+
+	/* Css open/close logic */
 	&:target {
-		opacity: 1; 
-		display: block !important; 
+		opacity: 1;
+		display: block !important;
 	}
 }
 
 .modal-header {
 	padding: 1em;
 	border-bottom: 1px solid $creamy-darker;
-	position: relative; 
+	position: relative;
 
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
@@ -91,24 +91,24 @@
 		text-align: center;
 		padding: 0;
 		border-radius: 50%;
-		border: .2em solid #fff; 
-		box-shadow: 0 1px 1px rgba(#000,.2); 
-		background: $creamy; 
-		
+		border: .2em solid #fff;
+		box-shadow: 0 1px 1px rgba(#000,.2);
+		background: $creamy;
+
 		&:after {
-			@include cover(); 
-			content: "\00d7"; 
-			font-size: 1.5em; 
-			line-height: 1; 
-			color: #000; 
+			@include cover();
+			content: "\00d7";
+			font-size: 1.5em;
+			line-height: 1;
+			color: #000;
 		}
-		
+
 		@media screen and #{$screen-xs} {
-			top: 50%; 
-			right: 2em; 
+			top: 50%;
+			right: 2em;
 		}
 	}
-	
+
 }
 
 .modal-body {
@@ -124,11 +124,10 @@
     @include center();
     z-index: $level-10;
 	background: #fff;
-    line-height: $base-line-height;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, .2); 
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 }
 
-/* Modifiers - size */ 
+/* Modifiers - size */
 
 .modal-large .modal-content {
 	width: 100%;
@@ -136,57 +135,57 @@
 }
 
 .modal-large .btn-close {
-	top: 43%; 
-	right: 2em; 
+	top: 43%;
+	right: 2em;
 }
 
 .modal-large .modal-footer {
-	position: absolute; 
-	bottom: 0; 
-	width: 100%; 
-	background: #fff; 
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
 }
 
 .modal-medium .modal-content {
 	width: 70%;
-	
+
 	@media screen and #{$screen-xs} {
-		width: 100%; 
+		width: 100%;
 	}
-	
+
 	@media screen and #{$screen-sm} {
-		width: 90%; 
+		width: 90%;
 	}
-	
+
 	@media screen and #{$screen-md} {
-		width: 80%; 
+		width: 80%;
 	}
 }
 
 .modal-small .modal-content {
 	width: 50%;
-	
+
 	@media screen and #{$screen-xs} {
-		width: 100%; 
+		width: 100%;
 	}
-	
+
 	@media screen and #{$screen-sm} {
-		width: 70%; 
+		width: 70%;
 	}
-	
+
 	@media screen and #{$screen-md} {
-		width: 60%; 
+		width: 60%;
 	}
 }
 
-/* Modifiers - color */ 
+/* Modifiers - color */
 
 .modal-backdrop-1 .backdrop {
     background-color: rgba($palette-red-1,.9);
 }
 
 .modal-backdrop-1 .btn-close:after {
-    color: darken($palette-red-1, 10%); 
+    color: darken($palette-red-1, 10%);
 }
 
 .modal-backdrop-2 .backdrop  {
@@ -194,7 +193,7 @@
 }
 
 .modal-backdrop-2 .btn-close:after {
-    color: darken($palette-red-2, 10%); 
+    color: darken($palette-red-2, 10%);
 }
 
 .modal-backdrop-3 .backdrop  {
@@ -202,7 +201,7 @@
 }
 
 .modal-backdrop-3 .btn-close:after {
-    color: darken($palette-red-3, 10%); 
+    color: darken($palette-red-3, 10%);
 }
 
 .modal-backdrop-4 .backdrop  {
@@ -210,7 +209,7 @@
 }
 
 .modal-backdrop-4 .btn-close:after {
-    color: darken($palette-red-4, 10%); 
+    color: darken($palette-red-4, 10%);
 }
 
 .modal-backdrop-black .backdrop  {
@@ -222,5 +221,5 @@
 }
 
 .modal-backdrop-white .modal-content {
-	border: 1px solid $creamy-darker; 
+	border: 1px solid $creamy-darker;
 }
