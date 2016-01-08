@@ -1,3 +1,7 @@
 .no-select {
     user-select: none;
 }
+
+.disabled {
+    cursor: no-drop;
+}

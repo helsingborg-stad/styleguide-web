@@ -1,0 +1,78 @@
+//
+// @name Inputs
+// @description Input fields
+//
+// @page Forms/Input
+//
+// @markup
+// <div class="form-group">
+//     <label for="firstname">First name</label>
+//     <input type="text" name="firstname" id="firstname" placeholder="First name">
+// </div>
+// <div class="form-group">
+//     <label for="disabledInput">Disabled input</label>
+//     <input type="text" name="disabledInput" id="disabledInput" placeholder="Disabled input[text]" disabled>
+// </div>
+// <div class="form-group">
+//     <label for="textarea">Textarea</label>
+//     <textarea id="textarea" disabled></textarea>
+// </div>
+// <div class="form-group">
+//     <label class="checkbox">
+//         <input type="checkbox"> Check me
+//     </label>
+//     <label class="checkbox disabled">
+//         <input type="checkbox" disabled> But you can't check me
+//     </label>
+// </div>
+//
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    apperance: none;
+    width: 100%;
+    padding: $content-gutter/2 $content-gutter/1.2 $content-gutter/2;
+    background: #fff;
+    border: 1px solid $creamy-darker;
+    font-family: $base-font-family;
+    font-size: 1em;
+    line-height: $base-line-height;
+    box-shadow: inset 0 0 5px rgba(#000, .1);
+
+    &:disabled {
+        @extend .disabled;
+        background-color: $creamy;
+    }
+}
+
+label.checkbox {
+    font-weight: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    apperance: none;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+
+    &:disabled {
+        @extend .disabled;
+        background-color: $creamy;
+    }
+}

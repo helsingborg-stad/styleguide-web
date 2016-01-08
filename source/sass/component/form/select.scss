@@ -1,0 +1,42 @@
+//
+// @name Select
+// @description Select field. Single and multiple choises.
+//
+// @page Forms/Select
+//
+// @markup
+// <select name="places" id="places">
+//     <option value="Sundstorget">Sundstorget</option>
+//     <option value="Stortorget">Stortorget</option>
+//     <option value="Gustav Adolfs torg">Gustav Adolfs torg</option>
+//     <option value="Hamntorget">Hamntorget</option>
+//     <option value="Kungstorget">Kungstorget</option>
+//     <option value="Henry Dunkers plats">Henry Dunkers plats</option>
+// </select>
+// <select name="places" id="places" multiple>
+//     <option value="Sundstorget">Sundstorget</option>
+//     <option value="Stortorget">Stortorget</option>
+//     <option value="Gustav Adolfs torg">Gustav Adolfs torg</option>
+//     <option value="Hamntorget">Hamntorget</option>
+//     <option value="Kungstorget">Kungstorget</option>
+//     <option value="Henry Dunkers plats">Henry Dunkers plats</option>
+// </select>
+//
+
+select {
+    width: 100%;
+    padding: $content-gutter/2 $content-gutter/1.5;
+    background: #fff;
+    border: 1px solid $creamy-darker;
+    font-size: 1em;
+    line-height: $base-line-height;
+    box-shadow: inset 0 0 5px rgba(#000, .1);
+}
+
+select[multiple] option {
+    padding: $content-gutter/3 $content-gutter/2;
+}
+
+select + select {
+    margin-top: $content-gutter;
+}
