@@ -68,7 +68,7 @@
     padding: 0;
 
     .box-title {
-        padding: $content-gutter/1.5 $content-gutter;
+        padding: $cell-padding;
         margin: 0;
         background-color: $palette-red-4;
         color: #fff;
@@ -76,6 +76,10 @@
 
     .box-content {
         border: 1px solid $creamy-darker;
+        border-top: 0;
+    }
+
+    table {
         border-top: 0;
     }
 
