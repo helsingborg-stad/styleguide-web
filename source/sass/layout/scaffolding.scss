@@ -10,7 +10,7 @@
 // ***************************************************************
 // *** 2. Base typography
 // ***************************************************************
-html, body {
+body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -23,5 +23,5 @@ b {
 }
 
 .overflow-hidden {
-	overflow: hidden; 
+	overflow: hidden;
 }

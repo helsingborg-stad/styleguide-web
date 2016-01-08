@@ -79,11 +79,13 @@
         border-top: 0;
     }
 
-    table {
+    table, tbody {
         border-top: 0;
+        background-color: #fff;
     }
 
     ul {
+        background-color: #fff;
         border: 1px solid $creamy-darker;
         border-top: 0;
 

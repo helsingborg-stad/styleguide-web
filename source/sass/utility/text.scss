@@ -27,6 +27,37 @@
 }
 
 //
+// @name Front size
+// @description Font size
+//
+// @page Typography/Font size
+//
+// @state .text-sm - Small
+// @state .text-md - Medium (default)
+// @state .text-lg - Large
+// @state .text-xl - Extra Large
+//
+// @markup
+// <div class="text-left">Left aligned text</div>
+//
+
+.text-sm {
+    font-size: .8em;
+}
+
+.text-md {
+    font-size: 1em;
+}
+
+.text-lg {
+    font-size: 1.1em;
+}
+
+.text-xl {
+    font-size: 1.5em;
+}
+
+//
 // @name Highlight
 // @description Highlights text.
 //

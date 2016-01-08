@@ -1,0 +1,126 @@
+//
+// @name Label
+// @description Label a text with a filled background
+//
+// @page Typography/Label
+//
+// @state .label-sm - Smaller label
+// @state .label-lg - Larger label
+//
+// @state .label-red-1 - First color in red stripe (color 1-5 available)
+// @state .label-blue-1 - First color in blue stripe (color 1-5 available)
+// @state .label-green-1 - First color in green stripe (color 1-5 available)
+// @state .label-purple-1 - First color in purple stripe (color 1-5 available)
+//
+// @markup
+// One of the words in this sentence is <span class="label label-red-2">labelled</span>.
+//
+
+.label {
+    background-color: $creamy-darker;
+    padding: .3em .6em;
+}
+
+.label-sm {
+    font-size: .8em;
+}
+
+.label-lg {
+    font-size: 1.1em;
+}
+
+.label-red-1 {
+    background-color: $palette-red-1;
+}
+
+.label-red-2 {
+    background-color: $palette-red-2;
+    color: #fff;
+}
+
+.label-red-3 {
+    background-color: $palette-red-3;
+    color: #fff;
+}
+
+.label-red-4 {
+    background-color: $palette-red-4;
+    color: #fff;
+}
+
+.label-red-5 {
+    background-color: $palette-red-5;
+    color: #fff;
+}
+
+.label-blue-1 {
+    background-color: $palette-blue-1;
+}
+
+.label-blue-2 {
+    background-color: $palette-blue-2;
+    color: #fff;
+}
+
+.label-blue-3 {
+    background-color: $palette-blue-3;
+    color: #fff;
+}
+
+.label-blue-4 {
+    background-color: $palette-blue-4;
+    color: #fff;
+}
+
+.label-blue-5 {
+    background-color: $palette-blue-5;
+    color: #fff;
+}
+
+.label-green-1 {
+    background-color: $palette-green-1;
+}
+
+.label-green-2 {
+    background-color: $palette-green-2;
+    color: #fff;
+}
+
+.label-green-3 {
+    background-color: $palette-green-3;
+    color: #fff;
+}
+
+.label-green-4 {
+    background-color: $palette-green-4;
+    color: #fff;
+}
+
+.label-green-5 {
+    background-color: $palette-green-5;
+    color: #fff;
+}
+
+.label-purple-1 {
+    background-color: $palette-purple-1;
+}
+
+.label-purple-2 {
+    background-color: $palette-purple-2;
+    color: #fff;
+}
+
+.label-purple-3 {
+    background-color: $palette-purple-3;
+    color: #fff;
+}
+
+.label-purple-4 {
+    background-color: $palette-purple-4;
+    color: #fff;
+}
+
+.label-purple-5 {
+    background-color: $palette-purple-5;
+    color: #fff;
+}

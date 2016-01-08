@@ -9,18 +9,22 @@
    "main footer"
   ],
   "utilities": [
+   "creamy",
    "disabled",
    "link item",
-   "margin resetters"
+   "margin resetters",
+   "gutter"
   ],
   "typography": [
    "text alignment",
+   "font size",
    "highlight",
    "underline",
    "mark",
    "small",
    "article",
    "headings",
+   "label",
    "lead",
    "unordered list",
    "ordered list"
@@ -29,20 +33,21 @@
    "accordion",
    "modals"
   ],
+  "boxes": [
+   "filled",
+   "index",
+   "panel"
+  ],
   "buttons": [
    "base",
    "primary",
    "sizes",
    "block button"
   ],
-  "boxes": [
-   "filled",
-   "index",
-   "panel"
-  ],
   "forms": [
    "basic form",
    "horizontal form",
+   "input group",
    "input",
    "checkboxes",
    "select"
@@ -50,20 +55,20 @@
   "hero": [
    "hero"
   ],
+  "stripe": [
+   "general"
+  ],
+  "search": [
+   "search form"
+  ],
+  "tables": [
+   "basic"
+  ],
   "navigation": [
    "breadcrumbs",
    "sidebar navigation",
    "navbar",
    "tabs"
-  ],
-  "search": [
-   "search form"
-  ],
-  "stripe": [
-   "general"
-  ],
-  "tables": [
-   "basic"
   ]
  },
  "pages": {
@@ -203,6 +208,35 @@
    ]
   },
   "utilities": {
+   "creamy": [
+    {
+     "name": "Creamy section",
+     "description": "<p>A section with creamy background and border.</p>\n",
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Creamy"
+      }
+     ],
+     "state": [
+      {
+       "name": ".creamy-border-bottom",
+       "escaped": "creamy-border-bottom",
+       "description": "Only use border at bottom"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"creamy\">Oh, creamy.</div>",
+       "path": "~/source/sass/utility/creamy.scss",
+       "example": "\n<div class=\"creamy\">Oh, creamy.</div>",
+       "escaped": "\n&lt;div class=\"creamy\"&gt;Oh, creamy.&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
    "disabled": [
     {
      "name": "Disabled",
@@ -292,6 +326,45 @@
       }
      ]
     }
+   ],
+   "gutter": [
+    {
+     "name": "Gutter",
+     "description": "<p>Gutters any element.</p>\n",
+     "state": [
+      {
+       "name": ".gutter",
+       "escaped": "gutter",
+       "description": "Standard gutter"
+      },
+      {
+       "name": ".gutter-sm",
+       "escaped": "gutter-sm",
+       "description": "Smaller gutter"
+      },
+      {
+       "name": ".gutter-lg",
+       "escaped": "gutter-lg",
+       "description": "Larger gutter"
+      },
+      {
+       "name": ".gutter-xl",
+       "escaped": "gutter-xl",
+       "description": "Extra large gutter"
+      },
+      {
+       "name": ".gutter-margin",
+       "escaped": "gutter-margin",
+       "description": "Add gutter as margin instead of padding"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Utilities",
+       "section": "Gutter"
+      }
+     ]
+    }
    ]
   },
   "typography": {
@@ -313,6 +386,50 @@
        "path": "~/source/sass/utility/text.scss",
        "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
        "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "font size": [
+    {
+     "name": "Front size",
+     "description": "<p>Font size</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Font size"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-sm",
+       "escaped": "text-sm",
+       "description": "Small"
+      },
+      {
+       "name": ".text-md",
+       "escaped": "text-md",
+       "description": "Medium (default)"
+      },
+      {
+       "name": ".text-lg",
+       "escaped": "text-lg",
+       "description": "Large"
+      },
+      {
+       "name": ".text-xl",
+       "escaped": "text-xl",
+       "description": "Extra Large"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
+       "path": "~/source/sass/utility/text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
       }
      ]
     }
@@ -484,6 +601,60 @@
        "path": "~/source/sass/typography/headings.scss",
        "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
        "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "label": [
+    {
+     "name": "Label",
+     "description": "<p>Label a text with a filled background</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Label"
+      }
+     ],
+     "state": [
+      {
+       "name": ".label-sm",
+       "escaped": "label-sm",
+       "description": "Smaller label"
+      },
+      {
+       "name": ".label-lg",
+       "escaped": "label-lg",
+       "description": "Larger label"
+      },
+      {
+       "name": ".label-red-1",
+       "escaped": "label-red-1",
+       "description": "First color in red stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-blue-1",
+       "escaped": "label-blue-1",
+       "description": "First color in blue stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-green-1",
+       "escaped": "label-green-1",
+       "description": "First color in green stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-purple-1",
+       "escaped": "label-purple-1",
+       "description": "First color in purple stripe (color 1-5 available)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nOne of the words in this sentence is <span class=\"label label-red-2\">labelled</span>.",
+       "path": "~/source/sass/typography/label.scss",
+       "example": "\nOne of the words in this sentence is <span class=\"label label-red-2\">labelled</span>.",
+       "escaped": "\nOne of the words in this sentence is &lt;span class=\"label label-red-2\"&gt;labelled&lt;/span&gt;."
       }
      ]
     }
@@ -668,6 +839,113 @@
     }
    ]
   },
+  "boxes": {
+   "filled": [
+    {
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Filled"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/filled.scss",
+       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "panel": [
+    {
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "buttons": {
    "base": [
     {
@@ -804,113 +1082,6 @@
     }
    ]
   },
-  "boxes": {
-   "filled": [
-    {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Filled"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "index": [
-    {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Index"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "panel": [
-    {
-     "name": "Panel",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Panel"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-panel-primary",
-       "escaped": "box-panel-primary",
-       "description": "Promary look (Default)"
-      },
-      {
-       "name": ".box-panel-secondary",
-       "escaped": "box-panel-secondary",
-       "description": "Secondary look"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/panel.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "forms": {
    "basic form": [
     {
@@ -952,6 +1123,28 @@
        "path": "~/source/sass/component/form/general.scss",
        "example": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
        "escaped": "\n&lt;form method=\"post\" action=\"/\" class=\"form-horizontal\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "input group": [
+    {
+     "name": "Input group",
+     "description": "<p>Grouped input combination. Use <code>.input-group-addon</code> to append text or use <code>.input-group-addon-btn</code> to append buttons.</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Input group"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "path": "~/source/sass/component/form/input-group.scss",
+       "example": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "escaped": "\n&lt;div class=\"input-group\"&gt;\n    &lt;span class=\"input-group-addon\"&gt;&lt;i class=\"fa fa-user\"&gt;&lt;/i&gt;&lt;/span&gt;\n    &lt;input type=\"text\" name=\"keyword\" class=\"form-control\"&gt;\n    &lt;span class=\"input-group-addon-btn\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/span&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -1042,6 +1235,101 @@
        "path": "~/source/sass/component/hero/hero.scss",
        "example": "\n<div class=\"hero\" style=\"background-image:url('http://www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg');\">\n    <div class=\"stripe stripe-red\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"hero\" style=\"background-image:url('http://www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg');\"&gt;\n    &lt;div class=\"stripe stripe-red\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "search": {
+   "search form": [
+    {
+     "name": "Search form",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "",
+       "path": "~/source/sass/component/search/search-form.scss",
+       "example": "",
+       "escaped": ""
+      }
+     ]
+    }
+   ]
+  },
+  "tables": {
+   "basic": [
+    {
+     "name": "Basic Table",
+     "description": "",
+     "page": [
+      {
+       "nav": "Tables",
+       "section": "Basic"
+      }
+     ],
+     "state": [
+      {
+       "name": ".table-sm",
+       "escaped": "table-sm",
+       "description": "Small table"
+      },
+      {
+       "name": ".table-lg",
+       "escaped": "table-lg",
+       "description": "Large table"
+      },
+      {
+       "name": ".table-striped",
+       "escaped": "table-striped",
+       "description": "Zebra striped table"
+      },
+      {
+       "name": ".table-hover",
+       "escaped": "table-hover",
+       "description": "Highlight table row on hover"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "path": "~/source/sass/component/table/table.scss",
+       "example": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "escaped": "\n&lt;table class=\"table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Point of interest&lt;/th&gt;\n            &lt;th&gt;Distance&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Stortorget&lt;/td&gt;\n            &lt;td&gt;1 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Sundstorget&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Knutpunkten&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Note: This is example data.&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
       }
      ]
     }
@@ -1167,101 +1455,6 @@
        "path": "~/source/sass/component/navigation/tabs.scss",
        "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Tab 1</a></li>\n        <li><a href=\"#\">Tab 2</a></li>\n        <li><a href=\"#\">Tab 3</a></li>\n    </ul>\n</nav>",
        "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "search": {
-   "search form": [
-    {
-     "name": "Search form",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "",
-       "path": "~/source/sass/component/search/search-form.scss",
-       "example": "",
-       "escaped": ""
-      }
-     ]
-    }
-   ]
-  },
-  "stripe": {
-   "general": [
-    {
-     "name": "Stripe",
-     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose.</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Stripe",
-       "section": "general"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "path": "~/source/sass/component/stripe/stripe.scss",
-       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "tables": {
-   "basic": [
-    {
-     "name": "Basic Table",
-     "description": "",
-     "page": [
-      {
-       "nav": "Tables",
-       "section": "Basic"
-      }
-     ],
-     "state": [
-      {
-       "name": ".table-sm",
-       "escaped": "table-sm",
-       "description": "Small table"
-      },
-      {
-       "name": ".table-lg",
-       "escaped": "table-lg",
-       "description": "Large table"
-      },
-      {
-       "name": ".table-striped",
-       "escaped": "table-striped",
-       "description": "Zebra striped table"
-      },
-      {
-       "name": ".table-hover",
-       "escaped": "table-hover",
-       "description": "Highlight table row on hover"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "path": "~/source/sass/component/table/table.scss",
-       "example": "\n<table class=\"table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Point of interest</th>\n            <th>Distance</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stortorget</td>\n            <td>1 km</td>\n        </tr>\n        <tr>\n            <td>Sundstorget</td>\n            <td>2 km</td>\n        </tr>\n        <tr>\n            <td>Knutpunkten</td>\n            <td>2 km</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Note: This is example data.</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "escaped": "\n&lt;table class=\"table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Point of interest&lt;/th&gt;\n            &lt;th&gt;Distance&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Stortorget&lt;/td&gt;\n            &lt;td&gt;1 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Sundstorget&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Knutpunkten&lt;/td&gt;\n            &lt;td&gt;2 km&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Note: This is example data.&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
       }
      ]
     }
