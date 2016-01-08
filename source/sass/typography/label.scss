@@ -1,0 +1,55 @@
+//
+// @name Label
+// @description Label a text with a filled background
+//
+// @page Typography/Label
+//
+// @state .label-sm - Smaller label
+// @state .label-lg - Larger label
+//
+// @state .label-red-1 - First color in red stripe
+// @state .label-red-2 - Second color in red stripe
+// @state .label-red-3 - Third color in red stripe
+// @state .label-red-4 - Fourth color in red stripe
+// @state .label-red-5 - Fifth color in red stripe
+//
+// @markup
+// One of the words in this sentence is <span class="label label-red-2">labelled</span>.
+//
+
+.label {
+    background-color: $creamy-darker;
+    padding: .3em .6em;
+}
+
+.label-sm {
+    font-size: .8em;
+}
+
+.label-lg {
+    font-size: 1.1em;
+}
+
+.label-red-1 {
+    background-color: $palette-red-1;
+}
+
+.label-red-2 {
+    background-color: $palette-red-2;
+    color: #fff;
+}
+
+.label-red-3 {
+    background-color: $palette-red-3;
+    color: #fff;
+}
+
+.label-red-4 {
+    background-color: $palette-red-4;
+    color: #fff;
+}
+
+.label-red-5 {
+    background-color: $palette-red-5;
+    color: #fff;
+}
