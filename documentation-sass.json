@@ -25,14 +25,14 @@
    "link item",
    "margin resetters"
   ],
+  "special": [
+   "accordion",
+   "modals"
+  ],
   "boxes": [
    "filled",
    "index",
    "panel"
-  ],
-  "special": [
-   "accordion",
-   "modals"
   ],
   "buttons": [
    "base",
@@ -563,6 +563,112 @@
     }
    ]
   },
+  "special": {
+   "accordion": [
+    {
+     "name": "Accordion",
+     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</small></p>\n",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Accordion"
+      }
+     ],
+     "state": [
+      {
+       "name": ".accordion-icon",
+       "escaped": "accordion-icon",
+       "description": "Use plus/minus signs to indicate toggaleable element"
+      },
+      {
+       "name": ".accordion-boxes",
+       "escaped": "accordion-boxes",
+       "description": "Make boxes around alternatives"
+      },
+      {
+       "name": ".accordion-list",
+       "escaped": "accordion-list",
+       "description": "Show accordion as list (with alternating colors)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
+       "path": "~/source/sass/component/accordion/accordion.scss",
+       "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
+       "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h2&gt;First&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the first accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h2&gt;Second&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the second accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h2&gt;Third&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the third accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h2&gt;Fourth&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the fourth accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "modals": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Modals"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-2",
+       "escaped": "modal-backdrop-2",
+       "description": "Stripe color 2 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-3",
+       "escaped": "modal-backdrop-3",
+       "description": "Stripe color 3 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-4",
+       "escaped": "modal-backdrop-4",
+       "description": "Stripe color 4 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-5",
+       "escaped": "modal-backdrop-5",
+       "description": "Stripe color 5 as backdrop"
+      },
+      {
+       "name": ".modal-large",
+       "escaped": "modal-large",
+       "description": "Big modal (100% width, 100vh height)"
+      },
+      {
+       "name": ".modal-medium",
+       "escaped": "modal-medium",
+       "description": "Medium modal (70% width)"
+      },
+      {
+       "name": ".modal-small",
+       "escaped": "modal-small",
+       "description": "Small modal (50% width)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#modal-target\">Modal!</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Modal title</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n     \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "path": "~/source/sass/component/modal/modal.scss",
+       "example": "\n<a href=\"#modal-target\">Modal!</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Modal title</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n     \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Modal!&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n     \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "boxes": {
    "filled": [
     {
@@ -665,112 +771,6 @@
        "path": "~/source/sass/component/box/panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "special": {
-   "accordion": [
-    {
-     "name": "Accordion",
-     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</small></p>\n",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Accordion"
-      }
-     ],
-     "state": [
-      {
-       "name": ".accordion-icon",
-       "escaped": "accordion-icon",
-       "description": "Use plus/minus signs to indicate toggaleable element"
-      },
-      {
-       "name": ".accordion-boxes",
-       "escaped": "accordion-boxes",
-       "description": "Make boxes around alternatives"
-      },
-      {
-       "name": ".accordion-list",
-       "escaped": "accordion-list",
-       "description": "Show accordion as list (with alternating colors)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
-       "path": "~/source/sass/component/accordion/accordion.scss",
-       "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h2>First</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the first accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h2>Second</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the second accordion section\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h2>Third</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the third accordion section\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h2>Fourth</h2>\n        </label>\n        <div class=\"accordion-content\">\n            This is the content of the fourth accordion section\n        </div>\n    </section>\n</div>",
-       "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h2&gt;First&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the first accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h2&gt;Second&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the second accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h2&gt;Third&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the third accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h2&gt;Fourth&lt;/h2&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            This is the content of the fourth accordion section\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "modals": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Modals"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-2",
-       "escaped": "modal-backdrop-2",
-       "description": "Stripe color 2 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-3",
-       "escaped": "modal-backdrop-3",
-       "description": "Stripe color 3 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-4",
-       "escaped": "modal-backdrop-4",
-       "description": "Stripe color 4 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-5",
-       "escaped": "modal-backdrop-5",
-       "description": "Stripe color 5 as backdrop"
-      },
-      {
-       "name": ".modal-large",
-       "escaped": "modal-large",
-       "description": "Big modal (100% width, 100vh height)"
-      },
-      {
-       "name": ".modal-medium",
-       "escaped": "modal-medium",
-       "description": "Medium modal (70% width)"
-      },
-      {
-       "name": ".modal-small",
-       "escaped": "modal-small",
-       "description": "Small modal (50% width)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#modal-target\">Modal!</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Modal title</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n     \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "path": "~/source/sass/component/modal/modal.scss",
-       "example": "\n<a href=\"#modal-target\">Modal!</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Modal title</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n       \t\t\t<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n     \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Modal!&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-black modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Modal title&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n       \t\t\t&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\n     \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
