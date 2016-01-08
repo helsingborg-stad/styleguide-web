@@ -28,12 +28,20 @@
             margin-left: -($grid-gutter-xs / 2);
             margin-right: -($grid-gutter-xs / 2);
         }
+
+        & + .grid {
+            margin-top: $grid-gutter-xs;
+        }
     }
 
     @media #{$screen-sm} {
         .grid {
             margin-left: -($grid-gutter-sm / 2);
             margin-right: -($grid-gutter-sm / 2);
+        }
+
+        & + .grid {
+            margin-top: $grid-gutter-sm;
         }
     }
 
@@ -42,12 +50,20 @@
             margin-left: -($grid-gutter-md / 2);
             margin-right: -($grid-gutter-md / 2);
         }
+
+        & + .grid {
+            margin-top: $grid-gutter-md;
+        }
     }
 
     @media #{$screen-lg} {
         .grid {
             margin-left: -($grid-gutter-lg / 2);
             margin-right: -($grid-gutter-lg / 2);
+        }
+
+        & + .grid {
+            margin-top: $grid-gutter-lg;
         }
     }
 }
