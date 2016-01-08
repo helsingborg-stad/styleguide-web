@@ -1,13 +1,5 @@
 {
  "nav": {
-  "layout": [
-   "container",
-   "pull left",
-   "pull right",
-   "clearfix",
-   "grid",
-   "main footer"
-  ],
   "typography": [
    "article",
    "headings",
@@ -20,6 +12,14 @@
    "mark",
    "small"
   ],
+  "layout": [
+   "container",
+   "pull left",
+   "pull right",
+   "clearfix",
+   "grid",
+   "main footer"
+  ],
   "utilities": [
    "link item",
    "margin resetters"
@@ -30,7 +30,8 @@
   ],
   "boxes": [
    "filled",
-   "index"
+   "index",
+   "panel"
   ],
   "buttons": [
    "base",
@@ -55,141 +56,6 @@
   ]
  },
  "pages": {
-  "layout": {
-   "container": [
-    {
-     "name": "Container",
-     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Container"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container\"></div>",
-       "path": "~/source/sass/layout/container.scss",
-       "example": "\n<div class=\"container\"></div>",
-       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull left": [
-    {
-     "name": "Pull left",
-     "description": "<p>Floats an element to the left edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull left"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/layout/float.scss",
-       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull right": [
-    {
-     "name": "Pull right",
-     "description": "<p>Floats an element to the right edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull right"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/layout/float.scss",
-       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "clearfix": [
-    {
-     "name": "Clearfix",
-     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Clearfix"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/layout/float.scss",
-       "example": "\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "grid": [
-    {
-     "name": "Grid",
-     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Grid"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
-       "path": "~/source/sass/layout/grid.scss",
-       "example": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "main footer": [
-    {
-     "name": "Main Footer",
-     "description": "<p>The website&#39;s main footer</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Main Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "path": "~/source/sass/component/footer/footer.scss",
-       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
-    }
-   ]
-  },
   "typography": {
    "article": [
     {
@@ -458,6 +324,141 @@
     }
    ]
   },
+  "layout": {
+   "container": [
+    {
+     "name": "Container",
+     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Container"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container\"></div>",
+       "path": "~/source/sass/layout/container.scss",
+       "example": "\n<div class=\"container\"></div>",
+       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull left": [
+    {
+     "name": "Pull left",
+     "description": "<p>Floats an element to the left edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull left"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/layout/float.scss",
+       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull right": [
+    {
+     "name": "Pull right",
+     "description": "<p>Floats an element to the right edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull right"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/layout/float.scss",
+       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "clearfix": [
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Clearfix"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/layout/float.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "grid": [
+    {
+     "name": "Grid",
+     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Grid"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
+       "path": "~/source/sass/layout/grid.scss",
+       "example": "\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "main footer": [
+    {
+     "name": "Main Footer",
+     "description": "<p>The website&#39;s main footer</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Main Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "path": "~/source/sass/component/footer/footer.scss",
+       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
+      }
+     ],
+     "helsingborg.se</a></li>": ""
+    }
+   ]
+  },
   "utilities": {
    "link item": [
     {
@@ -676,10 +677,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "modifier": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
        "path": "~/source/sass/component/box/filled.scss",
-       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-container\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-container\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "example": "\n<div class=\"box box-filled-3\">\n    <div class=\"box-content\">\n        <h5>Title</h5>\n        <p>This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled-3\"&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;h5&gt;Title&lt;/h5&gt;\n        &lt;p&gt;This is a filled box. This box is typically used in the sidebar to display \"widgets\" or secondary information.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -687,7 +688,7 @@
    "index": [
     {
      "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents a entrance to a sub section.</p>\n",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
      "page": [
       {
        "nav": "Boxes",
@@ -698,10 +699,44 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
        "path": "~/source/sass/component/box/index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-container\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-container\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Index box</h5>\n                <p>This is a index box. This box is typically used to link to a sub section.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"http://www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Index box&lt;/h5&gt;\n                &lt;p&gt;This is a index box. This box is typically used to link to a sub section.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "panel": [
+    {
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

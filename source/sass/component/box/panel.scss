@@ -1,0 +1,108 @@
+//
+// @name Panel
+// @description Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.
+//
+// @page Boxes/Panel
+//
+// @state .box-panel-primary - Promary look (Default)
+// @state .box-panel-secondary - Secondary look
+//
+// @markup
+// <div class="grid">
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-primary">
+//             <h4 class="box-title">Primary panel box</h4>
+//             <div class="box-content">
+//                 <p>Primary box with plain text content.</p>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-secondary">
+//             <h4 class="box-title">Secondary panel box</h4>
+//             <div class="box-content">
+//                 <p>Secondary box with plain text content.</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="grid">
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-primary">
+//             <h4 class="box-title">Primary panel box</h4>
+//             <ul>
+//                 <li>This is a box panel</li>
+//                 <li>Displaying a list</li>
+//                 <li><a href="https:\/\/www.youtube.com/watch?v=dQw4w9WgXcQ" class="link-item">Do not click here</a></li>
+//             </ul>
+//         </div>
+//     </div>
+//     <div class="grid-md-6">
+//         <div class="box box-panel box-panel-secondary">
+//             <h4 class="box-title">Secondary panel box</h4>
+//             <table class="table-striped">
+//                 <thead>
+//                     <tr>
+//                         <th>First column</th>
+//                         <th>Second column</th>
+//                     </tr>
+//                 </thead>
+//                 <tbody>
+//                     <tr>
+//                         <td>This is</td>
+//                         <td>a box panel</td>
+//                     </tr>
+//                     <tr>
+//                         <td>Displaying</td>
+//                         <td>a table</td>
+//                     </tr>
+//                 </tbody>
+//             </table>
+//         </div>
+//     </div>
+// </div>
+//
+
+.box-panel {
+    display: block;
+    padding: 0;
+
+    .box-title {
+        padding: $cell-padding;
+        margin: 0;
+        background-color: $palette-red-4;
+        color: #fff;
+    }
+
+    .box-content {
+        border: 1px solid $creamy-darker;
+        border-top: 0;
+    }
+
+    table {
+        border-top: 0;
+    }
+
+    ul {
+        border: 1px solid $creamy-darker;
+        border-top: 0;
+
+        li {
+            padding: $content-gutter/1.5 $content-gutter;
+        }
+
+        li + li {
+            border-top: 1px solid $creamy-darker;
+        }
+    }
+}
+
+.box-panel-secondary {
+    .box-title {
+        padding: ($content-gutter/1.5 - 1.5) ($content-gutter - 1.5);
+        padding-left: 0;
+        background-color: transparent;
+        border-bottom: 3px solid $palette-red-2;
+        color: $palette-red-2;
+    }
+}

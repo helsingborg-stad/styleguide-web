@@ -67,7 +67,7 @@ tfoot {
 }
 
 th {
-    padding: $table-cell-padding;
+    padding: $cell-padding;
     text-align: left;
     font-weight: bold;
 
@@ -77,7 +77,7 @@ th {
 }
 
 td {
-    padding: $table-cell-padding;
+    padding: $cell-padding;
 
     & + td {
         border-left: 1px solid $creamy-darker;
@@ -105,7 +105,7 @@ td {
     line-height: $base-line-height;
 
     th, td {
-        padding: $table-cell-padding-sm;
+        padding: $cell-padding-sm;
     }
 }
 
@@ -114,6 +114,6 @@ td {
     line-height: $base-line-height;
 
     th, td {
-        padding: $table-cell-padding-lg;
+        padding: $cell-padding-lg;
     }
 }

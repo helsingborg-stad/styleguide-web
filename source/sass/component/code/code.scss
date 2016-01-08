@@ -12,12 +12,13 @@ pre {
     border: 1px solid $creamy-darker;
     font-size: 1em;
     line-height: 130%;
+    max-height: 200px;
+    overflow: auto;
 
     .line-numbers {
         position: absolute;
         top: 0;
         left: 0;
-        bottom: 0;
         width: 40px;
         padding: .5em .6em;
         text-align: center;

@@ -1,6 +1,6 @@
-$table-cell-padding: 8px 15px;
-$table-cell-padding-lg: 8px 15px;
-$table-cell-padding-sm: 7px 10px;
+$cell-padding: $content-gutter/1.5 $content-gutter;
+$cell-padding-lg: $cell-padding;
+$cell-padding-sm: $content-gutter/2 $content-gutter/1.5;
 
 $table-highlight-color: $creamy-darker;
-$table-zebra-alter-color: darken($creamy,5%);
+$table-zebra-alter-color: darken($creamy,4%);
