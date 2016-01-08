@@ -13,6 +13,14 @@
 //     <option value="Kungstorget">Kungstorget</option>
 //     <option value="Henry Dunkers plats">Henry Dunkers plats</option>
 // </select>
+// <select name="places" id="places" disabled>
+//     <option value="Sundstorget">Sundstorget</option>
+//     <option value="Stortorget">Stortorget</option>
+//     <option value="Gustav Adolfs torg">Gustav Adolfs torg</option>
+//     <option value="Hamntorget">Hamntorget</option>
+//     <option value="Kungstorget">Kungstorget</option>
+//     <option value="Henry Dunkers plats">Henry Dunkers plats</option>
+// </select>
 // <select name="places" id="places" multiple>
 //     <option value="Sundstorget">Sundstorget</option>
 //     <option value="Stortorget">Stortorget</option>
@@ -25,12 +33,18 @@
 
 select {
     width: 100%;
-    padding: $content-gutter/2 $content-gutter/1.5;
-    background: #fff;
+    padding: $content-gutter/2 $content-gutter/2;
+    background-color: #fff;
     border: 1px solid $creamy-darker;
-    font-size: 1em;
+    font-family: $base-font-family;
+    font-size: .9em;
     line-height: $base-line-height;
     box-shadow: inset 0 0 5px rgba(#000, .1);
+
+    &:disabled {
+        @extend .disabled;
+        background-color: $creamy;
+    }
 }
 
 select[multiple] option {

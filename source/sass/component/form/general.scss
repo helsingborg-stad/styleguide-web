@@ -1,5 +1,5 @@
 //
-// @name Forms
+// @name Form
 // @description Basic form
 //
 // @page Forms/Basic form
@@ -25,11 +25,14 @@
 //             <option value="Henry Dunkers plats">Henry Dunkers plats</option>
 //         </select>
 //     </div>
+//     <div class="form-group">
+//         <input type="submit" class="btn btn-primary" value="Send">
+//     </div>
 // </form>
 //
 
 form {
-    @include input-placeholder($gray, 1, 200);
+    @include input-placeholder($gray, 1, 300);
 }
 
 .form-group {
@@ -43,5 +46,51 @@ form {
 
     & + .form-group {
         margin-top: $content-gutter;
+    }
+}
+
+//
+// @name Horizontal form
+// @description A basic horizontal form
+//
+// @page Forms/Horizontal form
+//
+// @markup
+// <form method="post" action="/" class="form-horizontal">
+//     <div class="form-group">
+//         <label for="name">Name</label>
+//         <input type="text" name="name" id="name" placeholder="Name">
+//     </div>
+//     <div class="form-group">
+//         <label for="email">Email address</label>
+//         <input type="email" name="email" id="email" placeholder="Email">
+//     </div>
+//     <div class="form-group">
+//         <input type="submit" class="btn btn-primary" value="Send">
+//     </div>
+// </form>
+//
+
+.form-horizontal {
+    .form-group {
+        display: inline-block;
+        vertical-align: middle;
+
+        & + .form-group {
+            margin-top: 0;
+            margin-left: $content-gutter;
+        }
+
+        label,
+        input,
+        select,
+        textarea {
+            display: inline-block;
+            width: auto;
+        }
+
+        label {
+            margin-right: 5px;
+        }
     }
 }

@@ -2,6 +2,29 @@
     user-select: none;
 }
 
+//
+// @name Disabled
+// @description Prevents clicking on any element and fades it out.
+//
+// @page Utilities/Disabled
+//
+// @markup
+// <div class="box box-filled-3 disabled">
+//     <div class="box-content">
+//         <h5>Title</h5>
+//         <p>This is a filled box. This box is typically used in the sidebar to display "widgets" or secondary information.</p>
+//     </div>
+// </div>
+
 .disabled {
     cursor: no-drop;
+
+    &:not(input):not(select):not(.checkbox):not(.radio) {
+        @extend .no-select;
+        opacity: .7;
+
+        * {
+            pointer-events: none;
+        }
+    }
 }

@@ -15,15 +15,7 @@
 // </div>
 // <div class="form-group">
 //     <label for="textarea">Textarea</label>
-//     <textarea id="textarea" disabled></textarea>
-// </div>
-// <div class="form-group">
-//     <label class="checkbox">
-//         <input type="checkbox"> Check me
-//     </label>
-//     <label class="checkbox disabled">
-//         <input type="checkbox" disabled> But you can't check me
-//     </label>
+//     <textarea id="textarea"></textarea>
 // </div>
 //
 
@@ -45,11 +37,11 @@ input[type="color"],
 textarea {
     apperance: none;
     width: 100%;
-    padding: $content-gutter/2 $content-gutter/1.2 $content-gutter/2;
+    padding: $content-gutter/2.5 $content-gutter/1.5;
     background: #fff;
     border: 1px solid $creamy-darker;
     font-family: $base-font-family;
-    font-size: 1em;
+    font-size: .9em;
     line-height: $base-line-height;
     box-shadow: inset 0 0 5px rgba(#000, .1);
 
@@ -59,9 +51,34 @@ textarea {
     }
 }
 
-label.checkbox {
+label.checkbox,
+label.radio {
     font-weight: normal;
 }
+
+//
+// @name Checkboxes and radiobuttons
+// @description
+//
+// @page Forms/Checkboxes
+// @markup
+// <div class="form-group">
+//     <label class="checkbox">
+//         <input type="checkbox"> Check me
+//     </label>
+//     <label class="checkbox disabled">
+//         <input type="checkbox" disabled> But you can't check me
+//     </label>
+// </div>
+// <div class="form-group">
+//     <label class="radio">
+//         <input type="radio" name="radio"> Alternative 1
+//     </label>
+//     <label class="radio">
+//         <input type="radio" name="radio"> Alternative 2
+//     </label>
+// </div>
+//
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -75,4 +92,8 @@ input[type="radio"] {
         @extend .disabled;
         background-color: $creamy;
     }
+}
+
+input[type="radio"] {
+    top: -4px;
 }
