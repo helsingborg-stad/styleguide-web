@@ -10,7 +10,7 @@
 //
 // @markup
 // <div class="accordion accordion-icon accordion-list">
-//     <section class="accordion-section">
+//      <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
 //             <h2>First</h2>
@@ -55,6 +55,10 @@
     }
 }
 
+.accordion + .accordion {
+	margin-top: $content-gutter; 
+}
+
 .accordion-icon {
     .accordion-toggle {
         position: relative;
@@ -70,6 +74,7 @@
 }
 
 .accordion-boxes,
+.accordion-box,
 .accordion-list {
 
 	.accordion-toggle,
@@ -87,6 +92,7 @@
 	}
 
 	&.boxes-medium,
+	&.box-medium,
 	&.list-medium {
 		.accordion-toggle,
 		.accordion-content {
@@ -104,6 +110,7 @@
 	}
 
 	&.boxes-large,
+	&.box-large,
 	&.list-large {
 		.accordion-toggle,
 		.accordion-content {
@@ -167,7 +174,7 @@
 }
 
 .accordion-content {
-    display: block;
+    display: none;
 
     input[type="checkbox"] ~ &,
     input[type="radio"] ~ & {
@@ -175,7 +182,8 @@
     }
 
     input[type="checkbox"]:checked ~ &,
-    input[type="radio"]:checked ~ & {
+    input[type="radio"]:checked ~ &,
+    input[type="radio"]:target ~ & {
         display: block;
     }
 }

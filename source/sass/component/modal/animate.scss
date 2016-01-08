@@ -1,0 +1,41 @@
+
+	.modal:not(.no-animation) {
+		
+		.modal-content {
+			animation: modal-bounce-in 500ms ease-in-out; 
+		}
+		
+		.backdrop {
+			animation: modal-fade-backdrop 300ms ease-in-out; 
+		}
+		
+	}
+	
+	@keyframes modal-fade-backdrop {
+	  0% {
+	    display: none;
+	    opacity: 0;
+	  }
+	  1% {
+	    display: block;
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	
+	@keyframes modal-bounce-in {
+	  0% {
+	    top: 100vh; 
+	    opacity: 0; 
+	  }
+	  75% {
+	    top: -10px; 
+	    opacity: 1; 
+	  }
+	  100% {
+	   top: 0; 
+	   opacity: 1; 
+	  }
+	}
