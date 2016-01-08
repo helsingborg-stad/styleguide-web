@@ -20,6 +20,20 @@
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Prevent scrolling when modal is open.</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n</div>",
+       "path": "~/source/js/helpers/modal.js",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n    <div class=\"grid-md-6\">\n        Hej<br>på<br>dig\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        Hej&lt;br&gt;på&lt;br&gt;dig\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
     }
    ]
   }
