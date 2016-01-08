@@ -34,7 +34,10 @@
 // @state .gutter-sm - Smaller gutter
 // @state .gutter-lg - Larger gutter
 // @state .gutter-xl - Extra large gutter
+//
 // @state .gutter-margin - Add gutter as margin instead of padding
+// @state .gutter-vertical - Only vertical gutter
+// @state .gutter-horizontal - Only horizontal gutter
 //
 // @page Utilities/Gutter
 //
@@ -69,4 +72,24 @@
 
 .gutter-xl.gutter-margin {
     margin: $content-gutter * 3;
+}
+
+.gutter-vertical:not(.gutter-margin) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.gutter-vertical.gutter-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.gutter-horizontal:not(.gutter-margin) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.gutter-horizontal.gutter-margin {
+    margin-top: 0;
+    margin-bottom: 0;
 }
