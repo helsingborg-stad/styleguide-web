@@ -19,7 +19,6 @@ HelsingborgPrime.Helpers.ModalLimit = (function ($) {
     };
     
     ModalLimit.prototype.toggleModalClass = function(){
-	    console.log(window.location.hash.indexOf("modal-")); 
 	    if(window.location.hash.indexOf("modal-") > 0 ) {
 			jQuery("html").addClass("overflow-hidden"); 
 		} else {
