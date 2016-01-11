@@ -58,7 +58,7 @@
 	}
 
 	@media screen and #{$screen-lg-up} {
-		padding: $grid-gutter-lg;
+		padding: $grid-gutter-lg * 2;
 	}
 
 	/* Backdrops */
