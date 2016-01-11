@@ -21,7 +21,8 @@
 @import 'utility/link-item';
 @import 'utility/interaction';
 @import 'utility/creamy';
-@import 'utility/visibility'; 
+@import 'utility/visibility';
+@import 'utility/accessibility';
 
 // ***************************************************************
 // *** Layout
@@ -82,6 +83,6 @@
 @import 'component/footer/footer';
 
 // ***************************************************************
-// *** Animation components 
+// *** Animation components
 // ***************************************************************
 @import 'component/modal/animate';
