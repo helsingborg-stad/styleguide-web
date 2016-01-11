@@ -25,8 +25,7 @@
 
     @media #{$screen-xs} {
         .grid {
-            margin-left: -($grid-gutter-xs / 2);
-            margin-right: -($grid-gutter-xs / 2);
+            margin: -($grid-gutter-xs / 2);
         }
 
         & + .grid {
@@ -36,8 +35,7 @@
 
     @media #{$screen-sm} {
         .grid {
-            margin-left: -($grid-gutter-sm / 2);
-            margin-right: -($grid-gutter-sm / 2);
+            margin: -($grid-gutter-sm / 2);
         }
 
         & + .grid {
@@ -47,8 +45,7 @@
 
     @media #{$screen-md} {
         .grid {
-            margin-left: -($grid-gutter-md / 2);
-            margin-right: -($grid-gutter-md / 2);
+            margin: -($grid-gutter-md / 2);
         }
 
         & + .grid {
@@ -58,8 +55,7 @@
 
     @media #{$screen-lg} {
         .grid {
-            margin-left: -($grid-gutter-lg / 2);
-            margin-right: -($grid-gutter-lg / 2);
+            margin: -($grid-gutter-lg / 2);
         }
 
         & + .grid {
@@ -122,18 +118,15 @@
     padding-right: $grid-gutter-xs / 2;
 
     @media #{$screen-sm} {
-        padding-left: $grid-gutter-sm / 2;
-        padding-right: $grid-gutter-sm / 2;
+        padding: $grid-gutter-sm / 2;
     }
 
     @media #{$screen-md} {
-        padding-left: $grid-gutter-md / 2;
-        padding-right: $grid-gutter-md / 2;
+        padding: $grid-gutter-md / 2;
     }
 
     @media #{$screen-lg} {
-        padding-left: $grid-gutter-lg / 2;
-        padding-right: $grid-gutter-lg / 2;
+        padding: $grid-gutter-lg / 2;
     }
 }
 
