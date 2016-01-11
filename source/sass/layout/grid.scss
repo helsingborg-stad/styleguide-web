@@ -25,7 +25,8 @@
 
     @media #{$screen-xs} {
         .grid {
-            margin: -($grid-gutter-xs / 2);
+            margin-left: -($grid-gutter-xs / 2);
+            margin-right: -($grid-gutter-xs / 2);
         }
 
         & + .grid {
@@ -35,7 +36,8 @@
 
     @media #{$screen-sm} {
         .grid {
-            margin: -($grid-gutter-sm / 2);
+            margin-left: -($grid-gutter-sm / 2);
+            margin-right: -($grid-gutter-sm / 2);
         }
 
         & + .grid {
@@ -45,7 +47,8 @@
 
     @media #{$screen-md} {
         .grid {
-            margin: -($grid-gutter-md / 2);
+            margin-left: -($grid-gutter-md / 2);
+            margin-right: -($grid-gutter-md / 2);
         }
 
         & + .grid {
@@ -55,7 +58,8 @@
 
     @media #{$screen-lg} {
         .grid {
-            margin: -($grid-gutter-lg / 2);
+            margin-left: -($grid-gutter-lg / 2);
+            margin-right: -($grid-gutter-lg / 2);
         }
 
         & + .grid {
@@ -79,6 +83,14 @@
     }
 }
 
+@media #{$screen-below-xs} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-xs-"] + [class*="grid-xs-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
 // Small screens
 @media #{$screen-sm-up} {
     @for $i from 1 to $grid-column-count + 1 {
@@ -86,6 +98,14 @@
             display: block;
             float: left;
             width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+@media #{$screen-below-sm} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-sm-"] + [class*="grid-sm-"] {
+            margin-top: $content-gutter;
         }
     }
 }
@@ -101,6 +121,14 @@
     }
 }
 
+@media #{$screen-below-md} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-md-"] + [class*="grid-md-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
 // Large screens and up
 @media #{$screen-lg-up} {
     @for $i from 1 to $grid-column-count + 1 {
@@ -112,21 +140,32 @@
     }
 }
 
+@media #{$screen-below-lg} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-lg-"] + [class*="grid-lg-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
 // General
 [class*="grid-"] {
     padding-left: $grid-gutter-xs / 2;
     padding-right: $grid-gutter-xs / 2;
 
     @media #{$screen-sm} {
-        padding: $grid-gutter-sm / 2;
+        padding-left: $grid-gutter-sm / 2;
+        padding-right: $grid-gutter-sm / 2;
     }
 
     @media #{$screen-md} {
-        padding: $grid-gutter-md / 2;
+        padding-left: $grid-gutter-md / 2;
+        padding-right: $grid-gutter-md / 2;
     }
 
     @media #{$screen-lg} {
-        padding: $grid-gutter-lg / 2;
+        padding-left: $grid-gutter-lg / 2;
+        padding-right: $grid-gutter-lg / 2;
     }
 }
 
