@@ -45,9 +45,21 @@
 	position: fixed;
 	display: none;
 	margin: 0 auto;
-	opacity: 0; 
-	overflow: auto; 
-	z-index: $level-top; 
+	opacity: 0;
+	overflow: auto;
+	z-index: $level-top;
+
+	@media screen and #{$screen-sm-up} {
+		padding: $grid-gutter-sm;
+	}
+
+	@media screen and #{$screen-sm-up} {
+		padding: $grid-gutter-md;
+	}
+
+	@media screen and #{$screen-lg-up} {
+		padding: $grid-gutter-lg;
+	}
 
 	/* Backdrops */
 	&[class*='modal-backdrop-'] .backdrop,
@@ -61,8 +73,8 @@
 
 	/* Css open/close logic */
 	&:target {
-		opacity: 1; 
-		display: block !important; 
+		opacity: 1;
+		display: block !important;
 	}
 }
 
@@ -116,11 +128,12 @@
 }
 
 .modal-content {
-	position: relative; 
+	position: relative;
     z-index: $level-10;
 	background: #fff;
     line-height: $base-line-height;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, .2); 
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+	@include center(true, false);
 }
 
 /* Modifiers - size */
@@ -128,7 +141,7 @@
 .modal-large .modal-content {
 	width: 100%;
 	min-height: 100vh;
-	margin: 0; 
+	margin: 0;
 }
 
 .modal-large .btn-close {
@@ -146,15 +159,15 @@
 .modal-medium .modal-content {
 	width: 70%;
 
-	@media screen and #{$screen-xs} {
+	@media screen and #{$screen-xs-up} {
 		width: 100%;
 	}
 
-	@media screen and #{$screen-sm} {
+	@media screen and #{$screen-sm-up} {
 		width: 90%;
 	}
 
-	@media screen and #{$screen-md} {
+	@media screen and #{$screen-md-up} {
 		width: 80%;
 	}
 }
@@ -162,15 +175,15 @@
 .modal-small .modal-content {
 	width: 50%;
 
-	@media screen and #{$screen-xs} {
+	@media screen and #{$screen-xs-up} {
 		width: 100%;
 	}
 
-	@media screen and #{$screen-sm} {
+	@media screen and #{$screen-sm-up} {
 		width: 70%;
 	}
 
-	@media screen and #{$screen-md} {
+	@media screen and #{$screen-md-up} {
 		width: 60%;
 	}
 }
