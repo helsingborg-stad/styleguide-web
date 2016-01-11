@@ -13,12 +13,28 @@
 // <button class="btn disabled">Button base</button>
 //
 
+/* Fix for button height */
+button.btn,
+input[type="submit"].btn,
+input[type="button"].btn {
+    line-height: $base-line-height;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner,
+input[type="button"].btn::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+/* End of button height fix */
+
 .btn {
     display: inline-block;
     vertical-align: middle;
     padding: $btn-padding;
     background-color: $creamy-darker;
     border: 0;
+    font-family: $base-font-family;
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
     color: $base-font-color;
