@@ -1,7 +1,7 @@
 //
 // @name Navigation
 // @description Vertical navigation a.k.a sidebar navigation with nestled sub menu support.
-// @author Kristoffer Svanmark, Sebastian Thulin  
+// @author Kristoffer Svanmark, Sebastian Thulin
 //
 // @page Navigation/Sidebar navigation
 //
@@ -27,10 +27,6 @@
 //     </ul>
 // </nav>
 //
-
-.nav {
-    margin-bottom: $content-gutter;
-}
 
 // ***************************************************************
 // *** 1. Sidebar navigation
@@ -114,10 +110,10 @@
 }
 
 // ***************************************************************
-// *** 3. Menu icons 
+// *** 3. Menu icons
 // ***************************************************************
 
-$nav-duration: 200ms; 
+$nav-duration: 200ms;
 
 .menu-trigger {
     height: 28px;
@@ -133,7 +129,7 @@ $nav-duration: 200ms;
 
     .menu-icon:before, .menu-icon:after {
         transition: $nav-duration/2;
-    } 
+    }
 
     .menu-icon {
 
@@ -144,25 +140,25 @@ $nav-duration: 200ms;
 	    height: 3px;
 	    background: $creamy-darker;
 	    transition: $nav-duration;
-		border-radius: 2px; 
+		border-radius: 2px;
 
 	    &:before, &:after {
 	        display: block;
 	        content: "";
 	        height: 3px;
 	        width: 28px;
-	        background: $creamy-darker; 
+	        background: $creamy-darker;
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
-	        border-radius: 2px; 
+	        border-radius: 2px;
 	    }
 
 	    &:before { top: 7px;  }
 	    &:after  { top: -7px; }
-	    
+
     }
-    
+
     &:hover {
 	    .menu-icon {
 		    &:before { top: 9px;  }
@@ -192,7 +188,7 @@ $nav-duration: 200ms;
 }
 
 .menu-trigger:target + ul.nav-aside {
-	display: block !important; 
+	display: block !important;
 }
 
 // ***************************************************************

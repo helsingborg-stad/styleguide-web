@@ -23,8 +23,6 @@
     width: auto;
     @extend .clearfix;
 
-    margin-bottom: -$content-gutter;
-
     @media #{$screen-xs} {
         .grid {
             margin-left: -($grid-gutter-xs / 2);
