@@ -1,6 +1,10 @@
 .box {
     display: block;
     padding: $content-gutter / 3;
+
+    p + p {
+        margin-top: $content-gutter/1.5;
+    }
 }
 
 .box + .box {
@@ -8,10 +12,7 @@
 }
 
 .box-content {
-    padding-top: $content-gutter / 1.5;
-    padding-bottom: $content-gutter / 1.5;
-    padding-left: $content-gutter;
-    padding-right: $content-gutter;
+    padding: $content-gutter/1.5;
     font-size: .9em;
 }
 
