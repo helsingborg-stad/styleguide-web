@@ -24,8 +24,9 @@
             display: block;
             content: attr(data-tooltip);
             white-space: nowrap;
+            text-align: center;
 
-            background-color: #000;
+            background-color: #252525;
             color: #fff;
             padding: 3px 8px;
             border-radius: 5px;
@@ -42,7 +43,7 @@
             left: 50%;
             transform: translateY(0%) translateX(-50%);
 
-            @include arrow();
+            @include arrow('up', 5px, #252525);
         }
     }
 
@@ -63,7 +64,7 @@
                 left: 50%;
                 transform: translateY(0%) translateX(-50%);
 
-                @include arrow('down');
+                @include arrow('down', 5px, #252525);
             }
         }
     }
@@ -85,7 +86,7 @@
                 right: auto;
                 transform: translateY(-50%);
 
-                @include arrow('right');
+                @include arrow('right', 5px, #252525);
             }
         }
     }
@@ -107,7 +108,7 @@
                 left: auto;
                 transform: translateY(-50%);
 
-                @include arrow('left');
+                @include arrow('left', 5px, #252525);
             }
         }
     }
