@@ -1,15 +1,29 @@
 //
 // @name Link item
-// @description Prepends a link indicator icon before the link text.
+// @description Prepends a link indicator icon before the link text. If the href matches a file type, that's specified below, the icon for the matching file type icon. You can also, like in the examples, use a modifier class to set the icon.
 //
 // @page Utilities/Link item
 //
-// @state .link-item-outbound - Will show icon for outbound link instead of regular link item arrow
 // @state .link-item-light - Lighter link item icon and text color (for use with dark backgrounds)
 //
 // @markup
-// <a href="#" class="link-item">Inbound link item</a><br>
-// <a href="#" class="link-item link-item-outbound">Outbound link item</a>
+// <strong>Default</strong><br>
+// <a href="#" class="link-item">Default link item</a><br>
+// <a href="#" class="link-item link-item-outbound">Outbound link item</a><br><br>
+// <strong>Automatic file type parsing</strong><br>
+// <a href="http:\/\/www.helsingborg.se/wp-content/uploads/2014/12/Best-mmelser_Kommunalt_f-reningsst-d_2015.pdf" class="link-item">File type: pdf</a><br>
+// <a href="http:\/\/www.helsingborg.se/wp-content/uploads/2015/11/skolflicka_i_kattarp_1800x600_foto_anna_alexander_olsson.jpg" class="link-item">File type: image</a><br><br>
+// <strong>Manual file type</strong><br>
+// <a href="#" class="link-item link-item-github">GitHub</a><br>
+// <a href="#" class="link-item link-item-pdf">PDF</a><br>
+// <a href="#" class="link-item link-item-doc">Word document</a><br>
+// <a href="#" class="link-item link-item-ppt">PowerPoint</a><br>
+// <a href="#" class="link-item link-item-xls">Excel</a><br>
+// <a href="#" class="link-item link-item-audio">Audio</a><br>
+// <a href="#" class="link-item link-item-archive">Archive</a><br>
+// <a href="#" class="link-item link-item-image">Image</a><br>
+// <a href="#" class="link-item link-item-text">Text</a><br>
+// <a href="#" class="link-item link-item-video">Video</a><br>
 //
 .link-item {
     $padding-left: 20px;
@@ -33,9 +47,99 @@
     }
 }
 
-.link-item-github {
+.link-item-github,
+.link-item[href*="github.com"] {
     &::before {
         @include hbg-icon($icon-github);
+    }
+}
+
+.link-item-pdf,
+.link-item[href*=".pdf"] {
+    &::before {
+        @include hbg-icon($icon-pdf);
+    }
+}
+
+.link-item-doc,
+.link-item[href*=".doc"],
+.link-item[href*=".docx"] {
+    &::before {
+        @include hbg-icon($icon-word);
+    }
+}
+
+.link-item-ppt,
+.link-item[href*=".ppt"],
+.link-item[href*=".pptx"] {
+    &::before {
+        @include hbg-icon($icon-powerpoint);
+    }
+}
+
+.link-item-xls,
+.link-item[href*=".xls"],
+.link-item[href*=".xlsx"] {
+    &::before {
+        @include hbg-icon($icon-excel);
+    }
+}
+
+.link-item-audio,
+.link-item[href*=".mp3"],
+.link-item[href*=".wav"] {
+    &::before {
+        @include hbg-icon($icon-audio);
+    }
+}
+
+.link-item-archive,
+.link-item[href*=".zip"],
+.link-item[href*=".rar"],
+.link-item[href*=".tar"] {
+    &::before {
+        @include hbg-icon($icon-archive);
+    }
+}
+
+.link-item-image,
+.link-item[href*=".jpg"],
+.link-item[href*=".png"],
+.link-item[href*=".gif"],
+.link-item[href*=".jpeg"],
+.link-item[href*=".bmp"],
+.link-item[href*=".svg"],
+.link-item[href*=".eps"] {
+    &::before {
+        @include hbg-icon($icon-image);
+    }
+}
+
+.link-item-text,
+.link-item[href*=".txt"],
+.link-item[href*=".md"],
+.link-item[href*=".mkdown"],
+.link-item[href*=".markdown"] {
+    &::before {
+        @include hbg-icon($icon-text);
+    }
+}
+
+.link-item-video,
+.link-item[href*=".mpg"],
+.link-item[href*=".m4v"],
+.link-item[href*=".mpeg"],
+.link-item[href*=".mov"],
+.link-item[href*=".avi"],
+.link-item[href*=".mp4"],
+.link-item[href*=".ogg"],
+.link-item[href*=".ogv"],
+.link-item[href*=".webm"],
+.link-item[href*=".mkv"],
+.link-item[href*=".flv"],
+.link-item[href*=".wmw"], {
+    &::before {
+        @include hbg-icon($icon-video);
     }
 }
 
