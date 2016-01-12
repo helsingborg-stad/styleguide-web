@@ -8,19 +8,19 @@ HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
 HelsingborgPrime.Helpers.Accordion = (function ($) {
 
     function Accordion() {
-    	this.init(); 
+    	this.init();
     }
 
     Accordion.prototype.init = function () {
-        jQuery('div.accordion label').on('click', function(event) {
+        $('div.accordion label').on('click', function(event) {
 			if ( history.pushState ) {
-				history.pushState(null, null, "#" +jQuery(this).attr('for'));
+				history.pushState(null, null, '#' + $(this).attr('for'));
 			} else {
-				window.location.hash = "#" + jQuery(this).attr('for'); 
+				window.location.hash = '#' + $(this).attr('for');
 			}
 		});
     };
-    
+
     return new Accordion();
 
 })(jQuery);

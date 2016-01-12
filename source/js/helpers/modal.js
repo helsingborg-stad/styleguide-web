@@ -8,21 +8,22 @@ HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
 HelsingborgPrime.Helpers.ModalLimit = (function ($) {
 
     function ModalLimit() {
-    	this.init(); 
+    	this.init();
     }
 
     ModalLimit.prototype.init = function () {
-	    this.toggleModalClass(); 
-        jQuery(window).bind('hashchange', function() {
-			this.toggleModalClass(); 
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
 		}.bind(this));
     };
-    
+
     ModalLimit.prototype.toggleModalClass = function(){
-	    if(window.location.hash.indexOf("modal-") > 0 ) {
-			jQuery("html").addClass("overflow-hidden"); 
+	    if (window.location.hash.indexOf('modal-') > 0 ) {
+			$('html').addClass('overflow-hidden');
 		} else {
-			jQuery("html").removeClass("overflow-hidden"); 
+			$('html').removeClass('overflow-hidden');
 		}
     };
 
