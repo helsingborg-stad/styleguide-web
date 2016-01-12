@@ -1,0 +1,74 @@
+//
+// @name Modals
+// @description CSS only modal box (exception for positioning).
+// @author Sebastian Thulin
+//
+// @page Gallery/Image Grid
+//
+// @state .modal-backdrop-1 - Stripe color 1 as backdrop
+//
+// @markup
+// <ul class="image-gallery grid grid-gallery">
+//	<li class="grid-md-3" id="gallery-image-1">
+//		<a class="box box-index " href="#gallery-image-1">
+//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,cb0050,fff.svg"/>
+//		</a>
+//	</li>
+//	<li class="grid-md-3" id="gallery-image-1">
+//		<a class="box box-index " href="#gallery-image-1">
+//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,ec6701,fff.svg"/>
+//		</a>
+//	</li>
+//	<li class="grid-md-3">
+//		<a class="box box-index" href="#gallery-image-1" id="gallery-image-1">
+//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,ae0b05,fff.svg"/>
+//		</a>
+//	</li>
+//	<li class="grid-md-3">
+//		<a class="box box-index" href="#gallery-image-4" >
+//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,cb0050,fff.svg"/>
+//			<span id="gallery-image-4" class="popover" style="background-image: url('http:\/\/holder.ninja/200x150,,cb0050,fff.svg');"></span>
+//		</a>
+//	</li>
+//	<li class="grid-md-3" id="gallery-image-1">
+//		<a class="box box-index " href="#gallery-image-1">
+//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,e3000f,fff.svg"/>
+//		</a>
+//	</li>
+//</ul>
+
+.image-gallery {
+	list-style: none; 
+	padding: 0; 
+	margin: 0; 
+	
+	a, span {
+		display: block; 
+		line-height: 0; 
+		
+		img {
+			width: 100%; 
+			height: auto; 
+		}
+	}
+	
+	.popover {
+		z-index: $level-top; 
+		display: none; 
+		opacity: 0; 
+	}
+	
+	.popover:target {
+		@include cover(); 
+		opacity: 1; 
+		display: block;
+		background-position: center; 
+		background-repeat: no-repeat; 
+		background-size: auto 80%; 
+		background-color: rgba(0,0,0,.7); 
+		
+		.close {
+			
+		}
+	}
+}
