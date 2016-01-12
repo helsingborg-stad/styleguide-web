@@ -1,0 +1,114 @@
+//
+// @name Tooltip
+// @description Tooltip on hover or focus.<br><small>Note: Using tooltip will set position of the element to relative.</small>
+//
+// @page Special/Tooltip
+//
+// @markup
+// <a href="#" data-tooltip="This is a tooltip below">Tooltip below</a><br>
+// <a href="#" data-tooltip="This is a tooltip above" data-tooltip-top>Tooltip above</a><br>
+// <a href="#" data-tooltip="This is a tooltip left" data-tooltip-left>Tooltip left</a><br>
+// <a href="#" data-tooltip="This is a tooltip right" data-tooltip-right>Tooltip right</a>
+//
+[data-tooltip] {
+    position: relative;
+
+    &:hover {
+        &::after {
+            position: absolute;
+            z-index: $level-9;
+            bottom: -8px;
+            left: 50%;
+            transform: translateY(100%) translateX(-50%);
+
+            display: block;
+            content: attr(data-tooltip);
+            white-space: nowrap;
+
+            background-color: #000;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: .8em;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+
+            position: absolute;
+            z-index: $level-9;
+            bottom: -8px;
+            left: 50%;
+            transform: translateY(0%) translateX(-50%);
+
+            @include arrow();
+        }
+    }
+
+    &[data-tooltip-top] {
+        &:hover {
+            &::after {
+                bottom: auto;
+                top: -8px;
+                right: -auto;
+                left: 50%;
+                transform: translateY(-100%) translateX(-50%);
+            }
+
+            &::before {
+                bottom: auto;
+                top: -8px;
+                right: auto;
+                left: 50%;
+                transform: translateY(0%) translateX(-50%);
+
+                @include arrow('down');
+            }
+        }
+    }
+
+    &[data-tooltip-left] {
+        &:hover {
+            &::after {
+                bottom: auto;
+                top: 50%;
+                left: -10px;
+                right: auto;
+                transform: translateY(-50%) translateX(-100%);
+            }
+
+            &::before {
+                bottom: auto;
+                top: 50%;
+                left: -10px;
+                right: auto;
+                transform: translateY(-50%);
+
+                @include arrow('right');
+            }
+        }
+    }
+
+    &[data-tooltip-right] {
+        &:hover {
+            &::after {
+                bottom: auto;
+                top: 50%;
+                right: -10px;
+                left: auto;
+                transform: translateY(-50%) translateX(100%);
+            }
+
+            &::before {
+                bottom: auto;
+                top: 50%;
+                right: -10px;
+                left: auto;
+                transform: translateY(-50%);
+
+                @include arrow('left');
+            }
+        }
+    }
+}

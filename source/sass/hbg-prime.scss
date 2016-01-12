@@ -12,6 +12,7 @@
 @import 'mixin/mixins';
 @import 'mixin/positioning';
 @import 'mixin/forms';
+@import 'mixin/arrow';
 
 // ***************************************************************
 // *** Utilities
@@ -62,6 +63,8 @@
 
 @import 'component/modal/modal';
 @import 'component/accordion/accordion';
+
+@import 'component/tooltip/tooltip';
 
 @import 'component/stripe/stripe';
 
