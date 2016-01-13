@@ -80,7 +80,7 @@
 }
 
 .stripe {
-    @include stripe(#7b7b7b, #959595, #afafaf, #cacaca, #e5e5e5);
+    @include stripe();
     width: 25px;
     height: 100%;
 
