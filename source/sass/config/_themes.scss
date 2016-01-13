@@ -1,15 +1,3 @@
-//
-// @name Themes
-// @description Color themes based on the stripes. You can use the theme classes either on the <code>body</code>-tag or on any parent container to any element you want to change color of.
-//
-// @page Themes/General
-//
-// @state .theme-red - Red theme
-// @state .theme-blue - Blue theme
-// @state .theme-green - Green theme
-// @state .theme-purple - Purple theme
-//
-
 $themes: (
     red: (
         first: #f7a600,

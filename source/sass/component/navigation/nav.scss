@@ -225,7 +225,7 @@ $nav-duration: 200ms;
 }
 
 .nav-horizontal {
-    li {
+    > li {
         display: inline-block;
 
         & + li {
