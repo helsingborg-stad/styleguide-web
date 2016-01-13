@@ -21,38 +21,34 @@ article {
 		font-weight: bold;
 	}
 
-	ul,
-	ol,
-	p {
-		padding-bottom: 1em;
-		margin-bottom: 0;
-
-		&:last-child {
-			padding-bottom: 0;
-		}
-	}
-
+	p + p,
+	p + h1,
 	p + h2,
 	p + h3,
 	p + h4,
 	p + h5,
 	p + h6,
+	p + pre,
 	ol + h2,
 	ol + h3,
 	ol + h4,
 	ol + h5,
 	ol + h6,
+	ol + pre,
 	ul + h2,
 	ul + h3,
 	ul + h4,
 	ul + h5,
 	ul + h6,
+	ul + pre,
 	blockquote + h2,
 	blockquote + h3,
 	blockquote + h4,
 	blockquote + h5,
-	blockquote + h6 {
-		padding-top: $content-gutter*2;
+	blockquote + h6,
+	blockquote + pre,
+	pre + p {
+		margin-top: 1em;
 	}
 
 	blockquote {
