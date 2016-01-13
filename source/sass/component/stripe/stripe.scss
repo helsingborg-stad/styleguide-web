@@ -81,7 +81,7 @@
 
     // Color theme styles
     @each $theme, $color in $themes {
-        .theme-#{$theme} & {
+        .theme-#{$theme} &:not([class*="stripe-"]) {
             @include stripe(map-get($color, first), map-get($color, second), map-get($color, third), map-get($color, fourth), map-get($color, fifth));
         }
     }
