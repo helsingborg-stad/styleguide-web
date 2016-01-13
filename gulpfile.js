@@ -11,6 +11,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var dss = require('gulp-docs');
 
+var node_modules = 'node_modules/';
+
 // Compile Our Sass
 gulp.task('sass-dist', function() {
     return gulp.src('source/sass/hbg-prime.scss')
@@ -34,6 +36,7 @@ gulp.task('sass-dev', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src([
+                node_modules + 'jquery/dist/jquery.js',
                 'source/js/**/*.js',
             ])
             .pipe(concat('hbg-prime.dev.js'))
