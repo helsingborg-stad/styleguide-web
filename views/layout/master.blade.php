@@ -51,7 +51,7 @@
         </style>
     </noscript>
 </head>
-<body>
+<body class="{{ isset($theme) ? $theme : '' }}">
     <nav class="navbar">
         <div class="container">
             <div class="grid">
@@ -60,6 +60,17 @@
                 </div>
                 <div class="grid-md-9">
                     <ul class="nav nav-horizontal text-right">
+                        <li>
+                            <span class="dropdown">
+                                <span class="btn btn-primary dropdown-toggle">Change theme</span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="?theme=red">Red (default)</a></li>
+                                    <li><a href="?theme=blue">Blue</a></li>
+                                    <li><a href="?theme=green">Green</a></li>
+                                    <li><a href="?theme=purple">Purple</a></li>
+                                </ul>
+                            </span>
+                        </li>
                         <li><a href="http://www.helsingborg.se">Visit Helsingborg.se</a></li>
                     </ul>
                 </div>

@@ -17,6 +17,33 @@ class App
     }
 
     /**
+     * Gets theme from cookie or querystring
+     * @return string Theme
+     */
+    public function getTheme()
+    {
+        if (!isset($_COOKIE['theme']) && !isset($_GET['theme'])) {
+            return 'theme-red';
+        }
+
+        if (!isset($_GET['theme'])) {
+            return 'theme-' . $_COOKIE['theme'];
+        }
+
+        $this->setTheme($_GET['theme']);
+        return 'theme-' . $_GET['theme'];
+    }
+
+    /**
+     * Sets theme cookie
+     * @param string $theme Theme to set
+     */
+    public function setTheme($theme)
+    {
+        setcookie('theme', $theme, time() + (86400 * 30), "/");
+    }
+
+    /**
      * Loads a page and it's navigation
      * @return bool Returns true when the page is loaded
      */
@@ -25,6 +52,7 @@ class App
         // Navigation
         $data['nav'] = $this->loadNavigation($this->page);
         $data['pageNow'] = $this->page;
+        $data['theme'] = $this->getTheme();
 
         // Home
         if ($this->page == 'home') {
