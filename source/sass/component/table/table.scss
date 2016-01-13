@@ -105,7 +105,25 @@ td {
 .table-hover {
     tbody {
         tr:hover {
-            background-color: $table-highlight-color;
+            // Color theme styles
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: lighten(map-get($color, fourth),60%);
+                }
+            }
+        }
+    }
+
+    &.table-striped {
+        tbody {
+            tr:nth-child(even):hover {
+                // Color theme styles
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: lighten(map-get($color, fourth),58%);
+                    }
+                }
+            }
         }
     }
 }
