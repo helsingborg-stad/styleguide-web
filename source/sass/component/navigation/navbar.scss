@@ -29,6 +29,13 @@
     background-color: $palette-red-4;
     font-size: 1.1rem;
 
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, fourth);
+        }
+    }
+
     a {
         display: block;
         padding: 16px 0;

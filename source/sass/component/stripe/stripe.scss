@@ -78,6 +78,13 @@
     @include stripe(#7b7b7b, #959595, #afafaf, #cacaca, #e5e5e5);
     width: 25px;
     height: 100%;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            @include stripe(map-get($color, first), map-get($color, second), map-get($color, third), map-get($color, fourth), map-get($color, fifth));
+        }
+    }
 }
 
 .stripe-red {

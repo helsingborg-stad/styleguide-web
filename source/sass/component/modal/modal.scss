@@ -195,34 +195,90 @@
 
 .modal-backdrop-1 .backdrop {
     background-color: rgba($palette-red-1,.9);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: rgba(map-get($color, first),.9);
+        }
+    }
 }
 
 .modal-backdrop-1 .btn-close:after {
     color: darken($palette-red-1, 10%);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: darken(map-get($color, first),10%);
+        }
+    }
 }
 
 .modal-backdrop-2 .backdrop  {
     background-color: rgba($palette-red-2,.9);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: rgba(map-get($color, second),.9);
+        }
+    }
 }
 
 .modal-backdrop-2 .btn-close:after {
     color: darken($palette-red-2, 10%);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: darken(map-get($color, second),10%);
+        }
+    }
 }
 
 .modal-backdrop-3 .backdrop  {
     background-color: rgba($palette-red-3,.9);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: rgba(map-get($color, third),.9);
+        }
+    }
 }
 
 .modal-backdrop-3 .btn-close:after {
     color: darken($palette-red-3, 10%);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: darken(map-get($color, third),10%);
+        }
+    }
 }
 
 .modal-backdrop-4 .backdrop  {
     background-color: rgba($palette-red-4,.9);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: rgba(map-get($color, fourth),.9);
+        }
+    }
 }
 
 .modal-backdrop-4 .btn-close:after {
     color: darken($palette-red-4, 10%);
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: darken(map-get($color, fourth),10%);
+        }
+    }
 }
 
 .modal-backdrop-black .backdrop  {

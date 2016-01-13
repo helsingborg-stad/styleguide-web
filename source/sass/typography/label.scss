@@ -7,6 +7,7 @@
 // @state .label-sm - Smaller label
 // @state .label-lg - Larger label
 //
+// @state .label-theme - Uses the current theme color
 // @state .label-red-1 - First color in red stripe (color 1-5 available)
 // @state .label-blue-1 - First color in blue stripe (color 1-5 available)
 // @state .label-green-1 - First color in green stripe (color 1-5 available)
@@ -19,6 +20,17 @@
 .label {
     background-color: $creamy-darker;
     padding: .3em .6em;
+}
+
+.label-theme {
+    color: #fff;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, fourth);
+        }
+    }
 }
 
 .label-sm {

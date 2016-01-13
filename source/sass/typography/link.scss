@@ -2,6 +2,13 @@ a {
     color: $palette-red-4;
     text-decoration: none;
 
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: map-get($color, fourth);
+        }
+    }
+
     &:hover {
         text-decoration: underline;
     }

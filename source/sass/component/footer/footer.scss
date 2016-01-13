@@ -39,8 +39,14 @@
     padding: 40px 0;
     background-color: $palette-red-4;
     color: #fff;
-
     font-size: .9em;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, fourth);
+        }
+    }
 
     .logotype {
         display: inline-block;

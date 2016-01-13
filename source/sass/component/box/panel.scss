@@ -72,6 +72,13 @@
         margin: 0;
         background-color: $palette-red-4;
         color: #fff;
+
+        // Color theme styles
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
+        }
     }
 
     .box-content {
@@ -103,8 +110,16 @@
     .box-title {
         padding: ($content-gutter/1.5 - 1.5) ($content-gutter - 1.5);
         padding-left: 0;
-        background-color: transparent;
+        background-color: transparent !important;
         border-bottom: 3px solid $palette-red-2;
         color: $palette-red-2;
+
+        // Color theme styles
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, second);
+                border-color: map-get($color, second);
+            }
+        }
     }
 }

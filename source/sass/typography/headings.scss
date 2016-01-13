@@ -37,7 +37,14 @@ h6, .h6 {
 h1, .h1 {
     font-size: 2.2rem;
     font-weight: 500;
-    color: #ae0b05;
+    color: $palette-red-4;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: map-get($color, fourth);
+        }
+    }
 }
 
 h2, .h2 {

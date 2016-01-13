@@ -52,6 +52,13 @@
 
         &:hover {
             color: $palette-red-4;
+
+            // Color theme styles
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    color: map-get($color, fourth);
+                }
+            }
         }
     }
 
@@ -88,6 +95,13 @@
 
     .current > a {
         color: $palette-red-4;
+
+        // Color theme styles
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, fourth);
+            }
+        }
     }
 
     .sub-menu .current > a::before {
@@ -99,6 +113,13 @@
         width: 8px;
         display: block;
         background-color: $palette-red-4;
+
+        // Color theme styles
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
+        }
     }
 
     // Sub menu

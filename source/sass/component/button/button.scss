@@ -82,9 +82,23 @@ input[type="button"].btn::-moz-focus-inner {
     color: #fff;
     border: none;
 
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, third);
+        }
+    }
+
     &:hover,
     &:focus {
         background-color: darken($palette-red-3, 3%);
+
+        // Color theme styles
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: darken(map-get($color, third), 3%);
+            }
+        }
     }
 }
 

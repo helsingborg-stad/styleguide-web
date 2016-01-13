@@ -165,6 +165,13 @@
 //
 .text-highlight {
     color: $palette-red-2;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            color: map-get($color, second);
+        }
+    }
 }
 
 //
