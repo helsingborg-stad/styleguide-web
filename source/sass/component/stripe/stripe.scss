@@ -1,7 +1,12 @@
 //
 // @name Stripe
-// @description The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it's only for demonstration purpose.
+// @description The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it's only for demonstration purpose. The default behaviour of the stripe is to inherit color from the currently active color theme.
 // @author Kristoffer Svanmark
+//
+// @state .stripe-red - Red stripe
+// @state .stripe-blue - Blue stripe
+// @state .stripe-green - Green stripe
+// @state .stripe-pruple - Purple stripe
 //
 // @page Stripe
 //
