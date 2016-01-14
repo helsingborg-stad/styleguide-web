@@ -9,34 +9,14 @@
 //
 // @markup
 // <ul class="image-gallery grid grid-gallery">
-//	<li class="grid-md-3" id="gallery-image-1">
-//		<a class="box box-index " href="#gallery-image-1">
+//	<li class="grid-md-3">
+//		<a class="box box-index lightbox-trigger" href="http:\/\/holder.ninja/2000x1000,,cb0050,fff.svg" data-caption="Caption text">
 //			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,cb0050,fff.svg"/>
 //		</a>
 //	</li>
-//	<li class="grid-md-3" id="gallery-image-1">
-//		<a class="box box-index " href="#gallery-image-1">
-//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,ec6701,fff.svg"/>
-//		</a>
-//	</li>
-//	<li class="grid-md-3">
-//		<a class="box box-index" href="#gallery-image-1" id="gallery-image-1">
-//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,ae0b05,fff.svg"/>
-//		</a>
-//	</li>
-//	<li class="grid-md-3">
-//		<a class="box box-index" href="#gallery-image-4" >
-//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,cb0050,fff.svg"/>
-//			<span id="gallery-image-4" class="popover" style="background-image: url('http:\/\/holder.ninja/200x150,,cb0050,fff.svg');"></span>
-//		</a>
-//	</li>
-//	<li class="grid-md-3" id="gallery-image-1">
-//		<a class="box box-index " href="#gallery-image-1">
-//			<img alt="Image alt text" src="http:\/\/holder.ninja/200x150,,e3000f,fff.svg"/>
-//		</a>
-//	</li>
-//</ul>
+// </ul>
 
+/* Gallery styling */ 
 .image-gallery {
 	list-style: none; 
 	padding: 0; 
@@ -56,19 +36,65 @@
 		z-index: $level-top; 
 		display: none; 
 		opacity: 0; 
+		img {
+			display: none;
+		}
 	}
-	
-	.popover:target {
-		@include cover(); 
-		opacity: 1; 
-		display: block;
-		background-position: center; 
-		background-repeat: no-repeat; 
-		background-size: auto 80%; 
-		background-color: rgba(0,0,0,.7); 
+}
+
+/* The lightbox */ 
+#lightbox-modal {
+	@include cover(); 
+	background: rgba(0,0,0,.7); 
+	z-index: $level-top; 
+	#lightbox-image-wrapper {
+		@include center();
+		max-width: 80%; 
+		max-height: 80%; 
+		line-height: 0; 
 		
-		.close {
-			
+		img {
+			max-width: 100%; 
+			max-height: 100%; 
+		} 
+		
+		//Caption 
+		&:after {
+			position: relative; 
+			content: attr(data-caption);  
+			line-height: $base-line-height; 
+			padding: $grid-gutter-sm; 
+			display: block; 
+			background-color: #fff; 
+		}
+		
+		.btn-close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 2em;
+			width: 2em;
+			margin: -1em;
+			line-height: 2em;
+			text-align: center;
+			padding: 0;
+			border-radius: 50%;
+			border: .2em solid #fff;
+			box-shadow: 0 1px 1px rgba(#000,.2);
+			background: $creamy;
+	
+			&:after {
+				@include cover();
+				content: "\00d7";
+				font-size: 1.5em;
+				line-height: 1;
+				color: #000;
+			}
+	
+			@media screen and #{$screen-xs} {
+				top: 50%;
+				right: 2em;
+			}
 		}
 	}
 }
