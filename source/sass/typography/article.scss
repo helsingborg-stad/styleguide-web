@@ -35,18 +35,21 @@ article {
 	ol + h5,
 	ol + h6,
 	ol + pre,
+	ol + p,
 	ul + h2,
 	ul + h3,
 	ul + h4,
 	ul + h5,
 	ul + h6,
 	ul + pre,
+	ul + p,
 	blockquote + h2,
 	blockquote + h3,
 	blockquote + h4,
 	blockquote + h5,
 	blockquote + h6,
 	blockquote + pre,
+	blockquote + p,
 	pre + p {
 		margin-top: 1em;
 	}
