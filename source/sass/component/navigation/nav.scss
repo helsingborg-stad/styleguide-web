@@ -49,6 +49,7 @@
         font-size: 1rem;
         color: $base-font-color;
         text-decoration: none;
+        position: relative;
 
         &:hover {
             color: $palette-red-4;
@@ -76,7 +77,8 @@
 
     // Indicates currently active menu item that has children
     .has-children.current,
-    .has-children.current-node {
+    .has-children.current-node,
+    .has-children.current-ancestor {
         > a::after {
             position: absolute;
             right: 12px;
