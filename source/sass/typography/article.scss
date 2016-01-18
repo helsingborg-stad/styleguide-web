@@ -16,6 +16,14 @@
 
 article {
 
+	h1:first-of-type {
+		margin-top: -0.25em;
+
+		img + & {
+			margin-top: 0;
+		}
+	}
+
 	strong,
 	b {
 		font-weight: bold;
