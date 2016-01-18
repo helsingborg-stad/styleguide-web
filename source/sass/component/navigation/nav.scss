@@ -49,6 +49,7 @@
         font-size: 1rem;
         color: $base-font-color;
         text-decoration: none;
+        position: relative;
 
         &:hover {
             color: $palette-red-4;
