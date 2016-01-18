@@ -77,7 +77,8 @@
 
     // Indicates currently active menu item that has children
     .has-children.current,
-    .has-children.current-node {
+    .has-children.current-node,
+    .has-children.current-ancestor {
         > a::after {
             position: absolute;
             right: 12px;
