@@ -8,8 +8,15 @@ HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
 HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 
     function ModalLimit() {
+    	
+    	//Click event
     	this.clickWatcher();
-    	this.togglePopupClass();
+    	
+    	//Popup hash changes 
+    	jQuery(window).bind('hashchange', function() {
+			this.togglePopupClass();
+		}.bind(this)).trigger('hashchange');
+
     }
 
     ModalLimit.prototype.clickWatcher = function () {
@@ -18,9 +25,14 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 
 			event.preventDefault();
 
+			//Get data 
 			var image_href 		= jQuery(this).attr("href");
 			var image_caption 	= jQuery(this).attr("data-caption");
 
+			//Update hash
+			window.location.hash = "lightbox-modal-open"; 
+
+			//Add markup, or update. 
 			if (jQuery('#lightbox-modal').length > 0) {
 				jQuery('#lightbox-modal-image').attr('src',image_href);
 				jQuery('#lightbox-modal').show();
@@ -40,14 +52,15 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 			
 		});
 	
-		jQuery(document).on('click', '#lightbox-modal', function() { 
+		jQuery(document).on('click', '#lightbox-modal', function() {
 			jQuery(this).hide();
 		});
          
     };
 
     ModalLimit.prototype.togglePopupClass = function(){
-	    if (window.location.hash.indexOf('gallery-') > 0 ) {
+	    console.log("test");
+	    if (window.location.hash.indexOf('lightbox-modal-open') > 0 ) {
 			$('html').addClass('gallery-hidden');
 		} else {
 			$('html').removeClass('gallery-hidden');

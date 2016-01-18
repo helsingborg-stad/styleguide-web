@@ -47,11 +47,42 @@
 	@include cover(); 
 	background: rgba(0,0,0,.7); 
 	z-index: $level-top; 
+	overflow: auto; 
+	
 	#lightbox-image-wrapper {
-		@include center();
+		position: relative; 
 		max-width: 80%; 
 		max-height: 80%; 
 		line-height: 0; 
+		margin: 5% auto; 
+		
+		@media screen and #{$screen-xs} {
+			width: 100%; 
+			height: auto; 
+			max-width: initial; 
+			max-height: initial; 
+		}
+		
+		@media screen and #{$screen-sm} {
+			width: 90%; 
+			height: auto; 
+			max-width: initial; 
+			max-height: initial; 
+		}
+		
+		@media screen and #{$screen-md} {
+			width: 80%; 
+			height: auto; 
+			max-width: initial; 
+			max-height: initial; 
+		}
+		
+		@media screen and #{$screen-lg} {
+			width: 70%; 
+			height: auto; 
+			max-width: initial; 
+			max-height: initial; 
+		}
 		
 		img {
 			max-width: 100%; 
@@ -92,9 +123,15 @@
 			}
 	
 			@media screen and #{$screen-xs} {
-				top: 50%;
-				right: 2em;
+				top: 1.5em;
+				right: 1.5em;
+				width: 1.8em; 
+				height: 1.8em; 
+				font-size: .8em; 
+				line-height: .8em; 
 			}
 		}
 	}
 }
+
+
