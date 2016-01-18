@@ -55,89 +55,89 @@
 }
 
 .link-item-pdf,
-.link-item[href*=".pdf"] {
+.link-item[href$=".pdf"] {
     &::before {
         @include hbg-icon($icon-pdf);
     }
 }
 
 .link-item-doc,
-.link-item[href*=".doc"],
-.link-item[href*=".docx"] {
+.link-item[href$=".doc"],
+.link-item[href$=".docx"] {
     &::before {
         @include hbg-icon($icon-word);
     }
 }
 
 .link-item-ppt,
-.link-item[href*=".ppt"],
-.link-item[href*=".pptx"] {
+.link-item[href$=".ppt"],
+.link-item[href$=".pptx"] {
     &::before {
         @include hbg-icon($icon-powerpoint);
     }
 }
 
 .link-item-xls,
-.link-item[href*=".xls"],
-.link-item[href*=".xlsx"] {
+.link-item[href$=".xls"],
+.link-item[href$=".xlsx"] {
     &::before {
         @include hbg-icon($icon-excel);
     }
 }
 
 .link-item-audio,
-.link-item[href*=".mp3"],
-.link-item[href*=".wav"] {
+.link-item[href$=".mp3"],
+.link-item[href$=".wav"] {
     &::before {
         @include hbg-icon($icon-audio);
     }
 }
 
 .link-item-archive,
-.link-item[href*=".zip"],
-.link-item[href*=".rar"],
-.link-item[href*=".tar"] {
+.link-item[href$=".zip"],
+.link-item[href$=".rar"],
+.link-item[href$=".tar"] {
     &::before {
         @include hbg-icon($icon-archive);
     }
 }
 
 .link-item-image,
-.link-item[href*=".jpg"],
-.link-item[href*=".png"],
-.link-item[href*=".gif"],
-.link-item[href*=".jpeg"],
-.link-item[href*=".bmp"],
-.link-item[href*=".svg"],
-.link-item[href*=".eps"] {
+.link-item[href$=".jpg"],
+.link-item[href$=".png"],
+.link-item[href$=".gif"],
+.link-item[href$=".jpeg"],
+.link-item[href$=".bmp"],
+.link-item[href$=".svg"],
+.link-item[href$=".eps"] {
     &::before {
         @include hbg-icon($icon-image);
     }
 }
 
 .link-item-text,
-.link-item[href*=".txt"],
-.link-item[href*=".md"],
-.link-item[href*=".mkdown"],
-.link-item[href*=".markdown"] {
+.link-item[href$=".txt"],
+.link-item[href$=".md"],
+.link-item[href$=".mkdown"],
+.link-item[href$=".markdown"] {
     &::before {
         @include hbg-icon($icon-text);
     }
 }
 
 .link-item-video,
-.link-item[href*=".mpg"],
-.link-item[href*=".m4v"],
-.link-item[href*=".mpeg"],
-.link-item[href*=".mov"],
-.link-item[href*=".avi"],
-.link-item[href*=".mp4"],
-.link-item[href*=".ogg"],
-.link-item[href*=".ogv"],
-.link-item[href*=".webm"],
-.link-item[href*=".mkv"],
-.link-item[href*=".flv"],
-.link-item[href*=".wmw"], {
+.link-item[href$=".mpg"],
+.link-item[href$=".m4v"],
+.link-item[href$=".mpeg"],
+.link-item[href$=".mov"],
+.link-item[href$=".avi"],
+.link-item[href$=".mp4"],
+.link-item[href$=".ogg"],
+.link-item[href$=".ogv"],
+.link-item[href$=".webm"],
+.link-item[href$=".mkv"],
+.link-item[href$=".flv"],
+.link-item[href$=".wmw"], {
     &::before {
         @include hbg-icon($icon-video);
     }
