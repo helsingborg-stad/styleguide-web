@@ -47,6 +47,27 @@
         }
     }
 
+    .current_page_item a,
+    .current-page-ancestor a {
+        position: relative;
+        text-decoration: underline;
+
+        &::after {
+            bottom: 0;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 10px;
+            margin-left: -15px;
+        }
+    }
+
     .nav.nav-justify li {
         padding-right: 20px;
 
