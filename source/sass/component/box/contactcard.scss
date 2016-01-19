@@ -1,6 +1,6 @@
 //
 // @name Contact Card
-// @description View of a users contactcard. 
+// @description View of a persons contactcard. Use buttons to link to profiles etc. 
 //
 // @page Boxes/Contact
 //
@@ -10,11 +10,27 @@
 // <div class="grid">
 //     <div class="grid-md-4">
 //         <span class="box box-card">
-//             <img class="box-image" src="http:\/\/www.helsingborg.se/wp-content/uploads/2015/11/langeleveprylen_byra_420x280_nsr.jpg">
+//             <img class="box-image" src="http:\/\/holder.ninja/267x267,,cb0050,fff.svg">
 //             <div class="box-content">
 //                 <h5>Nils Nilsson</h5>
 //                 <ul>
-//						<li class="work-title">Processledare</li>
+//						<li class="card-title">Processledare</li>
+//						<li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
+//						<li><a class="link-item" href="mailto:nils.nilsson@helsingborg.se">nils.nilsson@helsingborg.se</a></li>
+//						<li class="small description">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</li>
+//				   </ul>
+//             </div>
+//         </span>
+//     </div>
+// </div>
+// <div class="grid">
+//	   <div class="grid-md-12">
+//         <span class="box box-card vertical-card">
+//             <img class="box-image" src="http:\/\/holder.ninja/180x160,,cb0050,fff.svg">
+//             <div class="box-content">
+//                 <h5>Nilselina Nilsson</h5>
+//                 <ul>
+//						<li class="card-title">Processledare</li>
 //						<li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
 //						<li><a class="link-item" href="mailto:nils.nilsson@helsingborg.se">nils.nilsson@helsingborg.se</a></li>
 //						<li class="small description">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</li>
@@ -34,9 +50,31 @@
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0; 
 	}
+	
+	.card-title {
+		margin-bottom: $grid-gutter-sm; 
+	}
+	
+	.description {
+		margin-top: $grid-gutter-sm; 
+	}
 
     &:hover {
         text-decoration: none;
         background-color: $creamy;
+    }
+    
+    &.vertical-card {
+	    overflow: hidden; 
+	    
+	    .box-image {
+		    float: left; 
+		    width: 20%; 
+	    }
+	    
+	    .box-content {
+		    margin-left: 20%; 
+	    }
+	    
     }
 }
