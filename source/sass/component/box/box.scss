@@ -1,6 +1,7 @@
 .box {
     display: block;
     padding: $content-gutter / 3;
+    margin-bottom: $content-gutter;
 
     p + p {
         margin-top: $content-gutter/1.5;
@@ -8,6 +9,7 @@
 }
 
 .box + .box {
+    margin-bottom: 0;
     margin-top: $content-gutter;
 }
 
