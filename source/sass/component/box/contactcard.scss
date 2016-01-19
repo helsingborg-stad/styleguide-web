@@ -1,0 +1,41 @@
+//
+// @name Contact Card
+// @description View of a users contactcard. 
+//
+// @page Boxes/Contact
+//
+// @markup
+// <div class="grid">
+//     <div class="grid-md-4">
+//         <span class="box box-card">
+//             <img class="box-image" src="http:\/\/www.helsingborg.se/wp-content/uploads/2015/01/Bibliotek_610x250.jpg">
+//             <div class="box-content">
+//                 <h5 class="box-index-title link-item">Nils Nilsson</h5>
+//                 <ul>
+//						<li class="strong">Processledare</li>
+//						<li><a href="tel:+4673000000">073 00 00 00</a></li>
+//						<li><a href="mailto:nils.nilsson@helsingborg.se">nils.nilsson@helsingborg.se</a></li>
+//						<li class="small">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</li>
+//				   </ul>
+//             </div>
+//         </span>
+//     </div>
+// </div>
+//
+
+.box-card {
+    display: block;
+    background-color: #fff;
+    border: 1px solid $creamy-darker;
+    color: $base-font-color;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $creamy;
+    }
+}
+
+.box-index-title {
+    @extend .text-highlight;
+    line-height: 1em;
+}
