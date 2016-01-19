@@ -1,14 +1,14 @@
 //
 // @name EqualHeight
-// @description  Sets element heights equally to the heighest value.
+// @description  Sets element heights equally to the heighest item
 //
 // @markup
-// <div class="grid">
-//     <div class="grid-md-6">
-//         Hej<br>på<br>dig
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
 //     </div>
-//     <div class="grid-md-6">
-//         Hej<br>på<br>dig
+//     <div class="grid-md-6" data-equal-item>
+//
 //     </div>
 // </div>
 //
@@ -20,12 +20,63 @@ HelsingborgPrime.Helpers.EqualHeight = (function ($) {
     function EqualHeight() {
         $(function(){
 
+            this.init();
+
+            $(window).on('resize', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+
         }.bind(this));
     }
 
-    EqualHeight.prototype.init = function (el) {
-        $('[data-equal-container]').each(function (e) {
+    /**
+     * Resets heights to auto
+     * @return {void}
+     */
+    EqualHeight.prototype.destroy = function () {
+        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
+            $(element).css('height', 'auto');
+        }.bind(this));
+    };
 
+    /**
+     * Intializes equal height
+     * @return {void}
+     */
+    EqualHeight.prototype.init = function () {
+        $('[data-equal-container]').each(function (index, element) {
+            var maxHeight = this.getMaxHeight(element);
+            this.equalize(element, maxHeight);
+        }.bind(this));
+    };
+
+    /**
+     * Get the max height of the items
+     * @param  {string} el The parent element
+     * @return {integer}   The max height in pixels
+     */
+    EqualHeight.prototype.getMaxHeight = function (el) {
+        var heights = [];
+
+        $(el).find('[data-equal-item]').each(function (index, element) {
+            heights.push($(element).outerHeight());
+        }.bind(this));
+
+        var maxHeight = Math.max.apply(null, heights);
+
+        return maxHeight;
+    };
+
+    /**
+     * Set the heights of all items to the max height
+     * @param  {string}  parent    The parent element
+     * @param  {integer} maxHeight The max height
+     * @return {void}
+     */
+    EqualHeight.prototype.equalize = function(parent, maxHeight) {
+        $(parent).find('[data-equal-item]').each(function (index, element) {
+            $(element).css('height', maxHeight + 'px');
         }.bind(this));
     };
 
