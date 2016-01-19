@@ -175,6 +175,22 @@
 }
 
 //
+// @name Text color
+// @description Modifiers to set the text color
+//
+// @page Typography/Text color
+//
+// @state .text-dark-gray - Dark gray text color
+//
+// @markup
+// <span class="text-dark-gray">Dark gray</span>
+//
+
+.text-dark-gray {
+    color: $gray-dark;
+}
+
+//
 // @name Underline
 // @description Underlines text.
 //
