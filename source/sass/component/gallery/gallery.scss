@@ -42,8 +42,13 @@
 	}
 }
 
+/* Gallery overflow */ 
+.gallery-hidden {
+	overflow: hidden; 
+}
+
 /* The lightbox */ 
-#lightbox-modal {
+#lightbox {
 	@include cover(); 
 	background: rgba(0,0,0,.7); 
 	z-index: $level-top; 

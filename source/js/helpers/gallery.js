@@ -30,19 +30,19 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 			var image_caption 	= jQuery(this).attr("data-caption");
 
 			//Update hash
-			window.location.hash = "lightbox-modal-open"; 
+			window.location.hash = "lightbox-open"; 
 
 			//Add markup, or update. 
-			if (jQuery('#lightbox-modal').length > 0) {
-				jQuery('#lightbox-modal-image').attr('src',image_href);
-				jQuery('#lightbox-modal').show();
+			if (jQuery('#lightbox').length > 0) {
+				jQuery('#lightbox-image').attr('src',image_href);
+				jQuery('#lightbox').show(0);
 			} else {
 				
 				var lightbox = 
-				'<div id="lightbox-modal">' +
+				'<div id="lightbox">' +
 					'<div id="lightbox-image-wrapper" data-caption="' + image_caption + '">' +
-						'<a class="btn-close" href="#lightbox-modal-close"></a>' +
-						'<img id="lightbox-modal-image" src="' + image_href +'" />' +
+						'<a class="btn-close" href="#lightbox-close"></a>' +
+						'<img id="lightbox-image" src="' + image_href +'" />' +
 					'</div>' +
 				'</div>';
 					
@@ -50,20 +50,24 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 				
 			}
 			
+			//State 
+			HelsingborgPrime.Helpers.GalleryPopup.togglePopupClass(); 
+			
 		});
 	
-		jQuery(document).on('click', '#lightbox-modal', function() {
+		jQuery(document).on('click', '#lightbox', function() {
 			jQuery(this).hide();
+			window.location.hash = "lightbox-closed"; 
+			HelsingborgPrime.Helpers.GalleryPopup.togglePopupClass(); 
 		});
          
     };
 
     ModalLimit.prototype.togglePopupClass = function(){
-	    console.log("test");
-	    if (window.location.hash.indexOf('lightbox-modal-open') > 0 ) {
-			$('html').addClass('gallery-hidden');
+	    if (window.location.hash.replace("-","") == "#lightbox-open".replace("-","")) {
+			jQuery('html').addClass('gallery-hidden');
 		} else {
-			$('html').removeClass('gallery-hidden');
+			jQuery('html').removeClass('gallery-hidden');
 		}
     };
 
