@@ -13,7 +13,7 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
     	this.clickWatcher();
     	
     	//Popup hash changes 
-    	jQuery(window).bind('hashchange', function() {
+    	$(window).bind('hashchange', function() {
 			this.togglePopupClass();
 		}.bind(this)).trigger('hashchange');
 
@@ -21,21 +21,21 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 
     ModalLimit.prototype.clickWatcher = function () {
 	    
-	    jQuery('.lightbox-trigger').click(function(event) {
+	    $('.lightbox-trigger').click(function(event) {
 
 			event.preventDefault();
 
 			//Get data 
-			var image_href 		= jQuery(this).attr("href");
-			var image_caption 	= jQuery(this).attr("data-caption");
+			var image_href 		= $(this).attr("href");
+			var image_caption 	= $(this).attr("data-caption");
 
 			//Update hash
 			window.location.hash = "lightbox-open"; 
 
 			//Add markup, or update. 
-			if (jQuery('#lightbox').length > 0) {
-				jQuery('#lightbox-image').attr('src',image_href);
-				jQuery('#lightbox').show(0);
+			if ($('#lightbox').length > 0) {
+				$('#lightbox-image').attr('src',image_href);
+				$('#lightbox').show(0);
 			} else {
 				
 				var lightbox = 
@@ -46,7 +46,7 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 					'</div>' +
 				'</div>';
 					
-				jQuery('body').append(lightbox);
+				$('body').append(lightbox);
 				
 			}
 			
@@ -55,8 +55,8 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 			
 		});
 	
-		jQuery(document).on('click', '#lightbox', function() {
-			jQuery(this).hide();
+		$(document).on('click', '#lightbox', function() {
+			$(this).hide();
 			window.location.hash = "lightbox-closed"; 
 			HelsingborgPrime.Helpers.GalleryPopup.togglePopupClass(); 
 		});
@@ -65,12 +65,12 @@ HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
 
     ModalLimit.prototype.togglePopupClass = function(){
 	    if (window.location.hash.replace("-","") == "#lightbox-open".replace("-","")) {
-			jQuery('html').addClass('gallery-hidden');
+			$('html').addClass('gallery-hidden');
 		} else {
-			jQuery('html').removeClass('gallery-hidden');
+			$('html').removeClass('gallery-hidden');
 		}
     };
 
     return new ModalLimit();
 
-})(jQuery);
+})($);
