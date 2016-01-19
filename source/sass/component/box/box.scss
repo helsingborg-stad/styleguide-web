@@ -6,6 +6,10 @@
     p + p {
         margin-top: $content-gutter/1.5;
     }
+
+    li .date {
+        margin-top: 3px;
+    }
 }
 
 .box + .box {
