@@ -51,6 +51,13 @@
 		padding-bottom: 0; 
 	}
 	
+	ul li:not(.description),
+	ul li:not(.description) a {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
 	.card-title {
 		margin-bottom: $grid-gutter-sm; 
 	}
@@ -69,12 +76,29 @@
 	    
 	    .box-image {
 		    float: left; 
-		    width: 20%; 
+		    width: 180px; 
 	    }
 	    
-	    .box-content {
-		    margin-left: 20%; 
-	    }
+	    @media screen and #{$screen-md-up} { 
 	    
+		    .box-content {
+			    margin-left: 180px; 
+			    
+			    ul, h1, h2, h3, h4, h5, h6 {
+				    padding-left: $grid-gutter-sm; 
+			    }
+		    }
+	   	   
+		}
+	    
+    }
+    
+    @media screen and #{$screen-below-md} { 
+    	.box-image {
+	    	display: none; 
+    	}
+    	.box-content {
+	    	margin-left: 0; 
+    	}
     }
 }
