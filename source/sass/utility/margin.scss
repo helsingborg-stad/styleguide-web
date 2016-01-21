@@ -30,16 +30,21 @@
 // @name Gutter
 // @description Gutters any element.
 //
+// @page Utilities/Gutter
+//
 // @state .gutter - Standard gutter
 // @state .gutter-sm - Smaller gutter
 // @state .gutter-lg - Larger gutter
 // @state .gutter-xl - Extra large gutter
+// @state .gutter-top - Only gutter top
+// @state .gutter-bottom - Only gutter bottom
+// @state .gutter-left - Only gutter left
+// @state .gutter-right - Only gutter right
 //
 // @state .gutter-margin - Add gutter as margin instead of padding
 // @state .gutter-vertical - Only vertical gutter
 // @state .gutter-horizontal - Only horizontal gutter
 //
-// @page Utilities/Gutter
 //
 
 .gutter:not(.gutter-margin) {

@@ -1,0 +1,81 @@
+//
+// @name Notice
+// @description Notice to inform or warn the user.
+//
+// @page Notice/Notice
+//
+// @state .notice-lg - Larger notice
+// @state .notice-sm - Smaller notice
+// @state .notice-fullwidth - Used when filling window width to hide left and right borders
+// @state .warning - Yellow warning color
+// @state .danger - Red danger color
+// @state .info - Blue info color
+//
+// @markup
+// <div class="notice success">
+//      <i class="fa fa-check"></i> Thank you for participating.
+// </div>
+// <div class="notice warning">
+//      <i class="fa fa-warning"></i> Attention! Heavy rain coming in.
+// </div>
+// <div class="notice danger">
+//      <i class="fa fa-ban"></i> You need to fill in all required fields.
+// </div>
+// <div class="notice info">
+//      <i class="fa fa-ban"></i> Please accept our cookie policy.
+// </div>
+//
+
+.notice {
+    display: block;
+    padding: .5em .8em;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    font-weight: bold;
+
+    .fa {
+        display: inline-block;
+        margin-right: .3em;
+    }
+
+    & + .notice {
+        margin-top: $content-gutter;
+    }
+}
+
+.notice-lg {
+    font-size: 1.2em;
+}
+
+.notice-sm {
+    font-size: .9em;
+}
+
+.notice-fullwidth {
+    border-left: 0;
+    border-right: 0;
+}
+
+.notice.success {
+    background-color: $success-bg;
+    color: $success-text;
+    border-color: darken($success-bg, 5%);
+}
+
+.notice.warning {
+    background-color: $warning-bg;
+    color: $warning-text;
+    border-color: darken($warning-bg, 5%);
+}
+
+.notice.danger {
+    background-color: $danger-bg;
+    color: $danger-text;
+    border-color: darken($danger-bg, 8%);
+}
+
+.notice.info {
+    background-color: $info-bg;
+    color: $info-text;
+    border-color: darken($info-bg, 40%);
+}

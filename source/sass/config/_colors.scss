@@ -47,8 +47,27 @@ $gray-dark: #464646;
 $gray: #979797;
 $gray-light: #7f7f7f;
 
+// ***************************************************************
+// *** Mark
+// ***************************************************************
 $mark-yellow: rgba($palette-red-1, .5);
 $mark-blue: rgba($palette-blue-1, .5);
 $mark-green: rgba($palette-green-1, .5);
 $mark-red: rgba($palette-red-4, .5);
 $mark-purple: rgba($palette-purple-1, .5);
+
+// ***************************************************************
+// *** Warning
+// ***************************************************************
+$warning-bg: #FFD700;
+$warning-text: #262604;
+
+$success-bg: $palette-green-2;
+$success-text: #fff;
+
+$danger-bg: $palette-red-5;
+$danger-text: #fff;
+
+$info-bg: #b1f5ff;
+$info-text: darken($info-bg, 70%);
+
