@@ -1,0 +1,62 @@
+//
+// @name Search results
+// @description A list of search results.
+//
+// @page Search/Search results
+//
+// @markup
+// <ul class="search-result-list">
+//     <li>
+//         <div class="search-result-item">
+//             <span class="search-result-date">13 jan 2016</span>
+//             <h3><a href="#" class="link-item">Förskola | Helsingborg</a></h3>
+//             <p>Dina barn kan ta del av förskoleverksamheten (innan förskolan blev egen skolform kallades den ”dagis”) från det att de är 1 år gamla fram tills ...</p>
+//             <div class="search-result-info">
+//                 <span class="search-result-url"><i class="fa fa-globe"></i> <a href="#">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>
+//             </div>
+//         </div>
+//     </li>
+//     <li>
+//         <div class="search-result-item">
+//             <span class="search-result-date">13 jan 2016</span>
+//             <h3><a href="#" class="link-item">Förskola | Helsingborg</a></h3>
+//             <p>Dina barn kan ta del av förskoleverksamheten (innan förskolan blev egen skolform kallades den ”dagis”) från det att de är 1 år gamla fram tills ...</p>
+//             <div class="search-result-info">
+//                 <span class="search-result-url"><i class="fa fa-globe"></i> <a href="#">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>
+//             </div>
+//         </div>
+//     </li>
+// </ul>
+//
+
+.search-result-list {
+    li + li {
+        margin-top: $content-gutter * 1.5;
+        padding-top: $content-gutter * 1.5;
+        border-top: 1px solid $creamy-darker;
+    }
+}
+
+.search-result-item {
+    max-width: 700px;
+}
+
+.search-result-date {
+    font-size: .9em;
+}
+
+.search-result-info {
+    margin-top: 5px;
+}
+
+.search-result-url {
+    font-size: .9em;
+
+    .fa {
+        color: $gray-dark;
+    }
+
+    a {
+        color: $gray;
+    }
+}

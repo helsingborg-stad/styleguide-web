@@ -1,45 +1,81 @@
+//
+// @name Pagination
+// @description Standard pagination.
+//
+// @page Navigation/Pagination
+//
+// @state .current - The currently active page number
+//
+// @markup
+// <ul class="pagination">
+//     <li><a class="previous" href="#">&laquo; Previous</a></li>
+//     <li><a class="page" href="#">1</a></li>
+//     <li class="ellipsis"></li>
+//     <li><a class="page" href="#">2</a></li>
+//     <li><a class="page current" href="#">3</a></li>
+//     <li><a class="page" href="#">4</a></li>
+//     <li class="ellipsis"></li>
+//     <li><a class="page" href="#">15</a></li>
+//     <li><a class="next" href="#">Next &raquo;</a></li>
+// </ul>
+//
 
-	ul.paginated-items {
-		
-		display: block; 
-		list-style: none; 
-		text-align: center; 
-		list-style: none; 
-		padding: 0; 
-		
-		> li {
-	        padding: 0 10px;
-	        display: inline-block;
-	        
-	        a {
-	            @include nice-text();
-	            @include font-heading(); 
-	            @include transition(background 300ms, color 400ms, border 400ms); 
-	            color: $dark-gray; 
-	            padding: 10px 0;
-	            font-size: 17px;
-	            display: block; 
-	            
-	            border: 2px solid $dark-gray; 
-	            padding: 4px 18px;
-	            
-	            padding-left: 13px; 
-	            padding-right: 13px; 
-	        }
+.pagination {
+	$page-size: 30px;
+	font-size: 0;
 
-			&.cat-item-none {
-				display: none !important; 
-			}
-			
-	    }
-	    
-	    a:hover,
-		li.active a {
-            background: $brand;
-            border-color: $brand;
-            color: $white;
-            text-decoration: none; 
+	li {
+		display: inline-block;
+		font-size: $base-font-size;
+
+		& + li {
+			margin-left: 5px;
 		}
-		
 	}
-	
+
+	a.page,
+	a.next,
+	a.previous {
+		display: block;
+		border: 1px solid $creamy-darker;
+		font-size: .85em;
+		text-align: center;
+		color: $gray-dark;
+		padding-left: 8px;
+		padding-right: 8px;
+
+		height: $page-size;
+		line-height: $page-size;
+
+		&:hover,
+		&:focus,
+		&.current {
+			background-color: $palette-red-2;
+			border-color: $palette-red-2;
+			color: #fff;
+			text-decoration: none;
+
+			@each $theme, $color in $themes {
+		        .theme-#{$theme} & {
+		            background-color: map-get($color, second);
+		            border-color: map-get($color, second);
+		            color: #fff;
+		        }
+		    }
+		}
+	}
+
+	a.page {
+		width: $page-size;
+		height: $page-size;
+		line-height: $page-size;
+		padding: 0;
+	}
+
+	.ellipsis {
+		&:after {
+			content: "…";
+			display: inline-block;
+		}
+	}
+}
