@@ -14,7 +14,7 @@ a {
     }
 }
 
-article a {
+[class*="theme-"] article a {
     color: $palette-blue-2;
     text-decoration: underline;
 
