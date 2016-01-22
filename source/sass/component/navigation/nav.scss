@@ -90,8 +90,8 @@
     }
 
     // Current
-    .current,
-    .current-node {
+
+    .current {
         background-color: $creamy;
     }
 
@@ -126,7 +126,6 @@
 
     // Sub menu
     .sub-menu {
-        background-color: $creamy;
         border-top: 1px solid $creamy-darker;
         border-left: 8px solid $creamy-darker;
     }
