@@ -30,6 +30,10 @@
     }
 }
 
+a.box-index {
+    color: $base-font-color;
+}
+
 .box-index-title {
     @extend .text-highlight;
     line-height: 1em;
