@@ -5,6 +5,8 @@
 //
 // @page Special/Slider
 //
+// @state .slider-nav-hover - Only show slider nav buttons on slider hover
+//
 // @markup
 // <div class="slider">
 //     <ul>
@@ -85,5 +87,17 @@
 
     .content {
         transform: translateY(-32%) !important;
+    }
+}
+
+.slider-nav-hover {
+    [class*="slider-nav-"] {
+        display: none;
+    }
+
+    &:hover {
+        [class*="slider-nav-"] {
+            display: block;
+        }
     }
 }
