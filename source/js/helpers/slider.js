@@ -44,6 +44,8 @@ HelsingborgPrime.Helpers.Slider = (function ($) {
         var next = current.next('li').length ? current.next('li') : $(slider).find('li:first');
 
         $(slider).find('li').removeClass('slider-out');
+        $(slider).removeClass('slider-previous slider-next').addClass('slider-next');
+
         current.removeClass('current slider-in').addClass('slider-out');
         next.addClass('current slider-in');
     };
@@ -58,6 +60,8 @@ HelsingborgPrime.Helpers.Slider = (function ($) {
         var prev = current.prev('li').length ? current.prev('li') : $(slider).find('li:last');
 
         $(slider).find('li').removeClass('slider-out');
+        $(slider).removeClass('slider-previous slider-next').addClass('slider-previous');
+
         current.removeClass('current slider-in').addClass('slider-out');
         prev.addClass('current slider-in');
     };
