@@ -26,6 +26,7 @@
 @import 'utility/creamy';
 @import 'utility/visibility';
 @import 'utility/accessibility';
+@import 'utility/aspect-ratio';
 
 // ***************************************************************
 // *** Layout
@@ -55,6 +56,8 @@
 // ***************************************************************
 @import 'component/code/code';
 @import 'component/button/button';
+
+@import 'component/header/casual';
 
 @import 'component/hero/hero';
 

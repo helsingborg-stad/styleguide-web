@@ -36,6 +36,27 @@
         }
     }
 
+    &.navbar-transparent {
+        background-color: none;
+        background-color: transparent;
+    }
+
+    &.navbar-fixed {
+        position: fixed;
+        z-index: $level-8;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &.navbar-absolute {
+        position: absolute;
+        z-index: $level-8;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
     ul a {
         display: block;
         padding: 16px 0;
