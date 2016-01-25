@@ -30,7 +30,7 @@ HelsingborgPrime.Helpers.Slider = (function ($) {
      */
     Slider.prototype.addNavigationButtons = function (slider) {
         if ($(slider).find('li').length > 1) {
-            $(slider).append('<button data-slider="prev">Previous</button><button data-slider="next">Next</button>');
+            $(slider).append('<button class="slider-nav-previous"><i class="fa fa-arrow-circle-left"></i> Previous</button><button class="slider-nav-next">Next <i class="fa fa-arrow-circle-right"></i></button>');
         }
     };
 
@@ -77,12 +77,12 @@ HelsingborgPrime.Helpers.Slider = (function ($) {
 
     Slider.prototype.bindEvents = function () {
         // Next button
-        $('[data-slider="next"]').on('click', function (e) {
+        $('.slider-nav-next').on('click', function (e) {
             this.goNext($(e.target).parents('.slider'));
         }.bind(this));
 
         // Prev button
-        $('[data-slider="prev"]').on('click', function (e) {
+        $('.slider-nav-previous').on('click', function (e) {
             this.goPrev($(e.target).parents('.slider'));
         }.bind(this));
     };
