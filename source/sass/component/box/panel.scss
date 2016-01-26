@@ -70,7 +70,7 @@
     .box-title {
         padding: $cell-padding;
         margin: 0;
-        background-color: $palette-red-4;
+        background-color: $palette-gray-4;
         color: #fff;
 
         // Color theme styles
@@ -111,7 +111,7 @@
         padding: ($content-gutter/1.5 - 1.5) ($content-gutter - 1.5);
         padding-left: 0;
         background-color: transparent !important;
-        border-bottom: 3px solid $palette-red-2;
+        border-bottom: 3px solid $palette-gray-2;
         color: $palette-red-2;
 
         // Color theme styles

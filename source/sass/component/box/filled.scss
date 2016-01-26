@@ -20,7 +20,7 @@
 //
 
 .box-filled {
-    background-color: $palette-red-2;
+    background-color: $palette-gray-2;
     color: #fff;
 
     // Color theme styles
@@ -33,25 +33,60 @@
 
 .box-filled-1 {
     @extend .box-filled;
-    background-color: $palette-red-1;
+    background-color: $palette-gray-1;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, first);
+        }
+    }
 }
 
 .box-filled-2 {
     @extend .box-filled;
-    background-color: $palette-red-2;
+    background-color: $palette-gray-2;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, second);
+        }
+    }
 }
 
 .box-filled-3 {
     @extend .box-filled;
-    background-color: $palette-red-3;
+    background-color: $palette-gray-3;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, third);
+        }
+    }
 }
 
 .box-filled-4 {
     @extend .box-filled;
-    background-color: $palette-red-4;
+    background-color: $palette-gray-4;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, fourth);
+        }
+    }
 }
 
 .box-filled-4 {
     @extend .box-filled;
-    background-color: $palette-red-4;
+    background-color: $palette-gray-5;
+
+    // Color theme styles
+    @each $theme, $color in $themes {
+        .theme-#{$theme} & {
+            background-color: map-get($color, fifth);
+        }
+    }
 }

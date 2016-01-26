@@ -194,7 +194,7 @@
 /* Modifiers - color */
 
 .modal-backdrop-1 .backdrop {
-    background-color: rgba($palette-red-1,.9);
+    background-color: rgba($palette-gray-1,.9);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -205,7 +205,7 @@
 }
 
 .modal-backdrop-1 .btn-close:after {
-    color: darken($palette-red-1, 10%);
+    color: darken($palette-gray-1, 10%);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -216,7 +216,7 @@
 }
 
 .modal-backdrop-2 .backdrop  {
-    background-color: rgba($palette-red-2,.9);
+    background-color: rgba($palette-gray-2,.9);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -227,7 +227,7 @@
 }
 
 .modal-backdrop-2 .btn-close:after {
-    color: darken($palette-red-2, 10%);
+    color: darken($palette-gray-2, 10%);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -238,7 +238,7 @@
 }
 
 .modal-backdrop-3 .backdrop  {
-    background-color: rgba($palette-red-3,.9);
+    background-color: rgba($palette-gray-3,.9);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -249,7 +249,7 @@
 }
 
 .modal-backdrop-3 .btn-close:after {
-    color: darken($palette-red-3, 10%);
+    color: darken($palette-gray-3, 10%);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -260,7 +260,7 @@
 }
 
 .modal-backdrop-4 .backdrop  {
-    background-color: rgba($palette-red-4,.9);
+    background-color: rgba($palette-gray-4,.9);
 
     // Color theme styles
     @each $theme, $color in $themes {
@@ -271,7 +271,7 @@
 }
 
 .modal-backdrop-4 .btn-close:after {
-    color: darken($palette-red-4, 10%);
+    color: darken($palette-gray-4, 10%);
 
     // Color theme styles
     @each $theme, $color in $themes {

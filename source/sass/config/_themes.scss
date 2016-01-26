@@ -1,33 +1,41 @@
 $themes: (
+    gray: (
+        first: $palette-gray-1,
+        second: $palette-gray-2,
+        third: $palette-gray-3,
+        fourth: $palette-gray-4,
+        fifth: $palette-gray-5
+    ),
+
     red: (
-        first: #f7a600,
-        second: #cb0050,
-        third: #ec6701,
-        fourth: #ae0b05,
-        fifth: #e3000f
+        first: $palette-red-1,
+        second: $palette-red-2,
+        third: $palette-red-3,
+        fourth: $palette-red-4,
+        fifth: $palette-red-5
     ),
 
     blue: (
-        first: #4db4e7,
-        second: #0069b4,
-        third: #5ba1d8,
-        fourth: #005c86,
-        fifth: #0095db
+        first: $palette-blue-1,
+        second: $palette-blue-2,
+        third: $palette-blue-3,
+        fourth: $palette-blue-4,
+        fifth: $palette-blue-5
     ),
 
     green: (
-        first: #afca05,
-        second: #11a636,
-        third: #a0c855,
-        fourth: #50811b,
-        fifth: #76b828
+        first: $palette-green-1,
+        second: $palette-green-2,
+        third: $palette-green-3,
+        fourth: $palette-green-4,
+        fifth: $palette-green-5
     ),
 
     purple: (
-        first: #d35098,
-        second: #712082,
-        third: #a84c98,
-        fourth: #7b075e,
-        fifth: #a61380
+        first: $palette-purple-1,
+        second: $palette-purple-2,
+        third: $palette-purple-3,
+        fourth: $palette-purple-4,
+        fifth: $palette-purple-5
     )
 );

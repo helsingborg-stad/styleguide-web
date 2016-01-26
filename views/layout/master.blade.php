@@ -64,7 +64,8 @@
                             <span class="dropdown">
                                 <span class="btn btn-primary dropdown-toggle">Change theme</span>
                                 <ul class="dropdown-menu">
-                                    <li><a href="?theme=red">Red (default)</a></li>
+                                    <li><a href="?theme=gray">Gray (default)</a></li>
+                                    <li><a href="?theme=red">Red</a></li>
                                     <li><a href="?theme=blue">Blue</a></li>
                                     <li><a href="?theme=green">Green</a></li>
                                     <li><a href="?theme=purple">Purple</a></li>

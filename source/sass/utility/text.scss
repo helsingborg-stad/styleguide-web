@@ -164,7 +164,7 @@
 // <span class="text-highlight">Highlighted</span>
 //
 .text-highlight {
-    color: $palette-red-2;
+    color: $palette-gray-2;
 
     // Color theme styles
     @each $theme, $color in $themes {

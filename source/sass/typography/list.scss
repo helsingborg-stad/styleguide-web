@@ -31,7 +31,14 @@ article ul,
             content: '';
             width: 6px;
             height: 6px;
-            background-color: $palette-red-3;
+            background-color: $palette-gray-3;
+
+            // Color theme styles
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, third);
+                }
+            }
         }
     }
 }
