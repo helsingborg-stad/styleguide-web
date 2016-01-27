@@ -1,23 +1,23 @@
 //
 // @name Contact Card
-// @description View of a persons contactcard. Use buttons to link to profiles etc. 
+// @description View of a persons contactcard. Use buttons to link to profiles etc.
 //
 // @page Boxes/Contact
 //
-// @state .vertical-card - Show description on the right hand side in desktop (identical to mobile).  
+// @state .vertical-card - Show description on the right hand side in desktop (identical to mobile).
 //
 // @markup
 // <div class="grid">
 //     <div class="grid-md-4">
 //         <span class="box box-card">
-//             <img class="box-image" src="http:\/\/holder.ninja/267x267,,cb0050,fff.svg">
+//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=856">
 //             <div class="box-content">
-//                 <h5>Nils Nilsson</h5>
+//                 <h5>John Doe</h5>
 //                 <ul>
-//						<li class="card-title">Processledare</li>
+//						<li class="card-title">Cupcake king</li>
 //						<li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
-//						<li><a class="link-item" href="mailto:nils.nilsson@helsingborg.se">nils.nilsson@helsingborg.se</a></li>
-//						<li class="small description">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</li>
+//						<li><a class="link-item" href="mailto:john.doe@helsingborg.se">john.dow@helsingborg.se</a></li>
+//						<li class="small description">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>
 //				   </ul>
 //             </div>
 //         </span>
@@ -26,19 +26,19 @@
 // <div class="grid">
 //	   <div class="grid-md-12">
 //         <span class="box box-card vertical-card">
-//             <img class="box-image" src="http:\/\/holder.ninja/180x160,,cb0050,fff.svg">
+//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=832">
 //             <div class="box-content">
-//                 <h5>Nilselina Nilsson</h5>
+//                 <h5>Jane Roe</h5>
 //                 <ul>
-//						<li class="card-title">Processledare</li>
-//						<li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
-//						<li><a class="link-item" href="mailto:nils.nilsson@helsingborg.se">nils.nilsson@helsingborg.se</a></li>
-//						<li class="small description">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</li>
-//				   </ul>
+//						<li class="card-title">Macaroon princess</li>
+//                      <li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
+//                      <li><a class="link-item" href="mailto:jane.roe@helsingborg.se">jane.roe@helsingborg.se</a></li>
+//                      <li class="small description">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>
+//                 </ul>
 //             </div>
 //         </span>
 //     </div>
-// </div>	
+// </div>
 //
 
 .box-card {
@@ -48,57 +48,61 @@
     color: $base-font-color;
 
 	h1, h2, h3, h4, h5, h6 {
-		padding-bottom: 0; 
+		padding-bottom: 0;
 	}
-	
-	ul li:not(.description),
-	ul li:not(.description) a {
+
+	ul li:not(.description):not(.card-title),
+	ul li:not(.description):not(.card-title) a {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	
+
 	.card-title {
-		margin-bottom: $grid-gutter-sm; 
+		margin-bottom: $grid-gutter-sm;
+
+        span {
+            display: block;
+        }
 	}
-	
+
 	.description {
-		margin-top: $grid-gutter-sm; 
+		margin-top: $grid-gutter-sm;
 	}
 
     &:hover {
         text-decoration: none;
         background-color: $creamy;
     }
-    
+
     &.vertical-card {
-	    overflow: hidden; 
-	    
+	    overflow: hidden;
+
 	    .box-image {
-		    float: left; 
-		    width: 180px; 
+		    float: left;
+		    width: 180px;
 	    }
-	    
-	    @media screen and #{$screen-md-up} { 
-	    
+
+	    @media screen and #{$screen-md-up} {
+
 		    .box-content {
-			    margin-left: 180px; 
-			    
+			    margin-left: 180px;
+
 			    ul, h1, h2, h3, h4, h5, h6 {
-				    padding-left: $grid-gutter-sm; 
+				    padding-left: $grid-gutter-sm;
 			    }
 		    }
-	   	   
+
 		}
-	    
+
     }
-    
-    @media screen and #{$screen-below-md} { 
+
+    @media screen and #{$screen-below-md} {
     	.box-image {
-	    	display: none; 
+	    	display: none;
     	}
     	.box-content {
-	    	margin-left: 0; 
+	    	margin-left: 0;
     	}
     }
 }

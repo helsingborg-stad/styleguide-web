@@ -13,37 +13,37 @@
 //      <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
-//             <h2>First</h2>
+//             <h2>Ice cream</h2>
 //         </label>
 //         <div class="accordion-content">
-//             This is the content of the first accordion section
+//             Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.
 //         </div>
 //     </section>
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-2">
 //         <label class="accordion-toggle" for="accordion-section-2">
-//             <h2>Second</h2>
+//             <h2>Sugar plum</h2>
 //         </label>
 //         <div class="accordion-content">
-//             This is the content of the second accordion section
+//             Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.
 //         </div>
 //     </section>
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-3">
 //         <label class="accordion-toggle" for="accordion-section-3">
-//             <h2>Third</h2>
+//             <h2>Fruitcake</h2>
 //         </label>
 //         <div class="accordion-content">
-//             This is the content of the third accordion section
+//             I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.
 //         </div>
 //     </section>
 //		<section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-4">
 //         <label class="accordion-toggle" for="accordion-section-4">
-//             <h2>Fourth</h2>
+//             <h2>Jelly-o</h2>
 //         </label>
 //         <div class="accordion-content">
-//             This is the content of the fourth accordion section
+//             Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.
 //         </div>
 //     </section>
 // </div>
@@ -56,7 +56,7 @@
 }
 
 .accordion + .accordion {
-	margin-top: $content-gutter; 
+	margin-top: $content-gutter;
 }
 
 .accordion-icon {
