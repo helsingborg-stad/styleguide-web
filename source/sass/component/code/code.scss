@@ -5,7 +5,16 @@
     box-shadow: inset 0 0 10px rgba(#000, .1);
 }
 
-pre {
+pre.xdebug-var-dump {
+    background-color: #fff;
+    color: #000;
+    width: auto;
+    padding: 20px;
+    float: left;
+    border: 8px solid #cc0000;
+}
+
+pre:not(.xdebug-var-dump) {
     position: relative;
     overflow: auto;
     background-color: $creamy;
