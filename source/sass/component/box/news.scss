@@ -8,9 +8,36 @@
 // <div class="grid">
 //     <div class="grid-lg-6">
 //         <a href="#" class="box box-news">
-//             <img src="http:\/\/www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg" alt="Kommunalanställd">
+//             <img src="https:\/\/unsplash.it/420/280/?image=400" alt="Kommunalanställd">
 //             <div class="box-content">
-//                 <h5 class="link-item link-item-light">Ledia jobb i Helsingborgs stad</h5>
+//                 <h5 class="link-item link-item-light">Candy canes chocolate cake</h5>
+//             </div>
+//         </a>
+//     </div>
+// </div>
+//
+// <div class="grid">
+//     <div class="grid-lg-12">
+//         <a href="#" class="box box-news box-news-horizontal">
+//             <div class="box-image-container">
+//                 <img src="https:\/\/unsplash.it/200/130/?image=600">
+//             </div>
+//             <div class="box-content">
+//                 <h3 class="text-highlight">Fruitcake toffee</h3>
+//                 <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>
+//                 <p><span class="link-item">Read more</span></p>
+//             </div>
+//         </a>
+//     </div>
+//     <div class="grid-lg-12">
+//         <a href="#" class="box box-news box-news-horizontal">
+//             <div class="box-image-container">
+//                 <img src="https:\/\/unsplash.it/200/130/?image=500">
+//             </div>
+//             <div class="box-content">
+//                 <h3 class="text-highlight">Croissant oat cake</h3>
+//                 <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>
+//                 <p><span class="link-item">Read more</span></p>
 //             </div>
 //         </a>
 //     </div>
@@ -49,5 +76,32 @@
         .theme-#{$theme} & {
             background-color: map-get($color, second);
         }
+    }
+}
+
+.box-news.box-news-horizontal {
+    display: table;
+    width: 100%;
+    background-color: transparent;
+    color: $base-font-color;
+
+    .box-image-container {
+        display: table-cell;
+        vertical-align: top;
+        width: 200px;
+
+        & + .box-content {
+            padding-left: $content-gutter * 2;
+        }
+    }
+
+    .box-content {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h4, h6 {
+        padding-bottom: 5px;
     }
 }
