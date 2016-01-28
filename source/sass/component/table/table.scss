@@ -40,49 +40,49 @@
 // </table>
 //
 
-table {
+table.table {
     width: 100%;
     border: 1px solid $creamy-darker;
     border-collapse: collapse;
-}
 
-thead {
-    border-bottom: 1px solid $creamy-darker;
-    background-color: #fff;
-}
-
-tbody {
-    background-color: $creamy;
-}
-
-tfoot {
-    background-color: #fff;
-
-    thead + & {
+    thead {
         border-bottom: 1px solid $creamy-darker;
+        background-color: #fff;
     }
 
-    tbody + & {
-        border-top: 1px solid $creamy-darker;
+    tbody {
+        background-color: $creamy;
     }
-}
 
-th {
-    padding: $cell-padding;
-    text-align: left;
-    font-weight: bold;
+    tfoot {
+        background-color: #fff;
 
-    & + th {
-        border-left: 1px solid $creamy-darker;
+        thead + & {
+            border-bottom: 1px solid $creamy-darker;
+        }
+
+        tbody + & {
+            border-top: 1px solid $creamy-darker;
+        }
     }
-}
 
-td {
-    padding: $cell-padding;
-    vertical-align: middle;
+    th {
+        padding: $cell-padding;
+        text-align: left;
+        font-weight: bold;
 
-    & + td {
-        border-left: 1px solid $creamy-darker;
+        & + th {
+            border-left: 1px solid $creamy-darker;
+        }
+    }
+
+    td {
+        padding: $cell-padding;
+        vertical-align: middle;
+
+        & + td {
+            border-left: 1px solid $creamy-darker;
+        }
     }
 }
 
