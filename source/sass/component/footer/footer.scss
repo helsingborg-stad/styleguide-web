@@ -60,6 +60,17 @@
     ul + ul {
         margin-top: $content-gutter;
     }
+
+    .icons-list {
+        li {
+            padding-left: $grid-gutter-sm;
+            padding-right: $grid-gutter-sm;
+            display: inline-block;
+            a {
+                font-size: 2em;
+            }
+        }
+    }
 }
 
 .markup-preview .main-footer {
