@@ -51,6 +51,11 @@
     .logotype {
         display: inline-block;
         margin-bottom: 10px;
+
+        img, svg {
+            width: auto;
+            height: 60px;
+        }
     }
 
     a {
