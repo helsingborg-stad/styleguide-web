@@ -20,7 +20,8 @@
 // </ul>
 //
 
-.pagination {
+.pagination,
+.page-numbers {
 	$page-size: 30px;
 	font-size: 0;
 
@@ -33,9 +34,8 @@
 		}
 	}
 
-	a.page,
-	a.next,
-	a.previous {
+	a,
+	.current {
 		display: block;
 		border: 1px solid $creamy-darker;
 		font-size: .85em;
@@ -65,7 +65,7 @@
 		}
 	}
 
-	a.page {
+	a:not(.next):not(.prev) {
 		width: $page-size;
 		height: $page-size;
 		line-height: $page-size;
@@ -77,5 +77,10 @@
 			content: "…";
 			display: inline-block;
 		}
+	}
+
+	.dots {
+		display: block;
+		font-size: .85em;
 	}
 }
