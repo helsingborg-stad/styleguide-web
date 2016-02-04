@@ -46,7 +46,8 @@
         padding-top: ($height / $width) * 100%;
     }
 
-    > .content {
+    > .content,
+    > iframe {
         position: absolute;
         top: 0;
         left: 0;
