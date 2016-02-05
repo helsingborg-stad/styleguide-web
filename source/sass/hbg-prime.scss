@@ -104,6 +104,16 @@
 @import 'component/footer/footer';
 
 // ***************************************************************
+// *** Wordpress standard
+// ***************************************************************
+@import 'component/wordpress/widget-calendar';
+@import 'component/wordpress/widget-lists';
+@import 'component/wordpress/widget-nav-menu';
+@import 'component/wordpress/widget-rss';
+@import 'component/wordpress/widget-search';
+@import 'component/wordpress/widget-text';
+
+// ***************************************************************
 // *** Animation components
 // ***************************************************************
 @import 'component/modal/animate';

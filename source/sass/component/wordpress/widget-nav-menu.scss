@@ -1,0 +1,21 @@
+//
+// @name WP Widget: Nav menu
+// @description Wordpress built-in nav-menu functionality markup.
+//
+// @page Wordpress/WP Widget: Nav menu
+//
+// @markup
+//
+.widget_nav_menu {
+  ul {
+    li {
+      &:before {
+        content: "- ";
+      }
+
+      ul.sub-menu {
+        padding-left: 1em;
+      }
+    }
+  }
+}

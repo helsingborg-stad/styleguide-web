@@ -1,0 +1,42 @@
+//
+// @name WP Widget: Search
+// @description Wordpress built-in search functionality markup.
+//
+// @page Wordpress/WP Widget: Search
+//
+// @markup
+//
+.widget_search {
+  label {
+    display: none;
+  }
+
+  input[type="search"],
+  input[type="submit"],
+  .input-group-addon-btn {
+    background: none;
+    color: #fff;
+  }
+
+  input[type="search"],
+  input[type="submit"] {
+    border: 1px solid #636363;
+    height: 40px;
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+  input[type="submit"] {
+    border-left: none;
+  }
+
+  input[type="search"] {
+    padding: 5px;
+  }
+
+  .input-group-lg,
+  .input-group-addon-btn {
+    height: 40px;
+  }
+
+}

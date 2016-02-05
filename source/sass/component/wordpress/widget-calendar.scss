@@ -1,0 +1,154 @@
+//
+// @name WP Widget: Calendar
+// @description Wordpress built-in calendar functionality markup.
+//
+// @page Wordpress/WP Widget: Calendar
+//
+// @markup
+// <div class="widget_calendar">
+// <h2 class="footer-title">Calendar</h2>
+// <div id="calendar_wrap" class="calendar_wrap">
+// <table id="wp-calendar">
+//   <caption>February 2016</caption>
+//   <thead>
+//   <tr>
+//     <th scope="col" title="Monday">M</th>
+//     <th scope="col" title="Tuesday">T</th>
+//     <th scope="col" title="Wednesday">W</th>
+//     <th scope="col" title="Thursday">T</th>
+//     <th scope="col" title="Friday">F</th>
+//     <th scope="col" title="Saturday">S</th>
+//     <th scope="col" title="Sunday">S</th>
+//   </tr>
+//   </thead>
+//   <tfoot>
+//   <tr>
+//     <td colspan="3" id="prev"><a href="http://dunkerskulturhus.dev/2016/01/">« Jan</a></td>
+//     <td class="pad">&nbsp;</td>
+//     <td colspan="3" id="next" class="pad">&nbsp;</td>
+//   </tr>
+//   </tfoot>
+//
+//   <tbody>
+//   <tr>
+//    <td>1</td>
+//      <td>
+//        <a href="http://dunkerskulturhus.dev/2016/02/02/" aria-label="Posts published on February 2, 2016">2</a>
+//      </td>
+//    <td>3</td>
+//    <td id="today">4</td>
+//    <td>5</td>
+//    <td>6</td>
+//    <td>7</td>
+//   </tr>
+//   <tr>
+//    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+//   </tr>
+//   <tr>
+//     <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+//   </tr>
+//   <tr>
+//     <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+//   </tr>
+//   <tr>
+//     <td>29</td>
+//     <td class="pad" colspan="6">&nbsp;</td>
+//   </tr>
+//   </tbody>
+//   </table>
+//   </div>
+//   </div>
+//
+
+.widget_calendar {
+
+  h2 {
+    display: none;
+  }
+
+  caption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    text-align: left;
+    font-weight: 300;
+    padding-bottom: .3em;
+  }
+
+  table {
+    width: 100%;
+    user-select: none;
+
+    thead, tbody, tfoot {
+
+      th, td {
+        padding: .5em;
+        text-align: center;
+        border: 1px solid #636363;
+        height: 40px;
+      }
+
+      #next, #prev {
+        text-transform: uppercase;
+        font-weight: 300;
+
+        a {
+          display: block;
+        }
+      }
+
+      #next {
+        border-left: none;
+      }
+
+      #prev {
+        border-right: none;
+      }
+
+    }
+
+    tfoot {
+      .pad:not(#prev):not(#next) {
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    tbody {
+      td {
+        background-color: rgba(#fff,.1);
+        position: relative;
+
+        &#today {
+          background-color: rgba(#fff,.2);
+        }
+
+        &.pad {
+          background-color: initial;
+        }
+
+        &:not(.pad):hover {
+          background-color: rgba(#fff,.2);
+        }
+
+        a {
+          cursor: hand;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          line-height: 39px;
+          transition: background 200ms;
+          font-weight: bold;
+
+          &:hover {
+            background-color: rgba(#000,.7);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
