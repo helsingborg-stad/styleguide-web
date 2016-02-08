@@ -13,7 +13,10 @@
 // </div>
 
 .widget_text {
-  .textwidget p:first-child {
-    margin-top: -.5em; //Negative margin to align top due to line height.
-  }
+    h2 {
+        @extend .text-highlight;
+    }
+    .textwidget p:first-child {
+        margin-top: -.5em; //Negative margin to align top due to line height.
+    }
 }

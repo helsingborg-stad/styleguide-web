@@ -62,17 +62,14 @@
 
 .widget_calendar {
 
-  h2 {
+  > h2 {
     display: none;
   }
 
   caption {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.7em;
+    @extend h2;
+    @extend .text-highlight;
     text-align: left;
-    font-weight: 300;
-    padding-bottom: .3em;
   }
 
   table {
@@ -84,8 +81,10 @@
       th, td {
         padding: .5em;
         text-align: center;
-        border: 1px solid #636363;
-        height: 40px;
+        border: 1px solid $creamy-darker;
+        height: $grid-gutter-sm *4;
+        line-height: $grid-gutter-sm *4;
+        padding: 0;
       }
 
       #next, #prev {
@@ -116,11 +115,11 @@
 
     tbody {
       td {
-        background-color: rgba(#fff,.1);
+        background-color: rgba(#000,.05);
         position: relative;
 
         &#today {
-          background-color: rgba(#fff,.2);
+          background-color: rgba(#000,.07);
         }
 
         &.pad {
@@ -128,7 +127,7 @@
         }
 
         &:not(.pad):hover {
-          background-color: rgba(#fff,.2);
+          background-color: rgba(#000,.07);
         }
 
         a {
@@ -139,13 +138,19 @@
           right: 0;
           bottom: 0;
           left: 0;
-          line-height: 39px;
+          line-height: $grid-gutter-sm*4;
+          height: $grid-gutter-sm*4;
           transition: background 200ms;
           font-weight: bold;
 
           &:hover {
-            background-color: rgba(#000,.7);
             text-decoration: none;
+            color: #fff;
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: rgba(map-get($color, fourth),.8);
+                }
+            }
           }
         }
       }

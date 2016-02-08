@@ -35,18 +35,19 @@
 //
 
 .widget_rss {
-  h2.footer-title {
+  h2 {
     a:first-child {
+      @extend .text-highlight;
       display: none;
     }
   }
 
   ul {
     li {
-      border: 1px solid #636363;
-      margin-bottom: 10px;
+      border: 1px solid $creamy-darker;
+      margin-bottom: ( ($grid-gutter-sm * 2) / 3) *2;
       a {
-        padding: 10px;
+        padding: $grid-gutter-sm;
         display: block;
         float: left;
         width: 70%;
@@ -63,13 +64,17 @@
         opacity: .7;
       }
       .rssSummary {
-        border-top: 1px solid #636363;
+        border-top: 1px solid $creamy-darker;
         padding: 10px;
         clear: both;
         font-size: .8em;
       }
       cite {
-        font-size: .9em;
+        font-size: .7em;
+        display: block;
+        padding: 0 10px 10px;
+        text-decoration: underline;
+
         &:empty {
           display: none;
         }

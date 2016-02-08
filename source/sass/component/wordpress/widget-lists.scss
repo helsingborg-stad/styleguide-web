@@ -1,13 +1,32 @@
 //
-// @name WP Widget: Calendar
+// @name WP Widget: Archive & Categories
 // @description Wordpress built-in list-type (tags, categories, archives) functionality markup.
 //
-// @page Wordpress/WP Widget: Calendar
+// @page Wordpress/WP Widget: Archive & Categories
 //
 // @markup
 //
+// <div class="widget_archive OR widget_categories"><h2 class="footer-title">Archive</h2>
+//  <ul>
+//    <li><a href="http://dunkerskulturhus.dev/2016/02/">February 2016</a></li>
+//    <li><a href="http://dunkerskulturhus.dev/2016/01/">January 2016</a></li>
+//  </ul>
+// </div>
+// <div class="widget_archive"><h2 class="footer-title">Archive</h2>    <label class="screen-reader-text" for="archives-dropdown-3">Archive</label>
+//  <select id="archives-dropdown-3" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+//    <option value="">Select Month</option>
+//    <option value="http://dunkerskulturhus.dev/2016/02/"> February 2016 </option>
+//    <option value="http://dunkerskulturhus.dev/2016/01/"> January 2016 </option>
+//  </select>
+// </div>
+
 .widget_archive,
 .widget_categories {
+
+  h2.footer-title {
+    @extend .text-highlight
+  }
+
   li {
     display: inline;
     font-size: .9em;
