@@ -2,7 +2,7 @@
 // @name WP Widget: Archive & Categories
 // @description Wordpress built-in list-type (tags, categories, archives) functionality markup.
 //
-// @page Wordpress/WP Widget: Archive & Categories
+// @page Wordpress/WP Widget: Archive, Categories, Meta-data
 //
 // @markup
 //
@@ -21,7 +21,8 @@
 // </div>
 
 .widget_archive,
-.widget_categories {
+.widget_categories,
+.widget_meta {
 
   h2.footer-title {
     @extend .text-highlight
