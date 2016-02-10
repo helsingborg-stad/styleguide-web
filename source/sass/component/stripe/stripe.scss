@@ -81,8 +81,12 @@
 
 .stripe {
     @include stripe();
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 25px;
     height: 100%;
+    z-index: $level-5;
 
     // Color theme styles
     @if ($includeThemes == true) {

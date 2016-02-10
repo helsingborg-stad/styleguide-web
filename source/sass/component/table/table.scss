@@ -51,19 +51,19 @@
     }
 
     tbody {
-        background-color: $creamy;
+        background-color: #fff;
     }
 
     tfoot {
         background-color: #fff;
+    }
 
-        thead + & {
-            border-bottom: 1px solid $creamy-darker;
-        }
+    thead + tfoot {
+        border-bottom: 1px solid $creamy-darker;
+    }
 
-        tbody + & {
-            border-top: 1px solid $creamy-darker;
-        }
+    tbody + tfoot {
+        border-top: 1px solid $creamy-darker;
     }
 
     th {
