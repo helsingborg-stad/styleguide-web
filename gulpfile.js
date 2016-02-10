@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minifycss = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var shorthand = require('gulp-shorthand');
@@ -22,14 +22,14 @@ gulp.task('sass-dist', function() {
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.min'}))
             .pipe(shorthand())
-            .pipe(minifycss())
+            .pipe(cssnano())
             .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('sass-dev', function() {
     return gulp.src('source/sass/hbg-prime.scss')
             .pipe(plumber())
-            .pipe(sass())
+            .pipe(sass({ sourceComments: true }))
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.dev'}))
             .pipe(gulp.dest('dist/css'));
