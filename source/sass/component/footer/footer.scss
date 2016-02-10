@@ -42,9 +42,11 @@
     font-size: .9em;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, fourth);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
         }
     }
 

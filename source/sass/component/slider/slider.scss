@@ -71,9 +71,11 @@
 
         &:hover {
             // Color theme styles
-            @each $theme, $color in $themes {
-                .theme-#{$theme} &:not([class*="stripe-"]) {
-                    background-color: map-get($color, second);
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} &:not([class*="stripe-"]) {
+                        background-color: map-get($color, second);
+                    }
                 }
             }
         }
@@ -108,9 +110,11 @@
         font-size: .9em;
 
         // Color theme styles
-        @each $theme, $color in $themes {
-            .theme-#{$theme} &:not([class*="stripe-"]) {
-                background-color: rgba(map-get($color, second),.9);
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} &:not([class*="stripe-"]) {
+                    background-color: rgba(map-get($color, second),.9);
+                }
             }
         }
     }

@@ -197,9 +197,11 @@
     background-color: rgba($palette-gray-1,.9);
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: rgba(map-get($color, first),.9);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: rgba(map-get($color, first),.9);
+            }
         }
     }
 }
@@ -208,9 +210,11 @@
     background-color: rgba($palette-gray-2,.9);
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: rgba(map-get($color, second),.9);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: rgba(map-get($color, second),.9);
+            }
         }
     }
 }
@@ -219,9 +223,11 @@
     background-color: rgba($palette-gray-3,.9);
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: rgba(map-get($color, third),.9);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: rgba(map-get($color, third),.9);
+            }
         }
     }
 }
@@ -230,9 +236,11 @@
     background-color: rgba($palette-gray-4,.9);
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: rgba(map-get($color, fourth),.9);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: rgba(map-get($color, fourth),.9);
+            }
         }
     }
 }

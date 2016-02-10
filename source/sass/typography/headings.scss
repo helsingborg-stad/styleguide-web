@@ -40,9 +40,11 @@ h1, .h1 {
     color: $palette-gray-4;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            color: map-get($color, fourth);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, fourth);
+            }
         }
     }
 }

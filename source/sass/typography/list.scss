@@ -34,9 +34,11 @@ article ul,
             background-color: $palette-gray-3;
 
             // Color theme styles
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, third);
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: map-get($color, third);
+                    }
                 }
             }
         }

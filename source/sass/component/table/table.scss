@@ -40,7 +40,7 @@
 // </table>
 //
 
-table.table {
+.table {
     width: 100%;
     border: 1px solid $creamy-darker;
     border-collapse: collapse;
@@ -106,9 +106,11 @@ table.table {
     tbody {
         tr:hover {
             // Color theme styles
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: lighten(map-get($color, fourth),60%);
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: lighten(map-get($color, fourth),60%);
+                    }
                 }
             }
         }
@@ -118,9 +120,11 @@ table.table {
         tbody {
             tr:nth-child(even):hover {
                 // Color theme styles
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: lighten(map-get($color, fourth),58%);
+                @if ($includeThemes == true) {
+                    @each $theme, $color in $themes {
+                        .theme-#{$theme} & {
+                            background-color: lighten(map-get($color, fourth),58%);
+                        }
                     }
                 }
             }

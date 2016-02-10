@@ -55,13 +55,15 @@
 			color: #fff;
 			text-decoration: none;
 
-			@each $theme, $color in $themes {
-		        .theme-#{$theme} & {
-		            background-color: map-get($color, second);
-		            border-color: map-get($color, second);
-		            color: #fff;
-		        }
-		    }
+			@if ($includeThemes == true) {
+				@each $theme, $color in $themes {
+			        .theme-#{$theme} & {
+			            background-color: map-get($color, second);
+			            border-color: map-get($color, second);
+			            color: #fff;
+			        }
+			    }
+			}
 		}
 	}
 

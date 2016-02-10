@@ -83,9 +83,11 @@ input[type="button"].btn::-moz-focus-inner {
     border: none;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, third);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, third);
+            }
         }
     }
 
@@ -94,9 +96,11 @@ input[type="button"].btn::-moz-focus-inner {
         background-color: darken($palette-gray-3, 3%);
 
         // Color theme styles
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: darken(map-get($color, third), 3%);
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: darken(map-get($color, third), 3%);
+                }
             }
         }
     }

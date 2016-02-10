@@ -24,9 +24,11 @@
     color: #fff;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, second);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
         }
     }
 }
@@ -36,9 +38,11 @@
     background-color: $palette-gray-1;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, first);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, first);
+            }
         }
     }
 }
@@ -48,9 +52,11 @@
     background-color: $palette-gray-2;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, second);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
         }
     }
 }
@@ -60,9 +66,11 @@
     background-color: $palette-gray-3;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, third);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, third);
+            }
         }
     }
 }
@@ -72,9 +80,11 @@
     background-color: $palette-gray-4;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, fourth);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
         }
     }
 }
@@ -84,9 +94,11 @@
     background-color: $palette-gray-5;
 
     // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            background-color: map-get($color, fifth);
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fifth);
+            }
         }
     }
 }
