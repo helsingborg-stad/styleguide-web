@@ -168,7 +168,7 @@ $nav-duration: 200ms;
         top: -2px;
         margin-right: 5px;
 	    width: 28px;
-	    height: 3px;
+	    height: 4px;
 	    background-color: $creamy-darker;
 	    transition: $nav-duration;
 		border-radius: 2px;
@@ -186,7 +186,7 @@ $nav-duration: 200ms;
         &::after {
 	        display: block;
 	        content: "";
-	        height: 3px;
+	        height: 4px;
 	        width: 28px;
 	        background-color: $creamy-darker;
 	        position: absolute;
