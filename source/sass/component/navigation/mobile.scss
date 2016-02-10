@@ -1,0 +1,44 @@
+.nav-toggle {
+    display: none;
+
+    //&:target,
+    &.open {
+        display: block;
+    }
+}
+
+.nav-mobile {
+    background-color: $palette-gray-2;
+    border: none;
+
+    li + li {
+        border: none;
+    }
+
+    a {
+        color: #fff;
+
+        &:hover {
+            background-color: $palette-gray-3;
+            color: #fff !important;
+
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: darken(map-get($color, second), 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+}

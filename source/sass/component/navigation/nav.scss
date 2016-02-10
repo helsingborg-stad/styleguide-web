@@ -29,7 +29,7 @@
 //
 
 // ***************************************************************
-// *** 1. Sidebar navigation
+// *** Sidebar navigation
 // ***************************************************************
 
 .nav-aside,
@@ -139,7 +139,7 @@
 }
 
 // ***************************************************************
-// *** 3. Menu icons
+// *** Menu icons
 // ***************************************************************
 
 $nav-duration: 200ms;
@@ -194,59 +194,42 @@ $nav-duration: 200ms;
 	    }
 	}
 
-    &:target {
-
+    &:target,
+    &.open {
 	    .menu-icon {
-
 		    background: transparent;
 
 	        &:before {
+                background: #ff0000;
 	            transform: rotate(-45deg);
 	            top: 0 !important;
 	        }
 
 	        &:after {
+                background: #ff0000;
 	            transform: rotate(45deg);
 	            top: 0 !important;
 	        }
-
 	    }
-
-    }
-}
-
-// ***************************************************************
-// *** 2. Mobile menu
-// ***************************************************************
-
-.nav-mobile {
-    @include cover();
-    top: 32px;
-    position: fixed;
-    background: rgba(#fff,.9);
-    text-align: center;
-
-    li {
-        a {
-            color: $creamy-darker;
-        }
     }
 }
 
 
 // ***************************************************************
-// *** 3. Navigation actions
+// *** Navigation actions
 // ***************************************************************
 
+/*
 .menu-trigger:target + ul.nav-aside,
 .menu-trigger:target + ul.nav-mobile,
 .menu-trigger:target + div.nav-aside,
 .menu-trigger:target + div.nav-mobile {
 	display: block !important;
 }
+*/
 
 // ***************************************************************
-// *** 4. Navigation modifiers
+// *** Navigation modifiers
 // ***************************************************************
 .nav-justify {
     display: table;
