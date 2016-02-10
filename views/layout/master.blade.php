@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
-    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.dev.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.min.css">
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
