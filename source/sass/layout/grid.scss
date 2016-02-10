@@ -11,18 +11,125 @@
 // </div>
 //
 
-// *
-// * 1. Grid container/row
-// * 2. Grid columns
-// *
-
 // ***************************************************************
-// *** 1. Grid container/row
+// *** Grid container/row
 // ***************************************************************
 .grid {
     width: auto;
     @extend .clearfix;
+}
 
+// ***************************************************************
+// *** Grid column gutter
+// ***************************************************************
+[class*="grid-"] {
+    padding-left: $grid-gutter-xs / 2;
+    padding-right: $grid-gutter-xs / 2;
+
+    @media #{$screen-sm} {
+        padding-left: $grid-gutter-sm / 2;
+        padding-right: $grid-gutter-sm / 2;
+    }
+
+    @media #{$screen-md} {
+        padding-left: $grid-gutter-md / 2;
+        padding-right: $grid-gutter-md / 2;
+    }
+
+    @media #{$screen-lg} {
+        padding-left: $grid-gutter-lg / 2;
+        padding-right: $grid-gutter-lg / 2;
+    }
+}
+
+// ***************************************************************
+// *** Grid columns
+// ***************************************************************
+
+// X-Small screens
+@media #{$screen-xs-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-xs-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Small screens
+@media #{$screen-sm-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-sm-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Medium screens
+@media #{$screen-md-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-md-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// Large screens and up
+@media #{$screen-lg-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-lg-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+}
+
+// ***************************************************************
+// *** Grid + grid margin
+// ***************************************************************
+@media #{$screen-below-xs} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-xs-"] + [class*="grid-xs-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
+@media #{$screen-below-sm} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-sm-"] + [class*="grid-sm-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
+@media #{$screen-below-md} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-md-"] + [class*="grid-md-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
+@media #{$screen-below-lg} {
+    @for $i from 1 to $grid-column-count + 1 {
+        [class*="grid-lg-"] + [class*="grid-lg-"] {
+            margin-top: $content-gutter;
+        }
+    }
+}
+
+
+// ***************************************************************
+// *** Grid inside grid, fix margins
+// ***************************************************************
+.grid {
     @media #{$screen-xs} {
         .grid {
             margin-left: -($grid-gutter-xs / 2);
@@ -69,108 +176,12 @@
 }
 
 // ***************************************************************
-// *** 2. Grid columns
+// *** Styleguide helper
 // ***************************************************************
-
-// X-Small screens
-@media #{$screen-xs-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-xs-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-}
-
-@media #{$screen-below-xs} {
-    @for $i from 1 to $grid-column-count + 1 {
-        [class*="grid-xs-"] + [class*="grid-xs-"] {
-            margin-top: $content-gutter;
-        }
-    }
-}
-
-// Small screens
-@media #{$screen-sm-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-sm-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-}
-
-@media #{$screen-below-sm} {
-    @for $i from 1 to $grid-column-count + 1 {
-        [class*="grid-sm-"] + [class*="grid-sm-"] {
-            margin-top: $content-gutter;
-        }
-    }
-}
-
-// Medium screens
-@media #{$screen-md-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-md-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-}
-
-@media #{$screen-below-md} {
-    @for $i from 1 to $grid-column-count + 1 {
-        [class*="grid-md-"] + [class*="grid-md-"] {
-            margin-top: $content-gutter;
-        }
-    }
-}
-
-// Large screens and up
-@media #{$screen-lg-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-lg-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-}
-
-@media #{$screen-below-lg} {
-    @for $i from 1 to $grid-column-count + 1 {
-        [class*="grid-lg-"] + [class*="grid-lg-"] {
-            margin-top: $content-gutter;
-        }
-    }
-}
-
-// General
-[class*="grid-"] {
-    padding-left: $grid-gutter-xs / 2;
-    padding-right: $grid-gutter-xs / 2;
-
-    @media #{$screen-sm} {
-        padding-left: $grid-gutter-sm / 2;
-        padding-right: $grid-gutter-sm / 2;
-    }
-
-    @media #{$screen-md} {
-        padding-left: $grid-gutter-md / 2;
-        padding-right: $grid-gutter-md / 2;
-    }
-
-    @media #{$screen-lg} {
-        padding-left: $grid-gutter-lg / 2;
-        padding-right: $grid-gutter-lg / 2;
-    }
-}
-
 .grid-example [class*="grid-"] {
     background-color: $creamy;
     border: 1px solid $creamy-darker;
     overflow: hidden;
 }
+
+
