@@ -59,23 +59,18 @@
 .notice.success {
     background-color: $success-bg;
     color: $success-text;
-    border-color: darken($success-bg, 5%);
 }
 
 .notice.warning {
     background-color: $warning-bg;
-    color: $warning-text;
-    border-color: darken($warning-bg, 5%);
-}
+    color: $warning-text;}
 
 .notice.danger {
     background-color: $danger-bg;
     color: $danger-text;
-    border-color: darken($danger-bg, 8%);
 }
 
 .notice.info {
     background-color: $info-bg;
     color: $info-text;
-    border-color: darken($info-bg, 40%);
 }

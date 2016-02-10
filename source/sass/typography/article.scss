@@ -63,14 +63,14 @@ article {
 	}
 
 	blockquote {
-		border-left: 3px solid #ccc;
+		border-left: 3px solid $creamy-darker;
 		margin-bottom: $content-gutter;
 		padding: 20px 35px;
 		quotes: "\201C""\201D""\2018""\2019";
 	}
 
 	blockquote:before {
-		color: #ccc;
+		color: $gray;
 		content: open-quote;
 		font-size: 2em;
 		line-height: 0.1em;
@@ -79,7 +79,7 @@ article {
 	}
 
 	blockquote:after {
-		color: #ccc;
+		color: $gray;
 		content: close-quote;
 		font-size: 2em;
 		line-height: 0.1em;

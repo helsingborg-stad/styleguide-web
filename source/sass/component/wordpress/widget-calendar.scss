@@ -61,99 +61,92 @@
 //
 
 .widget_calendar {
+    h2 {
+        display: none;
+    }
 
-  > h2 {
-    display: none;
-  }
+    caption {
+        @extend h2;
+        @extend .text-highlight;
+        text-align: left;
+    }
 
-  caption {
-    @extend h2;
-    @extend .text-highlight;
-    text-align: left;
-  }
+    table {
+        width: 100%;
+        user-select: none;
+    }
 
-  table {
-    width: 100%;
-    user-select: none;
-
-    thead, tbody, tfoot {
-
-      th, td {
+    th, td {
         padding: .5em;
         text-align: center;
         border: 1px solid $creamy-darker;
         height: $grid-gutter-sm *4;
         line-height: $grid-gutter-sm *4;
         padding: 0;
-      }
-
-      #next, #prev {
-        text-transform: uppercase;
-        font-weight: 300;
-
-        a {
-          display: block;
-        }
-      }
-
-      #next {
-        border-left: none;
-      }
-
-      #prev {
-        border-right: none;
-      }
-
-    }
-
-    tfoot {
-      .pad:not(#prev):not(#next) {
-        border-left: none;
-        border-right: none;
-      }
     }
 
     tbody {
-      td {
-        background-color: rgba(#000,.05);
-        position: relative;
+        td {
+            background-color: rgba(#000,.05);
+            position: relative;
 
-        &#today {
-          background-color: rgba(#000,.07);
+            &.pad {
+                background-color: initial;
+            }
+
+            &:not(.pad):hover {
+                background-color: rgba(#000,.07);
+            }
+
+            a {
+                cursor: hand;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                line-height: $grid-gutter-sm*4;
+                height: $grid-gutter-sm*4;
+                transition: background 200ms;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #fff;
+                    @each $theme, $color in $themes {
+                        .theme-#{$theme} & {
+                            background-color: rgba(map-get($color, fourth),.8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    tfoot {
+        text-transform: uppercase;
+        font-weight: 300;
+
+        td:first-of-type {
+            border-right: 0;
         }
 
-        &.pad {
-          background-color: initial;
-        }
-
-        &:not(.pad):hover {
-          background-color: rgba(#000,.07);
+        td + td {
+            border-left: none;
         }
 
         a {
-          cursor: hand;
-          cursor: pointer;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          line-height: $grid-gutter-sm*4;
-          height: $grid-gutter-sm*4;
-          transition: background 200ms;
-          font-weight: bold;
-
-          &:hover {
-            text-decoration: none;
-            color: #fff;
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: rgba(map-get($color, fourth),.8);
-                }
-            }
-          }
+            display: block;
         }
-      }
+
+        .pad {
+            border-left: none;
+            border-right: none;
+        }
     }
-  }
+}
+
+[id="today"] {
+    background-color: rgba(#000,.07);
 }

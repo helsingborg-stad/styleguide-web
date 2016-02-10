@@ -1,33 +1,22 @@
 // ***************************************************************
 // *** Configuration
 // ***************************************************************
+@import 'config/typography';
 @import 'config/colors';
 @import 'config/grid';
-@import 'config/typography';
 @import 'config/icons';
 @import 'config/button';
 @import 'config/z-index';
 @import 'config/table';
-
 @import 'config/themes';
 
+// ***************************************************************
+// *** Tools
+// ***************************************************************
 @import 'mixin/mixins';
 @import 'mixin/positioning';
 @import 'mixin/forms';
 @import 'mixin/arrow';
-
-// ***************************************************************
-// *** Utilities
-// ***************************************************************
-@import 'utility/text';
-@import 'utility/margin';
-@import 'utility/link-item';
-@import 'utility/interaction';
-@import 'utility/creamy';
-@import 'utility/visibility';
-@import 'utility/accessibility';
-@import 'utility/aspect-ratio';
-@import 'utility/wp';
 
 // ***************************************************************
 // *** Layout
@@ -105,6 +94,19 @@
 @import 'component/footer/footer';
 
 // ***************************************************************
+// *** Utilities
+// ***************************************************************
+@import 'utility/text';
+@import 'utility/margin';
+@import 'utility/link-item';
+@import 'utility/interaction';
+@import 'utility/creamy';
+@import 'utility/visibility';
+@import 'utility/accessibility';
+@import 'utility/aspect-ratio';
+@import 'utility/wp';
+
+// ***************************************************************
 // *** Wordpress standard
 // ***************************************************************
 @import 'component/wordpress/widget-calendar';
@@ -118,3 +120,8 @@
 // *** Animation components
 // ***************************************************************
 @import 'component/modal/animate';
+
+// ***************************************************************
+// *** Trumps
+// ***************************************************************
+@import 'trumps/wp';

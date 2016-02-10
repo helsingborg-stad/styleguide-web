@@ -7,11 +7,11 @@
 
 pre.xdebug-var-dump {
     background-color: #fff;
-    color: #000;
+    color: $base-font-color;
     width: auto;
     padding: 20px;
     float: left;
-    border: 8px solid #cc0000;
+    border: 8px solid $palette-red-4;
 }
 
 pre:not(.xdebug-var-dump) {
@@ -31,10 +31,10 @@ pre:not(.xdebug-var-dump) {
         width: 40px;
         padding: .5em .6em;
         text-align: center;
-        background-color: lighten($creamy-darker, 3%);
+        background-color: #fff;
         border-right: 1px solid $creamy-darker;
         font-size: .8em;
-        color: #999;
+        color: $base-font-color;
         line-height: 1.4;
     }
 

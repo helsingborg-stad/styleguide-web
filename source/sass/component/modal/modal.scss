@@ -110,7 +110,7 @@
 			content: "\00d7";
 			font-size: 1.5em;
 			line-height: 1;
-			color: #000;
+			color: $base-font-color;
 		}
 
 		@media screen and #{$screen-xs} {

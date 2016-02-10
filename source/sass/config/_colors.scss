@@ -69,7 +69,7 @@ $mark-purple: rgba($palette-purple-1, .5);
 // *** Warning
 // ***************************************************************
 $warning-bg: #FFD700;
-$warning-text: #262604;
+$warning-text: $base-font-color;
 
 $success-bg: $palette-green-2;
 $success-text: #fff;
@@ -78,5 +78,5 @@ $danger-bg: $palette-red-5;
 $danger-text: #fff;
 
 $info-bg: #b1f5ff;
-$info-text: darken($info-bg, 70%);
+$info-text: $base-font-color;
 
