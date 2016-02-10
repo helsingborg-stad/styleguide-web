@@ -4,11 +4,15 @@
 //
 // @page Utilities/Visibility
 //
+// @state .hidden 	 - Hidden on all sizes
 // @state .hidden-xs - Hidden on extra small screens
 // @state .hidden-sm - Hidden on small screens
 // @state .hidden-md - Hidden on medium screens
 // @state .hidden-lg - Hidden on large screens
-//
+
+.hidden {
+	display: none !important;
+}
 
 .hidden-xs {
 	@media screen and #{$screen-xs} {

@@ -13,13 +13,13 @@ HelsingborgPrime.Helpers.Menu = (function ($) {
 
     Menu.prototype.init = function () {
 	    $(function() {
-		    if ($('.menu-trigger').is(':target') ){
-			   $('html').addClass('menu-open');
+		    if ($('#menu-open').is(':target')){
+			   $('html,body').addClass('menu-open');
 		    }
 	    }.bind(this));
 
 	    $('.menu-trigger').click(function(event){
-		    $('html').toggleClass('menu-open');
+		    $('html,body').toggleClass('menu-open');
 		    if ($(this).is(':target')) {
 			    event.preventDefault();
 				window.location.hash = '#menu-closed';

@@ -11,8 +11,8 @@
 //
 // @markup
 // <nav>
-// 	   <a href="#menu-open" id="menu-open" class="hidden-sm hidden-md hidden-lg menu-trigger"><span class="menu-icon"></span></a>
-//     <ul class="nav-aside hidden-xs">
+// 	   <a href="#menu-open" id="menu-open" class="hidden-md hidden-lg menu-trigger"><span class="menu-icon"></span></a>
+//     <ul class="nav-aside hidden">
 //         <li><a href="#">Sweet apple pie</a></li>
 //         <li class="has-children"><a href="#">Chocolate bar</a></li>
 //         <li class="current-node has-children">
@@ -32,7 +32,8 @@
 // *** 1. Sidebar navigation
 // ***************************************************************
 
-.nav-aside {
+.nav-aside,
+.nav-mobile {
     border: 1px solid $creamy-darker;
 
     li {
@@ -138,7 +139,7 @@
 $nav-duration: 200ms;
 
 .menu-trigger {
-    height: 28px;
+    height: 25px;
 	cursor: hand;
 	cursor: pointer;
 	display: block;
@@ -154,7 +155,6 @@ $nav-duration: 200ms;
     }
 
     .menu-icon {
-
 		display: block;
 		margin-top: 14px;
 	    position: relative;
@@ -169,7 +169,7 @@ $nav-duration: 200ms;
 	        content: "";
 	        height: 3px;
 	        width: 28px;
-	        background: $creamy-darker;
+	        background: inherit;
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
@@ -209,12 +209,38 @@ $nav-duration: 200ms;
     }
 }
 
-.menu-trigger:target + ul.nav-aside {
+// ***************************************************************
+// *** 2. Mobile menu
+// ***************************************************************
+
+.nav-mobile {
+    @include cover();
+    top: 32px;
+    position: fixed;
+    background: rgba(#fff,.9);
+    text-align: center;
+
+    li {
+        a {
+            color: $creamy-darker;
+        }
+    }
+}
+
+
+// ***************************************************************
+// *** 3. Navigation actions
+// ***************************************************************
+
+.menu-trigger:target + ul.nav-aside,
+.menu-trigger:target + ul.nav-mobile,
+.menu-trigger:target + div.nav-aside,
+.menu-trigger:target + div.nav-mobile {
 	display: block !important;
 }
 
 // ***************************************************************
-// *** 2. Navigation modifiers
+// *** 4. Navigation modifiers
 // ***************************************************************
 .nav-justify {
     display: table;
