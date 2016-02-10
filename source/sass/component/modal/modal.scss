@@ -20,7 +20,7 @@
 //
 // @markup
 // 	<a href="#modal-target">Gummi bear modal</a>
-// 	<div id="modal-target" class="modal modal-backdrop-black modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
+// 	<div id="modal-target" class="modal modal-backdrop-1 modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
 //		<div class="modal-content">
 //     		<div class="modal-header">
 //				<a class="btn btn-close" href="#close"></a>
@@ -204,17 +204,6 @@
     }
 }
 
-.modal-backdrop-1 .btn-close:after {
-    color: darken($palette-gray-1, 10%);
-
-    // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            color: darken(map-get($color, first),10%);
-        }
-    }
-}
-
 .modal-backdrop-2 .backdrop  {
     background-color: rgba($palette-gray-2,.9);
 
@@ -222,17 +211,6 @@
     @each $theme, $color in $themes {
         .theme-#{$theme} & {
             background-color: rgba(map-get($color, second),.9);
-        }
-    }
-}
-
-.modal-backdrop-2 .btn-close:after {
-    color: darken($palette-gray-2, 10%);
-
-    // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            color: darken(map-get($color, second),10%);
         }
     }
 }
@@ -248,17 +226,6 @@
     }
 }
 
-.modal-backdrop-3 .btn-close:after {
-    color: darken($palette-gray-3, 10%);
-
-    // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            color: darken(map-get($color, third),10%);
-        }
-    }
-}
-
 .modal-backdrop-4 .backdrop  {
     background-color: rgba($palette-gray-4,.9);
 
@@ -266,17 +233,6 @@
     @each $theme, $color in $themes {
         .theme-#{$theme} & {
             background-color: rgba(map-get($color, fourth),.9);
-        }
-    }
-}
-
-.modal-backdrop-4 .btn-close:after {
-    color: darken($palette-gray-4, 10%);
-
-    // Color theme styles
-    @each $theme, $color in $themes {
-        .theme-#{$theme} & {
-            color: darken(map-get($color, fourth),10%);
         }
     }
 }
