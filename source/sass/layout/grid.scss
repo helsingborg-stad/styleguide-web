@@ -20,6 +20,25 @@
 }
 
 // ***************************************************************
+// *** Grid as display table (to be able to vertical align)
+// ***************************************************************
+.grid-table {
+    display: table;
+    width: 100%;
+
+    [class*="grid-"] {
+        display: table-cell;
+        float: none;
+    }
+}
+
+.grid-va-middle {
+    [class*="grid-"] {
+        vertical-align: middle;
+    }
+}
+
+// ***************************************************************
 // *** Grid column gutter
 // ***************************************************************
 [class*="grid-"] {
