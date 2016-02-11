@@ -156,30 +156,51 @@ $nav-duration: 200ms;
     transition: $nav-duration/2;
     display: inline-block;
 
-    .menu-icon:before, .menu-icon:after {
+    .menu-icon::before,
+    .menu-icon::after {
         transition: $nav-duration/2;
     }
 
     .menu-icon {
-		display: block;
-		margin-top: 14px;
+		display: inline-block;
+        vertical-align: middle;
 	    position: relative;
+        top: -2px;
+        margin-right: 5px;
 	    width: 28px;
-	    height: 3px;
-	    background: $creamy-darker;
+	    height: 4px;
+	    background-color: $creamy-darker;
 	    transition: $nav-duration;
 		border-radius: 2px;
 
-	    &:before, &:after {
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: darken(map-get($color, fifth), 10%);
+                }
+            }
+        }
+
+	    &::before,
+        &::after {
 	        display: block;
 	        content: "";
-	        height: 3px;
+	        height: 4px;
 	        width: 28px;
-	        background: inherit;
+	        background-color: $creamy-darker;
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
 	        border-radius: 2px;
+
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: darken(map-get($color, fifth), 10%);
+                    }
+                }
+            }
 	    }
 
 	    &:before { top: 7px;  }
@@ -188,6 +209,7 @@ $nav-duration: 200ms;
     }
 
     &:hover {
+        text-decoration: none;
 	    .menu-icon {
 		    &:before { top: 9px;  }
 			&:after  { top: -9px; }
@@ -200,13 +222,11 @@ $nav-duration: 200ms;
 		    background: transparent;
 
 	        &:before {
-                background: #ff0000;
 	            transform: rotate(-45deg);
 	            top: 0 !important;
 	        }
 
 	        &:after {
-                background: #ff0000;
 	            transform: rotate(45deg);
 	            top: 0 !important;
 	        }
