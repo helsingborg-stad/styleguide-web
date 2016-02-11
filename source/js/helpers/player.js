@@ -53,7 +53,7 @@ HelsingborgPrime.Helpers.Player = (function ($) {
         this.toggleControls(target);
 
         //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="http://www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev" frameborder="0"></iframe>');
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="http://www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0"></iframe>');
 
         //Not first run anymore
         this.playerFirstInitYoutube = false;
@@ -76,13 +76,13 @@ HelsingborgPrime.Helpers.Player = (function ($) {
 
     //Reset all players, or with target id.
     Player.prototype.resetPlayer = function(target) {
-        if (typeof target !== 'undefined') {
-            $(".player iframe").remove("iframe");
+       if (typeof target !== 'undefined') {
+            $(".player iframe").remove();
             $(".player").removeClass("is-playing");
             $("html").removeClass("video-is-playing");
         } else {
-            $(target.parent()).remove("iframe");
-            target.parent().removeClass("is-playing");
+            $("iframe",target).remove();
+            target.removeClass("is-playing");
             $("html").removeClass("video-is-playing");
         }
     };
