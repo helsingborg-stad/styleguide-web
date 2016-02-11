@@ -13,10 +13,7 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
     }
 
     CookieConsent.prototype.init = function () {
-        var showCookieConsent = true;
-        if (typeof HbgPrimeLang.cookieConsent.show != 'undefined' && HbgPrimeLang.cookieConsent.show === false) {
-            showCookieConsent = false;
-        }
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
 
         if (showCookieConsent && !this.hasAccepted()) {
             this.displayConsent();
@@ -35,14 +32,14 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
             wrapper = $('#wrapper:first-child');
         }
 
-        var consentText = 'Denna hemsidan använder cookies (kakor) för att webbplatsen ska fungera på ett bra sätt för dig. Genom att klicka vidare godkänner du att vi använder cookies. <a href="http://www.pts.se/cookies" target="_blank">Vad är cookies?</a>';
-        if (typeof HbgPrimeLang.cookieConsent.message != 'undefined' && HbgPrimeLang.cookieConsent.message.length > 0) {
-            consentText = HbgPrimeLang.cookieConsent.message;
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message');
         }
 
-        var buttonText = 'Jag godkänner';
-        if (typeof HbgPrimeLang.cookieConsent.button != 'undefined' && HbgPrimeLang.cookieConsent.button.length > 0) {
-            buttonText = HbgPrimeLang.cookieConsent.button;
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button');
         }
 
         wrapper.prepend('\
@@ -55,7 +52,7 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
             </div>\
         ');
 
-        $('#cookie-consent').slideDown(animationSpeed);
+        $('#cookie-consent').show();
     };
 
     CookieConsent.prototype.hasAccepted = function() {
@@ -63,9 +60,7 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
     };
 
     CookieConsent.prototype.accept = function() {
-        $('#cookie-consent').slideUp(animationSpeed, function () {
-            $(this).remove();
-        });
+        $('#cookie-consent').remove();
         HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
     };
 
