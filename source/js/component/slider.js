@@ -3,9 +3,9 @@
 // @description  Sliding content
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
 
-HelsingborgPrime.Helpers.Slider = (function ($) {
+HelsingborgPrime.Component.Slider = (function ($) {
 
     function Slider() {
         this.init();

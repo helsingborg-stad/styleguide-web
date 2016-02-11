@@ -3,9 +3,9 @@
 // @description  Show accodrion dropdown, make linkable by updating adress bar
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
 
-HelsingborgPrime.Helpers.Accordion = (function ($) {
+HelsingborgPrime.Component.Accordion = (function ($) {
 
     function Accordion() {
     	this.init();

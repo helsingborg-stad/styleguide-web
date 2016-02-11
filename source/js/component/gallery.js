@@ -3,9 +3,9 @@
 // @description  Popup boxes for gallery items.
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
 
-HelsingborgPrime.Helpers.GalleryPopup = (function ($) {
+HelsingborgPrime.Component.GalleryPopup = (function ($) {
 
     function ModalLimit() {
 
