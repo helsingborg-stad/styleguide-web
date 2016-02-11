@@ -13,9 +13,9 @@
 // </div>
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
-HelsingborgPrime.Helpers.EqualHeight = (function ($) {
+HelsingborgPrime.Helper.EqualHeight = (function ($) {
 
     function EqualHeight() {
         $(function(){

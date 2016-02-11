@@ -3,9 +3,9 @@
 // @description  Function for closing the menu (cannot be done with just :target selector)
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
-HelsingborgPrime.Helpers.Menu = (function ($) {
+HelsingborgPrime.Helper.Menu = (function ($) {
 
     function Menu() {
     	this.init();

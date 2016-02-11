@@ -3,9 +3,9 @@
 // @description  Video functionalty for vimeo and youtube.
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
-HelsingborgPrime.Helpers.Player = (function ($) {
+HelsingborgPrime.Helper.Player = (function ($) {
 
     //Declarations
     var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
