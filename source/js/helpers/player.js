@@ -37,15 +37,6 @@ HelsingborgPrime.Helpers.Player = (function ($) {
 
     Player.prototype.initVimeo = function(videoid,target) {
 
-        //Init vimeo api
-        if ( this.playerFirstInitVimeo === true ) {
-            this.playerFirstInitVimeo = false;
-            var vtag = document.createElement('script');
-                vtag.src = "https://f.vimeocdn.com/js/froogaloop2.min.js";
-            var vfirstScriptTag = document.getElementsByTagName('script')[0];
-                vfirstScriptTag.parentNode.insertBefore(vtag,vfirstScriptTag);
-        }
-
         //Remove controls
         this.toggleControls(target);
 
@@ -58,19 +49,11 @@ HelsingborgPrime.Helpers.Player = (function ($) {
 
     Player.prototype.initYoutube = function(videoid,target) {
 
-        //Init vimeo api
-        if ( this.playerFirstInitYoutube === true ) {
-            var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag,firstScriptTag)
-        }
-
         //Remove controls
         this.toggleControls(target);
 
         //Append player
-        console.log("youtube");
+        $(target).parent().append('<iframe id="ytplayer" type="text/html" width="100%" height="100%"src="http://www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev" frameborder="0"></iframe>');
 
         //Not first run anymore
         this.playerFirstInitYoutube = false;
@@ -81,8 +64,10 @@ HelsingborgPrime.Helpers.Player = (function ($) {
             target = target.parent();
             if(target.hasClass("is-playing")) {
                 target.removeClass("is-playing");
+                $("html").removeClass("video-is-playing");
             } else {
                 target.addClass("is-playing");
+                $("html").addClass("video-is-playing");
             }
         } else {
             console.log("Error: Could not start player. Wrapper not found.");
