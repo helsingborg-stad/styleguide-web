@@ -108,6 +108,10 @@
             width: (100% / $grid-column-count) * $i;
         }
     }
+
+    .grid-tester::after {
+        content: 'xs';
+    }
 }
 
 // Small screens
@@ -118,6 +122,10 @@
             float: left;
             width: (100% / $grid-column-count) * $i;
         }
+    }
+
+    .grid-tester::after {
+        content: 'sm';
     }
 }
 
@@ -130,6 +138,10 @@
             width: (100% / $grid-column-count) * $i;
         }
     }
+
+    .grid-tester::after {
+        content: 'md';
+    }
 }
 
 // Large screens and up
@@ -141,6 +153,22 @@
             width: (100% / $grid-column-count) * $i;
         }
     }
+
+    .grid-tester::after {
+        content: 'lg';
+    }
+}
+
+.grid-tester {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    z-index: $level-top;
 }
 
 // ***************************************************************
