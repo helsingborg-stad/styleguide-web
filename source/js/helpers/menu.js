@@ -12,15 +12,26 @@ HelsingborgPrime.Helpers.Menu = (function ($) {
     }
 
     Menu.prototype.init = function () {
-	    $('.menu-trigger').on('click', function (e) {
+	    this.bindEvents();
+    };
+
+    Menu.prototype.toggleMenu = function(triggerBtn) {
+        triggerBtn.toggleClass('open');
+
+        var target = $(triggerBtn.data('target'));
+
+        if (target.hasClass('nav-toggle-expand')) {
+            target.slideToggle();
+        } else {
+            target.toggleClass('open');
+        }
+    };
+
+    Menu.prototype.bindEvents = function () {
+        $('.menu-trigger').on('click', function (e) {
             e.preventDefault();
-
-            var triggerBtn = $(e.target).closest('.menu-trigger');
-            triggerBtn.toggleClass('open');
-
-            var menu = triggerBtn.data('target');
-            $(menu).toggleClass('open');
-        });
+            this.toggleMenu($(e.target).closest('.menu-trigger'));
+        }.bind(this));
     };
 
     return new Menu();
