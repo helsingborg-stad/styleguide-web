@@ -1,0 +1,52 @@
+//
+// @name Video Player
+// @description <span class="label label-theme">JavaScript dependent</span> Video player.
+// @author Sebastian Thulin
+//
+// @page Special/VideoPlayer
+//
+// @markup
+// <div class="player ratio-16-9" style="background-image:url('https://unsplash.it/800/800/?image=890');">
+//     <a href="#video-player-GQxqaoJNx_E" data-video-id="GQxqaoJNx_E"></a>
+// </div>
+//
+// <div class="player ratio-16-9" style="background-image:url('https://unsplash.it/800/800/?image=892');">
+//     <a href="#video-player-151409215" data-video-id="151409215"></a>
+// </div>
+// <div class="player ratio-16-9" style="background-image:url('https://unsplash.it/800/800/?image=893');">
+//     <a href="#video-player-151409215" data-video-id="147844151"></a>
+// </div>
+//
+.player {
+    background-size: cover;
+    background-position: center;
+    a {
+        @include center();
+        font-size: 6em;
+        opacity: .7;
+        transition: opacity 200ms ease;
+        color: #fff;
+
+        &::before {
+            @include hbg-icon($icon-play);
+        }
+        &:hover {
+            text-decoration: none;
+            opacity: 1;
+        }
+    }
+
+    iframe {
+        @include cover();
+    }
+
+    &.is-playing {
+        a {
+            opacity: 0;
+        }
+    }
+}
+
+.player + .player {
+    margin-top: 15px;
+}
