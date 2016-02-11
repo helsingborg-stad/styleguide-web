@@ -33,7 +33,7 @@ HelsingborgPrime.Helpers.Player = (function ($) {
         } else {
             this.initYoutube(videoid, e);
         }
-    }
+    };
 
     Player.prototype.initVimeo = function(videoid,target) {
 
@@ -45,7 +45,7 @@ HelsingborgPrime.Helpers.Player = (function ($) {
 
         //Not first run anymore
         this.playerFirstInitVimeo = false;
-    }
+    };
 
     Player.prototype.initYoutube = function(videoid,target) {
 
@@ -57,7 +57,7 @@ HelsingborgPrime.Helpers.Player = (function ($) {
 
         //Not first run anymore
         this.playerFirstInitYoutube = false;
-    }
+    };
 
     Player.prototype.toggleControls = function(target) {
         if ( typeof target !== 'undefined' ) {
@@ -72,7 +72,7 @@ HelsingborgPrime.Helpers.Player = (function ($) {
         } else {
             console.log("Error: Could not start player. Wrapper not found.");
         }
-    }
+    };
 
     //Reset all players, or with target id.
     Player.prototype.resetPlayer = function(target) {
@@ -85,11 +85,11 @@ HelsingborgPrime.Helpers.Player = (function ($) {
             target.parent().removeClass("is-playing");
             $("html").removeClass("video-is-playing");
         }
-    }
+    };
 
     Player.prototype.isNumeric = function(n) {
         return !isNaN(parseFloat(n)) && isFinite(n);
-    }
+    };
 
     return new Player();
 
