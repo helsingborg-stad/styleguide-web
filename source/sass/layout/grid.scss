@@ -22,13 +22,37 @@
 // ***************************************************************
 // *** Grid as display table (to be able to vertical align)
 // ***************************************************************
-.grid-table {
+@mixin grid-table {
     display: table;
     width: 100%;
 
     [class*="grid-"] {
         display: table-cell;
         float: none;
+    }
+}
+
+@media #{$screen-xs-up} {
+    .grid-table-xs {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-sm-up} {
+    .grid-table-sm {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-md-up} {
+    .grid-table-md {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-lg-up} {
+    .grid-table-lg {
+        @include grid-table;
     }
 }
 
