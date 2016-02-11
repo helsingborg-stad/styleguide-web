@@ -40,6 +40,14 @@
     & + .notice {
         margin-top: 1px;
     }
+
+    &.bottom-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
 }
 
 .notice-lg {
