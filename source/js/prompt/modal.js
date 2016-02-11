@@ -3,9 +3,9 @@
 // @description  Prevent scrolling when modal is open (or #modal-* exists in url)
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helpers = HelsingborgPrime.Helpers || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
 
-HelsingborgPrime.Helpers.ModalLimit = (function ($) {
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
 
     function ModalLimit() {
     	this.init();
