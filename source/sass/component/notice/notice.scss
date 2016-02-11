@@ -34,10 +34,11 @@
     .fa {
         display: inline-block;
         margin-right: .3em;
+        font-size: 1.5em;
     }
 
     & + .notice {
-        margin-top: $content-gutter;
+        margin-top: 1px;
     }
 }
 

@@ -30,6 +30,16 @@
         display: table-cell;
         float: none;
     }
+
+    .grid-col-icon {
+        width: 1%;
+        white-space: nowrap;
+        padding-right: 0;
+    }
+}
+
+.grid-table {
+    @include grid-table;
 }
 
 @media #{$screen-xs-up} {
