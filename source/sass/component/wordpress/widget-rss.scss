@@ -68,6 +68,10 @@
         padding: 10px;
         clear: both;
         font-size: .8em;
+
+        &:empty {
+          display: none;
+        }
       }
       cite {
         font-size: .7em;
