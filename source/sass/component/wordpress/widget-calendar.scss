@@ -61,7 +61,7 @@
 //
 
 .widget_calendar {
-    h2 {
+    > h2:first-child {
         display: none;
     }
 
