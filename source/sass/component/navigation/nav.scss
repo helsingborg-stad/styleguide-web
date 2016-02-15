@@ -170,7 +170,7 @@ $nav-duration: 200ms;
 	    height: 4px;
 	    background-color: $creamy-darker;
 	    transition: $nav-duration;
-		border-radius: 2px;
+		border-radius: 0;
 
         // Color theme styles
         @if ($includeThemes == true) {
@@ -191,7 +191,7 @@ $nav-duration: 200ms;
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
-	        border-radius: 2px;
+	        border-radius: 0;
 
             @if ($includeThemes == true) {
                 @each $theme, $color in $themes {
