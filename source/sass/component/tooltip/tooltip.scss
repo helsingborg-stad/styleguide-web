@@ -44,7 +44,7 @@
 
             position: absolute;
             z-index: $level-9;
-            bottom: -8px;
+            bottom: -9px;
             left: 50%;
             transform: translateY(0%) translateX(-50%);
 
@@ -64,7 +64,7 @@
 
             &::before {
                 bottom: auto;
-                top: -8px;
+                top: -9px;
                 right: auto;
                 left: 50%;
                 transform: translateY(0%) translateX(-50%);

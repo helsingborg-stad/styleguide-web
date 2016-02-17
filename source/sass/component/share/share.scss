@@ -1,0 +1,43 @@
+.share {
+
+}
+
+.share-social {
+    a {
+        color: $gray;
+    }
+}
+
+.share-social-icon-lg {
+    .fa {
+        font-size: 2em;
+    }
+}
+
+.share-no-labels {
+    a {
+        span {
+            @extend .sr-only;
+        }
+    }
+}
+
+.share-horizontal {
+    @extend .nav-horizontal;
+
+    li + li {
+        margin-left: 5px;
+    }
+}
+
+.share-social-facebook:hover {
+    color: #3B5998;
+}
+
+.share-social-twitter:hover {
+    color: #55ACEE;
+}
+
+.share-social-linkedin:hover {
+    color: #1583BB;
+}
