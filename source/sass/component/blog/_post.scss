@@ -37,6 +37,11 @@
     .box {
         padding: $content-gutter;
     }
+
+    time {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
 
 .post-collapsed {
