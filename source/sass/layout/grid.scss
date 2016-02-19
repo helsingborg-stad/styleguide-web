@@ -72,6 +72,18 @@
     }
 }
 
+.grid-va-top {
+    [class*="grid-"] {
+        vertical-align: top;
+    }
+}
+
+.grid-va-bottom {
+    [class*="grid-"] {
+        vertical-align: bottom;
+    }
+}
+
 // ***************************************************************
 // *** Grid column gutter
 // ***************************************************************
