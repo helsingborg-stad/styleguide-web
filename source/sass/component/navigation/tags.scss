@@ -19,6 +19,7 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+
     li {
     	display: inline-block;
     	background: $creamy;
@@ -27,10 +28,17 @@
         font-size: .8em;
         border-radius: 3px;
         line-height: 1;
+        margin-right: 3px;
 
     	a {
     		text-decoration: none;
     	}
+    }
+}
+
+.tags-white {
+    li {
+        background: #fff;
     }
 }
 

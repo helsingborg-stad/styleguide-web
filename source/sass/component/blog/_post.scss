@@ -4,6 +4,8 @@
 //
 // @page Blog/Post
 //
+// @state .post-collapsed - Collapsed post (fade out content)
+//
 // @markup
 // <div class="post">
 //     <article>
@@ -31,6 +33,86 @@
     }
 }
 
+.post-collapsed {
+    article {
+        max-height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+
+            height: 80%;
+
+            @include gradient(rgba(#fff, 0), rgba(#fff, 1));
+        }
+    }
+}
+
 .post + .post {
     margin-top: $content-gutter * 2;
+}
+
+.post-header {
+    padding: $content-gutter * 2;
+    padding-bottom: 0;
+
+    h1 {
+        padding-bottom: 0;
+    }
+
+    ul {
+        font-size: .9em;
+        margin-top: 10px;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+
+            & + li {
+                &::before {
+                    display: inline-block;
+                    vertical-align: middle;
+                    content: '';
+                    width: 1px;
+                    height: 20px;
+                    background-color: $creamy-darker;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.post-author {
+    .post-author-image {
+        $image-size: 25px;
+
+        display: inline-block;
+        margin-right: 5px;
+        width: $image-size;
+        height: $image-size;
+        overflow: hidden;
+        border-radius: 50%;
+        vertical-align: middle;
+
+        img {
+            min-width: $image-size;
+            min-height: $image-size;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.post-footer,
+.page-footer {
+    font-size: .9em;
 }
