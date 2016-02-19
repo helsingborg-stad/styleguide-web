@@ -69,7 +69,7 @@
 
     ul {
         font-size: .9em;
-        margin-top: 10px;
+        margin-top: $content-gutter * 2;
 
         li {
             display: inline-block;
@@ -91,6 +91,27 @@
     }
 }
 
+.post-categories {
+    display: inline-block;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.post-tags-wrapper + .post-categories-wrapper {
+    margin-top: 5px;
+}
+
+.post-categories-wrapper,
+.post-tags-wrapper {
+    font-size: .9em;
+
+    ul {
+        display: inline-block;
+    }
+}
+
 .post-author {
     .post-author-image {
         $image-size: 25px;
@@ -103,11 +124,11 @@
         border-radius: 50%;
         vertical-align: middle;
 
+        background-size: cover;
+        background-position: center center;
+
         img {
-            min-width: $image-size;
-            min-height: $image-size;
-            width: 100%;
-            height: auto;
+            display: none;
         }
     }
 }
