@@ -33,6 +33,12 @@
     }
 }
 
+.post-compressed {
+    .box {
+        padding: $content-gutter;
+    }
+}
+
 .post-collapsed {
     article {
         max-height: 300px;
