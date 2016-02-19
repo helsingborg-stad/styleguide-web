@@ -1,0 +1,17 @@
+.post {
+    border: 1px solid $creamy-darker;
+
+    article {
+        padding: $content-gutter * 2;
+    }
+
+    footer {
+        background-color: $creamy;
+        border-top: 1px solid $creamy-darker;
+        padding: $content-gutter $content-gutter;
+    }
+}
+
+.post + .post {
+    margin-top: $content-gutter * 2;
+}
