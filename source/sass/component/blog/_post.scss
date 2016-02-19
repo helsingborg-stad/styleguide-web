@@ -39,6 +39,10 @@
         overflow: hidden;
         position: relative;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &::after {
             display: block;
             content: '';
@@ -51,6 +55,16 @@
             height: 80%;
 
             @include gradient(rgba(#fff, 0), rgba(#fff, 1));
+        }
+    }
+
+    &.post-expanded {
+        article {
+            max-height: none !important;
+
+            &::after {
+                display: none;
+            }
         }
     }
 }
