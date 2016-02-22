@@ -45,6 +45,7 @@ input[type="button"].btn::-moz-focus-inner {
     &:hover,
     &:focus {
         background-color: darken($creamy-darker, 3%);
+        text-decoration: none;
     }
 
     &:active {
