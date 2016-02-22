@@ -1,0 +1,23 @@
+//
+// @name Comment form
+// @description Standard WordPress comment form, please use the comment_form() WP function to show comment form
+//
+
+.comment-respond {
+    padding: $content-gutter * 2;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+
+    p {
+        @extend .form-group;
+    }
+
+    .comment-notes {
+        font-size: .8em;
+        font-style: italic;
+    }
+
+    p + p {
+        margin-top: $content-gutter;
+    }
+}

@@ -2,6 +2,7 @@
 // @name Margin resetters
 // @description Set margins to zero
 //
+// @state .no-margin - Sets all margins to zero
 // @state .no-margin-top - Sets top margin to zero
 // @state .no-margin-right - Sets right margin to zero
 // @state .no-margin-bottom - Sets bottom margin to zero
@@ -9,6 +10,10 @@
 //
 // @page Utilities/Margin resetters
 //
+
+.no-margin {
+    margin: 0 !important;
+}
 
 .no-margin-top {
     margin-top: 0 !important;
@@ -24,6 +29,10 @@
 
 .no-margin-left {
     margin-left: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
 }
 
 //

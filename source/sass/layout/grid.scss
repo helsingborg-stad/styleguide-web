@@ -31,6 +31,12 @@
         float: none;
     }
 
+    .no-padding {
+        [class*="grid-"] {
+            padding: 0;
+        }
+    }
+
     .grid-col-icon {
         width: 1%;
         white-space: nowrap;
