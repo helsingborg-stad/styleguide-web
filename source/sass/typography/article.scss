@@ -181,3 +181,11 @@ hr {
 	background-color: $creamy-darker;
 	border: none;
 }
+
+article + .page-footer {
+	margin-top: $content-gutter * 2;
+}
+
+.page-footer {
+	font-size: .9em;
+}
