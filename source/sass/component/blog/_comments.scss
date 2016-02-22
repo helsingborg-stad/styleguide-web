@@ -26,6 +26,28 @@
 // @name Comments
 // @description List of comments
 //
+// @page Blog/Comments
+//
+// @markup
+// <ul class="comments">
+//     <li class="comment">
+//         <header>
+//             <em>The Baker</em> <time>4 minutes ago</time>
+//         </header>
+//         <div class="comment-text">
+//             Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.
+//         </div>
+//     </li>
+//     <li class="comment">
+//         <header>
+//             <em>The Baker</em> <time>8 minutes ago</time>
+//         </header>
+//         <div class="comment-text">
+//              Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.
+//         </div>
+//     </li>
+// </ul>
+//
 
 .comment {
     em {
