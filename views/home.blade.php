@@ -3,6 +3,7 @@
 @section('content')
 <article>
 	<h1>Helsingborgs stad - Style guide</h1>
+
     <p class="lead">Welcome to the online style guide intended for websites within Helsingborgs stad. The guide provides examples, markup and themes for our standardized components.</p>
 
     <h2>Getting started</h2>
