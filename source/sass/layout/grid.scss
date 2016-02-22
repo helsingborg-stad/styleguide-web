@@ -19,59 +19,6 @@
     @extend .clearfix;
 }
 
-// ***************************************************************
-// *** Grid as display table (to be able to vertical align)
-// ***************************************************************
-@mixin grid-table {
-    display: table;
-    width: 100%;
-
-    [class*="grid-"] {
-        display: table-cell;
-        float: none;
-    }
-
-    .no-padding {
-        [class*="grid-"] {
-            padding: 0;
-        }
-    }
-
-    .grid-col-icon {
-        width: 1%;
-        white-space: nowrap;
-        padding-right: 0;
-    }
-}
-
-.grid-table {
-    @include grid-table;
-}
-
-@media #{$screen-xs-up} {
-    .grid-table-xs {
-        @include grid-table;
-    }
-}
-
-@media #{$screen-sm-up} {
-    .grid-table-sm {
-        @include grid-table;
-    }
-}
-
-@media #{$screen-md-up} {
-    .grid-table-md {
-        @include grid-table;
-    }
-}
-
-@media #{$screen-lg-up} {
-    .grid-table-lg {
-        @include grid-table;
-    }
-}
-
 .grid-va-middle {
     [class*="grid-"] {
         vertical-align: middle;
@@ -273,6 +220,66 @@
         & + .grid {
             margin-top: $grid-gutter-lg;
         }
+    }
+}
+
+// ***************************************************************
+// *** Grid as display table (to be able to vertical align)
+// ***************************************************************
+@mixin grid-table {
+    display: table;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+
+    [class*="grid-"] {
+        display: table-cell;
+        float: none;
+    }
+
+    &.no-padding {
+        padding-left: 0;
+        padding-right: 0;
+
+        [class*="grid-"] {
+            padding: 0;
+        }
+    }
+
+    .grid-col-icon {
+        width: 1%;
+        white-space: nowrap;
+        padding-right: 0;
+    }
+}
+
+.grid-table {
+    @include grid-table;
+}
+
+@media #{$screen-xs-up} {
+    .grid-table-xs {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-sm-up} {
+    .grid-table-sm {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-md-up} {
+    .grid-table-md {
+        @include grid-table;
+    }
+}
+
+@media #{$screen-lg-up} {
+    .grid-table-lg {
+        @include grid-table;
     }
 }
 

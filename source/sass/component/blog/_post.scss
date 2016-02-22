@@ -217,6 +217,8 @@
         overflow: hidden;
         border-radius: 50%;
         vertical-align: middle;
+        position: relative;
+        top: -1.5px;
 
         background-size: cover;
         background-position: center center;
@@ -224,6 +226,10 @@
         img {
             display: none;
         }
+    }
+
+    &.post-author-margin-left {
+        margin-left: 5px;
     }
 }
 
