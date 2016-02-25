@@ -88,6 +88,7 @@ input[type="button"].btn::-moz-focus-inner {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, third);
+                color: #fff;
             }
         }
     }

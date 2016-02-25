@@ -37,3 +37,11 @@
 		display: none !important;
 	}
 }
+
+.target-toggle {
+	display: none;
+
+	&:target {
+		display: block;
+	}
+}

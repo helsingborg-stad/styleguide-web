@@ -16,7 +16,8 @@ a {
     }
 }
 
-[class*="theme-"] article a {
+[class*="theme-"] article a:not([class]),
+[class*="theme-"] article a.link-item {
     color: $palette-blue-2;
     text-decoration: underline;
 
