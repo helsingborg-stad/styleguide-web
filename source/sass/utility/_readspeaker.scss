@@ -1,0 +1,16 @@
+.readspeaker-play-button {
+    &::before {
+        @include hbg-icon($icon-readspeaker);
+        padding-right: .3em;
+    }
+}
+
+.readspeaker-player-element {
+    display: none;
+    margin-bottom: $content-gutter;
+    height: 50px !important;
+
+    .rsexpanded {
+        display: block;
+    }
+}

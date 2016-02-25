@@ -16,7 +16,7 @@
 
 article {
 
-	h1:first-of-type {
+	> h1:first-child {
 		margin-top: -0.25em;
 
 		img + & {
@@ -40,6 +40,7 @@ article {
 	p + ul,
 	p + blockquote,
 	p + pre,
+	p + img,
 
 	ol + h1,
 	ol + h2,
@@ -52,6 +53,7 @@ article {
 	ol + ul,
 	ol + blockquote,
 	ol + pre,
+	ol + img,
 
 	ul + h1,
 	ul + h2,
@@ -64,6 +66,7 @@ article {
 	ul + ul,
 	ul + blockquote,
 	ul + pre,
+	ul + img,
 
 	blockquote + h1,
 	blockquote + h2,
@@ -76,6 +79,7 @@ article {
 	blockquote + ul,
 	blockquote + blockquote,
 	blockquote + pre,
+	blockquote + img,
 
 	pre + h1,
 	pre + h2,
@@ -88,8 +92,51 @@ article {
 	pre + ul,
 	pre + blockquote,
 	pre + pre,
+	pre + img,
+
+	img + h1,
+	img + h2,
+	img + h3,
+	img + h4,
+	img + h5,
+	img + h6,
+	img + p,
+	img + ol,
+	img + ul,
+	img + blockquote,
+	img + pre,
+	img + img
 	{
-		margin-top: 1em;
+		margin-top: 1.3em;
+	}
+
+	hr + h1,
+	hr + h2,
+	hr + h3,
+	hr + h4,
+	hr + h5,
+	hr + h6,
+	hr + p,
+	hr + ol,
+	hr + ul,
+	hr + blockquote,
+	hr + pre,
+	hr + hr,
+	hr + img,
+
+	h1 + hr,
+	h2 + hr,
+	h3 + hr,
+	h4 + hr,
+	h5 + hr,
+	h6 + hr,
+	p + hr,
+	ol + hr,
+	ul + hr,
+	blockquote + hr,
+	pre + hr,
+	img + hr {
+		margin-top: 2em;
 	}
 
 	blockquote {
@@ -121,4 +168,24 @@ article {
 		display: inline;
 		margin: 0;
 	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+hr {
+	position: relative;
+	height: 4px;
+	border-radius: 4px;
+	background-color: $creamy-darker;
+	border: none;
+}
+
+article + .page-footer {
+	margin-top: $content-gutter * 2;
+}
+
+.page-footer {
+	font-size: .9em;
 }

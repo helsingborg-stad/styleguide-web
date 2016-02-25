@@ -1,0 +1,79 @@
+//
+// @name Pills
+// @description Pills navigagtion
+// @author Kristoffer Svanmark
+//
+// @page Navigation/Pills
+//
+// @markup
+// <ul class="nav nav-pills nav-horizontal">
+//     <li><a href="#">Cupkae</a></li>
+//     <li><a href="#">Liquorice</a></li>
+//     <li><a href="#">Gummi bears</a></li>
+// </ul>
+//
+
+//
+// @name Help
+// @description Help navigagtion
+// @author Kristoffer Svanmark
+//
+// @page Navigation/Help
+//
+// @markup
+// <ul class="nav nav-help nav-horizontal">
+//     <li><a href="#">Cupkae</a></li>
+//     <li><a href="#">Liquorice</a></li>
+//     <li><a href="#">Gummi bears</a></li>
+// </ul>
+//
+
+.nav-pills,
+.nav-help {
+    font-size: 0;
+
+    li + li {
+        margin-left: 5px;
+    }
+
+    a {
+        padding: .3em .6em;
+        background-color: $creamy-darker;
+        border-radius: 5px;
+        font-size: .9rem;
+        color: $base-font-color;
+
+        &:hover {
+            text-decoration: none;
+            background-color: darken($creamy-darker, 3%);
+        }
+    }
+}
+
+.nav-help {
+    li + li {
+        margin-left: 8px;
+
+        &::before {
+            position: relative;
+            top: -2px;
+            content: '';
+            display: inline-block;
+            margin-right: 8px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $creamy-darker;
+        }
+    }
+
+    a {
+        background-color: transparent;
+        padding: 0;
+
+        &:hover {
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    }
+}
