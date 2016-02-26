@@ -19,36 +19,35 @@
 // </div>
 
 .widget_search {
+    @extend .text-highlight;
 
-  @extend .text-highlight;
+    label {
+        display: none;
+    }
 
-  label {
-    display: none;
-  }
+    input[type="search"],
+    input[type="submit"] {
+        border: 1px solid $creamy-darker;
+        height: 40px;
+        font-weight: 300;
+        font-size: 1em;
+    }
 
-  input[type="search"],
-  input[type="submit"] {
-    border: 1px solid $creamy-darker;
-    height: 40px;
-    font-weight: 300;
-    font-size: 1em;
-  }
+    input[type="search"] {
+        color: $gray-dark;
+    }
 
-  input[type="search"] {
-    color: $gray-dark;
-  }
+    input[type="submit"] {
+        border-left: none;
+        font-weight: bold;
+    }
 
-  input[type="submit"] {
-    border-left: none;
-    font-weight: bold;
-  }
+    input[type="search"] {
+        padding: 5px;
+    }
 
-  input[type="search"] {
-    padding: 5px;
-  }
-
-  .input-group-lg,
-  .input-group-addon-btn {
-    height: 40px;
-  }
+    .input-group-lg,
+    .input-group-addon-btn {
+        height: 40px;
+    }
 }
