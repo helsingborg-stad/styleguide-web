@@ -8,6 +8,15 @@
     }
 }
 
+.search-top {
+    display: none;
+}
+
+.search-top.open,
+.no-js .search-top:target {
+    display: block;
+}
+
 .header-casual {
     padding-top: 0;
 }
