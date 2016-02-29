@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="sv">
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -51,7 +51,7 @@
         </style>
     </noscript>
 </head>
-<body class="{{ isset($theme) ? $theme : '' }}">
+<body class="{{ isset($theme) ? $theme : '' }} no-js">
     <nav class="navbar">
         <div class="container">
             <div class="grid">
