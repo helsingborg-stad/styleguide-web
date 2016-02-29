@@ -13,12 +13,12 @@ HelsingborgPrime.Prompt.SearchTop = (function ($) {
 
     SearchTop.prototype.bindEvents = function () {
         $('.toggle-search-top').on('click', function (e) {
-            e.preventDefault();
-            this.toggle();
+            this.toggle(e);
         }.bind(this));
     };
 
-    SearchTop.prototype.toggle = function () {
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
         $('.search-top').slideToggle(300);
     };
 
