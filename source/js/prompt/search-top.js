@@ -20,6 +20,7 @@ HelsingborgPrime.Prompt.SearchTop = (function ($) {
     SearchTop.prototype.toggle = function (e) {
         e.preventDefault();
         $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
     };
 
     return new SearchTop();
