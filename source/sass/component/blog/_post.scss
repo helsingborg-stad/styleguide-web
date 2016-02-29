@@ -153,6 +153,19 @@
     }
 }
 
+.no-js .post-collapsed article {
+    max-height: none;
+    overflow: auto;
+
+    &:hover {
+        cursor: auto;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
 .post + .post {
     margin-top: $content-gutter * 2;
 }
