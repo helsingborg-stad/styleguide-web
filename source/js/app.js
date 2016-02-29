@@ -1,3 +1,3 @@
 var HelsingborgPrime = {};
 
-$('body').removeClass('no-js');
+$('html, body').removeClass('no-js');
