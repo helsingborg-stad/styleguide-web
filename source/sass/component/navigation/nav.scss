@@ -67,7 +67,8 @@
     }
 
     // Indicates if a item has children
-    .has-children {
+    .has-children,
+    .page_item_has_children {
         > a::after {
             position: absolute;
             right: 10px;
@@ -132,7 +133,8 @@
     }
 
     // Sub menu
-    .sub-menu {
+    .sub-menu,
+    .children {
         border-top: 1px solid $creamy-darker;
         border-left: 8px solid $creamy-darker;
     }
