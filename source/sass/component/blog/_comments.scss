@@ -69,9 +69,18 @@
         position: relative;
         padding: $content-gutter/1.5 $content-gutter;
         margin-top: 10px;
-        background-color: $palette-red-2;
+        background-color: $palette-gray-2;
         color: #fff;
         border-radius: 5px;
+
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, second);
+                }
+            }
+        }
 
         &::before {
             display: block;
@@ -81,25 +90,70 @@
             top: -8px;
             left: 15px;
 
-            @include arrow('up', 8px, $palette-red-2);
+            @include arrow('up', 8px, $palette-gray-2);
+
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        @include arrow('up', 8px, map-get($color, second));
+                    }
+                }
+            }
         }
     }
 
     &:nth-child(4n + 2) .comment-text {
-        background-color: $palette-red-3;
+        background-color: $palette-gray-3;
         color: #fff;
 
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, third);
+                }
+            }
+        }
+
         &::before {
-            @include arrow('up', 8px, $palette-red-3);
+            @include arrow('up', 8px, $palette-gray-3);
+
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        @include arrow('up', 8px, map-get($color, third));
+                    }
+                }
+            }
         }
     }
 
     &:nth-child(4n + 3) .comment-text {
-        background-color: $palette-red-4;
+        background-color: $palette-gray-4;
         color: #fff;
 
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, fourth);
+                }
+            }
+        }
+
         &::before {
-            @include arrow('up', 8px, $palette-red-4);
+            @include arrow('up', 8px, $palette-gray-4);
+
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        @include arrow('up', 8px, map-get($color, fourth));
+                    }
+                }
+            }
         }
     }
 
@@ -107,8 +161,26 @@
         background-color: $palette-red-5;
         color: #fff;
 
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, fifth);
+                }
+            }
+        }
+
         &::before {
-            @include arrow('up', 8px, $palette-red-5);
+            @include arrow('up', 8px, $palette-gray-5);
+
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        @include arrow('up', 8px, map-get($color, fifth));
+                    }
+                }
+            }
         }
     }
 }
