@@ -18,7 +18,8 @@
 [data-tooltip] {
     position: relative;
 
-    &:hover {
+    &:hover,
+    &:focus {
         &::after {
             position: absolute;
             z-index: $level-9;
