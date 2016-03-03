@@ -156,3 +156,27 @@ input[type="button"].btn::-moz-focus-inner {
 .btn-block + .btn-block {
     margin-top: $content-gutter;
 }
+
+//
+// @name Offcanvas button
+// @description Button that's outside the canvas (window) until it's focused. Mainly used for keyboard navigation shortcuts.
+//
+// @page Buttons/Offcanvas button
+//
+// @markup
+// <a href="#main-content" class="btn btn-offcanvas">Jump to main content</a>
+//
+.btn-offcanvas {
+    position: absolute;
+    top: -100%;
+    left: 0;
+
+    &:focus {
+        top: 0;
+        z-index: $level-top;
+    }
+
+    & + .btn-offcanvas {
+        margin-top: 0 !important;
+    }
+}
