@@ -63,7 +63,8 @@
         color: #fff;
         text-decoration: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }

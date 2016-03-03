@@ -43,7 +43,8 @@
         font-size: .9rem;
         color: $base-font-color;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: none;
             background-color: darken($creamy-darker, 3%);
         }
@@ -71,7 +72,8 @@
         background-color: transparent;
         padding: 0;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: transparent;
             text-decoration: underline;
         }
