@@ -1,0 +1,40 @@
+.dataTables_wrapper {
+
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_info,
+    .dataTables_paginate {
+        padding: $content-gutter;
+    }
+
+    .dataTables_paginate,
+    .dataTables_info {
+        font-size: .8em;
+    }
+
+    .dataTables_paginate {
+        text-align: right;
+
+        .disabled {
+            color: $gray-dark;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        * + * {
+            margin-left: 5px;
+        }
+    }
+
+    .grid + .grid {
+        margin-top: 0;
+    }
+
+    .datatable {
+        border-left: 0;
+        border-right: 0;
+    }
+
+}
