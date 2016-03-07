@@ -54,6 +54,10 @@ $input-group-height-lg: 54px;
     }
 }
 
+.input-group-addon-btn .btn {
+    line-height: 1;
+}
+
 .input-group-addon-btn {
     background-color: transparent;
     border: none;
