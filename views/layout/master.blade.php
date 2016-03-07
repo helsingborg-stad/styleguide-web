@@ -35,8 +35,9 @@
         }
 
         .markup-preview > .stripe {
-            display: inline-block;
-            height: 400px;
+            position: relative;
+            display: inline-block !important;
+            height: 400px !important;
         }
 
         .states ul li + li {
