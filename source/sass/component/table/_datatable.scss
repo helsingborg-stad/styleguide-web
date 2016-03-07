@@ -7,6 +7,46 @@
         padding: $content-gutter;
     }
 
+    .dataTables_length {
+        font-size: .8em;
+
+        select {
+            width: 60px;
+            margin: 0 5px;
+            padding: 6px;
+            background-size: 20px;
+        }
+    }
+
+    .dataTables_filter {
+        font-size: .8em;
+
+        label {
+            position: relative;
+            display: block;
+            padding: 0;
+            margin: 0;
+
+            &::before {
+                position: absolute;
+                z-index: $level-3;
+                top: 0;
+                left: 0;
+                height: 100%;
+                padding: 7px 9px;
+                background-color: $creamy;
+                border: 1px solid $creamy-darker;
+
+                @include hbg-icon($icon-search);
+            }
+        }
+
+        input {
+            padding: 7px;
+            padding-left: 40px;
+        }
+    }
+
     .dataTables_paginate,
     .dataTables_info {
         font-size: .8em;
@@ -35,6 +75,10 @@
     .datatable {
         border-left: 0;
         border-right: 0;
+    }
+
+    .pagination-wrapper {
+        background-color: $creamy;
     }
 
 }
