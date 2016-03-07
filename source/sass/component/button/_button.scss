@@ -29,6 +29,7 @@ input[type="button"].btn::-moz-focus-inner {
 /* End of button height fix */
 
 .btn {
+    appearance: none;
     display: inline-block;
     vertical-align: middle;
     padding: $btn-padding;
@@ -40,7 +41,7 @@ input[type="button"].btn::-moz-focus-inner {
     color: $base-font-color;
     text-decoration: none;
     cursor: pointer;
-    appearance: none;
+    margin: 0;
 
     &:hover,
     &:focus {
@@ -106,6 +107,73 @@ input[type="button"].btn::-moz-focus-inner {
             }
         }
     }
+}
+
+//
+// @name Button: Themed buttons
+// @description Buttons with color theme colors
+//
+// @page Buttons/Themed
+//
+// @state .btn-theme-first
+// @state .btn-theme-second
+// @state .btn-theme-third
+// @state .btn-theme-fourth
+// @state .btn-theme-fifth
+//
+// @markup
+// <button class="btn btn-theme-first">First color</button>
+// <button class="btn btn-theme-second">Second color</button>
+// <button class="btn btn-theme-third">Third color</button>
+// <button class="btn btn-theme-fourth">Fourth color</button>
+// <button class="btn btn-theme-fifth">Fifth color</button>
+//
+
+@mixin btn-theme ($default, $colorNum: 'first') {
+    background-color: $default;
+    color: #fff;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, $colorNum);
+            }
+        }
+    }
+
+    &:hover {
+        background-color: darken($palette-gray-1, 3%);
+
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: darken(map-get($color, $colorNum), 3%);
+                }
+            }
+        }
+    }
+}
+
+.btn-theme-first {
+    @include btn-theme($palette-gray-1, 'first');
+}
+
+.btn-theme-second {
+    @include btn-theme($palette-gray-2, 'second');
+}
+
+.btn-theme-third {
+    @include btn-theme($palette-gray-3, 'third');
+}
+
+.btn-theme-fourth {
+    @include btn-theme($palette-gray-4, 'fourth');
+}
+
+.btn-theme-fifth {
+    @include btn-theme($palette-gray-5, 'fifth');
 }
 
 //
