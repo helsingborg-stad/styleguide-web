@@ -6,6 +6,8 @@
     .dataTables_info,
     .dataTables_paginate {
         padding: $content-gutter;
+        width: 50%;
+        float: left;
     }
 
     .dataTables_length {
@@ -82,4 +84,31 @@
         background-color: $creamy;
     }
 
+    .sorting,
+    .sorting_asc,
+    .sorting_desc {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .sorting::after {
+        display: block;
+        @include center(false, true);
+        right: $content-gutter;
+        @include hbg-icon($icon-sort);
+    }
+
+    .sorting_asc::after {
+        display: block;
+        @include center(false, true);
+        right: $content-gutter;
+        @include hbg-icon($icon-sort-asc);
+    }
+
+    .sorting_desc::after {
+        display: block;
+        @include center(false, true);
+        right: $content-gutter;
+        @include hbg-icon($icon-sort-desc);
+    }
 }
