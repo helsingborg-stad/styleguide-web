@@ -1,6 +1,7 @@
 //
 // @name Cookie consent
 //
+/*
 HelsingborgPrime = HelsingborgPrime || {};
 HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
 
@@ -69,3 +70,4 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
     return new CookieConsent();
 
 })(jQuery);
+*/
