@@ -6,11 +6,12 @@
 // @page Special/Slider
 //
 // @state .slider-nav-hover - Only show slider nav buttons on slider hover
+// @state .text-block-center - You can center the text in the text block by adding this class to text-block element
 //
 // @markup
 // <div class="slider ratio-16-9">
 //     <ul>
-//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=488');"><span class="text-block">Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</span></div></li>
+//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=488');"><span class="text-block text-block-center"><span>Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</span></span></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
 //         <li><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></li>
@@ -109,18 +110,37 @@
     .text-block {
         padding: $grid-gutter-sm ($grid-gutter-md/3)*2;
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(#000,.7); //default
+        @include cover();
+        top: auto;
+        z-index: 2;
+        background-color: rgba(#000, .7); //default
         color: #fff;
         font-size: .9em;
+
+        &.text-block-center {
+            background-color: rgba(#000, .4);
+            text-align: center;
+            padding: 0;
+            top: 0;
+
+            span {
+                font-size: 2em;
+                line-height: 1.2;
+                text-shadow: 0 0 20px #000;
+                padding: 0;
+                @include center();
+            }
+        }
 
         // Color theme styles
         @if ($includeThemes == true) {
             @each $theme, $color in $themes {
                 .theme-#{$theme} &:not([class*="stripe-"]) {
                     background-color: rgba(map-get($color, second),.9);
+
+                    &.text-block-center {
+                        background-color: rgba(#000, .4) !important;
+                    }
                 }
             }
         }
