@@ -21,7 +21,7 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
         d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
 
         var expires = "expires=" + d.toUTCString();
-        document.cookie = name + "=" + value.toString() + "; " + expires;
+        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
 
         return true;
     };
