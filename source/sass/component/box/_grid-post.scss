@@ -1,0 +1,197 @@
+.box-post-brick {
+    $animation-speed: 300ms;
+    $lead-height: 150px;
+
+    position: relative;
+    display: block;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .box-image {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+        filter: gray; /* IE6-9 */
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+
+        transition: $animation-speed all ease-in-out;
+
+        img {
+            display: none;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            content: '';
+            @include gradient(rgba(#000, 0), rgba(#000, .8));
+        }
+    }
+
+    .box-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        padding: 15px 20px;
+        transition: $animation-speed all ease-in-out;
+    }
+
+    .post-title {
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.5rem;
+        text-transform: none;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+
+    .box-post-brick-date {
+        padding: 2px 5px;
+        font-size: 1rem;
+        line-height: 1;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .box-post-brick-lead {
+        opacity: 0;
+        padding: 0 20px 0 20px;
+        transition: $animation-speed all ease-in-out;
+        font-size: .9em;
+        color: #fff;
+        height: $lead-height;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+
+        &::after {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            content: '';
+            @include gradient(rgba(#000, 0), rgba(#000, 1));
+        }
+    }
+
+    .event-action {
+        opacity: 0;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        transition: 300ms opacity ease-in-out,
+                    100ms background-color;
+    }
+
+    &:hover {
+        .box-image {
+            filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+        }
+
+        .box-title {
+
+        }
+
+        .box-content {
+            transform: translateY(-$lead-height);
+        }
+
+        .box-post-brick-lead {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .event-action {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.grid > [class*="grid-"]:nth-child(5n + 1) > .box-post-brick {
+    background-color: $palette-gray-1;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, first);
+            }
+        }
+    }
+}
+
+.grid > [class*="grid-"]:nth-child(5n + 2) > .box-post-brick {
+    background-color: $palette-gray-2;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+}
+
+.grid > [class*="grid-"]:nth-child(5n + 3) > .box-post-brick {
+    background-color: $palette-gray-3;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, third);
+            }
+        }
+    }
+}
+
+.grid > [class*="grid-"]:nth-child(5n + 4) > .box-post-brick {
+    background-color: $palette-gray-4;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
+        }
+    }
+}
+
+.grid > [class*="grid-"]:nth-child(5n + 5)  > .box-post-brick{
+    background-color: $palette-gray-5;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fifth);
+            }
+        }
+    }
+}
