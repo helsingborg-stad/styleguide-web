@@ -15,3 +15,11 @@
 //    </div>
 // </form>
 //
+
+.search-top {
+    padding: $content-gutter 0;
+
+    label {
+        display: none;
+    }
+}
