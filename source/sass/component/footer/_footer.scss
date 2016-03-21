@@ -62,6 +62,7 @@
 
     a {
         color: #fff;
+        text-decoration: underline;
     }
 
     ul + ul {
@@ -75,6 +76,17 @@
             display: inline-block;
             a {
                 font-size: 2em;
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    color: #fff !important;
+                }
             }
         }
     }
