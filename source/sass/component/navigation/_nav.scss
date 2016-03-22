@@ -252,14 +252,6 @@ $nav-duration: 200ms;
 // ***************************************************************
 // *** Navigation modifiers
 // ***************************************************************
-.nav-justify {
-    display: table;
-    width: 100%;
-
-    li {
-        display: table-cell;
-    }
-}
 
 .nav-horizontal {
     > li {
@@ -269,4 +261,28 @@ $nav-duration: 200ms;
             margin-left: 15px;
         }
     }
+}
+
+.nav-justify {
+    display: table;
+    width: 100%;
+
+    > li {
+        display: table-cell;
+    }
+}
+
+.nav-left {
+    @extend .nav-horizontal;
+    text-align: left;
+}
+
+.nav-center {
+    @extend .nav-horizontal;
+    text-align: center;
+}
+
+.nav-right {
+    @extend .nav-horizontal;
+    text-align: right;
 }
