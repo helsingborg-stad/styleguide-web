@@ -12,6 +12,10 @@
     }
 }
 
+.creamy .box {
+    background-color: #fff;
+}
+
 .box + .box {
     margin-bottom: 0;
     margin-top: $content-gutter;
