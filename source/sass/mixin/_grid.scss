@@ -1,0 +1,50 @@
+@mixin grid($media-query: $screen-xs-up, $grid-size: 'xs') {
+    @media #{$media-query} {
+        @for $i from 1 to $grid-column-count + 1 {
+            .grid-#{$grid-size}-#{$i} {
+                display: block;
+                float: left;
+                width: (100% / $grid-column-count) * $i;
+            }
+
+            $nth: ($grid-column-count / $i) + 1;
+            .grid-#{$grid-size}-#{$i}:nth-child(#{$nth}n + #{$nth}) {
+                clear: both;
+            }
+        }
+
+        .grid-tester::after {
+            content: $grid-size;
+        }
+    }
+}
+
+
+@mixin grid-table {
+    display: table;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+
+    [class*="grid-"] {
+        display: table-cell;
+        float: none;
+    }
+
+    &.no-padding {
+        padding-left: 0;
+        padding-right: 0;
+
+        [class*="grid-"] {
+            padding: 0;
+        }
+    }
+
+    .grid-col-icon {
+        width: 1%;
+        white-space: nowrap;
+        padding-right: 0;
+    }
+}

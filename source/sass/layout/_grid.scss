@@ -65,64 +65,20 @@
 // ***************************************************************
 
 // X-Small screens
-@media #{$screen-xs-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-xs-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-
-    .grid-tester::after {
-        content: 'xs';
-    }
-}
+// This will generate grid-xs-*
+@include grid($screen-xs-up, 'xs');
 
 // Small screens
-@media #{$screen-sm-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-sm-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-
-    .grid-tester::after {
-        content: 'sm';
-    }
-}
+// This will generate grid-sm-*
+@include grid($screen-sm-up, 'sm');
 
 // Medium screens
-@media #{$screen-md-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-md-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-
-    .grid-tester::after {
-        content: 'md';
-    }
-}
+// This will generate grid-md-*
+@include grid($screen-md-up, 'md');
 
 // Large screens and up
-@media #{$screen-lg-up} {
-    @for $i from 1 to $grid-column-count + 1 {
-        .grid-lg-#{$i} {
-            display: block;
-            float: left;
-            width: (100% / $grid-column-count) * $i;
-        }
-    }
-
-    .grid-tester::after {
-        content: 'lg';
-    }
-}
+// This will generate grid-lg-*
+@include grid($screen-lg-up, 'lg');
 
 .grid-tester {
     position: fixed;
@@ -226,34 +182,6 @@
 // ***************************************************************
 // *** Grid as display table (to be able to vertical align)
 // ***************************************************************
-@mixin grid-table {
-    display: table;
-    width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0;
-    padding-right: 0;
-
-    [class*="grid-"] {
-        display: table-cell;
-        float: none;
-    }
-
-    &.no-padding {
-        padding-left: 0;
-        padding-right: 0;
-
-        [class*="grid-"] {
-            padding: 0;
-        }
-    }
-
-    .grid-col-icon {
-        width: 1%;
-        white-space: nowrap;
-        padding-right: 0;
-    }
-}
 
 .grid-table {
     @include grid-table;
