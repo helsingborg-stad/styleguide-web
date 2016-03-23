@@ -9,6 +9,14 @@
 //     <div class="grid-md-3">grid-md-3</div>
 //     <div class="grid-md-9">grid-md-9</div>
 // </div>
+// <div class="grid grid-example">
+//     <div class="grid-md-4">ett</div>
+//     <div class="grid-md-4">två<br>tre</div>
+//     <div class="grid-md-4">fyra</div>
+//     <div class="grid-md-4">fem</div>
+//     <div class="grid-md-4">sex<br>sju</div>
+//     <div class="grid-md-4">åtta</div>
+// </div>
 //
 
 // ***************************************************************
@@ -66,19 +74,19 @@
 
 // X-Small screens
 // This will generate grid-xs-*
-@include grid($screen-xs-up, 'xs');
+@include grid($screen-xs-up, $screen-xs, 'xs');
 
 // Small screens
 // This will generate grid-sm-*
-@include grid($screen-sm-up, 'sm');
+@include grid($screen-sm-up, $screen-sm, 'sm');
 
 // Medium screens
 // This will generate grid-md-*
-@include grid($screen-md-up, 'md');
+@include grid($screen-md-up, $screen-md, 'md');
 
 // Large screens and up
 // This will generate grid-lg-*
-@include grid($screen-lg-up, 'lg');
+@include grid($screen-lg-up, $screen-lg, 'lg');
 
 .grid-tester {
     position: fixed;
