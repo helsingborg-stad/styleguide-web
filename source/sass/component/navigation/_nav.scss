@@ -67,7 +67,8 @@
 
     // Indicates if a item has children
     .has-children,
-    .page_item_has_children {
+    .page_item_has_children,
+    .menu-item-has-children {
         > a::after {
             position: absolute;
             right: 10px;
@@ -81,7 +82,9 @@
     // Indicates currently active menu item that has children
     .has-children.current,
     .has-children.current-node,
-    .has-children.current-ancestor {
+    .has-children.current-ancestor,
+    .menu-item-has-children.current-menu-item,
+    .menu-item-has-children.current-menu-ancestor {
         > a::after {
             position: absolute;
             right: 12px;
@@ -90,16 +93,23 @@
             font-size: 1em;
             color: $gray-light;
         }
+
+        > .sub-menu,
+        > .children {
+            display: block;
+        }
     }
 
     // Current
 
     .current,
-    .current-node {
+    .current-node,
+    .current-menu-item {
         background-color: $creamy;
     }
 
-    .current > a {
+    .current,
+    .current-menu-item > a {
         color: $palette-gray-4;
 
         // Color theme styles
@@ -112,21 +122,24 @@
         }
     }
 
-    .sub-menu .current > a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -8px;
-        bottom: 0;
-        width: 8px;
-        display: block;
-        background-color: $palette-gray-4;
+    .sub-menu .current,
+    .sub-menu .current-menu-item {
+        > a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -8px;
+            bottom: 0;
+            width: 8px;
+            display: block;
+            background-color: $palette-gray-4;
 
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, fourth);
+            // Color theme styles
+            @if ($includeThemes == true) {
+                @each $theme, $color in $themes {
+                    .theme-#{$theme} & {
+                        background-color: map-get($color, fourth);
+                    }
                 }
             }
         }
@@ -135,6 +148,7 @@
     // Sub menu
     .sub-menu,
     .children {
+        display: none;
         border-top: 1px solid $creamy-darker;
         border-left: 8px solid $creamy-darker;
     }
