@@ -1,10 +1,59 @@
-.header-casual {
+.site-header > .container {
+    position: relative;
+    padding: $content-gutter 0;
+
+    @media screen and (min-width: 769px) {
+        > .grid {
+            display: table;
+            width: 100%;
+
+            [class*="grid-"] {
+                display: table-cell;
+                vertical-align: middle;
+                float: none;
+            }
+        }
+    }
+}
+
+.site-header.header-casual {
+    background-color: $palette-gray-4;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
+        }
+    }
+
+    > .container {
+        padding: $content-gutter 0 0 0;
+    }
+
+    .navbar-mainmenu {
+        padding-top: 0;
+    }
+
     .logotype {
         display: table;
     }
 
     .navbar {
         margin-top: 0;
+    }
+
+    .menu-header-tabs .nav-tabs {
+        box-shadow: none;
+    }
+
+    .top-search {
+        box-shadow: none;
+    }
+
+    .menu-help a {
+        color: #fff;
     }
 }
 

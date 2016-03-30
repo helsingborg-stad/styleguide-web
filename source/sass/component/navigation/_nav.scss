@@ -253,6 +253,26 @@ $nav-duration: 200ms;
     }
 }
 
+.header-casual {
+    .menu-trigger {
+        .menu-icon {
+            background-color: #fff !important;
+
+            &::before,
+            &::after {
+                background-color: #fff !important;
+            }
+        }
+
+        &:target,
+        &.open {
+            .menu-icon {
+                background: transparent !important;
+            }
+        }
+    }
+}
+
 
 // ***************************************************************
 // *** Navigation actions
@@ -287,6 +307,7 @@ $nav-duration: 200ms;
 
     > li {
         display: table-cell;
+        vertical-align: middle;
     }
 }
 

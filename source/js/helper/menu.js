@@ -26,7 +26,7 @@ HelsingborgPrime.Helper.Menu = (function ($) {
             target.toggleClass('open');
         }
 
-        $('body').toggleClass('overflow-hidden');
+        //$('body').toggleClass('overflow-hidden');
     };
 
     Menu.prototype.bindEvents = function () {
