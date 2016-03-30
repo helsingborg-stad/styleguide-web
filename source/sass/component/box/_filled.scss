@@ -1,6 +1,6 @@
 //
 // @name Filled
-// @description Filled box. Typically used in sidebars.
+// @description Filled box. Typically used in sidebars. If used in a looping grid the filled boxes will be coloured according to the brand stripe colors.
 //
 // @page Boxes/Filled
 //
@@ -23,7 +23,9 @@
     background-color: $palette-gray-2;
     color: #fff;
 
-    .box-title {
+    .box-title,
+    h2 {
+        @extend h4;
         padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
     }
 
@@ -37,9 +39,15 @@
     }
 }
 
-.box-filled-1 {
+.sidebar-right-sidebar .widget_text,
+.sidebar-left-sidebar .widget_text {
     @extend .box-filled;
-    background-color: $palette-gray-1;
+    padding: 5px;
+}
+
+.box-filled-1,
+[class*="grid-"]:nth-child(5n + 1) .box-filled {
+    @extend .box-filled;
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -51,9 +59,9 @@
     }
 }
 
-.box-filled-2 {
+.box-filled-2,
+[class*="grid-"]:nth-child(5n + 2) .box-filled {
     @extend .box-filled;
-    background-color: $palette-gray-2;
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -65,9 +73,9 @@
     }
 }
 
-.box-filled-3 {
+.box-filled-3,
+[class*="grid-"]:nth-child(5n + 3) .box-filled {
     @extend .box-filled;
-    background-color: $palette-gray-3;
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -79,9 +87,9 @@
     }
 }
 
-.box-filled-4 {
+.box-filled-4,
+[class*="grid-"]:nth-child(5n + 4) .box-filled {
     @extend .box-filled;
-    background-color: $palette-gray-4;
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -93,9 +101,9 @@
     }
 }
 
-.box-filled-4 {
+.box-filled-5,
+[class*="grid-"]:nth-child(5n + 5) .box-filled {
     @extend .box-filled;
-    background-color: $palette-gray-5;
 
     // Color theme styles
     @if ($includeThemes == true) {

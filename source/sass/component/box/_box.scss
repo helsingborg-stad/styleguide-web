@@ -21,7 +21,8 @@
     margin-top: $content-gutter;
 }
 
-.box-content {
+.box-content,
+.textwidget {
     padding: $content-gutter/1.5;
     font-size: .9em;
 }
