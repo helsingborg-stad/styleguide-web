@@ -12,10 +12,6 @@
     }
 }
 
-.creamy .box {
-    background-color: #fff;
-}
-
 .box + .box {
     margin-bottom: 0;
     margin-top: $content-gutter;
@@ -23,6 +19,7 @@
 
 .box-content,
 .textwidget {
+    background-color: #fff;
     padding: $content-gutter/1.5;
     font-size: .9em;
 }
