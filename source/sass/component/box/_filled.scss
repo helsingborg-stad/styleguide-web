@@ -12,8 +12,8 @@
 //
 // @markup
 // <div class="box box-filled-3">
+//     <h4 class="box-title">Chupa chups</h4>
 //     <div class="box-content">
-//         <h4>Chupa chups</h4>
 //         <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>
 //     </div>
 // </div>
@@ -22,6 +22,10 @@
 .box-filled {
     background-color: $palette-gray-2;
     color: #fff;
+
+    .box-title {
+        padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
+    }
 
     // Color theme styles
     @if ($includeThemes == true) {
