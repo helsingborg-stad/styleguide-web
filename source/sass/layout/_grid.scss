@@ -27,6 +27,11 @@
     @extend .clearfix;
 }
 
+.grid.no-gutter [class*="grid-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .grid-va-middle {
     [class*="grid-"] {
         vertical-align: middle;
