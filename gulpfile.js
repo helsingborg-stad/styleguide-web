@@ -102,7 +102,7 @@ gulp.task('dss-js', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['scripts', 'dss-js']);
-    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'dss-sass']);
+    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
 });
 
 // Default Task
