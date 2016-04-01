@@ -9,6 +9,7 @@
 @import 'config/z-index';
 @import 'config/table';
 @import 'config/themes';
+@import 'config/box';
 
 // ***************************************************************
 // *** Tools
@@ -130,11 +131,16 @@
 // ***************************************************************
 // *** Wordpress standard
 // ***************************************************************
+@import 'component/wordpress/widget';
+@import 'component/wordpress/widget-nav-menu';
 @import 'component/wordpress/widget-calendar';
 @import 'component/wordpress/widget-lists';
-@import 'component/wordpress/widget-nav-menu';
 @import 'component/wordpress/widget-rss';
 @import 'component/wordpress/widget-search';
+
+/*
+@import 'component/wordpress/widget-text';
+*/
 
 // ***************************************************************
 // *** Animation components

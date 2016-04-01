@@ -67,7 +67,13 @@
     display: block;
     padding: 0;
 
-    .box-title {
+    .box-title,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6  {
         padding: $cell-padding;
         margin: 0;
         background-color: $palette-gray-4;
@@ -143,7 +149,13 @@
 }
 
 .box-panel-secondary {
-    .box-title {
+    .box-title,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
         padding: ($content-gutter/1.5 - 1.5) ($content-gutter - 1.5);
         padding-left: 0;
         background-color: transparent !important;

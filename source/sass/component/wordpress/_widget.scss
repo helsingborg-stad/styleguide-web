@@ -1,0 +1,19 @@
+[class^="widget_"]:not(.widget_calendar) {
+    @extend .box;
+
+    *:not(.main-fotter) .textwidget,
+    *:not(.main-fotter) form {
+        @extend .box-content;
+    }
+
+    .sidebar-left-sidebar &,
+    .sidebar-right-sidebar & {
+        @extend .box-filled;
+    }
+
+    .sidebar-content-area &,
+    .sidebar-content-area-bottom & {
+        @extend .box-panel;
+        @extend .box-panel-secondary;
+    }
+}

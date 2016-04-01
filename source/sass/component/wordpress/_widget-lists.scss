@@ -22,25 +22,42 @@
 
 .widget_archive,
 .widget_categories,
-.widget_meta {
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments {
+    .sidebar-left-sidebar &,
+    .sidebar-right-sidebar & {
+        ul {
+            margin: $box-padding;
+        }
 
-  h2.footer-title {
-    @extend .text-highlight
-  }
-
-  li {
-    display: inline;
-    font-size: .9em;
-    &:not(:last-child):after {
-      content: ", ";
+        a {
+            @extend .link-item;
+            @extend .link-item-light;
+            color: #fff;
+        }
     }
-  }
 
-  .tagcloud a {
-    font-size: .9em !important;
-
-    &:not(:last-child):after {
-      content: ", ";
+    .post-date {
+        display: block;
+        font-size: .8em;
     }
-  }
+}
+
+.widget_recent_entries,
+.widget_recent_comments {
+    .sidebar-left-sidebar &,
+    .sidebar-right-sidebar & {
+        li + li {
+            margin-top: 15px;
+        }
+
+        .post-date {
+            margin-left: 20px;
+        }
+    }
+}
+
+#recentcomments .recentcomments a {
+    display: block !important;
 }

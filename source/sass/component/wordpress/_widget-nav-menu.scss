@@ -25,19 +25,14 @@
 //  </div>
 // </div>
 //
-.widget_nav_menu {
 
-  @extend .text-highlight;
-
-  ul {
-    li {
-      &:before {
-        content: "- ";
-      }
-
-      ul.sub-menu {
-        padding-left: 1em;
-      }
-    }
-  }
+.sidebar-left-sidebar .widget_nav_menu > div,
+.sidebar-right-sidebar .widget_nav_menu > div {
+    @extend .box-content;
 }
+
+.sidebar-left-sidebar .widget_nav_menu a,
+.sidebar-right-sidebar .widget_nav_menu a {
+    color: #fff;
+}
+

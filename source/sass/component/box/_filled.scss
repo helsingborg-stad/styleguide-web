@@ -24,8 +24,12 @@
     color: #fff;
 
     .box-title,
-    h2 {
-        @extend h4;
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
         padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
     }
 
@@ -37,12 +41,6 @@
             }
         }
     }
-}
-
-.sidebar-right-sidebar .widget_text,
-.sidebar-left-sidebar .widget_text {
-    @extend .box-filled;
-    padding: 5px;
 }
 
 .box-filled-1,
