@@ -8,28 +8,28 @@
             }
 
             @if ($i < 12) {
-                $nth: ($grid-column-count / $i) + 1;
+                $nth: ($grid-column-count / $i);
 
                 @if ($grid-size == 'xs') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-sm-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + #{$nth}) {
+                    .grid-#{$grid-size}-#{$i}:not([class*="grid-sm-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
                         clear: both;
                     }
                 }
 
                 @if ($grid-size == 'sm') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + #{$nth}) {
+                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
                         clear: both;
                     }
                 }
 
                 @if ($grid-size == 'md') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + #{$nth}) {
+                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
                         clear: both;
                     }
                 }
 
                 @if ($grid-size == 'lg') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-md-"]):nth-child(#{$nth}n + #{$nth}) {
+                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-md-"]):nth-child(#{$nth}n + 1) {
                         clear: both;
                     }
                 }
