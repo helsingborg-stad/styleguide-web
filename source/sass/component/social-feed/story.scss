@@ -88,14 +88,14 @@
 
     li {
         display: inline-block;
-        width: 50%;
+        width: 33.3333%;
         border: 0;
         padding: 0;
     }
 
-    @media #{$screen-md} {
+    @media #{$screen-below-md} {
         li {
-            width: 33.3333%;
+            width: 50% !important;
         }
     }
 
