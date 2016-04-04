@@ -88,9 +88,15 @@
 
     li {
         display: inline-block;
-        width: 33.3333%;
+        width: 50%;
         border: 0;
         padding: 0;
+    }
+
+    @media #{$screen-md} {
+        li {
+            width: 33.3333%;
+        }
     }
 
     .mod-social-image {
