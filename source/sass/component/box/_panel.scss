@@ -127,7 +127,7 @@
 
                 .title,
                 .date {
-                    display: table-row;
+                    display: block;
 
                     @media #{$screen-md-up} {
                         display: table-cell;
