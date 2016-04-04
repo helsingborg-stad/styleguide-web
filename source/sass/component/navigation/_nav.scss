@@ -256,18 +256,18 @@ $nav-duration: 200ms;
 .header-casual {
     .menu-trigger {
         .menu-icon {
-            background-color: #fff !important;
+            background-color: #fff;
 
             &::before,
             &::after {
-                background-color: #fff !important;
+                background-color: #fff;
             }
         }
 
         &:target,
         &.open {
             .menu-icon {
-                background: transparent !important;
+                background: transparent;
             }
         }
     }
