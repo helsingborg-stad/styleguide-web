@@ -1,7 +1,19 @@
 .box {
     display: block;
     padding: $content-gutter / 3;
-    margin-bottom: $content-gutter;
+    margin-bottom: $grid-gutter-xs;
+
+    @media #{$screen-sm} {
+        margin-bottom: $grid-gutter-sm;
+    }
+
+    @media #{$screen-md} {
+        margin-bottom: $grid-gutter-md;
+    }
+
+    @media #{$screen-lg} {
+        margin-bottom: $grid-gutter-lg;
+    }
 
     p + p {
         margin-top: $content-gutter/1.5;

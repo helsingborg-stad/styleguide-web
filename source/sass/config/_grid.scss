@@ -45,7 +45,7 @@ $screen-below-lg: "(max-width: #{$screen-lg-min})";
 // *** 3. Gutter
 // ***************************************************************
 
-$grid-gutter-xs: 0;
+$grid-gutter-xs: 10px;
 $grid-gutter-sm: 10px;
 $grid-gutter-md: 30px;
 $grid-gutter-lg: 30px;
