@@ -1,3 +1,9 @@
 iframe[src*='google.com/maps/'] {
     width: 100%;
 }
+
+.image-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
