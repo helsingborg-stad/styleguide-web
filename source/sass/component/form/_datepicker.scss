@@ -17,7 +17,7 @@
     max-width: 300px;
     width: 100%;
     border: 1px solid $creamy-darker;
-    box-shadow: 5px 0 7px $creamy-darker;
+    box-shadow: 0 5px 15px rgba(#000, .5);
 }
 
 .ui-datepicker-header {
@@ -126,7 +126,8 @@
         text-align: center;
     }
 
-    td a {
+    td a,
+    td span {
         $size: 28px;
         display: inline-block;
         width: $size;
@@ -178,11 +179,27 @@
             color: #fff;
         }
     }
+
+    td.ui-datepicker-unselectable span {
+        opacity: .3;
+        cursor: no-drop;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    td.ui-datepicker-week-end + td.ui-datepicker-week-end a {
+        color: $palette-red-5;
+
+        &.ui-state-active {
+            color: #fff;
+        }
+    }
 }
 
 .ui-datepicker-buttonpane {
     border-top: 1px solid $creamy-darker;
-
     padding: 5px $content-gutter;
 
     button {

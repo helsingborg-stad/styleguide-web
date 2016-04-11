@@ -206,6 +206,29 @@
 }
 
 //
+// @name Text transform
+// @description Transforms text
+//
+// @page Typography/Text transform
+//
+// @markup
+// <span class="text-uppercase">Underlined</span>
+// <span class="text-lowercase">Underlined</span>
+// <span class="text-capitalize">Underlined</span>
+//
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+//
 // @name Mark
 // @description Mark text to make it stand out.
 //

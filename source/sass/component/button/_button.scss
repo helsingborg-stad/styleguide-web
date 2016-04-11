@@ -216,9 +216,12 @@ input[type="button"].btn::-moz-focus-inner {
 
 .btn-block {
     display: block;
-    padding: $content-gutter;
     width: 100%;
     text-align: center;
+}
+
+.btn-block-lg {
+    padding: $content-gutter;
 }
 
 .btn-block + .btn-block {
