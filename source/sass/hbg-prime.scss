@@ -98,6 +98,7 @@
 @import 'component/form/input';
 @import 'component/form/select';
 @import 'component/form/input-group';
+@import 'component/form/datepicker';
 
 @import 'component/dropdown/dropdown';
 
@@ -150,3 +151,5 @@
 // *** Trumps
 // ***************************************************************
 @import 'trumps/wp';
+
+@import '../../node_modules/zebra_datepicker/public/css/default.css';
