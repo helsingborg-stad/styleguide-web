@@ -33,18 +33,24 @@
 }
 
 .grid-va-middle {
+    align-items: center;
+
     [class*="grid-"] {
         vertical-align: middle;
     }
 }
 
 .grid-va-top {
+    align-items: top;
+
     [class*="grid-"] {
         vertical-align: top;
     }
 }
 
 .grid-va-bottom {
+    align-items: bottom;
+
     [class*="grid-"] {
         vertical-align: bottom;
     }

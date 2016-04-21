@@ -5,6 +5,11 @@
         flex: 0 1 auto;
         flex-direction: row;
         flex-wrap: wrap;
+
+        > div:not([class*="grid-"]) {
+            flex: 1 0 auto;
+            flex-basis: 100%;
+        }
     }
 
     [class*="grid-"] {
