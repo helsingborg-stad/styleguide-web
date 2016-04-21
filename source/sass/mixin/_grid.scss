@@ -6,34 +6,6 @@
                 float: left;
                 width: (100% / $grid-column-count) * $i;
             }
-
-            @if ($i < 12) {
-                $nth: ($grid-column-count / $i);
-
-                @if ($grid-size == 'xs') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-sm-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
-                        clear: both;
-                    }
-                }
-
-                @if ($grid-size == 'sm') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-md-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
-                        clear: both;
-                    }
-                }
-
-                @if ($grid-size == 'md') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-lg-"]):nth-child(#{$nth}n + 1) {
-                        clear: both;
-                    }
-                }
-
-                @if ($grid-size == 'lg') {
-                    .grid-#{$grid-size}-#{$i}:not([class*="grid-xs-"]):not([class*="grid-sm-"]):not([class*="grid-md-"]):nth-child(#{$nth}n + 1) {
-                        clear: both;
-                    }
-                }
-            }
         }
 
         .grid-tester::after {
@@ -42,6 +14,17 @@
     }
 }
 
+@mixin grid-flexbox($media-query-up: $screen-xs-up, $media-query: $screen-xs, $grid-size: 'xs') {
+    @media #{$media-query-up} {
+        @for $i from 1 to $grid-column-count + 1 {
+            .grid-#{$grid-size}-#{$i} {
+                width: auto;
+                flex-basis: (100% / $grid-column-count) * $i;
+                max-width: (100% / $grid-column-count) * $i;
+            }
+        }
+    }
+}
 
 @mixin grid-table {
     display: table;

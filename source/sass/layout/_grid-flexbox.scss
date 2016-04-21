@@ -1,0 +1,35 @@
+@supports (display: flex) {
+
+    .grid {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    [class*="grid-"] {
+        flex: 1 0 auto;
+        flex-basis: 100%;
+    }
+
+    .grid-auto {
+        flex-basis: 0;
+    }
+
+    // X-Small screens
+    // This will generate grid-xs-*
+    @include grid-flexbox($screen-xs-up, $screen-xs, 'xs');
+
+    // Small screens
+    // This will generate grid-sm-*
+    @include grid-flexbox($screen-sm-up, $screen-sm, 'sm');
+
+    // Medium screens
+    // This will generate grid-md-*
+    @include grid-flexbox($screen-md-up, $screen-md, 'md');
+
+    // Large screens and up
+    // This will generate grid-lg-*
+    @include grid-flexbox($screen-lg-up, $screen-lg, 'lg');
+
+}
