@@ -20,15 +20,30 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
     function EqualHeight() {
         $(function(){
 
-            this.init();
-
-            $(window).on('resize', function () {
-                this.destroy();
+            // Initialize if flexbox not supported
+            if (!this.supportsFlexbox()) {
                 this.init();
-            }.bind(this));
+
+                $(window).on('resize', function () {
+                    this.destroy();
+                    this.init();
+                }.bind(this));
+            }
 
         }.bind(this));
     }
+
+    /**
+     * Check if browser supports flexbox
+     * @return {boolean}
+     */
+    EqualHeight.prototype.supportsFlexbox = function () {
+        if (typeof document.createElement("p").style.flexWrap != 'undefined' && document.createElement("p").style.flexWrap == '') {
+            return true;
+        }
+
+        return false;
+    };
 
     /**
      * Resets heights to auto
