@@ -53,6 +53,7 @@
     .logotype {
         display: inline-block;
         margin-bottom: 10px;
+        text-decoration: none;
 
         img, svg {
             width: auto;
@@ -71,11 +72,20 @@
 
     .icons-list {
         li {
-            padding-left: $grid-gutter-sm;
-            padding-right: $grid-gutter-sm;
             display: inline-block;
+            line-height: 1;
+
+            & + li {
+                margin-left: $grid-gutter-sm;
+            }
+
             a {
-                font-size: 2em;
+                font-size: 3em;
+                opacity: .8;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -89,6 +99,10 @@
                 }
             }
         }
+    }
+
+    .widget_text {
+        padding: 0;
     }
 }
 
