@@ -16,6 +16,29 @@
     }
 }
 
+.site-header.header-casual,
+.site-header.header-jumbo {
+    .menu-trigger {
+        color: #fff;
+
+        .menu-icon {
+            background-color: #fff;
+
+            &::before,
+            &::after {
+                background-color: #fff;
+            }
+        }
+
+        &:target,
+        &.open {
+            .menu-icon {
+                background: transparent;
+            }
+        }
+    }
+}
+
 .site-header.header-casual {
     background-color: $palette-gray-4;
 
