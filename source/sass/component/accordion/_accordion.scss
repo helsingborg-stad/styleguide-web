@@ -91,6 +91,10 @@
 		padding-bottom: $grid-gutter-sm;
 	}
 
+    .accordion-table-head {
+        padding: $grid-gutter-sm/2 $grid-gutter-sm;
+    }
+
 	&.boxes-medium,
 	&.box-medium,
 	&.list-medium {
@@ -107,6 +111,10 @@
 			padding-top: $grid-gutter-md;
 			padding-bottom: $grid-gutter-md;
 		}
+
+        .accordion-table-head {
+            padding: $grid-gutter-md/2 $grid-gutter-md;
+        }
 	}
 
 	&.boxes-large,
@@ -125,6 +133,10 @@
 			padding-top: $grid-gutter-lg;
 			padding-bottom: $grid-gutter-lg;
 		}
+
+        .accordion-table-head {
+            padding: $grid-gutter-lg/2 $grid-gutter-lg;
+        }
 	}
 
 	.accordion-section {
@@ -185,5 +197,31 @@
     input[type="radio"]:checked ~ &,
     input[type="radio"]:target ~ & {
         display: block;
+    }
+}
+
+.accordion-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .column-header {
+        display: table-cell;
+        width: 2%;
+    }
+}
+
+.accordion-table-head {
+    background-color: $palette-gray-2;
+    color: #fff;
+    font-weight: bold;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
     }
 }
