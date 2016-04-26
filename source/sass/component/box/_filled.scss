@@ -44,6 +44,10 @@
         color: #fff;
     }
 
+    img {
+        @extend .img-inherit-width;
+    }
+
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {

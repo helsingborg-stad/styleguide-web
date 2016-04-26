@@ -28,6 +28,11 @@
         text-decoration: none;
         background-color: $creamy;
     }
+
+    img:not(.box-image) {
+        @extend .img-inherit-width;
+    }
+
 }
 
 a.box-index {
