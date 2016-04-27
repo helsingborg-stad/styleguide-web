@@ -9,6 +9,9 @@
 // @state .hidden-sm - Hidden on small screens
 // @state .hidden-md - Hidden on medium screens
 // @state .hidden-lg - Hidden on large screens
+// @state .hidden-print - Hidden in print
+// @state .print-only - Display only in print
+//
 
 .hidden {
 	display: none !important;
@@ -47,5 +50,25 @@
 
 	&:target {
 		display: block;
+	}
+}
+
+
+.print-only {
+	display: none;
+}
+
+@media print {
+	.hidden-print {
+		display: none;
+	}
+
+	.print-only {
+		display: block !important;
+	}
+
+	.print-grow {
+		flex: 1 1 auto;
+		max-width: 100%;
 	}
 }

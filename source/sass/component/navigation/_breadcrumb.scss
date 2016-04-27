@@ -46,4 +46,26 @@
             text-decoration: underline;
         }
     }
+
+    @media #{$screen-below-sm} {
+        li {
+            display: none;
+        }
+
+        //li:last-child,
+        li:nth-last-child(2) {
+            display: inline-block;
+
+            &::after {
+                display: none;
+            }
+
+            a::before {
+                display: inline-block;
+                @include hbg-icon($icon-arrow-left);
+                padding-right: 5px;
+                color: #000;
+            }
+        }
+    }
 }
