@@ -15,7 +15,7 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
     var breaks = [];
 
     function MenuPriority() {
-        if ($('.header-jumbo').length > 0) {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
             this.init();
         }
     }
@@ -61,8 +61,16 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
             }
         }
 
+        /*
+        console.table({
+            'visible-links' : $vlinks.width(),
+            'available-space' : availableSpace,
+            'breaks' : breaks.length
+        });
+        */
+
         // Rerun if nav is still overflowing
-        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0) {
+        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
             this.updateNavigation();
         }
     };

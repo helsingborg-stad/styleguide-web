@@ -1,0 +1,115 @@
+/**
+ * Top level
+ */
+.header-business .nav-dropdown > li,
+.header-casual .nav-dropdown > li {
+    padding: 0 !important;
+
+    a {
+        padding: $content-gutter;
+    }
+}
+.nav-dropdown > li > ul.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: $level-top;
+    top: 100%;
+    left: 0;
+}
+
+.nav-dropdown > li.menu-item-has-children {
+    > a {
+        position: relative;
+        padding-right: $content-gutter * 3;
+
+        &::after {
+            @include hbg-icon($icon-caret-down);
+            position: absolute;
+            right: $content-gutter;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover {
+        background-color: darken($palette-gray-4, 10%);
+
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: darken(map-get($color, fourth), 10%);
+                }
+            }
+        }
+    }
+}
+
+.nav-dropdown > li:hover > ul.sub-menu {
+    display: block;
+}
+
+.nav-dropdown > li {
+    position: relative;
+}
+
+.nav-dropdown ul.sub-menu {
+    background-color: darken($palette-gray-4, 8%);
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: darken(map-get($color, fourth), 10%);
+            }
+        }
+    }
+}
+
+/**
+ * Sub menu
+ */
+.nav-dropdown ul.sub-menu {
+    li {
+        display: block;
+        padding: 0;
+        position: relative;
+
+        ul.sub-menu {
+            display: none;
+        }
+    }
+
+    li.menu-item-has-children > a {
+        position: relative;
+        padding-right: $content-gutter * 3;
+
+        &::after {
+            @include hbg-icon($icon-caret-right);
+            position: absolute;
+            right: $content-gutter;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    li:hover > ul.sub-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    li:first-child {
+        padding-top: 5px;
+    }
+
+    li:last-child {
+        padding-bottom: 5px;
+    }
+
+    a {
+        display: block;
+        padding: 5px $content-gutter;
+    }
+}
