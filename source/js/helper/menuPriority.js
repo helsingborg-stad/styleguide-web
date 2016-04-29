@@ -13,6 +13,7 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
 
     var availableSpace = 0;
     var breaks = [];
+    var breakWasTwoOrMore = false;
 
     function MenuPriority() {
         if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
@@ -35,6 +36,11 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
 
     MenuPriority.prototype.updateNavigation = function () {
         availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
+
+        if (breaks.length == 1 && breakWasTwoOrMore === true) {
+            availableSpace = $nav.parent().first().width();
+            breakWasTwoOrMore= false;
+        }
 
         // The visible list is overflowing the available space
         if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
@@ -61,13 +67,9 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
             }
         }
 
-        /*
-        console.table({
-            'visible-links' : $vlinks.width(),
-            'available-space' : availableSpace,
-            'breaks' : breaks.length
-        });
-        */
+        if (breaks.length > 1) {
+            breakWasTwoOrMore = true;
+        }
 
         // Rerun if nav is still overflowing
         if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
