@@ -38,11 +38,11 @@
     // This will generate grid-lg-*
     @include grid-flexbox($screen-lg-up, $screen-lg, 'lg');
 
-    [data-equal-container] [class*="grid-"] {
+    [data-equal-container] > [class*="grid-"] {
         display: flex;
     }
 
-    [data-equal-container] [data-equal-item] {
+    [data-equal-container] > [data-equal-item] {
         display: flex;
     }
 
