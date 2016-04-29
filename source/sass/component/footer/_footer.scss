@@ -104,6 +104,18 @@
     .widget_text {
         padding: 0;
     }
+
+    .box {
+        .box-title,
+        .box-content {
+            padding: 0;
+            border: none;
+        }
+
+        .box-title {
+            padding: 0 0 10px 0;
+        }
+    }
 }
 
 .markup-preview .main-footer {

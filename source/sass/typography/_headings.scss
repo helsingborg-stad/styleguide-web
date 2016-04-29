@@ -32,6 +32,10 @@ h6, .h6 {
         padding-bottom: .1em;
         margin-bottom: .5em;
     }
+
+    @media print {
+        color: #000 !important;
+    }
 }
 
 h1, .h1 {

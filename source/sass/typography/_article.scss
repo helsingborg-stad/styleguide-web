@@ -16,11 +16,19 @@
 
 article {
 
+	margin-bottom: $content-gutter;
+
 	> h1:first-child {
 		margin-top: -0.25em;
 
 		img + & {
 			margin-top: 0;
+		}
+
+		@media print {
+			border-bottom: 2px solid #000;
+			padding-bottom: 0;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -214,6 +222,17 @@ article {
 	img {
 		max-width: 100%;
 		height: auto;
+	}
+
+	@media print {
+		a::after {
+			display: inline;
+			content: " (" attr(href) ")";
+			color: #999;
+			font-size: .8em;
+			word-break: break-all;
+			text-decoration: none;
+		}
 	}
 }
 
