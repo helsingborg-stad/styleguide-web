@@ -30,7 +30,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
      */
     Slider.prototype.addNavigationButtons = function (slider) {
         if ($(slider).find('li').length > 1) {
-            $(slider).append('<button class="slider-nav-previous"><i class="fa fa-arrow-circle-left"></i></button><button class="slider-nav-next"><i class="fa fa-arrow-circle-right"></i></button>');
+            $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="fa fa-arrow-circle-left"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="fa fa-arrow-circle-right"></i></button>');
         }
     };
 
