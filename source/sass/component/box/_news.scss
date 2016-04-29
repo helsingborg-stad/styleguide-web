@@ -98,13 +98,30 @@
     background-color: transparent;
     color: $base-font-color;
 
+    @media #{$screen-xs} {
+        display: block;
+        border: 1px solid $creamy-darker;
+        padding: 5px;
+    }
+
     .box-image-container {
         display: table-cell;
         vertical-align: top;
-        width: 200px;
+        width: 35%;
 
-        & + .box-content {
-            padding-left: $content-gutter * 2;
+        @media #{$screen-sm-up} {
+            & + .box-content {
+                padding-left: $content-gutter * 2;
+            }
+        }
+
+        @media #{$screen-xs} {
+            display: block;
+            width: 100%;
+
+            .image-placeholder {
+                display: none;
+            }
         }
     }
 
@@ -112,6 +129,12 @@
         display: table-cell;
         vertical-align: top;
         padding: 0;
+
+        @media #{$screen-xs} {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
     }
 
     h1, h2, h3, h4, h4, h6 {
