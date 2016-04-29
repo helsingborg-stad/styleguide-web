@@ -15,7 +15,6 @@
     [class*="grid-"] {
         flex: 1 0 auto;
         flex-basis: 100%;
-        display: flex;
     }
 
     .grid-auto {
@@ -37,6 +36,10 @@
     // Large screens and up
     // This will generate grid-lg-*
     @include grid-flexbox($screen-lg-up, $screen-lg, 'lg');
+
+    [data-equal-container] [class*="grid-"] {
+        display: flex;
+    }
 
     [data-equal-container] [data-equal-item] {
         display: flex;
