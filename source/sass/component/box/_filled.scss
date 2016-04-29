@@ -67,7 +67,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
-                background-color: map-get($color, first);
+                background-color: map-get($color, firstSafe);
             }
         }
     }
@@ -82,7 +82,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
-                background-color: map-get($color, second);
+                background-color: map-get($color, secondSafe);
             }
         }
     }
@@ -97,7 +97,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
-                background-color: map-get($color, third);
+                background-color: map-get($color, thirdSafe);
             }
         }
     }
@@ -112,7 +112,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
+                background-color: map-get($color, fourthSafe);
             }
         }
     }
@@ -127,7 +127,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
-                background-color: map-get($color, fifth);
+                background-color: map-get($color, fifthSafe);
             }
         }
     }
