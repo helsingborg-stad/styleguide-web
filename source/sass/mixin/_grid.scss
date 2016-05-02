@@ -47,6 +47,7 @@
 
         @supports (display:flex) {
             display: block;
+            flex: 1 1 auto;
         }
     }
 
@@ -63,5 +64,11 @@
         width: 1%;
         white-space: nowrap;
         padding-right: 0;
+
+        @supports (display: flex) {
+            display: block;
+            flex: 0 0 auto;
+            min-width: 40px;
+        }
     }
 }
