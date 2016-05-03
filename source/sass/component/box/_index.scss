@@ -20,6 +20,7 @@
 
 .box-index {
     display: block;
+    width: 100%;
     background-color: #fff;
     border: 1px solid $creamy-darker;
     color: $base-font-color;
@@ -39,7 +40,8 @@ a.box-index {
     color: $base-font-color;
 }
 
-.box-index-title {
+.box-index-title.link-item {
     @extend .text-highlight;
     line-height: 1em;
+    display: block;
 }
