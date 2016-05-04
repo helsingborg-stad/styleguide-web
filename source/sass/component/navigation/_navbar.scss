@@ -26,14 +26,17 @@
 
 .navbar {
     position: relative;
-    background-color: $palette-gray-4;
     font-size: 1.1rem;
 
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
+    &:not(.navbar-creamy) {
+        background-color: $palette-gray-4;
+
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, fourth);
+                }
             }
         }
     }
@@ -96,6 +99,33 @@
 
         &:last-child {
             padding-right: 0;
+        }
+    }
+}
+
+.navbar-creamy {
+    background-color: $creamy;
+    padding: 0 10px;
+
+    a {
+        display: block;
+        padding: 10px 0;
+        font-size: .9em;
+        color: $base-font-color;
+    }
+
+    &.navbar-creamy-inner-shadow {
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 10px;
+            @include gradient(rgba(0,0,0,0), rgba(0,0,0,.1));
         }
     }
 }
