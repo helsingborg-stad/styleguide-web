@@ -18,7 +18,7 @@
     @media #{$media-query-up} {
         @for $i from 1 to $grid-column-count + 1 {
             .grid-#{$grid-size}-#{$i} {
-                width: auto;
+                width: 100%;
                 flex-basis: (100% / $grid-column-count) * $i;
                 max-width: (100% / $grid-column-count) * $i;
             }
