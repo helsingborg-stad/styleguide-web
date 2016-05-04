@@ -108,3 +108,20 @@
         }
     }
 }
+
+.nav-mobile-menu .menu-help .nav-mobile {
+    background-color: darken($palette-gray-2, 5%);
+
+    a {
+        color: #fff;
+    }
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: darken(map-get($color, second), 5%);
+            }
+        }
+    }
+}
