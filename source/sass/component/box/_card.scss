@@ -51,13 +51,6 @@
 		padding-bottom: 0;
 	}
 
-	ul li:not(.description):not(.card-title),
-	ul li:not(.description):not(.card-title) a {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
 	.card-title {
 		margin-bottom: $grid-gutter-sm;
 
