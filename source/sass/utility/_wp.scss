@@ -1,9 +1,9 @@
 
 /* =WordPress Core
 -------------------------------------------------------------- */
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
+
+$align-right-margin: 5px 0 5px 20px;
+$align-left-margin: 5px 20px 5px 0;
 
 .aligncenter,
 div.aligncenter {
@@ -14,26 +14,26 @@ div.aligncenter {
 
 .alignright {
     float: right;
-    margin: 5px 0 20px 20px;
+    margin: $align-right-margin;
 }
 
 .alignleft {
     float: left;
-    margin: 5px 20px 20px 0;
+    margin: $align-left-margin;
 }
 
 a img.alignright {
     float: right;
-    margin: 5px 0 20px 20px;
+    margin: $align-right-margin;
 }
 
 a img.alignnone {
-    margin: 5px 20px 20px 0;
+    margin: 0;
 }
 
 a img.alignleft {
     float: left;
-    margin: 5px 20px 20px 0;
+    margin: $align-right-margin
 }
 
 a img.aligncenter {
@@ -51,15 +51,15 @@ a img.aligncenter {
 }
 
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+    margin: 0;
 }
 
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+    margin: $align-left-margin;
 }
 
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+    margin: $align-right-margin;
 }
 
 .wp-caption img {

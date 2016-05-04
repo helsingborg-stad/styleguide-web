@@ -1,12 +1,12 @@
 //
 // @name Cookie consent
 //
-/*
 HelsingborgPrime = HelsingborgPrime || {};
 HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
 
 HelsingborgPrime.Prompt.CookieConsent = (function ($) {
 
+    var useLocalStorage = true;
     var animationSpeed = 1000;
 
     function CookieConsent() {
@@ -59,15 +59,28 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
     };
 
     CookieConsent.prototype.hasAccepted = function() {
-        return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        if (useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
     };
 
     CookieConsent.prototype.accept = function() {
         $('#cookie-consent').remove();
-        HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+
+        if (useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
     };
 
     return new CookieConsent();
 
 })(jQuery);
-*/

@@ -40,8 +40,13 @@
         padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
     }
 
+    > ul {
+        padding: $content-gutter/1.5;
+    }
+
     a {
         color: #fff;
+        text-decoration: underline;
     }
 
     img {
