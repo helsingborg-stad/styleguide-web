@@ -48,8 +48,7 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
         wrapper.prepend('\
             <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
                 <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-col-icon"><i class="fa fa-info-circle"></i></div>\
-                    <div class="grid-md-9">' + consentText + '</div>\
+                    <div class="grid-md-9"><i class="fa fa-info-circle"></i> ' + consentText + '</div>\
                     <div class="grid-md-3 text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
                 </div></div>\
             </div>\
