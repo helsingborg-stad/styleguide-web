@@ -24,19 +24,18 @@
     border: 1px solid $creamy-darker;
     color: $base-font-color;
 
-    &:hover {
-        text-decoration: none;
-        background-color: $creamy;
-    }
-
     img:not(.box-image) {
         @extend .img-inherit-width;
     }
-
 }
 
 a.box-index {
     color: $base-font-color;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $creamy;
+    }
 }
 
 .box-index-title.link-item {
