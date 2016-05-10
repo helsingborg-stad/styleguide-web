@@ -82,8 +82,8 @@ $input-group-height-lg: 54px;
     float: left;
     margin-bottom: 0;
     height: $input-group-height;
+}
 
-    .input-group-lg & {
-        height: $input-group-height-lg;
-    }
+.input-group-lg .form-control {
+    height: $input-group-height-lg;
 }
