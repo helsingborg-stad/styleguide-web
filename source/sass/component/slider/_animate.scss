@@ -22,6 +22,44 @@
 
 @keyframes slider-next-in {
     from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slider-next-out {
+    from {
+
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slider-previous-in {
+    from {
+        opacity: 0;
+    }
+    to {
+    }
+}
+
+@keyframes slider-previous-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/*
+@keyframes slider-next-in {
+    from {
         transform: scale(1.2);
         opacity: 0;
     }
@@ -62,3 +100,4 @@
         opacity: 0;
     }
 }
+*/
