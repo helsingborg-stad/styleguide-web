@@ -7,6 +7,8 @@ HelsingborgPrime.Component = HelsingborgPrime.Component || {};
 
 HelsingborgPrime.Component.Slider = (function ($) {
 
+    var autoslideIntervals = [];
+
     function Slider() {
         this.init();
     }
@@ -19,6 +21,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
         $('.slider').each(function (index, element) {
             $(element).find('li:first').addClass('current');
             this.addNavigationButtons(element);
+            this.autoslide(element);
         }.bind(this));
 
         this.bindEvents();
@@ -26,12 +29,56 @@ HelsingborgPrime.Component.Slider = (function ($) {
 
     /**
      * Adds navigation buttons if needed
-     * @param {[type]} slider [description]
      */
     Slider.prototype.addNavigationButtons = function (slider) {
-        if ($(slider).find('li').length > 1) {
-            $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="fa fa-arrow-circle-left"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="fa fa-arrow-circle-right"></i></button>');
+        if ($(slider).find('li').length === 0) {
+            return;
         }
+
+        $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="fa fa-arrow-circle-left"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="fa fa-arrow-circle-right"></i></button>');
+    };
+
+    /**
+     * Start autoslide if setup
+     * @param  {object} slider The slider
+     * @return {void}
+     */
+    Slider.prototype.autoslide = function (slider) {
+        if ($(slider).attr('data-autoslide') != 'true') {
+            return;
+        }
+
+        this.startInterval(slider);
+    };
+
+    /**
+     * Starts the autoslider interval timer
+     * @param  {object} slider The slider to slide
+     * @return {void}
+     */
+    Slider.prototype.startInterval = function (slider) {
+        var index = $(slider).index();
+        var intervalTimeout = $(slider).attr('data-autoslide-interval');
+
+        if (typeof intervalTimeout == 'undefined') {
+            intervalTimeout = 10000;
+        }
+
+        autoslideIntervals[index] = setInterval(function () {
+            this.goNext(slider);
+        }.bind(this, slider), intervalTimeout);
+    };
+
+    /**
+     * Stops the autoslider interval timer
+     * @param  {object} slider The slider to stop slide
+     * @return {void}
+     */
+    Slider.prototype.stopInterval = function (slider) {
+        var index = $(slider).index();
+
+        clearInterval(autoslideIntervals[index]);
+        autoslideIntervals.splice(index, 1);
     };
 
     /**
@@ -84,6 +131,15 @@ HelsingborgPrime.Component.Slider = (function ($) {
         // Prev button
         $('.slider-nav-previous').on('click', function (e) {
             this.goPrev($(e.target).parents('.slider'));
+        }.bind(this));
+
+        // Stop on hover
+        $('.slider').on('mouseenter', function (element) {
+            var slider = $(element.target).closest('.slider');
+            this.stopInterval(slider);
+        }.bind(this)).on('mouseleave', function (element) {
+            var slider = $(element.target).closest('.slider');
+            this.startInterval(slider);
         }.bind(this));
     };
 
