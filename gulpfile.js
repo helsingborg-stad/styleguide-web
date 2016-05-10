@@ -33,6 +33,14 @@ gulp.task('sass-dev', function() {
             .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('sass-font-awesome', function () {
+    gulp.src(node_modules + 'font-awesome/css/font-awesome.min.css')
+        .pipe(gulp.dest('source/sass'));
+
+    gulp.src(node_modules + 'font-awesome/fonts/*')
+        .pipe(gulp.dest('dist/fonts/'));
+});
+
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src([
@@ -100,10 +108,10 @@ gulp.task('dss-js', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('source/js/**/*.js', ['scripts', 'dss-js']);
+    gulp.watch('source/js/**/*.js', ['scripts']);
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
 });
 
 // Default Task
-gulp.task('default', ['sass-dist', 'sass-dev', 'scripts', 'dss-sass', 'dss-js', 'watch']);
+gulp.task('default', ['sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 
