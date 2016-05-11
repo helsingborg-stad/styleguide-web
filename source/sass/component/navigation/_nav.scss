@@ -69,6 +69,10 @@
     .has-children,
     .page_item_has_children,
     .menu-item-has-children {
+        a {
+            padding-right: 33px;
+        }
+
         > a::after {
             position: absolute;
             right: 10px;
