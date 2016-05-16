@@ -66,8 +66,7 @@
     }
 
     caption {
-        @extend h2;
-        @extend .text-highlight;
+        @extend h4;
         text-align: left;
     }
 
