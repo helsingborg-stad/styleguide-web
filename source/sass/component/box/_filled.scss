@@ -56,8 +56,10 @@
         text-decoration: underline;
     }
 
-    img {
-        @extend .img-inherit-width;
+    .box-content {
+        img {
+            @extend .img-inherit-width;
+        }
     }
 
     // Color theme styles

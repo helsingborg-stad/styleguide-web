@@ -3,26 +3,41 @@
 }
 
 .mod-social-user {
-    * {
-        display: inline-block;
-        vertical-align: middle;
-    }
+    display: table;
+    table-layout: fixed;
 
     img {
         border-radius: 5px;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        display: table-cell;
+        vertical-align: middle;
         margin-right: 5px;
     }
 
+    div {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+
     span {
+        display: block;
         font-weight: bold;
-        margin-right: 5px;
+        line-height: 1;
     }
 
     time {
         color: $gray;
     }
+}
+
+.box-filled .mod-social-user time {
+    color: #fff;
+    font-size: .8em;
+    line-height: 1;
+    margin-top: -5px;
 }
 
 .social-feed-twitter,
@@ -77,6 +92,26 @@
             }
         }
     }
+
+    .mod-social-attachment-type-added_photos {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        * {
+            display: none;
+        }
+
+        .mod-social-attachment-image {
+            display: block;
+            float: none;
+        }
+    }
+}
+
+.box-filled .social-feed-twitter li,
+.box-filled .social-feed-facebook li {
+    padding: 15px 0 !important;
 }
 
 .social-feed-instagram,
