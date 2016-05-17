@@ -14,6 +14,7 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
     Dropdown.prototype.handleEvents = function () {
         $('[data-dropdown]').on('click', function (e) {
             var targetElement = $(this).attr('data-dropdown');
+            $(this).toggleClass('dropdown-open');
             $(this).parent().find(targetElement).toggle();
             $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
         });
