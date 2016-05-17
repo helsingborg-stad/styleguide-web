@@ -29,18 +29,19 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
 
     CookieConsent.prototype.displayConsent = function() {
         var wrapper = $('body');
+
         if ($('#wrapper:first-child').length > 0) {
             wrapper = $('#wrapper:first-child');
         }
 
         var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
         if (HelsingborgPrime.Args.get('cookieConsent.message')) {
-            consentText = HelsingborgPrime.Args.get('cookieConsent.message');
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
         }
 
         var buttonText = 'Got it';
         if (HelsingborgPrime.Args.get('cookieConsent.button')) {
-            buttonText = HelsingborgPrime.Args.get('cookieConsent.button');
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
         }
 
         var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
@@ -48,7 +49,8 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
         wrapper.prepend('\
             <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
                 <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-md-9"><i class="fa fa-info-circle"></i> ' + consentText + '</div>\
+                    <div class="grid-col-icon"><i class="fa fa-info-circle"></i></div>\
+                    <div class="grid-md-8">' + consentText + '</div>\
                     <div class="grid-md-3 text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
                 </div></div>\
             </div>\

@@ -27,15 +27,14 @@
 .widget_recent_comments {
     .sidebar-left-sidebar &,
     .sidebar-right-sidebar & {
-        ul {
-            margin: $box-padding;
-        }
-
         a {
-            @extend .link-item;
             @extend .link-item-light;
             color: #fff;
         }
+    }
+
+    a {
+        @extend .link-item;
     }
 
     .post-date {
@@ -56,6 +55,10 @@
             margin-left: 20px;
         }
     }
+}
+
+.widget_categories li a.link-item {
+    display: inline-block !important;
 }
 
 #recentcomments .recentcomments a {

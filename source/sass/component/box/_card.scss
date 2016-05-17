@@ -51,6 +51,10 @@
 		padding-bottom: 0;
 	}
 
+    a[href^="mailto:"] {
+        word-break: break-all;
+    }
+
 	.card-title {
 		margin-bottom: $grid-gutter-sm;
 

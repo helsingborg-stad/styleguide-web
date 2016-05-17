@@ -34,6 +34,14 @@
 // </div>
 //
 
+.box-filled .widget {
+    padding: $content-gutter/1.5;
+
+    h2 .rsswidget:first-child {
+        display: none;
+    }
+}
+
 .widget_rss {
     .sidebar-left-sidebar &,
     .sidebar-right-sidebar & {

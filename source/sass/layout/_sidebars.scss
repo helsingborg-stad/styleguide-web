@@ -1,0 +1,5 @@
+@media #{$screen-below-lg} {
+    .sidebar-right-sidebar.grid-md-12 {
+        margin-top: $content-gutter * 2;
+    }
+}

@@ -69,3 +69,22 @@ article ol,
     padding-left: $content-gutter * 2;
     list-style-type: decimal;
 }
+
+li.title {
+    font-size: .8em;
+    font-weight: bold;
+    color: $palette-gray-2;
+    letter-spacing: .5px;
+
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, secondSafe);
+            }
+        }
+    }
+}
+
+li + li.title {
+    margin-top: 10px;
+}

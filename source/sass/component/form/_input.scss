@@ -4,6 +4,8 @@
 //
 // @page Forms/Input
 //
+// @state .invalid (or :invalid) - Invalid input value
+//
 // @markup
 // <div class="form-group">
 //     <label for="firstname">First name</label>
@@ -15,7 +17,7 @@
 // </div>
 // <div class="form-group">
 //     <label for="textarea">Textarea</label>
-//     <textarea id="textarea"></textarea>
+//     <textarea id="textarea" class="invalid"></textarea>
 // </div>
 //
 
@@ -52,6 +54,12 @@ textarea {
     &.form-control-lg {
         padding: $content-gutter;
         font-size: 1.2em;
+    }
+
+    &:invalid:not(:empty),
+    &.invalid {
+        background-color: lighten($danger-bg, 53%);
+        border: 1px solid $danger-bg;
     }
 }
 
