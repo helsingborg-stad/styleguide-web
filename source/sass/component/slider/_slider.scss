@@ -12,14 +12,15 @@
 // <div class="slider ratio-16-9">
 //     <ul>
 //         <li class="type-image has-text-block current">
-//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
-//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
-//              <span class="text-block  text-block-center">
+//
+//              <span class="text-block text-block-left">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
 //                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 //                  </span>
 //              </span>
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
 //         </li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
@@ -132,6 +133,20 @@
         color: #fff;
         font-size: .9em;
         display: block;
+
+        &.text-block-left,
+        &.text-block-right {
+            @include cover();
+            background-color: #fff;
+        }
+
+        &.text-block-left {
+            right: 50%;
+        }
+
+        &.text-block-right {
+            left: 50%;
+        }
 
         &.text-block-center {
             background-color: rgba(#000, .4);
