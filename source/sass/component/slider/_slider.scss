@@ -1,26 +1,37 @@
 //
 // @name Slider
 // @description <span class="label label-theme">JavaScript dependent</span> Sliding content.
-// @author Kristoffer Svanmark
+// @author Kristoffer Svanmark, Sebastian Thulin
 //
 // @page Special/Slider
 //
 // @state .slider-nav-hover - Only show slider nav buttons on slider hover
 // @state .text-block-center - You can center the text in the text block by adding this class to text-block element
+// @state .text-block-left - Text on a solid white background, image to the right.
+// @state .text-block-right - Text on a solid white background, image to the left.
 //
 // @markup
-// <div class="slider ratio-16-9">
+// <div class="slider ratio-16-9 has-adjusted-text-block">
 //     <ul>
-//         <li class="type-image has-text-block current">
-//
+//         <li class="type-image  current">
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
 //              <span class="text-block text-block-left">
+//                  <span>
+//                      <em class="title block-level h1">Ipsum Fermentum Euismod</em>
+//                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+//                  </span>
+//              </span>
+//         </li>
+//         <li class="type-image has-text-block">
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
+//              <span class="text-block text-block-center">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
 //                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 //                  </span>
 //              </span>
-//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
-//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
 //         </li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
@@ -134,18 +145,10 @@
         font-size: .9em;
         display: block;
 
-        &.text-block-left,
-        &.text-block-right {
+        &.text-block-left {
             @include cover();
             background-color: #fff;
-        }
-
-        &.text-block-left {
             right: 50%;
-        }
-
-        &.text-block-right {
-            left: 50%;
         }
 
         &.text-block-center {
@@ -208,7 +211,31 @@
                     &.text-block-center {
                         background-color: rgba(#000, .4) !important;
                     }
+
+                    &.text-block-left,
+                    &.text-block-right {
+                        background-color: $creamy;
+                        span {
+                            color: $base-font-color;
+
+                            h1,.h1,
+                            h2,.h2,
+                            h3,.h3,
+                            h4,.h4,
+                            h5,.h5,
+                            h6,.h6 {
+                                color: map-get($color, default);
+                            }
+                        }
+                    }
                 }
+            }
+        }
+
+        .creamy {
+            &.text-block-left,
+            &.text-block-right {
+                background-color: #ffffff;
             }
         }
     }
@@ -237,3 +264,20 @@
         }
     }
 }
+
+.slider.has-adjusted-text-block {
+    [class*="slider-nav-"] {
+        top: auto;
+        bottom: 0;
+        border-radius: 0;
+        @include center(false, false);
+    }
+
+    .slider-image-desktop {
+        width: 50% !important;
+        float: right;
+    }
+
+}
+
+
