@@ -13,9 +13,9 @@
 // @state .text-block-right - Text on a solid white background, image to the left.
 //
 // @markup
-// <div class="slider ratio-16-9 slider-nav-bottom slider-nav-hover">
+// <div class="slider slider-nav-bottom slider-nav-hover">
 //     <ul>
-//         <li class="type-image current">
+//         <li class="type-image current flexbox">
 //              <span class="text-block text-block-left">
 //                  <span>
 //                      <em class="title block-level h1">Ipsum Fermentum Euismod</em>
@@ -93,7 +93,7 @@
         background-color: rgba(#000,.8);
         border: 0;
         apperance: none;
-        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87);
+        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87), 100ms background-color cubic-bezier(.35,.21,.07,.87), 100ms color cubic-bezier(.35,.21,.07,.87);
 
         font-size: 1.2em;
         font-weight: bold;
@@ -141,34 +141,6 @@
         color: #fff;
         font-size: .9em;
         display: block;
-
-        &.text-block-left,
-        &.text-block-right {
-            @include cover();
-            width: 50%;
-            background-color: #fff;
-        }
-
-        &.text-block-left {
-            right: 50%;
-        }
-
-        &.text-block-right {
-            left: 50%;
-        }
-
-        &.text-block-left ~ .slider-image-desktop,
-        &.text-block-right ~ .slider-image-desktop {
-            width: 50%;
-        }
-
-        &.text-block-left ~ .slider-image-desktop {
-            float: right;
-        }
-
-        &.text-block-right ~ .slider-image-desktop {
-            float: left;
-        }
 
         &.text-block-center {
             background-color: rgba(#000, .4);
@@ -299,3 +271,56 @@
         }
     }
 }
+
+@supports (display: flex) {
+
+    .slider {
+
+        ul {
+            @include cover();
+
+            li.flexbox {
+                display: flex;
+                flex-flow: row wrap;
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                height: 100%;
+
+                &.current {
+                    display: flex;
+                }
+
+                &.is-collapsed {
+                    .text-block.text-block-left,
+                    .text-block.text-block-right {
+                        @include cover();
+                        opacity: .9;
+                    }
+                }
+
+                .slider-image-desktop,
+                .slider-image-mobile,
+                .text-block {
+                    position: relative;
+                    flex: 1 0 auto;
+                    flex-basis: 350px;
+                }
+
+                .text-block.text-block-right ~ .slider-image-desktop,
+                .text-block.text-block-right ~ .slider-image-mobile {
+                    order: 1;
+                }
+
+                .text-block.text-block-right {
+                    order: 2;
+                }
+
+            }
+        }
+    }
+
+}
+

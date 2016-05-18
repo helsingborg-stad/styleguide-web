@@ -22,9 +22,35 @@ HelsingborgPrime.Component.Slider = (function ($) {
             $(element).find('li:first').addClass('current');
             this.addNavigationButtons(element);
             this.autoslide(element);
+            this.detectIfIsCollapsed(element);
+        }.bind(this));
+
+        $( window ).resize(function() {
+            $('.slider').each(function (index, element) {
+                this.detectIfIsCollapsed(element);
+            }.bind(this));
         }.bind(this));
 
         this.bindEvents();
+    };
+
+    /**
+     * Add collapsed class
+     */
+    Slider.prototype.detectIfIsCollapsed = function (slider) {
+        if ($(slider).find('li').length >= 1) {
+            $("li",slider).each(function(index,target){
+                if(jQuery(target).hasClass("flexbox") && jQuery(target).hasClass("current")) {
+
+                    jQuery(target).removeClass("is-collapsed");
+
+                    if(jQuery(".text-block",target).outerWidth() == jQuery(slider).width()) {
+                        jQuery(target).addClass("is-collapsed");
+                    }
+
+                }
+            });
+        }
     };
 
     /**
