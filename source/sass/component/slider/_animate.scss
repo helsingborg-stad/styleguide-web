@@ -1,23 +1,35 @@
 .slider-next .slider-in {
-    animation: slider-next-in 1s ease-in-out;
+    animation: slider-next-in 900ms cubic-bezier(.35,.21,.07,.87);
     z-index: 9;
 }
 
 .slider-next .slider-out {
     display: block !important;
     z-index: 8;
-    animation: slider-next-out 1s ease-in-out forwards;
+    animation: slider-next-out 900ms cubic-bezier(.35,.21,.07,.87) forwards;
+}
+
+.slider-next .slider-out.flexbox {
+    @supports (display: flex) {
+        display: flex !important;
+    }
 }
 
 .slider-previous .slider-in {
-    animation: slider-previous-in 1s ease-in-out;
+    animation: slider-previous-in 900ms cubic-bezier(.35,.21,.07,.87);
     z-index: 9;
 }
 
 .slider-previous .slider-out {
     display: block !important;
     z-index: 8;
-    animation: slider-previous-out 1s ease-in-out forwards;
+    animation: slider-previous-out 900ms cubic-bezier(.35,.21,.07,.87) forwards;
+}
+
+.slider-previous .slider-out.flexbox {
+    @supports (display: flex) {
+        display: flex !important;
+    }
 }
 
 @keyframes slider-next-in {

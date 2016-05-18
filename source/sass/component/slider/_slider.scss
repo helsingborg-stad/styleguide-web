@@ -1,25 +1,39 @@
 //
 // @name Slider
 // @description <span class="label label-theme">JavaScript dependent</span> Sliding content.
-// @author Kristoffer Svanmark
+// @author Kristoffer Svanmark, Sebastian Thulin
 //
 // @page Special/Slider
 //
-// @state .slider-nav-hover - Only show slider nav buttons on slider hover
+// @state .slider-nav-hover - Only show slider nav buttons on slider hover (wrapping element)
+// @state .slider-nav-bottom - Only show slider nav buttons in the bottom of the slider (wrapping element)
+//
 // @state .text-block-center - You can center the text in the text block by adding this class to text-block element
+// @state .text-block-left - Text on a solid white background, image to the right.
+// @state .text-block-right - Text on a solid white background, image to the left.
 //
 // @markup
-// <div class="slider ratio-16-9">
+// <div class="slider slider-nav-bottom slider-nav-hover">
 //     <ul>
-//         <li class="type-image has-text-block current">
-//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
-//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
-//              <span class="text-block  text-block-center">
+//         <li class="type-image current flexbox">
+//              <span class="text-block text-block-left">
+//                  <span>
+//                      <em class="title block-level h1">Ipsum Fermentum Euismod</em>
+//                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+//                  </span>
+//              </span>
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
+//         </li>
+//         <li class="type-image has-text-block">
+//              <span class="text-block text-block-center">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
 //                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 //                  </span>
 //              </span>
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
 //         </li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
@@ -70,10 +84,6 @@
         }
     }
 
-    &:hover [class*="slider-nav-"] {
-        opacity: 1;
-    }
-
     [class*="slider-nav-"] {
         @include center(false, true);
         z-index: 100;
@@ -83,8 +93,7 @@
         background-color: rgba(#000,.8);
         border: 0;
         apperance: none;
-        opacity: 0;
-        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87);
+        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87), 100ms background-color cubic-bezier(.35,.21,.07,.87), 100ms color cubic-bezier(.35,.21,.07,.87);
 
         font-size: 1.2em;
         font-weight: bold;
@@ -193,7 +202,31 @@
                     &.text-block-center {
                         background-color: rgba(#000, .4) !important;
                     }
+
+                    &.text-block-left,
+                    &.text-block-right {
+                        background-color: $creamy;
+                        span {
+                            color: $base-font-color;
+
+                            h1,.h1,
+                            h2,.h2,
+                            h3,.h3,
+                            h4,.h4,
+                            h5,.h5,
+                            h6,.h6 {
+                                color: map-get($color, default);
+                            }
+                        }
+                    }
                 }
+            }
+        }
+
+        .creamy {
+            &.text-block-left,
+            &.text-block-right {
+                background-color: #ffffff;
             }
         }
     }
@@ -213,12 +246,81 @@
 
 .slider-nav-hover {
     [class*="slider-nav-"] {
-        display: none;
+        opacity: 0;
     }
 
     &:hover {
         [class*="slider-nav-"] {
-            display: block;
+            opacity: 1;
         }
     }
 }
+
+.slider-nav-bottom {
+    [class*="slider-nav-"] {
+        top: auto;
+        bottom: 0;
+        border-radius: 0;
+        transform: none;
+        padding: .8em 1em;
+        color: darken($creamy-darker,40%);
+        background-color: darken($creamy,5%);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+@supports (display: flex) {
+
+    .slider {
+
+        ul {
+            @include cover();
+
+            li.flexbox {
+                display: flex;
+                flex-flow: row wrap;
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                height: 100%;
+
+                &.current {
+                    display: flex;
+                }
+
+                &.is-collapsed {
+                    .text-block.text-block-left,
+                    .text-block.text-block-right {
+                        @include cover();
+                        opacity: .9;
+                    }
+                }
+
+                .slider-image-desktop,
+                .slider-image-mobile,
+                .text-block {
+                    position: relative;
+                    flex: 1 0 auto;
+                    flex-basis: 350px;
+                }
+
+                .text-block.text-block-right ~ .slider-image-desktop,
+                .text-block.text-block-right ~ .slider-image-mobile {
+                    order: 1;
+                }
+
+                .text-block.text-block-right {
+                    order: 2;
+                }
+
+            }
+        }
+    }
+
+}
+
