@@ -5,33 +5,35 @@
 //
 // @page Special/Slider
 //
-// @state .slider-nav-hover - Only show slider nav buttons on slider hover
+// @state .slider-nav-hover - Only show slider nav buttons on slider hover (wrapping element)
+// @state .slider-nav-bottom - Only show slider nav buttons in the bottom of the slider (wrapping element)
+//
 // @state .text-block-center - You can center the text in the text block by adding this class to text-block element
 // @state .text-block-left - Text on a solid white background, image to the right.
 // @state .text-block-right - Text on a solid white background, image to the left.
 //
 // @markup
-// <div class="slider ratio-16-9 has-adjusted-text-block">
+// <div class="slider ratio-16-9 slider-nav-bottom slider-nav-hover">
 //     <ul>
-//         <li class="type-image  current">
-//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
-//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
+//         <li class="type-image current">
 //              <span class="text-block text-block-left">
 //                  <span>
 //                      <em class="title block-level h1">Ipsum Fermentum Euismod</em>
 //                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 //                  </span>
 //              </span>
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
 //         </li>
 //         <li class="type-image has-text-block">
-//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
-//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
 //              <span class="text-block text-block-center">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
 //                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 //                  </span>
 //              </span>
+//              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
+//              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
 //         </li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
 //         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
@@ -82,10 +84,6 @@
         }
     }
 
-    &:hover [class*="slider-nav-"] {
-        opacity: 1;
-    }
-
     [class*="slider-nav-"] {
         @include center(false, true);
         z-index: 100;
@@ -95,7 +93,6 @@
         background-color: rgba(#000,.8);
         border: 0;
         apperance: none;
-        opacity: 0;
         transition: 200ms opacity cubic-bezier(.35,.21,.07,.87);
 
         font-size: 1.2em;
@@ -145,10 +142,32 @@
         font-size: .9em;
         display: block;
 
-        &.text-block-left {
+        &.text-block-left,
+        &.text-block-right {
             @include cover();
+            width: 50%;
             background-color: #fff;
+        }
+
+        &.text-block-left {
             right: 50%;
+        }
+
+        &.text-block-right {
+            left: 50%;
+        }
+
+        &.text-block-left ~ .slider-image-desktop,
+        &.text-block-right ~ .slider-image-desktop {
+            width: 50%;
+        }
+
+        &.text-block-left ~ .slider-image-desktop {
+            float: right;
+        }
+
+        &.text-block-right ~ .slider-image-desktop {
+            float: left;
         }
 
         &.text-block-center {
@@ -255,29 +274,28 @@
 
 .slider-nav-hover {
     [class*="slider-nav-"] {
-        display: none;
+        opacity: 0;
     }
 
     &:hover {
         [class*="slider-nav-"] {
-            display: block;
+            opacity: 1;
         }
     }
 }
 
-.slider.has-adjusted-text-block {
+.slider-nav-bottom {
     [class*="slider-nav-"] {
         top: auto;
         bottom: 0;
         border-radius: 0;
-        @include center(false, false);
-    }
+        transform: none;
+        padding: .8em 1em;
+        color: darken($creamy-darker,40%);
+        background-color: darken($creamy,5%);
 
-    .slider-image-desktop {
-        width: 50% !important;
-        float: right;
+        &:hover {
+            color: #fff;
+        }
     }
-
 }
-
-
