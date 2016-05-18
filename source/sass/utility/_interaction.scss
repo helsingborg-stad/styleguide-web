@@ -29,3 +29,74 @@
         }
     }
 }
+
+//
+// @name Loading dots
+// @description Loading indicator with three animated dots
+//
+// @page Utilities/Loading dots
+//
+// @markup
+// <i class="loading-dots"></i>
+//
+
+@mixin loading-dot($size: 1em) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    animation: loading-dot 1500ms ease-in-out infinite;
+}
+
+.loading-dots {
+    $size: .8em;
+    display: block;
+    position: relative;
+    width: $size * 2.3;
+    height: $size;
+
+    &::before,
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+
+        background-color: $base-font-color;
+        @include loading-dot($size);
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+        animation-delay: 750ms;
+    }
+}
+
+.loading-dots-highight::before,
+.loading-dots-highight::after {
+    background-color: $palette-gray-2;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+}
+
+@keyframes loading-dot {
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}
