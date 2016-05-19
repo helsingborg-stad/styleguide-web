@@ -40,7 +40,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
     Slider.prototype.detectIfIsCollapsed = function (slider) {
         if ($(slider).find('li').length >= 1) {
             $("li",slider).each(function(index,target){
-                if(jQuery(target).hasClass("flexbox") && jQuery(target).hasClass("current")) {
+                if(jQuery(target).hasClass("type-featured") && jQuery(target).hasClass("current")) {
 
                     jQuery(target).removeClass("is-collapsed");
 

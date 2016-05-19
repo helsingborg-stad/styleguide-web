@@ -15,11 +15,23 @@
 // @markup
 // <div class="slider slider-nav-bottom slider-nav-hover">
 //     <ul>
-//         <li class="type-image current flexbox">
-//              <span class="text-block text-block-left">
+//         <li class="type-featured current">
+//              <a href="#">
+//                 <span class="text-block text-block-left">
+//                    <span>
+//                        <em class="title block-level h1">Ipsum Fermentum Euismod</em>
+//                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+//                    </span>
+//                  </span>
+//                  <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
+//                  <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
+//              </a>
+//         </li>
+//         <li class="type-featured">
+//              <span class="text-block text-block-right">
 //                  <span>
-//                      <em class="title block-level h1">Ipsum Fermentum Euismod</em>
-//                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+//                      <em class="title block-level h1">Amet Ornare Bibendum</em>
+//                      Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.
 //                  </span>
 //              </span>
 //              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
@@ -58,8 +70,50 @@
         left: 0;
     }
 
-    li.current {
+    li.current:not(.type-featured) {
         display: block;
+    }
+
+    .type-featured {
+
+        flex-flow: row wrap;
+        height: 100%;
+
+        &.current {
+            display: flex;
+        }
+
+        &.is-collapsed {
+            .text-block.text-block-left,
+            .text-block.text-block-right {
+                @include cover();
+                opacity: .9;
+            }
+        }
+
+        > a {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slider-image-desktop,
+        .slider-image-mobile,
+        .text-block {
+            position: relative;
+            flex: 1 0 auto;
+            flex-basis: 350px;
+        }
+
+        .text-block.text-block-right ~ .slider-image-desktop,
+        .text-block.text-block-right ~ .slider-image-mobile {
+            order: 1;
+        }
+
+        .text-block.text-block-right {
+            order: 2;
+        }
+
     }
 
     .slider-image,
@@ -273,54 +327,6 @@
 }
 
 @supports (display: flex) {
-
-    .slider {
-
-        ul {
-            @include cover();
-
-            li.flexbox {
-                display: flex;
-                flex-flow: row wrap;
-                position: relative;
-                top: auto;
-                right: auto;
-                bottom: auto;
-                left: auto;
-                height: 100%;
-
-                &.current {
-                    display: flex;
-                }
-
-                &.is-collapsed {
-                    .text-block.text-block-left,
-                    .text-block.text-block-right {
-                        @include cover();
-                        opacity: .9;
-                    }
-                }
-
-                .slider-image-desktop,
-                .slider-image-mobile,
-                .text-block {
-                    position: relative;
-                    flex: 1 0 auto;
-                    flex-basis: 350px;
-                }
-
-                .text-block.text-block-right ~ .slider-image-desktop,
-                .text-block.text-block-right ~ .slider-image-mobile {
-                    order: 1;
-                }
-
-                .text-block.text-block-right {
-                    order: 2;
-                }
-
-            }
-        }
-    }
 
 }
 
