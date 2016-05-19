@@ -63,6 +63,16 @@ textarea {
     }
 }
 
+input[type="file"].hidden {
+    display: static;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
 label.checkbox,
 label.radio {
     font-weight: normal;
