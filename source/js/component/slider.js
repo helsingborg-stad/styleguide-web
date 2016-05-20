@@ -53,6 +53,16 @@ HelsingborgPrime.Component.Slider = (function ($) {
         }
     };
 
+    Slider.prototype.preloadImage = function () {
+        setTimeout(function(){
+            var img = new Array();
+            $(".slider ul li").each(function(index,slide) {
+                img.index = new Image();
+                img.index.src = $(slide).attr('href');
+            });
+        },5000);
+    };
+
     /**
      * Adds navigation buttons if needed
      */

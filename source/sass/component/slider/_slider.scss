@@ -147,7 +147,7 @@
         background-color: rgba(#000,.8);
         border: 0;
         apperance: none;
-        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87), 100ms background-color cubic-bezier(.35,.21,.07,.87), 100ms color cubic-bezier(.35,.21,.07,.87);
+        transition: 200ms opacity cubic-bezier(.35,.21,.07,.87), 100ms background-color cubic-bezier(.35,.21,.07,.87), 100ms color cubic-bezier(.35,.21,.07,.87), 100ms transform cubic-bezier(.35,.21,.07,.87);
 
         font-size: 1.2em;
         font-weight: bold;
@@ -260,6 +260,7 @@
                     &.text-block-left,
                     &.text-block-right {
                         background-color: $creamy;
+                        border: 1px solid $creamy-darker;
                         span {
                             color: $base-font-color;
 
@@ -281,6 +282,7 @@
             &.text-block-left,
             &.text-block-right {
                 background-color: #ffffff;
+                border-color: $creamy;
             }
         }
     }
@@ -325,8 +327,3 @@
         }
     }
 }
-
-@supports (display: flex) {
-
-}
-
