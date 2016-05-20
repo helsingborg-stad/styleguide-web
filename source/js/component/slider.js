@@ -59,9 +59,9 @@ HelsingborgPrime.Component.Slider = (function ($) {
             var mobile_img = new Array();
             $(".slider ul li").each(function(index,slide) {
                 normal_img.index = new Image();
-                normal_img.index.src = $(".slider-image-desktop",slide).css('background-image');
+                normal_img.index.src = $(".slider-image-desktop",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
                 mobile_img.index = new Image();
-                mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image');
+                mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
             });
         },5000);
     };
