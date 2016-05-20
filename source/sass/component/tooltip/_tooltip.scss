@@ -35,8 +35,10 @@
             background-color: #252525;
             color: #fff;
             padding: 3px 8px;
+            line-height: $base-line-height;
             border-radius: 5px;
-            font-size: .8em;
+            font-size: 14px;
+            font-weight: normal;
         }
 
         &::before {

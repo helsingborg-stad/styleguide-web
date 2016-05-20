@@ -110,6 +110,16 @@ input[type="button"].btn::-moz-focus-inner {
     }
 }
 
+.btn-danger {
+    background-color: $danger-bg;
+    color: $danger-text;
+
+    &:hover,
+    &:focus {
+        background-color: darken($danger-bg, 10%);
+    }
+}
+
 //
 // @name Button: Themed buttons
 // @description Buttons with color theme colors
@@ -227,6 +237,12 @@ input[type="button"].btn::-moz-focus-inner {
 
 .btn-block + .btn-block {
     margin-top: $content-gutter;
+}
+
+.btn-icon,
+button.btn-icon {
+    padding: 5px 10px;
+    line-height: 1;
 }
 
 //
