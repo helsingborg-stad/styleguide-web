@@ -9,7 +9,7 @@
     animation: slider-next-out 900ms cubic-bezier(.35,.21,.07,.87) forwards;
 }
 
-.slider-next .slider-out.flexbox {
+.slider-next .slider-out.type-featured {
     @supports (display: flex) {
         display: flex !important;
     }
@@ -26,7 +26,7 @@
     animation: slider-previous-out 900ms cubic-bezier(.35,.21,.07,.87) forwards;
 }
 
-.slider-previous .slider-out.flexbox {
+.slider-previous .slider-out.type-featured {
     @supports (display: flex) {
         display: flex !important;
     }
