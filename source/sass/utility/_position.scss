@@ -25,3 +25,11 @@
     position: absolute;
     left: 0;
 }
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline-block + .inline-block {
+    margin-left: $content-gutter;
+}

@@ -91,8 +91,10 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
         }
 
         selectedFiles.push(file);
-        element.find('.selected-file').html(file.name);
-        element.addClass('is-selected');
+
+        if (!element.attr('data-preview-image')) {
+            element.find('.selected-file').html(file.name);
+        }
 
         var reader = new FileReader();
         reader.readAsDataURL(file);
@@ -109,7 +111,13 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
 
             element.append('<input type="hidden" name="image_uploader_file[]" read-only>');
             element.find('input[name="image_uploader_file[]"]:last').val(image.result);
+
+            if (element.attr('data-preview-image')) {
+                element.find('.selected-file').css('backgroundImage', 'url(\'' + image.result + '\')');
+            }
         });
+
+        element.addClass('is-selected');
 
         return true;
     };
