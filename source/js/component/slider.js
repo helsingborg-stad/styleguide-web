@@ -55,7 +55,6 @@ HelsingborgPrime.Component.Slider = (function ($) {
 
     Slider.prototype.preloadImage = function () {
         setTimeout(function(){
-            console.log("Fetching images");
             var normal_img = new Array();
             var mobile_img = new Array();
             $(".slider ul li").each(function(index,slide) {
@@ -63,7 +62,6 @@ HelsingborgPrime.Component.Slider = (function ($) {
                 normal_img.index.src = $(".slider-image-desktop",slide).css('background-image');
                 mobile_img.index = new Image();
                 mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image');
-                console.log(normal_img,mobile_img);
             });
         },5000);
     };
