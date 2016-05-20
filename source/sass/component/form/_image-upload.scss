@@ -41,6 +41,7 @@
         }
 
         .placeholder-is-dragover {
+            display: block;
             opacity: 1;
             animation: 300ms fallDown ease-in-out 1;
         }
@@ -50,7 +51,7 @@
         background-color: lighten($palette-green-5, 50%);
         border-color: lighten($palette-green-5, 40%);
 
-        .selected-file {
+        &.selected-file {
             display: block;
             animation: 500ms 200ms scaleIn ease-in-out forwards;
         }
@@ -74,9 +75,26 @@
         transform: translateY(-50%);
         text-align: center;
         opacity: 0;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &[data-preview-image] .selected-file {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+
+    &[data-preview-image].is-selected .selected-file {
+        animation: 500ms 200ms fadeIn ease-in-out forwards;
+        display: block;
     }
 
     .placeholder-is-dragover {
+        display: none;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -87,6 +105,7 @@
     }
 
     .placeholder {
+        @include center(false, true);
         text-align: center;
         transition: 300ms all;
         width: 100%;
@@ -168,5 +187,14 @@
     100% {
         opacity: 1;
         transform: translateY(-50%) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
