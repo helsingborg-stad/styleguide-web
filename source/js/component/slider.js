@@ -88,7 +88,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
         }
 
         // Stop on hover
-        $('.slider').on('mouseenter', function (element) {
+        $(slider).on('mouseenter', function (element) {
             var slider = $(element.target).closest('.slider');
             this.stopInterval(slider);
         }.bind(this)).on('mouseleave', function (element) {
