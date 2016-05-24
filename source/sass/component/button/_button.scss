@@ -28,7 +28,8 @@ input[type="button"].btn::-moz-focus-inner {
 }
 /* End of button height fix */
 
-.btn {
+.btn,
+.read-more {
     appearance: none;
     display: inline-block;
     vertical-align: middle;
@@ -62,6 +63,17 @@ input[type="button"].btn::-moz-focus-inner {
         &:active {
             box-shadow: none;
         }
+    }
+}
+
+.read-more {
+    text-align: center;
+    display: block !important;
+    color: $base-font-color !important;
+
+    &::before {
+        @include hbg-icon($icon-plus-square);
+        margin-right: 7px;
     }
 }
 
