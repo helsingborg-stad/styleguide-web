@@ -14,6 +14,8 @@
 // @state .text-block-left - Text on a solid white background, image to the right.
 // @state .text-block-right - Text on a solid white background, image to the left.
 //
+// @state .is-collapsed - Inidcator of compressed layout settings (wrapping element).
+//
 // @markup
 // <div class="slider slider-nav-bottom slider-nav-hover">
 //     <ul>
