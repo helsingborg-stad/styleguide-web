@@ -76,7 +76,6 @@
 	    }
 
 	    @media screen and #{$screen-md-up} {
-
 		    .box-content {
 			    margin-left: 180px;
 
@@ -90,9 +89,6 @@
     }
 
     @media screen and #{$screen-below-md} {
-    	.box-image {
-	    	display: none;
-    	}
     	.box-content {
 	    	margin-left: 0;
     	}
@@ -137,12 +133,21 @@
         padding-bottom: 150%;
         overflow: hidden;
 
+        @media screen and #{$screen-below-md} {
+            padding-bottom: 0;
+            overflow: visible;
+        }
+
         .box-container {
             position: absolute;
             top: 0;
             left: 0;
             padding: 5px;
             width: 100%;
+
+            @media screen and #{$screen-below-md} {
+                position: static;
+            }
         }
     }
 
