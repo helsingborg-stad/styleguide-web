@@ -8,6 +8,8 @@
 // @state .slider-nav-hover - Only show slider nav buttons on slider hover (wrapping element)
 // @state .slider-nav-bottom - Only show slider nav buttons in the bottom of the slider (wrapping element)
 //
+// @state .type-featured - Use in combination with textblock left/right
+//
 // @state .text-block-center - You can center the text in the text block by adding this class to text-block element
 // @state .text-block-left - Text on a solid white background, image to the right.
 // @state .text-block-right - Text on a solid white background, image to the left.
@@ -61,61 +63,65 @@
     background: #000;
     overflow: hidden;
 
-    li {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    ul {
+        @include cover();
+
+        li{
+            @include cover();
+
+            &:not(.current) {
+                display: none;
+            }
+        }
     }
 
-    li.current:not(.type-featured) {
-        display: block;
+    ul li a:hover {
+        text-decoration: none;
+    }
+
+    &.is-collapsed .type-featured {
+        > a {
+            display: block;
+            @include cover();
+        }
+
+        .text-block.text-block-left,
+        .text-block.text-block-right {
+            opacity: .9;
+            margin-right: 0;
+            margin-left: 0;
+            width: 100%;
+
+            ~ [class*="slider-image-"]  {
+                margin-right: 0;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
     }
 
     .type-featured {
 
-        flex-flow: row wrap;
-        height: 100%;
-
-        &.current {
-            display: flex;
-        }
-
-        &.is-collapsed {
-            .text-block.text-block-left,
-            .text-block.text-block-right {
-                @include cover();
-                opacity: .9;
-            }
-        }
-
-        > a {
-            display: flex;
+        .text-block,
+        [class*="slider-image-"] {
+            width: 50%;
             height: 100%;
-            width: 100%;
-
-            &:hover {
-                text-decoration: none;
-            }
         }
 
-        .slider-image-desktop,
-        .slider-image-mobile,
-        .text-block {
-            position: relative;
-            flex: 1 0 auto;
-            flex-basis: 350px;
-        }
-
-        .text-block.text-block-right ~ .slider-image-desktop,
-        .text-block.text-block-right ~ .slider-image-mobile {
-            order: 1;
+        .text-block.text-block-left {
+            margin-right: 50%;
         }
 
         .text-block.text-block-right {
-            order: 2;
+            margin-left: 50%;
+        }
+
+        .text-block.text-block-right ~ [class*="slider-image-"] {
+            margin-right: 50%;
+        }
+
+        .text-block.text-block-left ~ [class*="slider-image-"] {
+            margin-left: 50%;
         }
 
     }
@@ -257,14 +263,27 @@
                 .theme-#{$theme} &:not([class*="stripe-"]) {
                     background-color: rgba(map-get($color, second),.9);
 
+                    &.text-block-left:not([class*=stripe-]),
+                    &.text-block-right:not([class*=stripe-]) {
+                        background-color: $creamy;
+                        border: 1px solid $creamy-darker;
+                    }
+
+                    .creamy {
+                        &.text-block-left:not([class*=stripe-]),
+                        &.text-block-right:not([class*=stripe-]) {
+                            background-color: #ffffff;
+                            border-color: $creamy-darker;
+                        }
+                    }
+
                     &.text-block-center {
                         background-color: rgba(#000, .4) !important;
                     }
 
                     &.text-block-left,
                     &.text-block-right {
-                        background-color: $creamy;
-                        border: 1px solid $creamy-darker;
+
                         span {
                             color: $base-font-color;
 
@@ -282,13 +301,6 @@
             }
         }
 
-        .creamy {
-            &.text-block-left,
-            &.text-block-right {
-                background-color: #ffffff;
-                border-color: $creamy;
-            }
-        }
     }
 }
 
