@@ -39,30 +39,33 @@ HelsingborgPrime.Component.Slider = (function ($) {
      * Add collapsed class
      */
     Slider.prototype.detectIfIsCollapsed = function (slider) {
-        if ($(slider).find('li.type-featured').length > 0) {
-            $("li",slider).each(function(index,target){
-                if($(target).hasClass("type-featured")) {
-                    $(target).removeClass("is-collapsed is-not-collapsed");
-                    if($(".text-block",target).outerWidth() == $(slider).width()) {
-                        $(target).addClass("is-collapsed");
-                    } else {
-                        $(target).addClass("is-not-collapsed");
-                    }
-                }
-            });
+        if($(slider).width() <= 500) {
+            $(slider).addClass("is-collapsed");
+        } else {
+            $(slider).removeClass("is-collapsed");
         }
     };
 
     Slider.prototype.preloadImage = function () {
         setTimeout(function(){
+
             var normal_img = new Array();
             var mobile_img = new Array();
+
             $(".slider ul li").each(function(index,slide) {
-                normal_img.index = new Image();
-                normal_img.index.src = $(".slider-image-desktop",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-                mobile_img.index = new Image();
-                mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+
+                if($(".slider-image-mobile",slide).length) {
+                    normal_img.index = new Image();
+                    normal_img.index.src = $(".slider-image-desktop",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
+                if($(".slider-image-mobile",slide).length) {
+                    mobile_img.index = new Image();
+                    mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
             });
+
         },5000);
     };
 
