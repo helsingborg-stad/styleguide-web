@@ -13,7 +13,7 @@
 //     <li>Gingerbread</li>
 // </ul>
 //
-article ul:not(.nav),
+article ul:not(.nav):not(.slider-items),
 .unordered-list {
     padding-left: $content-gutter * 2;
 
