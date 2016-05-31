@@ -1,0 +1,54 @@
+//
+// @name WP Utility: Captions
+// @description Wordpress built in caption functionality.
+//
+// @page Wordpress/WP Utility: Caption
+//
+// @markup
+//
+// <div class="wp-caption alignnone">
+//  <img class="wp-image-2634 size-large" src="https://unsplash.it/458/354?image=0" alt="Hemtjanst2">
+//  <p class="wp-caption-text">Gingerbread gummies lollipop chocolate cake.</p>
+// </div>
+//
+.wp-caption {
+    border-radius: 2px;
+    display: inline-block;
+    background: $creamy;
+    border: 1px solid $creamy-darker;
+    padding: $grid-gutter-xs $grid-gutter-xs $grid-gutter-xs $grid-gutter-xs;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 0;
+}
+
+.wp-caption.alignleft {
+    margin: $align-left-margin;
+}
+
+.wp-caption.alignright {
+    margin: $align-right-margin;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: .75em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.creamy .wp-caption {
+    background-color: #fff;
+    border-color: $creamy-darker;
+}
