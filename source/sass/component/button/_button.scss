@@ -67,9 +67,10 @@ input[type="button"].btn::-moz-focus-inner {
 }
 
 .read-more {
-    text-align: center;
     display: block !important;
+    text-align: center;
     color: $base-font-color !important;
+    text-decoration: none !important;
 
     &::before {
         @include hbg-icon($icon-plus-square);
@@ -92,7 +93,7 @@ input[type="button"].btn::-moz-focus-inner {
 // <button class="btn btn-primary disabled">Primary button</button>
 //
 
-.btn-primary {
+.btn.btn-primary {
     background-color: $palette-gray-3;
     color: #fff;
     border: none;
@@ -122,13 +123,34 @@ input[type="button"].btn::-moz-focus-inner {
     }
 }
 
-.btn-danger {
+.btn.btn-danger {
     background-color: $danger-bg;
     color: $danger-text;
 
     &:hover,
     &:focus {
         background-color: darken($danger-bg, 10%);
+    }
+}
+
+//
+// @name Button: Plain
+// @description Buttons
+//
+// @page Buttons/Plain
+//
+// @markup
+// <a href="#" class="btn btn-plain">Plain button</a>
+// <button class="btn btn-plain">Plain button</button>
+//
+
+.btn.btn-plain {
+    background-color: transparent;
+    color: $base-font-color;
+    padding: 0;
+
+    &:hover {
+        background-color: trapsarent;
     }
 }
 
