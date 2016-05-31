@@ -1,3 +1,26 @@
+//
+// @name Segment control
+// @description A control for segmentating radiobuttons or checkboxes
+//
+// @page Forms/Segment control
+//
+// @markup
+// <ul class="segmented-control">
+//     <li>
+//         <input id="search-level-subscriptions" type="radio" name="level" value="subscriptions">
+//         <label for="search-level-subscriptions" class="checkbox inline-block">Subscriptions</label>
+//     </li>
+//     <li>
+//         <input id="search-level-all" type="radio" name="level" value="all">
+//         <label for="search-level-all" class="checkbox inline-block">All</label>
+//     </li>
+//     <li>
+//         <input id="search-level-current" type="radio" name="level" value="current">
+//         <label for="search-level-current" class="checkbox inline-block">Current</label>
+//     </li>
+// </ul>
+//
+
 .segmented-control {
     display: inline-block;
     background-color: #fff;
