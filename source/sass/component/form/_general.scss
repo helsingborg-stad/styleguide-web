@@ -1,4 +1,7 @@
-input, textarea, select, button {
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select,
+button {
     appearance: none;
     border-radius: 0;
 }
