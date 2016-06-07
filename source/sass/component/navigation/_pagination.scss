@@ -5,6 +5,7 @@
 // @page Navigation/Pagination
 //
 // @state .current - The currently active page number
+// @state .paging-lg - Bigger paging
 //
 // @markup
 // <ul class="pagination">
@@ -84,5 +85,16 @@
 	.dots {
 		display: block;
 		font-size: .85em;
+	}
+}
+
+.pagination-lg {
+	$page-size: 40px;
+
+	a:not(.next):not(.prev) {
+		font-size: 1.1em;
+		height: $page-size;
+		width: $page-size;
+		line-height: $page-size;
 	}
 }
