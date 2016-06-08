@@ -27,35 +27,6 @@
     @extend .clearfix;
 }
 
-.grid.no-gutter [class*="grid-"] {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.grid-va-middle {
-    align-items: center;
-
-    [class*="grid-"] {
-        vertical-align: middle;
-    }
-}
-
-.grid-va-top {
-    align-items: top;
-
-    [class*="grid-"] {
-        vertical-align: top;
-    }
-}
-
-.grid-va-bottom {
-    align-items: bottom;
-
-    [class*="grid-"] {
-        vertical-align: bottom;
-    }
-}
-
 // ***************************************************************
 // *** Grid column gutter
 // ***************************************************************
@@ -237,6 +208,35 @@
     background-color: $creamy;
     border: 1px solid $creamy-darker;
     overflow: hidden;
+}
+
+.grid.no-gutter [class*="grid-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grid-va-middle {
+    align-items: center;
+
+    [class*="grid-"] {
+        vertical-align: middle;
+    }
+}
+
+.grid-va-top {
+    align-items: top;
+
+    [class*="grid-"] {
+        vertical-align: top;
+    }
+}
+
+.grid-va-bottom {
+    align-items: bottom;
+
+    [class*="grid-"] {
+        vertical-align: bottom;
+    }
 }
 
 
