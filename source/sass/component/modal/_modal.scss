@@ -86,6 +86,12 @@
 	position: relative;
     color: #fff;
 
+    @media screen and #{$screen-xs} {
+        padding: $content-gutter;
+        color: $base-font-color;
+        border-bottom: 1px solid $creamy-darker;
+    }
+
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
         font-weight: 600;
@@ -116,10 +122,18 @@
 			@include hbg-icon('\f00d');
 		}
 
-		@media screen and #{$screen-xs} {
-			top: 50%;
-			right: 2em;
-		}
+        @media screen and #{$screen-xs} {
+            background-color: transparent;
+            color: $base-font-color;
+            padding: 0;
+            border-radius: 0;
+            right: $content-gutter;
+
+            &:hover {
+                color: $palette-red-4;
+                background-color: transparent;
+            }
+        }
 	}
 
 }
@@ -142,6 +156,10 @@
     z-index: $level-10;
     line-height: $base-line-height;
 	@include center(true, false);
+
+    @media screen and #{$screen-xs} {
+        background-color: #fff;
+    }
 }
 
 /* Modifiers - size */
@@ -188,7 +206,7 @@
 	}
 
 	@media screen and #{$screen-sm-up} {
-		width: 70%;
+		width: 90%;
 	}
 
 	@media screen and #{$screen-md-up} {
