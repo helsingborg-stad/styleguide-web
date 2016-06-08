@@ -4,6 +4,8 @@
 //
 // @page Typography/Label
 //
+// @state .label-tag - Adds arrow shape to label end
+//
 // @state .label-sm - Smaller label
 // @state .label-lg - Larger label
 //
@@ -43,6 +45,11 @@
 .label-lg {
     font-size: 1.1em;
     padding: .3em .6em;
+}
+
+.label-creamy {
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
 }
 
 .label-red-1 {

@@ -23,7 +23,8 @@
 //                 <img src="https:\/\/unsplash.it/200/130/?image=600">
 //             </div>
 //             <div class="box-content">
-//                 <h3 class="text-highlight">Fruitcake toffee</h3>
+//                 <h3 class="box-title text-highlight">Fruitcake toffee</h3>
+//                 <time datetime="2016-05-27 08:50:36">2016-05-27 08:50</time>
 //                 <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>
 //                 <p><span class="link-item">Read more</span></p>
 //             </div>
@@ -58,7 +59,7 @@
         }
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    .box-title, h1, h2, h3, h4, h5, h6 {
         margin: 0;
         padding: 0;
     }
@@ -73,10 +74,15 @@
         padding: $content-gutter;
     }
 
+    time {
+        font-size: .8em;
+        margin-bottom: 10px;
+    }
+
     &:hover {
         text-decoration: none;
 
-        h1, h2, h3, h4, h5, h6,
+        .box-title, h1, h2, h3, h4, h5, h6,
         .link-item {
             text-decoration: underline;
         }
@@ -137,7 +143,12 @@
         }
     }
 
-    h1, h2, h3, h4, h4, h6 {
+    .box-title, h1, h2, h3, h4, h4, h6 {
         padding-bottom: 5px;
+
+        & + time {
+            position: relative;
+            top: -5px;
+        }
     }
 }

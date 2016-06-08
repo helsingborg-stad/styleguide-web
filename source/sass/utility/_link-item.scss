@@ -85,8 +85,10 @@
 }
 
 .link-item-xls,
+.link-item-csv,
 .link-item[href$=".xls"],
-.link-item[href$=".xlsx"] {
+.link-item[href$=".xlsx"],
+.link-item[href$=".csv"] {
     &::before {
         @include hbg-icon($icon-excel);
     }
