@@ -20,7 +20,29 @@ gulp.task('sass-dist', function() {
             .pipe(rename({suffix: '.min'}))
             .pipe(cssnano({
                 mergeLonghand: false,
-                zindex: false
+                zindex: false,
+                discardComments: true,
+                colormin: true,
+                core: true,
+                discardEmpty: true,
+                discardOverridden: true,
+                filterOptimiser: true,
+                functionOptimiser: true,
+                mergeRules: true,
+                minifyFontValues: true,
+                minifyGradients: true,
+                minifyParams: true,
+                minifySelectors: true,
+                normalizeCharset: true,
+                normalizeUrl: true,
+                orderedValues: true,
+                reduceBackgroundRepeat: true,
+                reduceIdents: false,
+                reducePositions: true,
+                reduceTimingFunctions: true,
+                reduceTransforms: true,
+                svgo: true,
+                uniqueSelectors: true
             }))
             .pipe(gulp.dest('dist/css'));
 });
