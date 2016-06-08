@@ -23,7 +23,13 @@
 }
 
 .share-horizontal {
-    @extend .nav-horizontal;
+    > li {
+        display: inline-block;
+
+        & + li {
+            margin-left: 15px;
+        }
+    }
 
     li + li {
         margin-left: 5px;
