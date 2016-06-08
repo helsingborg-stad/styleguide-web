@@ -82,35 +82,38 @@
 }
 
 .modal-header {
-	padding: 1em;
-	border-bottom: 1px solid $creamy-darker;
+	padding: .6em 0;
 	position: relative;
+    color: #fff;
 
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
+        font-weight: 600;
 	}
 
 	.btn-close {
 		position: absolute;
 		top: 0;
 		right: 0;
-		height: 2em;
-		width: 2em;
-		margin: -1em;
-		line-height: 2em;
-		text-align: center;
-		padding: 0;
-		border-radius: 50%;
-		border: .2em solid #fff;
-		box-shadow: 0 1px 1px rgba(#000,.2);
-		background: $creamy;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include center(false, true);
+
+        &:hover {
+            background-color: #fff;
+            color: $base-font-color;
+        }
 
 		&:after {
-			@include cover();
-			content: "\00d7";
-			font-size: 1.5em;
-			line-height: 1;
-			color: $base-font-color;
+            @include center();
+            right: 0;
+			@include hbg-icon('\f00d');
 		}
 
 		@media screen and #{$screen-xs} {
@@ -123,19 +126,21 @@
 
 .modal-body {
 	padding: 1em;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
 }
 
 .modal-footer {
 	padding: 1em;
 	border-top: 1px solid $creamy-darker;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
 }
 
 .modal-content {
 	position: relative;
     z-index: $level-10;
-	background: #fff;
     line-height: $base-line-height;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 	@include center(true, false);
 }
 
@@ -194,7 +199,7 @@
 /* Modifiers - color */
 
 .modal-backdrop-1 .backdrop {
-    background-color: rgba($palette-gray-1,.9);
+    background-color: rgba($palette-gray-1, .95);
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -207,7 +212,7 @@
 }
 
 .modal-backdrop-2 .backdrop  {
-    background-color: rgba($palette-gray-2,.9);
+    background-color: rgba($palette-gray-2, .95);
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -220,7 +225,7 @@
 }
 
 .modal-backdrop-3 .backdrop  {
-    background-color: rgba($palette-gray-3,.9);
+    background-color: rgba($palette-gray-3, .95);
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -233,7 +238,7 @@
 }
 
 .modal-backdrop-4 .backdrop  {
-    background-color: rgba($palette-gray-4,.9);
+    background-color: rgba($palette-gray-4, .95);
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -246,11 +251,11 @@
 }
 
 .modal-backdrop-black .backdrop  {
-    background-color: rgba(#000,.9);
+    background-color: rgba(#000, .95);
 }
 
 .modal-backdrop-white .backdrop  {
-    background-color: rgba(#fff,.9);
+    background-color: rgba(#fff, .95);
 }
 
 .modal-backdrop-white .modal-content {
