@@ -28,7 +28,7 @@
 
 .sidebar-left-sidebar .widget_nav_menu > div,
 .sidebar-right-sidebar .widget_nav_menu > div {
-    @extend .box-content;
+    @include box-content;
 }
 
 .sidebar-left-sidebar .widget_nav_menu a,

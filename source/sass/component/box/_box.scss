@@ -1,45 +1,5 @@
 .box {
-    display: block;
-    width: 100%;
-    padding: $content-gutter / 3;
-    margin-bottom: $grid-gutter-xs;
-
-    @media #{$screen-sm} {
-        margin-bottom: $grid-gutter-sm;
-    }
-
-    @media #{$screen-md} {
-        margin-bottom: $grid-gutter-md;
-    }
-
-    @media #{$screen-lg} {
-        margin-bottom: $grid-gutter-lg;
-    }
-
-    p + p {
-        margin-top: $content-gutter/1.5;
-    }
-
-    li .date {
-        margin-top: 3px;
-    }
-
-    .box-title,
-    .widgettitle,
-    > h1,
-    > h2,
-    > h3,
-    > h4,
-    > h5,
-    > h6,
-    .widget > h1,
-    .widget > h2,
-    .widget > h3,
-    .widget > h4,
-    .widget > h5,
-    .widget > h6 {
-        font-size: 1.2em;
-    }
+    @include box;
 }
 
 .box + .box {
@@ -48,8 +8,7 @@
 }
 
 .box-content {
-    padding: $box-padding;
-    font-size: .9em;
+    @include box-content;
 }
 
 .box-content img {

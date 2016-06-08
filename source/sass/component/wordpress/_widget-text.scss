@@ -16,7 +16,7 @@
     .sidebar-left-sidebar &,
     .sidebar-right-sidebar & {
         .textwidget {
-            @extend .box-content;
+            @include box-content;
         }
     }
 }

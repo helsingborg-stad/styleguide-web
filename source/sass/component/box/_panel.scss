@@ -63,7 +63,9 @@
 // </div>
 //
 
-.box-panel {
+.box-panel,
+.sidebar-content-area [class^="widget_"]:not(.widget_calendar),
+.sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) {
     display: block;
     padding: 0;
 
@@ -155,7 +157,9 @@
     }
 }
 
-.box-panel-secondary {
+.box-panel-secondary,
+.sidebar-content-area [class^="widget_"]:not(.widget_calendar),
+.sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) {
     .box-title,
     .widgettitle,
     > h1,

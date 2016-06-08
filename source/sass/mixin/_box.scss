@@ -1,0 +1,98 @@
+@mixin box {
+    display: block;
+    width: 100%;
+    padding: $content-gutter / 3;
+    margin-bottom: $grid-gutter-xs;
+
+    @media #{$screen-sm} {
+        margin-bottom: $grid-gutter-sm;
+    }
+
+    @media #{$screen-md} {
+        margin-bottom: $grid-gutter-md;
+    }
+
+    @media #{$screen-lg} {
+        margin-bottom: $grid-gutter-lg;
+    }
+
+    p + p {
+        margin-top: $content-gutter/1.5;
+    }
+
+    li .date {
+        margin-top: 3px;
+    }
+
+    .box-title,
+    .widgettitle,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    .widget > h1,
+    .widget > h2,
+    .widget > h3,
+    .widget > h4,
+    .widget > h5,
+    .widget > h6 {
+        font-size: 1.2em;
+    }
+}
+
+@mixin box-filled {
+    background-color: $palette-gray-2;
+    color: #fff;
+
+    .box-title,
+    .widgettitle,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    .widget > h1,
+    .widget > h2,
+    .widget > h3,
+    .widget > h4,
+    .widget > h5,
+    .widget > h6 {
+        padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
+    }
+
+    > ul {
+        padding: $content-gutter/1.5;
+    }
+
+    a:not(.btn) {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .box-content {
+        img {
+            @extend .img-inherit-width;
+        }
+    }
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+
+    .btn.btn-plain {
+        color: #fff;
+    }
+}
+
+@mixin box-content {
+    padding: $box-padding;
+    font-size: .9em;
+}
