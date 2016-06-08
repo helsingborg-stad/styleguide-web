@@ -152,6 +152,10 @@ input[type="button"].btn::-moz-focus-inner {
     &:hover {
         background-color: trapsarent;
     }
+
+    &:active {
+        box-shadow: none;
+    }
 }
 
 //

@@ -79,6 +79,10 @@
 		opacity: 1;
 		display: block !important;
 	}
+
+    .backdrop {
+        cursor: default;
+    }
 }
 
 .modal-header {
