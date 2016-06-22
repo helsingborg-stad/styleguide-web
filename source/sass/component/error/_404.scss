@@ -32,12 +32,20 @@
 
     .logotype {
         display: block;
-        width: 200px;
-        height: auto;
+
+        img, svg {
+            display: block;
+            width: 200px;
+            height: auto;
+        }
     }
 
     a {
         color: #fff;
+    }
+
+    .logotype h1 {
+        font-size: 2em;
     }
 
     h1 {
