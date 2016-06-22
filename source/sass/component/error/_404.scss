@@ -26,6 +26,10 @@
         padding: $content-gutter * 2;
     }
 
+    #cookie-consent {
+        display: none;
+    }
+
     .container + .container {
         margin-top: $content-gutter * 2;
     }
