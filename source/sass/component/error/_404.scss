@@ -1,3 +1,12 @@
+// Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .error404.theme-#{$theme} {
+                background-color: map-get($color, fourth);
+            }
+        }
+    }
+
 .error404 {
     @include cover();
     background-color: $palette-red-4;
@@ -10,15 +19,6 @@
     display: table;
     height: 100vh;
     width: 100%;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
 
     #wrapper {
         display: table-cell;
