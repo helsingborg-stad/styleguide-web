@@ -1,0 +1,46 @@
+.gform_wrapper {
+    margin: $content-gutter 0;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    padding: $content-gutter * 2;
+
+    form {
+        margin: 0 !important;
+    }
+}
+
+.gform_fields {
+    padding: 0 !important;
+}
+
+.ginput_container {
+    margin-top: 3px;
+}
+
+.gfield_required {
+    color: $palette-red-4;
+}
+
+.gfield_list {
+    td {
+        vertical-align: top;
+    }
+
+    .add_list_item,
+    .delete_list_item {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    td + td {
+        padding-left: 5px;
+    }
+
+    tr + tr td {
+        padding-top: 8px;
+    }
+}
+
+.ginput_container_list + .gfield_description {
+    margin-top: 5px;
+}

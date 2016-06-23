@@ -56,7 +56,6 @@ textarea {
         font-size: 1.2em;
     }
 
-    &:invalid,
     &.invalid {
         border: 1px solid $danger-bg;
     }
