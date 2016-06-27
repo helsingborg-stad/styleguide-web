@@ -35,7 +35,7 @@ input[type="button"].btn::-moz-focus-inner {
     vertical-align: middle;
     padding: $btn-padding;
     background-color: $creamy-darker;
-    border: 0;
+    border: 1px solid $creamy-darker;
     font-family: $base-font-family;
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
@@ -96,13 +96,14 @@ input[type="button"].btn::-moz-focus-inner {
 .btn.btn-primary {
     background-color: $palette-gray-3;
     color: #fff;
-    border: none;
+    border-color: $palette-gray-3;
 
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, third);
+                border-color: map-get($color, third);
                 color: #fff;
             }
         }
@@ -111,12 +112,14 @@ input[type="button"].btn::-moz-focus-inner {
     &:hover,
     &:focus {
         background-color: darken($palette-gray-3, 3%);
+        border-color: darken($palette-gray-3, 3%);
 
         // Color theme styles
         @if ($includeThemes == true) {
             @each $theme, $color in $themes {
                 .theme-#{$theme} & {
                     background-color: darken(map-get($color, third), 3%);
+                    border-color: darken(map-get($color, third), 3%);
                 }
             }
         }
@@ -125,11 +128,13 @@ input[type="button"].btn::-moz-focus-inner {
 
 .btn.btn-danger {
     background-color: $danger-bg;
+    border-color: $danger-bg;
     color: $danger-text;
 
     &:hover,
     &:focus {
         background-color: darken($danger-bg, 10%);
+        border-color: darken($danger-bg, 10%);
     }
 }
 
@@ -147,6 +152,7 @@ input[type="button"].btn::-moz-focus-inner {
 .btn.btn-plain {
     background-color: transparent;
     color: $base-font-color;
+    border-color: transparent;
     padding: 0;
 
     &:hover {
@@ -180,6 +186,7 @@ input[type="button"].btn::-moz-focus-inner {
 
 @mixin btn-theme ($default, $colorNum: 'first') {
     background-color: $default;
+    border-color: $default;
     color: #fff;
 
     // Color theme styles
@@ -187,18 +194,21 @@ input[type="button"].btn::-moz-focus-inner {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, $colorNum);
+                border-color: map-get($color, $colorNum);
             }
         }
     }
 
     &:hover {
         background-color: darken($palette-gray-1, 3%);
+        border-color: darken($palette-gray-1, 3%);
 
         // Color theme styles
         @if ($includeThemes == true) {
             @each $theme, $color in $themes {
                 .theme-#{$theme} & {
                     background-color: darken(map-get($color, $colorNum), 3%);
+                    border-color: darken(map-get($color, $colorNum), 3%);
                 }
             }
         }

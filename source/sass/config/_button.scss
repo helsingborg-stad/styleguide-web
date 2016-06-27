@@ -5,7 +5,7 @@
 // Default button
 $btn-font-size: .9em;
 $btn-font-weight: 600;
-$btn-padding: .4em 1em;
+$btn-padding: $content-gutter/2 $content-gutter/1.5;
 
 // Small button
 $btn-sm-font-size: .8em;

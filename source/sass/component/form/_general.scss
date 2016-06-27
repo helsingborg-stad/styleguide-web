@@ -102,3 +102,10 @@ form {
         }
     }
 }
+
+.form-horizontal-block {
+    [class*="grid-"] input[type="submit"],
+    [class*="grid-"] button {
+        margin-top: 27px;
+    }
+}
