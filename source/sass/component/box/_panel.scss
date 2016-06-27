@@ -109,7 +109,7 @@
         background-color: #fff;
     }
 
-    ul:not(.social-feed-gallery) {
+    > ul:not(.social-feed-gallery) {
         background-color: #fff;
         border: 1px solid $creamy-darker;
         border-top: 0;
