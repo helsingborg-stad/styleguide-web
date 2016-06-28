@@ -6,12 +6,12 @@
 }
 
 pre.xdebug-var-dump {
-    background-color: #fff;
+    background-color: #f9f9f9;
     color: $base-font-color;
     width: auto;
-    padding: 20px;
-    float: left;
-    border: 8px solid $palette-red-4;
+    padding: 10px 15px;
+    border: 2px solid $palette-red-4;
+    margin: 15px;
 }
 
 pre:not(.xdebug-var-dump) {
