@@ -13,7 +13,7 @@
 //      <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
-//             <h2>Ice cream</h2>
+//             <h3>Ice cream</h3>
 //         </label>
 //         <div class="accordion-content">
 //             Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.
@@ -22,7 +22,7 @@
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-2">
 //         <label class="accordion-toggle" for="accordion-section-2">
-//             <h2>Sugar plum</h2>
+//             <h3>Sugar plum</h3>
 //         </label>
 //         <div class="accordion-content">
 //             Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.
@@ -31,7 +31,7 @@
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-3">
 //         <label class="accordion-toggle" for="accordion-section-3">
-//             <h2>Fruitcake</h2>
+//             <h3>Fruitcake</h3>
 //         </label>
 //         <div class="accordion-content">
 //             I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.
@@ -40,7 +40,7 @@
 //		<section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-4">
 //         <label class="accordion-toggle" for="accordion-section-4">
-//             <h2>Jelly-o</h2>
+//             <h3>Jelly-o</h3>
 //         </label>
 //         <div class="accordion-content">
 //             Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.
@@ -49,8 +49,8 @@
 // </div>
 
 .accordion {
-    input[type="checkbox"],
-    input[type="radio"] {
+    .accordion-section > input[type="checkbox"],
+    .accordion-section > input[type="radio"] {
         display: none;
     }
 }
@@ -79,16 +79,31 @@
 
 	.accordion-toggle,
 	.accordion-content {
-		padding: $grid-gutter-sm/2 $grid-gutter-sm;
+		padding: $grid-gutter-sm;
 
 		&:before {
 			right: $grid-gutter-sm;
 		}
 	}
 
+    .accordion-toggle {
+        @include gradient(#fff, lighten($creamy, 2%));
+    }
+
 	.accordion-content {
-		padding-top: $grid-gutter-sm;
-		padding-bottom: $grid-gutter-sm;
+        position: relative;
+		padding: $grid-gutter-sm * 2;
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            @include gradient(rgba(#000, .1), rgba(#000, 0))
+        }
 	}
 
     .accordion-table-head {
@@ -100,7 +115,7 @@
 	&.list-medium {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-md/2 $grid-gutter-md;
+			padding: $grid-gutter-md;
 
 			&:before {
 				right: $grid-gutter-md;
@@ -108,9 +123,8 @@
 		}
 
 		.accordion-content {
-			padding-top: $grid-gutter-md;
-			padding-bottom: $grid-gutter-md;
-		}
+            padding: $grid-gutter-md * 2;
+        }
 
         .accordion-table-head {
             padding: $grid-gutter-md/2 $grid-gutter-md;
@@ -122,7 +136,7 @@
 	&.list-large {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-lg/2 $grid-gutter-lg;
+			padding: $grid-gutter-lg;
 
 			&:before {
 				right: $grid-gutter-lg;
@@ -130,8 +144,7 @@
 		}
 
 		.accordion-content {
-			padding-top: $grid-gutter-lg;
-			padding-bottom: $grid-gutter-lg;
+			padding: $grid-gutter-lg * 2;
 		}
 
         .accordion-table-head {
@@ -148,15 +161,18 @@
 	}
 
 	.accordion-toggle {
-
-		h1, h2, h3, h4, h5,h6 {
-			font-size: 1.4em;
+		h1, h2, h3, h4, h5, h6 {
 			padding: 0;
 			margin: 0;
+            font-weight: normal;
 		}
 
 	}
 
+}
+
+.accordion-content article {
+    margin-bottom: 0;
 }
 
 .accordion-list {
@@ -173,6 +189,17 @@
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
 .accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
     @include hbg-icon($icon-minus-square);
+}
+
+input[type="checkbox"]:checked ~ .accordion-toggle,
+input[type="radio"]:checked ~ .accordion-toggle {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    .label-number {
+        color: $palette-green-2;
+    }
 }
 
 .accordion-toggle {
