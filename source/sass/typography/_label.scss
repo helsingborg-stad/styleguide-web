@@ -24,6 +24,29 @@
     padding: .1em .3em;
 }
 
+.label-number {
+    position: relative;
+    top: -.1em;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: .1em;
+    width: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid;
+    color: $gray;
+    background-color: transparent;
+    line-height: 1;
+
+    em {
+        @include center();
+        font-size: .7em;
+        font-weight: bold;
+    }
+}
+
 .label-theme {
     background-color: $palette-gray-4;
     color: #fff;
