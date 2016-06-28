@@ -79,10 +79,10 @@
 
 	.accordion-toggle,
 	.accordion-content {
-		padding: $grid-gutter-sm;
+		padding: $grid-gutter-sm $grid-gutter-sm * 1.5;
 
 		&:before {
-			right: $grid-gutter-sm;
+			right: $grid-gutter-sm * 1.5;
 		}
 	}
 
@@ -102,7 +102,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            @include gradient(rgba(#000, .1), rgba(#000, 0))
+            @include gradient(rgba(#000, .05), rgba(#000, 0))
         }
 	}
 
@@ -115,10 +115,10 @@
 	&.list-medium {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-md;
+			padding: $grid-gutter-md $grid-gutter-md * 1.5;
 
 			&:before {
-				right: $grid-gutter-md;
+				right: $grid-gutter-md * 1.5;
 			}
 		}
 
@@ -136,10 +136,10 @@
 	&.list-large {
 		.accordion-toggle,
 		.accordion-content {
-			padding: $grid-gutter-lg;
+			padding: $grid-gutter-lg $grid-gutter-lg * 1.5;
 
 			&:before {
-				right: $grid-gutter-lg;
+				right: $grid-gutter-lg * 1.5;
 			}
 		}
 

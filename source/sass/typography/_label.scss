@@ -41,7 +41,9 @@
     line-height: 1;
 
     em {
-        @include center();
+        @include center(false, true);
+        left: 0;
+        width: 100%;
         font-size: .7em;
         font-weight: bold;
     }
