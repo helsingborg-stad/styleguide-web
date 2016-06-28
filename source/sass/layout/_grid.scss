@@ -175,6 +175,10 @@
 
 .grid-table {
     @include grid-table;
+
+    &.grid-table-autofit [class*="grid-"] {
+        max-width: none;
+    }
 }
 
 @media #{$screen-xs-up} {
