@@ -44,3 +44,13 @@
 .ginput_container_list + .gfield_description {
     margin-top: 5px;
 }
+
+.gfield_checkbox {
+    margin: 0;
+    padding: 0 !important;
+
+    li label {
+        display: inline-block;
+        font-weight: normal;
+    }
+}
