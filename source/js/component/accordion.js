@@ -12,9 +12,8 @@ HelsingborgPrime.Component.Accordion = (function ($) {
     }
 
     Accordion.prototype.init = function () {
-        $('div.accordion label').on('click', function(event) {
-
-				window.location.hash = '#' + $(this).attr('for');
+        $('.accordion-toggle').on('click', function(event) {
+			window.location.hash = '#' + $(this).attr('for');
 		});
 
 
