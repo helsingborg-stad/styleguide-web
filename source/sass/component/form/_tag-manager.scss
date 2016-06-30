@@ -1,0 +1,25 @@
+.tag-manager {
+    border: 1px solid $creamy-darker;
+
+    .tag-manager-input {
+        border-bottom: 1px solid $creamy-darker;
+
+        input {
+            border: none;
+        }
+    }
+
+    .tag-manager-selected {
+        padding: $content-gutter;
+
+        li {
+            display: inline-block;
+            font-size: .8em;
+            margin-right: 5px;
+        }
+
+        button[data-action="remove"] {
+            margin-left: 3px;
+        }
+    }
+}
