@@ -1,0 +1,29 @@
+//
+// @name Explain
+// @description Use for enclosed word description or similar
+//
+// @page Utilities/Explain
+//
+// @markup
+// <span class="explain">
+//     <em>The word</em>
+//     <span data-tooltip="The word description"><i class="fa fa-question-circle"></i></span>
+// </span>
+//
+
+.explain {
+    em {
+        font-style: italic;
+    }
+
+    .fa {
+        color: $gray;
+        cursor: default;
+    }
+
+    @media print {
+        .fa {
+            display: none;
+        }
+    }
+}

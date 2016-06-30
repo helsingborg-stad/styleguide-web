@@ -120,4 +120,18 @@
             }
         }
     }
+
+    @media print {
+        &::before {
+            display: none !important;
+        }
+
+        &::after {
+            display: inline-block;
+            content: "(" attr(data-tooltip) ")";
+            margin-left: .3em;
+            color: $base-font-color;
+            font-size: .8em;
+        }
+    }
 }
