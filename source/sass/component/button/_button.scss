@@ -254,6 +254,7 @@ input[type="button"].btn::-moz-focus-inner {
     padding: $btn-sm-padding;
     font-size: $btn-sm-font-size;
     font-weight: $btn-sm-font-weight;
+    line-height: 1;
 }
 
 .btn-lg {
