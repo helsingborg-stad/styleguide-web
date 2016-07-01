@@ -89,6 +89,10 @@ HelsingborgPrime.Component.TagManager = (function ($) {
         };
 
         $.post(ajaxurl, data, function (res) {
+            if (res.length === 0) {
+                return;
+            }
+
             this.showAutocomplete(element, res);
         }.bind(this), 'JSON');
     };
