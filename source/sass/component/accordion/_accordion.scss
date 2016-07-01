@@ -198,8 +198,8 @@
 }
 
 input[type="checkbox"]:checked ~ .accordion-toggle,
-input[type="checkbox"]:target ~ .accordion-toggle
 input[type="radio"]:checked ~ .accordion-toggle,
+input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
@@ -213,11 +213,15 @@ input[type="radio"]:target ~ .accordion-toggle {
 .accordion-toggle {
     @extend .no-select;
     display: block;
-    cursor: pointer;
+    cursor: default;
 
     * {
         @extend .no-select;
     }
+}
+
+label.accordion-toggle {
+    cursor: pointer;
 }
 
 .accordion-content {
@@ -229,8 +233,8 @@ input[type="radio"]:target ~ .accordion-toggle {
     }
 
     input[type="checkbox"]:checked ~ &,
-    input[type="checkbox"]:target
     input[type="radio"]:checked ~ &,
+    input[type="checkbox"]:target ~ &,
     input[type="radio"]:target ~ & {
         display: block;
     }
