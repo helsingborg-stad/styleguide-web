@@ -230,6 +230,10 @@ label.accordion-toggle {
     input[type="checkbox"] ~ &,
     input[type="radio"] ~ & {
         display: none;
+
+        @media print {
+            display: block !important;
+        }
     }
 
     input[type="checkbox"]:checked ~ &,
@@ -237,6 +241,10 @@ label.accordion-toggle {
     input[type="checkbox"]:target ~ &,
     input[type="radio"]:target ~ & {
         display: block;
+    }
+
+    @media print {
+        display: block !important;
     }
 }
 
