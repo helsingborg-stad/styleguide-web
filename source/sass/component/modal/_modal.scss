@@ -75,7 +75,8 @@
 	}
 
 	/* Css open/close logic */
-	&:target {
+	&:target,
+    &.modal-open {
 		opacity: 1;
 		display: block !important;
 	}
@@ -86,15 +87,9 @@
 }
 
 .modal-header {
-	padding: .6em 0;
+	padding: .7em 1em;
 	position: relative;
-    color: #fff;
-
-    @media screen and #{$screen-xs} {
-        padding: $content-gutter;
-        color: $base-font-color;
-        border-bottom: 1px solid $creamy-darker;
-    }
+    border-bottom: 1px solid $creamy-darker;
 
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
@@ -104,20 +99,20 @@
 	.btn-close {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 1em;
         background-color: transparent;
-        color: #fff;
+        color: $base-font-color;
         font-size: 1.5em;
-        padding: 10px;
+        padding: 0;
         text-align: center;
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        border: none;
         @include center(false, true);
 
         &:hover {
-            background-color: #fff;
-            color: $base-font-color;
+            color: $danger-bg;
         }
 
 		&:after {
@@ -125,27 +120,8 @@
             right: 0;
 			@include hbg-icon('\f00d');
 		}
-
-        @media screen and #{$screen-xs} {
-            background-color: transparent;
-            color: $base-font-color;
-            padding: 0;
-            border-radius: 0;
-            right: $content-gutter;
-
-            &:hover {
-                color: $palette-red-4;
-                background-color: transparent;
-            }
-        }
 	}
 
-}
-
-.modal-body {
-	padding: 1em;
-    background: #fff;
-    border-radius: 5px 5px 0 0;
 }
 
 .modal-footer {
@@ -155,15 +131,23 @@
     border-radius: 0 0 5px 5px;
 }
 
+.modal-body {
+    background-color: #f9f9f9;
+
+    article {
+        padding: 1em;
+        margin-bottom: 0;
+    }
+}
+
 .modal-content {
 	position: relative;
     z-index: $level-10;
     line-height: $base-line-height;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
 	@include center(true, false);
-
-    @media screen and #{$screen-xs} {
-        background-color: #fff;
-    }
 }
 
 /* Modifiers - size */

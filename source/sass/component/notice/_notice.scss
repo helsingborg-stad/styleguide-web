@@ -39,6 +39,11 @@
         vertical-align: middle;
     }
 
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
     & + .notice {
         margin-top: 1px;
     }

@@ -273,3 +273,34 @@ label.accordion-toggle {
         }
     }
 }
+
+.modal-body .accordion {
+    .accordion-section:first-child {
+        border-top: none;
+    }
+
+    .accordion-section:last-child {
+        border-bottom: none;
+    }
+}
+
+.accordion-nav {
+    background-color: #F6F5F2;
+    margin: -20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-top: 1px solid #E7E5E1;
+
+    @media print {
+        display: none;
+    }
+}
+
+[data-accordion-nav="next"] .fa {
+    margin-left: 5px;
+}
+
+[data-accordion-nav="prev"] .fa {
+    margin-right: 5px;
+}
+
