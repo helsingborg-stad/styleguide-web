@@ -42,6 +42,17 @@
     }
 }
 
+.link-item-before {
+    &::before {
+        @include hbg-icon($icon-link-arrow);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+        color: rgba(0,0,0,.4);
+        text-decoration: none;
+    }
+}
+
 /* External */
 
 .link-item-outbound {
@@ -53,7 +64,8 @@
 /* Domains */
 
 .link-item-github,
-.link-item[href*="github.com"] {
+.link-item[href*="github.com"],
+.link-item-before[href*="github.com"] {
     &::before {
         @include hbg-icon($icon-github);
     }
@@ -62,7 +74,8 @@
 /* Filetypes */
 
 .link-item-pdf,
-.link-item[href$=".pdf"] {
+.link-item[href$=".pdf"],
+.link-item-before[href$=".pdf"] {
     &::before {
         @include hbg-icon($icon-pdf);
     }
@@ -70,7 +83,9 @@
 
 .link-item-doc,
 .link-item[href$=".doc"],
-.link-item[href$=".docx"] {
+.link-item[href$=".docx"],
+.link-item-before[href$=".doc"],
+.link-item-before[href$=".docx"] {
     &::before {
         @include hbg-icon($icon-word);
     }
@@ -78,7 +93,9 @@
 
 .link-item-ppt,
 .link-item[href$=".ppt"],
-.link-item[href$=".pptx"] {
+.link-item[href$=".pptx"],
+.link-item-before[href$=".ppt"],
+.link-item-before[href$=".pptx"] {
     &::before {
         @include hbg-icon($icon-powerpoint);
     }
@@ -88,7 +105,10 @@
 .link-item-csv,
 .link-item[href$=".xls"],
 .link-item[href$=".xlsx"],
-.link-item[href$=".csv"] {
+.link-item[href$=".csv"],
+.link-item-before[href$=".xls"],
+.link-item-before[href$=".xlsx"],
+.link-item-before[href$=".csv"] {
     &::before {
         @include hbg-icon($icon-excel);
     }
@@ -96,7 +116,9 @@
 
 .link-item-audio,
 .link-item[href$=".mp3"],
-.link-item[href$=".wav"] {
+.link-item[href$=".wav"],
+.link-item-before[href$=".mp3"],
+.link-item-before[href$=".wav"] {
     &::before {
         @include hbg-icon($icon-audio);
     }
@@ -105,7 +127,10 @@
 .link-item-archive,
 .link-item[href$=".zip"],
 .link-item[href$=".rar"],
-.link-item[href$=".tar"] {
+.link-item[href$=".tar"],
+.link-item-before[href$=".zip"],
+.link-item-before[href$=".rar"],
+.link-item-before[href$=".tar"] {
     &::before {
         @include hbg-icon($icon-archive);
     }
@@ -118,7 +143,14 @@
 .link-item[href$=".jpeg"],
 .link-item[href$=".bmp"],
 .link-item[href$=".svg"],
-.link-item[href$=".eps"] {
+.link-item[href$=".eps"],
+.link-item-before[href$=".jpg"],
+.link-item-before[href$=".png"],
+.link-item-before[href$=".gif"],
+.link-item-before[href$=".jpeg"],
+.link-item-before[href$=".bmp"],
+.link-item-before[href$=".svg"],
+.link-item-before[href$=".eps"] {
     &::before {
         @include hbg-icon($icon-image);
     }
@@ -128,7 +160,11 @@
 .link-item[href$=".txt"],
 .link-item[href$=".md"],
 .link-item[href$=".mkdown"],
-.link-item[href$=".markdown"] {
+.link-item[href$=".markdown"],
+.link-item-before[href$=".txt"],
+.link-item-before[href$=".md"],
+.link-item-before[href$=".mkdown"],
+.link-item-before[href$=".markdown"] {
     &::before {
         @include hbg-icon($icon-text);
     }
@@ -146,7 +182,19 @@
 .link-item[href$=".webm"],
 .link-item[href$=".mkv"],
 .link-item[href$=".flv"],
-.link-item[href$=".wmw"], {
+.link-item[href$=".wmw"],
+.link-item-before[href$=".mpg"],
+.link-item-before[href$=".m4v"],
+.link-item-before[href$=".mpeg"],
+.link-item-before[href$=".mov"],
+.link-item-before[href$=".avi"],
+.link-item-before[href$=".mp4"],
+.link-item-before[href$=".ogg"],
+.link-item-before[href$=".ogv"],
+.link-item-before[href$=".webm"],
+.link-item-before[href$=".mkv"],
+.link-item-before[href$=".flv"],
+.link-item-before[href$=".wmw"] {
     &::before {
         @include hbg-icon($icon-video);
     }
@@ -159,13 +207,15 @@
 }
 
 /* Prefixes (links only) */
-.link-item[href^='tel:'] {
+.link-item[href^='tel:'],
+.link-item-before[href^='tel:'] {
 	&::before {
         @include hbg-icon($icon-phone);
     }
 }
 
-.link-item[href^='mailto:'] {
+.link-item[href^='mailto:'],
+.link-item-before[href^='mailto:'] {
 	&::before {
         @include hbg-icon($icon-mail);
     }
