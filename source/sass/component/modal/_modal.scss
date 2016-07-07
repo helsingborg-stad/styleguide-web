@@ -52,18 +52,6 @@
 	overflow: auto;
 	z-index: $level-top;
 
-	@media screen and #{$screen-sm-up} {
-		padding: $grid-gutter-sm;
-	}
-
-	@media screen and #{$screen-sm-up} {
-		padding: $grid-gutter-md;
-	}
-
-	@media screen and #{$screen-lg-up} {
-		padding: $grid-gutter-lg * 2;
-	}
-
 	/* Backdrops */
 	&[class*='modal-backdrop-'] .backdrop,
 	&[class^=' modal-backdrop-'] .backdrop{
@@ -147,7 +135,18 @@
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
-	@include center(true, false);
+
+    @media screen and #{$screen-sm-up} {
+        margin: $grid-gutter-sm auto;
+    }
+
+    @media screen and #{$screen-sm-up} {
+        margin: $grid-gutter-md auto;
+    }
+
+    @media screen and #{$screen-lg-up} {
+        margin: $grid-gutter-lg * 2 auto;
+    }
 }
 
 /* Modifiers - size */
