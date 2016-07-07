@@ -135,6 +135,12 @@
     }
 }
 
+.table.table-va-top {
+    th, td {
+        vertical-align: top;
+    }
+}
+
 .table-sm {
     font-size: .8em;
 
