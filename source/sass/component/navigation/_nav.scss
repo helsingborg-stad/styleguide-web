@@ -120,7 +120,7 @@
         @if ($includeThemes == true) {
             @each $theme, $color in $themes {
                 .theme-#{$theme} & {
-                    color: #fff !important;
+                    color: map-get($color, fourth);
                 }
             }
         }
@@ -160,6 +160,13 @@
 
 .nav-aside {
     margin-bottom: $content-gutter;
+}
+
+.nav-mobile {
+    .current,
+    .current-menu-item > a {
+        color: #fff !important;
+    }
 }
 
 // ***************************************************************
