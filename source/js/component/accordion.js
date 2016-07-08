@@ -12,8 +12,15 @@ HelsingborgPrime.Component.Accordion = (function ($) {
     }
 
     Accordion.prototype.init = function () {
-        $('label.accordion-toggle').on('click', function(event) {
-			window.location.hash = '#' + $(this).attr('for');
+        $('label.accordion-toggle').on('click', function(e) {
+            var input = $('#' + $(this).attr('for'));
+
+            if (input.prop('checked') === false) {
+                window.location.hash = '#' + $(this).attr('for');
+            } else {
+                window.location.hash = '';
+                history.pushState('', document.title, window.location.pathname);
+            }
 		});
 
 
