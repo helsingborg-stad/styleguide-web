@@ -80,10 +80,12 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
             return false;
         }
 
-        var maxFilesize = element.attr('data-max-size') ? element.attr('data-max-size') : 500;
-        var fileSize = (file.size/1000).toFixed(2);
+        var maxFilesize = element.attr('data-max-size') ? element.attr('data-max-size') : 1000;
+        maxFilesize = parseInt(maxFilesize);
+        maxFilesize = maxFilesize.toFixed(0);
+        var fileSize = parseInt(file.size/1000).toFixed(0);
 
-        if (fileSize > maxFilesize) {
+        if (parseInt(fileSize) > parseInt(maxFilesize)) {
             element.addClass('is-error is-error-filesize');
             element.find('.selected-file').html('');
 
