@@ -22,7 +22,8 @@
 .label {
     display: inline-block;
     background-color: $creamy-darker;
-    padding: .1em .3em;
+    padding: .1em .5em;
+    border-radius: 3px;
 }
 
 .label-number {
