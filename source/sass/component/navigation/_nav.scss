@@ -43,6 +43,10 @@
         border-top: 1px solid $creamy-darker;
     }
 
+    li.menu-item-search {
+        display: none; //Search always avabile in menu
+    }
+
     a {
         display: block;
         padding: 6px 10px;
@@ -201,7 +205,7 @@ $nav-duration: 200ms;
 	    height: 4px;
 	    background-color: $creamy-darker;
 	    transition: $nav-duration;
-		border-radius: 0;
+		border-radius: 1px;
 
         // Color theme styles
         @if ($includeThemes == true) {
@@ -222,7 +226,7 @@ $nav-duration: 200ms;
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
-	        border-radius: 0;
+	        border-radius: 1px;
 
             @if ($includeThemes == true) {
                 @each $theme, $color in $themes {
