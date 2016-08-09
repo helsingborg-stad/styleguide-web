@@ -27,7 +27,6 @@ HelsingborgPrime.Helper.Menu = (function ($) {
         }
 
         $('body').toggleClass('mobile-menu-open');
-        //$('body').toggleClass('overflow-hidden');
     };
 
     Menu.prototype.bindEvents = function () {
