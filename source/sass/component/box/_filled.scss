@@ -29,6 +29,15 @@
 .box-filled {
     @include box-filled;
     color: #fff;
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            background-color: #fff;
+            color: $base-font-color;
+        }
+    }
 }
 
 .box-filled-1,
