@@ -51,6 +51,7 @@ article {
 	p + img,
 	p + .box,
 	p + .dataTables_wrapper,
+	p + .wp-caption,
 
 	ol + h1,
 	ol + h2,
@@ -66,6 +67,7 @@ article {
 	ol + img,
 	ol + .box,
 	ol + .dataTables_wrapper,
+	ol + .wp-caption,
 
 	ul + h1,
 	ul + h2,
@@ -81,6 +83,7 @@ article {
 	ul + img,
 	ul + .box,
 	ul + .dataTables_wrapper,
+	ul + .wp-caption,
 
 	blockquote + h1,
 	blockquote + h2,
@@ -96,6 +99,22 @@ article {
 	blockquote + img,
 	blockquote + .box,
 	blockquote + .dataTables_wrapper,
+	blockquote + .wp-caption,
+
+	.wp-caption + h1,
+	.wp-caption + h2,
+	.wp-caption + h3,
+	.wp-caption + h4,
+	.wp-caption + h5,
+	.wp-caption + h6,
+	.wp-caption + p,
+	.wp-caption + ol,
+	.wp-caption + ul,
+	.wp-caption + blockquote,
+	.wp-caption + pre,
+	.wp-caption + img,
+	.wp-caption + .box,
+	.wp-caption + .dataTables_wrapper,
 
 	pre + h1,
 	pre + h2,
@@ -111,6 +130,7 @@ article {
 	pre + img,
 	pre + .box,
 	pre + .dataTables_wrapper,
+	pre + .wp-caption,
 
 	img + h1,
 	img + h2,
@@ -126,6 +146,7 @@ article {
 	img + img,
 	img + .box,
 	img + .dataTables_wrapper,
+	img + .wp-caption,
 
 	.box + h1,
 	.box + h2,
@@ -141,6 +162,7 @@ article {
 	.box + img,
 	.box + .box,
 	.box + .dataTables_wrapper,
+	.box + .wp-caption,
 
 	.dataTables_wrapper + h1,
 	.dataTables_wrapper + h2,
@@ -156,6 +178,7 @@ article {
 	.dataTables_wrapper + img,
 	.dataTables_wrapper + .box,
 	.dataTables_wrapper + .dataTables_wrapper,
+	.dataTables_wrapper + .wp-caption,
 	{
 		margin-top: 1.3em;
 	}
@@ -173,6 +196,7 @@ article {
 	hr + pre,
 	hr + hr,
 	hr + img,
+	hr + .wp-caption,
 
 	h1 + hr,
 	h2 + hr,
@@ -185,7 +209,8 @@ article {
 	ul + hr,
 	blockquote + hr,
 	pre + hr,
-	img + hr {
+	img + hr,
+	.wp-caption + hr {
 		margin-top: 2em;
 	}
 
@@ -236,9 +261,10 @@ article {
 		}
 	}
 
-	p {
+	p, h1, h2, h3, h4, h5, h6, li, .wp-caption {
 		max-width: 700px;
 	}
+
 }
 
 hr {
