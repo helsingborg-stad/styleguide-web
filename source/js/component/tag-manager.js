@@ -110,7 +110,7 @@ HelsingborgPrime.Component.TagManager = (function ($) {
         var $autocomplete = $('<div class="autocomplete"><ul></ul></div>');
 
         $.each(items, function (index, item) {
-            $autocomplete.find('ul').append('<li><button value="' + item + '">' + item + '</button></li>');
+            $autocomplete.find('ul').append('<li><span class="tag"><button value="' + item + '">' + item + '</button></span></li>');
         });
 
         $element.find('.tag-manager-input').append($autocomplete);
