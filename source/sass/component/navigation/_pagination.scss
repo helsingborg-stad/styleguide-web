@@ -24,20 +24,16 @@
 .pagination,
 .page-numbers {
 	$page-size: 30px;
-	font-size: 0;
 
 	li {
 		display: inline-block;
-		font-size: $base-font-size;
-
-		& + li {
-			margin-left: 5px;
-		}
+		margin-right: 3px;
+		line-height: 3;
 	}
 
 	a,
 	.current {
-		display: block;
+		display: inline-block;
 		border: 1px solid $creamy-darker;
 		font-size: .85em;
 		text-align: center;
@@ -46,7 +42,7 @@
 		padding-right: 8px;
 
 		height: $page-size;
-		line-height: $page-size;
+		line-height: $page-size - 3px;
 
 		&:hover,
 		&:focus,
@@ -71,7 +67,7 @@
 	a:not(.next):not(.prev) {
 		width: $page-size;
 		height: $page-size;
-		line-height: $page-size;
+		line-height: $page-size - 3px;
 		padding: 0;
 	}
 
@@ -95,6 +91,6 @@
 		font-size: 1.1em;
 		height: $page-size;
 		width: $page-size;
-		line-height: $page-size;
+		line-height: $page-size - 3px;
 	}
 }
