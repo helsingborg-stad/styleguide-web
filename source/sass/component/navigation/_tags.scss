@@ -9,33 +9,40 @@
 //
 // @markup
 // <ul class="tags show-tagsign">
-//     <li><a href="#">Cupcake</a></li>
-//     <li><a href="#">Jelly-o</a></li>
-//     <li><a href="#">Candy canes</a></li>
+//     <li><span class="tag"><a href="#">Cupcake</a></span></li>
+//     <li><span class="tag"><a href="#">Jelly-o</a></span></li>
+//     <li><span class="tag"><a href="#">Candy canes</a></span></li>
 // </ul>
 //
 .tags {
 	display: block;
 	padding: 0;
 	margin: 0;
+    margin-top: -5px;
+    margin-bottom: -3px;
 	list-style: none;
+    line-height: 2.1;
 
     li {
-    	display: inline-block;
-    	background: $creamy;
-    	border: 1px solid $creamy-darker;
-        padding: 5px 7px;
-        font-size: .8em;
-        border-radius: 3px;
-        line-height: 1;
-        margin-right: 3px;
-        color: $base-font-color;
-        letter-spacing: 0.3px;
+        display: inline-block;
 
     	a {
     		text-decoration: none;
     	}
     }
+}
+
+.tag {
+    display: inline-block;
+    background: $creamy;
+    border: 1px solid $creamy-darker;
+    padding: 5px 7px;
+    font-size: .8em;
+    border-radius: 3px;
+    line-height: 1;
+    margin-right: 3px;
+    color: $base-font-color;
+    letter-spacing: 0.3px;
 }
 
 .tags-white {
