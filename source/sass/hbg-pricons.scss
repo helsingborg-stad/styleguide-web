@@ -90,6 +90,11 @@ $pricon-volume: "\EA23";
 $pricon-search: "\EA24";
 $pricon-edit: "\EA25";
 $pricon-minus-o: "\EA26";
+$pricon-twitter: "\EA27";
+$pricon-linkedin: "\EA28";
+$pricon-facebook: "\EA29";
+$pricon-settings: "\EA2A";
+$pricon-location-pin: "\EA2B";
 
 
 /* Glyphs */
@@ -131,6 +136,11 @@ $pricon-minus-o: "\EA26";
 .pricon-search:before { content: $pricon-search }
 .pricon-edit:before { content: $pricon-edit }
 .pricon-minus-o:before { content: $pricon-minus-o }
+.pricon-twitter:before { content: $pricon-twitter }
+.pricon-linkedin:before { content: $pricon-linkedin }
+.pricon-facebook:before { content: $pricon-facebook }
+.pricon-settings:before { content: $pricon-settings }
+.pricon-location-pin:before { content: $pricon-location-pin }
 
 
 /* Mixin */
