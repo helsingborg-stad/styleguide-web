@@ -1,4 +1,5 @@
 HelsingborgPrime = HelsingborgPrime || {};
+
 HelsingborgPrime.Menu = HelsingborgPrime.Menu || {};
 
 HelsingborgPrime.Menu.ToggleSubmenuItems = (function ($) {

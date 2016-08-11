@@ -38,7 +38,8 @@
 //
 
 .post {
-
+    @include material-radius;
+    @include material-shadow;
 }
 
 .post-single {

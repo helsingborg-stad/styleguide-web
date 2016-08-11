@@ -1,5 +1,15 @@
 .box {
     @include box;
+
+    &:not(.box-news-horizontal):not(.box-panel-secondary) {
+        @include material-radius;
+        @include material-shadow;
+    }
+
+    &.box-panel-secondary > :not(.box-title) {
+        @include material-radius;
+        @include material-shadow;
+    }
 }
 
 .box + .box {
