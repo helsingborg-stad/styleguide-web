@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 
 // Include Our Plugins
+var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -9,6 +10,13 @@ var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var dss = require('gulp-docs');
+
+// Icon plugins
+var svgscaler = require('svg-scaler');
+var svgo = require('gulp-svgo');
+var svgSprite = require('gulp-svg-sprite');
+var iconfont = require('gulp-iconfont');
+var consolidate = require('gulp-consolidate');
 
 var node_modules = 'node_modules/';
 
@@ -103,6 +111,52 @@ gulp.task('dss-sass', function() {
         .pipe(gulp.dest(''));
 });
 
+// Svg sprites
+gulp.task('iconsprite', function () {
+    gulp.src('source/icons/**/*.svg')
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    dest: '',
+                    prefix: 'icon-%s',
+                    bust: false,
+                    sprite: 'dist/images/icons.svg'
+                }
+            }
+        }))
+        .pipe(gulp.dest(''));
+});
+
+// Iconfont
+gulp.task('icons-scale', function () {
+    return gulp.src('source/icons/**/*.svg')
+        .pipe(svgo())
+        .pipe(svgscaler({ width: 1000 }))
+        .pipe(gulp.dest('source/icons/'))
+});
+
+gulp.task('iconfont', ['icons-scale'], function () {
+    return gulp.src('source/icons/**/*.svg')
+        .pipe(iconfont({
+            fontName: 'hbg-pricons',
+            prependUnicode: true,
+            formats: ['eot', 'svg', 'ttf', 'woff', 'woff2', 'otf'],
+            normalize: true,
+            ascent: 850
+        }))
+        .on('glyphs', function (glyph, options) {
+            gulp.src('source/icons/hbg-pricons.scss')
+              .pipe(consolidate('lodash', {
+                glyphs: glyph,
+                fontName: 'hbg-pricons',
+                fontPath: '../fonts/',
+                className: 'pricon'
+              }))
+              .pipe(gulp.dest('source/sass/'))
+        })
+        .pipe(gulp.dest('dist/fonts/'));
+});
+
 // Documented JS
 gulp.task('dss-js', function() {
     return gulp.src([
@@ -132,6 +186,9 @@ gulp.task('dss-js', function() {
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['scripts']);
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+    gulp.watch(['source/icons/**/*.svg', 'source/icons/hbg-pricons.scss'], function () {
+        runSequence('iconfont', ['sass-dist', 'sass-dev']);
+    });
 });
 
 // Default Task
