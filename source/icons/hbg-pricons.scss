@@ -60,13 +60,12 @@
 <% }); %>
 
 /* Mixin */
-@mixin <%= className %>($icon, $vertical-align: middle) {
+@mixin <%= className %>($icon, $vertical-align: -15%) {
     font-family: <%= fontName %>;
     line-height: 1;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0px, 0px);
     vertical-align: $vertical-align;
     content: $icon;
 }

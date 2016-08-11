@@ -17,7 +17,7 @@
     text-rendering: auto; // optimizelegibility throws things off #1094
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    vertical-align: -15%;
+    vertical-align: middle;
 }
 
 /* Size modifiers */
@@ -28,18 +28,22 @@
 
 .pricon-2x {
     font-size: 2em;
+    vertical-align: -10%;
 }
 
 .pricon-3x {
     font-size: 3em;
+    vertical-align: -12%;
 }
 
 .pricon-4x {
     font-size: 4em;
+    vertical-align: -15%;
 }
 
 .pricon-5x {
     font-size: 5em;
+    vertical-align: -18%;
 }
 
 .pricon-fw {
@@ -114,7 +118,6 @@ $pricon-info-o: "\EA1B";
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0px, 0px);
     vertical-align: $vertical-align;
     content: $icon;
 }
