@@ -16,13 +16,15 @@
         font-style: italic;
     }
 
-    .fa {
+    .fa,
+    .pricon {
         color: $gray;
         cursor: default;
     }
 
     @media print {
-        .fa {
+        .fa,
+        .pricon {
             display: none;
         }
     }

@@ -1,6 +1,6 @@
 .readspeaker-play-button {
     &::before {
-        @include hbg-icon($icon-readspeaker);
+        @include pricon($pricon-volume);
         padding-right: .3em;
     }
 }

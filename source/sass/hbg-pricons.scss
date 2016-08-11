@@ -79,6 +79,14 @@ $pricon-notice-warning: "\EA18";
 $pricon-notice-danger: "\EA19";
 $pricon-notice-error: "\EA1A";
 $pricon-info-o: "\EA1B";
+$pricon-question-o: "\EA1C";
+$pricon-linkedin-square: "\EA1D";
+$pricon-twitter-square: "\EA1E";
+$pricon-facebook-square: "\EA1F";
+$pricon-instagram: "\EA20";
+$pricon-print: "\EA21";
+$pricon-listen-ear: "\EA22";
+$pricon-volume: "\EA23";
 
 
 /* Glyphs */
@@ -109,6 +117,14 @@ $pricon-info-o: "\EA1B";
 .pricon-notice-danger:before { content: $pricon-notice-danger }
 .pricon-notice-error:before { content: $pricon-notice-error }
 .pricon-info-o:before { content: $pricon-info-o }
+.pricon-question-o:before { content: $pricon-question-o }
+.pricon-linkedin-square:before { content: $pricon-linkedin-square }
+.pricon-twitter-square:before { content: $pricon-twitter-square }
+.pricon-facebook-square:before { content: $pricon-facebook-square }
+.pricon-instagram:before { content: $pricon-instagram }
+.pricon-print:before { content: $pricon-print }
+.pricon-listen-ear:before { content: $pricon-listen-ear }
+.pricon-volume:before { content: $pricon-volume }
 
 
 /* Mixin */
