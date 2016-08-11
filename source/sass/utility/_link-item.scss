@@ -33,9 +33,11 @@
     padding-right: $padding-left;
 
     &::before {
-        @include hbg-icon($icon-link-arrow);
+        @include pricon($pricon-link-item);
         display: inline-block;
-        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+        margin-right: .4em;
         color: rgba(0,0,0,.4);
         margin-left: -$padding-left;
         text-decoration: none;
@@ -44,10 +46,10 @@
 
 .link-item-before {
     &::before {
-        @include hbg-icon($icon-link-arrow);
+        @include pricon($pricon-link-item);
         display: inline-block;
         vertical-align: middle;
-        margin-right: 6px;
+        margin-right: .4em;
         color: rgba(0,0,0,.4);
         text-decoration: none;
     }
@@ -57,7 +59,7 @@
 
 .link-item-outbound {
     &::before {
-        @include hbg-icon($icon-link-outbound);
+        @include pricon($pricon-external-link);
     }
 }
 
@@ -67,7 +69,7 @@
 .link-item[href*="github.com"],
 .link-item-before[href*="github.com"] {
     &::before {
-        @include hbg-icon($icon-github);
+        @include pricon($pricon-github);
     }
 }
 
@@ -77,7 +79,7 @@
 .link-item[href$=".pdf"],
 .link-item-before[href$=".pdf"] {
     &::before {
-        @include hbg-icon($icon-pdf);
+        @include pricon($pricon-file-pdf);
     }
 }
 
@@ -87,7 +89,7 @@
 .link-item-before[href$=".doc"],
 .link-item-before[href$=".docx"] {
     &::before {
-        @include hbg-icon($icon-word);
+        @include pricon($pricon-file-text);
     }
 }
 
@@ -97,7 +99,7 @@
 .link-item-before[href$=".ppt"],
 .link-item-before[href$=".pptx"] {
     &::before {
-        @include hbg-icon($icon-powerpoint);
+        @include pricon($pricon-presentation);
     }
 }
 
@@ -110,7 +112,7 @@
 .link-item-before[href$=".xlsx"],
 .link-item-before[href$=".csv"] {
     &::before {
-        @include hbg-icon($icon-excel);
+        @include pricon($pricon-file);
     }
 }
 
@@ -120,7 +122,7 @@
 .link-item-before[href$=".mp3"],
 .link-item-before[href$=".wav"] {
     &::before {
-        @include hbg-icon($icon-audio);
+        @include pricon($pricon-file-audio);
     }
 }
 
@@ -132,7 +134,7 @@
 .link-item-before[href$=".rar"],
 .link-item-before[href$=".tar"] {
     &::before {
-        @include hbg-icon($icon-archive);
+        @include pricon($pricon-file-archive);
     }
 }
 
@@ -152,7 +154,7 @@
 .link-item-before[href$=".svg"],
 .link-item-before[href$=".eps"] {
     &::before {
-        @include hbg-icon($icon-image);
+        @include pricon($pricon-file-image);
     }
 }
 
@@ -166,7 +168,7 @@
 .link-item-before[href$=".mkdown"],
 .link-item-before[href$=".markdown"] {
     &::before {
-        @include hbg-icon($icon-text);
+        @include pricon($pricon-file-text);
     }
 }
 
@@ -196,7 +198,7 @@
 .link-item-before[href$=".flv"],
 .link-item-before[href$=".wmw"] {
     &::before {
-        @include hbg-icon($icon-video);
+        @include pricon($pricon-file-video);
     }
 }
 
@@ -210,13 +212,13 @@
 .link-item[href^='tel:'],
 .link-item-before[href^='tel:'] {
 	&::before {
-        @include hbg-icon($icon-phone);
+        @include pricon($pricon-phone);
     }
 }
 
 .link-item[href^='mailto:'],
 .link-item-before[href^='mailto:'] {
 	&::before {
-        @include hbg-icon($icon-mail);
+        @include pricon($pricon-email);
     }
 }

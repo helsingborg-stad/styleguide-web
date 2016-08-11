@@ -22,7 +22,7 @@
 
     &::after {
         @include center();
-        @include hbg-icon('\f03e');
+        @include pricon($pricon-picture);
         font-size: 3em;
         opacity: .5;
     }

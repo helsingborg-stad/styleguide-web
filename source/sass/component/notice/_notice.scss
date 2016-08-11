@@ -13,16 +13,16 @@
 //
 // @markup
 // <div class="notice success">
-//      <i class="fa fa-check"></i> Sugar plum gummi bears.
+//      <i class="pricon pricon-check"></i> Sugar plum gummi bears.
 // </div>
 // <div class="notice warning">
-//      <i class="fa fa-warning"></i> Lollipop cake candy canes.
+//      <i class="pricon pricon-notice-warning"></i> Lollipop cake candy canes.
 // </div>
 // <div class="notice danger">
-//      <i class="fa fa-ban"></i> Jujubes oat cake sweet sugar plum.
+//      <i class="pricon pricon-notice-error"></i> Jujubes oat cake sweet sugar plum.
 // </div>
 // <div class="notice info">
-//      <i class="fa fa-ban"></i> Caramels chocolate cake ice cream.
+//      <i class="pricon pricon-info-o"></i> Caramels chocolate cake ice cream.
 // </div>
 //
 
@@ -32,11 +32,12 @@
     background-color: $creamy;
     color: $base-font-color;
 
+    .pricon,
     .fa {
         display: inline-block;
         margin-right: .3em;
         font-size: 1.5em;
-        vertical-align: middle;
+        margin-top: -0.22em;
     }
 
     span {

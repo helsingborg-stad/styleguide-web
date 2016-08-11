@@ -81,7 +81,7 @@
             position: absolute;
             right: 10px;
             top: 11px;
-            @include hbg-icon($icon-plus-square);
+            @include pricon($pricon-plus-o);
             font-size: 1em;
             color: $gray-light;
         }
@@ -97,7 +97,7 @@
             position: absolute;
             right: 12px;
             top: 11px;
-            @include hbg-icon($icon-caret-down);
+            @include pricon($pricon-caret-down);
             font-size: 1em;
             color: $gray-light;
         }
