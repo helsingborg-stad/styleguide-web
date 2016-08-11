@@ -12,7 +12,9 @@
 // </div>
 //
 .wp-caption {
-    border-radius: 2px;
+    @include material-radius;
+    @include material-shadow;
+
     display: inline-block;
     background: $creamy;
     border: 1px solid $creamy-darker;

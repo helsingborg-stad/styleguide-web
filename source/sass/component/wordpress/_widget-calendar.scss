@@ -61,6 +61,10 @@
 //
 
 .widget_calendar {
+
+    @include material-radius;
+    @include material-shadow;
+
     > h2:first-child {
         display: none;
     }
@@ -68,6 +72,7 @@
     caption {
         @extend h4;
         text-align: left;
+        display: none !important;
     }
 
     table {
