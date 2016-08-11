@@ -115,6 +115,10 @@
         vertical-align: top;
         width: 35%;
 
+        @include material-radius;
+        @include material-shadow;
+        overflow: hidden;
+
         @media #{$screen-sm-up} {
             & + .box-content {
                 padding-left: $content-gutter * 2;

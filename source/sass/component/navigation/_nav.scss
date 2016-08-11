@@ -164,6 +164,8 @@
 
 .nav-aside {
     margin-bottom: $content-gutter;
+    @include material-radius;
+    @include material-shadow;
 }
 
 .nav-mobile {
