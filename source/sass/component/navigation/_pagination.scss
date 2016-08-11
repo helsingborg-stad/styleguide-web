@@ -33,6 +33,9 @@
 
 	a,
 	.current {
+		@include material-radius;
+        @include material-shadow;
+
 		display: inline-block;
 		border: 1px solid $creamy-darker;
 		font-size: .85em;

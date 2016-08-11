@@ -18,6 +18,9 @@
     background-size: cover;
     background-position: center;
 
+    @include material-radius;
+    @include material-shadow;
+
     a {
         display: block;
         text-align: center;

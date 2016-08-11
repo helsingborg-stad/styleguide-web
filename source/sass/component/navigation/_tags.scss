@@ -33,12 +33,13 @@
 }
 
 .tag {
+    @include material-radius;
+    @include material-shadow;
     display: inline-block;
     background: $creamy;
     border: 1px solid $creamy-darker;
     padding: 5px 7px;
     font-size: .8em;
-    border-radius: 3px;
     line-height: 1;
     margin-right: 3px;
     color: $base-font-color;

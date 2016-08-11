@@ -31,6 +31,8 @@
     padding: .5em .8em;
     background-color: $creamy;
     color: $base-font-color;
+    @include material-radius;
+    @include material-shadow;
 
     .pricon,
     .fa {

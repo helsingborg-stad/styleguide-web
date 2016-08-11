@@ -50,6 +50,7 @@
 //
 
 .comment {
+
     em {
         font-weight: bold;
     }
@@ -66,12 +67,14 @@
     }
 
     .comment-text {
+
+        @include material-shadow;
+        border-radius: 4px;
         position: relative;
         padding: $content-gutter/1.5 $content-gutter;
         margin-top: 10px;
         background-color: $palette-gray-2;
         color: #fff;
-        border-radius: 5px;
 
         // Color theme styles
         @if ($includeThemes == true) {

@@ -64,6 +64,7 @@
     min-height: 350px;
     background: #000;
     overflow: hidden;
+    @include material-shadow;
 
     ul {
         @include cover();

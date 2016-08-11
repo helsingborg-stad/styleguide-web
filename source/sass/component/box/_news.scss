@@ -115,9 +115,10 @@
         vertical-align: top;
         width: 35%;
 
-        @include material-radius;
-        @include material-shadow;
-        overflow: hidden;
+        img, .image-placeholder {
+            @include material-radius;
+            @include material-shadow;
+        }
 
         @media #{$screen-sm-up} {
             & + .box-content {

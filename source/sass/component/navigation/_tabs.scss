@@ -18,6 +18,10 @@
 //
 
 .nav-tabs {
+
+    @include material-radius;
+    @include material-shadow;
+
     display: inline-block;
     padding: 0;
     overflow: hidden;
@@ -25,8 +29,6 @@
     line-height: 0;
     background-color: #fff;
     border: 1px solid $creamy-darker;
-    border-radius: 3px;
-    box-shadow: 0 2px 2px $creamy;
 
     li {
         display: inline-block;

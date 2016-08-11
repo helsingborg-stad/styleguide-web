@@ -39,7 +39,6 @@
     a {
         padding: .3em .6em;
         background-color: $creamy-darker;
-        border-radius: 5px;
         font-size: .9rem;
         color: $base-font-color;
 
@@ -48,6 +47,14 @@
             text-decoration: none;
             background-color: darken($creamy-darker, 3%);
         }
+    }
+}
+
+.nav-pills {
+    a {
+        @include material-radius;
+        @include material-shadow;
+        border: 1px solid darken($creamy-darker,2%);
     }
 }
 
