@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "hbg-pricons";
+    src: url('../fonts/hbg-pricons.eot');
+    src: url('../fonts/hbg-pricons.eot?#iefix') format('eot'),
+         url('../fonts/hbg-pricons.woff2') format('woff2'),
+         url('../fonts/hbg-pricons.woff') format('woff'),
+         url('../fonts/hbg-pricons.ttf') format('truetype'),
+         url('../fonts/hbg-pricons.svg#hbg-pricons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pricon:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 hbg-pricons; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: -15%;
+}
+
+/* Size modifiers */
+.pricon-lg {
+    font-size: 1.3333333333333333em;
+    vertical-align: -5%;
+}
+
+.pricon-2x {
+    font-size: 2em;
+}
+
+.pricon-3x {
+    font-size: 3em;
+}
+
+.pricon-4x {
+    font-size: 4em;
+}
+
+.pricon-5x {
+    font-size: 5em;
+}
+
+.pricon-fw {
+    width: 1.2857142857142858em;
+    text-align: center;
+}
+
+/* Icon variables */
+$pricon-link-item: "\EA01";
+$pricon-user-o: "\EA02";
+$pricon-external-link: "\EA03";
+$pricon-file-pdf: "\EA04";
+$pricon-file-text: "\EA05";
+$pricon-file-image: "\EA06";
+$pricon-file-audio: "\EA07";
+$pricon-file-video: "\EA08";
+$pricon-file-archive: "\EA09";
+$pricon-github: "\EA0A";
+$pricon-presentation: "\EA0B";
+$pricon-file: "\EA0C";
+$pricon-phone: "\EA0D";
+$pricon-smartphone: "\EA0E";
+$pricon-email: "\EA0F";
+$pricon-picture: "\EA10";
+$pricon-user: "\EA11";
+$pricon-picture-add: "\EA12";
+$pricon-plus-o: "\EA13";
+$pricon-caret-down: "\EA14";
+$pricon-caret-up: "\EA15";
+$pricon-check: "\EA16";
+$pricon-check-o: "\EA17";
+$pricon-notice-warning: "\EA18";
+$pricon-notice-danger: "\EA19";
+$pricon-notice-error: "\EA1A";
+$pricon-info-o: "\EA1B";
+
+
+/* Glyphs */
+.pricon-link-item:before { content: $pricon-link-item }
+.pricon-user-o:before { content: $pricon-user-o }
+.pricon-external-link:before { content: $pricon-external-link }
+.pricon-file-pdf:before { content: $pricon-file-pdf }
+.pricon-file-text:before { content: $pricon-file-text }
+.pricon-file-image:before { content: $pricon-file-image }
+.pricon-file-audio:before { content: $pricon-file-audio }
+.pricon-file-video:before { content: $pricon-file-video }
+.pricon-file-archive:before { content: $pricon-file-archive }
+.pricon-github:before { content: $pricon-github }
+.pricon-presentation:before { content: $pricon-presentation }
+.pricon-file:before { content: $pricon-file }
+.pricon-phone:before { content: $pricon-phone }
+.pricon-smartphone:before { content: $pricon-smartphone }
+.pricon-email:before { content: $pricon-email }
+.pricon-picture:before { content: $pricon-picture }
+.pricon-user:before { content: $pricon-user }
+.pricon-picture-add:before { content: $pricon-picture-add }
+.pricon-plus-o:before { content: $pricon-plus-o }
+.pricon-caret-down:before { content: $pricon-caret-down }
+.pricon-caret-up:before { content: $pricon-caret-up }
+.pricon-check:before { content: $pricon-check }
+.pricon-check-o:before { content: $pricon-check-o }
+.pricon-notice-warning:before { content: $pricon-notice-warning }
+.pricon-notice-danger:before { content: $pricon-notice-danger }
+.pricon-notice-error:before { content: $pricon-notice-error }
+.pricon-info-o:before { content: $pricon-info-o }
+
+
+/* Mixin */
+@mixin pricon($icon, $vertical-align: -15%) {
+    font-family: hbg-pricons;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0px, 0px);
+    vertical-align: $vertical-align;
+    content: $icon;
+}
