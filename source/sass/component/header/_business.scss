@@ -1,0 +1,11 @@
+.site-header.header-business {
+    .logotype .h1 {
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    color: map-get($color, fourth);
+                }
+            }
+        }
+    }
+}
