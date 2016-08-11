@@ -166,7 +166,8 @@
 			margin: 0;
             font-weight: normal;
 
-            .fa {
+            .fa,
+            .pricon {
                 font-size: .9em;
                 width: 1.1em;
                 text-align: center;
@@ -296,11 +297,13 @@ label.accordion-toggle {
     }
 }
 
-[data-accordion-nav="next"] .fa {
+[data-accordion-nav="next"] .fa,
+[data-accordion-nav="next"] .pricon {
     margin-left: 5px;
 }
 
-[data-accordion-nav="prev"] .fa {
+[data-accordion-nav="prev"] .fa,
+[data-accordion-nav="prev"] .pricon {
     margin-right: 5px;
 }
 
