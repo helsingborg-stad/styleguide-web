@@ -87,6 +87,9 @@ $pricon-instagram: "\EA20";
 $pricon-print: "\EA21";
 $pricon-listen-ear: "\EA22";
 $pricon-volume: "\EA23";
+$pricon-search: "\EA24";
+$pricon-edit: "\EA25";
+$pricon-minus-o: "\EA26";
 
 
 /* Glyphs */
@@ -125,6 +128,9 @@ $pricon-volume: "\EA23";
 .pricon-print:before { content: $pricon-print }
 .pricon-listen-ear:before { content: $pricon-listen-ear }
 .pricon-volume:before { content: $pricon-volume }
+.pricon-search:before { content: $pricon-search }
+.pricon-edit:before { content: $pricon-edit }
+.pricon-minus-o:before { content: $pricon-minus-o }
 
 
 /* Mixin */

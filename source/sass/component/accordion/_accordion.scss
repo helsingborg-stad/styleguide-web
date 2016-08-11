@@ -64,7 +64,7 @@
         position: relative;
 
         &:before {
-            @include hbg-icon($icon-plus-square);
+            @include pricon($pricon-plus-o);
             @include center(false, true);
             right: 0;
             font-size: 1em;
@@ -195,7 +195,7 @@
 
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
 .accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
-    @include hbg-icon($icon-minus-square);
+    @include pricon($pricon-minus-o);
 }
 
 input[type="checkbox"]:checked ~ .accordion-toggle,
