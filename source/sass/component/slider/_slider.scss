@@ -71,6 +71,10 @@
     background: #000;
     overflow: hidden;
 
+    @media print {
+        display: none;
+    }
+
     ul {
         @include cover();
 

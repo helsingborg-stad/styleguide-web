@@ -23,6 +23,10 @@
     background-color: $creamy;
     background-size: cover;
     background-position: center center;
+
+    @media print {
+        display: none;
+    }
 }
 
 .hero.has-stripe {

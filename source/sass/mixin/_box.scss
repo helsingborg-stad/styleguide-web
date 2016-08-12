@@ -46,6 +46,12 @@
     background-color: $palette-gray-2;
     color: #fff;
 
+    @media print {
+        background-color: transparent !important;
+        color: $base-font-color !important;
+        border: 1px solid $creamy-darker;
+    }
+
     .box-title,
     .widgettitle,
     > h1,
@@ -70,6 +76,10 @@
     a:not(.btn) {
         color: #fff;
         text-decoration: underline;
+
+        @media print {
+            color: $base-font-color;
+        }
     }
 
     .box-content {
