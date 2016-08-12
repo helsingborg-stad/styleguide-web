@@ -77,7 +77,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
             return;
         }
 
-        $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="fa fa-arrow-circle-left"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="fa fa-arrow-circle-right"></i></button>');
+        $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="pricon pricon-previous"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="pricon pricon-next"></i></button>');
     };
 
     /**
