@@ -1,3 +1,23 @@
+//
+// @name Pricons
+// @description Iconfont and SVG icons
+// @author Kristoffer Svanmark
+//
+// @page Icons/Pricons
+//
+// @state .<%= className %>-xs - Extra small icon
+// @state .<%= className %>-sm - Small icon
+// @state .<%= className %>-lg - Large icon
+// @state .<%= className %>-2x - 2x size
+// @state .<%= className %>-3x - 3x size
+// @state .<%= className %>-4s - 4x size
+// @state .<%= className %>-5x - 5x size
+// @state .<%= className %>-fw - Fixed width
+//
+// @markup
+// <% _.each(glyphs, function(glyph) { %><i class="<%= className %> <%= className %>-<%= glyph.name %>"></i> <%= className %>-<%= glyph.name %><br>
+// <% }); %>
+//
 @font-face {
     font-family: "<%= fontName %>";
     src: url('<%= fontPath %><%= fontName %>.eot');
