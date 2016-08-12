@@ -40,6 +40,21 @@
     // This will generate grid-lg-*
     @include grid-flexbox($screen-lg-up, $screen-lg, 'lg');
 
+    // Print grid size
+    @media print {
+        @for $i from 1 to $grid-column-count + 1 {
+            .grid-print-#{$i}.grid-print-#{$i} {
+                width: auto;
+                flex-basis: (100% / $grid-column-count) * $i;
+                max-width: (100% / $grid-column-count) * $i;
+            }
+        }
+
+        .grid-tester::after {
+            content: 'print';
+        }
+    }
+
     [data-equal-container] > [class*="grid-"] {
         display: flex;
     }
