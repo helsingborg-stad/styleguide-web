@@ -14,10 +14,8 @@ HelsingborgPrime.Menu.ToggleSubmenuItems = (function ($) {
                 if(event.offsetX > ($(event.target).width()-7)) {
                     event.preventDefault();
                     if(!this.useAjax(event.target)) {
-                        this.closeOpenItems(event.target);
-                        this.showSibling(event.target);
+                        this.toggleSibling(event.target);
                     } else {
-                        this.closeOpenItems(event.target);
                         this.ajaxLoadItems(event.target);
                     }
                 }
@@ -39,17 +37,18 @@ HelsingborgPrime.Menu.ToggleSubmenuItems = (function ($) {
            return v.indexOf('page-') === 0;
         }).join().replace('page-','');
 
-        //Request
         $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
+
             if(typeof response == 'object' && response.length != 0) {
                 $.each(response,function(index,pageObject){
-                    markup = markup + '<li class="menu-item"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
+                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
                 }.bind(markup));
                 $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
-                $(target).parent().addClass('current-menu-item current_page_item current current-menu-item');
+                $(target).parent().addClass('current-menu-item current_page_item current');
             } else {
                 window.location.href = $(target).attr('href');
             }
+
         }.bind(target)).fail(function(){
             window.location.href = $(target).attr('href');
         }.bind(target));
@@ -59,12 +58,8 @@ HelsingborgPrime.Menu.ToggleSubmenuItems = (function ($) {
         return $(target).parent('li').attr('data-post-id');
     };
 
-    ToggleSubmenuItems.prototype.closeOpenItems = function (target) {
-        $("li",$(target).parentsUntil("nav.nav-mobile")).removeClass('current-menu-item current_page_item current current-menu-item');
-    };
-
-    ToggleSubmenuItems.prototype.showSibling = function (target) {
-        $(target).parent().addClass('current-menu-item current_page_item current current-menu-item');
+    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
+        $(target).parent().toggleClass('current-menu-item current_page_item current');
     };
 
     return new ToggleSubmenuItems();

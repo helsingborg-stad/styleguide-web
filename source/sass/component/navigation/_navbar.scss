@@ -25,6 +25,7 @@
 //
 
 .navbar {
+    @include material-shadow;
     position: relative;
     font-size: 1.1rem;
 
