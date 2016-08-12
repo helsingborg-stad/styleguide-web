@@ -55,11 +55,14 @@
 }
 
 /* External */
-
 .link-item-outbound {
     &::before {
         @include pricon($pricon-external-link);
     }
+}
+
+.link-item:not(:local-link)::before {
+    @include pricon($pricon-external-link);
 }
 
 /* Domains */
