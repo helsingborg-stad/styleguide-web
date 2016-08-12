@@ -95,10 +95,10 @@
     .menu-item-has-children.current-menu-ancestor {
         > a::after {
             position: absolute;
-            right: 12px;
-            top: 11px;
+            right: 13px;
+            top: 14px;
             @include pricon($pricon-caret-down);
-            font-size: 1em;
+            font-size: .7em;
             color: $gray-light;
         }
 
