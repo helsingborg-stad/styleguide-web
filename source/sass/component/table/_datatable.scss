@@ -36,11 +36,11 @@
                 top: 0;
                 left: 0;
                 height: 100%;
-                padding: 7px 9px;
+                padding: 11px 9px;
                 background-color: $creamy;
                 border: 1px solid $creamy-darker;
 
-                @include hbg-icon($icon-search);
+                @include pricon($pricon-search);
             }
         }
 
@@ -95,20 +95,20 @@
         display: block;
         @include center(false, true);
         right: $content-gutter;
-        @include hbg-icon($icon-sort);
+        @include pricon($pricon-sort);
     }
 
     .sorting_asc::after {
         display: block;
         @include center(false, true);
         right: $content-gutter;
-        @include hbg-icon($icon-sort-asc);
+        @includepricon($pricon-sort-asc);
     }
 
     .sorting_desc::after {
         display: block;
         @include center(false, true);
         right: $content-gutter;
-        @include hbg-icon($icon-sort-desc);
+        @include pricon($pricon-sort-desc);
     }
 }

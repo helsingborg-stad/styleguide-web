@@ -105,6 +105,15 @@ $pricon-linkedin: "\EA28";
 $pricon-facebook: "\EA29";
 $pricon-settings: "\EA2A";
 $pricon-location-pin: "\EA2B";
+$pricon-next: "\EA2C";
+$pricon-previous: "\EA2D";
+$pricon-back: "\EA2E";
+$pricon-caret-right: "\EA2F";
+$pricon-play-o: "\EA30";
+$pricon-forbidden: "\EA31";
+$pricon-sort-asc: "\EA32";
+$pricon-sort-desc: "\EA33";
+$pricon-sort: "\EA34";
 
 
 /* Glyphs */
@@ -151,6 +160,15 @@ $pricon-location-pin: "\EA2B";
 .pricon-facebook:before { content: $pricon-facebook }
 .pricon-settings:before { content: $pricon-settings }
 .pricon-location-pin:before { content: $pricon-location-pin }
+.pricon-next:before { content: $pricon-next }
+.pricon-previous:before { content: $pricon-previous }
+.pricon-back:before { content: $pricon-back }
+.pricon-caret-right:before { content: $pricon-caret-right }
+.pricon-play-o:before { content: $pricon-play-o }
+.pricon-forbidden:before { content: $pricon-forbidden }
+.pricon-sort-asc:before { content: $pricon-sort-asc }
+.pricon-sort-desc:before { content: $pricon-sort-desc }
+.pricon-sort:before { content: $pricon-sort }
 
 
 /* Mixin */

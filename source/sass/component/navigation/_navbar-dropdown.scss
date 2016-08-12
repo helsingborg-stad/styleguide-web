@@ -23,7 +23,7 @@
         padding-right: $content-gutter * 3;
 
         &::after {
-            @include hbg-icon($icon-caret-down);
+            @include pricon($pricon-caret-down);
             position: absolute;
             right: $content-gutter;
             top: 50%;
@@ -85,7 +85,7 @@
         padding-right: $content-gutter * 3;
 
         &::after {
-            @include hbg-icon($icon-caret-right);
+            @include pricon($pricon-caret-right);
             position: absolute;
             right: $content-gutter;
             top: 50%;

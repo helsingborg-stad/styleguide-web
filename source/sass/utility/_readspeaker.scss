@@ -1,6 +1,8 @@
 .readspeaker-play-button {
     &::before {
         @include pricon($pricon-volume);
+        font-size: 1.2em;
+        vertical-align: -20%;
         padding-right: .3em;
     }
 }

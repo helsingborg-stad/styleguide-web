@@ -51,7 +51,7 @@
     left: $content-gutter * 2;
 
     &::after {
-        @include hbg-icon($icon-arrow-left);
+        @include pricon($pricon-previous);
     }
 }
 
@@ -61,7 +61,7 @@
     right: $content-gutter * 2;
 
     &::after {
-        @include hbg-icon($icon-arrow-right);
+        @include pricon($pricon-next);
     }
 }
 

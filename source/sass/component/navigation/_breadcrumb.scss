@@ -62,8 +62,10 @@
 
             a::before {
                 display: inline-block;
-                @include hbg-icon($icon-arrow-left);
-                padding-right: 5px;
+                @include pricon($pricon-back);
+                margin-right: 5px;
+                font-size: 1.5em;
+                vertical-align: -22%;
                 color: #000;
             }
         }

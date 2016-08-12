@@ -33,7 +33,7 @@
 
         &::before {
             display: inline-block;
-            @include hbg-icon($icon-play);
+            @include pricon($pricon-play-o);
         }
 
         &:hover {
@@ -57,7 +57,7 @@
     opacity: 1;
 
     &::before {
-        @include hbg-icon($icon-ban);
+        @include pricon($pricon-forbidden);
         text-shadow: 0 0 40px rgba(#000, .8);
     }
 
