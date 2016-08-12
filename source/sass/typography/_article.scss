@@ -15,7 +15,6 @@
 //
 
 article {
-
 	margin-bottom: $content-gutter;
 
 	> h1:first-child {
@@ -263,6 +262,10 @@ article {
 
 	p, h1, h2, h3, h4, h5, h6, li, .wp-caption {
 		max-width: 700px;
+
+		@media print {
+			max-width: auto;
+		}
 	}
 
 }
