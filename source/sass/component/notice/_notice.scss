@@ -31,8 +31,11 @@
     padding: .5em .8em;
     background-color: $creamy;
     color: $base-font-color;
-    @include material-radius;
-    @include material-shadow;
+
+    &:not(.notice-fullwidth) {
+        @include material-radius;
+        @include material-shadow;
+    }
 
     .pricon,
     .fa {
@@ -48,7 +51,7 @@
     }
 
     & + .notice {
-        margin-top: 1px;
+        margin-top: 5px;
     }
 
     &.bottom-fixed {

@@ -69,7 +69,7 @@
     .comment-text {
 
         @include material-shadow;
-        border-radius: 4px;
+        @include material-radius-medium;
         position: relative;
         padding: $content-gutter/1.5 $content-gutter;
         margin-top: 10px;
