@@ -40,6 +40,12 @@
             height: 400px !important;
         }
 
+        .example-pricons .markup-preview {
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+        }
+
         .states ul li + li {
             margin-top: 5px;
         }

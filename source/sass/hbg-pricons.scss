@@ -1,3 +1,75 @@
+//
+// @name Pricons
+// @description Iconfont (credit: <a href="http:\/\/iconmonstr.com/">Iconmonstr.com</a>)
+// @author Kristoffer Svanmark
+//
+// @page Icons/Pricons
+//
+// @state .pricon-xs - Extra small icon
+// @state .pricon-sm - Small icon
+// @state .pricon-lg - Large icon
+// @state .pricon-2x - 2x size
+// @state .pricon-3x - 3x size
+// @state .pricon-4s - 4x size
+// @state .pricon-5x - 5x size
+// @state .pricon-fw - Fixed width
+//
+// @markup
+// <i class="pricon pricon-link-item"></i> pricon-link-item<br>
+// <i class="pricon pricon-user-o"></i> pricon-user-o<br>
+// <i class="pricon pricon-external-link"></i> pricon-external-link<br>
+// <i class="pricon pricon-file-pdf"></i> pricon-file-pdf<br>
+// <i class="pricon pricon-file-text"></i> pricon-file-text<br>
+// <i class="pricon pricon-file-image"></i> pricon-file-image<br>
+// <i class="pricon pricon-file-audio"></i> pricon-file-audio<br>
+// <i class="pricon pricon-file-video"></i> pricon-file-video<br>
+// <i class="pricon pricon-file-archive"></i> pricon-file-archive<br>
+// <i class="pricon pricon-github"></i> pricon-github<br>
+// <i class="pricon pricon-presentation"></i> pricon-presentation<br>
+// <i class="pricon pricon-file"></i> pricon-file<br>
+// <i class="pricon pricon-phone"></i> pricon-phone<br>
+// <i class="pricon pricon-smartphone"></i> pricon-smartphone<br>
+// <i class="pricon pricon-email"></i> pricon-email<br>
+// <i class="pricon pricon-picture"></i> pricon-picture<br>
+// <i class="pricon pricon-user"></i> pricon-user<br>
+// <i class="pricon pricon-picture-add"></i> pricon-picture-add<br>
+// <i class="pricon pricon-plus-o"></i> pricon-plus-o<br>
+// <i class="pricon pricon-caret-down"></i> pricon-caret-down<br>
+// <i class="pricon pricon-caret-up"></i> pricon-caret-up<br>
+// <i class="pricon pricon-check"></i> pricon-check<br>
+// <i class="pricon pricon-check-o"></i> pricon-check-o<br>
+// <i class="pricon pricon-notice-warning"></i> pricon-notice-warning<br>
+// <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
+// <i class="pricon pricon-notice-error"></i> pricon-notice-error<br>
+// <i class="pricon pricon-info-o"></i> pricon-info-o<br>
+// <i class="pricon pricon-question-o"></i> pricon-question-o<br>
+// <i class="pricon pricon-linkedin-square"></i> pricon-linkedin-square<br>
+// <i class="pricon pricon-twitter-square"></i> pricon-twitter-square<br>
+// <i class="pricon pricon-facebook-square"></i> pricon-facebook-square<br>
+// <i class="pricon pricon-instagram"></i> pricon-instagram<br>
+// <i class="pricon pricon-print"></i> pricon-print<br>
+// <i class="pricon pricon-listen-ear"></i> pricon-listen-ear<br>
+// <i class="pricon pricon-volume"></i> pricon-volume<br>
+// <i class="pricon pricon-search"></i> pricon-search<br>
+// <i class="pricon pricon-edit"></i> pricon-edit<br>
+// <i class="pricon pricon-minus-o"></i> pricon-minus-o<br>
+// <i class="pricon pricon-twitter"></i> pricon-twitter<br>
+// <i class="pricon pricon-linkedin"></i> pricon-linkedin<br>
+// <i class="pricon pricon-facebook"></i> pricon-facebook<br>
+// <i class="pricon pricon-settings"></i> pricon-settings<br>
+// <i class="pricon pricon-location-pin"></i> pricon-location-pin<br>
+// <i class="pricon pricon-next"></i> pricon-next<br>
+// <i class="pricon pricon-previous"></i> pricon-previous<br>
+// <i class="pricon pricon-back"></i> pricon-back<br>
+// <i class="pricon pricon-caret-right"></i> pricon-caret-right<br>
+// <i class="pricon pricon-play-o"></i> pricon-play-o<br>
+// <i class="pricon pricon-forbidden"></i> pricon-forbidden<br>
+// <i class="pricon pricon-sort-asc"></i> pricon-sort-asc<br>
+// <i class="pricon pricon-sort-desc"></i> pricon-sort-desc<br>
+// <i class="pricon pricon-sort"></i> pricon-sort<br>
+// <i class="pricon pricon-helsingborg"></i> pricon-helsingborg<br>
+// 
+//
 @font-face {
     font-family: "hbg-pricons";
     src: url('../fonts/hbg-pricons.eot');
@@ -21,6 +93,11 @@
 }
 
 /* Size modifiers */
+.pricon-xs {
+    font-size: .6em;
+    vertical-align: 12%;
+}
+
 .pricon-sm {
     font-size: .8em;
     vertical-align: 5%;
@@ -100,6 +177,16 @@ $pricon-linkedin: "\EA28";
 $pricon-facebook: "\EA29";
 $pricon-settings: "\EA2A";
 $pricon-location-pin: "\EA2B";
+$pricon-next: "\EA2C";
+$pricon-previous: "\EA2D";
+$pricon-back: "\EA2E";
+$pricon-caret-right: "\EA2F";
+$pricon-play-o: "\EA30";
+$pricon-forbidden: "\EA31";
+$pricon-sort-asc: "\EA32";
+$pricon-sort-desc: "\EA33";
+$pricon-sort: "\EA34";
+$pricon-helsingborg: "\EA35";
 
 
 /* Glyphs */
@@ -146,6 +233,16 @@ $pricon-location-pin: "\EA2B";
 .pricon-facebook:before { content: $pricon-facebook }
 .pricon-settings:before { content: $pricon-settings }
 .pricon-location-pin:before { content: $pricon-location-pin }
+.pricon-next:before { content: $pricon-next }
+.pricon-previous:before { content: $pricon-previous }
+.pricon-back:before { content: $pricon-back }
+.pricon-caret-right:before { content: $pricon-caret-right }
+.pricon-play-o:before { content: $pricon-play-o }
+.pricon-forbidden:before { content: $pricon-forbidden }
+.pricon-sort-asc:before { content: $pricon-sort-asc }
+.pricon-sort-desc:before { content: $pricon-sort-desc }
+.pricon-sort:before { content: $pricon-sort }
+.pricon-helsingborg:before { content: $pricon-helsingborg }
 
 
 /* Mixin */

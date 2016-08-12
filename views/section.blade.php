@@ -23,7 +23,7 @@
 @endif
 
 @if (isset($section[0]->markup[0]))
-<section class="example">
+<section class="example example-{{ \HbgStyleGuide\Helper\FormatString::slug($section[0]->name) }}">
     <h3>Example</h3>
     <div class="markup-preview">
         {!! trim($section[0]->markup[0]->example) !!}
