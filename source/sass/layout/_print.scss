@@ -1,4 +1,8 @@
 @media print {
+    body {
+        font-size: $print-font-size;
+    }
+
     iframe,
     embed,
     object {
