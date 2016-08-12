@@ -21,6 +21,11 @@
 }
 
 /* Size modifiers */
+.<%= className %>-xs {
+    font-size: .6em;
+    vertical-align: 12%;
+}
+
 .<%= className %>-sm {
     font-size: .8em;
     vertical-align: 5%;
