@@ -114,6 +114,7 @@ $pricon-forbidden: "\EA31";
 $pricon-sort-asc: "\EA32";
 $pricon-sort-desc: "\EA33";
 $pricon-sort: "\EA34";
+$pricon-helsingborg: "\EA35";
 
 
 /* Glyphs */
@@ -169,6 +170,7 @@ $pricon-sort: "\EA34";
 .pricon-sort-asc:before { content: $pricon-sort-asc }
 .pricon-sort-desc:before { content: $pricon-sort-desc }
 .pricon-sort:before { content: $pricon-sort }
+.pricon-helsingborg:before { content: $pricon-helsingborg }
 
 
 /* Mixin */
