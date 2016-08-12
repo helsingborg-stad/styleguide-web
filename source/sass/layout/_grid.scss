@@ -71,6 +71,21 @@
 // This will generate grid-lg-*
 @include grid($screen-lg-up, $screen-lg, 'lg');
 
+// Print grid size
+@media print {
+    @for $i from 1 to $grid-column-count + 1 {
+        .grid-print-#{$i} {
+            display: block;
+            float: left;
+            width: (100% / $grid-column-count) * $i;
+        }
+    }
+
+    .grid-tester::after {
+        content: 'print';
+    }
+}
+
 .grid-tester {
     position: fixed;
     bottom: 0;
