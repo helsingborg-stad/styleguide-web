@@ -12,15 +12,20 @@
 
 .pricon:before {
     display: inline-block;
-    font: normal normal normal 14px/1 hbg-pricons; // shortening font declaration
-    font-size: inherit; // can't have font-size inherit on line above, so need to override
-    text-rendering: auto; // optimizelegibility throws things off #1094
+    font: normal normal normal 14px/1 hbg-pricons;
+    font-size: inherit;
+    text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
 
 /* Size modifiers */
+.pricon-sm {
+    font-size: .8em;
+    vertical-align: 5%;
+}
+
 .pricon-lg {
     font-size: 1.3333333333333333em;
     vertical-align: -5%;

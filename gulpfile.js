@@ -157,6 +157,10 @@ gulp.task('iconfont', ['icons-scale'], function () {
         .pipe(gulp.dest('dist/fonts/'));
 });
 
+gulp.task('icons', function () {
+    runSequence('iconfont', ['sass-dist', 'sass-dev']);
+});
+
 // Documented JS
 gulp.task('dss-js', function() {
     return gulp.src([
@@ -186,9 +190,6 @@ gulp.task('dss-js', function() {
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['scripts']);
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
-    gulp.watch(['source/icons/**/*.svg', 'source/icons/hbg-pricons.scss'], function () {
-        runSequence('iconfont', ['sass-dist', 'sass-dev']);
-    });
 });
 
 // Default Task
