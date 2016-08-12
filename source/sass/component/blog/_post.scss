@@ -38,8 +38,10 @@
 //
 
 .post {
-    @include material-radius;
-    @include material-shadow;
+    .post-full, .post-compressed, .post-collapsed {
+        @include material-radius;
+        @include material-shadow;
+    }
 }
 
 .post-single {

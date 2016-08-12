@@ -158,6 +158,10 @@
         margin-left: 10px;
     }
 
+    .label {
+        border-radius: 0 1px 1px 0;
+    }
+
     &::after {
         display: block;
         content: '';
