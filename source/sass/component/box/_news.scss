@@ -54,6 +54,7 @@
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
+                background-color: map-get($color, second);
                 color: #fff;
             }
         }
@@ -85,15 +86,6 @@
         .box-title, h1, h2, h3, h4, h5, h6,
         .link-item {
             text-decoration: underline;
-        }
-    }
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
         }
     }
 }

@@ -30,7 +30,7 @@
     height: auto;
 }
 
-.creamy .box-content {
+.creamy .box:not(.box-news) .box-content {
     background-color: #fff;
 }
 
