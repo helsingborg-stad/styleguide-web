@@ -19,6 +19,8 @@ article {
 
 	> h1:first-child {
 		margin-top: -0.25em;
+		margin-bottom: 0;
+		padding-bottom: 0;
 
 		img + & {
 			margin-top: 0;
