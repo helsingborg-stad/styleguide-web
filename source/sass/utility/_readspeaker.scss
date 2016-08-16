@@ -10,7 +10,7 @@
 .readspeaker-player-element {
     display: none;
     margin-bottom: $content-gutter;
-    height: 50px !important;
+    margin-top: $content-gutter;
 
     .rsexpanded {
         display: block;
