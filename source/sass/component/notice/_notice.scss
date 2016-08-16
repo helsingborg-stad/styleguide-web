@@ -106,3 +106,9 @@
     background-color: $info-bg;
     color: $info-text;
 }
+
+@media print {
+    #cookie-consent {
+        display: none;
+    }
+}
