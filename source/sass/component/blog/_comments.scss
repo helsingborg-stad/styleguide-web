@@ -62,7 +62,7 @@
         cursor: default;
     }
 
-    & + .comment {
+    & + .comment, .answers {
         margin-top: $content-gutter;
     }
 
@@ -103,6 +103,14 @@
                     }
                 }
             }
+        }
+
+    }
+
+    .answers {
+        padding-left: 3%;
+        .comment-text {
+            opacity: .7;
         }
     }
 
