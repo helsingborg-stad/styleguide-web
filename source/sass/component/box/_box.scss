@@ -12,6 +12,10 @@
     }
 }
 
+.box-border {
+    border: 1px solid $creamy-darker;
+}
+
 .box + .box {
     margin-bottom: 0;
     margin-top: $content-gutter;
