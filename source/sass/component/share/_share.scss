@@ -15,6 +15,13 @@
     }
 }
 
+.share-social-icon-md {
+    .fa,
+    .pricon {
+        font-size: 1.3em;
+    }
+}
+
 .share-no-labels {
     a {
         span {
@@ -37,14 +44,26 @@
     }
 }
 
-.share-social-facebook:hover {
-    color: #3B5998;
+.share-social-facebook {
+    &:hover {
+        color: #3B5998;
+    }
 }
 
-.share-social-twitter:hover {
-    color: #55ACEE;
+.share-social-twitter {
+    position: relative;
+    top: -1px;
+
+    &:hover {
+        color: #55ACEE;
+    }
 }
 
-.share-social-linkedin:hover {
-    color: #1583BB;
+.share-social-linkedin {
+    position: relative;
+    top: -2px;
+
+    &:hover {
+        color: #1583BB;
+    }
 }

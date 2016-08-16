@@ -68,12 +68,13 @@
 // <i class="pricon pricon-sort-desc"></i> pricon-sort-desc<br>
 // <i class="pricon pricon-sort"></i> pricon-sort<br>
 // <i class="pricon pricon-helsingborg"></i> pricon-helsingborg<br>
-// <i class="pricon pricon-home"></i> pricon-home<br>
 // <i class="pricon pricon-calendar"></i> pricon-calendar<br>
+// <i class="pricon pricon-home"></i> pricon-home<br>
 // <i class="pricon pricon-language-alt"></i> pricon-language-alt<br>
 // <i class="pricon pricon-language"></i> pricon-language<br>
 // <i class="pricon pricon-star"></i> pricon-star<br>
 // <i class="pricon pricon-text-size"></i> pricon-text-size<br>
+// <i class="pricon pricon-share"></i> pricon-share<br>
 // 
 //
 @font-face {
@@ -193,12 +194,13 @@ $pricon-sort-asc: "\EA32";
 $pricon-sort-desc: "\EA33";
 $pricon-sort: "\EA34";
 $pricon-helsingborg: "\EA35";
-$pricon-home: "\EA37";
 $pricon-calendar: "\EA36";
+$pricon-home: "\EA37";
 $pricon-language-alt: "\EA38";
 $pricon-language: "\EA39";
 $pricon-star: "\EA3A";
 $pricon-text-size: "\EA3B";
+$pricon-share: "\EA3C";
 
 
 /* Glyphs */
@@ -255,12 +257,13 @@ $pricon-text-size: "\EA3B";
 .pricon-sort-desc:before { content: $pricon-sort-desc }
 .pricon-sort:before { content: $pricon-sort }
 .pricon-helsingborg:before { content: $pricon-helsingborg }
-.pricon-home:before { content: $pricon-home }
 .pricon-calendar:before { content: $pricon-calendar }
+.pricon-home:before { content: $pricon-home }
 .pricon-language-alt:before { content: $pricon-language-alt }
 .pricon-language:before { content: $pricon-language }
 .pricon-star:before { content: $pricon-star }
 .pricon-text-size:before { content: $pricon-text-size }
+.pricon-share:before { content: $pricon-share }
 
 
 /* Mixin */
