@@ -252,3 +252,13 @@
 .post-footer {
     font-size: .9em;
 }
+
+.post {
+    .post-footer [class*="grid-"]:first-child {
+        padding-left: 0;
+    }
+
+    .post-footer [class*="grid-"]:last-child {
+        padding-right: 0;
+    }
+}
