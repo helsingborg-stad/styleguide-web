@@ -4,6 +4,8 @@
 //
 
 .comment-respond {
+    @include material-shadow;
+    @include material-radius;
     padding: $content-gutter * 2;
     background-color: $creamy;
     border: 1px solid $creamy-darker;
