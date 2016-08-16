@@ -63,6 +63,11 @@
     @include material-radius;
 }
 
+.creamy .slider .text-block.text-block-left:not([class*="stripe-"]):not([class*="stripe-"]),
+.creamy .slider .text-block.text-block-right:not([class*="stripe-"]):not([class*="stripe-"]) {
+    background-color: #fff !important;
+}
+
 .slider {
     position: relative;
     width: 100%;
