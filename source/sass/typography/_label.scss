@@ -22,7 +22,9 @@
 .label {
     display: inline-block;
     background-color: $creamy-darker;
+    color: $base-font-color;
     padding: .1em .5em;
+    font-weight: normal;
 }
 
 .label-number {
@@ -52,9 +54,11 @@
 .label-rounded {
     border-radius: 10px;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1;
 
-    $padding: .4em;
+    $padding: .5em;
+    padding-top: $padding / 2;
+    padding-bottom: $padding / 1.4;
     padding-left: $padding;
     padding-right: $padding;
 }
