@@ -21,7 +21,17 @@
     }
 
     .grid-auto {
+        flex: 1 1 auto;
         flex-basis: 0;
+    }
+
+    .grid-defined-width {
+        flex: 0 0 auto;
+    }
+
+    .grid-fit-content {
+        flex: 0 1 auto;
+        width: auto;
     }
 
     // X-Small screens
@@ -55,11 +65,9 @@
         }
     }
 
-    [data-equal-container] > [class*="grid-"] {
-        display: flex;
-    }
-
+    [data-equal-container] > [class*="grid-"],
     [data-equal-container] > [data-equal-item] {
+        display: flex;
         display: flex;
     }
 
