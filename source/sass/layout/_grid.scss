@@ -243,6 +243,14 @@
     }
 }
 
+.grid-va-bottom {
+    align-items: flex-end;
+
+    [class*="grid-"] {
+        vertical-align: bottom;
+    }
+}
+
 .grid-va-top {
     align-items: top;
 
