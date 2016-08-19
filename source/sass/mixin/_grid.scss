@@ -51,6 +51,11 @@
         }
     }
 
+.grid-fit-content {
+    width: 1%;
+    white-space: nowrap;
+}
+
     @supports (display:flex) {
         .grid-auto {
             flex: 1 1 0;
@@ -62,6 +67,8 @@
 
         .grid-fit-content {
             flex: 0 1 auto;
+            white-space: normal;
+            width: auto;
         }
     }
 
