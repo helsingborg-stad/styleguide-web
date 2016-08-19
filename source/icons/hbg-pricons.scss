@@ -5,6 +5,7 @@
 //
 // @page Icons/Pricons
 //
+// @state .<%= className %>-space-right - Adds space to the right of the icon
 // @state .<%= className %>-xs - Extra small icon
 // @state .<%= className %>-sm - Small icon
 // @state .<%= className %>-lg - Large icon
@@ -30,7 +31,7 @@
     font-style: normal;
 }
 
-.<%= className %>:before {
+.<%= className %>::before {
     display: inline-block;
     font: normal normal normal 14px/1 <%= fontName %>;
     font-size: inherit;
@@ -38,6 +39,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
+}
+
+.<%= className %>-space-right::before {
+    margin-right: .5em;
 }
 
 /* Size modifiers */
