@@ -47,7 +47,21 @@
 
         @supports (display:flex) {
             display: block;
-            flex: 1 1 auto;
+            flex: 0 1 auto;
+        }
+    }
+
+    @supports (display:flex) {
+        .grid-auto {
+            flex: 1 1 0;
+        }
+
+        .grid-defined-width {
+            flex: 0 0 auto;
+        }
+
+        .grid-fit-content {
+            flex: 0 1 auto;
         }
     }
 
