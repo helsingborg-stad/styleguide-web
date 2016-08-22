@@ -192,6 +192,26 @@
     color: $gray-dark;
 }
 
+.text-info,
+a.text-info {
+    color: $info-white-text !important;
+}
+
+.text-warning,
+a.text-warning {
+    color: $warning-white-text !important;
+}
+
+.text-danger,
+a.text-danger {
+    color: $danger-white-text !important;
+}
+
+.text-success,
+a.text-success {
+    color: $success-white-text !important;
+}
+
 //
 // @name Underline
 // @description Underlines text.

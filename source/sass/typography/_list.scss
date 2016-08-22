@@ -88,3 +88,7 @@ li.title {
 li + li.title {
     margin-top: 10px;
 }
+
+.list-item-spacing li + li {
+    margin-top: 8px;
+}

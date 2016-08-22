@@ -70,13 +70,17 @@ $mark-purple: rgba($palette-purple-1, .5);
 // ***************************************************************
 $warning-bg: #FFD700;
 $warning-text: $base-font-color;
+$warning-white-text: #c2a400;
 
 $success-bg: $palette-green-2;
 $success-text: #fff;
+$success-white-text: $palette-green-2;
 
 $danger-bg: $palette-red-5;
 $danger-text: #fff;
+$danger-white-text: $palette-red-5;
 
 $info-bg: #b1f5ff;
 $info-text: $base-font-color;
+$info-white-text: #0f9baf;
 

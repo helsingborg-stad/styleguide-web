@@ -40,8 +40,6 @@
 // <i class="pricon pricon-check"></i> pricon-check<br>
 // <i class="pricon pricon-check-o"></i> pricon-check-o<br>
 // <i class="pricon pricon-notice-warning"></i> pricon-notice-warning<br>
-// <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
-// <i class="pricon pricon-notice-error"></i> pricon-notice-error<br>
 // <i class="pricon pricon-info-o"></i> pricon-info-o<br>
 // <i class="pricon pricon-question-o"></i> pricon-question-o<br>
 // <i class="pricon pricon-linkedin-square"></i> pricon-linkedin-square<br>
@@ -97,6 +95,8 @@
 // <i class="pricon pricon-smiley-super-happy"></i> pricon-smiley-super-happy<br>
 // <i class="pricon pricon-smiley-thounge"></i> pricon-smiley-thounge<br>
 // <i class="pricon pricon-plus"></i> pricon-plus<br>
+// <i class="pricon pricon-notice-info"></i> pricon-notice-info<br>
+// <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
 // 
 //
 @font-face {
@@ -216,8 +216,6 @@ $pricon-caret-up: "\EA15";
 $pricon-check: "\EA16";
 $pricon-check-o: "\EA17";
 $pricon-notice-warning: "\EA18";
-$pricon-notice-danger: "\EA19";
-$pricon-notice-error: "\EA1A";
 $pricon-info-o: "\EA1B";
 $pricon-question-o: "\EA1C";
 $pricon-linkedin-square: "\EA1D";
@@ -273,6 +271,8 @@ $pricon-smiley-smile: "\EA4E";
 $pricon-smiley-super-happy: "\EA4F";
 $pricon-smiley-thounge: "\EA50";
 $pricon-plus: "\EA51";
+$pricon-notice-info: "\EA52";
+$pricon-notice-danger: "\EA19";
 
 
 /* Glyphs */
@@ -300,8 +300,6 @@ $pricon-plus: "\EA51";
 .pricon-check:before { content: $pricon-check }
 .pricon-check-o:before { content: $pricon-check-o }
 .pricon-notice-warning:before { content: $pricon-notice-warning }
-.pricon-notice-danger:before { content: $pricon-notice-danger }
-.pricon-notice-error:before { content: $pricon-notice-error }
 .pricon-info-o:before { content: $pricon-info-o }
 .pricon-question-o:before { content: $pricon-question-o }
 .pricon-linkedin-square:before { content: $pricon-linkedin-square }
@@ -357,6 +355,8 @@ $pricon-plus: "\EA51";
 .pricon-smiley-super-happy:before { content: $pricon-smiley-super-happy }
 .pricon-smiley-thounge:before { content: $pricon-smiley-thounge }
 .pricon-plus:before { content: $pricon-plus }
+.pricon-notice-info:before { content: $pricon-notice-info }
+.pricon-notice-danger:before { content: $pricon-notice-danger }
 
 
 /* Mixin */

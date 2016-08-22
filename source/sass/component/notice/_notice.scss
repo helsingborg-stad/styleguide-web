@@ -32,7 +32,7 @@
     background-color: $creamy;
     color: $base-font-color;
 
-    &:not(.notice-fullwidth) {
+    &:not(.notice-fullwidth):not(.notice-inline-block) {
         @include material-radius;
         @include material-shadow;
     }
@@ -67,6 +67,11 @@
     }
 }
 
+.notice-inline-block {
+    display: inline-block;
+    @include material-radius;
+}
+
 .notice-lg {
     font-size: 1.2em;
 
@@ -77,6 +82,15 @@
 
 .notice-sm {
     font-size: .9em;
+    padding: .2em .5em;
+
+    &.pricon-space-right::before {
+        margin-right: .2em;
+    }
+
+    &.pricon::before {
+        vertical-align: -10%;
+    }
 
     .grid-col-icon {
         margin-right: 0px;
@@ -95,7 +109,8 @@
 
 .notice.warning {
     background-color: $warning-bg;
-    color: $warning-text;}
+    color: $warning-text;
+}
 
 .notice.danger {
     background-color: $danger-bg;
