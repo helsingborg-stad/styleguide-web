@@ -54,6 +54,14 @@
     }
 }
 
+.link-unavailable {
+    &::before {
+        @include pricon($pricon-forbidden-circle);
+    }
+
+    opacity: .5;
+}
+
 /* External */
 .link-item-outbound {
     &::before {

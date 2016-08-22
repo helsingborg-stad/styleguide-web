@@ -86,6 +86,7 @@
 // <i class="pricon pricon-picture-user"></i> pricon-picture-user<br>
 // <i class="pricon pricon-target"></i> pricon-target<br>
 // <i class="pricon pricon-paintbrush"></i> pricon-paintbrush<br>
+// <i class="pricon pricon-forbidden-circle"></i> pricon-forbidden-circle<br>
 // 
 //
 @font-face {
@@ -226,6 +227,7 @@ $pricon-clipboard: "\EA43";
 $pricon-picture-user: "\EA44";
 $pricon-target: "\EA45";
 $pricon-paintbrush: "\EA46";
+$pricon-forbidden-circle: "\EA47";
 
 
 /* Glyphs */
@@ -299,6 +301,7 @@ $pricon-paintbrush: "\EA46";
 .pricon-picture-user:before { content: $pricon-picture-user }
 .pricon-target:before { content: $pricon-target }
 .pricon-paintbrush:before { content: $pricon-paintbrush }
+.pricon-forbidden-circle:before { content: $pricon-forbidden-circle }
 
 
 /* Mixin */
