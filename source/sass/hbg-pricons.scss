@@ -87,6 +87,16 @@
 // <i class="pricon pricon-target"></i> pricon-target<br>
 // <i class="pricon pricon-paintbrush"></i> pricon-paintbrush<br>
 // <i class="pricon pricon-forbidden-circle"></i> pricon-forbidden-circle<br>
+// <i class="pricon pricon-smiley-angry"></i> pricon-smiley-angry<br>
+// <i class="pricon pricon-smiley-cool"></i> pricon-smiley-cool<br>
+// <i class="pricon pricon-smiley-cry"></i> pricon-smiley-cry<br>
+// <i class="pricon pricon-smiley-flirty"></i> pricon-smiley-flirty<br>
+// <i class="pricon pricon-smiley-oh"></i> pricon-smiley-oh<br>
+// <i class="pricon pricon-smiley-sad"></i> pricon-smiley-sad<br>
+// <i class="pricon pricon-smiley-smile"></i> pricon-smiley-smile<br>
+// <i class="pricon pricon-smiley-super-happy"></i> pricon-smiley-super-happy<br>
+// <i class="pricon pricon-smiley-thounge"></i> pricon-smiley-thounge<br>
+// <i class="pricon pricon-plus"></i> pricon-plus<br>
 // 
 //
 @font-face {
@@ -148,6 +158,31 @@
 
 .pricon-5x {
     font-size: 5em;
+    vertical-align: -18%;
+}
+
+.pricon-6x {
+    font-size: 6em;
+    vertical-align: -18%;
+}
+
+.pricon-7x {
+    font-size: 7em;
+    vertical-align: -18%;
+}
+
+.pricon-8x {
+    font-size: 8em;
+    vertical-align: -18%;
+}
+
+.pricon-9x {
+    font-size: 9em;
+    vertical-align: -18%;
+}
+
+.pricon-10x {
+    font-size: 10em;
     vertical-align: -18%;
 }
 
@@ -228,6 +263,16 @@ $pricon-picture-user: "\EA44";
 $pricon-target: "\EA45";
 $pricon-paintbrush: "\EA46";
 $pricon-forbidden-circle: "\EA47";
+$pricon-smiley-angry: "\EA48";
+$pricon-smiley-cool: "\EA49";
+$pricon-smiley-cry: "\EA4A";
+$pricon-smiley-flirty: "\EA4B";
+$pricon-smiley-oh: "\EA4C";
+$pricon-smiley-sad: "\EA4D";
+$pricon-smiley-smile: "\EA4E";
+$pricon-smiley-super-happy: "\EA4F";
+$pricon-smiley-thounge: "\EA50";
+$pricon-plus: "\EA51";
 
 
 /* Glyphs */
@@ -302,6 +347,16 @@ $pricon-forbidden-circle: "\EA47";
 .pricon-target:before { content: $pricon-target }
 .pricon-paintbrush:before { content: $pricon-paintbrush }
 .pricon-forbidden-circle:before { content: $pricon-forbidden-circle }
+.pricon-smiley-angry:before { content: $pricon-smiley-angry }
+.pricon-smiley-cool:before { content: $pricon-smiley-cool }
+.pricon-smiley-cry:before { content: $pricon-smiley-cry }
+.pricon-smiley-flirty:before { content: $pricon-smiley-flirty }
+.pricon-smiley-oh:before { content: $pricon-smiley-oh }
+.pricon-smiley-sad:before { content: $pricon-smiley-sad }
+.pricon-smiley-smile:before { content: $pricon-smiley-smile }
+.pricon-smiley-super-happy:before { content: $pricon-smiley-super-happy }
+.pricon-smiley-thounge:before { content: $pricon-smiley-thounge }
+.pricon-plus:before { content: $pricon-plus }
 
 
 /* Mixin */

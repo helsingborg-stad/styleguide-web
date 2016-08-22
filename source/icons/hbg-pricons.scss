@@ -81,6 +81,31 @@
     vertical-align: -18%;
 }
 
+.<%= className %>-6x {
+    font-size: 6em;
+    vertical-align: -18%;
+}
+
+.<%= className %>-7x {
+    font-size: 7em;
+    vertical-align: -18%;
+}
+
+.<%= className %>-8x {
+    font-size: 8em;
+    vertical-align: -18%;
+}
+
+.<%= className %>-9x {
+    font-size: 9em;
+    vertical-align: -18%;
+}
+
+.<%= className %>-10x {
+    font-size: 10em;
+    vertical-align: -18%;
+}
+
 .<%= className %>-fw {
     width: 1.2857142857142858em;
     text-align: center;
