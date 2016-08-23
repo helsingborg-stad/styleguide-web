@@ -19,7 +19,8 @@
     position: relative;
     display: inline-block;
 
-    &:hover {
+    &:hover,
+    &:focus {
         .dropdown-menu {
             display: block;
         }
@@ -46,15 +47,40 @@
     .dropdown-menu {
         display: none;
         position: absolute;
-        bottom: 0;
-        z-index: $level-3;
-        transform: translateY(100%);
+        top: 100%;
+        z-index: $level-5;
         min-width: 200px;
         padding: 5px 0;
         background: #fff;
         border: 1px solid $creamy-darker;
         font-size: .9em;
         text-align: left;
+
+        @include material-shadow();
+        @include material-radius();
+
+        &.dropdown-menu-arrow {
+            margin-top: 5px;
+
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: calc(100% - 1px);
+                left: 10px;
+                @include arrow('up', 10px, #fff);
+            }
+
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: calc(100% + 1px);
+                left: 10px;
+                transform: scale(1px);
+                @include arrow('up', 10px, $creamy-darker);
+            }
+        }
 
         li {
             a {
