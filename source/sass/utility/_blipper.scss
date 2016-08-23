@@ -36,7 +36,7 @@
         height: 100%;
         border-radius: 50%;
         background-color: $palette-red-1;
-        opacity: .2;
+        opacity: .4;
 
         transform-origin: center center;
 
@@ -45,6 +45,10 @@
 
     &::after {
         animation-delay: $animation-duration/7;
+    }
+
+    &[data-dropdown] {
+        cursor: pointer;
     }
 }
 
