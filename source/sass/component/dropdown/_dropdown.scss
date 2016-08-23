@@ -4,6 +4,9 @@
 //
 // @page Navigation/Dropdown
 //
+// @state .dropdown-menu-arrow - Adds arrow to the dropdown menu
+// @state .dropdown-menu-arrow-right - Moves the arrow to the right edge
+//
 // @markup
 // <span class="dropdown">
 //     <span class="btn btn-primary dropdown-toggle">Actions</span>
@@ -15,6 +18,7 @@
 //     </ul>
 // </span>
 //
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -43,62 +47,74 @@
             display: block;
         }
     }
+}
 
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        z-index: $level-5;
-        min-width: 200px;
-        padding: 5px 0;
-        background: #fff;
-        border: 1px solid $creamy-darker;
-        font-size: .9em;
-        text-align: left;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: $level-5;
+    min-width: 200px;
+    padding: 5px 0;
+    background: #fff;
+    border: 1px solid $creamy-darker;
+    text-align: left;
+    font-size: .9em;
 
-        @include material-shadow();
-        @include material-radius();
+    @include material-shadow-large();
+    @include material-radius();
 
-        &.dropdown-menu-arrow {
-            margin-top: 5px;
+    &.dropdown-menu-arrow {
+        margin-top: 5px;
 
-            &::after {
-                display: block;
-                content: '';
-                position: absolute;
-                bottom: calc(100% - 1px);
-                left: 10px;
-                @include arrow('up', 10px, #fff);
-            }
-
-            &::before {
-                display: block;
-                content: '';
-                position: absolute;
-                bottom: calc(100% + 1px);
-                left: 10px;
-                transform: scale(1px);
-                @include arrow('up', 10px, $creamy-darker);
-            }
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: calc(100% - 1px);
+            left: 10px;
+            @include arrow('up', 10px, #fff);
         }
 
-        li {
-            a {
-                display: block;
-                padding: 3px 15px;
-                color: $base-font-color;
-
-                &:hover {
-                    background-color: $creamy;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .divider {
-            height: 1px;
-            background-color: $creamy-darker;
-            margin: 5px 0;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 10px;
+            transform: scale(1px);
+            @include arrow('up', 10px, $creamy-darker);
         }
     }
+
+    &.dropdown-menu-arrow-right {
+        &::after,
+        &::before {
+            left: auto;
+            right: 10px;
+        }
+    }
+
+    li {
+        a {
+            display: block;
+            padding: 3px 10px;
+            color: $base-font-color;
+
+            &:hover {
+                background-color: $creamy;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .divider {
+        height: 1px;
+        background-color: $creamy-darker;
+        margin: 5px 0;
+    }
+}
+
+.dropdown-open {
+    display: block;
 }
