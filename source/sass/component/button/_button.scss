@@ -256,6 +256,13 @@ input[type="button"].btn::-moz-focus-inner {
     line-height: 1;
 }
 
+.btn-md {
+    padding: $btn-md-padding;
+    font-size: $btn-md-font-size;
+    font-weight: $btn-md-font-weight;
+    line-height: 1;
+}
+
 .btn-lg {
     padding: $btn-lg-padding;
     font-size: $btn-lg-font-size;
