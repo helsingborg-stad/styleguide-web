@@ -40,6 +40,7 @@
 // <i class="pricon pricon-check"></i> pricon-check<br>
 // <i class="pricon pricon-check-o"></i> pricon-check-o<br>
 // <i class="pricon pricon-notice-warning"></i> pricon-notice-warning<br>
+// <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
 // <i class="pricon pricon-info-o"></i> pricon-info-o<br>
 // <i class="pricon pricon-question-o"></i> pricon-question-o<br>
 // <i class="pricon pricon-linkedin-square"></i> pricon-linkedin-square<br>
@@ -69,7 +70,6 @@
 // <i class="pricon pricon-helsingborg"></i> pricon-helsingborg<br>
 // <i class="pricon pricon-calendar"></i> pricon-calendar<br>
 // <i class="pricon pricon-home"></i> pricon-home<br>
-// <i class="pricon pricon-language-alt"></i> pricon-language-alt<br>
 // <i class="pricon pricon-language"></i> pricon-language<br>
 // <i class="pricon pricon-star"></i> pricon-star<br>
 // <i class="pricon pricon-text-size"></i> pricon-text-size<br>
@@ -96,7 +96,8 @@
 // <i class="pricon pricon-smiley-thounge"></i> pricon-smiley-thounge<br>
 // <i class="pricon pricon-plus"></i> pricon-plus<br>
 // <i class="pricon pricon-notice-info"></i> pricon-notice-info<br>
-// <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
+// <i class="pricon pricon-compass"></i> pricon-compass<br>
+// <i class="pricon pricon-globe"></i> pricon-globe<br>
 // 
 //
 @font-face {
@@ -216,6 +217,7 @@ $pricon-caret-up: "\EA15";
 $pricon-check: "\EA16";
 $pricon-check-o: "\EA17";
 $pricon-notice-warning: "\EA18";
+$pricon-notice-danger: "\EA19";
 $pricon-info-o: "\EA1B";
 $pricon-question-o: "\EA1C";
 $pricon-linkedin-square: "\EA1D";
@@ -245,8 +247,7 @@ $pricon-sort: "\EA34";
 $pricon-helsingborg: "\EA35";
 $pricon-calendar: "\EA36";
 $pricon-home: "\EA37";
-$pricon-language-alt: "\EA38";
-$pricon-language: "\EA39";
+$pricon-language: "\EA38";
 $pricon-star: "\EA3A";
 $pricon-text-size: "\EA3B";
 $pricon-share: "\EA3C";
@@ -272,7 +273,8 @@ $pricon-smiley-super-happy: "\EA4F";
 $pricon-smiley-thounge: "\EA50";
 $pricon-plus: "\EA51";
 $pricon-notice-info: "\EA52";
-$pricon-notice-danger: "\EA19";
+$pricon-compass: "\EA1A";
+$pricon-globe: "\EA39";
 
 
 /* Glyphs */
@@ -300,6 +302,7 @@ $pricon-notice-danger: "\EA19";
 .pricon-check:before { content: $pricon-check }
 .pricon-check-o:before { content: $pricon-check-o }
 .pricon-notice-warning:before { content: $pricon-notice-warning }
+.pricon-notice-danger:before { content: $pricon-notice-danger }
 .pricon-info-o:before { content: $pricon-info-o }
 .pricon-question-o:before { content: $pricon-question-o }
 .pricon-linkedin-square:before { content: $pricon-linkedin-square }
@@ -329,7 +332,6 @@ $pricon-notice-danger: "\EA19";
 .pricon-helsingborg:before { content: $pricon-helsingborg }
 .pricon-calendar:before { content: $pricon-calendar }
 .pricon-home:before { content: $pricon-home }
-.pricon-language-alt:before { content: $pricon-language-alt }
 .pricon-language:before { content: $pricon-language }
 .pricon-star:before { content: $pricon-star }
 .pricon-text-size:before { content: $pricon-text-size }
@@ -356,7 +358,8 @@ $pricon-notice-danger: "\EA19";
 .pricon-smiley-thounge:before { content: $pricon-smiley-thounge }
 .pricon-plus:before { content: $pricon-plus }
 .pricon-notice-info:before { content: $pricon-notice-info }
-.pricon-notice-danger:before { content: $pricon-notice-danger }
+.pricon-compass:before { content: $pricon-compass }
+.pricon-globe:before { content: $pricon-globe }
 
 
 /* Mixin */
