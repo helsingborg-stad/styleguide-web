@@ -67,6 +67,10 @@
     }
 }
 
+.notices .notice + .notice {
+    margin-top: 0;
+}
+
 .notice-inline-block {
     display: inline-block;
     @include material-radius;
