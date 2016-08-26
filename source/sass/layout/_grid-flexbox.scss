@@ -1,4 +1,4 @@
-@supports (display: flex) {
+html:not(.no-flexbox) {
 
     .grid {
         display: flex;
@@ -68,7 +68,8 @@
     [data-equal-container] > [class*="grid-"],
     [data-equal-container] > [data-equal-item] {
         display: flex;
-        display: flex;
+        min-height: .5px;
+        -ms-flex-preferred-size: auto;
     }
 
 }
