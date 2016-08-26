@@ -1,8 +1,8 @@
 HelsingborgPrime = HelsingborgPrime || {};
 
-HelsingborgPrime.Menu = HelsingborgPrime.Menu || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
-HelsingborgPrime.Menu.ToggleSubmenuItems = (function ($) {
+HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
 
     function ToggleSubmenuItems() {
         this.init();
