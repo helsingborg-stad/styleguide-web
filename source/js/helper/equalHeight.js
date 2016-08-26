@@ -38,7 +38,7 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
      * @return {boolean}
      */
     EqualHeight.prototype.supportsFlexbox = function () {
-        if (typeof document.createElement("p").style.flexWrap != 'undefined' && document.createElement("p").style.flexWrap == '') {
+        if ($('html').hasClass('no-flexbox')) {
             return true;
         }
 
