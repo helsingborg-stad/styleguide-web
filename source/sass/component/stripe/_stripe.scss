@@ -144,7 +144,7 @@
 }
 
 .stripe-red {
-    @include stripe;
+    @include stripe($palette-red-1, $palette-red-2, $palette-red-3, $palette-red-4, $palette-red-5);
 }
 
 .stripe-blue {

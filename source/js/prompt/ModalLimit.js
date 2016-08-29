@@ -9,6 +9,11 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
 
     function ModalLimit() {
     	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
     }
 
     ModalLimit.prototype.init = function () {

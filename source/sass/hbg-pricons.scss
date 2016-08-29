@@ -5,6 +5,7 @@
 //
 // @page Icons/Pricons
 //
+// @state .pricon-badge - Adds filled circle behind the icon
 // @state .pricon-space-right - Adds space to the right of the icon
 // @state .pricon-xs - Extra small icon
 // @state .pricon-sm - Small icon
@@ -124,7 +125,6 @@
 // <i class="pricon pricon-diagram-increase"></i> pricon-diagram-increase<br>
 // <i class="pricon pricon-discuss"></i> pricon-discuss<br>
 // <i class="pricon pricon-dog"></i> pricon-dog<br>
-// <i class="pricon pricon-group"></i> pricon-group<br>
 // <i class="pricon pricon-handshake"></i> pricon-handshake<br>
 // <i class="pricon pricon-info"></i> pricon-info<br>
 // <i class="pricon pricon-man"></i> pricon-man<br>
@@ -161,6 +161,112 @@
 
 .pricon-space-right::before {
     margin-right: .5em;
+}
+
+/* Badge */
+.pricon-badge::before {
+    $badge-size: 1.5em;
+    $line-height: 1.6em;
+    width: $badge-size;
+    height: $badge-size;
+
+    background-color: $palette-gray-2;
+
+    border-radius: 50%;
+    text-align: center;
+    line-height: $line-height;
+}
+
+.pricon-badge-theme {
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+}
+
+/* Badge colors */
+.pricon-badge-red-1::before {
+    background-color: $palette-red-1;
+}
+
+.pricon-badge-red-2::before {
+    background-color: $palette-red-2;
+}
+
+.pricon-badge-red-3::before {
+    background-color: $palette-red-3;
+}
+
+.pricon-badge-red-4::before {
+    background-color: $palette-red-4;
+}
+
+.pricon-badge-red-5::before {
+    background-color: $palette-red-5;
+}
+
+.pricon-badge-blue-1::before {
+    background-color: $palette-blue-1;
+}
+
+.pricon-badge-blue-2::before {
+    background-color: $palette-blue-2;
+}
+
+.pricon-badge-blue-3::before {
+    background-color: $palette-blue-3;
+}
+
+.pricon-badge-blue-4::before {
+    background-color: $palette-blue-4;
+}
+
+.pricon-badge-blue-5::before {
+    background-color: $palette-blue-5;
+}
+
+.pricon-badge-green-1::before {
+    background-color: $palette-green-1;
+}
+
+.pricon-badge-green-2::before {
+    background-color: $palette-green-2;
+}
+
+.pricon-badge-green-3::before {
+    background-color: $palette-green-3;
+}
+
+.pricon-badge-green-4::before {
+    background-color: $palette-green-4;
+}
+
+.pricon-badge-green-5::before {
+    background-color: $palette-green-5;
+}
+
+.pricon-badge-purple-1::before {
+    background-color: $palette-purple-1;
+}
+
+.pricon-badge-purple-2::before {
+    background-color: $palette-purple-2;
+}
+
+.pricon-badge-purple-3::before {
+    background-color: $palette-purple-3;
+}
+
+.pricon-badge-purple-4::before {
+    background-color: $palette-purple-4;
+}
+
+.pricon-badge-purple-5::before {
+    background-color: $palette-purple-5;
 }
 
 /* Size modifiers */
@@ -338,7 +444,6 @@ $pricon-budget: "\EA69";
 $pricon-diagram-increase: "\EA6A";
 $pricon-discuss: "\EA6B";
 $pricon-dog: "\EA6C";
-$pricon-group: "\EA6D";
 $pricon-handshake: "\EA6E";
 $pricon-info: "\EA6F";
 $pricon-man: "\EA70";
@@ -460,7 +565,6 @@ $pricon-woman: "\EA77";
 .pricon-diagram-increase:before { content: $pricon-diagram-increase }
 .pricon-discuss:before { content: $pricon-discuss }
 .pricon-dog:before { content: $pricon-dog }
-.pricon-group:before { content: $pricon-group }
 .pricon-handshake:before { content: $pricon-handshake }
 .pricon-info:before { content: $pricon-info }
 .pricon-man:before { content: $pricon-man }
