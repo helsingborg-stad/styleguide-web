@@ -99,6 +99,11 @@
     .grid-col-icon {
         margin-right: 0px;
     }
+
+    [class*="grid-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .notice-fullwidth {

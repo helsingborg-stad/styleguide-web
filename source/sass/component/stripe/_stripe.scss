@@ -7,6 +7,7 @@
 // @state .stripe-blue - Blue stripe
 // @state .stripe-green - Green stripe
 // @state .stripe-pruple - Purple stripe
+// @state .has-stripe - Put this class on the parent container to get corretct padding-left for the stripe
 //
 // @page Stripe
 //
@@ -79,6 +80,22 @@
     }
 }
 
+.has-stripe.has-stripe {
+    padding-left: 10px;
+
+    @media #{$screen-sm-up} {
+        padding-left: 15px;
+    }
+
+    @media #{$screen-md-up} {
+        padding-left: 20px;
+    }
+
+    @media #{$screen-lg-up} {
+        padding-left: 25px;
+    }
+}
+
 .stripe {
     @include stripe();
     position: absolute;
@@ -103,10 +120,26 @@
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
-            .theme-#{$theme} &:not([class*="stripe-"]) {
+            .theme-#{$theme} &:not(.stripe-red):not(.stripe-blue):not(.stripe-green):not(.stripe-purple) {
                 @include stripe(map-get($color, first), map-get($color, second), map-get($color, third), map-get($color, fourth), map-get($color, fifth));
             }
         }
+    }
+}
+
+.stripe-percentage {
+    width: 3.57%;
+
+    @media #{$screen-sm-up} {
+        width: 3.57%;
+    }
+
+    @media #{$screen-md-up} {
+        width: 2.5%;
+    }
+
+    @media #{$screen-lg-up} {
+        width: 2.5%;
     }
 }
 

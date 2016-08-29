@@ -41,6 +41,7 @@
 // <i class="pricon pricon-check-o"></i> pricon-check-o<br>
 // <i class="pricon pricon-notice-warning"></i> pricon-notice-warning<br>
 // <i class="pricon pricon-notice-danger"></i> pricon-notice-danger<br>
+// <i class="pricon pricon-compass"></i> pricon-compass<br>
 // <i class="pricon pricon-info-o"></i> pricon-info-o<br>
 // <i class="pricon pricon-question-o"></i> pricon-question-o<br>
 // <i class="pricon pricon-linkedin-square"></i> pricon-linkedin-square<br>
@@ -71,6 +72,7 @@
 // <i class="pricon pricon-calendar"></i> pricon-calendar<br>
 // <i class="pricon pricon-home"></i> pricon-home<br>
 // <i class="pricon pricon-language"></i> pricon-language<br>
+// <i class="pricon pricon-globe"></i> pricon-globe<br>
 // <i class="pricon pricon-star"></i> pricon-star<br>
 // <i class="pricon pricon-text-size"></i> pricon-text-size<br>
 // <i class="pricon pricon-share"></i> pricon-share<br>
@@ -96,8 +98,43 @@
 // <i class="pricon pricon-smiley-thounge"></i> pricon-smiley-thounge<br>
 // <i class="pricon pricon-plus"></i> pricon-plus<br>
 // <i class="pricon pricon-notice-info"></i> pricon-notice-info<br>
-// <i class="pricon pricon-compass"></i> pricon-compass<br>
-// <i class="pricon pricon-globe"></i> pricon-globe<br>
+// <i class="pricon pricon-clock"></i> pricon-clock<br>
+// <i class="pricon pricon-wifi"></i> pricon-wifi<br>
+// <i class="pricon pricon-construction"></i> pricon-construction<br>
+// <i class="pricon pricon-sun"></i> pricon-sun<br>
+// <i class="pricon pricon-music"></i> pricon-music<br>
+// <i class="pricon pricon-calendar-check"></i> pricon-calendar-check<br>
+// <i class="pricon pricon-money"></i> pricon-money<br>
+// <i class="pricon pricon-bus"></i> pricon-bus<br>
+// <i class="pricon pricon-car"></i> pricon-car<br>
+// <i class="pricon pricon-house"></i> pricon-house<br>
+// <i class="pricon pricon-park"></i> pricon-park<br>
+// <i class="pricon pricon-bike"></i> pricon-bike<br>
+// <i class="pricon pricon-boat"></i> pricon-boat<br>
+// <i class="pricon pricon-coffee"></i> pricon-coffee<br>
+// <i class="pricon pricon-commute"></i> pricon-commute<br>
+// <i class="pricon pricon-healthcare"></i> pricon-healthcare<br>
+// <i class="pricon pricon-run"></i> pricon-run<br>
+// <i class="pricon pricon-swim"></i> pricon-swim<br>
+// <i class="pricon pricon-tent"></i> pricon-tent<br>
+// <i class="pricon pricon-apple"></i> pricon-apple<br>
+// <i class="pricon pricon-archive"></i> pricon-archive<br>
+// <i class="pricon pricon-bag"></i> pricon-bag<br>
+// <i class="pricon pricon-budget"></i> pricon-budget<br>
+// <i class="pricon pricon-diagram-increase"></i> pricon-diagram-increase<br>
+// <i class="pricon pricon-discuss"></i> pricon-discuss<br>
+// <i class="pricon pricon-dog"></i> pricon-dog<br>
+// <i class="pricon pricon-group"></i> pricon-group<br>
+// <i class="pricon pricon-handshake"></i> pricon-handshake<br>
+// <i class="pricon pricon-info"></i> pricon-info<br>
+// <i class="pricon pricon-man"></i> pricon-man<br>
+// <i class="pricon pricon-people"></i> pricon-people<br>
+// <i class="pricon pricon-recycling"></i> pricon-recycling<br>
+// <i class="pricon pricon-reload"></i> pricon-reload<br>
+// <i class="pricon pricon-sports"></i> pricon-sports<br>
+// <i class="pricon pricon-usb"></i> pricon-usb<br>
+// <i class="pricon pricon-vote"></i> pricon-vote<br>
+// <i class="pricon pricon-woman"></i> pricon-woman<br>
 // 
 //
 @font-face {
@@ -218,6 +255,7 @@ $pricon-check: "\EA16";
 $pricon-check-o: "\EA17";
 $pricon-notice-warning: "\EA18";
 $pricon-notice-danger: "\EA19";
+$pricon-compass: "\EA1A";
 $pricon-info-o: "\EA1B";
 $pricon-question-o: "\EA1C";
 $pricon-linkedin-square: "\EA1D";
@@ -248,6 +286,7 @@ $pricon-helsingborg: "\EA35";
 $pricon-calendar: "\EA36";
 $pricon-home: "\EA37";
 $pricon-language: "\EA38";
+$pricon-globe: "\EA39";
 $pricon-star: "\EA3A";
 $pricon-text-size: "\EA3B";
 $pricon-share: "\EA3C";
@@ -273,8 +312,43 @@ $pricon-smiley-super-happy: "\EA4F";
 $pricon-smiley-thounge: "\EA50";
 $pricon-plus: "\EA51";
 $pricon-notice-info: "\EA52";
-$pricon-compass: "\EA1A";
-$pricon-globe: "\EA39";
+$pricon-clock: "\EA53";
+$pricon-wifi: "\EA54";
+$pricon-construction: "\EA55";
+$pricon-sun: "\EA56";
+$pricon-music: "\EA57";
+$pricon-calendar-check: "\EA58";
+$pricon-money: "\EA59";
+$pricon-bus: "\EA5A";
+$pricon-car: "\EA5B";
+$pricon-house: "\EA5C";
+$pricon-park: "\EA5D";
+$pricon-bike: "\EA5E";
+$pricon-boat: "\EA5F";
+$pricon-coffee: "\EA60";
+$pricon-commute: "\EA61";
+$pricon-healthcare: "\EA62";
+$pricon-run: "\EA63";
+$pricon-swim: "\EA64";
+$pricon-tent: "\EA65";
+$pricon-apple: "\EA66";
+$pricon-archive: "\EA67";
+$pricon-bag: "\EA68";
+$pricon-budget: "\EA69";
+$pricon-diagram-increase: "\EA6A";
+$pricon-discuss: "\EA6B";
+$pricon-dog: "\EA6C";
+$pricon-group: "\EA6D";
+$pricon-handshake: "\EA6E";
+$pricon-info: "\EA6F";
+$pricon-man: "\EA70";
+$pricon-people: "\EA71";
+$pricon-recycling: "\EA72";
+$pricon-reload: "\EA73";
+$pricon-sports: "\EA74";
+$pricon-usb: "\EA75";
+$pricon-vote: "\EA76";
+$pricon-woman: "\EA77";
 
 
 /* Glyphs */
@@ -303,6 +377,7 @@ $pricon-globe: "\EA39";
 .pricon-check-o:before { content: $pricon-check-o }
 .pricon-notice-warning:before { content: $pricon-notice-warning }
 .pricon-notice-danger:before { content: $pricon-notice-danger }
+.pricon-compass:before { content: $pricon-compass }
 .pricon-info-o:before { content: $pricon-info-o }
 .pricon-question-o:before { content: $pricon-question-o }
 .pricon-linkedin-square:before { content: $pricon-linkedin-square }
@@ -333,6 +408,7 @@ $pricon-globe: "\EA39";
 .pricon-calendar:before { content: $pricon-calendar }
 .pricon-home:before { content: $pricon-home }
 .pricon-language:before { content: $pricon-language }
+.pricon-globe:before { content: $pricon-globe }
 .pricon-star:before { content: $pricon-star }
 .pricon-text-size:before { content: $pricon-text-size }
 .pricon-share:before { content: $pricon-share }
@@ -358,8 +434,43 @@ $pricon-globe: "\EA39";
 .pricon-smiley-thounge:before { content: $pricon-smiley-thounge }
 .pricon-plus:before { content: $pricon-plus }
 .pricon-notice-info:before { content: $pricon-notice-info }
-.pricon-compass:before { content: $pricon-compass }
-.pricon-globe:before { content: $pricon-globe }
+.pricon-clock:before { content: $pricon-clock }
+.pricon-wifi:before { content: $pricon-wifi }
+.pricon-construction:before { content: $pricon-construction }
+.pricon-sun:before { content: $pricon-sun }
+.pricon-music:before { content: $pricon-music }
+.pricon-calendar-check:before { content: $pricon-calendar-check }
+.pricon-money:before { content: $pricon-money }
+.pricon-bus:before { content: $pricon-bus }
+.pricon-car:before { content: $pricon-car }
+.pricon-house:before { content: $pricon-house }
+.pricon-park:before { content: $pricon-park }
+.pricon-bike:before { content: $pricon-bike }
+.pricon-boat:before { content: $pricon-boat }
+.pricon-coffee:before { content: $pricon-coffee }
+.pricon-commute:before { content: $pricon-commute }
+.pricon-healthcare:before { content: $pricon-healthcare }
+.pricon-run:before { content: $pricon-run }
+.pricon-swim:before { content: $pricon-swim }
+.pricon-tent:before { content: $pricon-tent }
+.pricon-apple:before { content: $pricon-apple }
+.pricon-archive:before { content: $pricon-archive }
+.pricon-bag:before { content: $pricon-bag }
+.pricon-budget:before { content: $pricon-budget }
+.pricon-diagram-increase:before { content: $pricon-diagram-increase }
+.pricon-discuss:before { content: $pricon-discuss }
+.pricon-dog:before { content: $pricon-dog }
+.pricon-group:before { content: $pricon-group }
+.pricon-handshake:before { content: $pricon-handshake }
+.pricon-info:before { content: $pricon-info }
+.pricon-man:before { content: $pricon-man }
+.pricon-people:before { content: $pricon-people }
+.pricon-recycling:before { content: $pricon-recycling }
+.pricon-reload:before { content: $pricon-reload }
+.pricon-sports:before { content: $pricon-sports }
+.pricon-usb:before { content: $pricon-usb }
+.pricon-vote:before { content: $pricon-vote }
+.pricon-woman:before { content: $pricon-woman }
 
 
 /* Mixin */

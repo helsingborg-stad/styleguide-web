@@ -35,6 +35,13 @@
     }
 }
 
+.box-filled-card {
+    .box-content {
+        padding: 1em 1.5em;
+        font-size: 1em;
+    }
+}
+
 .box-filled-1,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled {

@@ -28,19 +28,3 @@
         display: none;
     }
 }
-
-.hero.has-stripe {
-    padding-left: 10px;
-
-    @media #{$screen-sm-up} {
-        padding-left: 15px;
-    }
-
-    @media #{$screen-md-up} {
-        padding-left: 20px;
-    }
-
-    @media #{$screen-lg-up} {
-        padding-left: 25px;
-    }
-}
