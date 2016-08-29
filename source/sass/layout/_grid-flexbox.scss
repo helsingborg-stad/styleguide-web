@@ -23,6 +23,16 @@ html:not(.no-flexbox) {
     .grid-auto {
         flex: 1 1 auto;
         flex-basis: 0;
+
+        @media #{$screen-below-md} {
+            flex: 1 1 auto;
+            flex-basis: 100;
+
+            & + [class*="grid-"] {
+                padding-top: 5px;
+                padding-bottom: 10px;
+            }
+        }
     }
 
     .grid-defined-width {
