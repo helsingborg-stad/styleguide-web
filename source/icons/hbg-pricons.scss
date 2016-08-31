@@ -5,6 +5,7 @@
 //
 // @page Icons/Pricons
 //
+// @state .<%= className %>-badge - Adds filled circle behind the icon
 // @state .<%= className %>-space-right - Adds space to the right of the icon
 // @state .<%= className %>-xs - Extra small icon
 // @state .<%= className %>-sm - Small icon
@@ -44,6 +45,112 @@
 
 .<%= className %>-space-right::before {
     margin-right: .5em;
+}
+
+/* Badge */
+.<%= className %>-badge::before {
+    $badge-size: 1.5em;
+    $line-height: 1.6em;
+    width: $badge-size;
+    height: $badge-size;
+
+    background-color: $palette-gray-2;
+
+    border-radius: 50%;
+    text-align: center;
+    line-height: $line-height;
+}
+
+.<%= className %>-badge-theme {
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, second);
+            }
+        }
+    }
+}
+
+/* Badge colors */
+.<%= className %>-badge-red-1::before {
+    background-color: $palette-red-1;
+}
+
+.<%= className %>-badge-red-2::before {
+    background-color: $palette-red-2;
+}
+
+.<%= className %>-badge-red-3::before {
+    background-color: $palette-red-3;
+}
+
+.<%= className %>-badge-red-4::before {
+    background-color: $palette-red-4;
+}
+
+.<%= className %>-badge-red-5::before {
+    background-color: $palette-red-5;
+}
+
+.<%= className %>-badge-blue-1::before {
+    background-color: $palette-blue-1;
+}
+
+.<%= className %>-badge-blue-2::before {
+    background-color: $palette-blue-2;
+}
+
+.<%= className %>-badge-blue-3::before {
+    background-color: $palette-blue-3;
+}
+
+.<%= className %>-badge-blue-4::before {
+    background-color: $palette-blue-4;
+}
+
+.<%= className %>-badge-blue-5::before {
+    background-color: $palette-blue-5;
+}
+
+.<%= className %>-badge-green-1::before {
+    background-color: $palette-green-1;
+}
+
+.<%= className %>-badge-green-2::before {
+    background-color: $palette-green-2;
+}
+
+.<%= className %>-badge-green-3::before {
+    background-color: $palette-green-3;
+}
+
+.<%= className %>-badge-green-4::before {
+    background-color: $palette-green-4;
+}
+
+.<%= className %>-badge-green-5::before {
+    background-color: $palette-green-5;
+}
+
+.<%= className %>-badge-purple-1::before {
+    background-color: $palette-purple-1;
+}
+
+.<%= className %>-badge-purple-2::before {
+    background-color: $palette-purple-2;
+}
+
+.<%= className %>-badge-purple-3::before {
+    background-color: $palette-purple-3;
+}
+
+.<%= className %>-badge-purple-4::before {
+    background-color: $palette-purple-4;
+}
+
+.<%= className %>-badge-purple-5::before {
+    background-color: $palette-purple-5;
 }
 
 /* Size modifiers */

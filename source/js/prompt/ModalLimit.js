@@ -9,6 +9,11 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
 
     function ModalLimit() {
     	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
     }
 
     ModalLimit.prototype.init = function () {
@@ -17,6 +22,10 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
         $(window).bind('hashchange', function() {
 			this.toggleModalClass();
 		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
     };
 
     ModalLimit.prototype.toggleModalClass = function(){

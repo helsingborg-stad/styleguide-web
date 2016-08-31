@@ -158,7 +158,7 @@ gulp.task('iconfont', ['icons-scale'], function () {
 });
 
 gulp.task('icons', function () {
-    runSequence('iconfont', ['sass-dist', 'sass-dev']);
+    runSequence('iconfont', ['sass-dist', 'sass-dev', 'dss-sass']);
 });
 
 // Documented JS

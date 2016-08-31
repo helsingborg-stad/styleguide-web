@@ -67,6 +67,14 @@
     }
 }
 
+@media #{$screen-below-md} {
+    html:not(.no-flexbox) .notice .grid-auto {
+        flex: 1 1 auto;
+        flex-basis: 100%;
+        padding: 5px 0;
+    }
+}
+
 .notices .notice + .notice {
     margin-top: 0;
 }
@@ -98,6 +106,11 @@
 
     .grid-col-icon {
         margin-right: 0px;
+    }
+
+    [class*="grid-"] {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 

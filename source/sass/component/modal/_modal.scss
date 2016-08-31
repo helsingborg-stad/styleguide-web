@@ -133,7 +133,6 @@
     z-index: $level-10;
     line-height: $base-line-height;
     background-color: #fff;
-    border-radius: 5px;
     overflow: hidden;
 
     @media screen and #{$screen-sm-up} {
@@ -142,6 +141,7 @@
 
     @media screen and #{$screen-sm-up} {
         margin: $grid-gutter-md auto;
+        border-radius: 5px;
     }
 
     @media screen and #{$screen-lg-up} {
@@ -151,25 +151,29 @@
 
 /* Modifiers - size */
 
-.modal-large .modal-content {
+.modal-large .modal-content,
+.modal-lg .modal-content {
 	width: 100%;
 	min-height: 100vh;
 	margin: 0;
 }
 
-.modal-large .btn-close {
+.modal-large .btn-close,
+.modal-lg .btn-close {
 	top: 43%;
 	right: 2em;
 }
 
-.modal-large .modal-footer {
+.modal-large .modal-footer,
+.modal-lg .modal-footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	background: #fff;
 }
 
-.modal-medium .modal-content {
+.modal-medium .modal-content,
+.modal-md .modal-content {
 	width: 70%;
 
 	@media screen and #{$screen-xs-up} {
@@ -185,7 +189,8 @@
 	}
 }
 
-.modal-small .modal-content {
+.modal-small .modal-content,
+.modal-sm .modal-content {
 	width: 50%;
 
 	@media screen and #{$screen-xs-up} {
@@ -199,6 +204,23 @@
 	@media screen and #{$screen-md-up} {
 		width: 60%;
 	}
+}
+
+.modal-xsmall .modal-content,
+.modal-xs .modal-content {
+    width: 40%;
+
+    @media screen and #{$screen-xs-up} {
+        width: 100%;
+    }
+
+    @media screen and #{$screen-sm-up} {
+        width: 90%;
+    }
+
+    @media screen and #{$screen-md-up} {
+        width: 40%;
+    }
 }
 
 /* Modifiers - color */
@@ -260,9 +282,9 @@
 }
 
 .modal-backdrop-white .backdrop  {
-    background-color: rgba(#fff, .95);
+    background-color: rgba(#dfe5ea, .95);
 }
 
 .modal-backdrop-white .modal-content {
-	border: 1px solid $creamy-darker;
+    border: none;
 }
