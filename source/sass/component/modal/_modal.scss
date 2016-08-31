@@ -133,7 +133,6 @@
     z-index: $level-10;
     line-height: $base-line-height;
     background-color: #fff;
-    border-radius: 5px;
     overflow: hidden;
 
     @media screen and #{$screen-sm-up} {
@@ -142,6 +141,7 @@
 
     @media screen and #{$screen-sm-up} {
         margin: $grid-gutter-md auto;
+        border-radius: 5px;
     }
 
     @media screen and #{$screen-lg-up} {
