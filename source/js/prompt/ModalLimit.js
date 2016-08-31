@@ -24,7 +24,6 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
 		}.bind(this));
 
         $('.modal a[href="#close"]').on('click', function (e) {
-            e.preventDefault();
             $('html, body').removeClass('overflow-hidden');
         });
     };
