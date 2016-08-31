@@ -22,6 +22,11 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
         $(window).bind('hashchange', function() {
 			this.toggleModalClass();
 		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').removeClass('overflow-hidden');
+        });
     };
 
     ModalLimit.prototype.toggleModalClass = function(){
