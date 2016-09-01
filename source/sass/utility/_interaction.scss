@@ -30,15 +30,6 @@
     }
 }
 
-//
-// @name Loading dots
-// @description Loading indicator with three animated dots
-//
-// @page Utilities/Loading dots
-//
-// @markup
-// <i class="loading-dots"></i>
-//
 
 @mixin loading-dot($size: 1em) {
     width: $size;
