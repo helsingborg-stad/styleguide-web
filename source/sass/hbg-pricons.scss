@@ -125,6 +125,7 @@
 // <i class="pricon pricon-diagram-increase"></i> pricon-diagram-increase<br>
 // <i class="pricon pricon-discuss"></i> pricon-discuss<br>
 // <i class="pricon pricon-dog"></i> pricon-dog<br>
+// <i class="pricon pricon-balloon"></i> pricon-balloon<br>
 // <i class="pricon pricon-handshake"></i> pricon-handshake<br>
 // <i class="pricon pricon-info"></i> pricon-info<br>
 // <i class="pricon pricon-man"></i> pricon-man<br>
@@ -445,6 +446,7 @@ $pricon-budget: "\EA69";
 $pricon-diagram-increase: "\EA6A";
 $pricon-discuss: "\EA6B";
 $pricon-dog: "\EA6C";
+$pricon-balloon: "\EA6D";
 $pricon-handshake: "\EA6E";
 $pricon-info: "\EA6F";
 $pricon-man: "\EA70";
@@ -566,6 +568,7 @@ $pricon-woman: "\EA77";
 .pricon-diagram-increase:before { content: $pricon-diagram-increase }
 .pricon-discuss:before { content: $pricon-discuss }
 .pricon-dog:before { content: $pricon-dog }
+.pricon-balloon:before { content: $pricon-balloon }
 .pricon-handshake:before { content: $pricon-handshake }
 .pricon-info:before { content: $pricon-info }
 .pricon-man:before { content: $pricon-man }
