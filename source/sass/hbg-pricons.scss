@@ -136,6 +136,7 @@
 // <i class="pricon pricon-usb"></i> pricon-usb<br>
 // <i class="pricon pricon-vote"></i> pricon-vote<br>
 // <i class="pricon pricon-woman"></i> pricon-woman<br>
+// <i class="pricon pricon-cake"></i> pricon-cake<br>
 // 
 //
 @font-face {
@@ -457,6 +458,7 @@ $pricon-sports: "\EA74";
 $pricon-usb: "\EA75";
 $pricon-vote: "\EA76";
 $pricon-woman: "\EA77";
+$pricon-cake: "\EA78";
 
 
 /* Glyphs */
@@ -579,6 +581,7 @@ $pricon-woman: "\EA77";
 .pricon-usb:before { content: $pricon-usb }
 .pricon-vote:before { content: $pricon-vote }
 .pricon-woman:before { content: $pricon-woman }
+.pricon-cake:before { content: $pricon-cake }
 
 
 /* Mixin */
