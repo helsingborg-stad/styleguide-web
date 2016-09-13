@@ -106,12 +106,26 @@
                 text-decoration: none;
             }
         }
+
+        label {
+            display: block;
+            padding: 3px 10px;
+        }
     }
 
     .divider {
         height: 1px;
         background-color: $creamy-darker;
         margin: 5px 0;
+    }
+
+    .title {
+        padding: 3px 10px;
+    }
+
+    .dropdown-menu-overflow {
+        max-height: 300px;
+        overflow: auto;
     }
 }
 
