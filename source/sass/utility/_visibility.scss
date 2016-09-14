@@ -45,12 +45,8 @@
 	display: block;
 }
 
-.target-toggle {
+.target-toggle:not(:target).target-toggle:not(:target) {
 	display: none;
-
-	&:target {
-		display: block;
-	}
 }
 
 
