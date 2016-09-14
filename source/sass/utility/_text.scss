@@ -158,6 +158,24 @@
     columns: 2;
 }
 
+.text-columns-3 {
+    columns: 3;
+}
+
+.text-columns-4 {
+    columns: 4;
+}
+
+.text-columns-5 {
+    columns: 5;
+}
+
+.avoid-break-inside {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
 //
 // @name Highlight
 // @description Highlights text.
