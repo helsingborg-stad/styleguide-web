@@ -8,6 +8,16 @@
             }
         }
 
+        .grid-#{$grid-size}-auto {
+            display: table-cell;
+            width: auto;
+        }
+
+        .grid-#{$grid-size}-fit-content {
+            width: 1%;
+            white-space: nowrap;
+        }
+
         .grid-tester::after {
             content: $grid-size;
         }
@@ -23,6 +33,17 @@
                 max-width: (100% / $grid-column-count) * $i;
             }
         }
+
+        .grid-#{$grid-size}-auto {
+            flex: 1 1 auto;
+            flex-basis: 0;
+            max-width: none;
+        }
+
+        .grid-#{$grid-size}-fit-content {
+            flex: 0 1 auto;
+            width: auto;
+        }
     }
 }
 
@@ -34,7 +55,7 @@
     padding-left: 0;
     padding-right: 0;
 
-    @supports (display: flex) {
+    html:not(.no-flexbox) & {
         display: flex;
         flex: 0 1 auto;
         flex-direction: row;
@@ -51,12 +72,12 @@
         }
     }
 
-.grid-fit-content {
-    width: 1%;
-    white-space: nowrap;
-}
+    .grid-fit-content {
+        width: 1%;
+        white-space: nowrap;
+    }
 
-    @supports (display:flex) {
+    html:not(.no-flexbox) & {
         .grid-auto {
             flex: 1 1 0;
         }
@@ -86,7 +107,7 @@
         white-space: nowrap;
         padding-right: 0;
 
-        @supports (display: flex) {
+        html:not(.no-flexbox) & {
             display: block;
             flex: 0 0 auto;
             min-width: 40px;
