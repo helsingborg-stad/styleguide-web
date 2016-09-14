@@ -23,6 +23,7 @@
 
 .box-content {
     @include box-content;
+    flex: 1 1 auto;
 }
 
 .box-content img {
