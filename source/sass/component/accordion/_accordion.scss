@@ -57,6 +57,10 @@
     .accordion-section > input[type="radio"] {
         display: none;
     }
+
+    .accordion-content {
+        background-color: #fff;
+    }
 }
 
 .accordion + .accordion {
