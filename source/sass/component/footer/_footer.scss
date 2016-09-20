@@ -127,5 +127,8 @@
 .footer-signature {
     display: inline-block;
     width: 100px;
-    height: auto;
+}
+
+img[src$=".svg"].footer-signature {
+    height: 100%;
 }
