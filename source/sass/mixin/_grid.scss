@@ -35,8 +35,7 @@
         }
 
         .grid-#{$grid-size}-auto {
-            flex: 1 1 auto;
-            flex-basis: 0;
+            flex: 1 1 0%;
             max-width: none;
         }
 
@@ -60,16 +59,16 @@
         flex: 0 1 auto;
         flex-direction: row;
         flex-wrap: nowrap;
+
+        [class*="grid-"] {
+            display: block;
+            flex: 1 1 auto;
+        }
     }
 
     [class*="grid-"] {
         display: table-cell;
         float: none;
-
-        @supports (display:flex) {
-            display: block;
-            flex: 1 1 auto;
-        }
     }
 
     .grid-fit-content {
@@ -79,7 +78,7 @@
 
     html:not(.no-flexbox) & {
         .grid-auto {
-            flex: 1 1 0;
+            flex: 1 1 0%;
         }
 
         .grid-defined-width {
