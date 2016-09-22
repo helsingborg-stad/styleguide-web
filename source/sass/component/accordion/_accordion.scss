@@ -59,7 +59,7 @@
     }
 
     .accordion-content {
-        background-color: #fff;
+        background-color: $creamy;
     }
 }
 
@@ -77,6 +77,10 @@
             right: 0;
             font-size: 1em;
             color: $gray-light;
+        }
+
+        * {
+            padding-right: 30px;
         }
     }
 }
@@ -210,6 +214,8 @@ input[type="checkbox"]:checked ~ .accordion-toggle,
 input[type="radio"]:checked ~ .accordion-toggle,
 input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
+    font-weight: bold;
+
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
     }
