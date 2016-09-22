@@ -18,8 +18,11 @@ HelsingborgPrime.Component.Accordion = (function ($) {
             if (input.prop('checked') === false) {
                 window.location.hash = '#' + $(this).attr('for');
             } else {
-                window.location.hash = '';
-                history.pushState('', document.title, window.location.pathname);
+                if (!input.is('[type="checkbox"]')) {
+                    return;
+                }
+
+                window.location.hash = '_';
             }
 		});
 
