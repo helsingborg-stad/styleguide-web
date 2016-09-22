@@ -96,6 +96,8 @@
     }
 
     .box-content {
+        color: #fff;
+
         img {
             @extend .img-inherit-width;
         }

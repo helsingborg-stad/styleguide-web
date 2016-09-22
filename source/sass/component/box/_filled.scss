@@ -35,6 +35,14 @@
     }
 }
 
+.box-filled .box-index-title {
+    color: #fff !important;
+}
+
+.box-filled .box-index-title.link-item::before {
+    color: rgba(255,255,255,.7);
+}
+
 .box-filled-card {
     .box-content {
         padding: 1em 1.5em;
