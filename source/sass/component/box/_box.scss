@@ -6,7 +6,7 @@
         @include material-shadow;
     }
 
-    &.box-panel-secondary > :not(.box-title) {
+    &.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
         @include material-radius;
         @include material-shadow;
     }

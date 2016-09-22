@@ -67,6 +67,15 @@
 	margin-top: $content-gutter;
 }
 
+.accordion-table-head {
+    padding: $grid-gutter-sm/2 $grid-gutter-sm;
+    border-radius: 0px !important;
+}
+
+.box-panel-secondary .accordion-table-head {
+    padding-top: $grid-gutter-sm/2 - 3px;
+}
+
 .accordion-icon {
     .accordion-toggle {
         position: relative;
@@ -117,10 +126,6 @@
             @include gradient(rgba(#000, .05), rgba(#000, 0))
         }
 	}
-
-    .accordion-table-head {
-        padding: $grid-gutter-sm/2 $grid-gutter-sm;
-    }
 
 	&.boxes-medium,
 	&.box-medium,
