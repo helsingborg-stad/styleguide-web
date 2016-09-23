@@ -333,3 +333,34 @@ small,
 .small {
     font-size: .8em !important;
 }
+
+//
+// @name Truncate
+// @description Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.
+// @page Typography/Truncate
+//
+// @markup
+// <span class="truncate">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>
+//
+.truncate {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        background-color: #fff;
+        width: auto;
+        overflow: visible;
+    }
+}
+
+.truncate.link-item {
+    padding-right: 0;
+    left: 0;
+
+    &::before {
+        margin-left: 0;
+    }
+}
