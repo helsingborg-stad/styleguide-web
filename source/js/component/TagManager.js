@@ -34,8 +34,12 @@ HelsingborgPrime.Component.TagManager = (function ($) {
         $button.on('click', function (e) {
             e.preventDefault();
             var tag = $input.val();
+            var tags = tag.split(',');
 
-            this.addTag(element, tag);
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
+
         }.bind(this));
 
         $input.on('keypress', function (e) {
@@ -44,7 +48,13 @@ HelsingborgPrime.Component.TagManager = (function ($) {
             }
 
             e.preventDefault();
-            this.addTag($(e.target).parents('.tag-manager')[0], $input.val());
+            var element = $(e.target).parents('.tag-manager')[0]
+            var tag = $input.val();
+            var tags = tag.split(',');
+
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
         }.bind(this));
 
         if ($element.attr('data-wp-ajax-action') && typeof ajaxurl !== 'undefined') {
@@ -58,10 +68,13 @@ HelsingborgPrime.Component.TagManager = (function ($) {
 
             $('.tag-manager').on('click', '.autocomplete button', function (e) {
                 e.preventDefault();
-                var tag = $(e.target).closest('button').val();
                 var element = $(e.target).closest('button').parents('.tag-manager');
+                var tag = $(e.target).closest('button').val();
+                var tags = tag.split(',');
 
-                this.addTag(element, tag);
+                $.each(tags, function (index, tag) {
+                    this.addTag(element, tag.trim());
+                }.bind(this));
             }.bind(this));
         }
     };
@@ -107,10 +120,10 @@ HelsingborgPrime.Component.TagManager = (function ($) {
         var $element = $(element);
         $element.find('.autocomplete').remove();
 
-        var $autocomplete = $('<div class="autocomplete"><ul></ul></div>');
+        var $autocomplete = $('<div class="autocomplete gutter gutter-sm"><ul></ul></div>');
 
         $.each(items, function (index, item) {
-            $autocomplete.find('ul').append('<li><span class="tag"><button value="' + item + '">' + item + '</button></span></li>');
+            $autocomplete.find('ul').append('<li><span class="tag no-padding"><button value="' + item + '">' + item + '</button></span></li>');
         });
 
         $element.find('.tag-manager-input').append($autocomplete);
@@ -128,9 +141,11 @@ HelsingborgPrime.Component.TagManager = (function ($) {
 
         var $element = $(element);
         var inputname = $(element).attr('data-input-name');
-        $element.find('.tag-manager-selected ul').append('<li class="label">\
-            <button class="btn btn-plain" data-action="remove">&times;</button>\
-            ' + tag + '\
+        $element.find('.tag-manager-selected ul').append('<li>\
+            <span class="tag">\
+                <button class="btn btn-plain" data-action="remove">&times;</button>\
+                ' + tag + '\
+            </span>\
             <input type="hidden" name="' + inputname + '[]" value="' + tag + '">\
         </li>');
 
