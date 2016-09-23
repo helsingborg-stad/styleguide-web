@@ -51,7 +51,6 @@
 .accordion {
     @include material-radius;
     @include material-shadow;
-    overflow: hidden;
 
     .accordion-section > input[type="checkbox"],
     .accordion-section > input[type="radio"] {
