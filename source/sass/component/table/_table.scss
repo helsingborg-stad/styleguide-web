@@ -52,13 +52,10 @@
 
     thead {
         border-bottom: 1px solid $creamy-darker;
-        background-color: #fff;
     }
 
-    tbody {
-        background-color: #fff;
-    }
-
+    thead,
+    tbody,
     tfoot {
         background-color: #fff;
     }
@@ -158,5 +155,46 @@
 
     th, td {
         padding: $cell-padding-lg;
+    }
+}
+
+.box-filled .table,
+.box-filled .modularity-table {
+    margin-top: 10px;
+    font-size: .8em;
+    border: none;
+    border-top: 1px solid rgba(#fff, .3);
+
+    * {
+        border-color: rgba(#fff, .3);
+    }
+
+    tbody,
+    tfoot {
+        background-color: transparent;
+    }
+
+    thead {
+       background-color: rgba(#fff, .2);
+    }
+
+    &.table-striped tbody tr:nth-child(2n) {
+        background-color: rgba(#fff, .2);
+    }
+
+    &.table-hover {
+        tbody {
+            tr:hover {
+                background-color: rgba(#fff, .3);
+            }
+        }
+
+        &.table-striped {
+            tbody {
+                tr:nth-child(even):hover {
+                    background-color: rgba(#fff, .3);
+                }
+            }
+        }
     }
 }
