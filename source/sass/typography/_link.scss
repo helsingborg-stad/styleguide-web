@@ -17,6 +17,8 @@ a {
     }
 }
 
+
+.mce-content-body a:not([class]),
 [class*="theme-"] article a:not([class]),
 [class*="theme-"] article a.link-item {
     color: $palette-blue-2;

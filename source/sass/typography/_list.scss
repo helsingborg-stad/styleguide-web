@@ -13,6 +13,8 @@
 //     <li>Gingerbread</li>
 // </ul>
 //
+
+.mce-content-body ul,
 article ul:not(.nav):not(.slider-items):not(.line-numbers),
 .unordered-list {
     padding-left: $content-gutter * 2;
@@ -45,6 +47,17 @@ article ul:not(.nav):not(.slider-items):not(.line-numbers),
     }
 }
 
+ul li::before {
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .mce-content-body.theme-#{$theme} & {
+                background-color: map-get($color, third);
+            }
+        }
+    }
+}
+
 article + ul,
 article ul + ul,
 .unordered-list + .unordered-list {
@@ -64,6 +77,8 @@ article ul + ul,
 //     <li>Gingerbread</li>
 // </ol>
 //
+
+.mce-content-body ol,
 article ol,
 .ordered-list {
     padding-left: $content-gutter * 2;
