@@ -20,6 +20,11 @@
     vertical-align: middle;
 }
 
+.spinner.spinner-dark {
+    border: .25em solid rgba(#000, .2);
+    border-top-color: #000;
+}
+
 div.spinner {
     display: block;
 }
