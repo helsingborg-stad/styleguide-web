@@ -1,0 +1,35 @@
+//
+// @name Spinner
+// @description Spinning loading incidator
+//
+// @page Utilities/Spinner
+//
+// @markup
+// <div class="spinner"></div>
+//
+
+.spinner {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 1.3em;
+    width: 1em;
+    height: 1em;
+    border: .25em solid rgba(#fff, .2);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+    vertical-align: middle;
+}
+
+div.spinner {
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
