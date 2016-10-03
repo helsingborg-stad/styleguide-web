@@ -25,7 +25,7 @@ input[type="button"].btn::-moz-focus-inner {
 @if ($includeThemes == true) {
     @each $theme, $color in $themes {
         .theme-#{$theme} a.btn {
-            color: #fff;
+            color: $base-font-color;
         }
     }
 }
@@ -109,7 +109,8 @@ input[type="button"].btn::-moz-focus-inner {
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
-            .theme-#{$theme} & {
+            .theme-#{$theme} &,
+            .theme-#{$theme} a.btn.btn-primary {
                 background-color: map-get($color, third);
                 border-color: map-get($color, third);
                 color: #fff;
