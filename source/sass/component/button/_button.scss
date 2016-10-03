@@ -158,6 +158,7 @@ input[type="button"].btn::-moz-focus-inner {
 // <button class="btn btn-plain">Plain button</button>
 //
 
+a.btn.btn-plain,
 .btn.btn-plain {
     background-color: transparent;
     color: $base-font-color;
