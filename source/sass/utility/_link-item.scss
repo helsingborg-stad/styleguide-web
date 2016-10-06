@@ -44,6 +44,10 @@
     }
 }
 
+.box-filled .link-item::before {
+    color: rgba(255,255,255,.7);
+}
+
 .link-item-before {
     &::before {
         @include pricon($pricon-link-item);
