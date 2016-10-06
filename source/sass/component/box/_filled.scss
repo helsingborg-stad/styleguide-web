@@ -30,8 +30,8 @@
     @include box-filled;
     color: #fff;
 
-    a {
-        text-decoration: underline !important;
+    a, .link-item {
+        text-decoration: underline;
     }
 }
 
