@@ -118,3 +118,27 @@ h6, .h6 {
     font-size: 1rem;
     font-weight: 500;
 }
+
+//
+// @name Sub heading
+// @description Subheading element to combine with a ordinary heading
+//
+// @page Typography/Sub heading
+//
+// @markup
+// <div class="sub-heading">I love cake</div>
+//
+
+.sub-heading {
+    padding: .3em 0;
+    border-top: 1px solid $creamy-darker;
+    border-bottom: 1px solid $creamy-darker;
+    color: $gray;
+    font-size: 1em;
+}
+
+.box-filled .sub-heading,
+.box-news:not(.box-news-horizontal) .sub-heading {
+    color: #fff;
+    border-color: #fff;
+}

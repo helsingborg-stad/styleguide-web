@@ -45,6 +45,23 @@
 // </div>
 //
 
+.box-news:not(.box-news-horizontal) {
+    .box-title,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+
+    .sub-heading time {
+        display: block;
+        float: none;
+    }
+}
+
 .box-news {
     background-color: $palette-gray-2;
     color: #fff;

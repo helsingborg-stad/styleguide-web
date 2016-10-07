@@ -99,29 +99,29 @@
     text-align: justify;
 }
 
-    @media screen and #{$screen-xs} {
-        .text-justify-xs {
-            text-align: justify;
-        }
+@media screen and #{$screen-xs} {
+    .text-justify-xs {
+        text-align: justify;
     }
+}
 
-    @media screen and #{$screen-sm} {
-        .text-justify-sm {
-            text-align: justify;
-        }
+@media screen and #{$screen-sm} {
+    .text-justify-sm {
+        text-align: justify;
     }
+}
 
-    @media screen and #{$screen-md} {
-        .text-justify-md {
-            text-align: justify;
-        }
+@media screen and #{$screen-md} {
+    .text-justify-md {
+        text-align: justify;
     }
+}
 
-    @media screen and #{$screen-lg} {
-        .text-justify-lg {
-            text-align: justify;
-        }
+@media screen and #{$screen-lg} {
+    .text-justify-lg {
+        text-align: justify;
     }
+}
 
 //
 // @name Front size

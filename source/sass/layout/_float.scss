@@ -36,9 +36,5 @@
 // <div class="clearfix"></div>
 //
 .clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    @include clearfix;
 }
