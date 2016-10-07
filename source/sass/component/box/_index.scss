@@ -27,6 +27,10 @@
     img:not(.box-image) {
         @extend .img-inherit-width;
     }
+
+    .box-content {
+        margin-top: 5px;
+    }
 }
 
 a.box-index {
@@ -42,4 +46,5 @@ a.box-index {
     @extend .text-highlight;
     line-height: 1em;
     display: block;
+    padding-bottom: .5em;
 }
