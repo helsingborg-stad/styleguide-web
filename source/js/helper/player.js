@@ -10,6 +10,7 @@ HelsingborgPrime.Helper.Player = (function ($) {
     //Declarations
     var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
     var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
+    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
 
     //Check for players, if exists; Run player script.
     function Player() {
@@ -57,6 +58,18 @@ HelsingborgPrime.Helper.Player = (function ($) {
 
         //Not first run anymore
         this.playerFirstInitYoutube = false;
+    };
+
+    Player.prototype.initBambuser = function(videoid,target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0"></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitBambuser = false;
     };
 
     Player.prototype.toggleControls = function(target) {
