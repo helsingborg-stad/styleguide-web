@@ -1,3 +1,4 @@
+var hyperformWrapper = hyperform(window);
 var HelsingborgPrime = {};
 
 $('html, body').removeClass('no-js');
