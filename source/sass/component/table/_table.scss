@@ -70,7 +70,8 @@ article table,
         border-top: 1px solid $creamy-darker;
     }
 
-    th {
+    th,
+    thead td {
         padding: $cell-padding;
         text-align: left;
         font-weight: bold;
@@ -96,9 +97,11 @@ article table,
     }
 }
 
+article table,
 .table-bordered {
     thead {
-        th + th {
+        th + th,
+        td + td {
             border-left: 1px solid $creamy-darker;
         }
     }

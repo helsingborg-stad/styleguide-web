@@ -55,6 +55,7 @@ article {
 	p + .dataTables_wrapper,
 	p + .wp-caption,
 	p + .notice,
+	p + table,
 
 	ol + h1,
 	ol + h2,
@@ -72,6 +73,7 @@ article {
 	ol + .dataTables_wrapper,
 	ol + .wp-caption,
 	ol + .notice,
+	ol + table,
 
 	ul + h1,
 	ul + h2,
@@ -89,6 +91,7 @@ article {
 	ul + .dataTables_wrapper,
 	ul + .wp-caption,
 	ul + .notice,
+	ul + table,
 
 	blockquote + h1,
 	blockquote + h2,
@@ -106,6 +109,7 @@ article {
 	blockquote + .dataTables_wrapper,
 	blockquote + .wp-caption,
 	blockquote + .notice,
+	blockquote + table,
 
 	.wp-caption + h1,
 	.wp-caption + h2,
@@ -122,6 +126,7 @@ article {
 	.wp-caption + .box,
 	.wp-caption + .dataTables_wrapper,
 	.wp-caption + .notice,
+	.wp-caption + table,
 
 	pre + h1,
 	pre + h2,
@@ -139,6 +144,7 @@ article {
 	pre + .dataTables_wrapper,
 	pre + .wp-caption,
 	pre + .notice,
+	pre + table,
 
 	img + h1,
 	img + h2,
@@ -156,6 +162,7 @@ article {
 	img + .dataTables_wrapper,
 	img + .wp-caption,
 	img + .notice,
+	img + table,
 
 	.box + h1,
 	.box + h2,
@@ -173,6 +180,7 @@ article {
 	.box + .dataTables_wrapper,
 	.box + .wp-caption,
 	.box + .notice,
+	.box + table,
 
 	.dataTables_wrapper + h1,
 	.dataTables_wrapper + h2,
@@ -190,6 +198,7 @@ article {
 	.dataTables_wrapper + .dataTables_wrapper,
 	.dataTables_wrapper + .wp-caption,
 	.dataTables_wrapper + .notice,
+	.dataTables_wrapper + table,
 
 	.notice + h1,
 	.notice + h2,
@@ -206,6 +215,24 @@ article {
 	.notice + img,
 	.notice + .wp-caption,
 	.notice + .notice,
+	.notice + table,
+
+	table + h1,
+	table + h2,
+	table + h3,
+	table + h4,
+	table + h5,
+	table + h6,
+	table + p,
+	table + ol,
+	table + ul,
+	table + blockquote,
+	table + pre,
+	table + hr,
+	table + img,
+	table + .wp-caption,
+	table + .notice,
+	table + table
 	{
 		margin-top: 1.3em;
 	}
@@ -225,6 +252,7 @@ article {
 	hr + img,
 	hr + .wp-caption,
 	hr + .notice,
+	hr + table,
 
 	h1 + hr,
 	h2 + hr,
@@ -239,7 +267,8 @@ article {
 	pre + hr,
 	img + hr,
 	.wp-caption + hr,
-	.notice + hr {
+	.notice + hr,
+	table + hr {
 		margin-top: 2em;
 	}
 
