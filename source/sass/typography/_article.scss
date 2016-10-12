@@ -18,6 +18,10 @@
 article {
 	margin-bottom: $content-gutter;
 
+	em {
+		font-style: italic;
+	}
+
 	> h1:first-child {
 		margin-top: -0.25em;
 		margin-bottom: 0;
@@ -326,7 +330,6 @@ article {
 			max-width: none !important;
 		}
 	}
-
 }
 
 hr {
