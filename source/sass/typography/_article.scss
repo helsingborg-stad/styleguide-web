@@ -169,3 +169,7 @@ article + .page-footer {
 .page-footer {
 	font-size: .9em;
 }
+
+.mce-content-body img[data-wp-more="printbreak"] {
+	background: rgba(0, 0, 0, 0) url('../images/printbreak.png') repeat-y scroll center center;
+}
