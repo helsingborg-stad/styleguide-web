@@ -1,12 +1,13 @@
-iframe[src*='google.com/maps/'],
-iframe[src*='youtube.com/embed/'] {
+iframe[src*="google.com/maps/"],
+iframe[src*="youtube.com/embed/"] {
     width: 100%;
     display: block;
 }
 
-article {
-    iframe[src*='google.com/maps/'],
-    iframe[src*='youtube.com/embed/'] {
+article,
+.mce-content-body {
+    iframe[src*="google.com/maps/"],
+    iframe[src*="youtube.com/embed/"] {
         max-width: 700px;
     }
 }

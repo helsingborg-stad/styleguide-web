@@ -9,3 +9,12 @@
 .ratio-10-3 {
     @include aspect-ratio(10, 3);
 }
+
+article .ratio-16-9,
+article .ratio-4-3,
+article .ratio-10-3,
+.mce-content-body .ratio-16-9,
+.mce-content-body .ratio-4-3,
+.mce-content-body .ratio-10-3 {
+    max-width: 700px;
+}
