@@ -25,13 +25,13 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
         $('body').on('click', function (e) {
             var $target = $(e.target);
 
-            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length) {
+            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
                 return;
             }
 
             $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
             $('.dropdown-target-open').toggle();
-            $('.dropdown-target-open').removeClass('dropdown-target-open');
+            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
         });
     };
 
