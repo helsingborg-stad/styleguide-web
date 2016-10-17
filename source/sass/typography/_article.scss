@@ -82,6 +82,7 @@ article {
 		margin-top: 2em;
 	}
 
+	h1, h2, h3, h4, h5, h6,
 	p,
 	ol,
 	ul,
@@ -96,6 +97,11 @@ article {
 	.dataTables_wrapper,
 	.notice {
 		margin-top: 1.3em;
+	}
+
+	ul ul,
+	ol ol {
+		margin-top: .3em;
 	}
 
 	blockquote {
