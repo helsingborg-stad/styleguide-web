@@ -29,7 +29,7 @@
     $padding-left: 20px;
     display: inline-block;
     position: relative;
-    left: 20px;
+    left: $padding-left;
     padding-right: $padding-left;
 
     &::before {
@@ -41,6 +41,12 @@
         color: rgba(0,0,0,.4);
         margin-left: -$padding-left;
         text-decoration: none;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    li .link-item {
+        padding-left: 20px;
     }
 }
 
