@@ -81,6 +81,7 @@
 }
 
 .has-stripe.has-stripe {
+    position: relative;
     padding-left: 10px;
 
     @media #{$screen-sm-up} {
@@ -125,6 +126,30 @@
             }
         }
     }
+}
+
+.stripe-sm {
+    width: 10px;
+}
+
+.has-stripe.has-stripe-sm {
+    padding-left: 10px;
+}
+
+.stripe-md {
+    width: 17px;
+}
+
+.has-stripe.has-stripe-md {
+    padding-left: 17px;
+}
+
+.stripe-lg {
+    width: 20px;
+}
+
+.has-stripe.has-stripe-lg {
+    padding-left: 20px;
 }
 
 .stripe-percentage {
