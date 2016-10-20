@@ -3,3 +3,13 @@
         margin-top: $content-gutter * 2;
     }
 }
+
+@media #{$screen-below-md} {
+    .sidebar-left-sidebar {
+        order: 3;
+    }
+
+    .sidebar-right-sidebar {
+        order: 2;
+    }
+}
