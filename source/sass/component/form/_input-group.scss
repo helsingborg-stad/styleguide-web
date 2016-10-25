@@ -88,3 +88,41 @@ $input-group-height-lg: 54px;
 .input-group-lg .form-control {
     height: $input-group-height-lg;
 }
+
+.input-group .form-notice {
+    @include material-radius;
+    @include material-shadow;
+
+    position: absolute;
+    z-index: $level-9;
+    bottom: -8px;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+
+    background-color: rgba(#252525,.9);
+    color: #fff;
+    padding: 3px 8px;
+    line-height: $base-line-height;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+
+    color: #fff !important;
+
+    &::before {
+        content: '';
+        display: block;
+
+        position: absolute;
+        z-index: $level-9;
+        top: -4px;
+        left: 50%;
+        transform: translateY(0%) translateX(-50%);
+        opacity: .9;
+        @include arrow('up', 5px, #252525);
+    }
+}

@@ -3,7 +3,7 @@ var hyperformWrapper = hyperform(window, {
         valid: 'valid',
         invalid: 'invalid',
         validated: 'validated',
-        warning: 'text-danger text-sm',
+        warning: 'form-notice text-danger text-sm'
     }
 });
 
