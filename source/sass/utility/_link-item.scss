@@ -79,9 +79,11 @@
     }
 }
 
+/*
 .link-item:not(:local-link)::before {
     @include pricon($pricon-external-link);
 }
+*/
 
 /* Domains */
 
