@@ -10,6 +10,10 @@ HelsingborgPrime.Helper.Highlight = (function ($) {
         }
 
         highlightText = highlightText.split('+');
+        highlightText = highlightText.filter(function (value) {
+            return value.length > 1;
+        });
+
         this.highlightWords(highlightText, $('.main-container')[0]);
     }
 

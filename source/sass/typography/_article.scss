@@ -75,6 +75,10 @@ article {
 		margin-top: 0em;
 	}
 
+	p:first-of-type {
+		margin-top: 15px;
+	}
+
 	blockquote {
 		border-left: 3px solid $creamy-darker;
 		margin-bottom: $content-gutter;

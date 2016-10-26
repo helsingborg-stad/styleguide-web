@@ -44,7 +44,8 @@ a.box-index {
 
 .box-index-title.link-item {
     @extend .text-highlight;
-    line-height: 1em;
     display: block;
+    line-height: 1.2;
+    margin-top: -4px;
     padding-bottom: .5em;
 }
