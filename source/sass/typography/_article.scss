@@ -38,70 +38,41 @@ article {
 		}
 	}
 
-	p:first-of-type {
-		margin-top: 1.3em;
-	}
-
 	strong,
 	b {
 		font-weight: bold;
 	}
 
-	hr + h1,
-	hr + h2,
-	hr + h3,
-	hr + h4,
-	hr + h5,
-	hr + h6,
-	hr + p,
-	hr + ol,
-	hr + ul,
-	hr + blockquote,
-	hr + pre,
-	hr + hr,
-	hr + img,
-	hr + .wp-caption,
-	hr + .notice,
-	hr + table,
+	$elements-margin-list: (
+		'h1',
+		'h2',
+		'h3',
+		'h4',
+		'h5',
+		'h6',
+		'p',
+		'ol',
+		'ul',
+		'blockquote',
+		'pre',
+		'img',
+		'table',
+		'[class*="ratio-"]',
+		'.wp-caption',
+		'.wpview',
+		'.box',
+		'.dataTables_wrapper',
+		'.notice'
+	);
+	@include elements-margin($elements-margin-list);
 
-	h1 + hr,
-	h2 + hr,
-	h3 + hr,
-	h4 + hr,
-	h5 + hr,
-	h6 + hr,
-	p + hr,
-	ol + hr,
-	ul + hr,
-	blockquote + hr,
-	pre + hr,
-	img + hr,
-	.wp-caption + hr,
-	.notice + hr,
-	table + hr {
-		margin-top: 2em;
-	}
-
-	h1, h2, h3, h4, h5, h6,
-	p,
-	ol,
-	ul,
-	blockquote,
-	pre,
-	img,
-	table,
-	[class*="ratio-"],
-	.wp-caption,
-	.wpview,
-	.box,
-	.dataTables_wrapper,
-	.notice {
-		margin-top: 1.3em;
-	}
-
-	ul ul,
-	ol ol {
-		margin-top: .3em;
+	h1 + p,
+	h2 + p,
+	h3 + p,
+	h4 + p,
+	h5 + p,
+	h6 + p {
+		margin-top: 0em;
 	}
 
 	blockquote {
