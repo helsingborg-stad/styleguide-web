@@ -13,6 +13,9 @@ HelsingborgPrime.Helper.Highlight = (function ($) {
         highlightText = highlightText.filter(function (value) {
             return value.length > 2;
         });
+        highlightText = highlightText.map(function (value) {
+            return decodeURIComponent(value);
+        });
 
         this.highlightWords(highlightText, $('.main-container')[0]);
     }
