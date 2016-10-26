@@ -10,9 +10,13 @@ HelsingborgPrime.Helper.Highlight = (function ($) {
         }
 
         highlightText = highlightText.split('+');
+
+        // Filter out words with length < 3 chars
         highlightText = highlightText.filter(function (value) {
             return value.length > 2;
         });
+
+        // Decode words
         highlightText = highlightText.map(function (value) {
             return decodeURIComponent(value);
         });
