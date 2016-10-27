@@ -41,23 +41,10 @@ a.link-box,
     display: block;
     position: relative;
     background-color: $palette-gray-2;
-    padding: 5px 10px 5px 15px;
+    padding: 5px 10px;
     border-radius: 3px;
     overflow: hidden;
     color: #fff;
-    transition: 100ms all;
-
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 5px;
-        background-color: $palette-gray-1;
-        transition: 100ms all;
-    }
 
     // Color theme styles
     @if ($includeThemes == true) {
@@ -73,10 +60,15 @@ a.link-box,
     }
 
     &:hover {
-        padding-left: 18px;
+        background-color: darken($palette-gray-2, 5%);
 
-        &::before {
-            width: 8px;
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: darken(map-get($color, second), 5%);
+                }
+            }
         }
     }
 }
@@ -85,19 +77,11 @@ a.link-box:nth-of-type(2),
 .link-box:nth-of-type(2) a {
     background-color: $palette-gray-4;
 
-    &::before {
-        background-color: $palette-gray-5;
-    }
-
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, fourth);
-
-                &::before {
-                    background-color: map-get($color, fifth);
-                }
             }
         }
     }
@@ -107,19 +91,11 @@ a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
     background-color: $palette-gray-5;
 
-    &::before {
-        background-color: $palette-gray-2;
-    }
-
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, fifth);
-
-                &::before {
-                    background-color: map-get($color, second);
-                }
             }
         }
     }
@@ -129,19 +105,11 @@ a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
     background-color: $palette-gray-3;
 
-    &::before {
-        background-color: $palette-gray-1;
-    }
-
     // Color theme styles
     @if ($includeThemes == true) {
         @each $theme, $color in $themes {
             .theme-#{$theme} & {
                 background-color: map-get($color, third);
-
-                &::before {
-                    background-color: map-get($color, first);
-                }
             }
         }
     }
