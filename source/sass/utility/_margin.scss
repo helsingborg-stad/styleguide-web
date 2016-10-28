@@ -108,7 +108,7 @@
     margin-bottom: 0;
 }
 
-.gutter.gutter-top {
+.gutter.gutter-top:not(.gutter-margin) {
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
@@ -120,7 +120,7 @@
     margin-left: 0;
 }
 
-.gutter.gutter-bottom {
+.gutter.gutter-bottom:not(.gutter-margin) {
     padding-right: 0;
     padding-top: 0;
     padding-left: 0;
@@ -132,7 +132,7 @@
     margin-left: 0;
 }
 
-.gutter.gutter-left {
+.gutter.gutter-left:not(.gutter-margin) {
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -144,7 +144,7 @@
     margin-bottom: 0;
 }
 
-.gutter.gutter-right {
+.gutter.gutter-right:not(.gutter-margin) {
     padding-bottom: 0;
     padding-top: 0;
     padding-left: 0;
