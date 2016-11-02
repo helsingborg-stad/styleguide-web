@@ -33,11 +33,23 @@
     }
 }
 
+.box-filled {
+    .social-feed-instagram,
+    .social-feed-pinterest {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.modularity-mod-social .box-filled {
+    padding-bottom: 18px;
+}
+
 .box-filled .mod-social-user time {
     color: #fff;
     font-size: .8em;
     line-height: 1;
-    margin-top: -5px;
+    margin-top: 3px;
 }
 
 .social-feed-twitter,
