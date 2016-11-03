@@ -44,12 +44,6 @@
     }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    li .link-item {
-        padding-left: 20px;
-    }
-}
-
 .box-filled .link-item::before {
     color: rgba(255,255,255,.7);
 }

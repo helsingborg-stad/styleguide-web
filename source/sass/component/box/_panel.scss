@@ -148,6 +148,10 @@
 
                     @media #{$screen-md-up} {
                         display: table-cell;
+
+                        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                            padding-left: 0 ;
+                        }
                     }
                 }
 
