@@ -1,0 +1,47 @@
+.scroll-elevator {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    a {
+        display: block;
+        background-color: $palette-gray-2;
+        color: $base-font-color;
+        border-radius: 40px;
+        height: 40px;
+        line-height: 40px;
+
+        box-shadow: 0 5px 7px 0px rgba(0,0,0,0.3);
+
+        i::before {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.5em;
+            line-height: 40px;
+            @include pricon($pricon-scroll-up, middle);
+        }
+
+        &:hover {
+
+        }
+    }
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                a {
+                    background-color: map-get($color, second);
+                    color: map-get($color, secondTextColor);
+                }
+            }
+        }
+    }
+}
+
+.show-scroll-elevator .scroll-elevator {
+    display: block;
+}
