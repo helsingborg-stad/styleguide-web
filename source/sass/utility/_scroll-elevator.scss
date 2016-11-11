@@ -21,7 +21,7 @@
             vertical-align: middle;
             font-size: 1.5em;
             line-height: 40px;
-            @include pricon($pricon-scroll-up, middle);
+            @include pricon($pricon-up, middle);
         }
 
         &:hover {
