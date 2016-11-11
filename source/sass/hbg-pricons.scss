@@ -138,8 +138,8 @@
 // <i class="pricon pricon-woman"></i> pricon-woman<br>
 // <i class="pricon pricon-cake"></i> pricon-cake<br>
 // <i class="pricon pricon-close"></i> pricon-close<br>
-// <i class="pricon pricon-scroll-up"></i> pricon-scroll-up<br>
 // <i class="pricon pricon-scroll-down"></i> pricon-scroll-down<br>
+// <i class="pricon pricon-scroll-up"></i> pricon-scroll-up<br>
 // <i class="pricon pricon-scroll"></i> pricon-scroll<br>
 // 
 //
@@ -464,8 +464,8 @@ $pricon-vote: "\EA76";
 $pricon-woman: "\EA77";
 $pricon-cake: "\EA78";
 $pricon-close: "\EA79";
-$pricon-scroll-up: "\EA7B";
 $pricon-scroll-down: "\EA7A";
+$pricon-scroll-up: "\EA7B";
 $pricon-scroll: "\EA7C";
 
 
@@ -591,8 +591,8 @@ $pricon-scroll: "\EA7C";
 .pricon-woman:before { content: $pricon-woman }
 .pricon-cake:before { content: $pricon-cake }
 .pricon-close:before { content: $pricon-close }
-.pricon-scroll-up:before { content: $pricon-scroll-up }
 .pricon-scroll-down:before { content: $pricon-scroll-down }
+.pricon-scroll-up:before { content: $pricon-scroll-up }
 .pricon-scroll:before { content: $pricon-scroll }
 
 
