@@ -29,20 +29,35 @@ HelsingborgPrime.Helper.ScrollElevator = (function ($) {
 
     ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
         var scrollText = 'Scroll up';
+        var tooltipText = '';
+        var tooltipPosition = '';
+
+        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
+
         if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
             scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
+            $html.find('a span').html(scrollText);
         }
 
-        $elevatorTarget.append('<div class="scroll-elevator"><a href="#elevator-top" data-tooltip="' + scrollText + '" data-tooltip-left><i></i><span class="sr-only">' + scrollText + '</span></a></div>');
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
+            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
+            $html.find('a').attr('data-tooltip', tooltipText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
+            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
+            $html.find('a').attr(tooltipPosition, '');
+        }
+
+        $html.appendTo($elevatorTarget);
     };
 
     ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
         var $document = $(document);
         var $window = $(window);
 
-        var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
-
         $document.on('scroll load', function () {
+            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
             var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
 
             if (scrollPos < scrollTarget) {
