@@ -48,9 +48,11 @@
 }
 
 /* Badge */
-.<%= className %>-badge::before {
+.<%= className %>-badge {
     $badge-size: 1.5em;
-    $line-height: 1.6em;
+    $line-height: 1;
+    display: inline-block;
+    position: relative;
     width: $badge-size;
     height: $badge-size;
 
@@ -59,6 +61,13 @@
     border-radius: 50%;
     text-align: center;
     line-height: $line-height;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
 }
 
 .<%= className %>-badge-theme {
