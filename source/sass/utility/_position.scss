@@ -6,6 +6,23 @@
     position: relative;
 }
 
+.pos-absolute-center {
+    @include center();
+    margin: 0;
+}
+
+.pos-absolute-center-horizontal {
+    @include center(true, false);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pos-absolute-center-vertical {
+    @include center(false, true);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .pos-absolute-bottom {
     position: absolute;
     bottom: 0;
