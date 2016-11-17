@@ -143,7 +143,7 @@ gulp.task('iconfont', ['icons-scale'], function () {
             prependUnicode: true,
             formats: ['eot', 'svg', 'ttf', 'woff', 'woff2', 'otf'],
             normalize: true,
-            ascent: 850
+            ascent: 0
         }))
         .on('glyphs', function (glyph, options) {
             gulp.src('source/icons/hbg-pricons.scss')
