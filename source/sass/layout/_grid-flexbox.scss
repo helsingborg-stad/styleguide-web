@@ -1,4 +1,4 @@
-html:not(.no-flexbox) {
+:not(.no-flexbox):not(.is-draggable) {
 
     .grid {
         display: flex;
