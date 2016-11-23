@@ -12,6 +12,10 @@
     }
 }
 
+body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.box-panel-secondary) {
+    box-shadow: none;
+}
+
 .box.box-plain {
     padding: 0;
     box-shadow: none !important;

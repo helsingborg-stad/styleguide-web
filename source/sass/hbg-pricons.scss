@@ -140,6 +140,9 @@
 // <i class="pricon pricon-close"></i> pricon-close<br>
 // <i class="pricon pricon-down"></i> pricon-down<br>
 // <i class="pricon pricon-up"></i> pricon-up<br>
+// <i class="pricon pricon-sign-language"></i> pricon-sign-language<br>
+// <i class="pricon pricon-easy-read"></i> pricon-easy-read<br>
+// <i class="pricon pricon-union-jack"></i> pricon-union-jack<br>
 // 
 //
 @font-face {
@@ -474,6 +477,9 @@ $pricon-cake: "\EA78";
 $pricon-close: "\EA79";
 $pricon-down: "\EA7A";
 $pricon-up: "\EA7B";
+$pricon-sign-language: "\EA7C";
+$pricon-easy-read: "\EA7D";
+$pricon-union-jack: "\EA7E";
 
 
 /* Glyphs */
@@ -600,6 +606,9 @@ $pricon-up: "\EA7B";
 .pricon-close:before { content: $pricon-close }
 .pricon-down:before { content: $pricon-down }
 .pricon-up:before { content: $pricon-up }
+.pricon-sign-language:before { content: $pricon-sign-language }
+.pricon-easy-read:before { content: $pricon-easy-read }
+.pricon-union-jack:before { content: $pricon-union-jack }
 
 
 /* Mixin */

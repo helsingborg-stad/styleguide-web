@@ -12,6 +12,9 @@
 //
 
 .explain {
+    position: relative;
+    white-space: nowrap;
+
     em {
         font-style: italic;
     }

@@ -14,6 +14,7 @@
 // </ul>
 //
 
+.modularity-mod-text .box-content ul,
 .mce-content-body ul,
 article ul:not(.nav):not(.slider-items):not(.line-numbers),
 .unordered-list {
@@ -56,6 +57,19 @@ ul li::before {
             }
         }
     }
+}
+
+article .modularity-mod-inlaylist ul {
+    padding-left: 0 !important;
+    margin-top: 0;
+
+    li::before {
+        display: none;
+    }
+}
+
+.modularity-mod-text .box-filled .box-content ul li::before {
+    background-color: #fff !important;
 }
 
 article + ul,
