@@ -41,6 +41,16 @@
         border-radius: 5px;
         font-size: 14px;
         font-weight: normal;
+
+        @media #{$screen-below-md} {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: none;
+            padding: 10px;
+            border-radius: 0 !important;
+        }
     }
 
     &::before {
@@ -54,65 +64,75 @@
         transform: translateY(0%) translateX(-50%);
         opacity: .9;
         @include arrow('up', 5px, #252525);
+
+        @media #{$screen-below-md} {
+            opacity: 0;
+        }
     }
 
     &[data-tooltip-top] {
-        &::after {
-            bottom: auto;
-            top: -8px;
-            right: -auto;
-            left: 50%;
-            transform: translateY(-100%) translateX(-50%);
-        }
+        @media #{$screen-md-up} {
+            &::after {
+                bottom: auto;
+                top: -8px;
+                right: -auto;
+                left: 50%;
+                transform: translateY(-100%) translateX(-50%);
+            }
 
-        &::before {
-            bottom: auto;
-            top: -9px;
-            right: auto;
-            left: 50%;
-            transform: translateY(0%) translateX(-50%);
+            &::before {
+                bottom: auto;
+                top: -9px;
+                right: auto;
+                left: 50%;
+                transform: translateY(0%) translateX(-50%);
 
-            @include arrow('down', 5px, #252525);
+                @include arrow('down', 5px, #252525);
+            }
         }
     }
 
     &[data-tooltip-left] {
-        &::after {
-            bottom: auto;
-            top: 50%;
-            left: -10px;
-            right: auto;
-            transform: translateY(-50%) translateX(-100%);
-        }
+        @media #{$screen-md-up} {
+            &::after {
+                bottom: auto;
+                top: 50%;
+                left: -10px;
+                right: auto;
+                transform: translateY(-50%) translateX(-100%);
+            }
 
-        &::before {
-            bottom: auto;
-            top: 50%;
-            left: -10px;
-            right: auto;
-            transform: translateY(-50%);
+            &::before {
+                bottom: auto;
+                top: 50%;
+                left: -10px;
+                right: auto;
+                transform: translateY(-50%);
 
-            @include arrow('right', 5px, #252525);
+                @include arrow('right', 5px, #252525);
+            }
         }
     }
 
     &[data-tooltip-right] {
-        &::after {
-            bottom: auto;
-            top: 50%;
-            right: -10px;
-            left: auto;
-            transform: translateY(-50%) translateX(100%);
-        }
+        @media #{$screen-md-up} {
+            &::after {
+                bottom: auto;
+                top: 50%;
+                right: -10px;
+                left: auto;
+                transform: translateY(-50%) translateX(100%);
+            }
 
-        &::before {
-            bottom: auto;
-            top: 50%;
-            right: -10px;
-            left: auto;
-            transform: translateY(-50%);
+            &::before {
+                bottom: auto;
+                top: 50%;
+                right: -10px;
+                left: auto;
+                transform: translateY(-50%);
 
-            @include arrow('left', 5px, #252525);
+                @include arrow('left', 5px, #252525);
+            }
         }
     }
 
