@@ -79,36 +79,6 @@ article {
 		margin-top: 15px;
 	}
 
-	blockquote {
-		border-left: 3px solid $creamy-darker;
-		margin-bottom: $content-gutter;
-		padding: 20px 35px;
-		quotes: "\201C""\201D""\2018""\2019";
-	}
-
-	blockquote:before {
-		color: $gray;
-		content: open-quote;
-		font-size: 2em;
-		line-height: 0.1em;
-		margin-right: 0.25em;
-		vertical-align: -0.4em;
-	}
-
-	blockquote:after {
-		color: $gray;
-		content: close-quote;
-		font-size: 2em;
-		line-height: 0.1em;
-		margin-left: 0.25em;
-		vertical-align: -0.4em;
-	}
-
-	blockquote p {
-		display: inline;
-		margin: 0;
-	}
-
 	img {
 		display: block;
 		max-width: 100%;
@@ -127,7 +97,16 @@ article {
 	}
 
 	&:not(.full) {
-		p, h1, h2, h3, h4, h5, h6, li, .wp-caption {
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		li,
+		blockquote,
+		.wp-caption {
 			max-width: 700px;
 
 			@media print {

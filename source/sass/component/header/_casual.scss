@@ -17,7 +17,8 @@
 }
 
 .site-header.header-casual,
-.site-header.header-jumbo {
+.site-header.header-jumbo,
+.site-header.header-contrasted-nav {
     .menu-trigger {
         color: #fff;
 
@@ -39,7 +40,8 @@
     }
 }
 
-.site-header.header-casual {
+.site-header.header-casual,
+.site-header.header-contrasted-nav {
     background-color: $palette-gray-4;
 
     // Color theme styles
@@ -49,6 +51,11 @@
                 background-color: map-get($color, fourth);
             }
         }
+    }
+
+    .sub-site-title,
+    .sub-site-title-block  {
+        color: #fff;
     }
 
     > .container {
@@ -77,6 +84,37 @@
 
     .menu-help a {
         color: #fff;
+    }
+}
+
+.site-header.header-contrasted-nav {
+    background-color: $palette-gray-4;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                background-color: map-get($color, fourth);
+            }
+        }
+    }
+
+    .navbar-mainmenu:not(.navbar-creamy) {
+        background-color: $palette-gray-5;
+        margin-top: 15px;
+
+        @media #{$screen-md} {
+            margin-top: 0;
+        }
+
+        // Color theme styles
+        @if ($includeThemes == true) {
+            @each $theme, $color in $themes {
+                .theme-#{$theme} & {
+                    background-color: map-get($color, fifth);
+                }
+            }
+        }
     }
 }
 

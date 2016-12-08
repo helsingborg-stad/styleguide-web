@@ -1,0 +1,53 @@
+//
+// @name Blockquote
+// @description
+//
+// @page Typography/Quotes
+//
+// @markup
+// <blockquote>
+//     <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>
+// </blockquote>
+//
+
+blockquote {
+    border-left: 5px solid currentColor;
+    padding: 10px 10% 10px 3%;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4;
+    color: $palette-gray-2;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, second);
+            }
+        }
+    }
+}
+
+blockquote::before,
+blockquote::after {
+    // font-size: 2em;
+    // line-height: 0.1em;
+    // vertical-align: -0.4em;
+    // color: $gray;
+}
+
+blockquote:before {
+    content: open-quote;
+    // margin-right: 0.25em;
+}
+
+blockquote:after {
+    content: close-quote;
+    // margin-left: 0.25em;
+}
+
+blockquote p {
+    display: inline;
+    margin: 0;
+}
