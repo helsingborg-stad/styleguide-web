@@ -12,14 +12,8 @@
 // </div>
 //
 .wp-caption {
-    @include material-radius;
-    @include material-shadow;
-
-    display: inline-block;
-    background: $creamy;
-    border: 1px solid $creamy-darker;
-    padding: $grid-gutter-xs $grid-gutter-xs $grid-gutter-xs $grid-gutter-xs;
-    text-align: center;
+    border-bottom: 1px solid $creamy-darker;
+    padding-bottom: 10px;
 }
 
 .wp-caption.alignnone {
