@@ -12,7 +12,7 @@
 
 blockquote {
     border-left: 5px solid currentColor;
-    padding: 10px 10% 10px 3%;
+    padding: 10px 7% 10px 30px;
     quotes: "\201C""\201D""\2018""\2019";
     font-size: 1.3em;
     font-weight: 300;
@@ -29,22 +29,12 @@ blockquote {
     }
 }
 
-blockquote::before,
-blockquote::after {
-    // font-size: 2em;
-    // line-height: 0.1em;
-    // vertical-align: -0.4em;
-    // color: $gray;
-}
-
 blockquote:before {
     content: open-quote;
-    // margin-right: 0.25em;
 }
 
 blockquote:after {
     content: close-quote;
-    // margin-left: 0.25em;
 }
 
 blockquote p {
