@@ -15,6 +15,10 @@
     position: relative;
     white-space: nowrap;
 
+    span[data-tooltip] {
+        display: inline-block;
+    }
+
     em {
         font-style: italic;
     }
