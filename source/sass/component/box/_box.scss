@@ -48,3 +48,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     width: 100%;
     flex: 0 0 auto;
 }
+
+[data-equal-item] .box-image-container {
+    flex: 0 0 auto;
+}
