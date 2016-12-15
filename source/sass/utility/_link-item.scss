@@ -114,7 +114,8 @@
 .link-item[href$=".doc"],
 .link-item[href$=".docx"],
 .link-item-before[href$=".doc"],
-.link-item-before[href$=".docx"] {
+.link-item-before[href$=".docx"],
+.link-item-before[href$=".dotx"] {
     &::before {
         @include pricon($pricon-file-text);
     }
