@@ -62,7 +62,8 @@ article {
 		'.wpview',
 		'.box',
 		'.dataTables_wrapper',
-		'.notice'
+		'.notice',
+		'.mod-table'
 	);
 	@include elements-margin($elements-margin-list);
 
