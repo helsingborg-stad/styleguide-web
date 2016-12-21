@@ -42,16 +42,7 @@
 
 .site-header.header-casual,
 .site-header.header-contrasted-nav {
-    background-color: $palette-gray-4;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
+    background-color: $palette-4;
 
     .sub-site-title,
     .sub-site-title-block  {
@@ -88,32 +79,14 @@
 }
 
 .site-header.header-contrasted-nav {
-    background-color: $palette-gray-4;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
+    background-color: $palette-4;
 
     .navbar-mainmenu:not(.navbar-creamy) {
-        background-color: $palette-gray-5;
+        background-color: $palette-5;
         margin-top: 15px;
 
         @media #{$screen-md} {
             margin-top: 0;
-        }
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, fifth);
-                }
-            }
         }
     }
 }

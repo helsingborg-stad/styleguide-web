@@ -32,16 +32,7 @@
     }
 
     &:hover {
-        background-color: darken($palette-gray-4, 10%);
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, fourth), 10%);
-                }
-            }
-        }
+        background-color: darken($palette-4, 10%);
     }
 }
 
@@ -54,16 +45,7 @@
 }
 
 .nav-dropdown ul.sub-menu {
-    background-color: darken($palette-gray-4, 8%);
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: darken(map-get($color, fourth), 10%);
-            }
-        }
-    }
+    background-color: darken($palette-4, 8%);
 }
 
 /**

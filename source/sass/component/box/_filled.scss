@@ -53,66 +53,31 @@
 .box-filled-1,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, firstSafe);
-            }
-        }
-    }
+    background-color: $palette-1-safe;
 }
 
 .box-filled-2,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 2) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 2) .box-filled {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, secondSafe);
-            }
-        }
-    }
+    background-color: $palette-2-safe;
 }
 
 .box-filled-3,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, thirdSafe);
-            }
-        }
-    }
+    background-color: $palette-3-safe;
 }
 
 .box-filled-4,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 4) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 4) .box-filled {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourthSafe);
-            }
-        }
-    }
+    background-color: $palette-4-safe;
 }
 
 .box-filled-5,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fifthSafe);
-            }
-        }
-    }
+    background-color: $palette-5-safe;
 }
 
 

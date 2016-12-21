@@ -53,7 +53,7 @@
 // </div>
 //
 
-@mixin stripe($color-1: $palette-gray-1, $color-2: $palette-gray-2, $color-3: $palette-gray-3, $color-4: $palette-gray-4, $color-5: $palette-gray-5) {
+@mixin stripe($color-1: $palette-1, $color-2: $palette-2, $color-3: $palette-3, $color-4: $palette-4, $color-5: $palette-5) {
     div {
         width: 100%;
         height: (100% / 5);
@@ -116,15 +116,6 @@
 
     @media #{$screen-lg-up} {
         width: 25px;
-    }
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} &:not(.stripe-red):not(.stripe-blue):not(.stripe-green):not(.stripe-purple) {
-                @include stripe(map-get($color, first), map-get($color, second), map-get($color, third), map-get($color, fourth), map-get($color, fifth));
-            }
-        }
     }
 }
 

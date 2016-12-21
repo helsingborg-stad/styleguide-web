@@ -73,16 +73,7 @@
 
     background-color: transparent;
     border-radius: 50%;
-    color: $palette-gray-4;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                color: map-get($color, 'fourth');
-            }
-        }
-    }
+    color: $palette-4;
 
     cursor: pointer;
     text-indent: -9999999px;
@@ -95,17 +86,8 @@
     }
 
     &:hover {
-        background-color: $palette-gray-4;
+        background-color: $palette-4;
         color: #fff;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, 'fourth');
-                }
-            }
-        }
     }
 }
 
@@ -138,31 +120,13 @@
         color: $base-font-color;
 
         &.ui-state-active {
-            background-color: $palette-gray-3;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: map-get($color, 'third');
-                    }
-                }
-            }
+            background-color: $palette-3;
 
             font-weight: bold;
             color: #fff;
 
             &:hover {
-                background-color: darken($palette-gray-3, 5%);
-
-                // Color theme styles
-                @if ($includeThemes == true) {
-                    @each $theme, $color in $themes {
-                        .theme-#{$theme} & {
-                            background-color: darken(map-get($color, 'third'), 5%);
-                        }
-                    }
-                }
+                background-color: darken($palette-3, 5%);
             }
         }
 

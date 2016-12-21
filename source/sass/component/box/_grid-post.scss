@@ -151,66 +151,21 @@
 }
 
 .grid > [class*="grid-"]:nth-child(5n + 1) > .box-post-brick {
-    background-color: $palette-gray-1;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, first);
-            }
-        }
-    }
+    background-color: $palette-1;
 }
 
 .grid > [class*="grid-"]:nth-child(5n + 2) > .box-post-brick {
-    background-color: $palette-gray-2;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
-        }
-    }
+    background-color: $palette-2;
 }
 
 .grid > [class*="grid-"]:nth-child(5n + 3) > .box-post-brick {
-    background-color: $palette-gray-3;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, third);
-            }
-        }
-    }
+    background-color: $palette-3;
 }
 
 .grid > [class*="grid-"]:nth-child(5n + 4) > .box-post-brick {
-    background-color: $palette-gray-4;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
+    background-color: $palette-4;
 }
 
 .grid > [class*="grid-"]:nth-child(5n + 5)  > .box-post-brick{
-    background-color: $palette-gray-5;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fifth);
-            }
-        }
-    }
+    background-color: $palette-5;
 }

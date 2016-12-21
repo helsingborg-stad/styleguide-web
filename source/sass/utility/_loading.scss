@@ -24,16 +24,7 @@ $loadingDotSize: 15px;
     $duration: 5000ms;
 
     position: relative;
-    background-color: $palette-gray-4;
-
-    // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, fourth);
-                }
-            }
-        }
+    background-color: $palette-4;
 
     max-width: 300px;
     height: 10px;
@@ -52,34 +43,14 @@ $loadingDotSize: 15px;
     }
 
     div:nth-of-type(1) {
-        background-color: $palette-gray-1;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, first);
-                }
-            }
-        }
-
+        background-color: $palette-1;
         width: 20px;
         animation: 2000ms loading-bar-1 ease-in-out infinite;
         z-index: 3;
     }
 
     div:nth-of-type(2) {
-        background-color: $palette-gray-2;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, second);
-                }
-            }
-        }
-
+        background-color: $palette-2;
         width: 40px;
         animation: 2000ms loading-bar-2 ease-in-out infinite;
         right: 0;
@@ -87,34 +58,14 @@ $loadingDotSize: 15px;
     }
 
     div:nth-of-type(3) {
-        background-color: $palette-gray-3;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, third);
-                }
-            }
-        }
-
+        background-color: $palette-3;
         width: 60px;
         animation: 2000ms loading-bar-3 ease-in-out infinite;
     }
 
     div:nth-of-type(4) {
-        background-color: $palette-gray-5;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, fifth);
-                }
-            }
-        }
-
-        width: 25px;
+        background-color: $palette-5;
+         width: 25px;
         animation: 2000ms loading-bar-4 ease-in-out infinite;
         right: 0;
         left: auto;

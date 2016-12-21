@@ -21,15 +21,6 @@ input[type="button"].btn::-moz-focus-inner {
 }
 /* End of button height fix */
 
-// Color theme styles
-@if ($includeThemes == true) {
-    @each $theme, $color in $themes {
-        .theme-#{$theme} a.btn {
-            color: $base-font-color;
-        }
-    }
-}
-
 .btn,
 .read-more {
 
@@ -103,36 +94,14 @@ input[type="button"].btn::-moz-focus-inner {
 //
 
 .btn.btn-primary {
-    background-color: $palette-gray-3;
+    background-color: $palette-3;
     color: #fff;
-    border-color: $palette-gray-3;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} &,
-            .theme-#{$theme} a.btn.btn-primary {
-                background-color: map-get($color, third);
-                border-color: map-get($color, third);
-                color: #fff;
-            }
-        }
-    }
+    border-color: $palette-3;
 
     &:hover,
     &:focus {
-        background-color: darken($palette-gray-3, 3%);
-        border-color: darken($palette-gray-3, 3%);
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, third), 3%);
-                    border-color: darken(map-get($color, third), 3%);
-                }
-            }
-        }
+        background-color: darken($palette-3, 3%);
+        border-color: darken($palette-3, 3%);
     }
 }
 
@@ -195,55 +164,35 @@ a.btn.btn-plain,
 // <button class="btn btn-theme-fifth">Fifth color</button>
 //
 
-@mixin btn-theme ($default, $colorNum: 'first') {
-    background-color: $default;
-    border-color: $default;
+@mixin btn-theme ($color) {
+    background-color: $color;
+    border-color: $color;
     color: #fff;
 
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, $colorNum);
-                border-color: map-get($color, $colorNum);
-            }
-        }
-    }
-
     &:hover {
-        background-color: darken($palette-gray-1, 3%);
-        border-color: darken($palette-gray-1, 3%);
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, $colorNum), 3%);
-                    border-color: darken(map-get($color, $colorNum), 3%);
-                }
-            }
-        }
+        background-color: darken($color, 3%);
+        border-color: darken($color, 3%);
     }
 }
 
 .btn-theme-first {
-    @include btn-theme($palette-gray-1, 'first');
+    @include btn-theme($palette-1);
 }
 
 .btn-theme-second {
-    @include btn-theme($palette-gray-2, 'second');
+    @include btn-theme($palette-2);
 }
 
 .btn-theme-third {
-    @include btn-theme($palette-gray-3, 'third');
+    @include btn-theme($palette-3);
 }
 
 .btn-theme-fourth {
-    @include btn-theme($palette-gray-4, 'fourth');
+    @include btn-theme($palette-4);
 }
 
 .btn-theme-fifth {
-    @include btn-theme($palette-gray-5, 'fifth');
+    @include btn-theme($palette-5);
 }
 
 //

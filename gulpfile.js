@@ -22,10 +22,10 @@ var node_modules = 'node_modules/';
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
-    return gulp.src('source/sass/hbg-prime.scss')
+    return gulp.src('source/sass/themes/*.scss')
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.min'}))
+            .pipe(rename({prefix: 'hbg-prime-', suffix: '.min'}))
             .pipe(cssnano({
                 mergeLonghand: false,
                 zindex: false,
@@ -56,10 +56,10 @@ gulp.task('sass-dist', function() {
 });
 
 gulp.task('sass-dev', function() {
-    return gulp.src('source/sass/hbg-prime.scss')
+    return gulp.src('source/sass/themes/*.scss')
             .pipe(sass({ sourceComments: true }))
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.dev'}))
+            .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
             .pipe(gulp.dest('dist/css'));
 });
 
@@ -90,8 +90,9 @@ gulp.task('scripts', function() {
 gulp.task('dss-sass', function() {
     return gulp.src([
             'source/sass/**/*.scss',
+            '!source/sass/themes/*.scss',
             '!source/sass/config/*.scss',
-            '!source/sass/hbg-prime.scss'
+            '!source/sass/_bootstrap.scss'
         ])
         .pipe(dss({
             fileName: "documentation-sass",
@@ -146,7 +147,7 @@ gulp.task('iconfont', ['icons-scale'], function () {
             ascent: 0
         }))
         .on('glyphs', function (glyph, options) {
-            gulp.src('source/icons/hbg-pricons.scss')
+            gulp.src('source/icons/_pricons.scss')
               .pipe(consolidate('lodash', {
                 glyphs: glyph,
                 fontName: 'hbg-pricons',

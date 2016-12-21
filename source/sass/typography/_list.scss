@@ -34,27 +34,7 @@ article ul:not(.nav):not(.slider-items):not(.line-numbers),
             content: '';
             width: 6px;
             height: 6px;
-            background-color: $palette-gray-3;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: map-get($color, third);
-                    }
-                }
-            }
-        }
-    }
-}
-
-ul li::before {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .mce-content-body.theme-#{$theme} & {
-                background-color: map-get($color, third);
-            }
+            background-color: $palette-3;
         }
     }
 }
@@ -102,16 +82,8 @@ article ol,
 li.title {
     font-size: .8em;
     font-weight: bold;
-    color: $palette-gray-2;
+    color: $palette-2;
     letter-spacing: .5px;
-
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                color: map-get($color, secondSafe);
-            }
-        }
-    }
 }
 
 li + li.title {

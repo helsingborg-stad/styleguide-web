@@ -8,17 +8,8 @@
 }
 
 .nav-mobile {
-    background-color: $palette-gray-2;
+    background-color: $palette-2;
     border: none;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
-        }
-    }
 
     li + li {
         border: none;
@@ -28,47 +19,21 @@
         color: #fff;
 
         &:hover {
-            background-color: $palette-gray-3;
+            background-color: $palette-3;
             color: #fff !important;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: darken(map-get($color, second), 20%);
-                    }
-                }
-            }
         }
     }
 
     .current,
     .current-node,
     .current-menu-item {
-        background-color: $palette-gray-3;
-
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, second), 20%);
-                }
-            }
-        }
+        background-color: $palette-3;
     }
 
     .sub-menu .current,
     .sub-menu .current-menu-item {
         > a::before {
             background-color: #fff;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: #fff;
-                    }
-                }
-            }
         }
     }
 
@@ -97,31 +62,14 @@
 }
 
 .nav-mobile-menu .search {
-    background-color: darken($palette-gray-2, 10%);
+    background-color: darken($palette-2, 10%);
     padding: 10px;
-
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: darken(map-get($color, second), 10%);
-            }
-        }
-    }
 }
 
 .nav-mobile-menu .menu-help .nav-mobile {
-    background-color: darken($palette-gray-2, 5%);
+    background-color: darken($palette-2, 5%);
 
     a {
         color: #fff;
-    }
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: darken(map-get($color, second), 5%);
-            }
-        }
     }
 }

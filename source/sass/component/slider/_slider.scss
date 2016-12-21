@@ -182,15 +182,8 @@
         line-height: 1;
         color: #fff;
 
-        &:hover {
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} &:not([class*="stripe-"]) {
-                        background-color: map-get($color, second);
-                    }
-                }
-            }
+        &:not([class*="stripe-"]):hover {
+            background-color: $palette-2;
         }
     }
 
@@ -274,50 +267,44 @@
             }
         }
 
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} &:not([class*="stripe-"]) {
-                    background-color: rgba(map-get($color, second),.9);
+        &:not([class*="stripe-"]) {
+            background-color: rgba($palette-2, .9);
 
-                    &.text-block-left:not([class*=stripe-]),
-                    &.text-block-right:not([class*=stripe-]) {
-                        background-color: $creamy;
-                        border: 1px solid $creamy-darker;
-                    }
+            &.text-block-left:not([class*=stripe-]),
+            &.text-block-right:not([class*=stripe-]) {
+                background-color: $creamy;
+                border: 1px solid $creamy-darker;
+            }
 
-                    .creamy {
-                        &.text-block-left:not([class*=stripe-]),
-                        &.text-block-right:not([class*=stripe-]) {
-                            background-color: #ffffff;
-                            border-color: $creamy-darker;
-                        }
-                    }
+            .creamy {
+                &.text-block-left:not([class*=stripe-]),
+                &.text-block-right:not([class*=stripe-]) {
+                    background-color: #ffffff;
+                    border-color: $creamy-darker;
+                }
+            }
 
-                    &.text-block-center {
-                        background-color: rgba(#000, .4) !important;
-                    }
+            &.text-block-center {
+                background-color: rgba(#000, .4) !important;
+            }
 
-                    &.text-block-left,
-                    &.text-block-right {
+            &.text-block-left,
+            &.text-block-right {
 
-                        span {
-                            color: $base-font-color;
+                span {
+                    color: $base-font-color;
 
-                            h1,.h1,
-                            h2,.h2,
-                            h3,.h3,
-                            h4,.h4,
-                            h5,.h5,
-                            h6,.h6 {
-                                color: map-get($color, default);
-                            }
-                        }
+                    h1,.h1,
+                    h2,.h2,
+                    h3,.h3,
+                    h4,.h4,
+                    h5,.h5,
+                    h6,.h6 {
+                        //color: map-get($color, default);
                     }
                 }
             }
         }
-
     }
 }
 

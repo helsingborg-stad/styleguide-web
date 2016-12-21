@@ -50,20 +50,10 @@
 		&:hover,
 		&:focus,
 		&.current {
-			background-color: $palette-gray-2;
-			border-color: $palette-gray-2;
+			background-color: $palette-2;
+			border-color: $palette-2;
 			color: #fff;
 			text-decoration: none;
-
-			@if ($includeThemes == true) {
-				@each $theme, $color in $themes {
-			        .theme-#{$theme} & {
-			            background-color: map-get($color, second);
-			            border-color: map-get($color, second);
-			            color: #fff;
-			        }
-			    }
-			}
 		}
 	}
 

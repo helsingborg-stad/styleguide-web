@@ -17,16 +17,7 @@ blockquote {
     font-size: 1.3em;
     font-weight: 300;
     line-height: 1.4;
-    color: $palette-gray-2;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                color: map-get($color, second);
-            }
-        }
-    }
+    color: $palette-2;
 }
 
 blockquote:before {

@@ -29,17 +29,8 @@
     }
 
     a {
-        color: $palette-gray-4;
+        color: $palette-4;
         text-decoration: none;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    color: map-get($color, fourth);
-                }
-            }
-        }
 
         &:hover,
         &:focus {

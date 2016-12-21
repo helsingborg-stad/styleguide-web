@@ -30,16 +30,7 @@
     font-size: 1.1rem;
 
     &:not(.navbar-creamy) {
-        background-color: $palette-gray-4;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, fourth);
-                }
-            }
-        }
+        background-color: $palette-4;
     }
 
     &.navbar-transparent {

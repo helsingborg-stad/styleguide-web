@@ -196,94 +196,87 @@
 }
 
 .pricon-badge-theme {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
-        }
-    }
+    background-color: $palette-2;
 }
 
 /* Badge colors */
-.pricon-badge-red-1 {
+.pricon-badge-red-1::before {
     background-color: $palette-red-1;
 }
 
-.pricon-badge-red-2 {
+.pricon-badge-red-2::before {
     background-color: $palette-red-2;
 }
 
-.pricon-badge-red-3 {
+.pricon-badge-red-3::before {
     background-color: $palette-red-3;
 }
 
-.pricon-badge-red-4 {
+.pricon-badge-red-4::before {
     background-color: $palette-red-4;
 }
 
-.pricon-badge-red-5 {
+.pricon-badge-red-5::before {
     background-color: $palette-red-5;
 }
 
-.pricon-badge-blue-1 {
+.pricon-badge-blue-1::before {
     background-color: $palette-blue-1;
 }
 
-.pricon-badge-blue-2 {
+.pricon-badge-blue-2::before {
     background-color: $palette-blue-2;
 }
 
-.pricon-badge-blue-3 {
+.pricon-badge-blue-3::before {
     background-color: $palette-blue-3;
 }
 
-.pricon-badge-blue-4 {
+.pricon-badge-blue-4::before {
     background-color: $palette-blue-4;
 }
 
-.pricon-badge-blue-5 {
+.pricon-badge-blue-5::before {
     background-color: $palette-blue-5;
 }
 
-.pricon-badge-green-1 {
+.pricon-badge-green-1::before {
     background-color: $palette-green-1;
 }
 
-.pricon-badge-green-2 {
+.pricon-badge-green-2::before {
     background-color: $palette-green-2;
 }
 
-.pricon-badge-green-3 {
+.pricon-badge-green-3::before {
     background-color: $palette-green-3;
 }
 
-.pricon-badge-green-4 {
+.pricon-badge-green-4::before {
     background-color: $palette-green-4;
 }
 
-.pricon-badge-green-5 {
+.pricon-badge-green-5::before {
     background-color: $palette-green-5;
 }
 
-.pricon-badge-purple-1 {
+.pricon-badge-purple-1::before {
     background-color: $palette-purple-1;
 }
 
-.pricon-badge-purple-2 {
+.pricon-badge-purple-2::before {
     background-color: $palette-purple-2;
 }
 
-.pricon-badge-purple-3 {
+.pricon-badge-purple-3::before {
     background-color: $palette-purple-3;
 }
 
-.pricon-badge-purple-4 {
+.pricon-badge-purple-4::before {
     background-color: $palette-purple-4;
 }
 
-.pricon-badge-purple-5 {
+.pricon-badge-purple-5::before {
     background-color: $palette-purple-5;
 }
 
