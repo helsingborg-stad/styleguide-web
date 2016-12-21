@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
-    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime-{{ isset($theme) ? $theme : 'red' }}.min.css">
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
@@ -58,7 +58,7 @@
         </style>
     </noscript>
 </head>
-<body class="{{ isset($theme) ? $theme : '' }} no-js">
+<body class="no-js">
     <nav class="navbar">
         <div class="container">
             <div class="grid">

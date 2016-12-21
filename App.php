@@ -23,15 +23,15 @@ class App
     public function getTheme()
     {
         if (!isset($_COOKIE['theme']) && !isset($_GET['theme'])) {
-            return 'theme-red';
+            return 'red';
         }
 
         if (!isset($_GET['theme'])) {
-            return 'theme-' . $_COOKIE['theme'];
+            return $_COOKIE['theme'];
         }
 
         $this->setTheme($_GET['theme']);
-        return 'theme-' . $_GET['theme'];
+        return $_GET['theme'];
     }
 
     /**
