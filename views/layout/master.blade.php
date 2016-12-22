@@ -76,6 +76,7 @@
                                     <li><a href="?theme=blue">Blue</a></li>
                                     <li><a href="?theme=green">Green</a></li>
                                     <li><a href="?theme=purple">Purple</a></li>
+                                    <li><a href="?theme=familjen">Familjen</a></li>
                                 </ul>
                             </span>
                         </li>
