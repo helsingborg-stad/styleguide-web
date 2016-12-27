@@ -78,6 +78,10 @@
     .name_last {
         display: table-cell;
         width: 50%;
+
+        label {
+            font-weight: normal;
+        }
     }
 
     .name_first {
