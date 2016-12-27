@@ -12,6 +12,7 @@
     input[type="checkbox"] + label {
         display: inline-block;
         font-weight: normal;
+        padding-left: 5px;
     }
 
     ul:not(.nav):not(.slider-items):not(.line-numbers) {
@@ -69,14 +70,22 @@
     }
 }
 
-.ginput_complex {
-    span + span {
-        margin-top: 10px;
+.ginput_container_name {
+    display: table;
+    width: 100%;
+
+    .name_first,
+    .name_last {
+        display: table-cell;
+        width: 50%;
     }
 
-    input:not([type="checkbox"]) + label,
-    input:not([type="radio"]) + label {
-        font-weight: normal;
+    .name_first {
+        padding-right: 5px;
+    }
+
+    .name_last {
+        padding-left: 5px;
     }
 }
 
