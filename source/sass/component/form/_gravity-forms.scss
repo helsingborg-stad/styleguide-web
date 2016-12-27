@@ -7,6 +7,20 @@
     form {
         margin: 0 !important;
     }
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+        display: inline-block;
+        font-weight: normal;
+    }
+
+    ul:not(.nav):not(.slider-items):not(.line-numbers) {
+        padding-left: 0;
+    }
+}
+
+.gform_heading {
+    margin-bottom: 10px;
 }
 
 .gform_fields {
@@ -51,6 +65,17 @@
 
     li label {
         display: inline-block;
+        font-weight: normal;
+    }
+}
+
+.ginput_complex {
+    span + span {
+        margin-top: 10px;
+    }
+
+    input:not([type="checkbox"]) + label,
+    input:not([type="radio"]) + label {
         font-weight: normal;
     }
 }
