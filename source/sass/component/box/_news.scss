@@ -108,14 +108,14 @@
     p:first-of-type {
         margin-top: 10px;
     }
+}
 
-    &:hover {
-        text-decoration: none;
+a.box-news:hover {
+    text-decoration: none;
 
-        .box-title, h1, h2, h3, h4, h5, h6,
-        .link-item {
-            text-decoration: underline;
-        }
+    .box-title, h1, h2, h3, h4, h5, h6,
+    .link-item {
+        text-decoration: underline;
     }
 }
 
