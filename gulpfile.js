@@ -1,6 +1,9 @@
 // Include gulp
 var gulp = require('gulp');
 
+//Package info
+var package = require('./package.json');
+
 // Include Our Plugins
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
@@ -12,6 +15,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var dss = require('gulp-docs');
 var git = require('git-rev');
 var copy = require('gulp-copy');
+var git = require('gulp-git');
+var bump = require('gulp-bump');
+var filter = require('gulp-filter');
+var tag_version = require('gulp-tag-version');
 
 // Icon plugins
 var svgscaler = require('svg-scaler');
@@ -21,6 +28,20 @@ var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 
 var node_modules = 'node_modules/';
+
+//Version number
+function inc(importance) {
+    return gulp.src(['./package.json'])
+        .pipe(bump({type: importance}))
+        .pipe(gulp.dest('./'))
+        .pipe(git.commit('Bumps package version'))
+        .pipe(filter('package.json'))
+        .pipe(tag_version());
+}
+
+gulp.task('patch', function() { return inc('patch'); })
+gulp.task('feature', function() { return inc('minor'); })
+gulp.task('release', function() { return inc('major'); })
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -54,7 +75,8 @@ gulp.task('sass-dist', function() {
                 svgo: true,
                 uniqueSelectors: true
             }))
-            .pipe(gulp.dest('dist/css'));
+            .pipe(gulp.dest('dist/css'))
+            .pipe(copy('dist/css/' + package.version + '/', {prefix: 2}));
 });
 
 gulp.task('sass-dev', function() {
@@ -85,7 +107,8 @@ gulp.task('scripts', function() {
             .pipe(gulp.dest('dist/js'))
             .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
-            .pipe(gulp.dest('dist/js'));
+            .pipe(gulp.dest('dist/js'))
+            .pipe(copy('dist/js/' + package.version + '/', {prefix: 2}));
 });
 
 // Documented Style Sheets
@@ -129,6 +152,10 @@ gulp.task('iconsprite', function () {
             }
         }))
         .pipe(gulp.dest(''));
+});
+
+// CSS & JS versioning
+gulp.task('versioning', function () {
 });
 
 // Iconfont
@@ -196,6 +223,11 @@ gulp.task('watch', function() {
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
 });
 
+// Istructions
+gulp.task('instructions', function() {
+    console.log("NOTICE: Always run 'gulp patch, gulp minor, gulp major' to bump versions in styleguide!");
+});
+
 // Default Task
-gulp.task('default', ['sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
+gulp.task('default', ['instructions','sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 
