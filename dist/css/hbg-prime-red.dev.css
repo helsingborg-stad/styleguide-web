@@ -6807,24 +6807,24 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     .modularity-mod-notice .notice {
       margin-bottom: 30px; } }
 
-/* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 89, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .has-stripe.has-stripe {
   position: relative;
   padding-left: 10px; }
   @media (min-width: 469px) {
-    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 89, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .has-stripe.has-stripe {
       padding-left: 15px; } }
   @media (min-width: 769px) {
-    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 89, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .has-stripe.has-stripe {
       padding-left: 20px; } }
   @media (min-width: 961px) {
-    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 89, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .has-stripe.has-stripe {
       padding-left: 25px; } }
 
-/* line 100, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 106, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .stripe {
   position: absolute;
   top: 0;
@@ -6852,55 +6852,55 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
   .stripe div:nth-child(5) {
     background-color: #e3000f; }
   @media (min-width: 469px) {
-    /* line 100, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 106, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe {
       width: 17px; } }
   @media (min-width: 769px) {
-    /* line 100, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 106, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe {
       width: 20px; } }
   @media (min-width: 961px) {
-    /* line 100, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 106, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe {
       width: 25px; } }
 
-/* line 126, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 130, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .stripe-sm {
   width: 10px; }
 
-/* line 130, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 134, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .has-stripe.has-stripe-sm {
   padding-left: 10px; }
 
-/* line 134, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 138, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .stripe-md {
   width: 17px; }
 
-/* line 138, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 142, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .has-stripe.has-stripe-md {
   padding-left: 17px; }
 
-/* line 142, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 146, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .stripe-lg {
   width: 20px; }
 
-/* line 146, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .has-stripe.has-stripe-lg {
   padding-left: 20px; }
 
-/* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+/* line 154, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
 .stripe-percentage {
   width: 3.57%; }
   @media (min-width: 469px) {
-    /* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 154, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe-percentage {
       width: 3.57%; } }
   @media (min-width: 769px) {
-    /* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 154, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe-percentage {
       width: 2.5%; } }
   @media (min-width: 961px) {
-    /* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
+    /* line 154, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/stripe/_stripe.scss */
     .stripe-percentage {
       width: 2.5%; } }
 
