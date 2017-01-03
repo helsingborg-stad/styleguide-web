@@ -76,7 +76,7 @@ gulp.task('sass-dist', function() {
                 uniqueSelectors: true
             }))
             .pipe(gulp.dest('dist/css'))
-            .pipe(copy('dist/css/' + package.version + '/', {prefix: 2}));
+            .pipe(copy('dist/' + package.version + '/css/', {prefix: 2}));
 });
 
 gulp.task('sass-dev', function() {
@@ -108,7 +108,7 @@ gulp.task('scripts', function() {
             .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('dist/js'))
-            .pipe(copy('dist/js/' + package.version + '/', {prefix: 2}));
+            .pipe(copy('dist/' + package.version + '/js/', {prefix: 2}));
 });
 
 // Documented Style Sheets
