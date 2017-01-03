@@ -10,6 +10,7 @@ var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var dss = require('gulp-docs');
+var git = require('git-rev');
 
 // Icon plugins
 var svgscaler = require('svg-scaler');
