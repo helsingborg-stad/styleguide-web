@@ -14880,304 +14880,6 @@ HelsingborgPrime.Args = (function ($) {
 })(jQuery);
 
 //
-// @name Image upload
-// @description
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.ImageUpload = (function ($) {
-
-    var elementClass = '.image-upload';
-    var drags = 0;
-    var selectedFiles = new Array();
-    var allowedFileTypes = ['image/jpeg', 'image/png', 'image/gif'];
-
-    function ImageUpload() {
-        this.initDragAndDrop();
-        this.initFileInput();
-    }
-
-    /**
-     * Select file by browse
-     * @return {void}
-     */
-    ImageUpload.prototype.initFileInput = function () {
-        $imageUploadInput = $(elementClass).find('input[type="file"]');
-
-        $imageUploadInput.on('change', function (e) {
-            var file = $(e.target).closest('input[type="file"]').get(0).files[0];
-            this.addFile($(e.target).closest(elementClass), file);
-        }.bind(this));
-    };
-
-    /**
-     * Drag and drop a file
-     * @return {void}
-     */
-    ImageUpload.prototype.initDragAndDrop = function () {
-        $imageUpload = $(elementClass);
-
-        $imageUpload.on('drag dragstart dragend dragover dragenter dragleave drop', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            $imageUpload.removeClass('is-error is-error-filetype')
-        })
-        .on('dragenter', function (e) {
-            drags++;
-
-            if (drags === 1) {
-                $(e.target).closest(elementClass).addClass('is-dragover');
-            }
-        })
-        .on('dragleave', function (e) {
-            drags--;
-
-            if (drags === 0) {
-                $(e.target).closest(elementClass).removeClass('is-dragover');
-            }
-        })
-        .on('drop', function (e) {
-            drags--;
-            if (drags === 0) {
-                $(e.target).closest(elementClass).removeClass('is-selected is-dragover');
-            }
-
-            this.addFile($(e.target).closest(elementClass), e.originalEvent.dataTransfer.files[0]);
-        }.bind(this));
-    };
-
-    /**
-     * Adds a file
-     * @param {object} element The image uploader element
-     * @param {object} file    The file object
-     */
-    ImageUpload.prototype.addFile = function (element, file) {
-        if (allowedFileTypes.indexOf(file.type) == -1) {
-            element.addClass('is-error is-error-filetype');
-            element.find('.selected-file').html('');
-
-            return false;
-        }
-
-        var maxFilesize = element.attr('data-max-size') ? element.attr('data-max-size') : 1000;
-        maxFilesize = parseInt(maxFilesize);
-        maxFilesize = maxFilesize.toFixed(0);
-        var fileSize = parseInt(file.size/1000).toFixed(0);
-
-        if (parseInt(fileSize) > parseInt(maxFilesize)) {
-            element.addClass('is-error is-error-filesize');
-            element.find('.selected-file').html('');
-
-            return false;
-        }
-
-        selectedFiles.push(file);
-
-        if (!element.attr('data-preview-image')) {
-            element.find('.selected-file').html(file.name);
-        }
-
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-
-        reader.addEventListener('load', function (e) {
-            var image = e.target;
-            var max_images = element.attr('data-max-files');
-
-
-            if (max_images && selectedFiles.length > max_images) {
-                selectedFiles = selectedFiles.slice(1);
-                element.find('input[name="image_uploader_file[]"]:first').remove();
-            }
-
-            element.append('<input type="hidden" name="image_uploader_file[]" read-only>');
-            element.find('input[name="image_uploader_file[]"]:last').val(image.result);
-
-            if (element.attr('data-preview-image')) {
-                element.find('.selected-file').css('backgroundImage', 'url(\'' + image.result + '\')');
-            }
-        });
-
-        element.addClass('is-selected');
-
-        return true;
-    };
-
-    return new ImageUpload();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-HelsingborgPrime.Component.TagManager = (function ($) {
-
-    var typingTimer;
-
-    function TagManager() {
-        $('.tag-manager').each(function (index, element) {
-            this.init(element);
-        }.bind(this));
-
-        $(document).on('click', '.tag-manager .tag-manager-selected button[data-action="remove"]', function (e) {
-            e.preventDefault();
-
-            var tagElement = $(e.target).closest('li');
-            this.removeTag(tagElement);
-        }.bind(this));
-    }
-
-    /**
-     * Initialize tag manager
-     * @param  {element} element The tag manager element
-     * @return {void}
-     */
-    TagManager.prototype.init = function(element) {
-        var $element = $(element);
-        var $button = $element.find('.tag-manager-input [name="add-tag"]');
-        var $input = $element.find('.tag-manager-input input[type="text"]');
-
-        $button.on('click', function (e) {
-            e.preventDefault();
-            var tag = $input.val();
-            var tags = tag.split(',');
-
-            $.each(tags, function (index, tag) {
-                this.addTag(element, tag.trim());
-            }.bind(this));
-
-        }.bind(this));
-
-        $input.on('keypress', function (e) {
-            if (e.keyCode !== 13) {
-                return;
-            }
-
-            e.preventDefault();
-            var element = $(e.target).parents('.tag-manager')[0]
-            var tag = $input.val();
-            var tags = tag.split(',');
-
-            $.each(tags, function (index, tag) {
-                this.addTag(element, tag.trim());
-            }.bind(this));
-        }.bind(this));
-
-        if ($element.attr('data-wp-ajax-action') && typeof ajaxurl !== 'undefined') {
-            $input.on('keyup', function (e) {
-                clearTimeout(typingTimer);
-
-                typingTimer = setTimeout(function () {
-                    this.autocompleteQuery(element);
-                }.bind(this), 300);
-            }.bind(this));
-
-            $('.tag-manager').on('click', '.autocomplete button', function (e) {
-                e.preventDefault();
-                var element = $(e.target).closest('button').parents('.tag-manager');
-                var tag = $(e.target).closest('button').val();
-                var tags = tag.split(',');
-
-                $.each(tags, function (index, tag) {
-                    this.addTag(element, tag.trim());
-                }.bind(this));
-            }.bind(this));
-        }
-    };
-
-    /**
-     * Do ajax autocomplete request
-     * @param  {element} element The tag manager element
-     * @return {void}
-     */
-    TagManager.prototype.autocompleteQuery = function(element) {
-        var $element = $(element);
-        var $input = $element.find('.tag-manager-input input[type="text"]');
-
-        // Return if no search value
-        if ($input.val().length === 0) {
-            clearTimeout(typingTimer);
-            $element.find('.autocomplete').remove();
-            return false;
-        }
-
-        var ajaxAction = $element.attr('data-wp-ajax-action');
-        var data = {
-            action: ajaxAction,
-            q: $input.val()
-        };
-
-        $.post(ajaxurl, data, function (res) {
-            if (res.length === 0) {
-                return;
-            }
-
-            this.showAutocomplete(element, res);
-        }.bind(this), 'JSON');
-    };
-
-    /**
-     * Show the autocomplete element
-     * @param  {element} element The tag manager eleement
-     * @param  {array} items     The autocomplete items
-     * @return {void}
-     */
-    TagManager.prototype.showAutocomplete = function(element, items) {
-        var $element = $(element);
-        $element.find('.autocomplete').remove();
-
-        var $autocomplete = $('<div class="autocomplete gutter gutter-sm"><ul></ul></div>');
-
-        $.each(items, function (index, item) {
-            $autocomplete.find('ul').append('<li><span class="tag no-padding"><button value="' + item + '">' + item + '</button></span></li>');
-        });
-
-        $element.find('.tag-manager-input').append($autocomplete);
-    };
-
-    /**
-     * Adds a tag to the tag manager selected tags
-     * @param {element} element The tag manager element
-     * @param {string} tag      The tag name
-     */
-    TagManager.prototype.addTag = function(element, tag) {
-        if (tag.length === 0) {
-            return;
-        }
-
-        var $element = $(element);
-        var inputname = $(element).attr('data-input-name');
-        $element.find('.tag-manager-selected ul').append('<li>\
-            <span class="tag">\
-                <button class="btn btn-plain" data-action="remove">&times;</button>\
-                ' + tag + '\
-            </span>\
-            <input type="hidden" name="' + inputname + '[]" value="' + tag + '">\
-        </li>');
-
-        $element.find('.tag-manager-input input[type="text"]').val('');
-        $element.find('.autocomplete').remove();
-    };
-
-    /**
-     * Removes a selected tag
-     * @param  {element} tagElement The tag to remove
-     * @return {void}
-     */
-    TagManager.prototype.removeTag = function(tagElement) {
-        $(tagElement).remove();
-    };
-
-    return new TagManager();
-
-})(jQuery);
-
-//
 // @name Modal
 // @description  Show accodrion dropdown, make linkable by updating adress bar
 //
@@ -15219,47 +14921,6 @@ HelsingborgPrime.Component.Accordion = (function ($) {
     };
 
     return new Accordion();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Dropdown = (function ($) {
-
-    function Dropdown() {
-        this.handleEvents();
-    }
-
-    Dropdown.prototype.handleEvents = function () {
-        $('[data-dropdown]').on('click', function (e) {
-            e.preventDefault();
-
-            var targetElement = $(this).attr('data-dropdown');
-            $(targetElement).toggleClass('dropdown-target-open');
-            $(this).toggleClass('dropdown-open');
-            $(this).parent().find(targetElement).toggle();
-            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
-        });
-
-        $('body').on('click', function (e) {
-            var $target = $(e.target);
-
-            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
-                return;
-            }
-
-            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
-            $('.dropdown-target-open').toggle();
-            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
-        });
-    };
-
-    return new Dropdown();
 
 })(jQuery);
 
@@ -15389,6 +15050,136 @@ HelsingborgPrime.Component.GalleryPopup = (function ($) {
     };
 
     new GalleryPopup();
+
+})(jQuery);
+
+//
+// @name Image upload
+// @description
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.ImageUpload = (function ($) {
+
+    var elementClass = '.image-upload';
+    var drags = 0;
+    var selectedFiles = new Array();
+    var allowedFileTypes = ['image/jpeg', 'image/png', 'image/gif'];
+
+    function ImageUpload() {
+        this.initDragAndDrop();
+        this.initFileInput();
+    }
+
+    /**
+     * Select file by browse
+     * @return {void}
+     */
+    ImageUpload.prototype.initFileInput = function () {
+        $imageUploadInput = $(elementClass).find('input[type="file"]');
+
+        $imageUploadInput.on('change', function (e) {
+            var file = $(e.target).closest('input[type="file"]').get(0).files[0];
+            this.addFile($(e.target).closest(elementClass), file);
+        }.bind(this));
+    };
+
+    /**
+     * Drag and drop a file
+     * @return {void}
+     */
+    ImageUpload.prototype.initDragAndDrop = function () {
+        $imageUpload = $(elementClass);
+
+        $imageUpload.on('drag dragstart dragend dragover dragenter dragleave drop', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $imageUpload.removeClass('is-error is-error-filetype')
+        })
+        .on('dragenter', function (e) {
+            drags++;
+
+            if (drags === 1) {
+                $(e.target).closest(elementClass).addClass('is-dragover');
+            }
+        })
+        .on('dragleave', function (e) {
+            drags--;
+
+            if (drags === 0) {
+                $(e.target).closest(elementClass).removeClass('is-dragover');
+            }
+        })
+        .on('drop', function (e) {
+            drags--;
+            if (drags === 0) {
+                $(e.target).closest(elementClass).removeClass('is-selected is-dragover');
+            }
+
+            this.addFile($(e.target).closest(elementClass), e.originalEvent.dataTransfer.files[0]);
+        }.bind(this));
+    };
+
+    /**
+     * Adds a file
+     * @param {object} element The image uploader element
+     * @param {object} file    The file object
+     */
+    ImageUpload.prototype.addFile = function (element, file) {
+        if (allowedFileTypes.indexOf(file.type) == -1) {
+            element.addClass('is-error is-error-filetype');
+            element.find('.selected-file').html('');
+
+            return false;
+        }
+
+        var maxFilesize = element.attr('data-max-size') ? element.attr('data-max-size') : 1000;
+        maxFilesize = parseInt(maxFilesize);
+        maxFilesize = maxFilesize.toFixed(0);
+        var fileSize = parseInt(file.size/1000).toFixed(0);
+
+        if (parseInt(fileSize) > parseInt(maxFilesize)) {
+            element.addClass('is-error is-error-filesize');
+            element.find('.selected-file').html('');
+
+            return false;
+        }
+
+        selectedFiles.push(file);
+
+        if (!element.attr('data-preview-image')) {
+            element.find('.selected-file').html(file.name);
+        }
+
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+
+        reader.addEventListener('load', function (e) {
+            var image = e.target;
+            var max_images = element.attr('data-max-files');
+
+
+            if (max_images && selectedFiles.length > max_images) {
+                selectedFiles = selectedFiles.slice(1);
+                element.find('input[name="image_uploader_file[]"]:first').remove();
+            }
+
+            element.append('<input type="hidden" name="image_uploader_file[]" read-only>');
+            element.find('input[name="image_uploader_file[]"]:last').val(image.result);
+
+            if (element.attr('data-preview-image')) {
+                element.find('.selected-file').css('backgroundImage', 'url(\'' + image.result + '\')');
+            }
+        });
+
+        element.addClass('is-selected');
+
+        return true;
+    };
+
+    return new ImageUpload();
 
 })(jQuery);
 
@@ -15580,6 +15371,1090 @@ HelsingborgPrime.Component.Slider = (function ($) {
     };
 
     return new Slider();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+HelsingborgPrime.Component.TagManager = (function ($) {
+
+    var typingTimer;
+
+    function TagManager() {
+        $('.tag-manager').each(function (index, element) {
+            this.init(element);
+        }.bind(this));
+
+        $(document).on('click', '.tag-manager .tag-manager-selected button[data-action="remove"]', function (e) {
+            e.preventDefault();
+
+            var tagElement = $(e.target).closest('li');
+            this.removeTag(tagElement);
+        }.bind(this));
+    }
+
+    /**
+     * Initialize tag manager
+     * @param  {element} element The tag manager element
+     * @return {void}
+     */
+    TagManager.prototype.init = function(element) {
+        var $element = $(element);
+        var $button = $element.find('.tag-manager-input [name="add-tag"]');
+        var $input = $element.find('.tag-manager-input input[type="text"]');
+
+        $button.on('click', function (e) {
+            e.preventDefault();
+            var tag = $input.val();
+            var tags = tag.split(',');
+
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
+
+        }.bind(this));
+
+        $input.on('keypress', function (e) {
+            if (e.keyCode !== 13) {
+                return;
+            }
+
+            e.preventDefault();
+            var element = $(e.target).parents('.tag-manager')[0]
+            var tag = $input.val();
+            var tags = tag.split(',');
+
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
+        }.bind(this));
+
+        if ($element.attr('data-wp-ajax-action') && typeof ajaxurl !== 'undefined') {
+            $input.on('keyup', function (e) {
+                clearTimeout(typingTimer);
+
+                typingTimer = setTimeout(function () {
+                    this.autocompleteQuery(element);
+                }.bind(this), 300);
+            }.bind(this));
+
+            $('.tag-manager').on('click', '.autocomplete button', function (e) {
+                e.preventDefault();
+                var element = $(e.target).closest('button').parents('.tag-manager');
+                var tag = $(e.target).closest('button').val();
+                var tags = tag.split(',');
+
+                $.each(tags, function (index, tag) {
+                    this.addTag(element, tag.trim());
+                }.bind(this));
+            }.bind(this));
+        }
+    };
+
+    /**
+     * Do ajax autocomplete request
+     * @param  {element} element The tag manager element
+     * @return {void}
+     */
+    TagManager.prototype.autocompleteQuery = function(element) {
+        var $element = $(element);
+        var $input = $element.find('.tag-manager-input input[type="text"]');
+
+        // Return if no search value
+        if ($input.val().length === 0) {
+            clearTimeout(typingTimer);
+            $element.find('.autocomplete').remove();
+            return false;
+        }
+
+        var ajaxAction = $element.attr('data-wp-ajax-action');
+        var data = {
+            action: ajaxAction,
+            q: $input.val()
+        };
+
+        $.post(ajaxurl, data, function (res) {
+            if (res.length === 0) {
+                return;
+            }
+
+            this.showAutocomplete(element, res);
+        }.bind(this), 'JSON');
+    };
+
+    /**
+     * Show the autocomplete element
+     * @param  {element} element The tag manager eleement
+     * @param  {array} items     The autocomplete items
+     * @return {void}
+     */
+    TagManager.prototype.showAutocomplete = function(element, items) {
+        var $element = $(element);
+        $element.find('.autocomplete').remove();
+
+        var $autocomplete = $('<div class="autocomplete gutter gutter-sm"><ul></ul></div>');
+
+        $.each(items, function (index, item) {
+            $autocomplete.find('ul').append('<li><span class="tag no-padding"><button value="' + item + '">' + item + '</button></span></li>');
+        });
+
+        $element.find('.tag-manager-input').append($autocomplete);
+    };
+
+    /**
+     * Adds a tag to the tag manager selected tags
+     * @param {element} element The tag manager element
+     * @param {string} tag      The tag name
+     */
+    TagManager.prototype.addTag = function(element, tag) {
+        if (tag.length === 0) {
+            return;
+        }
+
+        var $element = $(element);
+        var inputname = $(element).attr('data-input-name');
+        $element.find('.tag-manager-selected ul').append('<li>\
+            <span class="tag">\
+                <button class="btn btn-plain" data-action="remove">&times;</button>\
+                ' + tag + '\
+            </span>\
+            <input type="hidden" name="' + inputname + '[]" value="' + tag + '">\
+        </li>');
+
+        $element.find('.tag-manager-input input[type="text"]').val('');
+        $element.find('.autocomplete').remove();
+    };
+
+    /**
+     * Removes a selected tag
+     * @param  {element} tagElement The tag to remove
+     * @return {void}
+     */
+    TagManager.prototype.removeTag = function(tagElement) {
+        $(tagElement).remove();
+    };
+
+    return new TagManager();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Dropdown = (function ($) {
+
+    function Dropdown() {
+        this.handleEvents();
+    }
+
+    Dropdown.prototype.handleEvents = function () {
+        $('[data-dropdown]').on('click', function (e) {
+            e.preventDefault();
+
+            var targetElement = $(this).attr('data-dropdown');
+            $(targetElement).toggleClass('dropdown-target-open');
+            $(this).toggleClass('dropdown-open');
+            $(this).parent().find(targetElement).toggle();
+            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
+        });
+
+        $('body').on('click', function (e) {
+            var $target = $(e.target);
+
+            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
+                return;
+            }
+
+            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
+            $('.dropdown-target-open').toggle();
+            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
+        });
+    };
+
+    return new Dropdown();
+
+})(jQuery);
+
+//
+// @name Cookies
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Cookie = (function ($) {
+
+    function Cookie() {
+
+    }
+
+    /**
+     * Sets a cookie
+     * @param {string} name      Cookie name
+     * @param {string} value     Cookie value
+     * @param {void}   daysValid
+     */
+    Cookie.prototype.set = function (name, value, daysValid) {
+        var d = new Date();
+        d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
+
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
+
+        return true;
+    };
+
+    /**
+     * Gets a cookie
+     * @param  {string} name Cookie name
+     * @return {mixed}       Cookie value or empty string
+     */
+    Cookie.prototype.get = function(name) {
+        name = name + '=';
+        var ca = document.cookie.split(';');
+
+        for (var i=0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return '';
+    };
+
+    /**
+     * Destroys/removes a cookie
+     * @param  {string} name Cookie name
+     * @return {void}
+     */
+    Cookie.prototype.destory = function(name) {
+         this.set(name, '', -1);
+         return true;
+    };
+
+    /**
+     * Check if cookie value is the same as compare value
+     * @param  {string} name    Cookie name
+     * @param  {string} compare Compare value
+     * @return {boolean}
+     */
+    Cookie.prototype.check = function(name, compare) {
+         var value = this.get(name);
+         compare = compare.toString();
+
+         return value == compare;
+    };
+
+    return new Cookie();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Datepicker = (function ($) {
+
+    function Datepicker() {
+        this.init();
+    }
+
+    Datepicker.prototype.init = function () {
+        // Single date
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+
+        // Date range
+        $('.datepicker-range.datepicker-range-from').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('.datepicker-range.datepicker-range-to').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+    };
+
+    return new Datepicker();
+
+})(jQuery);
+
+/* Datepicker language */
+(function(factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["../widgets/datepicker"], factory);
+    } else {
+        factory( jQuery.datepicker );
+    }
+}(function(datepicker) {
+    datepicker.regional.sv = {
+        closeText: "Stäng",
+        prevText: "&#xAB;Förra",
+        nextText: "Nästa&#xBB;",
+        currentText: "Idag",
+        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
+        "Juli","Augusti","September","Oktober","November","December" ],
+        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
+        "Jul","Aug","Sep","Okt","Nov","Dec" ],
+        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
+        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
+        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
+        weekHeader: "Ve",
+        dateFormat: "yy-mm-dd",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults(datepicker.regional.sv);
+
+    return datepicker.regional.sv;
+}));
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.EqualHeight = (function ($) {
+
+    function EqualHeight() {
+        // Initialize if flexbox not supported
+        if (!this.supportsFlexbox()) {
+            this.init();
+
+            $(window).on('resize', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+        }
+    }
+
+    /**
+     * Check if browser supports flexbox
+     * @return {boolean}
+     */
+    EqualHeight.prototype.supportsFlexbox = function () {
+        if ($('html').hasClass('no-flexbox')) {
+            return false;
+        }
+
+        return true;
+    };
+
+    /**
+     * Resets heights to auto
+     * @return {void}
+     */
+    EqualHeight.prototype.destroy = function () {
+        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
+            $(element).css('height', 'auto');
+        }.bind(this));
+    };
+
+    /**
+     * Intializes equal height
+     * @return {void}
+     */
+    EqualHeight.prototype.init = function () {
+        $('[data-equal-container]').each(function (index, element) {
+            var maxHeight = this.getMaxHeight(element);
+            this.equalize(element, maxHeight);
+        }.bind(this));
+    };
+
+    /**
+     * Get the max height of the items
+     * @param  {string} el The parent element
+     * @return {integer}   The max height in pixels
+     */
+    EqualHeight.prototype.getMaxHeight = function (el) {
+        var heights = [];
+
+        $(el).find('[data-equal-item]').each(function (index, element) {
+            heights.push($(element).outerHeight());
+        }.bind(this));
+
+        var maxHeight = Math.max.apply(null, heights);
+
+        return maxHeight;
+    };
+
+    /**
+     * Set the heights of all items to the max height
+     * @param  {string}  parent    The parent element
+     * @param  {integer} maxHeight The max height
+     * @return {void}
+     */
+    EqualHeight.prototype.equalize = function(parent, maxHeight) {
+        $(parent).find('[data-equal-item]').each(function (index, element) {
+            $(element).css('height', maxHeight + 'px');
+        }.bind(this));
+    };
+
+    return new EqualHeight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.FeatureDetector = (function ($) {
+
+    function FeatureDetector() {
+        this.detectFlexbox();
+    }
+
+    FeatureDetector.prototype.detectFlexbox = function () {
+        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
+            return true;
+        }
+
+        $('html').addClass('no-flexbox');
+        return false;
+    };
+
+    return new FeatureDetector();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Highlight = (function ($) {
+
+    function Highlight() {
+        var highlightText = this.getQueryString('highlight');
+        if (!highlightText) {
+            return;
+        }
+
+        highlightText = highlightText.split('+');
+
+        // Filter out words with length < 3 chars
+        highlightText = highlightText.filter(function (value) {
+            return value.length > 2;
+        });
+
+        // Decode words
+        highlightText = highlightText.map(function (value) {
+            return decodeURIComponent(value);
+        });
+
+        this.highlightWords(highlightText, $('.main-container')[0]);
+    }
+
+    Highlight.prototype.highlightWords = function(words, element) {
+        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
+
+        var regex = new RegExp(pattern, 'gi');
+        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
+        element.innerHTML = element.innerHTML.replace(regex, repl);
+    };
+
+    Highlight.prototype.getQueryString = function (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+
+        return(false);
+    };
+
+    return new Highlight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Input = (function ($) {
+
+    function Input() {
+        $('form input, form select').on('invalid', function (e) {
+            this.invalidMessage(e.target);
+        }.bind(this));
+
+        $('form').on('submit', function (e) {
+            var isValid = this.validateDataRequire(e.target);
+
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            return true;
+        }.bind(this));
+    }
+
+    Input.prototype.invalidMessage = function (element) {
+        var $target = $(element);
+        var message = $target.attr('data-invalid-message');
+
+        if (message) {
+            element.setCustomValidity(message);
+        }
+
+        return false;
+    };
+
+    Input.prototype.validateDataRequire = function(form) {
+        var $form = $(form);
+        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
+        var checkboxNames = [];
+        var isValid = true;
+
+        $('input[type="checkbox"][data-require]').on('change', function (e) {
+            e.stopPropagation();
+            $form.find('.checkbox-invalid-msg').remove();
+        });
+
+        $checkboxes.each(function (index, element) {
+            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
+                return;
+            }
+
+            checkboxNames.push($(this).attr('name'));
+        });
+
+        $.each(checkboxNames, function (index, name) {
+            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
+                return;
+            }
+
+            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
+            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
+            isValid = false;
+        });
+
+        return isValid;
+    };
+
+    return new Input();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.LocalLink = (function ($) {
+
+    function LocalLink() {
+        $(document).ready(function () {
+            var hostname = new RegExp(location.host);
+
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable)').each(function () {
+                var url = $(this).attr('href');
+                if (hostname.test(url)) {
+                    return;
+                }
+
+                $(this).addClass('link-item-outbound');
+            });
+        });
+    }
+
+    return new LocalLink();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Menu = (function ($) {
+
+    function Menu() {
+    	this.init();
+    }
+
+    Menu.prototype.init = function () {
+	    this.bindEvents();
+    };
+
+    Menu.prototype.toggleMenu = function(triggerBtn) {
+        triggerBtn.toggleClass('open');
+
+        var target = $(triggerBtn.data('target'));
+
+        if (target.hasClass('nav-toggle-expand')) {
+            target.slideToggle();
+        } else {
+            target.toggleClass('open');
+        }
+
+        $('body').toggleClass('mobile-menu-open');
+    };
+
+    Menu.prototype.bindEvents = function () {
+        $('.menu-trigger').on('click', function (e) {
+            e.preventDefault();
+            this.toggleMenu($(e.target).closest('.menu-trigger'));
+        }.bind(this));
+    };
+
+    return new Menu();
+
+})(jQuery);
+
+//
+// @name Menu priority
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.MenuPriority = (function ($) {
+
+    var $nav = null;
+    var $btn = null;
+    var $vlinks = null;
+    var $hlinks = null;
+
+    var availableSpace = 0;
+    var breaks = [];
+    var breakWasTwoOrMore = false;
+
+    function MenuPriority() {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
+            this.init();
+        }
+    }
+
+    MenuPriority.prototype.init = function () {
+        $nav = $('#main-menu').parent('.nav-group-overflow');
+        $vlinks = $('#main-menu');
+        $hlinks = $nav.find('.nav-grouped-overflow');
+        $btn = $nav.find('.dropdown-toggle');
+
+        this.updateNavigation();
+
+        $(window).on('resize', function (e) {
+            this.updateNavigation();
+        }.bind(this));
+    };
+
+    MenuPriority.prototype.updateNavigation = function () {
+        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
+
+        if (breaks.length == 1 && breakWasTwoOrMore === true) {
+            availableSpace = $nav.parent().first().width();
+            breakWasTwoOrMore= false;
+        }
+
+        // The visible list is overflowing the available space
+        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
+
+            // Record vlinks width
+            breaks.push($vlinks.width());
+
+            // Move last element to the grouped items
+            $vlinks.children().last().prependTo($hlinks);
+            $hlinks.removeClass('hidden');
+            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
+        } else {
+
+            // Check if there's space to move an item back to the nav
+            if (availableSpace > breaks[breaks.length-1]) {
+                $hlinks.children().first().appendTo($vlinks);
+                breaks.pop();
+                $btn.attr('data-item-count', breaks.length);
+            }
+
+            if (breaks.length < 1) {
+                $hlinks.addClass('hidden');
+                $btn.addClass('hidden').attr('data-item-count', breaks.length);
+            }
+        }
+
+        if (breaks.length > 1) {
+            breakWasTwoOrMore = true;
+        }
+
+        // Rerun if nav is still overflowing
+        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
+            this.updateNavigation();
+        }
+    };
+
+    return new MenuPriority();
+
+})(jQuery);
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Post = (function ($) {
+
+    function Post() {
+        this.bindEvents();
+    }
+
+    Post.prototype.bindEvents = function() {
+        $(document).on('click', '.post-collapsed article', function (e) {
+            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
+        }.bind(this));
+    };
+
+    return new Post();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ScrollElevator = (function ($) {
+
+    var elevatorSelector = '.scroll-elevator-toggle';
+    var scrollPosAdjuster = -50;
+    var scrolSpeed = 500;
+
+    function ScrollElevator() {
+        if ($(elevatorSelector).length === 0) {
+            return;
+        }
+
+        var $elevatorSelector = $(elevatorSelector);
+
+        $(document).on('click', '[href="#elevator-top"]', function (e) {
+            e.preventDefault();
+            $(this).blur();
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrolSpeed);
+        });
+
+        this.appendElevator($elevatorSelector);
+        this.scrollSpy($elevatorSelector);
+    }
+
+    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
+        var scrollText = 'Scroll up';
+        var tooltipText = '';
+        var tooltipPosition = '';
+
+        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
+
+        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
+            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
+            $html.find('a span').html(scrollText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
+            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
+            $html.find('a').attr('data-tooltip', tooltipText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
+            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
+            $html.find('a').attr(tooltipPosition, '');
+        }
+
+        $html.appendTo($elevatorTarget);
+    };
+
+    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
+        var $document = $(document);
+        var $window = $(window);
+
+        $document.on('scroll load', function () {
+            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
+            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
+
+            if (scrollPos < scrollTarget) {
+                this.hideElevator();
+                return;
+            }
+
+            this.showElevator();
+            return;
+        }.bind(this));
+    };
+
+    ScrollElevator.prototype.showElevator = function() {
+        $('body').addClass('show-scroll-elevator');
+    };
+
+    ScrollElevator.prototype.hideElevator = function() {
+        $('body').removeClass('show-scroll-elevator');
+    };
+
+    return new ScrollElevator();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Toggle = (function ($) {
+
+    function Toggle() {
+        $('[data-toggle]').on('click', function (e) {
+            var toggleTarget = $(this).attr('data-toggle');
+            var toggleText = $(this).attr('data-toggle-text');
+            var toggleClass = $(this).attr('data-toggle-class');
+
+            // Toggle the target
+            var $toggleTarget = $(toggleTarget);
+            $toggleTarget.slideToggle(200);
+
+            // Switch text
+            $(this).attr('data-toggle-text', $(this).text());
+            $(this).text(toggleText);
+
+            // Switch class
+            $(this).attr('data-toggle-class', $(this).attr('class'));
+            $(this).attr('class', toggleClass);
+        });
+    }
+
+    return new Toggle();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
+
+    function ToggleSubmenuItems() {
+        this.init();
+    }
+
+    ToggleSubmenuItems.prototype.init = function () {
+        $(".nav-mobile").each(function(menuIndex,menuObject){
+            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
+                if(event.offsetX > ($(event.target).width()-7)) {
+                    event.preventDefault();
+                    if(!this.useAjax(event.target)) {
+                        this.toggleSibling(event.target);
+                    } else {
+                        this.ajaxLoadItems(event.target);
+                    }
+                }
+            }.bind(this));
+        }.bind(this));
+    };
+
+    ToggleSubmenuItems.prototype.useAjax = function (target) {
+        if($(target).siblings("ul").length) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
+        var markup      = '';
+        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
+           return v.indexOf('page-') === 0;
+        }).join().replace('page-','');
+
+        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
+
+            if(typeof response == 'object' && response.length != 0) {
+                $.each(response,function(index,pageObject){
+                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
+                }.bind(markup));
+                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
+                $(target).parent().addClass('current-menu-item current_page_item current');
+            } else {
+                window.location.href = $(target).attr('href');
+            }
+
+        }.bind(target)).fail(function(){
+            window.location.href = $(target).attr('href');
+        }.bind(target));
+    };
+
+    ToggleSubmenuItems.prototype.getItemId = function (target) {
+        return $(target).parent('li').attr('data-post-id');
+    };
+
+    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
+        $(target).parent().toggleClass('current-menu-item current_page_item current');
+    };
+
+    return new ToggleSubmenuItems();
+
+})(jQuery);
+
+//
+// @name Video Player
+// @description  Video functionalty for vimeo and youtube.
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Player = (function ($) {
+
+    //Declarations
+    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
+    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
+    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
+
+    //Check for players, if exists; Run player script.
+    function Player() {
+        if(jQuery(".player").length) {
+            this.init();
+        }
+    }
+
+    //Listen for play argument
+    Player.prototype.init = function () {
+        jQuery(".player a").on('click', function (e) {
+            this.initVideoPlayer($(e.target));
+        }.bind(this));
+    };
+
+    //Init player on start
+    Player.prototype.initVideoPlayer = function(e) {
+        var videoid = e.attr("data-video-id");
+        if(this.isNumeric(videoid)) {
+            this.initVimeo(videoid, e);
+        } else {
+            this.initYoutube(videoid, e);
+        }
+    };
+
+    Player.prototype.initVimeo = function(videoid,target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe src="//player.vimeo.com/video/'+videoid+'?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitVimeo = false;
+    };
+
+    Player.prototype.initYoutube = function(videoid,target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitYoutube = false;
+    };
+
+    Player.prototype.initBambuser = function(videoid,target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitBambuser = false;
+    };
+
+    Player.prototype.toggleControls = function(target) {
+        if ( typeof target !== 'undefined' ) {
+            target = target.parent();
+            if(target.hasClass("is-playing")) {
+                target.removeClass("is-playing");
+                $("html").removeClass("video-is-playing");
+            } else {
+                target.addClass("is-playing");
+                $("html").addClass("video-is-playing");
+            }
+        } else {
+            console.log("Error: Could not start player. Wrapper not found.");
+        }
+    };
+
+    //Reset all players, or with target id.
+    Player.prototype.resetPlayer = function(target) {
+       if (typeof target !== 'undefined') {
+            $(".player iframe").remove();
+            $(".player").removeClass("is-playing");
+            $("html").removeClass("video-is-playing");
+        } else {
+            $("iframe",target).remove();
+            target.removeClass("is-playing");
+            $("html").removeClass("video-is-playing");
+        }
+    };
+
+    Player.prototype.isNumeric = function(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    };
+
+    return new Player();
 
 })(jQuery);
 
@@ -15788,880 +16663,5 @@ HelsingborgPrime.Prompt.Share = (function ($) {
     }
 
     return new Share();
-
-})(jQuery);
-
-//
-// @name Cookies
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Cookie = (function ($) {
-
-    function Cookie() {
-
-    }
-
-    /**
-     * Sets a cookie
-     * @param {string} name      Cookie name
-     * @param {string} value     Cookie value
-     * @param {void}   daysValid
-     */
-    Cookie.prototype.set = function (name, value, daysValid) {
-        var d = new Date();
-        d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
-
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
-
-        return true;
-    };
-
-    /**
-     * Gets a cookie
-     * @param  {string} name Cookie name
-     * @return {mixed}       Cookie value or empty string
-     */
-    Cookie.prototype.get = function(name) {
-        name = name + '=';
-        var ca = document.cookie.split(';');
-
-        for (var i=0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-
-            if (c.indexOf(name) === 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-
-        return '';
-    };
-
-    /**
-     * Destroys/removes a cookie
-     * @param  {string} name Cookie name
-     * @return {void}
-     */
-    Cookie.prototype.destory = function(name) {
-         this.set(name, '', -1);
-         return true;
-    };
-
-    /**
-     * Check if cookie value is the same as compare value
-     * @param  {string} name    Cookie name
-     * @param  {string} compare Compare value
-     * @return {boolean}
-     */
-    Cookie.prototype.check = function(name, compare) {
-         var value = this.get(name);
-         compare = compare.toString();
-
-         return value == compare;
-    };
-
-    return new Cookie();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.FeatureDetector = (function ($) {
-
-    function FeatureDetector() {
-        this.detectFlexbox();
-    }
-
-    FeatureDetector.prototype.detectFlexbox = function () {
-        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
-            return true;
-        }
-
-        $('html').addClass('no-flexbox');
-        return false;
-    };
-
-    return new FeatureDetector();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Highlight = (function ($) {
-
-    function Highlight() {
-        var highlightText = this.getQueryString('highlight');
-        if (!highlightText) {
-            return;
-        }
-
-        highlightText = highlightText.split('+');
-
-        // Filter out words with length < 3 chars
-        highlightText = highlightText.filter(function (value) {
-            return value.length > 2;
-        });
-
-        // Decode words
-        highlightText = highlightText.map(function (value) {
-            return decodeURIComponent(value);
-        });
-
-        this.highlightWords(highlightText, $('.main-container')[0]);
-    }
-
-    Highlight.prototype.highlightWords = function(words, element) {
-        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
-
-        var regex = new RegExp(pattern, 'gi');
-        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
-        element.innerHTML = element.innerHTML.replace(regex, repl);
-    };
-
-    Highlight.prototype.getQueryString = function (variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-
-        for (var i=0;i<vars.length;i++) {
-            var pair = vars[i].split("=");
-
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-
-        return(false);
-    };
-
-    return new Highlight();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Input = (function ($) {
-
-    function Input() {
-        $('form input, form select').on('invalid', function (e) {
-            this.invalidMessage(e.target);
-        }.bind(this));
-
-        $('form').on('submit', function (e) {
-            var isValid = this.validateDataRequire(e.target);
-
-            if (!isValid) {
-                e.preventDefault();
-                return false;
-            }
-
-            return true;
-        }.bind(this));
-    }
-
-    Input.prototype.invalidMessage = function (element) {
-        var $target = $(element);
-        var message = $target.attr('data-invalid-message');
-
-        if (message) {
-            element.setCustomValidity(message);
-        }
-
-        return false;
-    };
-
-    Input.prototype.validateDataRequire = function(form) {
-        var $form = $(form);
-        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
-        var checkboxNames = [];
-        var isValid = true;
-
-        $('input[type="checkbox"][data-require]').on('change', function (e) {
-            e.stopPropagation();
-            $form.find('.checkbox-invalid-msg').remove();
-        });
-
-        $checkboxes.each(function (index, element) {
-            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
-                return;
-            }
-
-            checkboxNames.push($(this).attr('name'));
-        });
-
-        $.each(checkboxNames, function (index, name) {
-            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
-                return;
-            }
-
-            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
-            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
-            isValid = false;
-        });
-
-        return isValid;
-    };
-
-    return new Input();
-
-})(jQuery);
-
-//
-// @name Local link
-// @description  Finds link items with outbound links and gives them outbound class
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.LocalLink = (function ($) {
-
-    function LocalLink() {
-        $(document).ready(function () {
-            var hostname = new RegExp(location.host);
-
-            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable)').each(function () {
-                var url = $(this).attr('href');
-                if (hostname.test(url)) {
-                    return;
-                }
-
-                $(this).addClass('link-item-outbound');
-            });
-        });
-    }
-
-    return new LocalLink();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ScrollElevator = (function ($) {
-
-    var elevatorSelector = '.scroll-elevator-toggle';
-    var scrollPosAdjuster = -50;
-    var scrolSpeed = 500;
-
-    function ScrollElevator() {
-        if ($(elevatorSelector).length === 0) {
-            return;
-        }
-
-        var $elevatorSelector = $(elevatorSelector);
-
-        $(document).on('click', '[href="#elevator-top"]', function (e) {
-            e.preventDefault();
-            $(this).blur();
-
-            $('html, body').animate({
-                scrollTop: 0
-            }, scrolSpeed);
-        });
-
-        this.appendElevator($elevatorSelector);
-        this.scrollSpy($elevatorSelector);
-    }
-
-    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
-        var scrollText = 'Scroll up';
-        var tooltipText = '';
-        var tooltipPosition = '';
-
-        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
-
-        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
-            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
-            $html.find('a span').html(scrollText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
-            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
-            $html.find('a').attr('data-tooltip', tooltipText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
-            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
-            $html.find('a').attr(tooltipPosition, '');
-        }
-
-        $html.appendTo($elevatorTarget);
-    };
-
-    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
-        var $document = $(document);
-        var $window = $(window);
-
-        $document.on('scroll load', function () {
-            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
-            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
-
-            if (scrollPos < scrollTarget) {
-                this.hideElevator();
-                return;
-            }
-
-            this.showElevator();
-            return;
-        }.bind(this));
-    };
-
-    ScrollElevator.prototype.showElevator = function() {
-        $('body').addClass('show-scroll-elevator');
-    };
-
-    ScrollElevator.prototype.hideElevator = function() {
-        $('body').removeClass('show-scroll-elevator');
-    };
-
-    return new ScrollElevator();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Toggle = (function ($) {
-
-    function Toggle() {
-        $('[data-toggle]').on('click', function (e) {
-            var toggleTarget = $(this).attr('data-toggle');
-            var toggleText = $(this).attr('data-toggle-text');
-            var toggleClass = $(this).attr('data-toggle-class');
-
-            // Toggle the target
-            var $toggleTarget = $(toggleTarget);
-            $toggleTarget.slideToggle(200);
-
-            // Switch text
-            $(this).attr('data-toggle-text', $(this).text());
-            $(this).text(toggleText);
-
-            // Switch class
-            $(this).attr('data-toggle-class', $(this).attr('class'));
-            $(this).attr('class', toggleClass);
-        });
-    }
-
-    return new Toggle();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
-
-    function ToggleSubmenuItems() {
-        this.init();
-    }
-
-    ToggleSubmenuItems.prototype.init = function () {
-        $(".nav-mobile").each(function(menuIndex,menuObject){
-            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
-                if(event.offsetX > ($(event.target).width()-7)) {
-                    event.preventDefault();
-                    if(!this.useAjax(event.target)) {
-                        this.toggleSibling(event.target);
-                    } else {
-                        this.ajaxLoadItems(event.target);
-                    }
-                }
-            }.bind(this));
-        }.bind(this));
-    };
-
-    ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if($(target).siblings("ul").length) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
-    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
-        var markup      = '';
-        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
-           return v.indexOf('page-') === 0;
-        }).join().replace('page-','');
-
-        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
-
-            if(typeof response == 'object' && response.length != 0) {
-                $.each(response,function(index,pageObject){
-                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
-                }.bind(markup));
-                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
-                $(target).parent().addClass('current-menu-item current_page_item current');
-            } else {
-                window.location.href = $(target).attr('href');
-            }
-
-        }.bind(target)).fail(function(){
-            window.location.href = $(target).attr('href');
-        }.bind(target));
-    };
-
-    ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').attr('data-post-id');
-    };
-
-    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('current-menu-item current_page_item current');
-    };
-
-    return new ToggleSubmenuItems();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Datepicker = (function ($) {
-
-    function Datepicker() {
-        this.init();
-    }
-
-    Datepicker.prototype.init = function () {
-        // Single date
-        $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true
-        });
-
-        // Date range
-        $('.datepicker-range.datepicker-range-from').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
-            }
-        });
-
-        $('.datepicker-range.datepicker-range-to').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
-            }
-        });
-    };
-
-    return new Datepicker();
-
-})(jQuery);
-
-/* Datepicker language */
-(function(factory) {
-    if (typeof define === "function" && define.amd) {
-        define(["../widgets/datepicker"], factory);
-    } else {
-        factory( jQuery.datepicker );
-    }
-}(function(datepicker) {
-    datepicker.regional.sv = {
-        closeText: "Stäng",
-        prevText: "&#xAB;Förra",
-        nextText: "Nästa&#xBB;",
-        currentText: "Idag",
-        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
-        "Juli","Augusti","September","Oktober","November","December" ],
-        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
-        "Jul","Aug","Sep","Okt","Nov","Dec" ],
-        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
-        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
-        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
-        weekHeader: "Ve",
-        dateFormat: "yy-mm-dd",
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: "" };
-    datepicker.setDefaults(datepicker.regional.sv);
-
-    return datepicker.regional.sv;
-}));
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.EqualHeight = (function ($) {
-
-    function EqualHeight() {
-        // Initialize if flexbox not supported
-        if (!this.supportsFlexbox()) {
-            this.init();
-
-            $(window).on('resize', function () {
-                this.destroy();
-                this.init();
-            }.bind(this));
-        }
-    }
-
-    /**
-     * Check if browser supports flexbox
-     * @return {boolean}
-     */
-    EqualHeight.prototype.supportsFlexbox = function () {
-        if ($('html').hasClass('no-flexbox')) {
-            return false;
-        }
-
-        return true;
-    };
-
-    /**
-     * Resets heights to auto
-     * @return {void}
-     */
-    EqualHeight.prototype.destroy = function () {
-        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
-            $(element).css('height', 'auto');
-        }.bind(this));
-    };
-
-    /**
-     * Intializes equal height
-     * @return {void}
-     */
-    EqualHeight.prototype.init = function () {
-        $('[data-equal-container]').each(function (index, element) {
-            var maxHeight = this.getMaxHeight(element);
-            this.equalize(element, maxHeight);
-        }.bind(this));
-    };
-
-    /**
-     * Get the max height of the items
-     * @param  {string} el The parent element
-     * @return {integer}   The max height in pixels
-     */
-    EqualHeight.prototype.getMaxHeight = function (el) {
-        var heights = [];
-
-        $(el).find('[data-equal-item]').each(function (index, element) {
-            heights.push($(element).outerHeight());
-        }.bind(this));
-
-        var maxHeight = Math.max.apply(null, heights);
-
-        return maxHeight;
-    };
-
-    /**
-     * Set the heights of all items to the max height
-     * @param  {string}  parent    The parent element
-     * @param  {integer} maxHeight The max height
-     * @return {void}
-     */
-    EqualHeight.prototype.equalize = function(parent, maxHeight) {
-        $(parent).find('[data-equal-item]').each(function (index, element) {
-            $(element).css('height', maxHeight + 'px');
-        }.bind(this));
-    };
-
-    return new EqualHeight();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Menu = (function ($) {
-
-    function Menu() {
-    	this.init();
-    }
-
-    Menu.prototype.init = function () {
-	    this.bindEvents();
-    };
-
-    Menu.prototype.toggleMenu = function(triggerBtn) {
-        triggerBtn.toggleClass('open');
-
-        var target = $(triggerBtn.data('target'));
-
-        if (target.hasClass('nav-toggle-expand')) {
-            target.slideToggle();
-        } else {
-            target.toggleClass('open');
-        }
-
-        $('body').toggleClass('mobile-menu-open');
-    };
-
-    Menu.prototype.bindEvents = function () {
-        $('.menu-trigger').on('click', function (e) {
-            e.preventDefault();
-            this.toggleMenu($(e.target).closest('.menu-trigger'));
-        }.bind(this));
-    };
-
-    return new Menu();
-
-})(jQuery);
-
-//
-// @name Menu priority
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.MenuPriority = (function ($) {
-
-    var $nav = null;
-    var $btn = null;
-    var $vlinks = null;
-    var $hlinks = null;
-
-    var availableSpace = 0;
-    var breaks = [];
-    var breakWasTwoOrMore = false;
-
-    function MenuPriority() {
-        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
-            this.init();
-        }
-    }
-
-    MenuPriority.prototype.init = function () {
-        $nav = $('#main-menu').parent('.nav-group-overflow');
-        $vlinks = $('#main-menu');
-        $hlinks = $nav.find('.nav-grouped-overflow');
-        $btn = $nav.find('.dropdown-toggle');
-
-        this.updateNavigation();
-
-        $(window).on('resize', function (e) {
-            this.updateNavigation();
-        }.bind(this));
-    };
-
-    MenuPriority.prototype.updateNavigation = function () {
-        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
-
-        if (breaks.length == 1 && breakWasTwoOrMore === true) {
-            availableSpace = $nav.parent().first().width();
-            breakWasTwoOrMore= false;
-        }
-
-        // The visible list is overflowing the available space
-        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
-
-            // Record vlinks width
-            breaks.push($vlinks.width());
-
-            // Move last element to the grouped items
-            $vlinks.children().last().prependTo($hlinks);
-            $hlinks.removeClass('hidden');
-            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
-        } else {
-
-            // Check if there's space to move an item back to the nav
-            if (availableSpace > breaks[breaks.length-1]) {
-                $hlinks.children().first().appendTo($vlinks);
-                breaks.pop();
-                $btn.attr('data-item-count', breaks.length);
-            }
-
-            if (breaks.length < 1) {
-                $hlinks.addClass('hidden');
-                $btn.addClass('hidden').attr('data-item-count', breaks.length);
-            }
-        }
-
-        if (breaks.length > 1) {
-            breakWasTwoOrMore = true;
-        }
-
-        // Rerun if nav is still overflowing
-        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
-            this.updateNavigation();
-        }
-    };
-
-    return new MenuPriority();
-
-})(jQuery);
-
-//
-// @name Video Player
-// @description  Video functionalty for vimeo and youtube.
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Player = (function ($) {
-
-    //Declarations
-    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
-    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
-    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
-
-    //Check for players, if exists; Run player script.
-    function Player() {
-        if(jQuery(".player").length) {
-            this.init();
-        }
-    }
-
-    //Listen for play argument
-    Player.prototype.init = function () {
-        jQuery(".player a").on('click', function (e) {
-            this.initVideoPlayer($(e.target));
-        }.bind(this));
-    };
-
-    //Init player on start
-    Player.prototype.initVideoPlayer = function(e) {
-        var videoid = e.attr("data-video-id");
-        if(this.isNumeric(videoid)) {
-            this.initVimeo(videoid, e);
-        } else {
-            this.initYoutube(videoid, e);
-        }
-    };
-
-    Player.prototype.initVimeo = function(videoid,target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe src="//player.vimeo.com/video/'+videoid+'?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitVimeo = false;
-    };
-
-    Player.prototype.initYoutube = function(videoid,target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitYoutube = false;
-    };
-
-    Player.prototype.initBambuser = function(videoid,target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitBambuser = false;
-    };
-
-    Player.prototype.toggleControls = function(target) {
-        if ( typeof target !== 'undefined' ) {
-            target = target.parent();
-            if(target.hasClass("is-playing")) {
-                target.removeClass("is-playing");
-                $("html").removeClass("video-is-playing");
-            } else {
-                target.addClass("is-playing");
-                $("html").addClass("video-is-playing");
-            }
-        } else {
-            console.log("Error: Could not start player. Wrapper not found.");
-        }
-    };
-
-    //Reset all players, or with target id.
-    Player.prototype.resetPlayer = function(target) {
-       if (typeof target !== 'undefined') {
-            $(".player iframe").remove();
-            $(".player").removeClass("is-playing");
-            $("html").removeClass("video-is-playing");
-        } else {
-            $("iframe",target).remove();
-            target.removeClass("is-playing");
-            $("html").removeClass("video-is-playing");
-        }
-    };
-
-    Player.prototype.isNumeric = function(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    };
-
-    return new Player();
-
-})(jQuery);
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Post = (function ($) {
-
-    function Post() {
-        this.bindEvents();
-    }
-
-    Post.prototype.bindEvents = function() {
-        $(document).on('click', '.post-collapsed article', function (e) {
-            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
-        }.bind(this));
-    };
-
-    return new Post();
 
 })(jQuery);
