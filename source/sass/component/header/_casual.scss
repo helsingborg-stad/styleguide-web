@@ -83,6 +83,9 @@
 
     .navbar-mainmenu:not(.navbar-creamy) {
         background-color: $palette-5;
+    }
+
+    .navbar-mainmenu:not(.navbar-creamy):not(.is-sticky-scroll) {
         margin-top: 15px;
 
         @media #{$screen-md} {
