@@ -2144,7 +2144,8 @@ article iframe[src*="youtube.com/embed/"],
 
 /* line 1, /www/sites/HbgPrime/wwwroot/source/sass/layout/_wp-editor.scss */
 body.mce-content-body {
-  margin: 20px; }
+  margin: 20px;
+  max-width: 700px; }
 
 /* line 19, /www/sites/HbgPrime/wwwroot/source/sass/typography/_headings.scss */
 h1, .h1,
