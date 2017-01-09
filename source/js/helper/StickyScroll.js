@@ -9,6 +9,7 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
 
     var _stickyElements = [];
     var _isFloatingClass = 'is-sticky-scroll';
+    var _isAdminbar = false;
 
     function StickyScroll() {
         $('.sticky-scroll').each(function (index, element) {
@@ -18,6 +19,10 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
         $(document).on('scroll', function () {
             this.scrolling();
         }.bind(this));
+
+        if ($('#wpadminbar').length) {
+            _isAdminbar = true;
+        }
     }
 
     /**
@@ -31,6 +36,7 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
 
         _stickyElements.push({
             element: $element,
+            originalMarginTop: $element.css('margin-top'),
             originalOffset: null
         });
     }
@@ -41,6 +47,12 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
      */
     StickyScroll.prototype.scrolling = function() {
         var scrollPos = $(document).scrollTop();
+        var itemMarginTop = 0;
+
+        if (_isAdminbar) {
+            scrollPos += $('#wpadminbar').height();
+            itemMarginTop = $('#wpadminbar').height();
+        }
 
         _stickyElements.forEach(function (item) {
             var $element = $(item.element);
@@ -54,6 +66,7 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
                     item.originalOffset = $element.offset().top;
                     this.addPlaceholder(item.element);
                     item.element.addClass(_isFloatingClass);
+                    item.element.css('margin-top', itemMarginTop);
                 }
 
                 return
@@ -64,6 +77,7 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
                 item.originalOffset = null;
                 item.element.removeClass(_isFloatingClass);
                 this.removePlaceholder(item.element);
+                item.element.css('margin-top', item.originalMarginTop);
             }
         }.bind(this));
     };
