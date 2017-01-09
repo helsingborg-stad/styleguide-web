@@ -39,6 +39,10 @@ article ul:not(.nav):not(.slider-items):not(.line-numbers),
     }
 }
 
+article .mod-inlaylist ul.nav {
+    margin-top: 0;
+}
+
 article .modularity-mod-inlaylist ul {
     padding-left: 0 !important;
     margin-top: 0;

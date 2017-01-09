@@ -14880,6 +14880,180 @@ HelsingborgPrime.Args = (function ($) {
 })(jQuery);
 
 //
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Accordion = (function ($) {
+
+    function Accordion() {
+    	this.init();
+    }
+
+    Accordion.prototype.init = function () {
+        $('label.accordion-toggle').on('click', function(e) {
+            var $input = $('#' + $(this).attr('for'));
+
+            if ($input.prop('checked') === false) {
+                window.location.hash = '#' + $(this).attr('for');
+            } else {
+                if ($input.is('[type="radio"]')) {
+                    var name = $input.attr('name');
+                    var value = $input.val();
+                    var id = $input.attr('id');
+
+                    var $parent = $input.parent('section');
+                    $input.remove();
+
+                    setTimeout(function () {
+                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
+                    }, 1);
+
+                }
+
+                window.location.hash = '_';
+            }
+		});
+
+
+    };
+
+    return new Accordion();
+
+})(jQuery);
+
+//
+// @name Gallery
+// @description  Popup boxes for gallery items.
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.GalleryPopup = (function ($) {
+
+    function GalleryPopup() {
+    	//Click event
+    	this.clickWatcher();
+        this.arrowNav();
+
+    	//Popup hash changes
+    	$(window).bind('hashchange', function() {
+			this.togglePopupClass();
+		}.bind(this)).trigger('hashchange');
+
+        //Preload on hover
+        this.preloadImageAsset();
+    }
+
+    GalleryPopup.prototype.clickWatcher = function () {
+	    $('.lightbox-trigger').click(function(event) {
+			event.preventDefault();
+
+			//Get data
+			var image_href = $(this).attr('href');
+            var image_caption = '';
+
+            //Get caption
+            if (typeof $(this).attr('data-caption') !== 'undefined') {
+                var image_caption = $(this).attr("data-caption");
+            }
+
+			//Update hash
+			window.location.hash = "lightbox-open";
+
+			//Add markup, or update.
+			if ($('#lightbox').length > 0) {
+                $('#lightbox-image').attr('src',image_href);
+                $('#lightbox .lightbox-image-wrapper').attr('data-caption',image_caption);
+                $('#lightbox').fadeIn();
+			} else {
+				var lightbox =
+				'<div id="lightbox">' +
+					'<div class="lightbox-image-wrapper" data-caption="' + image_caption + '">' +
+						'<a class="btn-close" href="#lightbox-close"></a>' +
+						'<img id="lightbox-image" src="' + image_href +'" />' +
+					'</div>' +
+				'</div>';
+
+				$('body').append(lightbox);
+                $('#lightbox').hide().fadeIn();
+			}
+
+            $(this).addClass('gallery-active');
+		});
+
+		$(document).on('click', '#lightbox', function () {
+			$(this).fadeOut(300).hide(0);
+            $('.gallery-active').removeClass('gallery-active');
+			window.location.hash = 'lightbox-closed';
+		});
+
+    };
+
+    GalleryPopup.prototype.togglePopupClass = function (){
+	    if (window.location.hash.replace('-', '') == '#lightbox-open'.replace('-', '')) {
+			$('html').addClass('gallery-hidden');
+		} else {
+			$('html').removeClass('gallery-hidden');
+		}
+    };
+
+    GalleryPopup.prototype.preloadImageAsset = function () {
+        $('.image-gallery a.lightbox-trigger').on('mouseenter', function(){
+            var img = new Image();
+            img.src = jQuery(this).attr('href');
+        });
+    };
+
+    GalleryPopup.prototype.arrowNav = function () {
+        // Keycodes
+        var leftArrow = 37;
+        var rightArrow = 39;
+
+        $(window).on('keyup', function (e) {
+            if (window.location.hash.replace('-', '') != '#lightbox-open'.replace('-', '')) {
+                return false;
+            }
+
+            if (e.which == leftArrow) {
+                this.prevImg();
+            } else if (e.which == rightArrow) {
+                this.nextImg();
+            }
+        }.bind(this));
+    };
+
+    GalleryPopup.prototype.nextImg = function () {
+        var nextImg = $('.gallery-active').parent('li').next().children('a');
+        if (nextImg.length == 0) {
+            nextImg = $('.gallery-active').parents('ul').children('li:first-child').children('a');
+        }
+
+        $('#lightbox').trigger('click');
+        setTimeout(function () {
+            nextImg.trigger('click');
+        }, 100);
+    };
+
+    GalleryPopup.prototype.prevImg = function () {
+        var prevImg = $('.gallery-active').parent('li').prev().children('a');
+        if (prevImg.length == 0) {
+            prevImg = $('.gallery-active').parents('ul').children('li:last-child').children('a');
+        }
+
+        $('#lightbox').trigger('click');
+        setTimeout(function () {
+            prevImg.trigger('click');
+        }, 100);
+    };
+
+    new GalleryPopup();
+
+})(jQuery);
+
+//
 // @name Image upload
 // @description
 //
@@ -15006,6 +15180,197 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
     };
 
     return new ImageUpload();
+
+})(jQuery);
+
+//
+// @name Slider
+// @description  Sliding content
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Slider = (function ($) {
+
+    var autoslideIntervals = [];
+
+    function Slider() {
+        this.init();
+        this.preloadImage();
+    }
+
+    /**
+     * Initializes slider(s)
+     * @return {[type]} [description]
+     */
+    Slider.prototype.init = function () {
+        $('.slider').each(function (index, element) {
+            $(element).find('li:first').addClass('current');
+            this.addNavigationButtons(element);
+            this.autoslide(element);
+            this.detectIfIsCollapsed(element);
+        }.bind(this));
+
+        $( window ).resize(function() {
+            $('.slider').each(function (index, element) {
+                this.detectIfIsCollapsed(element);
+            }.bind(this));
+        }.bind(this));
+
+        this.bindEvents();
+    };
+
+    /**
+     * Add collapsed class
+     */
+    Slider.prototype.detectIfIsCollapsed = function (slider) {
+        if($(slider).width() <= 500) {
+            $(slider).addClass("is-collapsed");
+        } else {
+            $(slider).removeClass("is-collapsed");
+        }
+    };
+
+    Slider.prototype.preloadImage = function () {
+        setTimeout(function(){
+
+            var normal_img = new Array();
+            var mobile_img = new Array();
+
+            $(".slider ul li").each(function(index,slide) {
+
+                if($(".slider-image-mobile",slide).length) {
+                    normal_img.index = new Image();
+                    normal_img.index.src = $(".slider-image-desktop",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
+                if($(".slider-image-mobile",slide).length) {
+                    mobile_img.index = new Image();
+                    mobile_img.index.src = $(".slider-image-mobile",slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
+            });
+
+        },5000);
+    };
+
+    /**
+     * Adds navigation buttons if needed
+     */
+    Slider.prototype.addNavigationButtons = function (slider) {
+        if ($(slider).find('li').length <= 1) {
+            return;
+        }
+
+        $(slider).append('<button class="slider-nav-previous"><span class="sr-only">Previous</span><i class="pricon pricon-previous"></i></button><button class="slider-nav-next"><span class="sr-only">Next</span><i class="pricon pricon-next"></i></button>');
+    };
+
+    /**
+     * Start autoslide if setup
+     * @param  {object} slider The slider
+     * @return {void}
+     */
+    Slider.prototype.autoslide = function (slider) {
+        if ($(slider).attr('data-autoslide') != 'true' || $(slider).find('li').length <= 1) {
+            return;
+        }
+
+        // Stop on hover
+        $(slider).on('mouseenter', function (element) {
+            var slider = $(element.target).closest('.slider');
+            this.stopInterval(slider);
+        }.bind(this)).on('mouseleave', function (element) {
+            var slider = $(element.target).closest('.slider');
+            this.startInterval(slider);
+        }.bind(this));
+
+        this.startInterval(slider);
+    };
+
+    /**
+     * Starts the autoslider interval timer
+     * @param  {object} slider The slider to slide
+     * @return {void}
+     */
+    Slider.prototype.startInterval = function (slider) {
+        var index = $(slider).index();
+        var intervalTimeout = $(slider).attr('data-autoslide-interval');
+
+        if (typeof intervalTimeout == 'undefined') {
+            intervalTimeout = 10000;
+        }
+
+        autoslideIntervals[index] = setInterval(function () {
+            this.goNext(slider);
+        }.bind(this, slider), intervalTimeout);
+    };
+
+    /**
+     * Stops the autoslider interval timer
+     * @param  {object} slider The slider to stop slide
+     * @return {void}
+     */
+    Slider.prototype.stopInterval = function (slider) {
+        var index = $(slider).index();
+
+        clearInterval(autoslideIntervals[index]);
+        autoslideIntervals.splice(index, 1);
+    };
+
+    /**
+     * Go to the next slide in a specific slider
+     * @param  {object} slider The slider
+     * @return {void}
+     */
+    Slider.prototype.goNext = function (slider) {
+        var current = this.currentSlide(slider);
+        var next = current.next('li').length ? current.next('li') : $(slider).find('li:first');
+
+        $(slider).find('li').removeClass('slider-out');
+        $(slider).removeClass('slider-previous slider-next').addClass('slider-next');
+
+        current.removeClass('current slider-in').addClass('slider-out');
+        next.addClass('current slider-in');
+    };
+
+    /**
+     * Go to the previous slide in a specific slider
+     * @param  {object} slider The slider
+     * @return {void}
+     */
+    Slider.prototype.goPrev = function (slider) {
+        var current = this.currentSlide(slider);
+        var prev = current.prev('li').length ? current.prev('li') : $(slider).find('li:last');
+
+        $(slider).find('li').removeClass('slider-out');
+        $(slider).removeClass('slider-previous slider-next').addClass('slider-previous');
+
+        current.removeClass('current slider-in').addClass('slider-out');
+        prev.addClass('current slider-in');
+    };
+
+    /**
+     * Gets the current slide element in a slider
+     * @param  {object} slider The slider object to check current slide in
+     * @return {object}        The current slide object
+     */
+    Slider.prototype.currentSlide = function (slider) {
+        return $(slider).find('li.current').length ? $(slider).find('li.current') : $(slider).find('li:first');
+    };
+
+    Slider.prototype.bindEvents = function () {
+        // Next button
+        $('.slider-nav-next').on('click', function (e) {
+            this.goNext($(e.target).parents('.slider'));
+        }.bind(this));
+
+        // Prev button
+        $('.slider-nav-previous').on('click', function (e) {
+            this.goPrev($(e.target).parents('.slider'));
+        }.bind(this));
+    };
+
+    return new Slider();
 
 })(jQuery);
 
@@ -15184,51 +15549,6 @@ HelsingborgPrime.Component.TagManager = (function ($) {
 HelsingborgPrime = HelsingborgPrime || {};
 HelsingborgPrime.Component = HelsingborgPrime.Component || {};
 
-HelsingborgPrime.Component.Accordion = (function ($) {
-
-    function Accordion() {
-    	this.init();
-    }
-
-    Accordion.prototype.init = function () {
-        $('label.accordion-toggle').on('click', function(e) {
-            var $input = $('#' + $(this).attr('for'));
-
-            if ($input.prop('checked') === false) {
-                window.location.hash = '#' + $(this).attr('for');
-            } else {
-                if ($input.is('[type="radio"]')) {
-                    var name = $input.attr('name');
-                    var value = $input.val();
-                    var id = $input.attr('id');
-
-                    var $parent = $input.parent('section');
-                    $input.remove();
-
-                    setTimeout(function () {
-                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
-                    }, 1);
-
-                }
-
-                window.location.hash = '_';
-            }
-		});
-
-
-    };
-
-    return new Accordion();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
 HelsingborgPrime.Component.Dropdown = (function ($) {
 
     function Dropdown() {
@@ -15264,151 +15584,19 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
 })(jQuery);
 
 //
-// @name Gallery
-// @description  Popup boxes for gallery items.
+// @name Cookies
 //
 HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
-HelsingborgPrime.Component.GalleryPopup = (function ($) {
+HelsingborgPrime.Helper.Cookie = (function ($) {
 
-    function GalleryPopup() {
-    	//Click event
-    	this.clickWatcher();
-        this.arrowNav();
+    function Cookie() {
 
-    	//Popup hash changes
-    	$(window).bind('hashchange', function() {
-			this.togglePopupClass();
-		}.bind(this)).trigger('hashchange');
-
-        //Preload on hover
-        this.preloadImageAsset();
-    }
-
-    GalleryPopup.prototype.clickWatcher = function () {
-	    $('.lightbox-trigger').click(function(event) {
-			event.preventDefault();
-
-			//Get data
-			var image_href = $(this).attr('href');
-            var image_caption = '';
-
-            //Get caption
-            if (typeof $(this).attr('data-caption') !== 'undefined') {
-                var image_caption = $(this).attr("data-caption");
-            }
-
-			//Update hash
-			window.location.hash = "lightbox-open";
-
-			//Add markup, or update.
-			if ($('#lightbox').length > 0) {
-                $('#lightbox-image').attr('src',image_href);
-                $('#lightbox .lightbox-image-wrapper').attr('data-caption',image_caption);
-                $('#lightbox').fadeIn();
-			} else {
-				var lightbox =
-				'<div id="lightbox">' +
-					'<div class="lightbox-image-wrapper" data-caption="' + image_caption + '">' +
-						'<a class="btn-close" href="#lightbox-close"></a>' +
-						'<img id="lightbox-image" src="' + image_href +'" />' +
-					'</div>' +
-				'</div>';
-
-				$('body').append(lightbox);
-                $('#lightbox').hide().fadeIn();
-			}
-
-            $(this).addClass('gallery-active');
-		});
-
-		$(document).on('click', '#lightbox', function () {
-			$(this).fadeOut(300).hide(0);
-            $('.gallery-active').removeClass('gallery-active');
-			window.location.hash = 'lightbox-closed';
-		});
-
-    };
-
-    GalleryPopup.prototype.togglePopupClass = function (){
-	    if (window.location.hash.replace('-', '') == '#lightbox-open'.replace('-', '')) {
-			$('html').addClass('gallery-hidden');
-		} else {
-			$('html').removeClass('gallery-hidden');
-		}
-    };
-
-    GalleryPopup.prototype.preloadImageAsset = function () {
-        $('.image-gallery a.lightbox-trigger').on('mouseenter', function(){
-            var img = new Image();
-            img.src = jQuery(this).attr('href');
-        });
-    };
-
-    GalleryPopup.prototype.arrowNav = function () {
-        // Keycodes
-        var leftArrow = 37;
-        var rightArrow = 39;
-
-        $(window).on('keyup', function (e) {
-            if (window.location.hash.replace('-', '') != '#lightbox-open'.replace('-', '')) {
-                return false;
-            }
-
-            if (e.which == leftArrow) {
-                this.prevImg();
-            } else if (e.which == rightArrow) {
-                this.nextImg();
-            }
-        }.bind(this));
-    };
-
-    GalleryPopup.prototype.nextImg = function () {
-        var nextImg = $('.gallery-active').parent('li').next().children('a');
-        if (nextImg.length == 0) {
-            nextImg = $('.gallery-active').parents('ul').children('li:first-child').children('a');
-        }
-
-        $('#lightbox').trigger('click');
-        setTimeout(function () {
-            nextImg.trigger('click');
-        }, 100);
-    };
-
-    GalleryPopup.prototype.prevImg = function () {
-        var prevImg = $('.gallery-active').parent('li').prev().children('a');
-        if (prevImg.length == 0) {
-            prevImg = $('.gallery-active').parents('ul').children('li:last-child').children('a');
-        }
-
-        $('#lightbox').trigger('click');
-        setTimeout(function () {
-            prevImg.trigger('click');
-        }, 100);
-    };
-
-    new GalleryPopup();
-
-})(jQuery);
-
-//
-// @name Slider
-// @description  Sliding content
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Slider = (function ($) {
-
-    var autoslideIntervals = [];
-
-    function Slider() {
-        this.init();
-        this.preloadImage();
     }
 
     /**
+<<<<<<< HEAD
      * Initializes slider(s)
      * @return {[type]} [description]
      */
@@ -15804,6 +15992,8 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
     }
 
     /**
+=======
+>>>>>>> 408fc0a37f4c744c081a6647aef46fcde9b16091
      * Sets a cookie
      * @param {string} name      Cookie name
      * @param {string} value     Cookie value
@@ -15812,6 +16002,7 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
     Cookie.prototype.set = function (name, value, daysValid) {
         var d = new Date();
         d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
+<<<<<<< HEAD
 
         var expires = "expires=" + d.toUTCString();
         document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
@@ -16163,62 +16354,62 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     function ToggleSubmenuItems() {
         this.init();
     }
+=======
+>>>>>>> 408fc0a37f4c744c081a6647aef46fcde9b16091
 
-    ToggleSubmenuItems.prototype.init = function () {
-        $(".nav-mobile").each(function(menuIndex,menuObject){
-            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
-                if(event.offsetX > ($(event.target).width()-7)) {
-                    event.preventDefault();
-                    if(!this.useAjax(event.target)) {
-                        this.toggleSibling(event.target);
-                    } else {
-                        this.ajaxLoadItems(event.target);
-                    }
-                }
-            }.bind(this));
-        }.bind(this));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
+
+        return true;
     };
 
-    ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if($(target).siblings("ul").length) {
-            return false;
-        } else {
-            return true;
-        }
-    };
+    /**
+     * Gets a cookie
+     * @param  {string} name Cookie name
+     * @return {mixed}       Cookie value or empty string
+     */
+    Cookie.prototype.get = function(name) {
+        name = name + '=';
+        var ca = document.cookie.split(';');
 
-    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
-        var markup      = '';
-        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
-           return v.indexOf('page-') === 0;
-        }).join().replace('page-','');
-
-        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
-
-            if(typeof response == 'object' && response.length != 0) {
-                $.each(response,function(index,pageObject){
-                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
-                }.bind(markup));
-                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
-                $(target).parent().addClass('current-menu-item current_page_item current');
-            } else {
-                window.location.href = $(target).attr('href');
+        for (var i=0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
             }
 
-        }.bind(target)).fail(function(){
-            window.location.href = $(target).attr('href');
-        }.bind(target));
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return '';
     };
 
-    ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').attr('data-post-id');
+    /**
+     * Destroys/removes a cookie
+     * @param  {string} name Cookie name
+     * @return {void}
+     */
+    Cookie.prototype.destory = function(name) {
+         this.set(name, '', -1);
+         return true;
     };
 
-    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('current-menu-item current_page_item current');
+    /**
+     * Check if cookie value is the same as compare value
+     * @param  {string} name    Cookie name
+     * @param  {string} compare Compare value
+     * @return {boolean}
+     */
+    Cookie.prototype.check = function(name, compare) {
+         var value = this.get(name);
+         compare = compare.toString();
+
+         return value == compare;
     };
 
-    return new ToggleSubmenuItems();
+    return new Cookie();
 
 })(jQuery);
 
@@ -16398,6 +16589,178 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
 
 })(jQuery);
 
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.FeatureDetector = (function ($) {
+
+    function FeatureDetector() {
+        this.detectFlexbox();
+    }
+
+    FeatureDetector.prototype.detectFlexbox = function () {
+        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
+            return true;
+        }
+
+        $('html').addClass('no-flexbox');
+        return false;
+    };
+
+    return new FeatureDetector();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Highlight = (function ($) {
+
+    function Highlight() {
+        var highlightText = this.getQueryString('highlight');
+        if (!highlightText) {
+            return;
+        }
+
+        highlightText = highlightText.split('+');
+
+        // Filter out words with length < 3 chars
+        highlightText = highlightText.filter(function (value) {
+            return value.length > 2;
+        });
+
+        // Decode words
+        highlightText = highlightText.map(function (value) {
+            return decodeURIComponent(value);
+        });
+
+        this.highlightWords(highlightText, $('.main-container')[0]);
+    }
+
+    Highlight.prototype.highlightWords = function(words, element) {
+        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
+
+        var regex = new RegExp(pattern, 'gi');
+        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
+        element.innerHTML = element.innerHTML.replace(regex, repl);
+    };
+
+    Highlight.prototype.getQueryString = function (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+
+        return(false);
+    };
+
+    return new Highlight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Input = (function ($) {
+
+    function Input() {
+        $('form input, form select').on('invalid', function (e) {
+            this.invalidMessage(e.target);
+        }.bind(this));
+
+        $('form').on('submit', function (e) {
+            var isValid = this.validateDataRequire(e.target);
+
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            return true;
+        }.bind(this));
+    }
+
+    Input.prototype.invalidMessage = function (element) {
+        var $target = $(element);
+        var message = $target.attr('data-invalid-message');
+
+        if (message) {
+            element.setCustomValidity(message);
+        }
+
+        return false;
+    };
+
+    Input.prototype.validateDataRequire = function(form) {
+        var $form = $(form);
+        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
+        var checkboxNames = [];
+        var isValid = true;
+
+        $('input[type="checkbox"][data-require]').on('change', function (e) {
+            e.stopPropagation();
+            $form.find('.checkbox-invalid-msg').remove();
+        });
+
+        $checkboxes.each(function (index, element) {
+            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
+                return;
+            }
+
+            checkboxNames.push($(this).attr('name'));
+        });
+
+        $.each(checkboxNames, function (index, name) {
+            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
+                return;
+            }
+
+            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
+            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
+            isValid = false;
+        });
+
+        return isValid;
+    };
+
+    return new Input();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.LocalLink = (function ($) {
+
+    function LocalLink() {
+        $(document).ready(function () {
+            var hostname = new RegExp(location.host);
+
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable)').each(function () {
+                var url = $(this).attr('href');
+                if (hostname.test(url)) {
+                    return;
+                }
+
+                $(this).addClass('link-item-outbound');
+            });
+        });
+    }
+
+    return new LocalLink();
+
+})(jQuery);
+
 //
 // @name Menu
 // @description  Function for closing the menu (cannot be done with just :target selector)
@@ -16524,6 +16887,220 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
 })(jQuery);
 
 //
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Post = (function ($) {
+
+    function Post() {
+        this.bindEvents();
+    }
+
+    Post.prototype.bindEvents = function() {
+        $(document).on('click', '.post-collapsed article', function (e) {
+            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
+        }.bind(this));
+    };
+
+    return new Post();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ScrollElevator = (function ($) {
+
+    var elevatorSelector = '.scroll-elevator-toggle';
+    var scrollPosAdjuster = -50;
+    var scrolSpeed = 500;
+
+    function ScrollElevator() {
+        if ($(elevatorSelector).length === 0) {
+            return;
+        }
+
+        var $elevatorSelector = $(elevatorSelector);
+
+        $(document).on('click', '[href="#elevator-top"]', function (e) {
+            e.preventDefault();
+            $(this).blur();
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrolSpeed);
+        });
+
+        this.appendElevator($elevatorSelector);
+        this.scrollSpy($elevatorSelector);
+    }
+
+    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
+        var scrollText = 'Scroll up';
+        var tooltipText = '';
+        var tooltipPosition = '';
+
+        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
+
+        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
+            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
+            $html.find('a span').html(scrollText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
+            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
+            $html.find('a').attr('data-tooltip', tooltipText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
+            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
+            $html.find('a').attr(tooltipPosition, '');
+        }
+
+        $html.appendTo($elevatorTarget);
+    };
+
+    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
+        var $document = $(document);
+        var $window = $(window);
+
+        $document.on('scroll load', function () {
+            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
+            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
+
+            if (scrollPos < scrollTarget) {
+                this.hideElevator();
+                return;
+            }
+
+            this.showElevator();
+            return;
+        }.bind(this));
+    };
+
+    ScrollElevator.prototype.showElevator = function() {
+        $('body').addClass('show-scroll-elevator');
+    };
+
+    ScrollElevator.prototype.hideElevator = function() {
+        $('body').removeClass('show-scroll-elevator');
+    };
+
+    return new ScrollElevator();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Toggle = (function ($) {
+
+    function Toggle() {
+        $('[data-toggle]').on('click', function (e) {
+            var toggleTarget = $(this).attr('data-toggle');
+            var toggleText = $(this).attr('data-toggle-text');
+            var toggleClass = $(this).attr('data-toggle-class');
+
+            // Toggle the target
+            var $toggleTarget = $(toggleTarget);
+            $toggleTarget.slideToggle(200);
+
+            // Switch text
+            $(this).attr('data-toggle-text', $(this).text());
+            $(this).text(toggleText);
+
+            // Switch class
+            $(this).attr('data-toggle-class', $(this).attr('class'));
+            $(this).attr('class', toggleClass);
+        });
+    }
+
+    return new Toggle();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
+
+    function ToggleSubmenuItems() {
+        this.init();
+    }
+
+    ToggleSubmenuItems.prototype.init = function () {
+        $(".nav-mobile").each(function(menuIndex,menuObject){
+            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
+                if(event.offsetX > ($(event.target).width()-7)) {
+                    event.preventDefault();
+                    if(!this.useAjax(event.target)) {
+                        this.toggleSibling(event.target);
+                    } else {
+                        this.ajaxLoadItems(event.target);
+                    }
+                }
+            }.bind(this));
+        }.bind(this));
+    };
+
+    ToggleSubmenuItems.prototype.useAjax = function (target) {
+        if($(target).siblings("ul").length) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
+        var markup      = '';
+        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
+           return v.indexOf('page-') === 0;
+        }).join().replace('page-','');
+
+        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
+
+            if(typeof response == 'object' && response.length != 0) {
+                $.each(response,function(index,pageObject){
+                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
+                }.bind(markup));
+                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
+                $(target).parent().addClass('current-menu-item current_page_item current');
+            } else {
+                window.location.href = $(target).attr('href');
+            }
+
+        }.bind(target)).fail(function(){
+            window.location.href = $(target).attr('href');
+        }.bind(target));
+    };
+
+    ToggleSubmenuItems.prototype.getItemId = function (target) {
+        return $(target).parent('li').attr('data-post-id');
+    };
+
+    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
+        $(target).parent().toggleClass('current-menu-item current_page_item current');
+    };
+
+    return new ToggleSubmenuItems();
+
+})(jQuery);
+
+//
 // @name Video Player
 // @description  Video functionalty for vimeo and youtube.
 //
@@ -16634,6 +17211,7 @@ HelsingborgPrime.Helper.Player = (function ($) {
 })(jQuery);
 
 //
+<<<<<<< HEAD
 // @name EqualHeight
 // @description  Sets element heights equally to the heighest item
 //
@@ -16663,5 +17241,211 @@ HelsingborgPrime.Helper.Post = (function ($) {
     };
 
     return new Post();
+=======
+// @name Cookie consent
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.CookieConsent = (function ($) {
+
+    var useLocalStorage = true;
+    var animationSpeed = 1000;
+
+    function CookieConsent() {
+        this.init();
+    }
+
+    CookieConsent.prototype.init = function () {
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+
+        if (showCookieConsent && !this.hasAccepted()) {
+            this.displayConsent();
+
+            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                e.preventDefault();
+                var btn = $(e.target).closest('button');
+                this.accept();
+            }.bind(this));
+        }
+    };
+
+    CookieConsent.prototype.displayConsent = function() {
+        var wrapper = $('body');
+
+        if ($('#wrapper:first-child').length > 0) {
+            wrapper = $('#wrapper:first-child');
+        }
+
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
+        }
+
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
+        }
+
+        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
+
+        wrapper.prepend('\
+            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
+                <div class="container"><div class="grid grid-table-md grid-va-middle">\
+                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
+                    <div class="grid-auto">' + consentText + '</div>\
+                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
+                </div></div>\
+            </div>\
+        ');
+
+        $('#cookie-consent').show();
+    };
+
+    CookieConsent.prototype.hasAccepted = function() {
+        if (useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
+    };
+
+    CookieConsent.prototype.accept = function() {
+        $('#cookie-consent').remove();
+
+        if (useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
+    };
+
+    return new CookieConsent();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
+
+    function ModalLimit() {
+    	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
+    }
+
+    ModalLimit.prototype.init = function () {
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
+		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
+    };
+
+    ModalLimit.prototype.toggleModalClass = function(){
+	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('html').removeClass('overflow-hidden');
+		}
+    };
+
+    return new ModalLimit();
+
+})(jQuery);
+
+//
+// @name Search top
+// @description  Open the top search
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.SearchTop = (function ($) {
+
+    function SearchTop() {
+        this.bindEvents();
+    }
+
+    SearchTop.prototype.bindEvents = function () {
+        $('.toggle-search-top').on('click', function (e) {
+            this.toggle(e);
+        }.bind(this));
+    };
+
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
+        $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
+    };
+
+    return new SearchTop();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.Share = (function ($) {
+
+    function Share() {
+        $(function(){
+
+            this.handleEvents();
+
+        }.bind(this));
+    }
+
+    Share.prototype.openPopup = function(element) {
+        // Width and height of the popup
+        var width = 626;
+        var height = 305;
+
+        // Gets the href from the button/link
+        var url = $(element).closest('a').attr('href');
+
+        // Calculate popup position
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+        // Popup window features
+        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+
+        // Open popup
+        window.open(url, 'Share', windowFeatures);
+    }
+
+    /**
+     * Keeps track of events
+     * @return {void}
+     */
+    Share.prototype.handleEvents = function() {
+
+        $(document).on('click', '[data-action="share-popup"]', function (e) {
+            e.preventDefault();
+            this.openPopup(e.target);
+        }.bind(this));
+
+    }
+
+    return new Share();
+>>>>>>> 408fc0a37f4c744c081a6647aef46fcde9b16091
 
 })(jQuery);
