@@ -40,8 +40,8 @@ function inc(importance) {
 }
 
 gulp.task('patch', function() { return inc('patch'); })
-gulp.task('feature', function() { return inc('minor'); })
-gulp.task('release', function() { return inc('major'); })
+gulp.task('minor', function() { return inc('minor'); })
+gulp.task('major', function() { return inc('major'); })
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
