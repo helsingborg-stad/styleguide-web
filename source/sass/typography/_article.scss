@@ -108,7 +108,8 @@ article:not(.full) {
 	h6,
 	li,
 	blockquote,
-	.wp-caption {
+	.wp-caption,
+	[class^="mod-"] {
 		max-width: 700px;
 
 		@media print {

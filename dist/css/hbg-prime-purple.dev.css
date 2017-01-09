@@ -3723,7 +3723,8 @@ article:not(.full) h5,
 article:not(.full) h6,
 article:not(.full) li,
 article:not(.full) blockquote,
-article:not(.full) .wp-caption {
+article:not(.full) .wp-caption,
+article:not(.full) [class^="mod-"] {
   max-width: 700px; }
   @media print {
     /* line 102, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
@@ -3738,10 +3739,11 @@ article:not(.full) .wp-caption {
     article:not(.full) h6,
     article:not(.full) li,
     article:not(.full) blockquote,
-    article:not(.full) .wp-caption {
+    article:not(.full) .wp-caption,
+    article:not(.full) [class^="mod-"] {
       max-width: none !important; } }
 
-/* line 120, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
+/* line 121, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
 hr {
   position: relative;
   height: 4px;
@@ -3749,15 +3751,15 @@ hr {
   background-color: #e7e5e1;
   border: none; }
 
-/* line 128, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
+/* line 129, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
 article + .page-footer {
   margin-top: 30px; }
 
-/* line 132, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
+/* line 133, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
 .page-footer {
   font-size: .9em; }
 
-/* line 136, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
+/* line 137, /www/sites/HbgPrime/wwwroot/source/sass/typography/_article.scss */
 .mce-content-body img[data-wp-more="printbreak"] {
   background: transparent url("../images/printbreak.png") repeat-y scroll center center; }
 
@@ -3793,42 +3795,46 @@ article ul:not(.nav):not(.slider-items):not(.line-numbers),
       background-color: #a84c98; }
 
 /* line 42, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+article .mod-inlaylist ul.nav {
+  margin-top: 0; }
+
+/* line 46, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 article .modularity-mod-inlaylist ul {
   padding-left: 0 !important;
   margin-top: 0; }
-  /* line 46, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+  /* line 50, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
   article .modularity-mod-inlaylist ul li::before {
     display: none; }
 
-/* line 51, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 55, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 .modularity-mod-text .box-filled .box-content ul li::before {
   background-color: #fff !important; }
 
-/* line 55, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 59, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 article + ul,
 article ul + ul,
 .unordered-list + .unordered-list {
   margin-top: 15px; }
 
-/* line 75, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 79, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 .mce-content-body ol,
 article ol,
 .ordered-list {
   padding-left: 30px;
   list-style-type: decimal; }
 
-/* line 82, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 86, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 li.title {
   font-size: .8em;
   font-weight: bold;
   color: #712082;
   letter-spacing: .5px; }
 
-/* line 89, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 93, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 li + li.title {
   margin-top: 10px; }
 
-/* line 93, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
+/* line 97, /www/sites/HbgPrime/wwwroot/source/sass/typography/_list.scss */
 .list-item-spacing li + li {
   margin-top: 8px; }
 
@@ -3842,96 +3848,96 @@ a {
 
 /* line 11, /www/sites/HbgPrime/wwwroot/source/sass/typography/_link.scss */
 .mce-content-body a:not([class]),
-[class*="theme-"] article a:not([class]),
-[class*="theme-"] article a.link-item,
-[class*="theme-"] article .widget_archive a, .widget_archive
-[class*="theme-"] article a,
-[class*="theme-"] article
+article a:not([class]),
+article a.link-item,
+article .widget_archive a, .widget_archive
+article a,
+article
 .widget_categories a,
 .widget_categories
-[class*="theme-"] article a,
-[class*="theme-"] article
+article a,
+article
 .widget_meta a,
 .widget_meta
-[class*="theme-"] article a,
-[class*="theme-"] article
+article a,
+article
 .widget_recent_entries a,
 .widget_recent_entries
-[class*="theme-"] article a,
-[class*="theme-"] article
+article a,
+article
 .widget_recent_comments a,
 .widget_recent_comments
-[class*="theme-"] article a {
+article a {
   color: #0069b4;
   text-decoration: underline; }
   /* line 17, /www/sites/HbgPrime/wwwroot/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):hover,
-  [class*="theme-"] article a:not([class]):hover,
-  [class*="theme-"] article a.link-item:hover,
-  [class*="theme-"] article .widget_archive a:hover, .widget_archive
-  [class*="theme-"] article a:hover,
-  [class*="theme-"] article
+  article a:not([class]):hover,
+  article a.link-item:hover,
+  article .widget_archive a:hover, .widget_archive
+  article a:hover,
+  article
   .widget_categories a:hover,
   .widget_categories
-  [class*="theme-"] article a:hover,
-  [class*="theme-"] article
+  article a:hover,
+  article
   .widget_meta a:hover,
   .widget_meta
-  [class*="theme-"] article a:hover,
-  [class*="theme-"] article
+  article a:hover,
+  article
   .widget_recent_entries a:hover,
   .widget_recent_entries
-  [class*="theme-"] article a:hover,
-  [class*="theme-"] article
+  article a:hover,
+  article
   .widget_recent_comments a:hover,
   .widget_recent_comments
-  [class*="theme-"] article a:hover {
+  article a:hover {
     color: #0095db; }
   /* line 21, /www/sites/HbgPrime/wwwroot/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):visited,
-  [class*="theme-"] article a:not([class]):visited,
-  [class*="theme-"] article a.link-item:visited,
-  [class*="theme-"] article .widget_archive a:visited, .widget_archive
-  [class*="theme-"] article a:visited,
-  [class*="theme-"] article
+  article a:not([class]):visited,
+  article a.link-item:visited,
+  article .widget_archive a:visited, .widget_archive
+  article a:visited,
+  article
   .widget_categories a:visited,
   .widget_categories
-  [class*="theme-"] article a:visited,
-  [class*="theme-"] article
+  article a:visited,
+  article
   .widget_meta a:visited,
   .widget_meta
-  [class*="theme-"] article a:visited,
-  [class*="theme-"] article
+  article a:visited,
+  article
   .widget_recent_entries a:visited,
   .widget_recent_entries
-  [class*="theme-"] article a:visited,
-  [class*="theme-"] article
+  article a:visited,
+  article
   .widget_recent_comments a:visited,
   .widget_recent_comments
-  [class*="theme-"] article a:visited {
+  article a:visited {
     color: #712082; }
     /* line 24, /www/sites/HbgPrime/wwwroot/source/sass/typography/_link.scss */
     .mce-content-body a:not([class]):visited:hover,
-    [class*="theme-"] article a:not([class]):visited:hover,
-    [class*="theme-"] article a.link-item:visited:hover,
-    [class*="theme-"] article .widget_archive a:visited:hover, .widget_archive
-    [class*="theme-"] article a:visited:hover,
-    [class*="theme-"] article
+    article a:not([class]):visited:hover,
+    article a.link-item:visited:hover,
+    article .widget_archive a:visited:hover, .widget_archive
+    article a:visited:hover,
+    article
     .widget_categories a:visited:hover,
     .widget_categories
-    [class*="theme-"] article a:visited:hover,
-    [class*="theme-"] article
+    article a:visited:hover,
+    article
     .widget_meta a:visited:hover,
     .widget_meta
-    [class*="theme-"] article a:visited:hover,
-    [class*="theme-"] article
+    article a:visited:hover,
+    article
     .widget_recent_entries a:visited:hover,
     .widget_recent_entries
-    [class*="theme-"] article a:visited:hover,
-    [class*="theme-"] article
+    article a:visited:hover,
+    article
     .widget_recent_comments a:visited:hover,
     .widget_recent_comments
-    [class*="theme-"] article a:visited:hover {
+    article a:visited:hover {
       color: #a61380; }
 
 /* line 30, /www/sites/HbgPrime/wwwroot/source/sass/typography/_link.scss */
