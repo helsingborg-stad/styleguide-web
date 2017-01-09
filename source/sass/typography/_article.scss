@@ -16,7 +16,7 @@
 
 .mce-content-body,
 article {
-	margin-bottom: $content-gutter;
+	margin-bottom: $content-gutter * 3;
 
 	em {
 		font-style: italic;
