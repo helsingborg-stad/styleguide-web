@@ -61,3 +61,8 @@ jQuery.expr.filters.offscreen = function(el) {
         || (rect.x > window.innerWidth || rect.y > window.innerHeight)
     );
 };
+
+jQuery.expr[':'].Contains = function(a, i, m) {
+  return jQuery(a).text().toUpperCase()
+      .indexOf(m[3].toUpperCase()) >= 0;
+};

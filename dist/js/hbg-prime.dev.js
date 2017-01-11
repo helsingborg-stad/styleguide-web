@@ -14840,6 +14840,11 @@ jQuery.expr.filters.offscreen = function(el) {
     );
 };
 
+jQuery.expr[':'].Contains = function(a, i, m) {
+  return jQuery(a).text().toUpperCase()
+      .indexOf(m[3].toUpperCase()) >= 0;
+};
+
 //
 // @name Language
 //
@@ -14876,6 +14881,180 @@ HelsingborgPrime.Args = (function ($) {
     };
 
     return new Args();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Accordion = (function ($) {
+
+    function Accordion() {
+    	this.init();
+    }
+
+    Accordion.prototype.init = function () {
+        $('label.accordion-toggle').on('click', function(e) {
+            var $input = $('#' + $(this).attr('for'));
+
+            if ($input.prop('checked') === false) {
+                window.location.hash = '#' + $(this).attr('for');
+            } else {
+                if ($input.is('[type="radio"]')) {
+                    var name = $input.attr('name');
+                    var value = $input.val();
+                    var id = $input.attr('id');
+
+                    var $parent = $input.parent('section');
+                    $input.remove();
+
+                    setTimeout(function () {
+                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
+                    }, 1);
+
+                }
+
+                window.location.hash = '_';
+            }
+		});
+
+
+    };
+
+    return new Accordion();
+
+})(jQuery);
+
+//
+// @name Gallery
+// @description  Popup boxes for gallery items.
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.GalleryPopup = (function ($) {
+
+    function GalleryPopup() {
+    	//Click event
+    	this.clickWatcher();
+        this.arrowNav();
+
+    	//Popup hash changes
+    	$(window).bind('hashchange', function() {
+			this.togglePopupClass();
+		}.bind(this)).trigger('hashchange');
+
+        //Preload on hover
+        this.preloadImageAsset();
+    }
+
+    GalleryPopup.prototype.clickWatcher = function () {
+	    $('.lightbox-trigger').click(function(event) {
+			event.preventDefault();
+
+			//Get data
+			var image_href = $(this).attr('href');
+            var image_caption = '';
+
+            //Get caption
+            if (typeof $(this).attr('data-caption') !== 'undefined') {
+                var image_caption = $(this).attr("data-caption");
+            }
+
+			//Update hash
+			window.location.hash = "lightbox-open";
+
+			//Add markup, or update.
+			if ($('#lightbox').length > 0) {
+                $('#lightbox-image').attr('src',image_href);
+                $('#lightbox .lightbox-image-wrapper').attr('data-caption',image_caption);
+                $('#lightbox').fadeIn();
+			} else {
+				var lightbox =
+				'<div id="lightbox">' +
+					'<div class="lightbox-image-wrapper" data-caption="' + image_caption + '">' +
+						'<a class="btn-close" href="#lightbox-close"></a>' +
+						'<img id="lightbox-image" src="' + image_href +'" />' +
+					'</div>' +
+				'</div>';
+
+				$('body').append(lightbox);
+                $('#lightbox').hide().fadeIn();
+			}
+
+            $(this).addClass('gallery-active');
+		});
+
+		$(document).on('click', '#lightbox', function () {
+			$(this).fadeOut(300).hide(0);
+            $('.gallery-active').removeClass('gallery-active');
+			window.location.hash = 'lightbox-closed';
+		});
+
+    };
+
+    GalleryPopup.prototype.togglePopupClass = function (){
+	    if (window.location.hash.replace('-', '') == '#lightbox-open'.replace('-', '')) {
+			$('html').addClass('gallery-hidden');
+		} else {
+			$('html').removeClass('gallery-hidden');
+		}
+    };
+
+    GalleryPopup.prototype.preloadImageAsset = function () {
+        $('.image-gallery a.lightbox-trigger').on('mouseenter', function(){
+            var img = new Image();
+            img.src = jQuery(this).attr('href');
+        });
+    };
+
+    GalleryPopup.prototype.arrowNav = function () {
+        // Keycodes
+        var leftArrow = 37;
+        var rightArrow = 39;
+
+        $(window).on('keyup', function (e) {
+            if (window.location.hash.replace('-', '') != '#lightbox-open'.replace('-', '')) {
+                return false;
+            }
+
+            if (e.which == leftArrow) {
+                this.prevImg();
+            } else if (e.which == rightArrow) {
+                this.nextImg();
+            }
+        }.bind(this));
+    };
+
+    GalleryPopup.prototype.nextImg = function () {
+        var nextImg = $('.gallery-active').parent('li').next().children('a');
+        if (nextImg.length == 0) {
+            nextImg = $('.gallery-active').parents('ul').children('li:first-child').children('a');
+        }
+
+        $('#lightbox').trigger('click');
+        setTimeout(function () {
+            nextImg.trigger('click');
+        }, 100);
+    };
+
+    GalleryPopup.prototype.prevImg = function () {
+        var prevImg = $('.gallery-active').parent('li').prev().children('a');
+        if (prevImg.length == 0) {
+            prevImg = $('.gallery-active').parents('ul').children('li:last-child').children('a');
+        }
+
+        $('#lightbox').trigger('click');
+        setTimeout(function () {
+            prevImg.trigger('click');
+        }, 100);
+    };
+
+    new GalleryPopup();
 
 })(jQuery);
 
@@ -15006,389 +15185,6 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
     };
 
     return new ImageUpload();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-HelsingborgPrime.Component.TagManager = (function ($) {
-
-    var typingTimer;
-
-    function TagManager() {
-        $('.tag-manager').each(function (index, element) {
-            this.init(element);
-        }.bind(this));
-
-        $(document).on('click', '.tag-manager .tag-manager-selected button[data-action="remove"]', function (e) {
-            e.preventDefault();
-
-            var tagElement = $(e.target).closest('li');
-            this.removeTag(tagElement);
-        }.bind(this));
-    }
-
-    /**
-     * Initialize tag manager
-     * @param  {element} element The tag manager element
-     * @return {void}
-     */
-    TagManager.prototype.init = function(element) {
-        var $element = $(element);
-        var $button = $element.find('.tag-manager-input [name="add-tag"]');
-        var $input = $element.find('.tag-manager-input input[type="text"]');
-
-        $button.on('click', function (e) {
-            e.preventDefault();
-            var tag = $input.val();
-            var tags = tag.split(',');
-
-            $.each(tags, function (index, tag) {
-                this.addTag(element, tag.trim());
-            }.bind(this));
-
-        }.bind(this));
-
-        $input.on('keypress', function (e) {
-            if (e.keyCode !== 13) {
-                return;
-            }
-
-            e.preventDefault();
-            var element = $(e.target).parents('.tag-manager')[0]
-            var tag = $input.val();
-            var tags = tag.split(',');
-
-            $.each(tags, function (index, tag) {
-                this.addTag(element, tag.trim());
-            }.bind(this));
-        }.bind(this));
-
-        if ($element.attr('data-wp-ajax-action') && typeof ajaxurl !== 'undefined') {
-            $input.on('keyup', function (e) {
-                clearTimeout(typingTimer);
-
-                typingTimer = setTimeout(function () {
-                    this.autocompleteQuery(element);
-                }.bind(this), 300);
-            }.bind(this));
-
-            $('.tag-manager').on('click', '.autocomplete button', function (e) {
-                e.preventDefault();
-                var element = $(e.target).closest('button').parents('.tag-manager');
-                var tag = $(e.target).closest('button').val();
-                var tags = tag.split(',');
-
-                $.each(tags, function (index, tag) {
-                    this.addTag(element, tag.trim());
-                }.bind(this));
-            }.bind(this));
-        }
-    };
-
-    /**
-     * Do ajax autocomplete request
-     * @param  {element} element The tag manager element
-     * @return {void}
-     */
-    TagManager.prototype.autocompleteQuery = function(element) {
-        var $element = $(element);
-        var $input = $element.find('.tag-manager-input input[type="text"]');
-
-        // Return if no search value
-        if ($input.val().length === 0) {
-            clearTimeout(typingTimer);
-            $element.find('.autocomplete').remove();
-            return false;
-        }
-
-        var ajaxAction = $element.attr('data-wp-ajax-action');
-        var data = {
-            action: ajaxAction,
-            q: $input.val()
-        };
-
-        $.post(ajaxurl, data, function (res) {
-            if (res.length === 0) {
-                return;
-            }
-
-            this.showAutocomplete(element, res);
-        }.bind(this), 'JSON');
-    };
-
-    /**
-     * Show the autocomplete element
-     * @param  {element} element The tag manager eleement
-     * @param  {array} items     The autocomplete items
-     * @return {void}
-     */
-    TagManager.prototype.showAutocomplete = function(element, items) {
-        var $element = $(element);
-        $element.find('.autocomplete').remove();
-
-        var $autocomplete = $('<div class="autocomplete gutter gutter-sm"><ul></ul></div>');
-
-        $.each(items, function (index, item) {
-            $autocomplete.find('ul').append('<li><span class="tag no-padding"><button value="' + item + '">' + item + '</button></span></li>');
-        });
-
-        $element.find('.tag-manager-input').append($autocomplete);
-    };
-
-    /**
-     * Adds a tag to the tag manager selected tags
-     * @param {element} element The tag manager element
-     * @param {string} tag      The tag name
-     */
-    TagManager.prototype.addTag = function(element, tag) {
-        if (tag.length === 0) {
-            return;
-        }
-
-        var $element = $(element);
-        var inputname = $(element).attr('data-input-name');
-        $element.find('.tag-manager-selected ul').append('<li>\
-            <span class="tag">\
-                <button class="btn btn-plain" data-action="remove">&times;</button>\
-                ' + tag + '\
-            </span>\
-            <input type="hidden" name="' + inputname + '[]" value="' + tag + '">\
-        </li>');
-
-        $element.find('.tag-manager-input input[type="text"]').val('');
-        $element.find('.autocomplete').remove();
-    };
-
-    /**
-     * Removes a selected tag
-     * @param  {element} tagElement The tag to remove
-     * @return {void}
-     */
-    TagManager.prototype.removeTag = function(tagElement) {
-        $(tagElement).remove();
-    };
-
-    return new TagManager();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Accordion = (function ($) {
-
-    function Accordion() {
-    	this.init();
-    }
-
-    Accordion.prototype.init = function () {
-        $('label.accordion-toggle').on('click', function(e) {
-            var $input = $('#' + $(this).attr('for'));
-
-            if ($input.prop('checked') === false) {
-                window.location.hash = '#' + $(this).attr('for');
-            } else {
-                if ($input.is('[type="radio"]')) {
-                    var name = $input.attr('name');
-                    var value = $input.val();
-                    var id = $input.attr('id');
-
-                    var $parent = $input.parent('section');
-                    $input.remove();
-
-                    setTimeout(function () {
-                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
-                    }, 1);
-
-                }
-
-                window.location.hash = '_';
-            }
-		});
-
-
-    };
-
-    return new Accordion();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Dropdown = (function ($) {
-
-    function Dropdown() {
-        this.handleEvents();
-    }
-
-    Dropdown.prototype.handleEvents = function () {
-        $('[data-dropdown]').on('click', function (e) {
-            e.preventDefault();
-
-            var targetElement = $(this).attr('data-dropdown');
-            $(targetElement).toggleClass('dropdown-target-open');
-            $(this).toggleClass('dropdown-open');
-            $(this).parent().find(targetElement).toggle();
-            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
-        });
-
-        $('body').on('click', function (e) {
-            var $target = $(e.target);
-
-            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
-                return;
-            }
-
-            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
-            $('.dropdown-target-open').toggle();
-            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
-        });
-    };
-
-    return new Dropdown();
-
-})(jQuery);
-
-//
-// @name Gallery
-// @description  Popup boxes for gallery items.
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.GalleryPopup = (function ($) {
-
-    function GalleryPopup() {
-    	//Click event
-    	this.clickWatcher();
-        this.arrowNav();
-
-    	//Popup hash changes
-    	$(window).bind('hashchange', function() {
-			this.togglePopupClass();
-		}.bind(this)).trigger('hashchange');
-
-        //Preload on hover
-        this.preloadImageAsset();
-    }
-
-    GalleryPopup.prototype.clickWatcher = function () {
-	    $('.lightbox-trigger').click(function(event) {
-			event.preventDefault();
-
-			//Get data
-			var image_href = $(this).attr('href');
-            var image_caption = '';
-
-            //Get caption
-            if (typeof $(this).attr('data-caption') !== 'undefined') {
-                var image_caption = $(this).attr("data-caption");
-            }
-
-			//Update hash
-			window.location.hash = "lightbox-open";
-
-			//Add markup, or update.
-			if ($('#lightbox').length > 0) {
-                $('#lightbox-image').attr('src',image_href);
-                $('#lightbox .lightbox-image-wrapper').attr('data-caption',image_caption);
-                $('#lightbox').fadeIn();
-			} else {
-				var lightbox =
-				'<div id="lightbox">' +
-					'<div class="lightbox-image-wrapper" data-caption="' + image_caption + '">' +
-						'<a class="btn-close" href="#lightbox-close"></a>' +
-						'<img id="lightbox-image" src="' + image_href +'" />' +
-					'</div>' +
-				'</div>';
-
-				$('body').append(lightbox);
-                $('#lightbox').hide().fadeIn();
-			}
-
-            $(this).addClass('gallery-active');
-		});
-
-		$(document).on('click', '#lightbox', function () {
-			$(this).fadeOut(300).hide(0);
-            $('.gallery-active').removeClass('gallery-active');
-			window.location.hash = 'lightbox-closed';
-		});
-
-    };
-
-    GalleryPopup.prototype.togglePopupClass = function (){
-	    if (window.location.hash.replace('-', '') == '#lightbox-open'.replace('-', '')) {
-			$('html').addClass('gallery-hidden');
-		} else {
-			$('html').removeClass('gallery-hidden');
-		}
-    };
-
-    GalleryPopup.prototype.preloadImageAsset = function () {
-        $('.image-gallery a.lightbox-trigger').on('mouseenter', function(){
-            var img = new Image();
-            img.src = jQuery(this).attr('href');
-        });
-    };
-
-    GalleryPopup.prototype.arrowNav = function () {
-        // Keycodes
-        var leftArrow = 37;
-        var rightArrow = 39;
-
-        $(window).on('keyup', function (e) {
-            if (window.location.hash.replace('-', '') != '#lightbox-open'.replace('-', '')) {
-                return false;
-            }
-
-            if (e.which == leftArrow) {
-                this.prevImg();
-            } else if (e.which == rightArrow) {
-                this.nextImg();
-            }
-        }.bind(this));
-    };
-
-    GalleryPopup.prototype.nextImg = function () {
-        var nextImg = $('.gallery-active').parent('li').next().children('a');
-        if (nextImg.length == 0) {
-            nextImg = $('.gallery-active').parents('ul').children('li:first-child').children('a');
-        }
-
-        $('#lightbox').trigger('click');
-        setTimeout(function () {
-            nextImg.trigger('click');
-        }, 100);
-    };
-
-    GalleryPopup.prototype.prevImg = function () {
-        var prevImg = $('.gallery-active').parent('li').prev().children('a');
-        if (prevImg.length == 0) {
-            prevImg = $('.gallery-active').parents('ul').children('li:last-child').children('a');
-        }
-
-        $('#lightbox').trigger('click');
-        setTimeout(function () {
-            prevImg.trigger('click');
-        }, 100);
-    };
-
-    new GalleryPopup();
 
 })(jQuery);
 
@@ -15584,6 +15380,215 @@ HelsingborgPrime.Component.Slider = (function ($) {
 })(jQuery);
 
 //
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+HelsingborgPrime.Component.TagManager = (function ($) {
+
+    var typingTimer;
+
+    function TagManager() {
+        $('.tag-manager').each(function (index, element) {
+            this.init(element);
+        }.bind(this));
+
+        $(document).on('click', '.tag-manager .tag-manager-selected button[data-action="remove"]', function (e) {
+            e.preventDefault();
+
+            var tagElement = $(e.target).closest('li');
+            this.removeTag(tagElement);
+        }.bind(this));
+    }
+
+    /**
+     * Initialize tag manager
+     * @param  {element} element The tag manager element
+     * @return {void}
+     */
+    TagManager.prototype.init = function(element) {
+        var $element = $(element);
+        var $button = $element.find('.tag-manager-input [name="add-tag"]');
+        var $input = $element.find('.tag-manager-input input[type="text"]');
+
+        $button.on('click', function (e) {
+            e.preventDefault();
+            var tag = $input.val();
+            var tags = tag.split(',');
+
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
+
+        }.bind(this));
+
+        $input.on('keypress', function (e) {
+            if (e.keyCode !== 13) {
+                return;
+            }
+
+            e.preventDefault();
+            var element = $(e.target).parents('.tag-manager')[0]
+            var tag = $input.val();
+            var tags = tag.split(',');
+
+            $.each(tags, function (index, tag) {
+                this.addTag(element, tag.trim());
+            }.bind(this));
+        }.bind(this));
+
+        if ($element.attr('data-wp-ajax-action') && typeof ajaxurl !== 'undefined') {
+            $input.on('keyup', function (e) {
+                clearTimeout(typingTimer);
+
+                typingTimer = setTimeout(function () {
+                    this.autocompleteQuery(element);
+                }.bind(this), 300);
+            }.bind(this));
+
+            $('.tag-manager').on('click', '.autocomplete button', function (e) {
+                e.preventDefault();
+                var element = $(e.target).closest('button').parents('.tag-manager');
+                var tag = $(e.target).closest('button').val();
+                var tags = tag.split(',');
+
+                $.each(tags, function (index, tag) {
+                    this.addTag(element, tag.trim());
+                }.bind(this));
+            }.bind(this));
+        }
+    };
+
+    /**
+     * Do ajax autocomplete request
+     * @param  {element} element The tag manager element
+     * @return {void}
+     */
+    TagManager.prototype.autocompleteQuery = function(element) {
+        var $element = $(element);
+        var $input = $element.find('.tag-manager-input input[type="text"]');
+
+        // Return if no search value
+        if ($input.val().length === 0) {
+            clearTimeout(typingTimer);
+            $element.find('.autocomplete').remove();
+            return false;
+        }
+
+        var ajaxAction = $element.attr('data-wp-ajax-action');
+        var data = {
+            action: ajaxAction,
+            q: $input.val()
+        };
+
+        $.post(ajaxurl, data, function (res) {
+            if (res.length === 0) {
+                return;
+            }
+
+            this.showAutocomplete(element, res);
+        }.bind(this), 'JSON');
+    };
+
+    /**
+     * Show the autocomplete element
+     * @param  {element} element The tag manager eleement
+     * @param  {array} items     The autocomplete items
+     * @return {void}
+     */
+    TagManager.prototype.showAutocomplete = function(element, items) {
+        var $element = $(element);
+        $element.find('.autocomplete').remove();
+
+        var $autocomplete = $('<div class="autocomplete gutter gutter-sm"><ul></ul></div>');
+
+        $.each(items, function (index, item) {
+            $autocomplete.find('ul').append('<li><span class="tag no-padding"><button value="' + item + '">' + item + '</button></span></li>');
+        });
+
+        $element.find('.tag-manager-input').append($autocomplete);
+    };
+
+    /**
+     * Adds a tag to the tag manager selected tags
+     * @param {element} element The tag manager element
+     * @param {string} tag      The tag name
+     */
+    TagManager.prototype.addTag = function(element, tag) {
+        if (tag.length === 0) {
+            return;
+        }
+
+        var $element = $(element);
+        var inputname = $(element).attr('data-input-name');
+        $element.find('.tag-manager-selected ul').append('<li>\
+            <span class="tag">\
+                <button class="btn btn-plain" data-action="remove">&times;</button>\
+                ' + tag + '\
+            </span>\
+            <input type="hidden" name="' + inputname + '[]" value="' + tag + '">\
+        </li>');
+
+        $element.find('.tag-manager-input input[type="text"]').val('');
+        $element.find('.autocomplete').remove();
+    };
+
+    /**
+     * Removes a selected tag
+     * @param  {element} tagElement The tag to remove
+     * @return {void}
+     */
+    TagManager.prototype.removeTag = function(tagElement) {
+        $(tagElement).remove();
+    };
+
+    return new TagManager();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Dropdown = (function ($) {
+
+    function Dropdown() {
+        this.handleEvents();
+    }
+
+    Dropdown.prototype.handleEvents = function () {
+        $('[data-dropdown]').on('click', function (e) {
+            e.preventDefault();
+
+            var targetElement = $(this).attr('data-dropdown');
+            $(targetElement).toggleClass('dropdown-target-open');
+            $(this).toggleClass('dropdown-open');
+            $(this).parent().find(targetElement).toggle();
+            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
+        });
+
+        $('body').on('click', function (e) {
+            var $target = $(e.target);
+
+            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
+                return;
+            }
+
+            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
+            $('.dropdown-target-open').toggle();
+            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
+        });
+    };
+
+    return new Dropdown();
+
+})(jQuery);
+
+//
 // @name Cookies
 //
 HelsingborgPrime = HelsingborgPrime || {};
@@ -15658,6 +15663,182 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
     };
 
     return new Cookie();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Datepicker = (function ($) {
+
+    function Datepicker() {
+        this.init();
+    }
+
+    Datepicker.prototype.init = function () {
+        // Single date
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+
+        // Date range
+        $('.datepicker-range.datepicker-range-from').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('.datepicker-range.datepicker-range-to').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+    };
+
+    return new Datepicker();
+
+})(jQuery);
+
+/* Datepicker language */
+(function(factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["../widgets/datepicker"], factory);
+    } else {
+        factory( jQuery.datepicker );
+    }
+}(function(datepicker) {
+    datepicker.regional.sv = {
+        closeText: "Stäng",
+        prevText: "&#xAB;Förra",
+        nextText: "Nästa&#xBB;",
+        currentText: "Idag",
+        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
+        "Juli","Augusti","September","Oktober","November","December" ],
+        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
+        "Jul","Aug","Sep","Okt","Nov","Dec" ],
+        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
+        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
+        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
+        weekHeader: "Ve",
+        dateFormat: "yy-mm-dd",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults(datepicker.regional.sv);
+
+    return datepicker.regional.sv;
+}));
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.EqualHeight = (function ($) {
+
+    function EqualHeight() {
+        // Initialize if flexbox not supported
+        if (!this.supportsFlexbox()) {
+            this.init();
+
+            $(window).on('resize', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+        }
+    }
+
+    /**
+     * Check if browser supports flexbox
+     * @return {boolean}
+     */
+    EqualHeight.prototype.supportsFlexbox = function () {
+        if ($('html').hasClass('no-flexbox')) {
+            return false;
+        }
+
+        return true;
+    };
+
+    /**
+     * Resets heights to auto
+     * @return {void}
+     */
+    EqualHeight.prototype.destroy = function () {
+        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
+            $(element).css('height', 'auto');
+        }.bind(this));
+    };
+
+    /**
+     * Intializes equal height
+     * @return {void}
+     */
+    EqualHeight.prototype.init = function () {
+        $('[data-equal-container]').each(function (index, element) {
+            var maxHeight = this.getMaxHeight(element);
+            this.equalize(element, maxHeight);
+        }.bind(this));
+    };
+
+    /**
+     * Get the max height of the items
+     * @param  {string} el The parent element
+     * @return {integer}   The max height in pixels
+     */
+    EqualHeight.prototype.getMaxHeight = function (el) {
+        var heights = [];
+
+        $(el).find('[data-equal-item]').each(function (index, element) {
+            heights.push($(element).outerHeight());
+        }.bind(this));
+
+        var maxHeight = Math.max.apply(null, heights);
+
+        return maxHeight;
+    };
+
+    /**
+     * Set the heights of all items to the max height
+     * @param  {string}  parent    The parent element
+     * @param  {integer} maxHeight The max height
+     * @return {void}
+     */
+    EqualHeight.prototype.equalize = function(parent, maxHeight) {
+        $(parent).find('[data-equal-item]').each(function (index, element) {
+            $(element).css('height', maxHeight + 'px');
+        }.bind(this));
+    };
+
+    return new EqualHeight();
 
 })(jQuery);
 
@@ -15805,6 +15986,38 @@ HelsingborgPrime.Helper.Input = (function ($) {
 
 })(jQuery);
 
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.TableFilter = (function ($) {
+
+    function TableFilter() {
+        $('[data-table-filter]').each(function (index, element) {
+            this.init(element);
+        }.bind(this));
+    }
+
+    TableFilter.prototype.init = function(element) {
+        var $list = $(element);
+        var listId = $list.attr('data-table-filter');
+        var $input = $('[data-table-filter-input="' + listId + '"]');
+
+        $input.on('input', function (e) {
+            $list.find('[data-table-filter-empty]').remove();
+
+            $list.find('tbody tr:not([data-table-filter-exclude]):contains(' + $input.val() + ')').show();
+            $list.find('tbody tr:not([data-table-filter-exclude]):not(:contains(' + $input.val() + '))').hide();
+
+            if ($list.find('tbody tr:not([data-table-filter-exclude]):visible').length === 0 && $list.find('[data-table-filter-empty]').length === 0) {
+                $list.find('tbody tr:not([data-table-filter-exclude]):first').before('<tr data-table-filter-empty><td colspan="50">' + HelsingborgPrime.Args.get('tableFilter.empty') + '</td></tr>')
+            }
+        });
+    };
+
+    return new TableFilter();
+
+})(jQuery);
+
 //
 // @name Local link
 // @description  Finds link items with outbound links and gives them outbound class
@@ -15830,6 +16043,164 @@ HelsingborgPrime.Helper.LocalLink = (function ($) {
     }
 
     return new LocalLink();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Menu = (function ($) {
+
+    function Menu() {
+    	this.init();
+    }
+
+    Menu.prototype.init = function () {
+	    this.bindEvents();
+    };
+
+    Menu.prototype.toggleMenu = function(triggerBtn) {
+        triggerBtn.toggleClass('open');
+
+        var target = $(triggerBtn.data('target'));
+
+        if (target.hasClass('nav-toggle-expand')) {
+            target.slideToggle();
+        } else {
+            target.toggleClass('open');
+        }
+
+        $('body').toggleClass('mobile-menu-open');
+    };
+
+    Menu.prototype.bindEvents = function () {
+        $('.menu-trigger').on('click', function (e) {
+            e.preventDefault();
+            this.toggleMenu($(e.target).closest('.menu-trigger'));
+        }.bind(this));
+    };
+
+    return new Menu();
+
+})(jQuery);
+
+//
+// @name Menu priority
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.MenuPriority = (function ($) {
+
+    var $nav = null;
+    var $btn = null;
+    var $vlinks = null;
+    var $hlinks = null;
+
+    var availableSpace = 0;
+    var breaks = [];
+    var breakWasTwoOrMore = false;
+
+    function MenuPriority() {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
+            this.init();
+        }
+    }
+
+    MenuPriority.prototype.init = function () {
+        $nav = $('#main-menu').parent('.nav-group-overflow');
+        $vlinks = $('#main-menu');
+        $hlinks = $nav.find('.nav-grouped-overflow');
+        $btn = $nav.find('.dropdown-toggle');
+
+        this.updateNavigation();
+
+        $(window).on('resize', function (e) {
+            this.updateNavigation();
+        }.bind(this));
+    };
+
+    MenuPriority.prototype.updateNavigation = function () {
+        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
+
+        if (breaks.length == 1 && breakWasTwoOrMore === true) {
+            availableSpace = $nav.parent().first().width();
+            breakWasTwoOrMore= false;
+        }
+
+        // The visible list is overflowing the available space
+        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
+
+            // Record vlinks width
+            breaks.push($vlinks.width());
+
+            // Move last element to the grouped items
+            $vlinks.children().last().prependTo($hlinks);
+            $hlinks.removeClass('hidden');
+            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
+        } else {
+
+            // Check if there's space to move an item back to the nav
+            if (availableSpace > breaks[breaks.length-1]) {
+                $hlinks.children().first().appendTo($vlinks);
+                breaks.pop();
+                $btn.attr('data-item-count', breaks.length);
+            }
+
+            if (breaks.length < 1) {
+                $hlinks.addClass('hidden');
+                $btn.addClass('hidden').attr('data-item-count', breaks.length);
+            }
+        }
+
+        if (breaks.length > 1) {
+            breakWasTwoOrMore = true;
+        }
+
+        // Rerun if nav is still overflowing
+        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
+            this.updateNavigation();
+        }
+    };
+
+    return new MenuPriority();
+
+})(jQuery);
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Post = (function ($) {
+
+    function Post() {
+        this.bindEvents();
+    }
+
+    Post.prototype.bindEvents = function() {
+        $(document).on('click', '.post-collapsed article', function (e) {
+            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
+        }.bind(this));
+    };
+
+    return new Post();
 
 })(jQuery);
 
@@ -16133,307 +16504,6 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
 })(jQuery);
 
 //
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Datepicker = (function ($) {
-
-    function Datepicker() {
-        this.init();
-    }
-
-    Datepicker.prototype.init = function () {
-        // Single date
-        $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true
-        });
-
-        // Date range
-        $('.datepicker-range.datepicker-range-from').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
-            }
-        });
-
-        $('.datepicker-range.datepicker-range-to').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
-            }
-        });
-    };
-
-    return new Datepicker();
-
-})(jQuery);
-
-/* Datepicker language */
-(function(factory) {
-    if (typeof define === "function" && define.amd) {
-        define(["../widgets/datepicker"], factory);
-    } else {
-        factory( jQuery.datepicker );
-    }
-}(function(datepicker) {
-    datepicker.regional.sv = {
-        closeText: "Stäng",
-        prevText: "&#xAB;Förra",
-        nextText: "Nästa&#xBB;",
-        currentText: "Idag",
-        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
-        "Juli","Augusti","September","Oktober","November","December" ],
-        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
-        "Jul","Aug","Sep","Okt","Nov","Dec" ],
-        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
-        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
-        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
-        weekHeader: "Ve",
-        dateFormat: "yy-mm-dd",
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: "" };
-    datepicker.setDefaults(datepicker.regional.sv);
-
-    return datepicker.regional.sv;
-}));
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.EqualHeight = (function ($) {
-
-    function EqualHeight() {
-        // Initialize if flexbox not supported
-        if (!this.supportsFlexbox()) {
-            this.init();
-
-            $(window).on('resize', function () {
-                this.destroy();
-                this.init();
-            }.bind(this));
-        }
-    }
-
-    /**
-     * Check if browser supports flexbox
-     * @return {boolean}
-     */
-    EqualHeight.prototype.supportsFlexbox = function () {
-        if ($('html').hasClass('no-flexbox')) {
-            return false;
-        }
-
-        return true;
-    };
-
-    /**
-     * Resets heights to auto
-     * @return {void}
-     */
-    EqualHeight.prototype.destroy = function () {
-        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
-            $(element).css('height', 'auto');
-        }.bind(this));
-    };
-
-    /**
-     * Intializes equal height
-     * @return {void}
-     */
-    EqualHeight.prototype.init = function () {
-        $('[data-equal-container]').each(function (index, element) {
-            var maxHeight = this.getMaxHeight(element);
-            this.equalize(element, maxHeight);
-        }.bind(this));
-    };
-
-    /**
-     * Get the max height of the items
-     * @param  {string} el The parent element
-     * @return {integer}   The max height in pixels
-     */
-    EqualHeight.prototype.getMaxHeight = function (el) {
-        var heights = [];
-
-        $(el).find('[data-equal-item]').each(function (index, element) {
-            heights.push($(element).outerHeight());
-        }.bind(this));
-
-        var maxHeight = Math.max.apply(null, heights);
-
-        return maxHeight;
-    };
-
-    /**
-     * Set the heights of all items to the max height
-     * @param  {string}  parent    The parent element
-     * @param  {integer} maxHeight The max height
-     * @return {void}
-     */
-    EqualHeight.prototype.equalize = function(parent, maxHeight) {
-        $(parent).find('[data-equal-item]').each(function (index, element) {
-            $(element).css('height', maxHeight + 'px');
-        }.bind(this));
-    };
-
-    return new EqualHeight();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Menu = (function ($) {
-
-    function Menu() {
-    	this.init();
-    }
-
-    Menu.prototype.init = function () {
-	    this.bindEvents();
-    };
-
-    Menu.prototype.toggleMenu = function(triggerBtn) {
-        triggerBtn.toggleClass('open');
-
-        var target = $(triggerBtn.data('target'));
-
-        if (target.hasClass('nav-toggle-expand')) {
-            target.slideToggle();
-        } else {
-            target.toggleClass('open');
-        }
-
-        $('body').toggleClass('mobile-menu-open');
-    };
-
-    Menu.prototype.bindEvents = function () {
-        $('.menu-trigger').on('click', function (e) {
-            e.preventDefault();
-            this.toggleMenu($(e.target).closest('.menu-trigger'));
-        }.bind(this));
-    };
-
-    return new Menu();
-
-})(jQuery);
-
-//
-// @name Menu priority
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.MenuPriority = (function ($) {
-
-    var $nav = null;
-    var $btn = null;
-    var $vlinks = null;
-    var $hlinks = null;
-
-    var availableSpace = 0;
-    var breaks = [];
-    var breakWasTwoOrMore = false;
-
-    function MenuPriority() {
-        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
-            this.init();
-        }
-    }
-
-    MenuPriority.prototype.init = function () {
-        $nav = $('#main-menu').parent('.nav-group-overflow');
-        $vlinks = $('#main-menu');
-        $hlinks = $nav.find('.nav-grouped-overflow');
-        $btn = $nav.find('.dropdown-toggle');
-
-        this.updateNavigation();
-
-        $(window).on('resize', function (e) {
-            this.updateNavigation();
-        }.bind(this));
-    };
-
-    MenuPriority.prototype.updateNavigation = function () {
-        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
-
-        if (breaks.length == 1 && breakWasTwoOrMore === true) {
-            availableSpace = $nav.parent().first().width();
-            breakWasTwoOrMore= false;
-        }
-
-        // The visible list is overflowing the available space
-        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
-
-            // Record vlinks width
-            breaks.push($vlinks.width());
-
-            // Move last element to the grouped items
-            $vlinks.children().last().prependTo($hlinks);
-            $hlinks.removeClass('hidden');
-            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
-        } else {
-
-            // Check if there's space to move an item back to the nav
-            if (availableSpace > breaks[breaks.length-1]) {
-                $hlinks.children().first().appendTo($vlinks);
-                breaks.pop();
-                $btn.attr('data-item-count', breaks.length);
-            }
-
-            if (breaks.length < 1) {
-                $hlinks.addClass('hidden');
-                $btn.addClass('hidden').attr('data-item-count', breaks.length);
-            }
-        }
-
-        if (breaks.length > 1) {
-            breakWasTwoOrMore = true;
-        }
-
-        // Rerun if nav is still overflowing
-        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
-            this.updateNavigation();
-        }
-    };
-
-    return new MenuPriority();
-
-})(jQuery);
-
-//
 // @name Video Player
 // @description  Video functionalty for vimeo and youtube.
 //
@@ -16540,39 +16610,6 @@ HelsingborgPrime.Helper.Player = (function ($) {
     };
 
     return new Player();
-
-})(jQuery);
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Post = (function ($) {
-
-    function Post() {
-        this.bindEvents();
-    }
-
-    Post.prototype.bindEvents = function() {
-        $(document).on('click', '.post-collapsed article', function (e) {
-            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
-        }.bind(this));
-    };
-
-    return new Post();
 
 })(jQuery);
 
