@@ -56,16 +56,7 @@
         position: relative;
 
         &:hover {
-            color: $palette-gray-4;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        color: map-get($color, fourth);
-                    }
-                }
-            }
+            color: $palette-4;
         }
     }
 
@@ -118,16 +109,7 @@
 
     .current,
     .current-menu-item > a {
-        color: $palette-gray-4;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    color: map-get($color, fourth);
-                }
-            }
-        }
+        color: $palette-4;
     }
 
     .sub-menu .current,
@@ -140,16 +122,7 @@
             bottom: 0;
             width: 8px;
             display: block;
-            background-color: $palette-gray-4;
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: map-get($color, fourth);
-                    }
-                }
-            }
+            background-color: $palette-4;
         }
     }
 
@@ -205,18 +178,9 @@ $nav-duration: 200ms;
         top: -2px;
 	    width: 28px;
 	    height: 4px;
-	    background-color: $creamy-darker;
+	    background-color: $palette-5;
 	    transition: $nav-duration;
 		border-radius: 1px;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, fifth), 10%);
-                }
-            }
-        }
 
 	    &::before,
         &::after {
@@ -224,19 +188,11 @@ $nav-duration: 200ms;
 	        content: "";
 	        height: 4px;
 	        width: 28px;
-	        background-color: $creamy-darker;
+	        background-color: darken($palette-5, 10%);
 	        position: absolute;
 	        z-index: -1;
 	        transition: $nav-duration $nav-duration/2;
 	        border-radius: 1px;
-
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: darken(map-get($color, fifth), 10%);
-                    }
-                }
-            }
 	    }
 
 	    &:before { top: 7px;  }

@@ -1,6 +1,9 @@
 // Include gulp
 var gulp = require('gulp');
 
+//Package info
+var package = require('./package.json');
+
 // Include Our Plugins
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
@@ -10,6 +13,12 @@ var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var dss = require('gulp-docs');
+var git = require('git-rev');
+var copy = require('gulp-copy');
+var git = require('gulp-git');
+var bump = require('gulp-bump');
+var filter = require('gulp-filter');
+var tag_version = require('gulp-tag-version');
 
 // Icon plugins
 var svgscaler = require('svg-scaler');
@@ -20,12 +29,26 @@ var consolidate = require('gulp-consolidate');
 
 var node_modules = 'node_modules/';
 
+//Version number
+function inc(importance) {
+    return gulp.src(['./package.json'])
+        .pipe(bump({type: importance}))
+        .pipe(gulp.dest('./'))
+        .pipe(git.commit('Bumps package version'))
+        .pipe(filter('package.json'))
+        .pipe(tag_version());
+}
+
+gulp.task('patch', function() { return inc('patch'); })
+gulp.task('minor', function() { return inc('minor'); })
+gulp.task('major', function() { return inc('major'); })
+
 // Compile Our Sass
 gulp.task('sass-dist', function() {
-    return gulp.src('source/sass/hbg-prime.scss')
+    return gulp.src('source/sass/themes/*.scss')
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.min'}))
+            .pipe(rename({prefix: 'hbg-prime-', suffix: '.min'}))
             .pipe(cssnano({
                 mergeLonghand: false,
                 zindex: false,
@@ -52,14 +75,15 @@ gulp.task('sass-dist', function() {
                 svgo: true,
                 uniqueSelectors: true
             }))
-            .pipe(gulp.dest('dist/css'));
+            .pipe(gulp.dest('dist/css'))
+            .pipe(copy('dist/' + package.version + '/css/', {prefix: 2}));
 });
 
 gulp.task('sass-dev', function() {
-    return gulp.src('source/sass/hbg-prime.scss')
+    return gulp.src('source/sass/themes/*.scss')
             .pipe(sass({ sourceComments: true }))
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.dev'}))
+            .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
             .pipe(gulp.dest('dist/css'));
 });
 
@@ -83,15 +107,17 @@ gulp.task('scripts', function() {
             .pipe(gulp.dest('dist/js'))
             .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
-            .pipe(gulp.dest('dist/js'));
+            .pipe(gulp.dest('dist/js'))
+            .pipe(copy('dist/' + package.version + '/js/', {prefix: 2}));
 });
 
 // Documented Style Sheets
 gulp.task('dss-sass', function() {
     return gulp.src([
             'source/sass/**/*.scss',
+            '!source/sass/themes/*.scss',
             '!source/sass/config/*.scss',
-            '!source/sass/hbg-prime.scss'
+            '!source/sass/_bootstrap.scss'
         ])
         .pipe(dss({
             fileName: "documentation-sass",
@@ -128,6 +154,10 @@ gulp.task('iconsprite', function () {
         .pipe(gulp.dest(''));
 });
 
+// CSS & JS versioning
+gulp.task('versioning', function () {
+});
+
 // Iconfont
 gulp.task('icons-scale', function () {
     return gulp.src('source/icons/**/*.svg')
@@ -146,7 +176,7 @@ gulp.task('iconfont', ['icons-scale'], function () {
             ascent: 0
         }))
         .on('glyphs', function (glyph, options) {
-            gulp.src('source/icons/hbg-pricons.scss')
+            gulp.src('source/icons/_pricons.scss')
               .pipe(consolidate('lodash', {
                 glyphs: glyph,
                 fontName: 'hbg-pricons',
@@ -193,6 +223,11 @@ gulp.task('watch', function() {
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
 });
 
+// Istructions
+gulp.task('instructions', function() {
+    console.log("NOTICE: Always run 'gulp patch, gulp minor, gulp major' to bump versions in styleguide!");
+});
+
 // Default Task
-gulp.task('default', ['sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
+gulp.task('default', ['instructions','sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 

@@ -16,7 +16,11 @@
 
 .mce-content-body,
 article {
-	margin-bottom: $content-gutter;
+	margin-bottom: $content-gutter * 3;
+
+	br {
+		line-height: 2.5;
+	}
 
 	em {
 		font-style: italic;
@@ -96,23 +100,24 @@ article {
 			text-decoration: none;
 		}
 	}
+}
 
-	&:not(.full) {
-		p,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		li,
-		blockquote,
-		.wp-caption {
-			max-width: 700px;
+article:not(.full) {
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	li,
+	blockquote,
+	.wp-caption,
+	[class^="mod-"] {
+		max-width: 700px;
 
-			@media print {
-				max-width: none !important;
-			}
+		@media print {
+			max-width: none !important;
 		}
 	}
 }

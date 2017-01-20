@@ -143,35 +143,14 @@
             }
         }
 
-        background-color: $palette-gray-3;
+        background-color: $palette-3;
         color: #fff;
-        border-color: $palette-gray-3;
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: map-get($color, third);
-                    border-color: map-get($color, third);
-                    color: #fff;
-                }
-            }
-        }
+        border-color: $palette-3;
 
         &:hover,
         &:focus {
-            background-color: darken($palette-gray-3, 3%);
-            border-color: darken($palette-gray-3, 3%);
-
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: darken(map-get($color, third), 3%);
-                        border-color: darken(map-get($color, third), 3%);
-                    }
-                }
-            }
+            background-color: darken($palette-3, 3%);
+            border-color: darken($palette-3, 3%);
         }
     }
 }

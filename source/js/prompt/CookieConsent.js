@@ -6,8 +6,9 @@ HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
 
 HelsingborgPrime.Prompt.CookieConsent = (function ($) {
 
-    var useLocalStorage = true;
-    var animationSpeed = 1000;
+    var _cookieConsentVisible = false;
+    var _useLocalStorage = true;
+    var _animationSpeed = 1000;
 
     function CookieConsent() {
         this.init();
@@ -57,10 +58,11 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
         ');
 
         $('#cookie-consent').show();
+        _cookieConsentVisible = true;
     };
 
     CookieConsent.prototype.hasAccepted = function() {
-        if (useLocalStorage) {
+        if (_useLocalStorage) {
             return window.localStorage.getItem('cookie-consent');
         } else {
             return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
@@ -69,8 +71,9 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
 
     CookieConsent.prototype.accept = function() {
         $('#cookie-consent').remove();
+        _cookieConsentVisible = false;
 
-        if (useLocalStorage) {
+        if (_useLocalStorage) {
             try {
                 window.localStorage.setItem('cookie-consent', true);
                 return true;

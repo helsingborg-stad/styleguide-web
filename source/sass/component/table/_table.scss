@@ -120,28 +120,14 @@ article table,
 .table-hover {
     tbody {
         tr:hover {
-            // Color theme styles
-            @if ($includeThemes == true) {
-                @each $theme, $color in $themes {
-                    .theme-#{$theme} & {
-                        background-color: lighten(map-get($color, fourth),60%);
-                    }
-                }
-            }
+            background-color: lighten($palette-4, 60%);
         }
     }
 
     &.table-striped {
         tbody {
             tr:nth-child(even):hover {
-                // Color theme styles
-                @if ($includeThemes == true) {
-                    @each $theme, $color in $themes {
-                        .theme-#{$theme} & {
-                            background-color: lighten(map-get($color, fourth),58%);
-                        }
-                    }
-                }
+                background-color: lighten($palette-4, 58%);
             }
         }
     }
@@ -153,7 +139,7 @@ article table,
     }
 }
 
-.table-sm {
+table.table-sm {
     font-size: .8em;
 
     th, td {
@@ -161,7 +147,7 @@ article table,
     }
 }
 
-.table-lg {
+table.table-lg {
     font-size: 1.1em;
 
     th, td {

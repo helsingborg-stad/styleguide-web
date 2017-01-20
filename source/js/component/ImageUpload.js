@@ -47,20 +47,20 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
             drags++;
 
             if (drags === 1) {
-                $imageUpload.addClass('is-dragover');
+                $(e.target).closest(elementClass).addClass('is-dragover');
             }
         })
         .on('dragleave', function (e) {
             drags--;
 
             if (drags === 0) {
-                $imageUpload.removeClass('is-dragover');
+                $(e.target).closest(elementClass).removeClass('is-dragover');
             }
         })
         .on('drop', function (e) {
             drags--;
             if (drags === 0) {
-                $imageUpload.removeClass('is-selected is-dragover');
+                $(e.target).closest(elementClass).removeClass('is-selected is-dragover');
             }
 
             this.addFile($(e.target).closest(elementClass), e.originalEvent.dataTransfer.files[0]);

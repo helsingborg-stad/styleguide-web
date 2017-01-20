@@ -66,17 +66,8 @@
 }
 
 .label-theme {
-    background-color: $palette-gray-4;
+    background-color: $palette-4;
     color: #fff;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
 }
 
 .label-sm {

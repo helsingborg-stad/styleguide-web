@@ -63,19 +63,9 @@
 }
 
 .box-news {
-    background-color: $palette-gray-2;
+    background-color: $palette-2;
     color: #fff;
     padding: 0;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-                color: #fff;
-            }
-        }
-    }
 
     .box-title,
     h1,

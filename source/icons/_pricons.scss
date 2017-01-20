@@ -71,14 +71,7 @@
 }
 
 .<%= className %>-badge-theme {
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
-        }
-    }
+    background-color: $palette-2;
 }
 
 /* Badge colors */

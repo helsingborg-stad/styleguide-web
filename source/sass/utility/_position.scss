@@ -50,3 +50,10 @@
 .inline-block + .inline-block {
     margin-left: $content-gutter;
 }
+
+.is-sticky-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $level-top;
+}

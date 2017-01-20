@@ -280,18 +280,9 @@ label.accordion-toggle {
 }
 
 .accordion-table-head {
-    background-color: $palette-gray-2;
+    background-color: $palette-2;
     color: #fff;
     font-weight: bold;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
-        }
-    }
 }
 
 .modal-body .accordion {

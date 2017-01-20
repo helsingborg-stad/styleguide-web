@@ -56,7 +56,7 @@
 }
 
 @mixin box-filled {
-    background-color: $palette-gray-2;
+    background-color: $palette-2;
     color: #fff;
 
     @media print {
@@ -100,15 +100,6 @@
 
         img {
             @extend .img-inherit-width;
-        }
-    }
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-            }
         }
     }
 

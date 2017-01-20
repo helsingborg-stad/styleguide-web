@@ -8,13 +8,13 @@
 @import 'config/button';
 @import 'config/z-index';
 @import 'config/table';
-@import 'config/themes';
 @import 'config/box';
 
 // ***************************************************************
 // *** Icons
 // ***************************************************************
-@import 'hbg-pricons';
+@import 'pricons';
+@import 'font-awesome.min';
 
 // ***************************************************************
 // *** Tools
@@ -27,8 +27,6 @@
 @import 'mixin/grid';
 @import 'mixin/box';
 @import 'mixin/material';
-
-@import 'font-awesome.min';
 
 // ***************************************************************
 // *** Layout

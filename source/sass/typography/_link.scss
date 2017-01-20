@@ -1,15 +1,6 @@
 a {
-    color: $palette-gray-4;
+    color: $palette-4;
     text-decoration: none;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                color: map-get($color, fourth);
-            }
-        }
-    }
 
     &:hover,
     &:focus {
@@ -18,8 +9,8 @@ a {
 }
 
 .mce-content-body a:not([class]),
-[class*="theme-"] article a:not([class]),
-[class*="theme-"] article a.link-item {
+article a:not([class]),
+article a.link-item {
     color: $palette-blue-2;
     text-decoration: underline;
 
@@ -40,79 +31,30 @@ a.link-box,
 .link-box a {
     display: block;
     position: relative;
-    background-color: $palette-gray-2;
+    background-color: $palette-2;
     padding: 5px 10px;
     border-radius: 3px;
     overflow: hidden;
     color: #fff;
 
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, second);
-
-                &::before {
-                    background-color: map-get($color, third);
-                }
-            }
-        }
-    }
-
     &:hover {
-        background-color: darken($palette-gray-2, 5%);
-
-        // Color theme styles
-        @if ($includeThemes == true) {
-            @each $theme, $color in $themes {
-                .theme-#{$theme} & {
-                    background-color: darken(map-get($color, second), 5%);
-                }
-            }
-        }
+        background-color: darken($palette-2, 5%);
     }
 }
 
 a.link-box:nth-of-type(2),
 .link-box:nth-of-type(2) a {
-    background-color: $palette-gray-4;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fourth);
-            }
-        }
-    }
+    background-color: $palette-4;
 }
 
 a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
-    background-color: $palette-gray-5;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, fifth);
-            }
-        }
-    }
+    background-color: $palette-5;
 }
 
 a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
-    background-color: $palette-gray-3;
-
-    // Color theme styles
-    @if ($includeThemes == true) {
-        @each $theme, $color in $themes {
-            .theme-#{$theme} & {
-                background-color: map-get($color, third);
-            }
-        }
-    }
+    background-color: $palette-3;
 }
 
 .link-box + .link-box {
