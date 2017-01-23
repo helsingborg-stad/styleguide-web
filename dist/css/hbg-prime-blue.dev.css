@@ -7427,7 +7427,7 @@ button.btn-icon {
   /* line 1, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
   .site-header .logotype {
     max-width: 90%; }
-    /* line 6, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+    /* line 5, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
     .site-header .logotype .tagline {
       display: none; } }
 
@@ -7437,24 +7437,24 @@ button.btn-icon {
     max-width: 92%; } }
 
 @media screen and (max-width: 468px) {
-  /* line 15, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  /* line 14, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
   .site-header .logotype span.h1 {
     font-size: 1.1em; } }
 
 @media screen and (min-width: 469px) and (max-width: 768px) {
-  /* line 15, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  /* line 14, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
   .site-header .logotype span.h1 {
     font-size: 1.4em; } }
 
-/* line 25, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 24, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .navbar {
   box-shadow: none !important; }
 
-/* line 29, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 28, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title {
   font-size: 1.1em; }
 
-/* line 33, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 32, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title-block {
   display: block;
   text-align: center;
@@ -10248,6 +10248,26 @@ a.box-index {
   .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled {
     background-color: transparent !important;
     color: #252525 !important; } }
+
+/* line 1, /www/sites/HbgPrime/wwwroot/source/sass/component/box/_author.scss */
+.box.box-author {
+  margin-top: 42px;
+  text-align: center; }
+  /* line 7, /www/sites/HbgPrime/wwwroot/source/sass/component/box/_author.scss */
+  .box.box-author .box-image {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: -42px;
+    border-radius: 50%; }
+  /* line 15, /www/sites/HbgPrime/wwwroot/source/sass/component/box/_author.scss */
+  .box.box-author .author-name {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold; }
+  /* line 21, /www/sites/HbgPrime/wwwroot/source/sass/component/box/_author.scss */
+  .box.box-author .author-description {
+    margin-top: 15px; }
 
 /* line 66, /www/sites/HbgPrime/wwwroot/source/sass/component/box/_panel.scss */
 .box-panel,
