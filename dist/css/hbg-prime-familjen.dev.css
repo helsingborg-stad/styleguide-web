@@ -3662,7 +3662,7 @@ table {
 
 /* line 13, /www/sites/HbgPrime/wwwroot/source/sass/layout/_scaffolding.scss */
 body {
-  font-family: system, "Segoe UI", Tahoma, -apple-system;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Tahoma;
   font-size: 17px;
   line-height: 1.6;
   color: #252525; }
@@ -7154,7 +7154,7 @@ input[type="button"].btn::-moz-focus-inner {
   padding: 7.5px 15px;
   background-color: #e7e5e1;
   border: 1px solid #e7e5e1;
-  font-family: system, "Segoe UI", Tahoma, -apple-system;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Tahoma;
   font-size: 0.9em;
   font-weight: 600;
   line-height: 1.3;
@@ -11987,7 +11987,7 @@ textarea {
   padding: 7.5px 10px;
   background: #fff;
   border: 1px solid #e7e5e1;
-  font-family: system, "Segoe UI", Tahoma, -apple-system;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Tahoma;
   font-size: .9em;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
   line-height: 1.6; }
@@ -12087,7 +12087,7 @@ select {
   border: 1px solid #e7e5e1;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
-  font-family: system, "Segoe UI", Tahoma, -apple-system;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Tahoma;
   font-size: .9em; }
   /* line 46, /www/sites/HbgPrime/wwwroot/source/sass/component/form/_select.scss */
   select:disabled {
@@ -12725,7 +12725,7 @@ option {
     padding: 5px 10px;
     background-color: #e7e5e1;
     border: 1px solid #e7e5e1;
-    font-family: system, "Segoe UI", Tahoma, -apple-system;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Tahoma;
     font-size: 0.9em;
     font-weight: 600;
     color: #252525;
