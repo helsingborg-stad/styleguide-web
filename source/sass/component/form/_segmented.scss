@@ -40,6 +40,12 @@
         }
     }
 
+    li.title {
+        padding: $content-gutter/3 $content-gutter;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
     label {
         display: block;
         padding: $content-gutter/3 $content-gutter;
@@ -53,7 +59,7 @@
 
     input[type="radio"]:checked + label,
     input[type="checkbox"]:checked + label {
-        background-color: $creamy-darker;
+        background-color: lighten($creamy-darker, 5%);
 
         .label {
             background-color: #fff !important;
