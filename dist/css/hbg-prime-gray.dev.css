@@ -7960,13 +7960,13 @@ button.btn-icon {
     .navbar ul a:hover, .navbar ul a:focus {
       text-decoration: underline; }
   /* line 72, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-  .navbar .current-menu-item a,
-  .navbar .current-page-ancestor a {
+  .navbar .current-menu-item > a,
+  .navbar .current-page-ancestor > a {
     position: relative;
     text-decoration: underline; }
     /* line 77, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-    .navbar .current-menu-item a::after,
-    .navbar .current-page-ancestor a::after {
+    .navbar .current-menu-item > a::after,
+    .navbar .current-page-ancestor > a::after {
       bottom: 0;
       left: 50%;
       border: solid transparent;
@@ -8030,12 +8030,14 @@ button.btn-icon {
   top: 100%;
   left: 0; }
 
-/* line 21, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown > li.menu-item-has-children > a {
+/* line 22, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+.nav-dropdown > li.menu-item-has-children > a,
+.nav-dropdown > li.has-children > a {
   position: relative;
   padding-right: 45px; }
-  /* line 25, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-  .nav-dropdown > li.menu-item-has-children > a::after {
+  /* line 26, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown > li.menu-item-has-children > a::after,
+  .nav-dropdown > li.has-children > a::after {
     font-family: hbg-pricons;
     line-height: 1;
     text-rendering: auto;
@@ -8046,73 +8048,80 @@ button.btn-icon {
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    font-size: 10px; }
 
-/* line 34, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown > li.menu-item-has-children:hover {
+/* line 36, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+.nav-dropdown > li.menu-item-has-children:hover,
+.nav-dropdown > li.has-children:hover {
   background-color: #5e5e5e; }
 
-/* line 39, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+/* line 41, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
 .nav-dropdown > li:hover > ul.sub-menu {
   display: block; }
 
-/* line 43, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+/* line 45, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
 .nav-dropdown > li {
   position: relative; }
 
-/* line 47, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+/* line 49, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
 .nav-dropdown ul.sub-menu {
   background-color: #636363; }
 
 /**
  * Sub menu
  */
-/* line 55, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu li {
-  display: block;
-  padding: 0;
-  position: relative; }
-  /* line 60, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-  .nav-dropdown ul.sub-menu li ul.sub-menu {
-    display: none; }
-
-/* line 65, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu li.menu-item-has-children > a {
-  position: relative;
-  padding-right: 45px; }
+/* line 56, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+.nav-dropdown ul.sub-menu {
+  width: 250px; }
+  /* line 59, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu li {
+    display: block;
+    padding: 0;
+    position: relative; }
+    /* line 64, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+    .nav-dropdown ul.sub-menu li ul.sub-menu {
+      display: none; }
   /* line 69, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-  .nav-dropdown ul.sub-menu li.menu-item-has-children > a::after {
-    font-family: hbg-pricons;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: -15%;
-    content: "";
+  .nav-dropdown ul.sub-menu li.menu-item-has-children > a,
+  .nav-dropdown ul.sub-menu li.has-children > a {
+    position: relative;
+    padding-right: 45px; }
+    /* line 74, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+    .nav-dropdown ul.sub-menu li.menu-item-has-children > a::after,
+    .nav-dropdown ul.sub-menu li.has-children > a::after {
+      font-family: hbg-pricons;
+      line-height: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: -15%;
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 10px; }
+  /* line 84, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu li:hover > ul.sub-menu {
+    display: block;
     position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%); }
-
-/* line 78, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu li:hover > ul.sub-menu {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 100%; }
-
-/* line 85, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu li:first-child {
-  padding-top: 5px; }
-
-/* line 89, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu li:last-child {
-  padding-bottom: 5px; }
-
-/* line 93, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
-.nav-dropdown ul.sub-menu a {
-  display: block;
-  padding: 5px 15px; }
+    top: 0;
+    left: 100%; }
+  /* line 91, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu li:first-child {
+    padding-top: 5px; }
+  /* line 95, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu li:last-child {
+    padding-bottom: 5px; }
+  /* line 99, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu a {
+    display: block;
+    padding: 5px 15px; }
+  /* line 106, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar-dropdown.scss */
+  .nav-dropdown ul.sub-menu li.current > a::after,
+  .nav-dropdown ul.sub-menu li.current-menu-item > a::after {
+    display: none; }
 
 /* line 20, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_tabs.scss */
 .nav-tabs {

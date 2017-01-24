@@ -69,8 +69,8 @@
         }
     }
 
-    .current-menu-item a,
-    .current-page-ancestor a {
+    .current-menu-item > a,
+    .current-page-ancestor > a {
         position: relative;
         text-decoration: underline;
 
