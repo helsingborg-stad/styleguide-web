@@ -49,6 +49,10 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     flex: 0 0 auto;
 }
 
+.box-image-container {
+    position: relative;
+}
+
 [data-equal-item] .box-image-container {
     flex: 0 0 auto;
 }

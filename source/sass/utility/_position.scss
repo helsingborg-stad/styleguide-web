@@ -43,6 +43,30 @@
     left: 0;
 }
 
+.pos-absolute-topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pos-absolute-topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pos-absolute-bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.pos-absolute-bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 .inline-block {
     display: inline-block !important;
 }
