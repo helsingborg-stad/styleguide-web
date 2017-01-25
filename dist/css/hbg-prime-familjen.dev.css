@@ -7960,12 +7960,12 @@ button.btn-icon {
     .navbar ul a:hover, .navbar ul a:focus {
       text-decoration: underline; }
   /* line 72, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-  .navbar .current-menu-item > a,
+  .navbar .nav:not(.nav-dropdown) .current-menu-item > a,
   .navbar .current-page-ancestor > a {
     position: relative;
     text-decoration: underline; }
     /* line 77, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-    .navbar .current-menu-item > a::after,
+    .navbar .nav:not(.nav-dropdown) .current-menu-item > a::after,
     .navbar .current-page-ancestor > a::after {
       bottom: 0;
       left: 50%;

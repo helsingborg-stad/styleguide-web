@@ -69,8 +69,8 @@
         }
     }
 
-    .current-menu-item > a,
-    .current-page-ancestor > a {
+    .nav:not(.nav-dropdown) .current-menu-item > a,
+    .nav:not(.nav-dropdown) .current-page-ancestor > a {
         position: relative;
         text-decoration: underline;
 
