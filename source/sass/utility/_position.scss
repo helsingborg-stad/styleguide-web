@@ -75,9 +75,11 @@
     margin-left: $content-gutter;
 }
 
+.navbar-transparent.sticky-scroll,
 .is-sticky-scroll {
     position: fixed;
     top: 0;
     left: 0;
     z-index: $level-top;
+    width: 100%;
 }

@@ -35,6 +35,11 @@
 
     &.navbar-transparent {
         background-color: transparent;
+        transition: 300ms all ease-in-out;
+
+        &.is-sticky-scroll {
+            background-color: $palette-4;
+        }
     }
 
     &.navbar-fixed {

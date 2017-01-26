@@ -12,8 +12,10 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
     var _isAdminbar = false;
 
     function StickyScroll() {
-        $('.sticky-scroll').each(function (index, element) {
-            this.init(element);
+        $(window).load(function () {
+            $('.sticky-scroll').each(function (index, element) {
+                this.init(element);
+            }.bind(this));
         }.bind(this));
 
         $(document).on('scroll', function () {
@@ -37,8 +39,10 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
         _stickyElements.push({
             element: $element,
             originalMarginTop: $element.css('margin-top'),
-            originalOffset: null
+            originalOffset: offsetTop
         });
+
+        console.log(_stickyElements);
     }
 
     /**
@@ -50,30 +54,28 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
         var itemMarginTop = 0;
 
         if (_isAdminbar) {
-            scrollPos += $('#wpadminbar').height();
             itemMarginTop = $('#wpadminbar').height();
         }
+
 
         _stickyElements.forEach(function (item) {
             var $element = $(item.element);
 
             if (
-                (item.originalOffset === null && scrollPos >= $element.offset().top)
+                (scrollPos > $element.offset().top)
                 ||
-                (item.originalOffset !== null && scrollPos >= item.originalOffset)
+                (scrollPos > item.originalOffset)
             ) {
                 if (!$element.hasClass(_isFloatingClass)) {
-                    item.originalOffset = $element.offset().top;
                     this.addPlaceholder(item.element);
                     item.element.addClass(_isFloatingClass);
                     item.element.css('margin-top', itemMarginTop);
                 }
 
-                return
+                return;
             }
 
-            // Resets the floating class if it shouldnt float
-            if (item.element.hasClass(_isFloatingClass)) {
+            if ($element.hasClass(_isFloatingClass)) {
                 item.originalOffset = null;
                 item.element.removeClass(_isFloatingClass);
                 this.removePlaceholder(item.element);
@@ -85,8 +87,13 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
     /**
      * Adds a placeholder to keep the dom from "jumping"
      * @param {object} element
+     * @return {bool} Did we add the placeholder?
      */
     StickyScroll.prototype.addPlaceholder = function(element) {
+        if (element.hasClass('navbar-transparent')) {
+            return false;
+        }
+
         var $ghost = element.clone();
         $ghost.addClass(_isFloatingClass + '-placeholder');
 
@@ -100,6 +107,8 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
 
         // Insert the placeholder to the dom
         $ghost.insertBefore(element);
+
+        return true;
     };
 
     /**
