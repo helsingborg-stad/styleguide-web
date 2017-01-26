@@ -35,10 +35,25 @@
 
     &.navbar-transparent {
         background-color: transparent;
-        transition: 300ms all ease-in-out;
+        transition: $stickyTransition all ease-in-out;
 
         &.is-sticky-scroll {
             background-color: $palette-4;
+        }
+    }
+
+    .logotype .h1,
+    .logotype svg {
+        transition: $stickyTransition all ease-in-out;
+    }
+
+    &.is-sticky-scroll {
+        .logotype .h1 {
+            font-size: 1.7em;
+        }
+
+        .logotype svg {
+            height: 40px;
         }
     }
 

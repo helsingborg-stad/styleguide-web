@@ -16267,114 +16267,90 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
 
     var _stickyElements = [];
     var _isFloatingClass = 'is-sticky-scroll';
-    var _isAdminbar = false;
 
     function StickyScroll() {
-        $(window).load(function () {
-            $('.sticky-scroll').each(function (index, element) {
-                this.init(element);
-            }.bind(this));
+        $(document).ready(function () {
+            this.init();
         }.bind(this));
-
-        $(document).on('scroll', function () {
-            this.scrolling();
-        }.bind(this));
-
-        if ($('#wpadminbar').length) {
-            _isAdminbar = true;
-        }
     }
 
-    /**
-     * Initializes the sticky-scroll functionallity on element
-     * @param  {object} element
-     * @return {void}
-     */
-    StickyScroll.prototype.init = function(element) {
-        var $element = $(element).closest('.sticky-scroll');
-        var offsetTop = $(element).offset().top;
+    StickyScroll.prototype.init = function() {
+        var $elements = $('.sticky-scroll');
 
-        _stickyElements.push({
-            element: $element,
-            originalMarginTop: $element.css('margin-top'),
-            originalOffset: offsetTop
+        $elements.each(function (index, element) {
+            var $element = $(element);
+
+            _stickyElements.push({
+                element: $element,
+                offsetTop: $element.offset().top
+            })
         });
-    }
 
-    /**
-     * Handles actions during scroll
-     * @return {void}
-     */
-    StickyScroll.prototype.scrolling = function() {
-        var scrollPos = $(document).scrollTop();
-        var itemMarginTop = 0;
-
-        if (_isAdminbar) {
-            itemMarginTop = $('#wpadminbar').height();
-        }
-
-
-        _stickyElements.forEach(function (item) {
-            var $element = $(item.element);
-
-            if (
-                (scrollPos > $element.offset().top)
-                ||
-                (scrollPos > item.originalOffset)
-            ) {
-                if (!$element.hasClass(_isFloatingClass)) {
-                    this.addPlaceholder(item.element);
-                    item.element.addClass(_isFloatingClass);
-                    item.element.css('margin-top', itemMarginTop);
-                }
-
-                return;
-            }
-
-            if ($element.hasClass(_isFloatingClass)) {
-                item.originalOffset = null;
-                item.element.removeClass(_isFloatingClass);
-                this.removePlaceholder(item.element);
-                item.element.css('margin-top', item.originalMarginTop);
-            }
+        $(window).on('scroll', function () {
+            this.scrolling();
         }.bind(this));
     };
 
     /**
-     * Adds a placeholder to keep the dom from "jumping"
-     * @param {object} element
-     * @return {bool} Did we add the placeholder?
+     * Runs when scrolling
+     * @return {void}
      */
-    StickyScroll.prototype.addPlaceholder = function(element) {
-        if (element.hasClass('navbar-transparent')) {
-            return false;
+    StickyScroll.prototype.scrolling = function() {
+        var scrollOffset = $(window).scrollTop();
+
+        $.each(_stickyElements, function (index, item) {
+            if (scrollOffset > item.offsetTop) {
+                return this.stick(item.element);
+            }
+
+            return this.unstick(item.element);
+        }.bind(this));
+    };
+
+    /**
+     * Makes a element sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
+     */
+    StickyScroll.prototype.stick = function($element) {
+        if ($element.hasClass(_isFloatingClass)) {
+            return;
         }
 
-        var $ghost = element.clone();
-        $ghost.addClass(_isFloatingClass + '-placeholder');
+        if (!$element.hasClass('navbar-transparent')) {
+            this.addAnchor($element);
+        }
 
-        // Hide the ghost placeholder
-        $ghost.css({
-            visibility: 'hidden'
-        });
-
-        // Make sure to disable all type of form elements in placeholder
-        $ghost.find('form, input, select, textarea').prop('disabled', true);
-
-        // Insert the placeholder to the dom
-        $ghost.insertBefore(element);
-
+        $element.addClass(_isFloatingClass);
         return true;
     };
 
     /**
-     * Removes the placeholder
-     * @param  {object} element Element
-     * @return {void}
+     * Makes a element non-sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
      */
-    StickyScroll.prototype.removePlaceholder = function(element) {
-        var $ghost = element.prev('.' + _isFloatingClass + '-placeholder');
-        $ghost.remove();
+    StickyScroll.prototype.unstick = function($element) {
+        if (!$element.hasClass(_isFloatingClass)) {
+            return;
+        }
+
+        if (!$element.hasClass('navbar-transparent')) {
+            this.removeAnchor($element);
+        }
+
+        $element.removeClass(_isFloatingClass);
+        return true;
+    };
+
+    StickyScroll.prototype.addAnchor = function($element) {
+        $('<div class="sticky-scroll-anchor"></div>').height($element.outerHeight()).insertBefore($element);
+        return true;
+    };
+
+    StickyScroll.prototype.removeAnchor = function($element) {
+        $element.prev('.sticky-scroll-anchor').remove();
+        return true;
     };
 
     return new StickyScroll();

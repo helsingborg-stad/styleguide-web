@@ -51,6 +51,16 @@
         padding: 0;
         height: 70px;
         line-height: 70px;
+        transition: $stickyTransition all ease-in-out;
+    }
+
+    &.is-sticky-scroll #main-menu > li > a {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    &.is-sticky-scroll .menu-trigger {
+        margin-top: 16px;
     }
 
     .dropdown .dropdown-menu {
@@ -76,6 +86,7 @@
 .site-header.header-jumbo .menu-trigger {
     float: right;
     margin-top: 22px;
+    transition: $stickyTransition all ease-in-out;
 }
 
 /*
