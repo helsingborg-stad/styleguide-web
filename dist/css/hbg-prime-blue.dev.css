@@ -7964,13 +7964,13 @@ button.btn-icon {
     .navbar ul a:hover, .navbar ul a:focus {
       text-decoration: underline; }
   /* line 77, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-  .navbar .nav:not(.nav-dropdown) .current-menu-item > a,
-  .navbar .nav:not(.nav-dropdown) .current-page-ancestor > a {
+  .navbar :not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
+  .navbar :not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a {
     position: relative;
     text-decoration: underline; }
     /* line 82, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_navbar.scss */
-    .navbar .nav:not(.nav-dropdown) .current-menu-item > a::after,
-    .navbar .nav:not(.nav-dropdown) .current-page-ancestor > a::after {
+    .navbar :not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a::after,
+    .navbar :not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after {
       bottom: 0;
       left: 50%;
       border: solid transparent;

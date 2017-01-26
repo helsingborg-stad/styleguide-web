@@ -74,8 +74,8 @@
         }
     }
 
-    .nav:not(.nav-dropdown) .current-menu-item > a,
-    .nav:not(.nav-dropdown) .current-page-ancestor > a {
+    &:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
+    &:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a {
         position: relative;
         text-decoration: underline;
 

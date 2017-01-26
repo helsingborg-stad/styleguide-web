@@ -41,8 +41,6 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
             originalMarginTop: $element.css('margin-top'),
             originalOffset: offsetTop
         });
-
-        console.log(_stickyElements);
     }
 
     /**
