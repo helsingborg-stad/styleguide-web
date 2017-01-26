@@ -7666,6 +7666,9 @@ button.btn-icon {
     /* line 19, /www/sites/HbgPrime/wwwroot/source/sass/component/hero/_hero.scss */
     .hero {
       display: none; } }
+  /* line 30, /www/sites/HbgPrime/wwwroot/source/sass/component/hero/_hero.scss */
+  .hero .slider.ratio-16-9 {
+    max-height: 90vh; }
 
 /* line 34, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_nav.scss */
 .nav-aside,

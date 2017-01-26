@@ -26,4 +26,8 @@
     @media print {
         display: none;
     }
+
+    .slider.ratio-16-9 {
+        max-height: 90vh;
+    }
 }
