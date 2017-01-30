@@ -3,3 +3,11 @@
         color: $palette-4;
     }
 }
+
+.header-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $level-9;
+}

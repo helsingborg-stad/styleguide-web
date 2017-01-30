@@ -39,6 +39,16 @@
 
         &.is-sticky-scroll {
             background-color: $palette-4;
+
+            .menu-trigger {
+                margin-top: 16px;
+            }
+
+            .dropdown .dropdown-menu {
+                right: 0;
+                width: auto;
+                white-space: nowrap;
+            }
         }
     }
 
@@ -117,6 +127,10 @@
             padding-right: 0;
         }
     }
+}
+
+.header-transparent .navbar {
+    background-color:  transparent;
 }
 
 .navbar-creamy {
