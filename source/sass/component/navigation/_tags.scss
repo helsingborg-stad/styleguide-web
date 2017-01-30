@@ -32,7 +32,7 @@
     }
 }
 
-.tag {
+body .tag {
     @include material-radius;
     display: inline-block;
     background: $creamy;

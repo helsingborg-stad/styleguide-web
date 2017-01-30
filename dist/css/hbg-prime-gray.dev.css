@@ -8336,7 +8336,7 @@ button.btn-icon {
       text-decoration: none; }
 
 /* line 35, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_tags.scss */
-.tag {
+body .tag {
   display: inline-block;
   background: #f6f5f2;
   border: 1px solid #e7e5e1;
@@ -8347,7 +8347,7 @@ button.btn-icon {
   color: #252525;
   letter-spacing: 0.3px; }
   /* line 42, /www/sites/HbgPrime/wwwroot/source/sass/mixin/_material.scss */
-  body:not(.material-no-radius) .tag {
+  body:not(.material-no-radius) body .tag {
     border-radius: 2px; }
 
 /* line 49, /www/sites/HbgPrime/wwwroot/source/sass/component/navigation/_tags.scss */
