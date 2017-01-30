@@ -75,9 +75,16 @@
     margin-left: $content-gutter;
 }
 
-.site-header.header-jumbo .navbar-transparent.sticky-scroll,
 .is-sticky-scroll {
-    position: fixed;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: $level-top;
+    width: 100%;
+}
+
+.site-header.header-jumbo .navbar-transparent.sticky-scroll {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: $level-top;

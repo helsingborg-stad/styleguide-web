@@ -16289,6 +16289,8 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
         $(window).on('scroll', function () {
             this.scrolling();
         }.bind(this));
+
+        this.scrolling();
     };
 
     /**

@@ -14910,9 +14910,16 @@ article .ratio-10-3,
   margin-left: 15px; }
 
 /* line 78, /www/sites/HbgPrime/wwwroot/source/sass/utility/_position.scss */
-.site-header.header-jumbo .navbar-transparent.sticky-scroll,
 .is-sticky-scroll {
-  position: fixed;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%; }
+
+/* line 86, /www/sites/HbgPrime/wwwroot/source/sass/utility/_position.scss */
+.site-header.header-jumbo .navbar-transparent.sticky-scroll {
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 99999;
