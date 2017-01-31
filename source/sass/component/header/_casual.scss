@@ -64,6 +64,10 @@
         display: table;
     }
 
+    &.header-center .logotype {
+        display: inline-table;
+    }
+
     .navbar {
         margin-top: 0;
     }
