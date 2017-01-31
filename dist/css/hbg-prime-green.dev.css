@@ -11611,7 +11611,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
       body:not(.material-no-shadow) .player {
         box-shadow: none; } }
   /* line 24, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
-  .player a {
+  .player > a {
     display: block;
     text-align: center;
     position: absolute;
@@ -11624,8 +11624,9 @@ body:not(.material-no-radius) :not(.hero) .slider {
     color: #fff;
     line-height: 1; }
     /* line 34, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
-    .player a::before {
+    .player > a::before {
       display: inline-block;
+      color: #fff;
       font-family: hbg-pricons;
       line-height: 1;
       text-rendering: auto;
@@ -11633,25 +11634,25 @@ body:not(.material-no-radius) :not(.hero) .slider {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-    /* line 39, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
-    .player a:hover {
+    /* line 40, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+    .player > a:hover {
       text-decoration: none;
       opacity: 1; }
-  /* line 45, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 46, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
   .player iframe {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
-  /* line 50, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 51, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
   .player.is-playing a {
     opacity: 0; }
 
-/* line 56, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+/* line 57, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
 .no-js .player a {
   opacity: 1; }
-  /* line 59, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 60, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
   .no-js .player a::before {
     font-family: hbg-pricons;
     line-height: 1;
@@ -11661,7 +11662,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     vertical-align: -15%;
     content: "";
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.8); }
-  /* line 64, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 65, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
   .no-js .player a::after {
     display: block;
     content: attr(data-unavailable);
@@ -11669,7 +11670,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     line-height: 1.3;
     text-shadow: 0 0 10px black; }
 
-/* line 73, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
+/* line 74, /www/sites/HbgPrime/wwwroot/source/sass/component/player/_player.scss */
 .player + .player {
   margin-top: 15px; }
 

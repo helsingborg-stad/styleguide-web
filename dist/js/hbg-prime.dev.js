@@ -16512,22 +16512,23 @@ HelsingborgPrime.Helper.Player = (function ($) {
 
     //Check for players, if exists; Run player script.
     function Player() {
-        if(jQuery(".player").length) {
+        if ($(".player").length) {
             this.init();
         }
     }
 
     //Listen for play argument
     Player.prototype.init = function () {
-        jQuery(".player a").on('click', function (e) {
+        $(".player a").on('click', function (e) {
             this.initVideoPlayer($(e.target));
         }.bind(this));
     };
 
     //Init player on start
     Player.prototype.initVideoPlayer = function(e) {
-        var videoid = e.attr("data-video-id");
-        if(this.isNumeric(videoid)) {
+        var videoid = e.attr('data-video-id');
+
+        if (this.isNumeric(videoid)) {
             this.initVimeo(videoid, e);
         } else {
             this.initYoutube(videoid, e);
@@ -16571,31 +16572,41 @@ HelsingborgPrime.Helper.Player = (function ($) {
     };
 
     Player.prototype.toggleControls = function(target) {
-        if ( typeof target !== 'undefined' ) {
-            target = target.parent();
-            if(target.hasClass("is-playing")) {
-                target.removeClass("is-playing");
-                $("html").removeClass("video-is-playing");
-            } else {
-                target.addClass("is-playing");
-                $("html").addClass("video-is-playing");
-            }
-        } else {
-            console.log("Error: Could not start player. Wrapper not found.");
+        if (typeof target === 'undefined') {
+            console.error('Could not start player. Wrapper not found.');
+            return false;
         }
+
+        target = target.parent();
+
+        if (target.hasClass('is-playing')) {
+            target.removeClass('is-playing');
+            $("html").removeClass('video-is-playing');
+            return true;
+        }
+
+        target.addClass('is-playing');
+        $("html").addClass('video-is-playing');
+        return true;
     };
 
-    //Reset all players, or with target id.
+    /**
+     * Reset all players, or with target id.
+     * @param  {object} target
+     * @return {bool}
+     */
     Player.prototype.resetPlayer = function(target) {
        if (typeof target !== 'undefined') {
-            $(".player iframe").remove();
-            $(".player").removeClass("is-playing");
-            $("html").removeClass("video-is-playing");
-        } else {
-            $("iframe",target).remove();
-            target.removeClass("is-playing");
-            $("html").removeClass("video-is-playing");
+            $('.player iframe').remove();
+            $('.player').removeClass('is-playing');
+            $('html').removeClass('video-is-playing');
+            return false;
         }
+
+        $('iframe', target).remove();
+        target.removeClass('is-playing');
+        $('html').removeClass('video-is-playing');
+        return true;
     };
 
     Player.prototype.isNumeric = function(n) {
@@ -16604,7 +16615,7 @@ HelsingborgPrime.Helper.Player = (function ($) {
 
     return new Player();
 
-})(jQuery);
+})($);
 
 //
 // @name Cookie consent

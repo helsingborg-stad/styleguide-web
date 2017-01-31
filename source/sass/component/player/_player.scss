@@ -21,7 +21,7 @@
     @include material-radius;
     @include material-shadow;
 
-    a {
+    > a {
         display: block;
         text-align: center;
         @include center();
@@ -33,6 +33,7 @@
 
         &::before {
             display: inline-block;
+            color: #fff;
             @include pricon($pricon-play-o);
         }
 
