@@ -7462,6 +7462,10 @@ button.btn-icon {
   padding: 5px 0;
   margin-top: 15px; }
 
+/* line 40, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+.site-header.header-center {
+  text-align: center; }
+
 /* line 2, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_business.scss */
 .site-header.header-business .logotype .h1 {
   color: #005c86; }
