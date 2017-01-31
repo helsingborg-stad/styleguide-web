@@ -42,6 +42,14 @@ HelsingborgPrime.Helper.StickyScroll = (function ($) {
     StickyScroll.prototype.scrolling = function() {
         var scrollOffset = $(window).scrollTop();
 
+        if ($('body').hasClass('admin-bar')) {
+            scrollOffset += 32;
+
+            if ($(window).width() < 783) {
+                scrollOffset += 14;
+            }
+        }
+
         $.each(_stickyElements, function (index, item) {
             if (scrollOffset > item.offsetTop) {
                 return this.stick(item.element);

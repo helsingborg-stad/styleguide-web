@@ -83,6 +83,14 @@
     width: 100%;
 }
 
+.admin-bar .is-sticky-scroll {
+    top: 46px;
+
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }
+}
+
 .site-header.header-jumbo .navbar-transparent.sticky-scroll {
     position: absolute;
     top: 0;
