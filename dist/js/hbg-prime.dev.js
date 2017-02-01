@@ -15217,6 +15217,13 @@ HelsingborgPrime.Component.Slider = (function ($) {
         this.init();
         this.preloadImage();
         */
+
+        $('.slider').flickity({
+            cellSelector: '.slide',
+            cellAlign: 'center',
+            setGallerySize: false,
+            wrapAround: true,
+        });
     }
 
     /**

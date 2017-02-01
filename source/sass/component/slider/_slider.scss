@@ -18,8 +18,7 @@
 //
 // @markup
 // <div class="slider slider-nav-bottom slider-nav-hover">
-//     <ul>
-//         <li class="type-featured current">
+//         <div class="slide type-featured current">
 //              <a href="#">
 //                 <span class="text-block text-block-left">
 //                    <span>
@@ -30,8 +29,8 @@
 //                  <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
 //                  <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
 //              </a>
-//         </li>
-//         <li class="type-featured">
+//         </div>
+//         <div class="slide type-featured">
 //              <span class="text-block text-block-right">
 //                  <span>
 //                      <em class="title block-level h1">Amet Ornare Bibendum</em>
@@ -40,8 +39,8 @@
 //              </span>
 //              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
 //              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
-//         </li>
-//         <li class="type-image has-text-block">
+//         </div>
+//         <div class="slide type-image has-text-block">
 //              <span class="text-block text-block-center">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
@@ -50,11 +49,10 @@
 //              </span>
 //              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
 //              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
-//         </li>
-//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
-//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
-//         <li><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></li>
-//     </ul>
+//         </div>
+//         <div class="slide"><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></div>
+//         <div class="slide"><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></div>
+//         <div class="slide"><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></div>
 // </div>
 //
 
