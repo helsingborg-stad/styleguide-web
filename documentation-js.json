@@ -1,0 +1,105 @@
+{
+ "nav": {
+  "other": [
+   "general"
+  ]
+ },
+ "pages": {
+  "other": {
+   "general": [
+    {
+     "name": "Language"
+    },
+    {
+     "name": "Image upload",
+     "description": ""
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+    },
+    {
+     "name": "Gallery",
+     "description": "<p>Popup boxes for gallery items.</p>\n"
+    },
+    {
+     "name": "Slider",
+     "description": "<p>Sliding content</p>\n"
+    },
+    {
+     "name": "Cookie consent"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Prevent scrolling when modal is open (or #modal-* exists in url)</p>\n"
+    },
+    {
+     "name": "Search top",
+     "description": "<p>Open the top search</p>\n"
+    },
+    {
+     "name": "Cookies"
+    },
+    {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
+    },
+    {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
+    },
+    {
+     "name": "Menu",
+     "description": "<p>Function for closing the menu (cannot be done with just :target selector)</p>\n"
+    },
+    {
+     "name": "EqualHeight",
+     "description": "<p>Sets element heights equally to the heighest item</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
+       "path": "~/source/js/helper/equalHeight.js",
+       "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    },
+    {
+     "name": "Menu",
+     "description": "<p>Function for closing the menu (cannot be done with just :target selector)</p>\n"
+    },
+    {
+     "name": "Menu priority"
+    },
+    {
+     "name": "Video Player",
+     "description": "<p>Video functionalty for vimeo and youtube.</p>\n"
+    },
+    {
+     "name": "EqualHeight",
+     "description": "<p>Sets element heights equally to the heighest item</p>\n",
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
+       "path": "~/source/js/helper/post.js",
+       "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
