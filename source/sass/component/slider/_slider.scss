@@ -331,6 +331,7 @@
 }
 
 .slider-nav-bottom {
+    .flickity-prev-next-button,
     [class*="slider-nav-"] {
         top: auto;
         bottom: 0;
@@ -343,6 +344,14 @@
         &:hover {
             color: #fff;
         }
+    }
+
+    .flickity-prev-next-button.previous {
+        left: 0;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
     }
 }
 

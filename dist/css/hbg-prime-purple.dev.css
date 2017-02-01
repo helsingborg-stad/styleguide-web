@@ -11513,6 +11513,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
   opacity: 1; }
 
 /* line 334, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider-nav-bottom .flickity-prev-next-button,
 .slider-nav-bottom [class*="slider-nav-"] {
   top: auto;
   bottom: 0;
@@ -11521,16 +11522,25 @@ body:not(.material-no-radius) :not(.hero) .slider {
   padding: .8em 1em;
   color: #8c8370;
   background-color: #ece9e3; }
-  /* line 343, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 344, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+  .slider-nav-bottom .flickity-prev-next-button:hover,
   .slider-nav-bottom [class*="slider-nav-"]:hover {
     color: #fff; }
 
 /* line 349, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider-nav-bottom .flickity-prev-next-button.previous {
+  left: 0; }
+
+/* line 353, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider-nav-bottom .flickity-prev-next-button.next {
+  right: 0; }
+
+/* line 358, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-viewport {
   width: 100%;
   height: 100%; }
 
-/* line 354, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 363, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-viewport {
   position: absolute;
   top: 0;
@@ -11538,7 +11548,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
   right: 0;
   bottom: 0; }
 
-/* line 362, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 371, /www/sites/HbgPrime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider .slide {
   width: 100%;
   height: 100%; }
