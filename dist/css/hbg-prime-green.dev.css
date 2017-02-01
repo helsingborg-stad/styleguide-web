@@ -7447,14 +7447,42 @@ button.btn-icon {
     font-size: 1.4em; } }
 
 /* line 24, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+.site-header.header-transparent.header-light {
+  color: #fff; }
+  /* line 27, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-light * {
+    color: #fff; }
+  /* line 31, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-light .logotype svg,
+  .site-header.header-transparent.header-light .logotype path {
+    fill: #fff; }
+  /* line 36, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-light .logotype .h1 {
+    color: #fff; }
+
+/* line 41, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+.site-header.header-transparent.header-dark {
+  color: #252525; }
+  /* line 44, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-dark * {
+    color: #252525; }
+  /* line 48, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-dark .logotype svg,
+  .site-header.header-transparent.header-dark .logotype path {
+    fill: #252525; }
+  /* line 53, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-dark .logotype .h1 {
+    color: #252525; }
+
+/* line 58, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .navbar {
   box-shadow: none !important; }
 
-/* line 28, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 62, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title {
   font-size: 1.1em; }
 
-/* line 32, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 66, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title-block {
   display: block;
   text-align: center;
@@ -7462,7 +7490,7 @@ button.btn-icon {
   padding: 5px 0;
   margin-top: 15px; }
 
-/* line 40, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
+/* line 74, /www/sites/HbgPrime/wwwroot/source/sass/component/header/_common.scss */
 .site-header.header-center {
   text-align: center; }
 
@@ -14957,11 +14985,11 @@ article .ratio-10-3,
 
 /* line 86, /www/sites/HbgPrime/wwwroot/source/sass/utility/_position.scss */
 .admin-bar .is-sticky-scroll {
-  top: 46px; }
+  top: 46px !important; }
   @media screen and (min-width: 783px) {
     /* line 86, /www/sites/HbgPrime/wwwroot/source/sass/utility/_position.scss */
     .admin-bar .is-sticky-scroll {
-      top: 32px; } }
+      top: 32px !important; } }
 
 /* line 94, /www/sites/HbgPrime/wwwroot/source/sass/utility/_position.scss */
 .site-header.header-jumbo .navbar-transparent.sticky-scroll {

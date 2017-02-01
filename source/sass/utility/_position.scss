@@ -84,10 +84,10 @@
 }
 
 .admin-bar .is-sticky-scroll {
-    top: 46px;
+    top: 46px !important;
 
     @media screen and (min-width: 783px) {
-        top: 32px;
+        top: 32px !important;
     }
 }
 
