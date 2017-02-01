@@ -100,7 +100,8 @@ gulp.task('scripts', function() {
     return gulp.src([
                 node_modules + 'jquery/dist/jquery.js',
                 'plugins/jquery-ui-1.11.4/jquery-ui.js',
-                 node_modules + 'hyperform/dist/hyperform.js',
+                node_modules + 'hyperform/dist/hyperform.js',
+                node_modules + 'flickity/dist/flickity.pkgd.min.js',
                 'source/js/**/*.js'
             ])
             .pipe(concat('hbg-prime.dev.js'))

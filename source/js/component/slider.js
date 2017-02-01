@@ -10,8 +10,10 @@ HelsingborgPrime.Component.Slider = (function ($) {
     var autoslideIntervals = [];
 
     function Slider() {
+        /*
         this.init();
         this.preloadImage();
+        */
     }
 
     /**
