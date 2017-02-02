@@ -11557,6 +11557,16 @@ body:not(.material-no-radius) :not(.hero) .slider {
   width: 100%;
   height: 100%; }
 
+/* line 381, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover .flickity-prev-next-button {
+  transition: 300ms all ease-in-out;
+  opacity: 0; }
+
+/* line 386, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover:hover .flickity-prev-next-button {
+  display: block;
+  opacity: 1; }
+
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_animate.scss */
 .slider-next .slider-in {
   animation: slider-next-in 900ms cubic-bezier(0.35, 0.21, 0.07, 0.87);
