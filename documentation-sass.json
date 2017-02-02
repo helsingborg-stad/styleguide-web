@@ -46,13 +46,6 @@
    "spinner",
    "visibility"
   ],
-  "special": [
-   "accordion",
-   "modals",
-   "videoplayer",
-   "slider",
-   "tooltip"
-  ],
   "other": [
    "general"
   ],
@@ -76,6 +69,13 @@
    "sizes",
    "block button",
    "offcanvas button"
+  ],
+  "special": [
+   "accordion",
+   "modals",
+   "videoplayer",
+   "slider",
+   "tooltip"
   ],
   "navigation": [
    "dropdown",
@@ -1276,249 +1276,6 @@
     }
    ]
   },
-  "special": {
-   "accordion": [
-    {
-     "name": "Accordion",
-     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</small></p>\n",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Accordion"
-      }
-     ],
-     "state": [
-      {
-       "name": ".accordion-icon",
-       "escaped": "accordion-icon",
-       "description": "Use plus/minus signs to indicate toggaleable element"
-      },
-      {
-       "name": ".accordion-boxes",
-       "escaped": "accordion-boxes",
-       "description": "Make boxes around alternatives"
-      },
-      {
-       "name": ".accordion-list",
-       "escaped": "accordion-list",
-       "description": "Show accordion as list (with alternating colors)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"accordion accordion-icon accordion-list\">\n     <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h3>Ice cream</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h3>Sugar plum</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h3>Fruitcake</h3>\n        </label>\n        <div class=\"accordion-content\">\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h3>Jelly-o</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        </div>\n    </section>\n</div>",
-       "path": "~/source/sass/component/accordion/_accordion.scss",
-       "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n     <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h3>Ice cream</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h3>Sugar plum</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h3>Fruitcake</h3>\n        </label>\n        <div class=\"accordion-content\">\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h3>Jelly-o</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        </div>\n    </section>\n</div>",
-       "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n     &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h3&gt;Ice cream&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h3&gt;Sugar plum&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h3&gt;Fruitcake&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h3&gt;Jelly-o&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "modals": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Modals"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-2",
-       "escaped": "modal-backdrop-2",
-       "description": "Stripe color 2 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-3",
-       "escaped": "modal-backdrop-3",
-       "description": "Stripe color 3 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-4",
-       "escaped": "modal-backdrop-4",
-       "description": "Stripe color 4 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-5",
-       "escaped": "modal-backdrop-5",
-       "description": "Stripe color 5 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-black",
-       "escaped": "modal-backdrop-black",
-       "description": "Black backdrop"
-      },
-      {
-       "name": ".modal-backdrop-white",
-       "escaped": "modal-backdrop-white",
-       "description": "White backdrop"
-      },
-      {
-       "name": ".modal-large",
-       "escaped": "modal-large",
-       "description": "Big modal (100% width, 100vh height)"
-      },
-      {
-       "name": ".modal-medium",
-       "escaped": "modal-medium",
-       "description": "Medium modal (70% width)"
-      },
-      {
-       "name": ".modal-small",
-       "escaped": "modal-small",
-       "description": "Small modal (50% width)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "path": "~/source/sass/component/modal/_modal.scss",
-       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "slider": [
-    {
-     "name": "Slider",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Sliding content.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Slider"
-      }
-     ],
-     "state": [
-      {
-       "name": ".slider-nav-hover",
-       "escaped": "slider-nav-hover",
-       "description": "Only show slider nav buttons on slider hover (wrapping element)"
-      },
-      {
-       "name": ".slider-nav-bottom",
-       "escaped": "slider-nav-bottom",
-       "description": "Only show slider nav buttons in the bottom of the slider (wrapping element)"
-      },
-      {
-       "name": ".type-featured",
-       "escaped": "type-featured",
-       "description": "Use in combination with textblock left/right"
-      },
-      {
-       "name": ".text-block-center",
-       "escaped": "text-block-center",
-       "description": "You can center the text in the text block by adding this class to text-block element"
-      },
-      {
-       "name": ".text-block-left",
-       "escaped": "text-block-left",
-       "description": "Text on a solid white background, image to the right."
-      },
-      {
-       "name": ".text-block-right",
-       "escaped": "text-block-right",
-       "description": "Text on a solid white background, image to the left."
-      },
-      {
-       "name": ".is-collapsed",
-       "escaped": "is-collapsed",
-       "description": "Inidcator of compressed layout settings (wrapping element)."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"slider slider-nav-bottom slider-nav-hover\">\n        <div class=\"slide type-featured current\">\n             <a href=\"#\">\n                <span class=\"text-block text-block-left\">\n                   <span>\n                       <em class=\"title block-level h1\">Ipsum Fermentum Euismod</em>\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   </span>\n                 </span>\n                 <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n                 <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n             </a>\n        </div>\n        <div class=\"slide type-featured\">\n             <span class=\"text-block text-block-right\">\n                 <span>\n                     <em class=\"title block-level h1\">Amet Ornare Bibendum</em>\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n        </div>\n        <div class=\"slide type-image has-text-block\">\n             <span class=\"text-block text-block-center\">\n                 <span>\n                     <em class=\"title text-xl block-level\">Ipsum Fermentum Euismod</em>\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"></div>\n        </div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"><a href=\"#video-player-101935278\" data-video-id=\"101935278\"></a></div></div>\n</div>",
-       "path": "~/source/sass/component/slider/_slider.scss",
-       "example": "\n<div class=\"slider slider-nav-bottom slider-nav-hover\">\n        <div class=\"slide type-featured current\">\n             <a href=\"#\">\n                <span class=\"text-block text-block-left\">\n                   <span>\n                       <em class=\"title block-level h1\">Ipsum Fermentum Euismod</em>\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   </span>\n                 </span>\n                 <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n                 <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n             </a>\n        </div>\n        <div class=\"slide type-featured\">\n             <span class=\"text-block text-block-right\">\n                 <span>\n                     <em class=\"title block-level h1\">Amet Ornare Bibendum</em>\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n        </div>\n        <div class=\"slide type-image has-text-block\">\n             <span class=\"text-block text-block-center\">\n                 <span>\n                     <em class=\"title text-xl block-level\">Ipsum Fermentum Euismod</em>\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"></div>\n        </div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"><a href=\"#video-player-101935278\" data-video-id=\"101935278\"></a></div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"slider slider-nav-bottom slider-nav-hover\"&gt;\n        &lt;div class=\"slide type-featured current\"&gt;\n             &lt;a href=\"#\"&gt;\n                &lt;span class=\"text-block text-block-left\"&gt;\n                   &lt;span&gt;\n                       &lt;em class=\"title block-level h1\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   &lt;/span&gt;\n                 &lt;/span&gt;\n                 &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n                 &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n             &lt;/a&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-featured\"&gt;\n             &lt;span class=\"text-block text-block-right\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title block-level h1\"&gt;Amet Ornare Bibendum&lt;/em&gt;\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-image has-text-block\"&gt;\n             &lt;span class=\"text-block text-block-center\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title text-xl block-level\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"&gt;&lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "tooltip": [
-    {
-     "name": "Tooltip",
-     "description": "<p>Tooltip on hover or focus.<br><small>Note: Using tooltip will set position of the element to relative.</small></p>\n",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Tooltip"
-      }
-     ],
-     "state": [
-      {
-       "name": "[data-tooltip-top]",
-       "escaped": "[data-tooltip-top]",
-       "description": "Tooltip above element"
-      },
-      {
-       "name": "[data-tooltip-bottom]",
-       "escaped": "[data-tooltip-bottom]",
-       "description": "Tooltip below element"
-      },
-      {
-       "name": "[data-tooltip-left]",
-       "escaped": "[data-tooltip-left]",
-       "description": "Tooltip to the left of element"
-      },
-      {
-       "name": "[data-tooltip-right]",
-       "escaped": "[data-tooltip-right]",
-       "description": "Tooltip to the right of element"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
-       "path": "~/source/sass/component/tooltip/_tooltip.scss",
-       "example": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
-       "escaped": "\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip below\"&gt;Tooltip below&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top&gt;Tooltip above&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left&gt;Tooltip left&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right&gt;Tooltip right&lt;/a&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "other": {
    "general": [
     {
@@ -2000,6 +1757,249 @@
        "path": "~/source/sass/component/button/_button.scss",
        "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
        "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "special": {
+   "accordion": [
+    {
+     "name": "Accordion",
+     "description": "<p>CSS-only solution for toggeling content section visibility.<br><small>Note: You can use either checkbox or radio-button in your sections. Radio-button will only allow one opened section while checkbox will allow multiple.</small></p>\n",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Accordion"
+      }
+     ],
+     "state": [
+      {
+       "name": ".accordion-icon",
+       "escaped": "accordion-icon",
+       "description": "Use plus/minus signs to indicate toggaleable element"
+      },
+      {
+       "name": ".accordion-boxes",
+       "escaped": "accordion-boxes",
+       "description": "Make boxes around alternatives"
+      },
+      {
+       "name": ".accordion-list",
+       "escaped": "accordion-list",
+       "description": "Show accordion as list (with alternating colors)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"accordion accordion-icon accordion-list\">\n     <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h3>Ice cream</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h3>Sugar plum</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h3>Fruitcake</h3>\n        </label>\n        <div class=\"accordion-content\">\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h3>Jelly-o</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        </div>\n    </section>\n</div>",
+       "path": "~/source/sass/component/accordion/_accordion.scss",
+       "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n     <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            <h3>Ice cream</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h3>Sugar plum</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h3>Fruitcake</h3>\n        </label>\n        <div class=\"accordion-content\">\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h3>Jelly-o</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        </div>\n    </section>\n</div>",
+       "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n     &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            &lt;h3&gt;Ice cream&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h3&gt;Sugar plum&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h3&gt;Fruitcake&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h3&gt;Jelly-o&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "modals": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Modals"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-2",
+       "escaped": "modal-backdrop-2",
+       "description": "Stripe color 2 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-3",
+       "escaped": "modal-backdrop-3",
+       "description": "Stripe color 3 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-4",
+       "escaped": "modal-backdrop-4",
+       "description": "Stripe color 4 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-5",
+       "escaped": "modal-backdrop-5",
+       "description": "Stripe color 5 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-black",
+       "escaped": "modal-backdrop-black",
+       "description": "Black backdrop"
+      },
+      {
+       "name": ".modal-backdrop-white",
+       "escaped": "modal-backdrop-white",
+       "description": "White backdrop"
+      },
+      {
+       "name": ".modal-large",
+       "escaped": "modal-large",
+       "description": "Big modal (100% width, 100vh height)"
+      },
+      {
+       "name": ".modal-medium",
+       "escaped": "modal-medium",
+       "description": "Medium modal (70% width)"
+      },
+      {
+       "name": ".modal-small",
+       "escaped": "modal-small",
+       "description": "Small modal (50% width)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "path": "~/source/sass/component/modal/_modal.scss",
+       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "slider": [
+    {
+     "name": "Slider",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Sliding content.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Slider"
+      }
+     ],
+     "state": [
+      {
+       "name": ".slider-nav-hover",
+       "escaped": "slider-nav-hover",
+       "description": "Only show slider nav buttons on slider hover (wrapping element)"
+      },
+      {
+       "name": ".slider-nav-bottom",
+       "escaped": "slider-nav-bottom",
+       "description": "Only show slider nav buttons in the bottom of the slider (wrapping element)"
+      },
+      {
+       "name": ".type-featured",
+       "escaped": "type-featured",
+       "description": "Use in combination with textblock left/right"
+      },
+      {
+       "name": ".text-block-center",
+       "escaped": "text-block-center",
+       "description": "You can center the text in the text block by adding this class to text-block element"
+      },
+      {
+       "name": ".text-block-left",
+       "escaped": "text-block-left",
+       "description": "Text on a solid white background, image to the right."
+      },
+      {
+       "name": ".text-block-right",
+       "escaped": "text-block-right",
+       "description": "Text on a solid white background, image to the left."
+      },
+      {
+       "name": ".is-collapsed",
+       "escaped": "is-collapsed",
+       "description": "Inidcator of compressed layout settings (wrapping element)."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"slider slider-nav-bottom slider-nav-hover\">\n        <div class=\"slide type-featured current\">\n             <a href=\"#\">\n                <span class=\"text-block text-block-left\">\n                   <span>\n                       <em class=\"title block-level h1\">Ipsum Fermentum Euismod</em>\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   </span>\n                 </span>\n                 <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n                 <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n             </a>\n        </div>\n        <div class=\"slide type-featured\">\n             <span class=\"text-block text-block-right\">\n                 <span>\n                     <em class=\"title block-level h1\">Amet Ornare Bibendum</em>\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n        </div>\n        <div class=\"slide type-image has-text-block\">\n             <span class=\"text-block text-block-center\">\n                 <span>\n                     <em class=\"title text-xl block-level\">Ipsum Fermentum Euismod</em>\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"></div>\n        </div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"><a href=\"#video-player-101935278\" data-video-id=\"101935278\"></a></div></div>\n</div>",
+       "path": "~/source/sass/component/slider/_slider.scss",
+       "example": "\n<div class=\"slider slider-nav-bottom slider-nav-hover\">\n        <div class=\"slide type-featured current\">\n             <a href=\"#\">\n                <span class=\"text-block text-block-left\">\n                   <span>\n                       <em class=\"title block-level h1\">Ipsum Fermentum Euismod</em>\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   </span>\n                 </span>\n                 <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n                 <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n             </a>\n        </div>\n        <div class=\"slide type-featured\">\n             <span class=\"text-block text-block-right\">\n                 <span>\n                     <em class=\"title block-level h1\">Amet Ornare Bibendum</em>\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n        </div>\n        <div class=\"slide type-image has-text-block\">\n             <span class=\"text-block text-block-center\">\n                 <span>\n                     <em class=\"title text-xl block-level\">Ipsum Fermentum Euismod</em>\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"></div>\n        </div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"><a href=\"#video-player-101935278\" data-video-id=\"101935278\"></a></div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"slider slider-nav-bottom slider-nav-hover\"&gt;\n        &lt;div class=\"slide type-featured current\"&gt;\n             &lt;a href=\"#\"&gt;\n                &lt;span class=\"text-block text-block-left\"&gt;\n                   &lt;span&gt;\n                       &lt;em class=\"title block-level h1\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   &lt;/span&gt;\n                 &lt;/span&gt;\n                 &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n                 &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n             &lt;/a&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-featured\"&gt;\n             &lt;span class=\"text-block text-block-right\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title block-level h1\"&gt;Amet Ornare Bibendum&lt;/em&gt;\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-image has-text-block\"&gt;\n             &lt;span class=\"text-block text-block-center\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title text-xl block-level\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"&gt;&lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "tooltip": [
+    {
+     "name": "Tooltip",
+     "description": "<p>Tooltip on hover or focus.<br><small>Note: Using tooltip will set position of the element to relative.</small></p>\n",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Tooltip"
+      }
+     ],
+     "state": [
+      {
+       "name": "[data-tooltip-top]",
+       "escaped": "[data-tooltip-top]",
+       "description": "Tooltip above element"
+      },
+      {
+       "name": "[data-tooltip-bottom]",
+       "escaped": "[data-tooltip-bottom]",
+       "description": "Tooltip below element"
+      },
+      {
+       "name": "[data-tooltip-left]",
+       "escaped": "[data-tooltip-left]",
+       "description": "Tooltip to the left of element"
+      },
+      {
+       "name": "[data-tooltip-right]",
+       "escaped": "[data-tooltip-right]",
+       "description": "Tooltip to the right of element"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
+       "path": "~/source/sass/component/tooltip/_tooltip.scss",
+       "example": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
+       "escaped": "\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip below\"&gt;Tooltip below&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top&gt;Tooltip above&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left&gt;Tooltip left&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right&gt;Tooltip right&lt;/a&gt;"
       }
      ]
     }

@@ -10,16 +10,17 @@ HelsingborgPrime.Component.Slider = (function ($) {
     var autoslideIntervals = [];
 
     function Slider() {
-        /*
-        this.init();
-        this.preloadImage();
-        */
+        $('.slider').each(function () {
+            if ($(this).find('[data-flickity]')) {
+                return;
+            }
 
-        $('.slider').flickity({
-            cellSelector: '.slide',
-            cellAlign: 'center',
-            setGallerySize: false,
-            wrapAround: true,
+            $(this).flickity({
+                cellSelector: '.slide',
+                cellAlign: 'center',
+                setGallerySize: false,
+                wrapAround: true,
+            });
         });
     }
 

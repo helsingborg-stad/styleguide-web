@@ -360,7 +360,8 @@
     height: 100%;
 }
 
-.flickity-viewport {
+.flickity-viewport,
+.slider .flickity-enabled {
     position: absolute;
     top: 0;
     left: 0;
@@ -368,7 +369,8 @@
     bottom: 0;
 }
 
-.slider .slide {
+.slider .slide,
+.slider .flickity-enabled {
     width: 100%;
     height: 100%;
 }
