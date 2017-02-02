@@ -11536,20 +11536,22 @@ body:not(.material-no-radius) :not(.hero) .slider {
   right: 0; }
 
 /* line 358, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
-.flickity-viewport {
+.flickity-viewport,
+.slider [data-flickity] {
   width: 100%;
   height: 100%; }
 
-/* line 363, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 364, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-viewport,
-.slider .flickity-enabled {
+.slider .flickity-enabled,
+.slider [data-flickity] {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-/* line 372, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 374, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider .slide,
 .slider .flickity-enabled {
   width: 100%;
