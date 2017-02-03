@@ -388,3 +388,12 @@
         opacity: 1;
     }
 }
+
+.flickity-page-dots {
+    bottom: 15px;
+
+    .dot {
+        background-color: #fff;
+        opacity: .5;
+    }
+}
