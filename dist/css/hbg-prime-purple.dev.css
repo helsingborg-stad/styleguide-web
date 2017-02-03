@@ -11305,7 +11305,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
   width: 100%;
   height: 100%;
   min-height: 350px;
-  background: #000;
+  background: transparent;
   overflow: hidden; }
   @media print {
     /* line 69, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
@@ -11597,6 +11597,17 @@ body:not(.material-no-radius) :not(.hero) .slider {
   .flickity-page-dots .dot {
     background-color: #fff;
     opacity: .5; }
+
+/* line 412, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-layout-circle {
+  box-shadow: none !important; }
+  /* line 415, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  .slider.slider-layout-circle .slide {
+    padding: 20px; }
+  /* line 419, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  .slider.slider-layout-circle .slider-image {
+    border-radius: 50%;
+    overflow: hidden; }
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_animate.scss */
 .slider-next .slider-in {

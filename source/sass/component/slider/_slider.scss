@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     min-height: 350px;
-    background: #000;
+    background: transparent;
     overflow: hidden;
 
     @media print {
@@ -406,5 +406,18 @@
     .dot {
         background-color: #fff;
         opacity: .5;
+    }
+}
+
+.slider.slider-layout-circle {
+    box-shadow: none !important;
+
+    .slide {
+        padding: 20px;
+    }
+
+    .slider-image {
+        border-radius: 50%;
+        overflow: hidden;
     }
 }
