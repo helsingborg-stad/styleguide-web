@@ -91,6 +91,15 @@
 
     }
 
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: rgba(#fff, .8);
+        }
+    }
+
     .answers {
         padding-left: 3%;
         .comment-text {

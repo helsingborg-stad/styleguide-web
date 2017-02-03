@@ -9474,17 +9474,25 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     border-left: 8px solid transparent; }
 
 /* line 94, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+.comment a {
+  color: #fff;
+  text-decoration: underline; }
+  /* line 98, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+  .comment a:hover {
+    color: rgba(255, 255, 255, 0.8); }
+
+/* line 103, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
 .comment .answers {
   padding-left: 3%; }
-  /* line 96, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+  /* line 105, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
   .comment .answers .comment-text {
     opacity: .7; }
 
-/* line 101, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+/* line 110, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
 .comment:nth-child(4n + 2) .comment-text {
   background-color: #a84c98;
   color: #fff; }
-  /* line 105, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+  /* line 114, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
   .comment:nth-child(4n + 2) .comment-text::before {
     width: 0;
     height: 0;
@@ -9493,11 +9501,11 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     border-bottom: 8px solid #a84c98;
     border-left: 8px solid transparent; }
 
-/* line 110, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+/* line 119, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
 .comment:nth-child(4n + 3) .comment-text {
   background-color: #7b075e;
   color: #fff; }
-  /* line 114, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+  /* line 123, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
   .comment:nth-child(4n + 3) .comment-text::before {
     width: 0;
     height: 0;
@@ -9506,11 +9514,11 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     border-bottom: 8px solid #7b075e;
     border-left: 8px solid transparent; }
 
-/* line 119, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+/* line 128, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
 .comment:nth-child(4n + 4) .comment-text {
   background-color: #a61380;
   color: #fff; }
-  /* line 123, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
+  /* line 132, /www/sites/hbgprime/wwwroot/source/sass/component/blog/_comments.scss */
   .comment:nth-child(4n + 4) .comment-text::before {
     width: 0;
     height: 0;
