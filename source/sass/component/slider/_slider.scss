@@ -18,8 +18,7 @@
 //
 // @markup
 // <div class="slider slider-nav-bottom slider-nav-hover">
-//     <ul>
-//         <li class="type-featured current">
+//         <div class="slide type-featured current">
 //              <a href="#">
 //                 <span class="text-block text-block-left">
 //                    <span>
@@ -30,8 +29,8 @@
 //                  <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
 //                  <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
 //              </a>
-//         </li>
-//         <li class="type-featured">
+//         </div>
+//         <div class="slide type-featured">
 //              <span class="text-block text-block-right">
 //                  <span>
 //                      <em class="title block-level h1">Amet Ornare Bibendum</em>
@@ -40,8 +39,8 @@
 //              </span>
 //              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=499)"></div>
 //              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=500)"></div>
-//         </li>
-//         <li class="type-image has-text-block">
+//         </div>
+//         <div class="slide type-image has-text-block">
 //              <span class="text-block text-block-center">
 //                  <span>
 //                      <em class="title text-xl block-level">Ipsum Fermentum Euismod</em>
@@ -50,11 +49,10 @@
 //              </span>
 //              <div class="slider-image slider-image-desktop hidden-xs hidden-sm" style="background-image:url(https:\/\/unsplash.it/800/800/?image=496)"></div>
 //              <div class="slider-image slider-image-mobile hidden-md hidden-lg" style="background-image:url(https:\/\/unsplash.it/800/800/?image=498)"></div>
-//         </li>
-//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></li>
-//         <li><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></li>
-//         <li><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></li>
-//     </ul>
+//         </div>
+//         <div class="slide"><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=493');"></div></div>
+//         <div class="slide"><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></div>
+//         <div class="slide"><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></div>
 // </div>
 //
 
@@ -333,6 +331,7 @@
 }
 
 .slider-nav-bottom {
+    .flickity-prev-next-button,
     [class*="slider-nav-"] {
         top: auto;
         bottom: 0;
@@ -346,14 +345,25 @@
             color: #fff;
         }
     }
+
+    .flickity-prev-next-button.previous {
+        left: 0;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
+    }
 }
 
-.flickity-viewport {
+.flickity-viewport,
+.slider [data-flickity] {
     width: 100%;
     height: 100%;
 }
 
-.flickity-viewport {
+.flickity-viewport,
+.slider .flickity-enabled,
+.slider [data-flickity] {
     position: absolute;
     top: 0;
     left: 0;
@@ -361,7 +371,29 @@
     bottom: 0;
 }
 
-.slider .slide {
+.slider .slide,
+.slider .flickity-enabled {
     width: 100%;
     height: 100%;
+}
+
+.slider.slider-nav-hover {
+    .flickity-prev-next-button{
+        transition: 300ms all ease-in-out;
+        opacity: 0;
+    }
+
+    &:hover .flickity-prev-next-button {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.flickity-page-dots {
+    bottom: 15px;
+
+    .dot {
+        background-color: #fff;
+        opacity: .5;
+    }
 }
