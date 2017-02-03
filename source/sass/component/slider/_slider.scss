@@ -340,6 +340,7 @@
         padding: .8em 1em;
         color: darken($creamy-darker,40%);
         background-color: darken($creamy,5%);
+        z-index: $level-top;
 
         &:hover {
             color: #fff;
@@ -378,14 +379,24 @@
 }
 
 .slider.slider-nav-hover {
-    .flickity-prev-next-button{
+    .flickity-prev-next-button,
+    .flickity-page-dots {
         transition: 300ms all ease-in-out;
         opacity: 0;
     }
 
-    &:hover .flickity-prev-next-button {
+    .flickity-page-dots {
+        bottom: -20px;
+    }
+
+    &:hover .flickity-prev-next-button,
+    &:hover .flickity-page-dots {
         display: block;
         opacity: 1;
+    }
+
+    &:hover .flickity-page-dots {
+        bottom: 15px;
     }
 }
 

@@ -11533,27 +11533,28 @@ body:not(.material-no-radius) :not(.hero) .slider {
   transform: none;
   padding: .8em 1em;
   color: #8c8370;
-  background-color: #ece9e3; }
-  /* line 344, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  background-color: #ece9e3;
+  z-index: 99999; }
+  /* line 345, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider-nav-bottom .flickity-prev-next-button:hover,
   .slider-nav-bottom [class*="slider-nav-"]:hover {
     color: #fff; }
 
-/* line 349, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 350, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.previous {
   left: 0; }
 
-/* line 353, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 354, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.next {
   right: 0; }
 
-/* line 358, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 359, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-viewport,
 .slider [data-flickity] {
   width: 100%;
   height: 100%; }
 
-/* line 364, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 365, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-viewport,
 .slider .flickity-enabled,
 .slider [data-flickity] {
@@ -11563,26 +11564,36 @@ body:not(.material-no-radius) :not(.hero) .slider {
   right: 0;
   bottom: 0; }
 
-/* line 374, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 375, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider .slide,
 .slider .flickity-enabled {
   width: 100%;
   height: 100%; }
 
-/* line 381, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
-.slider.slider-nav-hover .flickity-prev-next-button {
+/* line 382, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover .flickity-prev-next-button,
+.slider.slider-nav-hover .flickity-page-dots {
   transition: 300ms all ease-in-out;
   opacity: 0; }
 
-/* line 386, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
-.slider.slider-nav-hover:hover .flickity-prev-next-button {
+/* line 388, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover .flickity-page-dots {
+  bottom: -20px; }
+
+/* line 392, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover:hover .flickity-prev-next-button,
+.slider.slider-nav-hover:hover .flickity-page-dots {
   display: block;
   opacity: 1; }
 
-/* line 392, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 398, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.slider.slider-nav-hover:hover .flickity-page-dots {
+  bottom: 15px; }
+
+/* line 403, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .flickity-page-dots {
   bottom: 15px; }
-  /* line 395, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 406, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .flickity-page-dots .dot {
     background-color: #fff;
     opacity: .5; }
