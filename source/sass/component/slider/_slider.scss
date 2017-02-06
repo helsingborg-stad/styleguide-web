@@ -418,6 +418,23 @@
 
     .slider-image {
         border-radius: 50%;
+        width: 80%;
+        padding-bottom: 80%;
+        margin: 0 auto;
+        height: 0;
         overflow: hidden;
+    }
+
+    .text-block,
+    .text-block.text-block-center:not([class*="stripe-"]) {
+        position: static;
+        text-align: center;
+        background-color: transparent !important;
+        color: $base-font-color;
+    }
+
+    .text-block.text-block-center span {
+        position: static;
+        text-shadow: none;
     }
 }

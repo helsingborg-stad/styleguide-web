@@ -11607,7 +11607,22 @@ body:not(.material-no-radius) :not(.hero) .slider {
   /* line 419, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .slider-image {
     border-radius: 50%;
+    width: 80%;
+    padding-bottom: 80%;
+    margin: 0 auto;
+    height: 0;
     overflow: hidden; }
+  /* line 428, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  .slider.slider-layout-circle .text-block,
+  .slider.slider-layout-circle .text-block.text-block-center:not([class*="stripe-"]) {
+    position: static;
+    text-align: center;
+    background-color: transparent !important;
+    color: #252525; }
+  /* line 436, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  .slider.slider-layout-circle .text-block.text-block-center span {
+    position: static;
+    text-shadow: none; }
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_animate.scss */
 .slider-next .slider-in {
