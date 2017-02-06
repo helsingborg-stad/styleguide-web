@@ -6671,7 +6671,7 @@ article + .page-footer {
   background: transparent url("../images/printbreak.png") repeat-y scroll center center; }
 
 /* line 145, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
-.modularity-mod-text .box-content {
+.modularity-mod-text .box-panel.box-panel-secondary .box-content {
   padding: 20px; }
 
 /* line 17, /www/sites/hbgprime/wwwroot/source/sass/typography/_list.scss */
