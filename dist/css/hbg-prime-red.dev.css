@@ -6670,6 +6670,10 @@ article + .page-footer {
 .mce-content-body img[data-wp-more="printbreak"] {
   background: transparent url("../images/printbreak.png") repeat-y scroll center center; }
 
+/* line 145, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+.modularity-mod-text .box-content {
+  padding: 20px; }
+
 /* line 17, /www/sites/hbgprime/wwwroot/source/sass/typography/_list.scss */
 .modularity-mod-text .box-content ul,
 .mce-content-body ul,
