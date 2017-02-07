@@ -7611,25 +7611,28 @@ button.btn-icon {
 .site-header.header-transparent.header-dark {
   color: #252525; }
   /* line 44, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
-  .site-header.header-transparent.header-dark * {
-    color: #252525; }
+  .site-header.header-transparent.header-dark .navbar ul.nav > li > a {
+    transition: 300ms all ease-in-out; }
   /* line 48, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+  .site-header.header-transparent.header-dark .navbar:not(.is-sticky-scroll) ul.nav > li > a {
+    color: #252525; }
+  /* line 52, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
   .site-header.header-transparent.header-dark .logotype svg,
   .site-header.header-transparent.header-dark .logotype path {
     fill: #252525; }
-  /* line 53, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+  /* line 57, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
   .site-header.header-transparent.header-dark .logotype .h1 {
     color: #252525; }
 
-/* line 58, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+/* line 62, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .navbar {
   box-shadow: none !important; }
 
-/* line 62, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+/* line 66, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title {
   font-size: 1.1em; }
 
-/* line 66, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+/* line 70, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
 .site-header .sub-site-title-block {
   display: block;
   text-align: center;
@@ -7637,7 +7640,7 @@ button.btn-icon {
   padding: 5px 0;
   margin-top: 15px; }
 
-/* line 74, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
+/* line 78, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
 .site-header.header-center {
   text-align: center; }
 

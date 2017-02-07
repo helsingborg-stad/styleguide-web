@@ -41,7 +41,11 @@
 .site-header.header-transparent.header-dark, {
     color: $base-font-color;
 
-    * {
+    .navbar ul.nav > li > a {
+        transition: 300ms all ease-in-out;
+    }
+
+    .navbar:not(.is-sticky-scroll) ul.nav > li > a {
         color: $base-font-color;
     }
 
