@@ -15512,11 +15512,13 @@ div.spinner {
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
 .scroll-elevator {
-  display: none;
+  visibility: hidden;
   position: fixed;
-  right: 30px;
-  bottom: 30px; }
-  /* line 7, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: visibility 0ms, opacity 300ms ease-in-out; }
+  /* line 9, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
   .scroll-elevator a {
     display: block;
     background-color: #F36E21;
@@ -15524,8 +15526,10 @@ div.spinner {
     border-radius: 40px;
     height: 40px;
     line-height: 40px;
+    padding-right: 15px;
+    text-decoration: none;
     box-shadow: 0 5px 7px 0px rgba(0, 0, 0, 0.3); }
-    /* line 17, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
+    /* line 21, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
     .scroll-elevator a i::before {
       display: inline-block;
       width: 40px;
@@ -15541,9 +15545,11 @@ div.spinner {
       vertical-align: middle;
       content: ""; }
 
-/* line 33, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
+/* line 37, /www/sites/hbgprime/wwwroot/source/sass/utility/_scroll-elevator.scss */
 .show-scroll-elevator .scroll-elevator {
-  display: block; }
+  display: block;
+  visibility: visible;
+  opacity: 1; }
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/wordpress/_widget.scss */
 [class^="widget_"]:not(.widget_calendar) {
