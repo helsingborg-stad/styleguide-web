@@ -157,6 +157,10 @@
     font-style: normal;
 }
 
+.pricon {
+    line-height: 1;
+}
+
 .pricon::before {
     display: inline-block;
     font: normal normal normal 14px/1 hbg-pricons;

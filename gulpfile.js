@@ -59,7 +59,7 @@ gulp.task('sass-dist', function() {
                 discardOverridden: true,
                 filterOptimiser: true,
                 functionOptimiser: true,
-                mergeRules: true,
+                mergeRules: false,
                 minifyFontValues: true,
                 minifyGradients: true,
                 minifyParams: true,
@@ -100,7 +100,8 @@ gulp.task('scripts', function() {
     return gulp.src([
                 node_modules + 'jquery/dist/jquery.js',
                 'plugins/jquery-ui-1.11.4/jquery-ui.js',
-                 node_modules + 'hyperform/dist/hyperform.js',
+                node_modules + 'hyperform/dist/hyperform.js',
+                node_modules + 'flickity/dist/flickity.pkgd.min.js',
                 'source/js/**/*.js'
             ])
             .pipe(concat('hbg-prime.dev.js'))
@@ -140,7 +141,7 @@ gulp.task('dss-sass', function() {
 
 // Svg sprites
 gulp.task('iconsprite', function () {
-    gulp.src('source/icons/**/*.svg')
+    return gulp.src('source/icons/**/*.svg')
         .pipe(svgSprite({
             mode: {
                 symbol: {
@@ -189,7 +190,7 @@ gulp.task('iconfont', ['icons-scale'], function () {
 });
 
 gulp.task('icons', function () {
-    runSequence('iconfont', ['sass-dist', 'sass-dev', 'dss-sass']);
+    return runSequence('iconfont', ['sass-dist', 'sass-dev', 'dss-sass']);
 });
 
 // Documented JS

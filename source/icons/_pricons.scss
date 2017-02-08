@@ -32,6 +32,10 @@
     font-style: normal;
 }
 
+.<%= className %> {
+    line-height: 1;
+}
+
 .<%= className %>::before {
     display: inline-block;
     font: normal normal normal 14px/1 <%= fontName %>;
