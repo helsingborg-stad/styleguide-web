@@ -42,10 +42,17 @@ HelsingborgPrime.Component.Slider = (function ($) {
     Slider.prototype.detectIfIsCollapsed = function (slider) {
         if ($(slider).width() <= 500) {
             $(slider).addClass("is-collapsed");
-            return;
+        } else {
+            $(slider).removeClass("is-collapsed");
         }
 
-        $(slider).removeClass("is-collapsed");
+        $(slider).find('.slide').each(function (index, slide) {
+            if ($(slide).width() <= 500) {
+                $(slide).addClass("is-collapsed");
+            } else {
+                $(slide).removeClass("is-collapsed");
+            }
+        });
     };
 
     Slider.prototype.preloadImage = function () {

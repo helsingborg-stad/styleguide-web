@@ -92,7 +92,8 @@
         text-decoration: none;
     }
 
-    &.is-collapsed .type-featured {
+    &.is-collapsed .type-featured,
+    .type-featured.is-collapsed {
         > a {
             display: block;
             @include cover();
