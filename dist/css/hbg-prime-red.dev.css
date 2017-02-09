@@ -11717,10 +11717,10 @@ body:not(.material-no-radius) :not(.hero) .slider {
   bottom: 15px; }
 
 /* line 380, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
-.flickity-page-dots {
+.slider .flickity-page-dots {
   bottom: 15px; }
   /* line 383, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
-  .flickity-page-dots .dot {
+  .slider .flickity-page-dots .dot {
     background-color: #fff;
     opacity: .5; }
 
