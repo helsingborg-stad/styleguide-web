@@ -14,6 +14,59 @@
 //     <a href="#video-player-101935278" data-video-id="101935278" data-unavailable="Video playback unavailable, activate enable JavaScript to enable."></a>
 // </div>
 //
+.player-wrapper {
+    display: table;
+}
+
+ol.player-playlist {
+    background-color: #fff;
+    border: 1px solid $creamy-darker;
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow-y: auto;
+    max-height: 400px;
+
+    list-style-type: none;
+
+    counter-reset: playlist-item;
+
+    li {
+        counter-increment: playlist-item;
+        padding: $content-gutter/1.5 $content-gutter;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &::before {
+            display: inline-block;
+            content: counter(playlist-item) ". ";
+            width: 30px;
+            padding-right: 5px;
+        }
+    }
+
+    li + li {
+        border-top: 1px solid $creamy-darker;
+    }
+
+    li > a,
+    li > a:visited {
+        color: $palette-4;
+        text-decoration: none;
+    }
+
+    li > a:hover {
+        color: darken($palette-4, 5%);
+    }
+}
+
+.player-wrapper.is-playlist .player {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
 .player {
     background-size: cover;
     background-position: center;

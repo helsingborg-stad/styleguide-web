@@ -22,46 +22,67 @@ HelsingborgPrime.Helper.Player = (function ($) {
     //Listen for play argument
     Player.prototype.init = function () {
         $(".player a").on('click', function (e) {
-            this.initVideoPlayer($(e.target));
+            this.initVideoPlayer($(e.target).closest('a'));
+        }.bind(this));
+
+        $(".player-playlist a").on('click', function (e) {
+            e.preventDefault();
+            this.switchVideo($(e.target).closest('a'));
         }.bind(this));
     };
 
     //Init player on start
     Player.prototype.initVideoPlayer = function(e) {
         var videoid = e.attr('data-video-id');
+        var listid = e.attr('data-list-id');
 
         if (this.isNumeric(videoid)) {
             this.initVimeo(videoid, e);
         } else {
-            this.initYoutube(videoid, e);
+            console.log("INIT");
+            if (listid) {
+                this.initYoutube(videoid, e, listid);
+            } else {
+                this.initYoutube(videoid, e);
+            }
         }
     };
 
-    Player.prototype.initVimeo = function(videoid,target) {
+    Player.prototype.initVimeo = function(videoid, target) {
 
         //Remove controls
         this.toggleControls(target);
 
         //Append player
-        $(target).parent().append('<iframe src="//player.vimeo.com/video/'+videoid+'?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        $(target).parent().append('<iframe src="//player.vimeo.com/video/' + videoid + '?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 
         //Not first run anymore
         this.playerFirstInitVimeo = false;
     };
 
-    Player.prototype.initYoutube = function(videoid,target) {
+    Player.prototype.initYoutube = function(videoid, target, listid) {
+
+        if (typeof listid === 'undefined') {
+            listid = null;
+        }
 
         //Remove controls
         this.toggleControls(target);
 
+        console.log("YT");
+
         //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' +videoid+ '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        if (listid) {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        } else {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        }
 
         //Not first run anymore
         this.playerFirstInitYoutube = false;
     };
 
-    Player.prototype.initBambuser = function(videoid,target) {
+    Player.prototype.initBambuser = function(videoid, target) {
 
         //Remove controls
         this.toggleControls(target);
@@ -71,6 +92,32 @@ HelsingborgPrime.Helper.Player = (function ($) {
 
         //Not first run anymore
         this.playerFirstInitBambuser = false;
+    };
+
+    Player.prototype.switchVideo = function(element) {
+        var videoid = element.attr('data-video-id');
+        var listid = element.attr('data-list-id');
+
+        var $player = element.parents('.player-wrapper').children('.player');
+        var $iframe = $player.children('iframe');
+
+        $player.find('a').hide();
+
+        if (!$player.find('.loading').length) {
+            $player.append('<div class="loading pos-absolute-center" style="width:300px;"><div></div><div></div><div></div><div></div></div>');
+        }
+
+        if (this.isNumeric(videoid)) {
+            this.initVimeo(videoid, $player.children('a'));
+        } else {
+            if (listid) {
+                this.initYoutube(videoid, $player.children('a'), listid);
+            } else {
+                this.initYoutube(videoid, $player.children('a'));
+            }
+        }
+
+        $iframe.remove();
     };
 
     Player.prototype.toggleControls = function(target) {
