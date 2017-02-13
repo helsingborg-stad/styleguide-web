@@ -16410,7 +16410,6 @@ HelsingborgPrime.Helper.Player = (function ($) {
         if (this.isNumeric(videoid)) {
             this.initVimeo(videoid, e);
         } else {
-            console.log("INIT");
             if (listid) {
                 this.initYoutube(videoid, e, listid);
             } else {
@@ -16440,8 +16439,6 @@ HelsingborgPrime.Helper.Player = (function ($) {
         //Remove controls
         this.toggleControls(target);
 
-        console.log("YT");
-
         //Append player
         if (listid) {
             $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
@@ -16469,7 +16466,7 @@ HelsingborgPrime.Helper.Player = (function ($) {
         var videoid = element.attr('data-video-id');
         var listid = element.attr('data-list-id');
 
-        var $player = element.parents('.player-wrapper').children('.player');
+        var $player = element.parents('.player-playlist').siblings('.player');
         var $iframe = $player.children('iframe');
 
         $player.find('a').hide();
