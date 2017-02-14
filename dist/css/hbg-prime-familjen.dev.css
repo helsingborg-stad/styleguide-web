@@ -3857,7 +3857,64 @@ b {
 .grid-lg-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
 .grid-lg-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
 .grid-lg-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"] {
-  margin-top: 15px; }
+  margin-top: 10px; }
+  @media (min-width: 469px) {
+    /* line 33, /www/sites/hbgprime/wwwroot/source/sass/layout/_scaffolding.scss */
+    .grid-xs-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"] {
+      margin-top: 10px; } }
+  @media (min-width: 769px) {
+    /* line 33, /www/sites/hbgprime/wwwroot/source/sass/layout/_scaffolding.scss */
+    .grid-xs-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"] {
+      margin-top: 30px; } }
+  @media (min-width: 961px) {
+    /* line 33, /www/sites/hbgprime/wwwroot/source/sass/layout/_scaffolding.scss */
+    .grid-xs-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-xs-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-sm-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-md-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+    .grid-lg-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"] {
+      margin-top: 30px; } }
 
 /* line 11, /www/sites/hbgprime/wwwroot/source/sass/layout/_container.scss */
 .container {
