@@ -7768,28 +7768,27 @@ button.btn-icon {
       width: 100%; }
       /* line 10, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
       .site-header > .container > .grid [class*="grid-"] {
-        display: table-cell;
         vertical-align: middle;
         float: none; } }
 
-/* line 22, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 21, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .menu-trigger,
 .site-header.header-jumbo .menu-trigger,
 .site-header.header-contrasted-nav .menu-trigger {
   color: #fff; }
-  /* line 25, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+  /* line 24, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
   .site-header.header-casual .menu-trigger .menu-icon,
   .site-header.header-jumbo .menu-trigger .menu-icon,
   .site-header.header-contrasted-nav .menu-trigger .menu-icon {
     background-color: #fff; }
-    /* line 28, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+    /* line 27, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
     .site-header.header-casual .menu-trigger .menu-icon::before, .site-header.header-casual .menu-trigger .menu-icon::after,
     .site-header.header-jumbo .menu-trigger .menu-icon::before,
     .site-header.header-jumbo .menu-trigger .menu-icon::after,
     .site-header.header-contrasted-nav .menu-trigger .menu-icon::before,
     .site-header.header-contrasted-nav .menu-trigger .menu-icon::after {
       background-color: #fff; }
-  /* line 36, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+  /* line 35, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
   .site-header.header-casual .menu-trigger:target .menu-icon, .site-header.header-casual .menu-trigger.open .menu-icon,
   .site-header.header-jumbo .menu-trigger:target .menu-icon,
   .site-header.header-jumbo .menu-trigger.open .menu-icon,
@@ -7797,85 +7796,85 @@ button.btn-icon {
   .site-header.header-contrasted-nav .menu-trigger.open .menu-icon {
     background: transparent; }
 
-/* line 43, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 42, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual,
 .site-header.header-contrasted-nav {
   background-color: #ae0b05; }
 
 @media (min-width: 769px) {
-  /* line 50, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+  /* line 49, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
   .header-transparent.site-header.header-casual, .header-transparent.site-header.header-contrasted-nav {
     background-color: transparent; } }
 
-/* line 59, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 58, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .sub-site-title,
 .site-header.header-casual .sub-site-title-block,
 .site-header.header-contrasted-nav .sub-site-title,
 .site-header.header-contrasted-nav .sub-site-title-block {
   color: #fff; }
 
-/* line 64, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual > .container,
 .site-header.header-contrasted-nav > .container {
   padding: 15px 0 0 0; }
 
-/* line 68, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 67, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .navbar-mainmenu,
 .site-header.header-contrasted-nav .navbar-mainmenu {
   padding-top: 0; }
 
-/* line 72, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 71, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .logotype,
 .site-header.header-contrasted-nav .logotype {
   display: table; }
 
-/* line 76, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 75, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual.header-center .logotype,
 .site-header.header-contrasted-nav.header-center .logotype {
   display: inline-table; }
 
-/* line 80, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 79, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .navbar,
 .site-header.header-contrasted-nav .navbar {
   margin-top: 0; }
 
-/* line 84, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 83, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .menu-header-tabs .nav-tabs,
 .site-header.header-contrasted-nav .menu-header-tabs .nav-tabs {
   box-shadow: none; }
 
-/* line 88, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 87, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .top-search,
 .site-header.header-contrasted-nav .top-search {
   box-shadow: none; }
 
-/* line 92, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 91, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-casual .menu-help a,
 .site-header.header-contrasted-nav .menu-help a {
   color: #fff; }
 
 @media (max-width: 769px) {
-  /* line 98, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+  /* line 97, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
   .site-header.header-casual > .container {
     padding-bottom: 15px; } }
 
-/* line 104, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 103, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-contrasted-nav .navbar-mainmenu:not(.navbar-creamy) {
   background-color: rgba(227, 0, 15, 0.8); }
 
-/* line 108, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .site-header.header-contrasted-nav > .container {
   margin-bottom: 15px; }
   @media (min-width: 769px) and (max-width: 960px) {
-    /* line 108, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+    /* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
     .site-header.header-contrasted-nav > .container {
       margin-bottom: 0; } }
 
-/* line 117, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 116, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .search-top {
   display: none; }
 
-/* line 121, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
+/* line 120, /www/sites/hbgprime/wwwroot/source/sass/component/header/_casual.scss */
 .search-top.open,
 .no-js .search-top:target {
   display: block; }
