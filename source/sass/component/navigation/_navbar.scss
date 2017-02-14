@@ -129,8 +129,10 @@
     }
 }
 
-.header-transparent .navbar {
-    background-color:  transparent;
+@media #{$screen-md-up} {
+    .header-transparent .navbar {
+        background-color:  transparent;
+    }
 }
 
 .navbar-creamy {

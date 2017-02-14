@@ -4,18 +4,20 @@
     }
 }
 
-.header-transparent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: $level-9;
-}
+@media #{$screen-md-up} {
+    .header-transparent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: $level-9;
+    }
 
-.admin-bar .header-transparent {
-    top: 46px;
+    .admin-bar .header-transparent {
+        top: 46px;
 
-    @media screen and (min-width: 783px) {
-        top: 32px;
+        @media screen and (min-width: 783px) {
+            top: 32px;
+        }
     }
 }

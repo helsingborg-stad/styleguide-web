@@ -40,9 +40,18 @@
     }
 }
 
-.site-header.header-casual:not(.header-transparent),
-.site-header.header-contrasted-nav:not(.header-transparent) {
+.site-header.header-casual,
+.site-header.header-contrasted-nav {
     background-color: $palette-4;
+}
+
+@media #{$screen-md-up} {
+    .header-transparent {
+        &.site-header.header-casual,
+        &.site-header.header-contrasted-nav {
+            background-color: transparent;
+        }
+    }
 }
 
 .site-header.header-casual,
@@ -85,8 +94,10 @@
     }
 }
 
-.site-header.header-contrasted-nav:not(.header-transparent) {
-    background-color: $palette-4;
+@media #{$screen-below-md} {
+    .site-header.header-casual > .container {
+        padding-bottom: $content-gutter;
+    }
 }
 
 .site-header.header-contrasted-nav {
