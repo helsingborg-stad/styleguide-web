@@ -25,3 +25,15 @@ b {
 .overflow-hidden {
 	overflow: hidden;
 }
+
+.grid-xs-12[class*="modularity-mod-"],
+.grid-sm-12[class*="modularity-mod-"],
+.grid-md-12[class*="modularity-mod-"],
+.grid-lg-12[class*="modularity-mod-"] {
+    & + .grid-xs-12[class*="modularity-mod-"],
+    & + .grid-sm-12[class*="modularity-mod-"],
+    & + .grid-md-12[class*="modularity-mod-"],
+    & + .grid-lg-12[class*="modularity-mod-"] {
+        margin-top: $content-gutter;
+    }
+}

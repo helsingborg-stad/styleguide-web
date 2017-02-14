@@ -3840,6 +3840,25 @@ b {
 .overflow-hidden {
   overflow: hidden; }
 
+/* line 33, /www/sites/hbgprime/wwwroot/source/sass/layout/_scaffolding.scss */
+.grid-xs-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+.grid-xs-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+.grid-xs-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+.grid-xs-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+.grid-sm-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+.grid-sm-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+.grid-sm-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+.grid-sm-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+.grid-md-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+.grid-md-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+.grid-md-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+.grid-md-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"],
+.grid-lg-12[class*="modularity-mod-"] + .grid-xs-12[class*="modularity-mod-"],
+.grid-lg-12[class*="modularity-mod-"] + .grid-sm-12[class*="modularity-mod-"],
+.grid-lg-12[class*="modularity-mod-"] + .grid-md-12[class*="modularity-mod-"],
+.grid-lg-12[class*="modularity-mod-"] + .grid-lg-12[class*="modularity-mod-"] {
+  margin-top: 15px; }
+
 /* line 11, /www/sites/hbgprime/wwwroot/source/sass/layout/_container.scss */
 .container {
   margin: 0 auto;
@@ -5340,31 +5359,27 @@ h6, .h6 {
 article {
   margin-bottom: 45px; }
   /* line 21, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
-  .mce-content-body br,
-  article br {
-    line-height: 2.5; }
-  /* line 25, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body em,
   article em {
     font-style: italic; }
-  /* line 29, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+  /* line 25, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body > h1:first-of-type,
   article > h1:first-of-type {
     margin-top: -0.25em;
     margin-bottom: 0;
     padding-bottom: 0; }
-    /* line 34, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+    /* line 30, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
     img + .mce-content-body > h1:first-of-type, img +
     article > h1:first-of-type {
       margin-top: 0; }
     @media print {
-      /* line 29, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+      /* line 25, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
       .mce-content-body > h1:first-of-type,
       article > h1:first-of-type {
         border-bottom: 2px solid #000;
         padding-bottom: 0;
         margin-bottom: 20px; } }
-  /* line 45, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+  /* line 41, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body strong,
   .mce-content-body b,
   article strong,
@@ -6738,7 +6753,7 @@ article {
   article hr + div[class*="mod-"],
   article div[class*="mod-"] + hr {
     margin-top: 2em; }
-  /* line 74, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+  /* line 70, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body h1 + p,
   .mce-content-body h2 + p,
   .mce-content-body h3 + p,
@@ -6756,18 +6771,18 @@ article {
   article h5 + p,
   article h6 + p {
     margin-top: 0em; }
-  /* line 83, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+  /* line 79, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body p:first-of-type,
   article p:first-of-type {
     margin-top: 15px; }
-  /* line 87, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+  /* line 83, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body img,
   article img {
     display: block;
     max-width: 100%;
     height: auto; }
   @media print {
-    /* line 94, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+    /* line 90, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
     .mce-content-body a::after,
     article a::after {
       display: inline;
@@ -6777,7 +6792,7 @@ article {
       word-break: break-all;
       text-decoration: none; } }
 
-/* line 106, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 102, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 article:not(.full) p,
 article:not(.full) h1,
 article:not(.full) h2,
@@ -6793,7 +6808,7 @@ article:not(.full) .wp-caption,
 article:not(.full) [class^="mod-"] {
   max-width: 700px; }
   @media print {
-    /* line 106, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+    /* line 102, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
     article:not(.full) p,
     article:not(.full) h1,
     article:not(.full) h2,
@@ -6809,7 +6824,7 @@ article:not(.full) [class^="mod-"] {
     article:not(.full) [class^="mod-"] {
       max-width: none !important; } }
 
-/* line 125, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 121, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 hr {
   position: relative;
   height: 4px;
@@ -6817,19 +6832,19 @@ hr {
   background-color: #e7e5e1;
   border: none; }
 
-/* line 133, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 129, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 article + .page-footer {
   margin-top: 30px; }
 
-/* line 137, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 133, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 .page-footer {
   font-size: .9em; }
 
-/* line 141, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 137, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 .mce-content-body img[data-wp-more="printbreak"] {
   background: transparent url("../images/printbreak.png") repeat-y scroll center center; }
 
-/* line 145, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
+/* line 141, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
 .modularity-mod-text .box-panel.box-panel-secondary .box-content {
   padding: 20px; }
 
