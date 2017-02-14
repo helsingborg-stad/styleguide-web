@@ -67,7 +67,7 @@ article {
 		'.box',
 		'.dataTables_wrapper',
 		'.notice',
-		'.mod-table'
+		'div[class*="mod-"]'
 	);
 	@include elements-margin($elements-margin-list);
 
