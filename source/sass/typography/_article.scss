@@ -63,7 +63,8 @@ article {
 		'.box',
 		'.dataTables_wrapper',
 		'.notice',
-		'div[class*="mod-"]'
+		'div[class*="mod-"]',
+		'.player-wrapper'
 	);
 	@include elements-margin($elements-margin-list);
 
