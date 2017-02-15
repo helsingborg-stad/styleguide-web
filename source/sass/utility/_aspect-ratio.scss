@@ -10,6 +10,10 @@
     @include aspect-ratio(10, 3);
 }
 
+.ratio-36-7 {
+    @include aspect-ratio(36, 7);
+}
+
 article .ratio-16-9,
 article .ratio-4-3,
 article .ratio-10-3,
