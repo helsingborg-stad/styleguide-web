@@ -181,8 +181,6 @@ a.box-news:hover {
         @include material-shadow;
         overflow: hidden;
         position: relative;
-        transition: 200ms transform ease-in-out;
-        transform: scale(1.001) rotate(0);
 
         &::after {
             content: '';
@@ -209,10 +207,6 @@ a.box-news:hover {
 
         h3 {
             text-decoration: underline;
-        }
-
-        .box-image-container {
-            transform: rotate(-5deg) scale(1.001);
         }
     }
 }

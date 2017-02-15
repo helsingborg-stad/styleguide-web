@@ -11284,9 +11284,7 @@ a.box-news:hover {
     width: 50%;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
-    transition: 200ms transform ease-in-out;
-    transform: scale(1.001) rotate(0); }
+    position: relative; }
     /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
     body:not(.material-no-shadow) .box-news-circular .box-image-container {
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
@@ -11294,13 +11292,13 @@ a.box-news:hover {
         /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
         body:not(.material-no-shadow) .box-news-circular .box-image-container {
           box-shadow: none; } }
-    /* line 187, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 185, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular .box-image-container::after {
       content: '';
       display: block;
       width: 100%;
       padding-bottom: 100%; }
-    /* line 194, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 192, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular .box-image-container .box-image {
       position: absolute;
       position: absolute;
@@ -11309,19 +11307,16 @@ a.box-news:hover {
       transform: translate(-50%, -50%);
       height: 100%;
       width: auto; }
-  /* line 202, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 200, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular p {
     color: #252525;
     text-decoration: none; }
-  /* line 207, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 205, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular:hover {
     text-decoration: none; }
-    /* line 210, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 208, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular:hover h3 {
       text-decoration: underline; }
-    /* line 214, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
-    .box-news-circular:hover .box-image-container {
-      transform: rotate(-5deg) scale(1.001); }
 
 /* line 44, /www/sites/hbgprime/wwwroot/source/sass/component/box/_card.scss */
 .box-card {
