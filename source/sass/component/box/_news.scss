@@ -168,3 +168,51 @@ a.box-news:hover {
         }
     }
 }
+
+.box-news-circular {
+    text-align: center;
+
+    .box-image-container {
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        width: 50%;
+        margin: 0 auto;
+        @include material-shadow;
+        overflow: hidden;
+        position: relative;
+        transition: 200ms transform ease-in-out;
+        transform: scale(1.001) rotate(0);
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        .box-image {
+            position: absolute;
+            @include center();
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    p {
+        color: $base-font-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        .box-image-container {
+            transform: rotate(-5deg) scale(1.001);
+        }
+    }
+}

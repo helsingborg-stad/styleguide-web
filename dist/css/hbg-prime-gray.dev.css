@@ -10436,14 +10436,14 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
   .box .box-title.box-title-inherit {
     font-size: 1em; }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
-  body:not(.material-no-radius) .box:not(.box-news-horizontal):not(.box-panel-secondary) {
+  body:not(.material-no-radius) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
     border-radius: 2px; }
   /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
-  body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary) {
+  body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
     @media print {
       /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
-      body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary) {
+      body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
         box-shadow: none; } }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
   body:not(.material-no-radius) .box.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
@@ -11272,6 +11272,56 @@ a.box-news:hover {
     .box-news.box-news-horizontal .box-title + time, .box-news.box-news-horizontal h1 + time, .box-news.box-news-horizontal h2 + time, .box-news.box-news-horizontal h3 + time, .box-news.box-news-horizontal h4 + time, .box-news.box-news-horizontal .widget_calendar caption + time, .widget_calendar .box-news.box-news-horizontal caption + time, .box-news.box-news-horizontal h4 + time, .box-news.box-news-horizontal .widget_calendar caption + time, .widget_calendar .box-news.box-news-horizontal caption + time, .box-news.box-news-horizontal h6 + time {
       position: relative;
       top: -5px; }
+
+/* line 172, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+.box-news-circular {
+  text-align: center; }
+  /* line 175, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  .box-news-circular .box-image-container {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: 200ms transform ease-in-out;
+    transform: scale(1.001) rotate(0); }
+    /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
+    body:not(.material-no-shadow) .box-news-circular .box-image-container {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+      @media print {
+        /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
+        body:not(.material-no-shadow) .box-news-circular .box-image-container {
+          box-shadow: none; } }
+    /* line 187, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    .box-news-circular .box-image-container::after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%; }
+    /* line 194, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    .box-news-circular .box-image-container .box-image {
+      position: absolute;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: auto; }
+  /* line 202, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  .box-news-circular p {
+    color: #252525;
+    text-decoration: none; }
+  /* line 207, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  .box-news-circular:hover {
+    text-decoration: none; }
+    /* line 210, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    .box-news-circular:hover h3 {
+      text-decoration: underline; }
+    /* line 214, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    .box-news-circular:hover .box-image-container {
+      transform: rotate(-5deg) scale(1.001); }
 
 /* line 44, /www/sites/hbgprime/wwwroot/source/sass/component/box/_card.scss */
 .box-card {
