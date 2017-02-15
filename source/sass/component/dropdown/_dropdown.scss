@@ -129,6 +129,12 @@
     }
 }
 
+.dropdown-menu.dropdown-menu-hierarchical {
+    li > ul {
+        padding-left: 15px;
+    }
+}
+
 .dropdown-open {
     display: block;
 }
