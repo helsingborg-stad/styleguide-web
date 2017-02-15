@@ -94,6 +94,12 @@ li + li.title {
     margin-top: 10px;
 }
 
+.list-hierarchical {
+    li > ul {
+        padding-left: 15px;
+    }
+}
+
 .list-item-spacing li + li {
     margin-top: 8px;
 }

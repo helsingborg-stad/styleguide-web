@@ -7107,7 +7107,11 @@ li.title {
 li + li.title {
   margin-top: 10px; }
 
-/* line 97, /www/sites/hbgprime/wwwroot/source/sass/typography/_list.scss */
+/* line 98, /www/sites/hbgprime/wwwroot/source/sass/typography/_list.scss */
+.list-hierarchical li > ul {
+  padding-left: 15px; }
+
+/* line 103, /www/sites/hbgprime/wwwroot/source/sass/typography/_list.scss */
 .list-item-spacing li + li {
   margin-top: 8px; }
 
@@ -13603,11 +13607,7 @@ option {
     max-height: 300px;
     overflow: auto; }
 
-/* line 133, /www/sites/hbgprime/wwwroot/source/sass/component/dropdown/_dropdown.scss */
-.dropdown-menu.dropdown-menu-hierarchical li > ul {
-  padding-left: 15px; }
-
-/* line 138, /www/sites/hbgprime/wwwroot/source/sass/component/dropdown/_dropdown.scss */
+/* line 132, /www/sites/hbgprime/wwwroot/source/sass/component/dropdown/_dropdown.scss */
 .dropdown-open {
   display: block; }
 
