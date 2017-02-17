@@ -5362,36 +5362,44 @@ h3, .h3 {
 
 /* line 82, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
 h4, .widget_calendar caption, .h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500; }
   @media screen and (min-width: 0) and (max-width: 468px) {
     /* line 82, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
     h4, .widget_calendar caption, .h4 {
-      font-size: 1.1rem; } }
+      font-size: 1.2rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
     /* line 82, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
     h4, .widget_calendar caption, .h4 {
-      font-size: 1.1rem; } }
+      font-size: 1.2rem; } }
 
 /* line 95, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
 h5, .h5 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500; }
   @media screen and (min-width: 0) and (max-width: 468px) {
     /* line 95, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
     h5, .h5 {
-      font-size: 1rem; } }
+      font-size: 1.1rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
     /* line 95, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
     h5, .h5 {
-      font-size: 1rem; } }
+      font-size: 1.1rem; } }
 
 /* line 108, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500; }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 108, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
+    h6, .h6 {
+      font-size: 1rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 108, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
+    h6, .h6 {
+      font-size: 1rem; } }
 
-/* line 123, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
+/* line 131, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
 .sub-heading {
   padding: 6px 0;
   border-top: 1px solid #e7e5e1;
@@ -5399,7 +5407,7 @@ h6, .h6 {
   color: #979797;
   font-size: 1rem; }
 
-/* line 131, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
+/* line 139, /www/sites/hbgprime/wwwroot/source/sass/typography/_headings.scss */
 .box-filled .sub-heading,
 .box-news:not(.box-news-horizontal) .sub-heading {
   color: #fff;
