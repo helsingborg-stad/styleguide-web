@@ -184,7 +184,16 @@ gulp.task('iconfont', ['icons-scale'], function () {
                 fontPath: '../fonts/',
                 className: 'pricon'
               }))
-              .pipe(gulp.dest('source/sass/'))
+              .pipe(gulp.dest('source/sass/'));
+
+            gulp.src('source/icons/pricons.json')
+              .pipe(consolidate('lodash', {
+                glyphs: glyph,
+                fontName: 'hbg-pricons',
+                fontPath: '../fonts/',
+                className: 'pricon'
+              }))
+              .pipe(gulp.dest('dist/'))
         })
         .pipe(gulp.dest('dist/fonts/'));
 });
