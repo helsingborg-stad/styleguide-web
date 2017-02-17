@@ -1,0 +1,633 @@
+[
+    {
+        "name": "link-item",
+        "class": "pricon-link-item",
+        "unicode": "EA01"
+    },
+    {
+        "name": "user-o",
+        "class": "pricon-user-o",
+        "unicode": "EA02"
+    },
+    {
+        "name": "external-link",
+        "class": "pricon-external-link",
+        "unicode": "EA03"
+    },
+    {
+        "name": "file-pdf",
+        "class": "pricon-file-pdf",
+        "unicode": "EA04"
+    },
+    {
+        "name": "file-text",
+        "class": "pricon-file-text",
+        "unicode": "EA05"
+    },
+    {
+        "name": "file-image",
+        "class": "pricon-file-image",
+        "unicode": "EA06"
+    },
+    {
+        "name": "file-audio",
+        "class": "pricon-file-audio",
+        "unicode": "EA07"
+    },
+    {
+        "name": "file-video",
+        "class": "pricon-file-video",
+        "unicode": "EA08"
+    },
+    {
+        "name": "file-archive",
+        "class": "pricon-file-archive",
+        "unicode": "EA09"
+    },
+    {
+        "name": "github",
+        "class": "pricon-github",
+        "unicode": "EA0A"
+    },
+    {
+        "name": "presentation",
+        "class": "pricon-presentation",
+        "unicode": "EA0B"
+    },
+    {
+        "name": "file",
+        "class": "pricon-file",
+        "unicode": "EA0C"
+    },
+    {
+        "name": "phone",
+        "class": "pricon-phone",
+        "unicode": "EA0D"
+    },
+    {
+        "name": "smartphone",
+        "class": "pricon-smartphone",
+        "unicode": "EA0E"
+    },
+    {
+        "name": "email",
+        "class": "pricon-email",
+        "unicode": "EA0F"
+    },
+    {
+        "name": "picture",
+        "class": "pricon-picture",
+        "unicode": "EA10"
+    },
+    {
+        "name": "user",
+        "class": "pricon-user",
+        "unicode": "EA11"
+    },
+    {
+        "name": "picture-add",
+        "class": "pricon-picture-add",
+        "unicode": "EA12"
+    },
+    {
+        "name": "plus-o",
+        "class": "pricon-plus-o",
+        "unicode": "EA13"
+    },
+    {
+        "name": "caret-down",
+        "class": "pricon-caret-down",
+        "unicode": "EA14"
+    },
+    {
+        "name": "caret-up",
+        "class": "pricon-caret-up",
+        "unicode": "EA15"
+    },
+    {
+        "name": "check",
+        "class": "pricon-check",
+        "unicode": "EA16"
+    },
+    {
+        "name": "check-o",
+        "class": "pricon-check-o",
+        "unicode": "EA17"
+    },
+    {
+        "name": "notice-warning",
+        "class": "pricon-notice-warning",
+        "unicode": "EA18"
+    },
+    {
+        "name": "notice-danger",
+        "class": "pricon-notice-danger",
+        "unicode": "EA19"
+    },
+    {
+        "name": "compass",
+        "class": "pricon-compass",
+        "unicode": "EA1A"
+    },
+    {
+        "name": "info-o",
+        "class": "pricon-info-o",
+        "unicode": "EA1B"
+    },
+    {
+        "name": "question-o",
+        "class": "pricon-question-o",
+        "unicode": "EA1C"
+    },
+    {
+        "name": "linkedin-square",
+        "class": "pricon-linkedin-square",
+        "unicode": "EA1D"
+    },
+    {
+        "name": "twitter-square",
+        "class": "pricon-twitter-square",
+        "unicode": "EA1E"
+    },
+    {
+        "name": "facebook-square",
+        "class": "pricon-facebook-square",
+        "unicode": "EA1F"
+    },
+    {
+        "name": "instagram",
+        "class": "pricon-instagram",
+        "unicode": "EA20"
+    },
+    {
+        "name": "print",
+        "class": "pricon-print",
+        "unicode": "EA21"
+    },
+    {
+        "name": "listen-ear",
+        "class": "pricon-listen-ear",
+        "unicode": "EA22"
+    },
+    {
+        "name": "volume",
+        "class": "pricon-volume",
+        "unicode": "EA23"
+    },
+    {
+        "name": "search",
+        "class": "pricon-search",
+        "unicode": "EA24"
+    },
+    {
+        "name": "edit",
+        "class": "pricon-edit",
+        "unicode": "EA25"
+    },
+    {
+        "name": "minus-o",
+        "class": "pricon-minus-o",
+        "unicode": "EA26"
+    },
+    {
+        "name": "twitter",
+        "class": "pricon-twitter",
+        "unicode": "EA27"
+    },
+    {
+        "name": "linkedin",
+        "class": "pricon-linkedin",
+        "unicode": "EA28"
+    },
+    {
+        "name": "facebook",
+        "class": "pricon-facebook",
+        "unicode": "EA29"
+    },
+    {
+        "name": "settings",
+        "class": "pricon-settings",
+        "unicode": "EA2A"
+    },
+    {
+        "name": "location-pin",
+        "class": "pricon-location-pin",
+        "unicode": "EA2B"
+    },
+    {
+        "name": "next",
+        "class": "pricon-next",
+        "unicode": "EA2C"
+    },
+    {
+        "name": "previous",
+        "class": "pricon-previous",
+        "unicode": "EA2D"
+    },
+    {
+        "name": "back",
+        "class": "pricon-back",
+        "unicode": "EA2E"
+    },
+    {
+        "name": "caret-right",
+        "class": "pricon-caret-right",
+        "unicode": "EA2F"
+    },
+    {
+        "name": "play-o",
+        "class": "pricon-play-o",
+        "unicode": "EA30"
+    },
+    {
+        "name": "forbidden",
+        "class": "pricon-forbidden",
+        "unicode": "EA31"
+    },
+    {
+        "name": "sort-asc",
+        "class": "pricon-sort-asc",
+        "unicode": "EA32"
+    },
+    {
+        "name": "sort-desc",
+        "class": "pricon-sort-desc",
+        "unicode": "EA33"
+    },
+    {
+        "name": "sort",
+        "class": "pricon-sort",
+        "unicode": "EA34"
+    },
+    {
+        "name": "helsingborg",
+        "class": "pricon-helsingborg",
+        "unicode": "EA35"
+    },
+    {
+        "name": "calendar",
+        "class": "pricon-calendar",
+        "unicode": "EA36"
+    },
+    {
+        "name": "home",
+        "class": "pricon-home",
+        "unicode": "EA37"
+    },
+    {
+        "name": "language",
+        "class": "pricon-language",
+        "unicode": "EA38"
+    },
+    {
+        "name": "globe",
+        "class": "pricon-globe",
+        "unicode": "EA39"
+    },
+    {
+        "name": "star",
+        "class": "pricon-star",
+        "unicode": "EA3A"
+    },
+    {
+        "name": "text-size",
+        "class": "pricon-text-size",
+        "unicode": "EA3B"
+    },
+    {
+        "name": "share",
+        "class": "pricon-share",
+        "unicode": "EA3C"
+    },
+    {
+        "name": "heart-minus",
+        "class": "pricon-heart-minus",
+        "unicode": "EA3D"
+    },
+    {
+        "name": "heart-plus",
+        "class": "pricon-heart-plus",
+        "unicode": "EA3E"
+    },
+    {
+        "name": "heart",
+        "class": "pricon-heart",
+        "unicode": "EA3F"
+    },
+    {
+        "name": "standby",
+        "class": "pricon-standby",
+        "unicode": "EA40"
+    },
+    {
+        "name": "breifcase",
+        "class": "pricon-breifcase",
+        "unicode": "EA41"
+    },
+    {
+        "name": "lightbulb",
+        "class": "pricon-lightbulb",
+        "unicode": "EA42"
+    },
+    {
+        "name": "clipboard",
+        "class": "pricon-clipboard",
+        "unicode": "EA43"
+    },
+    {
+        "name": "picture-user",
+        "class": "pricon-picture-user",
+        "unicode": "EA44"
+    },
+    {
+        "name": "target",
+        "class": "pricon-target",
+        "unicode": "EA45"
+    },
+    {
+        "name": "paintbrush",
+        "class": "pricon-paintbrush",
+        "unicode": "EA46"
+    },
+    {
+        "name": "forbidden-circle",
+        "class": "pricon-forbidden-circle",
+        "unicode": "EA47"
+    },
+    {
+        "name": "smiley-angry",
+        "class": "pricon-smiley-angry",
+        "unicode": "EA48"
+    },
+    {
+        "name": "smiley-cool",
+        "class": "pricon-smiley-cool",
+        "unicode": "EA49"
+    },
+    {
+        "name": "smiley-cry",
+        "class": "pricon-smiley-cry",
+        "unicode": "EA4A"
+    },
+    {
+        "name": "smiley-flirty",
+        "class": "pricon-smiley-flirty",
+        "unicode": "EA4B"
+    },
+    {
+        "name": "smiley-oh",
+        "class": "pricon-smiley-oh",
+        "unicode": "EA4C"
+    },
+    {
+        "name": "smiley-sad",
+        "class": "pricon-smiley-sad",
+        "unicode": "EA4D"
+    },
+    {
+        "name": "smiley-smile",
+        "class": "pricon-smiley-smile",
+        "unicode": "EA4E"
+    },
+    {
+        "name": "smiley-super-happy",
+        "class": "pricon-smiley-super-happy",
+        "unicode": "EA4F"
+    },
+    {
+        "name": "smiley-thounge",
+        "class": "pricon-smiley-thounge",
+        "unicode": "EA50"
+    },
+    {
+        "name": "plus",
+        "class": "pricon-plus",
+        "unicode": "EA51"
+    },
+    {
+        "name": "notice-info",
+        "class": "pricon-notice-info",
+        "unicode": "EA52"
+    },
+    {
+        "name": "clock",
+        "class": "pricon-clock",
+        "unicode": "EA53"
+    },
+    {
+        "name": "wifi",
+        "class": "pricon-wifi",
+        "unicode": "EA54"
+    },
+    {
+        "name": "construction",
+        "class": "pricon-construction",
+        "unicode": "EA55"
+    },
+    {
+        "name": "sun",
+        "class": "pricon-sun",
+        "unicode": "EA56"
+    },
+    {
+        "name": "music",
+        "class": "pricon-music",
+        "unicode": "EA57"
+    },
+    {
+        "name": "calendar-check",
+        "class": "pricon-calendar-check",
+        "unicode": "EA58"
+    },
+    {
+        "name": "money",
+        "class": "pricon-money",
+        "unicode": "EA59"
+    },
+    {
+        "name": "bus",
+        "class": "pricon-bus",
+        "unicode": "EA5A"
+    },
+    {
+        "name": "car",
+        "class": "pricon-car",
+        "unicode": "EA5B"
+    },
+    {
+        "name": "house",
+        "class": "pricon-house",
+        "unicode": "EA5C"
+    },
+    {
+        "name": "park",
+        "class": "pricon-park",
+        "unicode": "EA5D"
+    },
+    {
+        "name": "bike",
+        "class": "pricon-bike",
+        "unicode": "EA5E"
+    },
+    {
+        "name": "boat",
+        "class": "pricon-boat",
+        "unicode": "EA5F"
+    },
+    {
+        "name": "coffee",
+        "class": "pricon-coffee",
+        "unicode": "EA60"
+    },
+    {
+        "name": "commute",
+        "class": "pricon-commute",
+        "unicode": "EA61"
+    },
+    {
+        "name": "healthcare",
+        "class": "pricon-healthcare",
+        "unicode": "EA62"
+    },
+    {
+        "name": "run",
+        "class": "pricon-run",
+        "unicode": "EA63"
+    },
+    {
+        "name": "swim",
+        "class": "pricon-swim",
+        "unicode": "EA64"
+    },
+    {
+        "name": "tent",
+        "class": "pricon-tent",
+        "unicode": "EA65"
+    },
+    {
+        "name": "apple",
+        "class": "pricon-apple",
+        "unicode": "EA66"
+    },
+    {
+        "name": "archive",
+        "class": "pricon-archive",
+        "unicode": "EA67"
+    },
+    {
+        "name": "bag",
+        "class": "pricon-bag",
+        "unicode": "EA68"
+    },
+    {
+        "name": "budget",
+        "class": "pricon-budget",
+        "unicode": "EA69"
+    },
+    {
+        "name": "diagram-increase",
+        "class": "pricon-diagram-increase",
+        "unicode": "EA6A"
+    },
+    {
+        "name": "discuss",
+        "class": "pricon-discuss",
+        "unicode": "EA6B"
+    },
+    {
+        "name": "dog",
+        "class": "pricon-dog",
+        "unicode": "EA6C"
+    },
+    {
+        "name": "balloon",
+        "class": "pricon-balloon",
+        "unicode": "EA6D"
+    },
+    {
+        "name": "handshake",
+        "class": "pricon-handshake",
+        "unicode": "EA6E"
+    },
+    {
+        "name": "info",
+        "class": "pricon-info",
+        "unicode": "EA6F"
+    },
+    {
+        "name": "man",
+        "class": "pricon-man",
+        "unicode": "EA70"
+    },
+    {
+        "name": "people",
+        "class": "pricon-people",
+        "unicode": "EA71"
+    },
+    {
+        "name": "recycling",
+        "class": "pricon-recycling",
+        "unicode": "EA72"
+    },
+    {
+        "name": "reload",
+        "class": "pricon-reload",
+        "unicode": "EA73"
+    },
+    {
+        "name": "sports",
+        "class": "pricon-sports",
+        "unicode": "EA74"
+    },
+    {
+        "name": "usb",
+        "class": "pricon-usb",
+        "unicode": "EA75"
+    },
+    {
+        "name": "vote",
+        "class": "pricon-vote",
+        "unicode": "EA76"
+    },
+    {
+        "name": "woman",
+        "class": "pricon-woman",
+        "unicode": "EA77"
+    },
+    {
+        "name": "cake",
+        "class": "pricon-cake",
+        "unicode": "EA78"
+    },
+    {
+        "name": "close",
+        "class": "pricon-close",
+        "unicode": "EA79"
+    },
+    {
+        "name": "down",
+        "class": "pricon-down",
+        "unicode": "EA7A"
+    },
+    {
+        "name": "up",
+        "class": "pricon-up",
+        "unicode": "EA7B"
+    },
+    {
+        "name": "sign-language",
+        "class": "pricon-sign-language",
+        "unicode": "EA7C"
+    },
+    {
+        "name": "easy-read",
+        "class": "pricon-easy-read",
+        "unicode": "EA7D"
+    },
+    {
+        "name": "union-jack",
+        "class": "pricon-union-jack",
+        "unicode": "EA7E"
+    }
+
+]
