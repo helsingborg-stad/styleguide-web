@@ -15495,11 +15495,11 @@ HelsingborgPrime.Component.Slider = (function ($) {
     Slider.prototype.triggerAutoplay = function () {
         setTimeout(function(){
             $(".slider .slide .slider-video video").each(function(index, video) {
-                if (typeof video.attr('autoplay') !== 'undefined' && video.attr('autoplay') !== 'false') {
-                    video.play();
+                if (typeof $(video).attr('autoplay') !== 'undefined' && $(video).attr('autoplay') !== 'false') {
+                    $(video).play();
                 }
             });
-        },200);
+        },1500);
     };
 
     return new Slider();
