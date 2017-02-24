@@ -15423,6 +15423,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
 
     function Slider() {
         this.preloadImage();
+        this.triggerAutoplay();
 
         $('.slider').each(function (index, element) {
             var $slider = $(element);
@@ -15439,6 +15440,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
                 setGallerySize: false,
                 wrapAround: true,
             });
+
         }.bind(this));
 
         $(window).resize(function() {
@@ -15488,6 +15490,16 @@ HelsingborgPrime.Component.Slider = (function ($) {
             });
 
         },5000);
+    };
+
+    Slider.prototype.triggerAutoplay = function () {
+        setTimeout(function(){
+            $(".slider .slide .slider-video video").each(function(index, video) {
+                if (typeof video.attr('autoplay') !== 'undefined' && video.attr('autoplay') !== 'false') {
+                    video.play();
+                }
+            });
+        },200);
     };
 
     return new Slider();
