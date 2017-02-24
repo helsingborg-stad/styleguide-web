@@ -87,7 +87,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
                     video.play();
                 }
             });
-        },1500);
+        },300);
     };
 
     return new Slider();
