@@ -13,7 +13,7 @@
 <section class="states">
     <h3>Modifiers</h3>
     <ul>
-    @foreach ($section[0]->state as $state)
+    @foreach ((array)$section[0]->state as $state)
         <li>
             <code>{{ $state->name }}</code> - {!! $state->description !!}
         </li>
