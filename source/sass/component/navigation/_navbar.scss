@@ -154,6 +154,13 @@
             padding-right: 0;
         }
     }
+
+
+    @media #{$screen-md-up} {
+        .menu-item-search {
+            float: right;
+        }
+    }
 }
 
 .navbar .nav-sublevel {
