@@ -8439,13 +8439,13 @@ button.btn-icon {
     .navbar ul a:hover, .navbar ul a:focus {
       text-decoration: underline; }
   /* line 102, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
-  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown):not(.nav-has-sublevel) .current-menu-item > a,
-  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown):not(.nav-has-sublevel) .current-page-ancestor > a {
+  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
+  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a {
     position: relative;
     text-decoration: underline; }
     /* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
-    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown):not(.nav-has-sublevel) .current-menu-item > a::after,
-    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown):not(.nav-has-sublevel) .current-page-ancestor > a::after {
+    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a::after,
+    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after {
       bottom: 0;
       left: 50%;
       border: solid transparent;
@@ -8459,15 +8459,15 @@ button.btn-icon {
       border-width: 10px;
       margin-left: -5px; }
   /* line 123, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
-  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item > a,
-  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor > a,
-  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor > a {
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a,
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a,
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a {
     position: relative;
     text-decoration: underline; }
     /* line 129, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
-    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item > a::after,
-    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor > a::after,
-    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor > a::after {
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a::after,
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a::after,
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a::after {
       bottom: 0;
       left: 50%;
       border: solid transparent;
