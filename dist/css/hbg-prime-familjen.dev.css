@@ -11344,7 +11344,7 @@ a.box-news:hover {
     background-size: cover;
     background-position: center center;
     border-radius: 50%;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     overflow: hidden;
     position: relative; }
@@ -11370,14 +11370,17 @@ a.box-news:hover {
       transform: translate(-50%, -50%);
       height: 100%;
       width: auto; }
-  /* line 200, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
+  /* line 201, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
+  .box-news-circular .box-content h3 {
+    font-size: 1.5em; }
+  /* line 206, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
   .box-news-circular p {
     color: #252525;
     text-decoration: none; }
-  /* line 205, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
+  /* line 211, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
   .box-news-circular:hover {
     text-decoration: none; }
-    /* line 208, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
+    /* line 214, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_news.scss */
     .box-news-circular:hover h3 {
       text-decoration: underline; }
 
