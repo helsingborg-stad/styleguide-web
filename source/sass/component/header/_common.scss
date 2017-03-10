@@ -25,7 +25,7 @@
     .site-header.header-transparent.header-light {
         color: #fff;
 
-        * {
+        *:not(input) {
             color: #fff;
         }
 
