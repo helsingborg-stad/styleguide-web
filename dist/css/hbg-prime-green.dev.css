@@ -7830,7 +7830,7 @@ button.btn-icon {
   .site-header.header-transparent.header-light {
     color: #fff; }
     /* line 28, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
-    .site-header.header-transparent.header-light * {
+    .site-header.header-transparent.header-light *:not(input) {
       color: #fff; }
     /* line 32, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-light .logotype svg,
@@ -13718,9 +13718,8 @@ option {
 /* line 19, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
 .search-top {
   background-color: #fff;
-  padding: 15px 0;
-  color: #000; }
-  /* line 23, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
+  padding: 15px 0; }
+  /* line 22, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
   .search-top label {
     display: none; }
 
