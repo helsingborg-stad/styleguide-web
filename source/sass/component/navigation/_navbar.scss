@@ -26,8 +26,10 @@
 
 .navbar {
     @include material-shadow;
+    @include textrendering;
     position: relative;
     font-size: 1.1rem;
+
 
     &:not(.navbar-creamy) {
         background-color: $palette-4;
