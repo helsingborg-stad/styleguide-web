@@ -13718,8 +13718,9 @@ option {
 /* line 19, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
 .search-top {
   background-color: #fff;
-  padding: 15px 0; }
-  /* line 23, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
+  padding: 15px 0;
+  color: #000; }
+  /* line 24, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
   .search-top label {
     display: none; }
 

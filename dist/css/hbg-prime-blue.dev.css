@@ -4025,13 +4025,12 @@ b {
     width: 100%; }
   /* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-xs-auto {
-    display: table-cell;
     width: auto; }
-  /* line 16, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 15, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-xs-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 21, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 20, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-tester::after {
     content: "xs"; } }
 
@@ -4098,13 +4097,12 @@ b {
     width: 100%; }
   /* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-sm-auto {
-    display: table-cell;
     width: auto; }
-  /* line 16, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 15, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-sm-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 21, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 20, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-tester::after {
     content: "sm"; } }
 
@@ -4171,13 +4169,12 @@ b {
     width: 100%; }
   /* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-md-auto {
-    display: table-cell;
     width: auto; }
-  /* line 16, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 15, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-md-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 21, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 20, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-tester::after {
     content: "md"; } }
 
@@ -4244,13 +4241,12 @@ b {
     width: 100%; }
   /* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-lg-auto {
-    display: table-cell;
     width: auto; }
-  /* line 16, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 15, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-lg-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 21, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 20, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-tester::after {
     content: "lg"; } }
 
@@ -4408,7 +4404,7 @@ b {
   margin-right: 0 !important;
   padding-left: 0;
   padding-right: 0; }
-  /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table {
     display: -ms-flexbox !important;
     display: flex !important;
@@ -4418,46 +4414,46 @@ b {
         flex-direction: row;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
-    /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table [class*="grid-"] {
       display: block;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
-  /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-table [class*="grid-"] {
     display: table-cell;
     float: none; }
-  /* line 74, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-table .grid-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%; }
-  /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-defined-width {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto; }
-  /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     white-space: normal;
     width: auto; }
-  /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 94, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-table.no-padding {
     padding-left: 0;
     padding-right: 0; }
-    /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 98, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table.no-padding [class*="grid-"] {
       padding: 0; }
-  /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   .grid-table .grid-col-icon {
     width: 1%;
     white-space: nowrap;
     padding-right: 0; }
-    /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table .grid-col-icon {
       display: block;
       -ms-flex: 0 0 auto;
@@ -4476,7 +4472,7 @@ b {
     margin-right: 0 !important;
     padding-left: 0;
     padding-right: 0; }
-    /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs {
       display: -ms-flexbox !important;
       display: flex !important;
@@ -4486,46 +4482,46 @@ b {
           flex-direction: row;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-      /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs [class*="grid-"] {
         display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-xs [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 74, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-xs .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 94, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-xs.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 98, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       .grid-table-xs.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-xs .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4541,7 +4537,7 @@ b {
     margin-right: 0 !important;
     padding-left: 0;
     padding-right: 0; }
-    /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm {
       display: -ms-flexbox !important;
       display: flex !important;
@@ -4551,46 +4547,46 @@ b {
           flex-direction: row;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-      /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm [class*="grid-"] {
         display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-sm [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 74, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-sm .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 94, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-sm.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 98, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       .grid-table-sm.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-sm .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4606,7 +4602,7 @@ b {
     margin-right: 0 !important;
     padding-left: 0;
     padding-right: 0; }
-    /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md {
       display: -ms-flexbox !important;
       display: flex !important;
@@ -4616,46 +4612,46 @@ b {
           flex-direction: row;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-      /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md [class*="grid-"] {
         display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-md [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 74, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-md .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 94, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-md.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 98, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       .grid-table-md.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-md .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4671,7 +4667,7 @@ b {
     margin-right: 0 !important;
     padding-left: 0;
     padding-right: 0; }
-    /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg {
       display: -ms-flexbox !important;
       display: flex !important;
@@ -4681,46 +4677,46 @@ b {
           flex-direction: row;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-      /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg [class*="grid-"] {
         display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-lg [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 74, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-lg .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 94, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-lg.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 98, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       .grid-table-lg.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+    /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
     .grid-table-lg .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+      /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4816,288 +4812,288 @@ b {
   width: auto; }
 
 @media (min-width: 0) {
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-1 {
     -ms-flex-preferred-size: 8.33333%;
         flex-basis: 8.33333%;
     max-width: 8.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-2 {
     -ms-flex-preferred-size: 16.66667%;
         flex-basis: 16.66667%;
     max-width: 16.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-3 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-4 {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-5 {
     -ms-flex-preferred-size: 41.66667%;
         flex-basis: 41.66667%;
     max-width: 41.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-6 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-7 {
     -ms-flex-preferred-size: 58.33333%;
         flex-basis: 58.33333%;
     max-width: 58.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-8 {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-9 {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-10 {
     -ms-flex-preferred-size: 83.33333%;
         flex-basis: 83.33333%;
     max-width: 83.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-11 {
     -ms-flex-preferred-size: 91.66667%;
         flex-basis: 91.66667%;
     max-width: 91.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-12 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  /* line 37, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%;
     max-width: none; }
-  /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 469px) {
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-1 {
     -ms-flex-preferred-size: 8.33333%;
         flex-basis: 8.33333%;
     max-width: 8.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-2 {
     -ms-flex-preferred-size: 16.66667%;
         flex-basis: 16.66667%;
     max-width: 16.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-3 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-4 {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-5 {
     -ms-flex-preferred-size: 41.66667%;
         flex-basis: 41.66667%;
     max-width: 41.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-6 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-7 {
     -ms-flex-preferred-size: 58.33333%;
         flex-basis: 58.33333%;
     max-width: 58.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-8 {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-9 {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-10 {
     -ms-flex-preferred-size: 83.33333%;
         flex-basis: 83.33333%;
     max-width: 83.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-11 {
     -ms-flex-preferred-size: 91.66667%;
         flex-basis: 91.66667%;
     max-width: 91.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-12 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  /* line 37, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%;
     max-width: none; }
-  /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 769px) {
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-1 {
     -ms-flex-preferred-size: 8.33333%;
         flex-basis: 8.33333%;
     max-width: 8.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-2 {
     -ms-flex-preferred-size: 16.66667%;
         flex-basis: 16.66667%;
     max-width: 16.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-3 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-4 {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-5 {
     -ms-flex-preferred-size: 41.66667%;
         flex-basis: 41.66667%;
     max-width: 41.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-6 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-7 {
     -ms-flex-preferred-size: 58.33333%;
         flex-basis: 58.33333%;
     max-width: 58.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-8 {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-9 {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-10 {
     -ms-flex-preferred-size: 83.33333%;
         flex-basis: 83.33333%;
     max-width: 83.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-11 {
     -ms-flex-preferred-size: 91.66667%;
         flex-basis: 91.66667%;
     max-width: 91.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-12 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  /* line 37, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%;
     max-width: none; }
-  /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 961px) {
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-1 {
     -ms-flex-preferred-size: 8.33333%;
         flex-basis: 8.33333%;
     max-width: 8.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-2 {
     -ms-flex-preferred-size: 16.66667%;
         flex-basis: 16.66667%;
     max-width: 16.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-3 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-4 {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-5 {
     -ms-flex-preferred-size: 41.66667%;
         flex-basis: 41.66667%;
     max-width: 41.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-6 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-7 {
     -ms-flex-preferred-size: 58.33333%;
         flex-basis: 58.33333%;
     max-width: 58.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-8 {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-9 {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-10 {
     -ms-flex-preferred-size: 83.33333%;
         flex-basis: 83.33333%;
     max-width: 83.33333%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-11 {
     -ms-flex-preferred-size: 91.66667%;
         flex-basis: 91.66667%;
     max-width: 91.66667%; }
-  /* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-12 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  /* line 37, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%;
     max-width: none; }
-  /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
+  /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
@@ -8443,11 +8439,15 @@ button.btn-icon {
     .navbar ul a:hover, .navbar ul a:focus {
       text-decoration: underline; }
   /* line 102, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  .navbar ul.nav-has-sublevel a,
+  .navbar ul.nav-sublevel a {
+    padding: 10px 0; }
+  /* line 107, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a {
     position: relative;
     text-decoration: underline; }
-    /* line 107, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 112, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a::after,
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after {
       bottom: 0;
@@ -8460,34 +8460,80 @@ button.btn-icon {
       pointer-events: none;
       border-color: rgba(255, 255, 255, 0);
       border-bottom-color: #ffffff;
-      border-width: 10px;
+      border-width: 8px;
       margin-left: -5px; }
-  /* line 123, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 128, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a,
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a,
+  .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a {
+    position: relative;
+    text-decoration: underline; }
+    /* line 134, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a::after,
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a::after,
+    .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a::after {
+      bottom: 0;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+      border-width: 8px;
+      margin-left: -5px; }
+  /* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar .nav.nav-justify li {
     padding-right: 20px; }
-    /* line 126, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 153, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar .nav.nav-justify li:last-child {
       padding-right: 0; }
+  @media (min-width: 769px) {
+    /* line 160, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    .navbar .menu-item-search {
+      float: right; } }
+
+/* line 166, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+.navbar .nav-sublevel {
+  position: relative; }
+  /* line 169, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  .navbar .nav-sublevel::after {
+    content: '';
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  /* line 180, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  .navbar .nav-sublevel li {
+    position: relative;
+    z-index: 2; }
 
 @media (min-width: 769px) {
-  /* line 133, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 187, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .header-transparent .navbar {
     background-color: transparent; } }
 
-/* line 138, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+/* line 192, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
 .navbar-creamy {
   background-color: #f6f5f2;
   padding: 0 10px; }
-  /* line 142, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 196, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy a {
     display: block;
     padding: 10px 0;
     font-size: .9em;
     color: #252525; }
-  /* line 149, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 203, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy.navbar-creamy-inner-shadow {
     position: relative; }
-    /* line 152, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 206, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar-creamy.navbar-creamy-inner-shadow::after {
       display: block;
       content: '';
@@ -13672,8 +13718,9 @@ option {
 /* line 19, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
 .search-top {
   background-color: #fff;
-  padding: 15px 0; }
-  /* line 23, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
+  padding: 15px 0;
+  color: #000; }
+  /* line 24, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/search/_search-form.scss */
   .search-top label {
     display: none; }
 
