@@ -1,3 +1,7 @@
+.site-header {
+    @include textrendering;
+}
+
 .site-header .logotype {
     @media screen and (max-width: $screen-xs-max) {
         max-width: 90%;
