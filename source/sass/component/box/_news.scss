@@ -176,7 +176,7 @@ a.box-news:hover {
         background-size: cover;
         background-position: center center;
         border-radius: 50%;
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
         @include material-shadow;
         overflow: hidden;
@@ -194,6 +194,12 @@ a.box-news:hover {
             @include center();
             height: 100%;
             width: auto;
+        }
+    }
+
+    .box-content {
+        h3 {
+            font-size: 1.2em;
         }
     }
 

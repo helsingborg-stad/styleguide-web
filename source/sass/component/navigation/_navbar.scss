@@ -26,8 +26,10 @@
 
 .navbar {
     @include material-shadow;
+    @include textrendering;
     position: relative;
     font-size: 1.1rem;
+
 
     &:not(.navbar-creamy) {
         background-color: $palette-4;
@@ -97,6 +99,10 @@
         &:focus {
             text-decoration: underline;
         }
+    }
+
+    ul.nav-has-sublevel {
+        font-weight: bold;
     }
 
     ul.nav-has-sublevel a,
