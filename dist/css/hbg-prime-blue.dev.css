@@ -8444,12 +8444,14 @@ button.btn-icon {
     padding: 10px 0; }
   /* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
-  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a {
+  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a,
+  .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-ancestor > a {
     position: relative;
     text-decoration: underline; }
-    /* line 112, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+    /* line 113, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a::after,
-    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after {
+    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after,
+    .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-ancestor > a::after {
       bottom: 0;
       left: 50%;
       border: solid transparent;
@@ -8462,13 +8464,13 @@ button.btn-icon {
       border-bottom-color: #ffffff;
       border-width: 8px;
       margin-left: -5px; }
-  /* line 128, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 129, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a,
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a,
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a {
     position: relative;
     text-decoration: underline; }
-    /* line 134, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+    /* line 135, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a::after,
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a::after,
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a::after {
@@ -8484,21 +8486,21 @@ button.btn-icon {
       border-bottom-color: rgba(255, 255, 255, 0.2);
       border-width: 8px;
       margin-left: -5px; }
-  /* line 150, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 151, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar .nav.nav-justify li {
     padding-right: 20px; }
-    /* line 153, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+    /* line 154, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
     .navbar .nav.nav-justify li:last-child {
       padding-right: 0; }
   @media (min-width: 769px) {
-    /* line 160, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+    /* line 161, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
     .navbar .menu-item-search {
       float: right; } }
 
-/* line 166, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+/* line 167, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
 .navbar .nav-sublevel {
   position: relative; }
-  /* line 169, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 170, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar .nav-sublevel::after {
     content: '';
     display: block;
@@ -8510,30 +8512,30 @@ button.btn-icon {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0); }
-  /* line 180, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 181, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar .nav-sublevel li {
     position: relative;
     z-index: 2; }
 
 @media (min-width: 769px) {
-  /* line 187, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 188, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .header-transparent .navbar {
     background-color: transparent; } }
 
-/* line 192, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+/* line 193, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
 .navbar-creamy {
   background-color: #f6f5f2;
   padding: 0 10px; }
-  /* line 196, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 197, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy a {
     display: block;
     padding: 10px 0;
     font-size: .9em;
     color: #252525; }
-  /* line 203, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy.navbar-creamy-inner-shadow {
     position: relative; }
-    /* line 206, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
+    /* line 207, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_navbar.scss */
     .navbar-creamy.navbar-creamy-inner-shadow::after {
       display: block;
       content: '';
