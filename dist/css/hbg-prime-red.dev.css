@@ -7807,7 +7807,9 @@ button.btn-icon {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
-  transform: rotate(0deg); }
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000; }
 
 @media screen and (max-width: 468px) {
   /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
