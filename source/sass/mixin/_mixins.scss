@@ -55,5 +55,7 @@
     text-rendering: geometricPrecision;
     font-feature-settings: "kern" 1;
     font-smoothing: antialiased;
-    transform: rotate(0.0000000001deg);
+    transform: translate3d( 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
 }

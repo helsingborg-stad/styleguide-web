@@ -8378,7 +8378,9 @@ button.btn-icon {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
-  transform: rotate(0deg);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
   position: relative;
   font-size: 1.1rem; }
   /* line 2, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_material.scss */
