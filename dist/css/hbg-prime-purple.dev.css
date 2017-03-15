@@ -5289,13 +5289,19 @@ h4,
 .widget_calendar caption, .h4,
 h5, .h5,
 h6, .h6 {
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern" 1;
+  font-smoothing: antialiased;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
   display: block;
   font-weight: bold;
   line-height: 140%;
   padding-bottom: .3em;
   margin: 0;
   word-wrap: break-word; }
-  /* line 32, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+  /* line 33, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
   h1.underline, .h1.underline,
   h2.underline, .h2.underline,
   h3.underline, .h3.underline,
@@ -5317,17 +5323,16 @@ h6, .h6 {
     h6, .h6 {
       color: #000 !important; } }
 
-/* line 43, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 44, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 h1, .h1 {
   font-size: 2.2rem;
-  font-weight: 500;
   color: #7b075e; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 43, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 44, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h1, .h1 {
       font-size: 1.8rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 43, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 44, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h1, .h1 {
       font-size: 2rem; } }
 
@@ -5345,8 +5350,7 @@ h2, .h2 {
 
 /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 h3, .h3 {
-  font-size: 1.4rem;
-  font-weight: 500; }
+  font-size: 1.4rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
     /* line 69, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h3, .h3 {
@@ -5356,46 +5360,43 @@ h3, .h3 {
     h3, .h3 {
       font-size: 1.2rem; } }
 
-/* line 82, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 81, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 h4, .widget_calendar caption, .h4 {
-  font-size: 1.3rem;
-  font-weight: 500; }
+  font-size: 1.3rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 82, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 81, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h4, .widget_calendar caption, .h4 {
       font-size: 1.2rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 82, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 81, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h4, .widget_calendar caption, .h4 {
       font-size: 1.2rem; } }
 
-/* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 93, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 h5, .h5 {
-  font-size: 1.2rem;
-  font-weight: 500; }
+  font-size: 1.2rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 93, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h5, .h5 {
       font-size: 1.1rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 93, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h5, .h5 {
       font-size: 1.1rem; } }
 
-/* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 105, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 h6, .h6 {
-  font-size: 1.1rem;
-  font-weight: 500; }
+  font-size: 1.1rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 105, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h6, .h6 {
       font-size: 1rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+    /* line 105, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
     h6, .h6 {
       font-size: 1rem; } }
 
-/* line 131, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 127, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 .sub-heading {
   padding: 6px 0;
   border-top: 1px solid #e7e5e1;
@@ -5403,7 +5404,7 @@ h6, .h6 {
   color: #979797;
   font-size: 1rem; }
 
-/* line 139, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
+/* line 135, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_headings.scss */
 .box-filled .sub-heading,
 .box-news:not(.box-news-horizontal) .sub-heading {
   color: #fff;
@@ -5412,7 +5413,7 @@ h6, .h6 {
 /* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_lead.scss */
 .lead {
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: bold;
   margin-top: 15px; }
 
 /* line 17, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_article.scss */
@@ -7421,7 +7422,7 @@ blockquote {
   padding: 10px 7% 10px 30px;
   quotes: "“" "”" "‘" "’";
   font-size: 1.3em;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.4;
   color: #712082; }
 
@@ -7535,7 +7536,7 @@ input[type="button"].btn::-moz-focus-inner {
   border: 1px solid #e7e5e1;
   font-family: system, "Segoe UI", Tahoma, -apple-system;
   font-size: 0.9em;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1.3;
   color: #252525;
   text-decoration: none;
@@ -7753,21 +7754,21 @@ a.btn.btn-plain,
 .btn-sm {
   padding: 0.4em 0.6em;
   font-size: 0.75em;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1; }
 
 /* line 220, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-md {
   padding: 0.5em 0.9em;
   font-size: 0.9em;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1; }
 
 /* line 227, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-lg {
   padding: 0.5em 0.9em;
   font-size: 1.1em;
-  font-weight: 600; }
+  font-weight: bold; }
 
 /* line 244, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-block {
@@ -9042,7 +9043,7 @@ body .tag {
   /* line 82, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/modal/_modal.scss */
   .modal-header h1, .modal-header h2, .modal-header h3, .modal-header h4, .modal-header .widget_calendar caption, .widget_calendar .modal-header caption, .modal-header h5, .modal-header h6 {
     padding-bottom: 0;
-    font-weight: 600; }
+    font-weight: bold; }
   /* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/modal/_modal.scss */
   .modal-header .btn-close {
     position: absolute;
@@ -11954,7 +11955,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
       /* Small devices */ }
       /* line 222, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/slider/_slider.scss */
       .slider .text-block.text-block-center span {
-        font-weight: 300;
+        font-weight: normal;
         font-size: 2em;
         line-height: 1.3;
         text-shadow: 0 0 20px #000;
@@ -13508,7 +13509,7 @@ option {
     border: 1px solid #e7e5e1;
     font-family: system, "Segoe UI", Tahoma, -apple-system;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: bold;
     color: #252525;
     text-decoration: none;
     cursor: pointer;
@@ -16198,7 +16199,7 @@ body:not(.material-no-shadow) .widget_calendar {
 /* line 128, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/wordpress/_widget-calendar.scss */
 .widget_calendar tfoot {
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: normal; }
   /* line 132, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/wordpress/_widget-calendar.scss */
   .widget_calendar tfoot td:first-of-type {
     border-right: 0; }
