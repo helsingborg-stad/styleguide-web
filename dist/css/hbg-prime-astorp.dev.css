@@ -7803,69 +7803,78 @@ button.btn-icon {
   .btn-offcanvas + .btn-offcanvas {
     margin-top: 0 !important; }
 
+/* line 1, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+.site-header {
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern" 1;
+  font-smoothing: antialiased;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000; }
+
 @media screen and (max-width: 468px) {
-  /* line 1, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header .logotype {
     max-width: 90%; }
-    /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 9, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header .logotype .tagline {
       display: none; } }
 
 @media screen and (min-width: 469px) and (max-width: 768px) {
-  /* line 1, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header .logotype {
     max-width: 92%; } }
 
 @media screen and (max-width: 468px) {
-  /* line 14, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 18, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header .logotype span.h1 {
     font-size: 1.1em; } }
 
 @media screen and (min-width: 469px) and (max-width: 768px) {
-  /* line 14, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 18, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header .logotype span.h1 {
     font-size: 1.4em; } }
 
 @media (min-width: 769px) {
-  /* line 25, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 29, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header.header-transparent.header-light {
     color: #fff; }
-    /* line 28, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 32, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-light *:not(input) {
       color: #fff; }
-    /* line 32, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-light .logotype svg,
     .site-header.header-transparent.header-light .logotype path {
       fill: #fff; }
-    /* line 37, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-light .logotype .h1 {
       color: #fff; }
-  /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+  /* line 46, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
   .site-header.header-transparent.header-dark {
     color: #252525; }
-    /* line 45, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 49, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-dark .navbar ul.nav > li > a {
       transition: 300ms all ease-in-out; }
-    /* line 49, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 53, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-dark .navbar:not(.is-sticky-scroll) ul.nav > li > a {
       color: #252525; }
-    /* line 53, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-dark .logotype svg,
     .site-header.header-transparent.header-dark .logotype path {
       fill: #252525; }
-    /* line 58, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+    /* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
     .site-header.header-transparent.header-dark .logotype .h1 {
       color: #252525; } }
 
-/* line 64, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+/* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
 .site-header .navbar {
   box-shadow: none !important; }
 
-/* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+/* line 72, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
 .site-header .sub-site-title {
   font-size: 1.1em; }
 
-/* line 72, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+/* line 76, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
 .site-header .sub-site-title-block {
   display: block;
   text-align: center;
@@ -7873,7 +7882,7 @@ button.btn-icon {
   padding: 5px 0;
   margin-top: 15px; }
 
-/* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
+/* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
 .site-header.header-center {
   text-align: center; }
 
