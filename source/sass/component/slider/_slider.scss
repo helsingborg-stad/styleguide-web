@@ -417,10 +417,9 @@
     }
 }
 
-@media screen and (max-width: $screen-sm-max) {
-    .hero .slider:not(.slider-layout-circle) {
-        min-height: 350px;
-    }
+.slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
+.slider-height-restrictions.ratio-36-7.slider:not(.slider-layout-circle) {
+    min-height: 350px;
 }
 
 .slider:not(.slider-layout-circle) {
