@@ -417,9 +417,14 @@
     }
 }
 
+@media screen and (max-width: $screen-sm-max) {
+    .hero .slider:not(.slider-layout-circle) {
+        min-height: 350px;
+    }
+}
+
 .slider:not(.slider-layout-circle) {
     height: 100%;
-    min-height: 350px;
 
     .flickity-viewport,
     [data-flickity] {
