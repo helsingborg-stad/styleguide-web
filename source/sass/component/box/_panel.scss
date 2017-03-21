@@ -108,11 +108,15 @@
         background-color: #fff;
     }
 
-    .box-title + ul:not(.social-feed-gallery) {
+    .box-title + ul:not(.social-feed-gallery):not(.accordion) {
         border-top: 0;
     }
 
-    > ul:not(.social-feed-gallery) {
+    > ul.accordion {
+        background-color: #fff;
+    }
+
+    > ul:not(.social-feed-gallery):not(.accordion) {
         background-color: #fff;
         border: 1px solid $creamy-darker;
 
