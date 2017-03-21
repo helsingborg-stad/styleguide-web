@@ -9686,20 +9686,29 @@ label.accordion-toggle.link-item {
       display: none; } }
 
 /* line 339, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
-body:not(.material-no-shadow) .box .accordion {
+body:not(.material-no-shadow) .box-content .accordion {
   box-shadow: none; }
 
 /* line 343, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
-.box .accordion {
+.box-content .accordion {
   border: none;
   border-radius: 0; }
+  /* line 347, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
+  .box-content .accordion li,
+  .box-content .accordion .accordion-section {
+    border: none;
+    border-top: 1px solid #e7e5e1; }
+  /* line 353, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
+  .box-content .accordion li:last-child,
+  .box-content .accordion .accordion-section:last-child {
+    border-bottom: 1px solid #e7e5e1; }
 
-/* line 348, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
+/* line 359, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="next"] .fa,
 [data-accordion-nav="next"] .pricon {
   margin-left: 5px; }
 
-/* line 353, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
+/* line 364, /www/sites/hbgprime/wwwroot/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="prev"] .fa,
 [data-accordion-nav="prev"] .pricon {
   margin-right: 5px; }

@@ -336,13 +336,24 @@ label.accordion-toggle.link-item {
     }
 }
 
-body:not(.material-no-shadow) .box .accordion {
+body:not(.material-no-shadow) .box-content .accordion {
     box-shadow: none;
 }
 
-.box .accordion {
+.box-content .accordion {
     border: none;
     border-radius: 0;
+
+    li,
+    .accordion-section {
+        border: none;
+        border-top: 1px solid $creamy-darker;
+    }
+
+    li:last-child,
+    .accordion-section:last-child {
+        border-bottom: 1px solid $creamy-darker;
+    }
 }
 
 [data-accordion-nav="next"] .fa,
