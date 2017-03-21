@@ -7121,14 +7121,17 @@ li + li.title {
   margin-top: 8px; }
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
-a {
+a,
+.link {
   color: #777;
   text-decoration: none; }
-  /* line 5, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
-  a:hover, a:focus {
+  /* line 6, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+  a:hover, a:focus,
+  .link:hover,
+  .link:focus {
     text-decoration: underline; }
 
-/* line 11, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 12, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 .mce-content-body a:not([class]),
 article a:not([class]),
 article a.link-item,
@@ -7152,7 +7155,7 @@ article
 article a {
   color: #0069b4;
   text-decoration: underline; }
-  /* line 17, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+  /* line 18, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):hover,
   article a:not([class]):hover,
   article a.link-item:hover,
@@ -7175,7 +7178,7 @@ article a {
   .widget_recent_comments
   article a:hover {
     color: #0095db; }
-  /* line 21, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+  /* line 22, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):visited,
   article a:not([class]):visited,
   article a.link-item:visited,
@@ -7198,7 +7201,7 @@ article a {
   .widget_recent_comments
   article a:visited {
     color: #712082; }
-    /* line 24, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+    /* line 25, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
     .mce-content-body a:not([class]):visited:hover,
     article a:not([class]):visited:hover,
     article a.link-item:visited:hover,
@@ -7222,7 +7225,7 @@ article a {
     article a:visited:hover {
       color: #a61380; }
 
-/* line 30, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 31, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 a.link-box,
 .link-box a {
   display: block;
@@ -7232,27 +7235,27 @@ a.link-box,
   border-radius: 3px;
   overflow: hidden;
   color: #fff; }
-  /* line 40, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+  /* line 41, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
   a.link-box:hover,
   .link-box a:hover {
     background-color: #262626; }
 
-/* line 45, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 46, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(2),
 .link-box:nth-of-type(2) a {
   background-color: #777; }
 
-/* line 50, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 51, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
   background-color: #000; }
 
-/* line 55, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 56, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
   background-color: #666; }
 
-/* line 60, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
+/* line 61, /www/sites/hbgprime/wwwroot/source/sass/typography/_link.scss */
 .link-box + .link-box {
   margin-top: 5px; }
 
