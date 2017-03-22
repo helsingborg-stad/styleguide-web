@@ -75,6 +75,16 @@
     }
 }
 
+[data-action="toggle-notice-content"] {
+    position: relative;
+    top: -2px;
+}
+
+.notice-content,
+.grid + .grid.notice-content {
+    margin-top: 10px;
+}
+
 .notices .notice + .notice {
     margin-top: 0;
 }

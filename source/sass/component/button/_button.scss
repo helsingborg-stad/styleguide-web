@@ -105,6 +105,38 @@ input[type="button"].btn::-moz-focus-inner {
     }
 }
 
+//
+// @name Button: Contrasted
+// @description Uses a 50% black foreground color to contrast to any background.
+//
+// @page Buttons/Contrasted
+//
+// @markup
+// <button class="btn btn-contrasted">Primary button</button>
+// <button class="btn btn-contrasted disabled">Primary disabled button</button>
+//
+.btn.btn-contrasted {
+    background-color: rgba(0,0,0,.5);
+    border-color: transparent;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0,0,0,.7);
+        border-color: transparent;
+    }
+}
+
+//
+// @name Button: Danger
+// @description Buttons
+//
+// @page Buttons/Danger
+//
+// @markup
+// <button class="btn btn-danger">Primary button</button>
+// <button class="btn btn-danger disabled">Primary disabled button</button>
+//
 .btn.btn-danger {
     background-color: $danger-bg;
     border-color: $danger-bg;
