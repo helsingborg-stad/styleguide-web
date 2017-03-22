@@ -8051,19 +8051,20 @@ button.btn-icon {
     /* line 8, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow #main-menu li {
       display: table-cell;
-      white-space: nowrap; }
-    /* line 13, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+      white-space: nowrap;
+      vertical-align: middle; }
+    /* line 14, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow #main-menu li + li {
       padding-left: 15px; }
-  /* line 18, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+  /* line 19, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
   .nav-group-overflow .dropdown {
     display: inline-block;
     margin-left: 15px;
     margin-top: 17px; }
-  /* line 24, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+  /* line 25, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
   .nav-group-overflow .dropdown-toggle {
     position: relative; }
-    /* line 27, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+    /* line 28, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow .dropdown-toggle::before {
       position: absolute;
       top: -12.5px;
@@ -8080,30 +8081,30 @@ button.btn-icon {
       font-weight: normal;
       background-color: #e3000f; }
 
-/* line 50, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+/* line 51, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
 .header-jumbo .navbar #main-menu > li > a {
   padding: 0;
   height: 70px;
   line-height: 70px;
   transition: 300ms all ease-in-out; }
 
-/* line 57, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+/* line 58, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
 .header-jumbo .navbar.is-sticky-scroll #main-menu > li > a {
   height: 60px;
   line-height: 60px; }
 
-/* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+/* line 64, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
 .site-header.header-jumbo .logotype {
   padding: 10px 0;
   color: #fff; }
-  /* line 67, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+  /* line 68, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
   .site-header.header-jumbo .logotype svg, .site-header.header-jumbo .logotype img {
     height: 50px; }
-  /* line 71, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+  /* line 72, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
   .site-header.header-jumbo .logotype h1 {
     color: #fff; }
 
-/* line 76, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
+/* line 77, /www/sites/hbgprime/wwwroot/source/sass/component/header/_jumbo.scss */
 .site-header.header-jumbo .menu-trigger {
   float: right;
   margin-top: 22px;
