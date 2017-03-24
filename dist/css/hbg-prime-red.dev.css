@@ -7121,14 +7121,17 @@ li + li.title {
   margin-top: 8px; }
 
 /* line 1, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
-a {
+a,
+.link {
   color: #ae0b05;
   text-decoration: none; }
-  /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
-  a:hover, a:focus {
+  /* line 6, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+  a:hover, a:focus,
+  .link:hover,
+  .link:focus {
     text-decoration: underline; }
 
-/* line 11, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 12, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 .mce-content-body a:not([class]),
 article a:not([class]),
 article a.link-item,
@@ -7152,7 +7155,7 @@ article
 article a {
   color: #0069b4;
   text-decoration: underline; }
-  /* line 17, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+  /* line 18, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):hover,
   article a:not([class]):hover,
   article a.link-item:hover,
@@ -7175,7 +7178,7 @@ article a {
   .widget_recent_comments
   article a:hover {
     color: #0095db; }
-  /* line 21, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+  /* line 22, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):visited,
   article a:not([class]):visited,
   article a.link-item:visited,
@@ -7198,7 +7201,7 @@ article a {
   .widget_recent_comments
   article a:visited {
     color: #712082; }
-    /* line 24, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+    /* line 25, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
     .mce-content-body a:not([class]):visited:hover,
     article a:not([class]):visited:hover,
     article a.link-item:visited:hover,
@@ -7222,7 +7225,7 @@ article a {
     article a:visited:hover {
       color: #a61380; }
 
-/* line 30, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 31, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 a.link-box,
 .link-box a {
   display: block;
@@ -7232,27 +7235,27 @@ a.link-box,
   border-radius: 3px;
   overflow: hidden;
   color: #fff; }
-  /* line 40, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+  /* line 41, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
   a.link-box:hover,
   .link-box a:hover {
     background-color: #b20046; }
 
-/* line 45, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 46, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(2),
 .link-box:nth-of-type(2) a {
   background-color: #ae0b05; }
 
-/* line 50, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 51, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
   background-color: #e3000f; }
 
-/* line 55, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
   background-color: #ec6701; }
 
-/* line 60, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
+/* line 61, /websites/helsingborg/styleguide/styleguide-web/source/sass/typography/_link.scss */
 .link-box + .link-box {
   margin-top: 5px; }
 
@@ -7674,132 +7677,142 @@ input[type="button"].btn::-moz-focus-inner {
     background-color: #dd6001;
     border-color: #dd6001; }
 
-/* line 108, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 118, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+.btn.btn-contrasted {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+  color: #fff; }
+  /* line 123, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  .btn.btn-contrasted:hover, .btn.btn-contrasted:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: transparent; }
+
+/* line 140, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn.btn-danger {
   background-color: #e3000f;
   border-color: #e3000f;
   color: #fff; }
-  /* line 113, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 145, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn.btn-danger:hover, .btn.btn-danger:focus {
     background-color: #b0000c;
     border-color: #b0000c; }
 
-/* line 131, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 163, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 a.btn.btn-plain,
 .btn.btn-plain {
   background-color: transparent;
   color: #252525;
   border-color: transparent;
   padding: 0; }
-  /* line 138, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 170, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   a.btn.btn-plain:hover,
   .btn.btn-plain:hover {
     background-color: trapsarent; }
-  /* line 142, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 174, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   a.btn.btn-plain:active,
   .btn.btn-plain:active {
     box-shadow: none; }
 
-/* line 178, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 210, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-theme-first {
   background-color: #f7a600;
   border-color: #f7a600;
   color: #fff; }
-  /* line 172, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 204, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-theme-first:hover {
     background-color: #e89c00;
     border-color: #e89c00; }
 
-/* line 182, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 214, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-theme-second {
   background-color: #cb0050;
   border-color: #cb0050;
   color: #fff; }
-  /* line 172, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 204, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-theme-second:hover {
     background-color: #bc004a;
     border-color: #bc004a; }
 
-/* line 186, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 218, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-theme-third {
   background-color: #ec6701;
   border-color: #ec6701;
   color: #fff; }
-  /* line 172, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 204, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-theme-third:hover {
     background-color: #dd6001;
     border-color: #dd6001; }
 
-/* line 190, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 222, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-theme-fourth {
   background-color: #ae0b05;
   border-color: #ae0b05;
   color: #fff; }
-  /* line 172, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 204, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-theme-fourth:hover {
     background-color: #9f0a05;
     border-color: #9f0a05; }
 
-/* line 194, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 226, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-theme-fifth {
   background-color: #e3000f;
   border-color: #e3000f;
   color: #fff; }
-  /* line 172, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 204, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-theme-fifth:hover {
     background-color: #d4000e;
     border-color: #d4000e; }
 
-/* line 213, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 245, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-sm {
   padding: 0.4em 0.6em;
   font-size: 0.75em;
   font-weight: bold;
   line-height: 1; }
 
-/* line 220, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 252, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-md {
   padding: 0.5em 0.9em;
   font-size: 0.9em;
   font-weight: bold;
   line-height: 1; }
 
-/* line 227, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 259, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-lg {
   padding: 0.5em 0.9em;
   font-size: 1.1em;
   font-weight: bold; }
 
-/* line 244, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 276, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-block {
   display: block;
   width: 100%;
   text-align: center; }
 
-/* line 250, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 282, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-block-lg {
   padding: 15px; }
 
-/* line 254, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 286, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-block + .btn-block {
   margin-top: 15px; }
 
-/* line 258, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 290, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-icon,
 button.btn-icon {
   padding: 5px 10px;
   line-height: 1; }
 
-/* line 273, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+/* line 305, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
 .btn-offcanvas {
   position: absolute;
   top: -100%;
   left: 0; }
-  /* line 278, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 310, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-offcanvas:focus {
     top: 0;
     z-index: 99999; }
-  /* line 283, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
+  /* line 315, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/button/_button.scss */
   .btn-offcanvas + .btn-offcanvas {
     margin-top: 0 !important; }
 
@@ -8038,19 +8051,20 @@ button.btn-icon {
     /* line 8, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow #main-menu li {
       display: table-cell;
-      white-space: nowrap; }
-    /* line 13, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+      white-space: nowrap;
+      vertical-align: middle; }
+    /* line 14, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow #main-menu li + li {
       padding-left: 15px; }
-  /* line 18, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+  /* line 19, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
   .nav-group-overflow .dropdown {
     display: inline-block;
     margin-left: 15px;
     margin-top: 17px; }
-  /* line 24, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+  /* line 25, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
   .nav-group-overflow .dropdown-toggle {
     position: relative; }
-    /* line 27, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+    /* line 28, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
     .nav-group-overflow .dropdown-toggle::before {
       position: absolute;
       top: -12.5px;
@@ -8067,30 +8081,30 @@ button.btn-icon {
       font-weight: normal;
       background-color: #e3000f; }
 
-/* line 50, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+/* line 51, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
 .header-jumbo .navbar #main-menu > li > a {
   padding: 0;
   height: 70px;
   line-height: 70px;
   transition: 300ms all ease-in-out; }
 
-/* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+/* line 58, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
 .header-jumbo .navbar.is-sticky-scroll #main-menu > li > a {
   height: 60px;
   line-height: 60px; }
 
-/* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+/* line 64, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
 .site-header.header-jumbo .logotype {
   padding: 10px 0;
   color: #fff; }
-  /* line 67, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+  /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
   .site-header.header-jumbo .logotype svg, .site-header.header-jumbo .logotype img {
     height: 50px; }
-  /* line 71, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+  /* line 72, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
   .site-header.header-jumbo .logotype h1 {
     color: #fff; }
 
-/* line 76, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
+/* line 77, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_jumbo.scss */
 .site-header.header-jumbo .menu-trigger {
   float: right;
   margin-top: 22px;
@@ -9546,7 +9560,11 @@ body:not(.material-no-shadow) .accordion {
 .accordion-list .accordion-section:nth-child(odd) {
   background: rgba(0, 0, 0, 0.01); }
 
-/* line 216, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 217, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+.accordion-list.accordion-list-small .accordion-toggle {
+  background: transparent; }
+
+/* line 222, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
 .accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
   font-family: hbg-pricons;
@@ -9557,13 +9575,13 @@ body:not(.material-no-shadow) .accordion {
   vertical-align: -15%;
   content: ""; }
 
-/* line 221, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 227, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 input[type="checkbox"]:checked ~ .accordion-toggle,
 input[type="radio"]:checked ~ .accordion-toggle,
 input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
   font-weight: bold; }
-  /* line 227, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 233, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-toggle h1, input[type="checkbox"]:checked ~ .accordion-toggle h2, input[type="checkbox"]:checked ~ .accordion-toggle h3, input[type="checkbox"]:checked ~ .accordion-toggle h4, input[type="checkbox"]:checked ~ .accordion-toggle .widget_calendar caption, .widget_calendar input[type="checkbox"]:checked ~ .accordion-toggle caption, input[type="checkbox"]:checked ~ .accordion-toggle h5, input[type="checkbox"]:checked ~ .accordion-toggle h6,
   input[type="radio"]:checked ~ .accordion-toggle h1,
   input[type="radio"]:checked ~ .accordion-toggle h2,
@@ -9590,70 +9608,86 @@ input[type="radio"]:target ~ .accordion-toggle {
   input[type="radio"]:target ~ .accordion-toggle h5,
   input[type="radio"]:target ~ .accordion-toggle h6 {
     font-weight: bold; }
-  /* line 231, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 237, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-toggle .label-number,
   input[type="radio"]:checked ~ .accordion-toggle .label-number,
   input[type="checkbox"]:target ~ .accordion-toggle .label-number,
   input[type="radio"]:target ~ .accordion-toggle .label-number {
     color: #11a636; }
 
-/* line 236, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 242, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-toggle {
   display: block;
   cursor: default; }
 
-/* line 246, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 252, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 label.accordion-toggle {
   cursor: pointer; }
 
-/* line 250, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 256, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+label.accordion-toggle.link-item {
+  color: #ae0b05; }
+  /* line 259, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  label.accordion-toggle.link-item:hover {
+    text-decoration: underline; }
+
+/* line 264, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-content {
   display: none; }
-  /* line 253, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 267, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"] ~ .accordion-content,
   input[type="radio"] ~ .accordion-content {
     display: none; }
     @media print {
-      /* line 253, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+      /* line 267, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
       input[type="checkbox"] ~ .accordion-content,
       input[type="radio"] ~ .accordion-content {
         display: block !important; } }
-  /* line 262, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 276, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-content,
   input[type="radio"]:checked ~ .accordion-content,
   input[type="checkbox"]:target ~ .accordion-content,
   input[type="radio"]:target ~ .accordion-content {
     display: block; }
   @media print {
-    /* line 250, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 264, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-content {
       display: block !important; } }
+  /* line 287, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  .accordion-content table {
+    width: 100%; }
+    /* line 290, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    .accordion-content table td {
+      padding-right: 5px; }
+    /* line 294, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    .accordion-content table tr + tr td {
+      padding-top: 5px; }
 
-/* line 274, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 300, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-table {
   display: table;
   table-layout: fixed;
   width: 100%; }
-  /* line 279, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 305, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   .accordion-table .column-header {
     display: table-cell;
     width: 2%; }
 
-/* line 285, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 311, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-table-head {
   background-color: #cb0050;
   color: #fff;
   font-weight: bold; }
 
-/* line 292, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 318, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .modal-body .accordion .accordion-section:first-child {
   border-top: none; }
 
-/* line 296, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 322, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .modal-body .accordion .accordion-section:last-child {
   border-bottom: none; }
 
-/* line 301, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 327, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-nav {
   background-color: #F6F5F2;
   margin: -20px;
@@ -9661,16 +9695,34 @@ label.accordion-toggle {
   padding: 10px 20px;
   border-top: 1px solid #E7E5E1; }
   @media print {
-    /* line 301, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 327, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-nav {
       display: none; } }
 
-/* line 313, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 339, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+body:not(.material-no-shadow) .box-content .accordion {
+  box-shadow: none; }
+
+/* line 343, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+.box-content .accordion {
+  border: none;
+  border-radius: 0; }
+  /* line 347, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  .box-content .accordion li,
+  .box-content .accordion .accordion-section {
+    border: none;
+    border-top: 1px solid #e7e5e1; }
+  /* line 353, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  .box-content .accordion li:last-child,
+  .box-content .accordion .accordion-section:last-child {
+    border-bottom: 1px solid #e7e5e1; }
+
+/* line 359, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="next"] .fa,
 [data-accordion-nav="next"] .pricon {
   margin-left: 5px; }
 
-/* line 318, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 364, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="prev"] .fa,
 [data-accordion-nav="prev"] .pricon {
   margin-right: 5px; }
@@ -10185,84 +10237,94 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     padding: 5px 0; } }
 
 /* line 78, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+[data-action="toggle-notice-content"] {
+  position: relative;
+  top: -2px; }
+
+/* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+.notice-content,
+.grid + .grid.notice-content {
+  margin-top: 10px; }
+
+/* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notices .notice + .notice {
   margin-top: 0; }
 
-/* line 82, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 92, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice-inline-block {
   display: inline-block; }
   /* line 42, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_material.scss */
   body:not(.material-no-radius) .notice-inline-block {
     border-radius: 2px; }
 
-/* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 97, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice-lg {
   font-size: 1.2em; }
-  /* line 90, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 100, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   .notice-lg .grid-col-icon {
     margin-right: 10px; }
 
-/* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 105, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice-sm {
   font-size: .9em;
   padding: .2em .5em; }
-  /* line 99, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   .notice-sm.pricon-space-right::before {
     margin-right: .2em; }
-  /* line 103, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 113, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   .notice-sm.pricon::before {
     vertical-align: -10%; }
-  /* line 107, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 117, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   .notice-sm .grid-col-icon {
     margin-right: 0px; }
-  /* line 111, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 121, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   .notice-sm [class*="grid-"] {
     padding-left: 10px;
     padding-right: 10px; }
 
-/* line 117, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 127, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice-fullwidth {
   border-left: 0;
   border-right: 0; }
 
-/* line 122, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 132, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice.success {
   background-color: #11a636;
   color: #fff; }
 
-/* line 127, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 137, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice.warning {
   background-color: #FFD700;
   color: #252525; }
 
-/* line 132, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 142, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice.danger {
   background-color: #e3000f;
   color: #fff; }
 
-/* line 137, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 147, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .notice.info {
   background-color: #b1f5ff;
   color: #252525; }
 
 @media print {
-  /* line 143, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+  /* line 153, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
   #cookie-consent {
     display: none; } }
 
-/* line 148, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+/* line 158, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
 .modularity-mod-notice .notice {
   margin-bottom: 10px; }
   @media (min-width: 469px) and (max-width: 768px) {
-    /* line 148, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+    /* line 158, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
     .modularity-mod-notice .notice {
       margin-bottom: 10px; } }
   @media (min-width: 769px) and (max-width: 960px) {
-    /* line 148, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+    /* line 158, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
     .modularity-mod-notice .notice {
       margin-bottom: 30px; } }
   @media (min-width: 961px) {
-    /* line 148, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
+    /* line 158, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/notice/_notice.scss */
     .modularity-mod-notice .notice {
       margin-bottom: 30px; } }
 
@@ -10988,82 +11050,87 @@ a.box-index {
     border-top: 0;
     background-color: #fff; }
   /* line 111, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-  .box-panel .box-title + ul:not(.social-feed-gallery),
-  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery),
-  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery) {
+  .box-panel .box-title + ul:not(.social-feed-gallery):not(.accordion),
+  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery):not(.accordion),
+  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery):not(.accordion) {
     border-top: 0; }
   /* line 115, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-  .box-panel > ul:not(.social-feed-gallery),
-  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery),
-  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery) {
+  .box-panel > ul.accordion,
+  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul.accordion,
+  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul.accordion {
+    background-color: #fff; }
+  /* line 119, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+  .box-panel > ul:not(.social-feed-gallery):not(.accordion),
+  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion),
+  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) {
     background-color: #fff;
     border: 1px solid #e7e5e1; }
-    /* line 119, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-    .box-panel > ul:not(.social-feed-gallery) li,
-    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery) li,
-    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery) li {
-      padding: 10px 15px; }
     /* line 123, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-    .box-panel > ul:not(.social-feed-gallery) li + li,
-    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery) li + li,
-    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery) li + li {
+    .box-panel > ul:not(.social-feed-gallery):not(.accordion) li,
+    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li,
+    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li {
+      padding: 10px 15px; }
+    /* line 127, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+    .box-panel > ul:not(.social-feed-gallery):not(.accordion) li + li,
+    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li,
+    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li {
       border-top: 1px solid #e7e5e1; }
-    /* line 128, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-    .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a,
-    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a,
-    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a {
+    /* line 132, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+    .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a,
+    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a,
+    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a {
       display: table; }
-      /* line 131, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-      .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a:hover,
-      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a:hover,
-      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a:hover {
+      /* line 135, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+      .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover,
+      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover,
+      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover {
         text-decoration: none !important; }
-        /* line 134, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-        .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a:hover .title,
-        .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a:hover .title,
-        .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a:hover .title {
+        /* line 138, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+        .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title,
+        .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title,
+        .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title {
           text-decoration: underline !important; }
-      /* line 139, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-      .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-      .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date {
+      /* line 143, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+      .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+      .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
         display: block; }
         @media (min-width: 769px) {
-          /* line 139, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-          .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-          .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date {
+          /* line 143, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+          .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+          .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
             display: table-cell; } }
   @media all and (min-width: 769px) and (-ms-high-contrast: none), (min-width: 769px) and (-ms-high-contrast: active) {
-    /* line 139, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-    .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-    .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .title,
-    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date {
+    /* line 143, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+    .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+    .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+    .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
+    .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
       padding-left: 20px; } }
-      /* line 152, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-      .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date {
+      /* line 156, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+      .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+      .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+      .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
         white-space: nowrap;
         width: 1%;
         padding-left: 20px; }
         @media (min-width: 769px) {
-          /* line 152, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
-          .box-panel > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date,
-          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.social-feed) a .date {
+          /* line 156, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+          .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+          .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
+          .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
             text-align: right; } }
 
-/* line 169, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+/* line 173, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
 .box-panel-secondary .box-title,
 .box-panel-secondary .widgettitle,
 .box-panel-secondary > h1,
@@ -11122,7 +11189,7 @@ a.box-index {
   background-color: transparent !important;
   border-bottom: 3px solid #cb0050;
   color: #cb0050; }
-  /* line 189, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
+  /* line 193, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_panel.scss */
   .box-panel-secondary .box-title a,
   .box-panel-secondary .widgettitle a,
   .box-panel-secondary > h1 a,
