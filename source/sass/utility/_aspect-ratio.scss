@@ -16,6 +16,10 @@
     @include aspect-ratio(36, 7);
 }
 
+.ratio-1-1 {
+    @include aspect-ratio(1, 1);
+}
+
 @media #{$screen-xs} {
     .ratio-16-9-xs {
         @include aspect-ratio(16, 9);
@@ -31,6 +35,10 @@
 
     .ratio-36-7-xs {
         @include aspect-ratio(36, 7);
+    }
+
+    .ratio-1-1-xs {
+        @include aspect-ratio(1, 1);
     }
 }
 
@@ -50,6 +58,10 @@
     .ratio-36-7-sm {
         @include aspect-ratio(36, 7);
     }
+
+    .ratio-1-1-sm {
+        @include aspect-ratio(1, 1);
+    }
 }
 
 @media #{$screen-md} {
@@ -68,6 +80,10 @@
     .ratio-36-7-md {
         @include aspect-ratio(36, 7);
     }
+
+    .ratio-1-1-md {
+        @include aspect-ratio(1, 1);
+    }
 }
 
 @media #{$screen-lg} {
@@ -85,6 +101,10 @@
 
     .ratio-36-7-lg {
         @include aspect-ratio(36, 7);
+    }
+
+    .ratio-1-1-lg {
+        @include aspect-ratio(1, 1);
     }
 }
 
