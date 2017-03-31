@@ -72,6 +72,8 @@
   "buttons": [
    "base",
    "primary",
+   "contrasted",
+   "danger",
    "plain",
    "themed",
    "sizes",
@@ -1870,6 +1872,50 @@
        "path": "~/source/sass/component/button/_button.scss",
        "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
        "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "contrasted": [
+    {
+     "name": "Button: Contrasted",
+     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Contrasted"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "danger": [
+    {
+     "name": "Button: Danger",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Danger"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Primary disabled button&lt;/button&gt;"
       }
      ]
     }
