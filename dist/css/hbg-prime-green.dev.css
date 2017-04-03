@@ -5292,7 +5292,6 @@ h6, .h6 {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
-  transform: translateZ(0);
   display: block;
   font-weight: bold;
   line-height: 140%;
@@ -7818,8 +7817,7 @@ button.btn-icon {
 .site-header {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
-  font-smoothing: antialiased;
-  transform: translateZ(0); }
+  font-smoothing: antialiased; }
 
 @media screen and (max-width: 468px) {
   /* line 5, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/header/_common.scss */
@@ -8398,7 +8396,6 @@ button.btn-icon {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
-  transform: translateZ(0);
   position: relative;
   font-size: 1.1rem; }
   /* line 2, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_material.scss */
