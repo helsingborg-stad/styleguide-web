@@ -12310,9 +12310,10 @@ body:not(.material-no-radius) :not(.hero) .slider {
 */
 /* line 17, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 .box .player-wrapper {
-  display: table; }
+  display: table;
+  width: 100%; }
 
-/* line 21, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+/* line 22, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 ol.player-playlist {
   background-color: #fff;
   border: 1px solid #e7e5e1;
@@ -12323,37 +12324,37 @@ ol.player-playlist {
   max-height: 400px;
   list-style-type: none;
   counter-reset: playlist-item; }
-  /* line 35, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 36, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   ol.player-playlist li {
     counter-increment: playlist-item;
     padding: 10px 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+    /* line 43, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
     ol.player-playlist li::before {
       display: inline-block;
       content: counter(playlist-item) ". ";
       width: 30px;
       padding-right: 5px; }
-  /* line 50, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 51, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   ol.player-playlist li + li {
     border-top: 1px solid #e7e5e1; }
-  /* line 54, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 55, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   ol.player-playlist li > a,
   ol.player-playlist li > a:visited {
     color: #660033;
     text-decoration: none; }
-  /* line 60, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 61, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   ol.player-playlist li > a:hover {
     color: #4d0026; }
 
-/* line 65, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+/* line 66, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 .player-wrapper.is-playlist .player {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important; }
 
-/* line 70, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+/* line 71, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 .player {
   background-size: cover;
   background-position: center; }
@@ -12367,7 +12368,7 @@ ol.player-playlist {
       /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
       body:not(.material-no-shadow) .player {
         box-shadow: none; } }
-  /* line 77, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 78, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   .player > a {
     display: block;
     text-align: center;
@@ -12380,7 +12381,7 @@ ol.player-playlist {
     transition: opacity 200ms ease;
     color: #fff;
     line-height: 1; }
-    /* line 87, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+    /* line 88, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
     .player > a::before {
       display: inline-block;
       color: #fff;
@@ -12391,25 +12392,25 @@ ol.player-playlist {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-    /* line 93, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+    /* line 94, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
     .player > a:hover {
       text-decoration: none;
       opacity: 1; }
-  /* line 99, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 100, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   .player iframe {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
-  /* line 104, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 105, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   .player.is-playing a {
     opacity: 0; }
 
-/* line 110, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+/* line 111, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 .no-js .player a {
   opacity: 1; }
-  /* line 113, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 114, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   .no-js .player a::before {
     font-family: hbg-pricons;
     line-height: 1;
@@ -12419,7 +12420,7 @@ ol.player-playlist {
     vertical-align: -15%;
     content: "";
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.8); }
-  /* line 118, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+  /* line 119, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
   .no-js .player a::after {
     display: block;
     content: attr(data-unavailable);
@@ -12427,7 +12428,7 @@ ol.player-playlist {
     line-height: 1.3;
     text-shadow: 0 0 10px black; }
 
-/* line 127, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
+/* line 128, /www/sites/hbgprime/wwwroot/source/sass/component/player/_player.scss */
 .player + .player {
   margin-top: 15px; }
 
