@@ -5293,8 +5293,6 @@ h6, .h6 {
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
   display: block;
   font-weight: bold;
   line-height: 140%;
@@ -7821,9 +7819,7 @@ button.btn-icon {
   text-rendering: geometricPrecision;
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000; }
+  transform: translate3d(0, 0, 0); }
 
 @media screen and (max-width: 468px) {
   /* line 5, /www/sites/hbgprime/wwwroot/source/sass/component/header/_common.scss */
@@ -8403,8 +8399,6 @@ button.btn-icon {
   font-feature-settings: "kern" 1;
   font-smoothing: antialiased;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
   position: relative;
   font-size: 1.1rem; }
   /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
@@ -15441,7 +15435,8 @@ input[type="radio"]:disabled, select:disabled {
   overflow: hidden;
   border: 0 none; }
 
-/* line 1, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+/* Ratios */
+/* line 3, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
 .ratio-16-9 {
   position: relative; }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
@@ -15461,7 +15456,7 @@ input[type="radio"]:disabled, select:disabled {
     width: 100% !important;
     height: 100% !important; }
 
-/* line 5, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+/* line 7, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
 .ratio-4-3 {
   position: relative; }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
@@ -15481,7 +15476,7 @@ input[type="radio"]:disabled, select:disabled {
     width: 100% !important;
     height: 100% !important; }
 
-/* line 9, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+/* line 11, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
 .ratio-10-3 {
   position: relative; }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
@@ -15501,7 +15496,7 @@ input[type="radio"]:disabled, select:disabled {
     width: 100% !important;
     height: 100% !important; }
 
-/* line 13, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+/* line 15, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
 .ratio-36-7 {
   position: relative; }
   /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
@@ -15521,13 +15516,424 @@ input[type="radio"]:disabled, select:disabled {
     width: 100% !important;
     height: 100% !important; }
 
-/* line 17, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+/* line 19, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+.ratio-1-1 {
+  position: relative; }
+  /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+  .ratio-1-1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%; }
+  /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+  .ratio-1-1 > .content,
+  .ratio-1-1 > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important; }
+
+@media (min-width: 0) and (max-width: 468px) {
+  /* line 24, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-16-9-xs {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-xs:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-xs > .content,
+    .ratio-16-9-xs > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 28, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-4-3-xs {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-xs:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-xs > .content,
+    .ratio-4-3-xs > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 32, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-10-3-xs {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-xs:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 30%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-xs > .content,
+    .ratio-10-3-xs > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 36, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-36-7-xs {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-xs:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 19.44444%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-xs > .content,
+    .ratio-36-7-xs > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 40, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-1-1-xs {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-xs:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-xs > .content,
+    .ratio-1-1-xs > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; } }
+
+@media (min-width: 469px) and (max-width: 768px) {
+  /* line 46, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-16-9-sm {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-sm:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-sm > .content,
+    .ratio-16-9-sm > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 50, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-4-3-sm {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-sm:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-sm > .content,
+    .ratio-4-3-sm > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 54, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-10-3-sm {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-sm:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 30%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-sm > .content,
+    .ratio-10-3-sm > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 58, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-36-7-sm {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-sm:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 19.44444%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-sm > .content,
+    .ratio-36-7-sm > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 62, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-1-1-sm {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-sm:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-sm > .content,
+    .ratio-1-1-sm > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; } }
+
+@media (min-width: 769px) and (max-width: 960px) {
+  /* line 68, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-16-9-md {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-md:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-md > .content,
+    .ratio-16-9-md > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 72, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-4-3-md {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-md:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-md > .content,
+    .ratio-4-3-md > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 76, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-10-3-md {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-md:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 30%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-md > .content,
+    .ratio-10-3-md > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 80, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-36-7-md {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-md:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 19.44444%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-md > .content,
+    .ratio-36-7-md > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 84, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-1-1-md {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-md:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-md > .content,
+    .ratio-1-1-md > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; } }
+
+@media (min-width: 961px) {
+  /* line 90, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-16-9-lg {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-lg:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-16-9-lg > .content,
+    .ratio-16-9-lg > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 94, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-4-3-lg {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-lg:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-4-3-lg > .content,
+    .ratio-4-3-lg > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 98, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-10-3-lg {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-lg:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 30%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-10-3-lg > .content,
+    .ratio-10-3-lg > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 102, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-36-7-lg {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-lg:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 19.44444%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-36-7-lg > .content,
+    .ratio-36-7-lg > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  /* line 106, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
+  .ratio-1-1-lg {
+    position: relative; }
+    /* line 42, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-lg:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%; }
+    /* line 49, /www/sites/hbgprime/wwwroot/source/sass/mixin/_positioning.scss */
+    .ratio-1-1-lg > .content,
+    .ratio-1-1-lg > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; } }
+
+/* Max width settings */
+/* line 112, /www/sites/hbgprime/wwwroot/source/sass/utility/_aspect-ratio.scss */
 article .ratio-16-9,
 article .ratio-4-3,
 article .ratio-10-3,
+article .ratio-36-7,
 .mce-content-body .ratio-16-9,
 .mce-content-body .ratio-4-3,
-.mce-content-body .ratio-10-3 {
+.mce-content-body .ratio-10-3,
+.mce-content-body .ratio-36-7 {
   max-width: 700px; }
 
 /* line 1, /www/sites/hbgprime/wwwroot/source/sass/utility/_video-background.scss */
