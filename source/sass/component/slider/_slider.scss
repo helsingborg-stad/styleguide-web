@@ -384,6 +384,11 @@
         background-color: #fff;
         opacity: .5;
     }
+
+    .dot.is-selected {
+        background-color: $palette-2;
+        opacity: 1;
+    }
 }
 
 .slider.slider-layout-circle {
