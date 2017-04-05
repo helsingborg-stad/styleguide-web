@@ -19,6 +19,7 @@ var git = require('gulp-git');
 var bump = require('gulp-bump');
 var filter = require('gulp-filter');
 var tag_version = require('gulp-tag-version');
+var sassJson = require('gulp-sass-json');
 
 // Icon plugins
 var svgscaler = require('svg-scaler');
@@ -85,6 +86,12 @@ gulp.task('sass-dev', function() {
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
             .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('sass-json', function () {
+    return gulp.src('source/sass/themes/*.scss')
+        .pipe(sassJson())
+        .pipe(gulp.dest('dist/vars'));
 });
 
 gulp.task('sass-font-awesome', function () {

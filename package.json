@@ -9,15 +9,16 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "flickity": "^2.0.5",
     "git-rev": "^0.2.1",
     "gulp-bump": "^2.5.1",
     "gulp-copy": "^1.0.0",
     "gulp-filter": "^4.0.0",
     "gulp-install": "^0.6.0",
+    "gulp-sass-json": "^1.0.1",
     "gulp-tag-version": "^1.3.0",
     "hyperform": "^0.8.8",
-    "jquery": "^2.2.0",
-    "flickity": "^2.0.5"
+    "jquery": "^2.2.0"
   },
   "devDependencies": {
     "font-awesome": "^4.6.1",
