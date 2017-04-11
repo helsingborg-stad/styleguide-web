@@ -11682,22 +11682,30 @@ a.box-news:hover {
     opacity: 1; }
 
 /* line 153, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
+.modularity-mod-sites .box-post-brick .box-image svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; }
+
+/* line 158, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 1) > .box-post-brick {
   background-color: #d35098; }
 
-/* line 157, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
+/* line 162, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 2) > .box-post-brick {
   background-color: #712082; }
 
-/* line 161, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
+/* line 166, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 3) > .box-post-brick {
   background-color: #a84c98; }
 
-/* line 165, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
+/* line 170, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 4) > .box-post-brick {
   background-color: #7b075e; }
 
-/* line 169, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
+/* line 174, /www/sites/hbgprime/wwwroot/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 5) > .box-post-brick {
   background-color: #a61380; }
 
