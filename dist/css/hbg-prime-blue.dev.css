@@ -12935,6 +12935,50 @@ input[type="radio"] {
 input[type="radio"] {
   top: -4px; }
 
+/* line 19, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+.input-file {
+  display: inline-table;
+  position: relative;
+  table-layout: fixed;
+  background-color: #f6f5f2;
+  border: 1px solid #e7e5e1;
+  padding: 3px;
+  border-radius: 3px;
+  max-width: 300px;
+  overflow: hidden; }
+  /* line 30, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+  .input-file::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to left, #f6f5f2, rgba(246, 245, 242, 0)); }
+  /* line 41, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+  .input-file input[type="file"] {
+    position: fixed;
+    top: -10000px;
+    left: -10000px; }
+  /* line 47, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+  .input-file span {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap; }
+  /* line 53, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+  .input-file .input-file-selected {
+    font-weight: normal;
+    padding-left: 10px; }
+
+/* line 59, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+ul.input-files li + li {
+  margin-top: 10px; }
+
+/* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/form/_file.scss */
+.input-file + .input-file {
+  margin-top: 10px; }
+
 /* line 34, /www/sites/hbgprime/wwwroot/source/sass/component/form/_select.scss */
 select {
   border-radius: 0;

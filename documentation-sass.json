@@ -93,6 +93,7 @@
   ],
   "forms": [
    "datepicker",
+   "file",
    "basic form",
    "horizontal form",
    "image upload",
@@ -2358,6 +2359,35 @@
        "path": "~/source/sass/component/form/_datepicker.scss",
        "example": "\n<div class=\"form-group\">\n    <label for=\"date\">Date</label>\n    <input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\">\n</div>",
        "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"date\"&gt;Date&lt;/label&gt;\n    &lt;input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\"&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "file": [
+    {
+     "name": "File input",
+     "description": "<p>File upload input</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "File"
+      }
+     ],
+     "state": [
+      {
+       "name": ".invalid",
+       "escaped": "invalid",
+       "description": "Invalid input value"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
+       "path": "~/source/sass/component/form/_file.scss",
+       "example": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label&gt;Upload file(s)&lt;/label&gt;\n    &lt;label class=\"input-file\"&gt;\n       &lt;input type=\"file\" name=\"file[]\"&gt;\n       &lt;span&gt;Select file…&lt;/span&gt;\n    &lt;/label&gt;\n&lt;/div&gt;"
       }
      ]
     }
