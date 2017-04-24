@@ -8826,8 +8826,9 @@ button.btn-icon {
     text-decoration: none; }
 
 /* line 64, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/navigation/_pagination.scss */
-.pagination a:not(.next):not(.prev),
-.page-numbers a:not(.next):not(.prev) {
+.pagination a:not(.next):not(.prev), .pagination span:not(.next):not(.prev),
+.page-numbers a:not(.next):not(.prev),
+.page-numbers span:not(.next):not(.prev) {
   width: 30px;
   height: 30px;
   line-height: 27px;

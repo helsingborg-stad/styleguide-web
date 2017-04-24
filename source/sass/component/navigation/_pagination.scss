@@ -61,7 +61,7 @@
 		}
 	}
 
-	a:not(.next):not(.prev) {
+	a:not(.next):not(.prev), span:not(.next):not(.prev) {
 		width: $page-size;
 		height: $page-size;
 		line-height: $page-size - 3px;
