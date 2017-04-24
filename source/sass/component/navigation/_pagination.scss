@@ -31,6 +31,10 @@
 		line-height: 3;
 	}
 
+	a {
+		background-color: #fff;
+	}
+
 	a,
 	.current {
 		@include material-radius;
