@@ -1,0 +1,71 @@
+.error404:not(.error404-2) {
+    @include cover();
+    background-color: $palette-4;
+    color: #fff;
+    font-size: 1em;
+
+    padding: 0;
+    margin: 0;
+
+    display: table;
+    height: 100vh;
+    width: 100%;
+
+    #wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        padding: $content-gutter * 2;
+    }
+
+    #cookie-consent {
+        display: none;
+    }
+
+    .container + .container {
+        margin-top: $content-gutter * 2;
+    }
+
+    .logotype {
+        display: block;
+
+        img, svg {
+            display: block;
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .logotype h1 {
+        font-size: 2em;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 10em;
+        line-height: 1;
+
+        em {
+            display: block;
+            font-size: .3em;
+        }
+    }
+
+    .actions {
+        li + li {
+            margin-top: 10px;
+        }
+    }
+
+    ul + p,
+    p + p {
+        margin-top: 1.5em;
+    }
+
+    @media #{$screen-below-md} {
+        font-size: 1em;
+    }
+}
