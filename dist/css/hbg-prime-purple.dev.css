@@ -8773,6 +8773,11 @@ button.btn-icon {
 
 /* line 34, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
 .pagination a,
+.page-numbers a {
+  background-color: #fff; }
+
+/* line 38, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+.pagination a,
 .pagination .current,
 .page-numbers a,
 .page-numbers .current {
@@ -8804,7 +8809,7 @@ button.btn-icon {
       .page-numbers a, body:not(.material-no-shadow)
       .page-numbers .current {
         box-shadow: none; } }
-  /* line 50, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+  /* line 54, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
   .pagination a:hover, .pagination a:focus, .pagination a.current,
   .pagination .current:hover,
   .pagination .current:focus,
@@ -8820,27 +8825,28 @@ button.btn-icon {
     color: #fff;
     text-decoration: none; }
 
-/* line 60, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
-.pagination a:not(.next):not(.prev),
-.page-numbers a:not(.next):not(.prev) {
+/* line 64, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+.pagination a:not(.next):not(.prev), .pagination span:not(.next):not(.prev),
+.page-numbers a:not(.next):not(.prev),
+.page-numbers span:not(.next):not(.prev) {
   width: 30px;
   height: 30px;
   line-height: 27px;
   padding: 0; }
 
-/* line 68, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+/* line 72, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
 .pagination .ellipsis:after,
 .page-numbers .ellipsis:after {
   content: "…";
   display: inline-block; }
 
-/* line 74, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+/* line 78, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
 .pagination .dots,
 .page-numbers .dots {
   display: block;
   font-size: .85em; }
 
-/* line 83, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
+/* line 87, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_pagination.scss */
 .pagination-lg a:not(.next):not(.prev) {
   font-size: 1.1em;
   height: 40px;
