@@ -11,7 +11,7 @@ HelsingborgPrime.Helper.LocalLink = (function ($) {
         $(document).ready(function () {
             var hostname = new RegExp(location.host);
 
-            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable)').each(function () {
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
                 var url = $(this).attr('href');
                 if (hostname.test(url)) {
                     return;

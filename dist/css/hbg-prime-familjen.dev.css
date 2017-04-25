@@ -14141,67 +14141,6 @@ option {
 img[src$=".svg"].footer-signature {
   height: 100%; }
 
-/* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-.error404 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #009AA6;
-  color: #fff;
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-  display: table;
-  height: 100vh;
-  width: 100%; }
-  /* line 14, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 #wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 30px; }
-  /* line 20, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 #cookie-consent {
-    display: none; }
-  /* line 24, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 .container + .container {
-    margin-top: 30px; }
-  /* line 28, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 .logotype {
-    display: block; }
-    /* line 31, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-    .error404 .logotype img, .error404 .logotype svg {
-      display: block;
-      width: 200px;
-      height: auto; }
-  /* line 38, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 a {
-    color: #fff; }
-  /* line 42, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 .logotype h1 {
-    font-size: 2em; }
-  /* line 46, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 h1 {
-    color: #fff;
-    font-size: 10em;
-    line-height: 1; }
-    /* line 51, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-    .error404 h1 em {
-      display: block;
-      font-size: .3em; }
-  /* line 58, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 .actions li + li {
-    margin-top: 10px; }
-  /* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-  .error404 ul + p,
-  .error404 p + p {
-    margin-top: 1.5em; }
-  @media (max-width: 769px) {
-    /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
-    .error404 {
-      font-size: 1em; } }
-
 @font-face {
   font-family: system;
   font-style: normal;
