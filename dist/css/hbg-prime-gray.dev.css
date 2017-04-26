@@ -14208,6 +14208,21 @@ img[src$=".svg"].footer-signature {
     .error404:not(.error404-2) {
       font-size: 1em; } }
 
+/* line 74, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+.error404-2 .error404-title {
+  font-size: 6em;
+  font-weight: 100;
+  letter-spacing: -.1em;
+  margin: 0;
+  padding: 0;
+  line-height: 1; }
+
+/* line 83, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+.error404-2 .error404-subtitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #777; }
+
 @font-face {
   font-family: system;
   font-style: normal;
