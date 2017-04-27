@@ -86,7 +86,7 @@
         padding: $content-gutter/1.5;
     }
 
-    a:not(.btn) {
+    a:not(.btn):not(.page) {
         color: #fff;
         text-decoration: underline;
 

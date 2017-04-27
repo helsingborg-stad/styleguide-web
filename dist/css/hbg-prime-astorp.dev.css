@@ -10706,12 +10706,12 @@ a.box-index {
   .box-filled > ul {
     padding: 10px; }
   /* line 89, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
-  .box-filled a:not(.btn) {
+  .box-filled a:not(.btn):not(.page) {
     color: #fff;
     text-decoration: underline; }
     @media print {
       /* line 89, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
-      .box-filled a:not(.btn) {
+      .box-filled a:not(.btn):not(.page) {
         color: #252525; } }
   /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
   .box-filled .box-content {
@@ -14146,7 +14146,7 @@ option {
 img[src$=".svg"].footer-signature {
   height: 100%; }
 
-/* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+/* line 1, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
 .error404:not(.error404-2) {
   position: absolute;
   top: 0;
@@ -14161,53 +14161,53 @@ img[src$=".svg"].footer-signature {
   display: table;
   height: 100vh;
   width: 100%; }
-  /* line 14, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 14, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) #wrapper {
     display: table-cell;
     vertical-align: middle;
     padding: 30px; }
-  /* line 20, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 20, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) #cookie-consent {
     display: none; }
-  /* line 24, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 24, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) .container + .container {
     margin-top: 30px; }
-  /* line 28, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 28, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) .logotype {
     display: block; }
-    /* line 31, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+    /* line 31, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
     .error404:not(.error404-2) .logotype img, .error404:not(.error404-2) .logotype svg {
       display: block;
       width: 200px;
       height: auto; }
-  /* line 38, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 38, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) a {
     color: #fff; }
-  /* line 42, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 42, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) .logotype h1 {
     font-size: 2em; }
-  /* line 46, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 46, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) h1 {
     color: #fff;
     font-size: 10em;
     line-height: 1; }
-    /* line 51, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+    /* line 51, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
     .error404:not(.error404-2) h1 em {
       display: block;
       font-size: .3em; }
-  /* line 58, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 58, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) .actions li + li {
     margin-top: 10px; }
-  /* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+  /* line 63, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
   .error404:not(.error404-2) ul + p,
   .error404:not(.error404-2) p + p {
     margin-top: 1.5em; }
   @media (max-width: 769px) {
-    /* line 1, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+    /* line 1, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
     .error404:not(.error404-2) {
       font-size: 1em; } }
 
-/* line 74, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+/* line 74, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
 .error404-2 .error404-title {
   font-size: 6em;
   font-weight: 100;
@@ -14216,7 +14216,7 @@ img[src$=".svg"].footer-signature {
   padding: 0;
   line-height: 1; }
 
-/* line 83, /www/sites/hbgprime/wwwroot/source/sass/component/error/_404.scss */
+/* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/error/_404.scss */
 .error404-2 .error404-subtitle {
   font-weight: bold;
   font-size: 1.5em;
@@ -16641,14 +16641,14 @@ div.spinner {
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) > ul {
       padding: 10px; }
     /* line 89, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
-    .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn),
-    .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn) {
+    .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page),
+    .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page) {
       color: #fff;
       text-decoration: underline; }
       @media print {
         /* line 89, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
-        .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn),
-        .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn) {
+        .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page),
+        .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page) {
           color: #252525; } }
     /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .box-content,
