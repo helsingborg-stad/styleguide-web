@@ -12991,35 +12991,37 @@ option {
   border-right: 0;
   font-size: .9em;
   padding-left: 15px;
-  padding-right: 15px; }
-  /* line 48, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+  padding-right: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+  /* line 51, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
   .input-group-addon:not(.input-group-addon-btn):first-of-type,
   .input-group-addon-btn:not(.input-group-addon-btn):first-of-type {
     border-left: 1px solid #e7e5e1; }
-  /* line 52, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+  /* line 55, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
   .input-group-lg .input-group-addon, .input-group-lg
   .input-group-addon-btn {
     height: 52px; }
 
-/* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+/* line 60, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
 .input-group-addon-btn .btn {
   line-height: 1;
   border-radius: 0; }
 
-/* line 62, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+/* line 65, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
 .input-group-addon-btn {
   background-color: transparent;
   border: none;
   padding: 0;
   height: 40px; }
-  /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+  /* line 71, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
   .input-group-lg .input-group-addon-btn {
     height: 54px; }
-  /* line 72, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+  /* line 75, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
   .input-group-addon-btn * {
     height: inherit; }
 
-/* line 77, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+/* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
 .input-group .form-control {
   display: table-cell;
   position: relative;
@@ -13030,11 +13032,11 @@ option {
   margin-bottom: 0;
   height: 40px; }
 
-/* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+/* line 91, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
 .input-group-lg .form-control {
   height: 54px; }
 
-/* line 92, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+/* line 95, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
 .input-group .form-notice {
   position: absolute;
   z-index: 9000;
@@ -13062,7 +13064,7 @@ option {
       /* line 2, /websites/helsingborg/styleguide/styleguide-web/source/sass/mixin/_material.scss */
       body:not(.material-no-shadow) .input-group .form-notice {
         box-shadow: none; } }
-  /* line 116, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
+  /* line 119, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/form/_input-group.scss */
   .input-group .form-notice::before {
     content: '';
     display: block;
