@@ -15282,6 +15282,49 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
 })(jQuery);
 
 //
+// @name File selector
+// @description
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.File = (function ($) {
+
+    function File() {
+        this.handleEvents();
+    }
+
+    File.prototype.handleEvents = function () {
+        $(document).on('change', '.input-file input[type="file"]', function (e) {
+            this.setSelected(e.target);
+        }.bind(this));
+
+        $('.input-file input[type="file"]').trigger('change');
+    };
+
+    File.prototype.setSelected = function(fileinput) {
+        var $fileinput = $(fileinput);
+        var $label = $fileinput.parents('label.input-file');
+        var $duplicate = $label.parent('li').clone();
+
+        if ($fileinput.val()) {
+            $label.find('.input-file-selected').text($fileinput.val());
+        }
+
+        if ($fileinput.val() && $label.parent('li').length) {
+            var max = $label.parent('li').parent('ul').attr('data-max');
+
+            if ($label.parent('li').parent('ul').find('li').length < max) {
+                $label.parents('ul').append($duplicate);
+            }
+        }
+    };
+
+    return new File();
+
+})(jQuery);
+
+//
 // @name Gallery
 // @description  Popup boxes for gallery items.
 //
@@ -15741,7 +15784,7 @@ HelsingborgPrime.Helper.LocalLink = (function ($) {
         $(document).ready(function () {
             var hostname = new RegExp(location.host);
 
-            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable)').each(function () {
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
                 var url = $(this).attr('href');
                 if (hostname.test(url)) {
                     return;

@@ -150,6 +150,11 @@
     }
 }
 
+.modularity-mod-sites .box-post-brick .box-image svg {
+    @include center();
+    width: 70%;
+}
+
 .grid > [class*="grid-"]:nth-child(5n + 1) > .box-post-brick {
     background-color: $palette-1;
 }
