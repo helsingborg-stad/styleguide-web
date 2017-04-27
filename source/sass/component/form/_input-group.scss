@@ -45,9 +45,6 @@ $input-group-height-lg: 54px;
     padding-left: 15px;
     padding-right: 15px;
 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-
     &:not(.input-group-addon-btn):first-of-type {
         border-left: 1px solid $creamy-darker;
     }
@@ -57,7 +54,8 @@ $input-group-height-lg: 54px;
     }
 }
 
-.input-group-addon-btn .btn {
+.input-group-addon-btn .btn,
+.input-group-addon-btn .btn.btn-primary {
     line-height: 1;
     border-radius: 0;
 }
