@@ -6957,8 +6957,8 @@ article {
   article h6 + p {
     margin-top: 0em; }
   /* line 80, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
-  .mce-content-body p:first-of-type,
-  article p:first-of-type {
+  .mce-content-body p:first-of-type:not(:first-child),
+  article p:first-of-type:not(:first-child) {
     margin-top: 15px; }
   /* line 84, /www/sites/hbgprime/wwwroot/source/sass/typography/_article.scss */
   .mce-content-body img,

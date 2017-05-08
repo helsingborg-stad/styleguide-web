@@ -77,7 +77,7 @@ article {
 		margin-top: 0em;
 	}
 
-	p:first-of-type {
+	p:first-of-type:not(:first-child) {
 		margin-top: 15px;
 	}
 
