@@ -91,6 +91,15 @@
         padding: $content-gutter;
     }
 
+    .box-content h1,
+    .box-content h2,
+    .box-content h3,
+    .box-content h4,
+    .box-content h5,
+    .box-content h6 {
+        padding-bottom: 0;
+    }
+
     time {
         font-size: .8em;
     }
