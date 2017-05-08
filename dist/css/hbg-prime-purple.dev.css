@@ -14679,13 +14679,14 @@ small,
 /* line 47, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-lg {
   left: 30px;
-  padding-right: 30px; }
-  /* line 52, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+  padding-right: 30px;
+  padding-bottom: 0px; }
+  /* line 53, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
   .link-item-lg::before {
     margin-right: .5em;
     margin-left: -30px; }
 
-/* line 58, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 59, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .box-filled .link-item::before, .box-filled .widget_archive a::before, .widget_archive .box-filled a::before, .box-filled
 .widget_categories a::before,
 .widget_categories .box-filled a::before, .box-filled
@@ -14697,7 +14698,7 @@ small,
 .widget_recent_comments .box-filled a::before {
   color: rgba(255, 255, 255, 0.7); }
 
-/* line 63, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 64, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-before::before {
   font-family: hbg-pricons;
   line-height: 1;
@@ -14711,10 +14712,10 @@ small,
   color: rgba(0, 0, 0, 0.4);
   text-decoration: none; }
 
-/* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-unavailable {
   opacity: .5; }
-  /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+  /* line 74, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
   .link-unavailable::before {
     font-family: hbg-pricons;
     line-height: 1;
@@ -14725,7 +14726,7 @@ small,
     content: ""; }
 
 /* External */
-/* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-outbound::before {
   font-family: hbg-pricons;
   line-height: 1;
@@ -14741,7 +14742,7 @@ small,
 }
 */
 /* Domains */
-/* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 99, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-github::before,
 .link-item[href*="github.com"]::before,
 .widget_archive a[href*="github.com"]::before,
@@ -14759,7 +14760,7 @@ small,
   content: ""; }
 
 /* Filetypes */
-/* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 109, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-pdf::before,
 .link-item[href$=".pdf"]::before,
 .widget_archive a[href$=".pdf"]::before,
@@ -14776,7 +14777,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 120, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 121, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-doc::before,
 .link-item[href$=".doc"]::before,
 .widget_archive a[href$=".doc"]::before,
@@ -14807,7 +14808,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 130, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 131, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-ppt::before,
 .link-item[href$=".ppt"]::before,
 .widget_archive a[href$=".ppt"]::before,
@@ -14831,7 +14832,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 143, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 144, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-xls::before,
 .link-item-csv::before,
 .link-item[href$=".xls"]::before,
@@ -14863,7 +14864,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 153, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 154, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-audio::before,
 .link-item[href$=".mp3"]::before,
 .widget_archive a[href$=".mp3"]::before,
@@ -14887,7 +14888,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 165, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 166, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-archive::before,
 .link-item[href$=".zip"]::before,
 .widget_archive a[href$=".zip"]::before,
@@ -14918,7 +14919,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 185, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 186, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-image::before,
 .link-item[href$=".jpg"]::before,
 .widget_archive a[href$=".jpg"]::before,
@@ -14977,7 +14978,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 199, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 200, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-text::before,
 .link-item[href$=".txt"]::before,
 .widget_archive a[href$=".txt"]::before,
@@ -15015,7 +15016,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 229, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 230, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-video::before,
 .link-item[href$=".mpg"]::before,
 .widget_archive a[href$=".mpg"]::before,
@@ -15109,7 +15110,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 235, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 236, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item-light::before, .sidebar-left-sidebar .widget_archive a::before,
 .sidebar-right-sidebar .widget_archive a::before, .sidebar-left-sidebar
 .widget_categories a::before,
@@ -15127,7 +15128,7 @@ small,
   color: rgba(255, 255, 255, 0.7); }
 
 /* Prefixes (links only) */
-/* line 243, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 244, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item[href^='tel:']::before, .widget_archive a[href^='tel:']::before,
 .widget_categories a[href^='tel:']::before,
 .widget_meta a[href^='tel:']::before,
@@ -15142,7 +15143,7 @@ small,
   vertical-align: -15%;
   content: ""; }
 
-/* line 250, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
+/* line 251, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/utility/_link-item.scss */
 .link-item[href^='mailto:']::before, .widget_archive a[href^='mailto:']::before,
 .widget_categories a[href^='mailto:']::before,
 .widget_meta a[href^='mailto:']::before,
