@@ -29,7 +29,7 @@
     $padding-left: 20px;
     display: inline-block;
     position: relative;
-    left: $padding-left;
+    left: calc($padding-left + .5em);
     padding-right: $padding-left;
 
     &::before {
@@ -39,7 +39,7 @@
         height: 20px;
         margin-right: .5em;
         color: rgba(0,0,0,.4);
-        margin-left: -$padding-left;
+        margin-left: calc(-$padding-left + -.5em);
         text-decoration: none;
     }
 }

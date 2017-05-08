@@ -14671,7 +14671,7 @@ small,
 .widget_recent_comments a {
   display: inline-block;
   position: relative;
-  left: 20px;
+  left: calc($padding-left + .5em);
   padding-right: 20px; }
   /* line 35, /www/sites/hbgprime/wwwroot/source/sass/utility/_link-item.scss */
   .link-item::before, .widget_archive a::before,
@@ -14691,7 +14691,7 @@ small,
     height: 20px;
     margin-right: .5em;
     color: rgba(0, 0, 0, 0.4);
-    margin-left: -20px;
+    margin-left: calc(-$padding-left + -.5em);
     text-decoration: none; }
 
 /* line 47, /www/sites/hbgprime/wwwroot/source/sass/utility/_link-item.scss */
