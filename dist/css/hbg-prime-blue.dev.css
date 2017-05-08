@@ -11335,16 +11335,26 @@ a.box-index {
   .box-news .box-content {
     padding: 15px; }
   /* line 94, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  .box-news .box-content h1,
+  .box-news .box-content h2,
+  .box-news .box-content h3,
+  .box-news .box-content h4,
+  .box-news .box-content .widget_calendar caption, .widget_calendar
+  .box-news .box-content caption,
+  .box-news .box-content h5,
+  .box-news .box-content h6 {
+    padding-bottom: 0; }
+  /* line 103, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news time {
     font-size: .8em; }
-  /* line 98, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news p:first-of-type {
     margin-top: 10px; }
 
-/* line 103, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+/* line 112, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
 a.box-news:hover {
   text-decoration: none; }
-  /* line 106, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 115, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   a.box-news:hover .box-title, a.box-news:hover h1, a.box-news:hover h2, a.box-news:hover h3, a.box-news:hover h4, a.box-news:hover .widget_calendar caption, .widget_calendar a.box-news:hover caption, a.box-news:hover h5, a.box-news:hover h6,
   a.box-news:hover .link-item,
   a.box-news:hover .widget_archive a, .widget_archive
@@ -11367,19 +11377,19 @@ a.box-news:hover {
   a.box-news:hover a {
     text-decoration: underline; }
 
-/* line 112, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+/* line 121, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
 .box-news.box-news-horizontal {
   display: table;
   width: 100%;
   background-color: transparent;
   color: #252525; }
   @media (min-width: 0) and (max-width: 468px) {
-    /* line 112, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 121, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news.box-news-horizontal {
       display: block;
       border: 1px solid #e7e5e1;
       padding: 5px; } }
-  /* line 124, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 133, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news.box-news-horizontal .box-image-container {
     display: table-cell;
     vertical-align: top;
@@ -11395,40 +11405,40 @@ a.box-news:hover {
         body:not(.material-no-shadow) .box-news.box-news-horizontal .box-image-container img, body:not(.material-no-shadow) .box-news.box-news-horizontal .box-image-container .image-placeholder {
           box-shadow: none; } }
     @media (min-width: 469px) {
-      /* line 135, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+      /* line 144, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
       .box-news.box-news-horizontal .box-image-container + .box-content {
         padding-left: 30px; } }
     @media (min-width: 0) and (max-width: 468px) {
-      /* line 124, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+      /* line 133, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
       .box-news.box-news-horizontal .box-image-container {
         display: block;
         width: 100%; }
-        /* line 144, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+        /* line 153, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
         .box-news.box-news-horizontal .box-image-container .image-placeholder {
           display: none; } }
-  /* line 150, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 159, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news.box-news-horizontal .box-content {
     display: table-cell;
     vertical-align: top;
     padding: 0; }
     @media (min-width: 0) and (max-width: 468px) {
-      /* line 150, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+      /* line 159, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
       .box-news.box-news-horizontal .box-content {
         display: block;
         width: 100%;
         padding: 10px; } }
-  /* line 162, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 171, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news.box-news-horizontal .box-title, .box-news.box-news-horizontal h1, .box-news.box-news-horizontal h2, .box-news.box-news-horizontal h3, .box-news.box-news-horizontal h4, .box-news.box-news-horizontal .widget_calendar caption, .widget_calendar .box-news.box-news-horizontal caption, .box-news.box-news-horizontal h4, .box-news.box-news-horizontal .widget_calendar caption, .widget_calendar .box-news.box-news-horizontal caption, .box-news.box-news-horizontal h6 {
     padding-bottom: 5px; }
-    /* line 165, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 174, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news.box-news-horizontal .box-title + time, .box-news.box-news-horizontal h1 + time, .box-news.box-news-horizontal h2 + time, .box-news.box-news-horizontal h3 + time, .box-news.box-news-horizontal h4 + time, .box-news.box-news-horizontal .widget_calendar caption + time, .widget_calendar .box-news.box-news-horizontal caption + time, .box-news.box-news-horizontal h4 + time, .box-news.box-news-horizontal .widget_calendar caption + time, .widget_calendar .box-news.box-news-horizontal caption + time, .box-news.box-news-horizontal h6 + time {
       position: relative;
       top: -5px; }
 
-/* line 172, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+/* line 181, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
 .box-news-circular {
   text-align: center; }
-  /* line 175, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 184, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular .box-image-container {
     background-size: cover;
     background-position: center center;
@@ -11444,13 +11454,13 @@ a.box-news:hover {
         /* line 2, /www/sites/hbgprime/wwwroot/source/sass/mixin/_material.scss */
         body:not(.material-no-shadow) .box-news-circular .box-image-container {
           box-shadow: none; } }
-    /* line 185, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 194, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular .box-image-container::after {
       content: '';
       display: block;
       width: 100%;
       padding-bottom: 100%; }
-    /* line 192, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 201, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular .box-image-container .box-image {
       position: absolute;
       position: absolute;
@@ -11459,17 +11469,17 @@ a.box-news:hover {
       transform: translate(-50%, -50%);
       height: 100%;
       width: auto; }
-  /* line 201, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 210, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular .box-content h3 {
     font-size: 1.2em; }
-  /* line 206, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular p {
     color: #252525;
     text-decoration: none; }
-  /* line 211, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+  /* line 220, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
   .box-news-circular:hover {
     text-decoration: none; }
-    /* line 214, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
+    /* line 223, /www/sites/hbgprime/wwwroot/source/sass/component/box/_news.scss */
     .box-news-circular:hover h3 {
       text-decoration: underline; }
 
