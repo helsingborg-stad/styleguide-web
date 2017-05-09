@@ -78,6 +78,17 @@ input[type="button"].btn::-moz-focus-inner {
     }
 }
 
+.box-filled .read-more {
+    border-radius: 0;
+    background: rgba(0,0,0,.2);
+    border: none;
+    color: #fff !important;
+
+    &:hover {
+        background: rgba(0,0,0,.4);
+    }
+}
+
 //
 // @name Button: Primary
 // @description Buttons

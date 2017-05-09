@@ -7659,152 +7659,162 @@ input[type="button"].btn::-moz-focus-inner {
     content: "";
     margin-right: 7px; }
 
-/* line 96, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 81, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+.box-filled .read-more {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #fff !important; }
+  /* line 87, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  .box-filled .read-more:hover {
+    background: rgba(0, 0, 0, 0.4); }
+
+/* line 107, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn.btn-primary {
   background-color: #E2007A;
   color: #fff;
   border-color: #E2007A; }
-  /* line 101, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 112, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn.btn-primary:hover, .btn.btn-primary:focus {
     background-color: #d30072;
     border-color: #d30072; }
 
-/* line 118, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 129, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn.btn-contrasted {
   background-color: rgba(0, 0, 0, 0.5);
   border-color: transparent;
   color: #fff; }
-  /* line 123, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 134, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn.btn-contrasted:hover, .btn.btn-contrasted:focus {
     background-color: rgba(0, 0, 0, 0.7);
     border-color: transparent; }
 
-/* line 140, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 151, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn.btn-danger {
   background-color: #e3000f;
   border-color: #e3000f;
   color: #fff; }
-  /* line 145, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 156, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn.btn-danger:hover, .btn.btn-danger:focus {
     background-color: #b0000c;
     border-color: #b0000c; }
 
-/* line 163, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 174, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 a.btn.btn-plain,
 .btn.btn-plain {
   background-color: transparent;
   color: #252525;
   border-color: transparent;
   padding: 0; }
-  /* line 170, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 181, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   a.btn.btn-plain:hover,
   .btn.btn-plain:hover {
     background-color: trapsarent; }
-  /* line 174, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 185, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   a.btn.btn-plain:active,
   .btn.btn-plain:active {
     box-shadow: none; }
 
-/* line 210, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 221, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-theme-first {
   background-color: #FFDD00;
   border-color: #FFDD00;
   color: #fff; }
-  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-theme-first:hover {
     background-color: #f0d000;
     border-color: #f0d000; }
 
-/* line 214, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 225, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-theme-second {
   background-color: #F36E21;
   border-color: #F36E21;
   color: #fff; }
-  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-theme-second:hover {
     background-color: #f26512;
     border-color: #f26512; }
 
-/* line 218, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 229, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-theme-third {
   background-color: #E2007A;
   border-color: #E2007A;
   color: #fff; }
-  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-theme-third:hover {
     background-color: #d30072;
     border-color: #d30072; }
 
-/* line 222, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 233, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-theme-fourth {
   background-color: #009AA6;
   border-color: #009AA6;
   color: #fff; }
-  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-theme-fourth:hover {
     background-color: #008c97;
     border-color: #008c97; }
 
-/* line 226, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 237, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-theme-fifth {
   background-color: #522981;
   border-color: #522981;
   color: #fff; }
-  /* line 204, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 215, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-theme-fifth:hover {
     background-color: #4b2575;
     border-color: #4b2575; }
 
-/* line 245, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 256, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-sm {
   padding: 0.4em 0.6em;
   font-size: 0.75em;
   font-weight: bold;
   line-height: 1; }
 
-/* line 252, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 263, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-md {
   padding: 0.5em 0.9em;
   font-size: 0.9em;
   font-weight: bold;
   line-height: 1; }
 
-/* line 259, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 270, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-lg {
   padding: 0.5em 0.9em;
   font-size: 1.1em;
   font-weight: bold; }
 
-/* line 276, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 287, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-block {
   display: block;
   width: 100%;
   text-align: center; }
 
-/* line 282, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 293, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-block-lg {
   padding: 15px; }
 
-/* line 286, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 297, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-block + .btn-block {
   margin-top: 15px; }
 
-/* line 290, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 301, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-icon,
 button.btn-icon {
   padding: 5px 10px;
   line-height: 1; }
 
-/* line 305, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+/* line 316, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
 .btn-offcanvas {
   position: absolute;
   top: -100%;
   left: 0; }
-  /* line 310, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 321, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-offcanvas:focus {
     top: 0;
     z-index: 99999; }
-  /* line 315, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
+  /* line 326, /www/sites/hbgprime/wwwroot/source/sass/component/button/_button.scss */
   .btn-offcanvas + .btn-offcanvas {
     margin-top: 0 !important; }
 
