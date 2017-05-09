@@ -72,10 +72,6 @@
     padding-right: 40px;
 }
 
-.box-panel-secondary .accordion-table-head {
-    padding-top: $grid-gutter-sm/2 - 3px;
-}
-
 .accordion-icon {
     .accordion-toggle {
         position: relative;
@@ -95,13 +91,9 @@
     }
 }
 
-.accordion-header {
+.column-header {
     word-wrap: break-word;
     hyphens: auto;
-}
-
-.accordion-table-head .accordion-header {
-    padding: 3px 0;
 }
 
 .accordion-boxes,
