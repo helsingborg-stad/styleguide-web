@@ -95,6 +95,15 @@
     }
 }
 
+.accordion-header {
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.accordion-table-head .accordion-header {
+    padding: 3px 0;
+}
+
 .accordion-boxes,
 .accordion-box,
 .accordion-list {
