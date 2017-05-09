@@ -5217,6 +5217,10 @@ section + section {
     -ms-flex-order: 2;
         order: 2; } }
 
+/* line 18, /www/sites/hbgprime/wwwroot/source/sass/layout/_sidebars.scss */
+.sidebar-content-area-bottom {
+  margin-bottom: 30px; }
+
 @media print {
   /* line 2, /www/sites/hbgprime/wwwroot/source/sass/layout/_print.scss */
   body {
