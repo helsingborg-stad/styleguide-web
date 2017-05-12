@@ -47,17 +47,6 @@
    "spinner",
    "visibility"
   ],
-  "buttons": [
-   "base",
-   "primary",
-   "contrasted",
-   "danger",
-   "plain",
-   "themed",
-   "sizes",
-   "block button",
-   "offcanvas button"
-  ],
   "special": [
    "accordion",
    "modals",
@@ -79,6 +68,17 @@
    "index",
    "news",
    "panel"
+  ],
+  "buttons": [
+   "base",
+   "primary",
+   "contrasted",
+   "danger",
+   "plain",
+   "themed",
+   "sizes",
+   "block button",
+   "offcanvas button"
   ],
   "navigation": [
    "dropdown",
@@ -110,12 +110,12 @@
   "hero": [
    "hero"
   ],
+  "notice": [
+   "notice"
+  ],
   "search": [
    "search form",
    "search results"
-  ],
-  "notice": [
-   "notice"
   ],
   "stripe": [
    "general"
@@ -1298,279 +1298,6 @@
     }
    ]
   },
-  "buttons": {
-   "base": [
-    {
-     "name": "Button base",
-     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Base"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
-       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "primary": [
-    {
-     "name": "Button: Primary",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Primary"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "contrasted": [
-    {
-     "name": "Button: Contrasted",
-     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Contrasted"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "danger": [
-    {
-     "name": "Button: Danger",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Danger"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Primary disabled button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "plain": [
-    {
-     "name": "Button: Plain",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Plain"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "themed": [
-    {
-     "name": "Button: Themed buttons",
-     "description": "<p>Buttons with color theme colors</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Themed"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-theme-first",
-       "escaped": "btn-theme-first",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-second",
-       "escaped": "btn-theme-second",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-third",
-       "escaped": "btn-theme-third",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fourth",
-       "escaped": "btn-theme-fourth",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fifth",
-       "escaped": "btn-theme-fifth",
-       "description": ""
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "sizes": [
-    {
-     "name": "Button size",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Sizes"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "block button": [
-    {
-     "name": "Block button",
-     "description": "<p>Block button spans the full width of the container</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Block button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "offcanvas button": [
-    {
-     "name": "Offcanvas button",
-     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Offcanvas button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "special": {
    "accordion": [
     {
@@ -2066,6 +1793,279 @@
        "path": "~/source/sass/component/box/_panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "buttons": {
+   "base": [
+    {
+     "name": "Button base",
+     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Base"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "primary": [
+    {
+     "name": "Button: Primary",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Primary"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "contrasted": [
+    {
+     "name": "Button: Contrasted",
+     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Contrasted"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "danger": [
+    {
+     "name": "Button: Danger",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Danger"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "plain": [
+    {
+     "name": "Button: Plain",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Plain"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "themed": [
+    {
+     "name": "Button: Themed buttons",
+     "description": "<p>Buttons with color theme colors</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Themed"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-theme-first",
+       "escaped": "btn-theme-first",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-second",
+       "escaped": "btn-theme-second",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-third",
+       "escaped": "btn-theme-third",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fourth",
+       "escaped": "btn-theme-fourth",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fifth",
+       "escaped": "btn-theme-fifth",
+       "description": ""
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "sizes": [
+    {
+     "name": "Button size",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Sizes"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "block button": [
+    {
+     "name": "Block button",
+     "description": "<p>Block button spans the full width of the container</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Block button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "offcanvas button": [
+    {
+     "name": "Offcanvas button",
+     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Offcanvas button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
       }
      ]
     }
@@ -2654,52 +2654,6 @@
     }
    ]
   },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "notice": {
    "notice": [
     {
@@ -2751,6 +2705,52 @@
        "path": "~/source/sass/component/notice/_notice.scss",
        "example": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
        "escaped": "\n&lt;div class=\"notice success\"&gt;\n     &lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; Sugar plum gummi bears.\n&lt;/div&gt;\n&lt;div class=\"notice warning\"&gt;\n     &lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; Lollipop cake candy canes.\n&lt;/div&gt;\n&lt;div class=\"notice danger\"&gt;\n     &lt;i class=\"pricon pricon-notice-error\"&gt;&lt;/i&gt; Jujubes oat cake sweet sugar plum.\n&lt;/div&gt;\n&lt;div class=\"notice info\"&gt;\n     &lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; Caramels chocolate cake ice cream.\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "search": {
+   "search form": [
+    {
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
