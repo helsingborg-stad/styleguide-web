@@ -3792,24 +3792,25 @@ section {
 
 /* line 40, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
 body {
-  line-height: 1; }
+  line-height: 1;
+  background: #fff; }
 
-/* line 44, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
+/* line 45, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
 ol, ul {
   list-style: none; }
 
-/* line 48, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
+/* line 49, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
 blockquote, q {
   quotes: none; }
 
-/* line 52, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
+/* line 53, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
 
-/* line 59, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
+/* line 60, /www/sites/hbgprime/wwwroot/source/sass/layout/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
