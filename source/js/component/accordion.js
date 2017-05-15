@@ -36,7 +36,17 @@ HelsingborgPrime.Component.Accordion = (function ($) {
             }
 		});
 
+        $('.accordion-search input').on('input', function (e) {
+            var where = $(e.target).parents('.accordion');
+            var what = $(e.target).val();
 
+            this.filter(what, where);
+        }.bind(this));
+    };
+
+    Accordion.prototype.filter = function(what, where) {
+        where.find('.accordion-section').hide();
+        where.find('.accordion-section:icontains(' + what + ')').show();
     };
 
     return new Accordion();

@@ -91,6 +91,12 @@
     }
 }
 
+.accordion-search {
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+    padding: 5px;
+}
+
 .column-header {
     word-wrap: break-word;
     hyphens: auto;
@@ -174,6 +180,10 @@
 	.accordion-section {
 		border: 1px solid $creamy-darker;
 	}
+
+    .accordion-search + .accordion-section {
+        border-top: none;
+    }
 
 	.accordion-content {
 		border-top: 1px solid $creamy-darker;
