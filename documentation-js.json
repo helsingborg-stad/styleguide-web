@@ -11,6 +11,17 @@
      "name": "Language"
     },
     {
+     "name": "Cookie consent"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Prevent scrolling when modal is open (or #modal-* exists in url)</p>\n"
+    },
+    {
+     "name": "Search top",
+     "description": "<p>Open the top search</p>\n"
+    },
+    {
      "name": "Image upload",
      "description": ""
     },
@@ -91,17 +102,6 @@
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
-    },
-    {
-     "name": "Cookie consent"
-    },
-    {
-     "name": "Modal",
-     "description": "<p>Prevent scrolling when modal is open (or #modal-* exists in url)</p>\n"
-    },
-    {
-     "name": "Search top",
-     "description": "<p>Open the top search</p>\n"
     }
    ]
   }
