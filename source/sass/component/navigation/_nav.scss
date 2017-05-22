@@ -80,14 +80,21 @@
 
     [data-load-submenu] {
         position: absolute;
-        right: 5px;
-        top: 7px;
-        background-color: transparent;
+        right: 0;
+        top: 0;
+        background-color: $creamy;
         border: none;
         font-size: 1em;
         cursor: pointer;
 
-        &::after {
+        border-left: 1px solid $creamy-darker;
+        padding: 8.5px 10px;
+
+        .icon {
+            display: block;
+        }
+
+        .icon::after {
             @include pricon($pricon-plus-o);
             font-size: 1em;
             color: $gray-light;
@@ -95,13 +102,23 @@
     }
 
     .is-expanded > [data-load-submenu] {
-        &::after {
+        .icon::after {
             @include pricon($pricon-minus-o);
         }
     }
 
     .is-expanded > .sub-menu {
         display: block;
+    }
+
+    .is-expanded.is-loading > [data-load-submenu] {
+        .icon {
+            animation: 500ms spinme infinite;
+        }
+
+        .icon::after {
+            @include pricon($pricon-plus-o);
+        }
     }
 
     // Indicates currently active menu item that has children
@@ -304,4 +321,14 @@ $nav-duration: 200ms;
 .nav-right {
     @extend .nav-horizontal;
     text-align: right;
+}
+
+@keyframes spinme {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

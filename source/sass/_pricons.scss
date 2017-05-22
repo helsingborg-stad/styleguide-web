@@ -142,7 +142,8 @@
 // <i class="pricon pricon-sign-language"></i> pricon-sign-language<br>
 // <i class="pricon pricon-easy-read"></i> pricon-easy-read<br>
 // <i class="pricon pricon-union-jack"></i> pricon-union-jack<br>
-//
+// <i class="pricon pricon-loading-o"></i> pricon-loading-o<br>
+// 
 //
 @font-face {
     font-family: "hbg-pricons";
@@ -207,6 +208,10 @@
         transform: translateX(-50%) translateY(-50%);
         color: #fff;
     }
+}
+
+.pricon-badge-theme {
+    background-color: $palette-2;
 }
 
 /* Badge colors */
@@ -503,6 +508,7 @@ $pricon-up: "\EA7B";
 $pricon-sign-language: "\EA7C";
 $pricon-easy-read: "\EA7D";
 $pricon-union-jack: "\EA7E";
+$pricon-loading-o: "\EA7F";
 
 
 /* Glyphs */
@@ -632,6 +638,7 @@ $pricon-union-jack: "\EA7E";
 .pricon-sign-language:before { content: $pricon-sign-language }
 .pricon-easy-read:before { content: $pricon-easy-read }
 .pricon-union-jack:before { content: $pricon-union-jack }
+.pricon-loading-o:before { content: $pricon-loading-o }
 
 
 /* Mixin */

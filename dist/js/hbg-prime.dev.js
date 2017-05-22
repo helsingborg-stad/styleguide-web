@@ -16598,6 +16598,8 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
         var markup = '';
         var parentId = this.getItemId(target);
 
+        $(target).parents('li').first().addClass('is-loading');
+
         $.get('/wp-json/municipio/v1/navigation/' + parentId, function(response){
             if (response.length !== "") {
                 $(target).after(response);
@@ -16605,6 +16607,8 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
             } else {
                 window.location.href = $(target).attr('href');
             }
+
+            $(target).parents('li').first().removeClass('is-loading');
         }.bind(target)).fail(function(){
             window.location.href = $(target).attr('href');
         }.bind(target));
