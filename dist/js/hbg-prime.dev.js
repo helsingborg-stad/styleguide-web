@@ -14898,1290 +14898,6 @@ HelsingborgPrime.Args = (function ($) {
 })(jQuery);
 
 //
-// @name Cookie consent
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.CookieConsent = (function ($) {
-
-    var _cookieConsentVisible = false;
-    var _useLocalStorage = true;
-    var _animationSpeed = 1000;
-
-    function CookieConsent() {
-        this.init();
-    }
-
-    CookieConsent.prototype.init = function () {
-        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
-
-        if (showCookieConsent && !this.hasAccepted()) {
-            this.displayConsent();
-
-            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
-                e.preventDefault();
-                var btn = $(e.target).closest('button');
-                this.accept();
-            }.bind(this));
-        }
-    };
-
-    CookieConsent.prototype.displayConsent = function() {
-        var wrapper = $('body');
-
-        if ($('#wrapper:first-child').length > 0) {
-            wrapper = $('#wrapper:first-child');
-        }
-
-        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
-        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
-            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
-        }
-
-        var buttonText = 'Got it';
-        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
-            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
-        }
-
-        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
-
-        wrapper.prepend('\
-            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
-                <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
-                    <div class="grid-auto">' + consentText + '</div>\
-                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
-                </div></div>\
-            </div>\
-        ');
-
-        $('#cookie-consent').show();
-        _cookieConsentVisible = true;
-    };
-
-    CookieConsent.prototype.hasAccepted = function() {
-        if (_useLocalStorage) {
-            return window.localStorage.getItem('cookie-consent');
-        } else {
-            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
-        }
-    };
-
-    CookieConsent.prototype.accept = function() {
-        $('#cookie-consent').remove();
-        _cookieConsentVisible = false;
-
-        if (_useLocalStorage) {
-            try {
-                window.localStorage.setItem('cookie-consent', true);
-                return true;
-            } catch(e) {
-                return false;
-            }
-        } else {
-            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
-        }
-    };
-
-    return new CookieConsent();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.ModalLimit = (function ($) {
-
-    function ModalLimit() {
-    	this.init();
-
-        $('[data-action="modal-close"]').on('click', function (e) {
-            e.preventDefault();
-            $(e.target).parents('.modal').removeClass('modal-open').hide();
-        });
-    }
-
-    ModalLimit.prototype.init = function () {
-	    this.toggleModalClass();
-
-        $(window).bind('hashchange', function() {
-			this.toggleModalClass();
-		}.bind(this));
-
-        $('.modal a[href="#close"]').on('click', function (e) {
-            $('html, body').removeClass('overflow-hidden');
-        });
-    };
-
-    ModalLimit.prototype.toggleModalClass = function(){
-	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
-			$('html').addClass('overflow-hidden');
-		} else {
-			$('html').removeClass('overflow-hidden');
-		}
-    };
-
-    return new ModalLimit();
-
-})(jQuery);
-
-//
-// @name Search top
-// @description  Open the top search
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.SearchTop = (function ($) {
-
-    function SearchTop() {
-        this.bindEvents();
-    }
-
-    SearchTop.prototype.bindEvents = function () {
-        $('.toggle-search-top').on('click', function (e) {
-            this.toggle(e);
-        }.bind(this));
-    };
-
-    SearchTop.prototype.toggle = function (e) {
-        e.preventDefault();
-        $('.search-top').slideToggle(300);
-        $('.search-top').find('input[type=search]').focus();
-    };
-
-    return new SearchTop();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.Share = (function ($) {
-
-    function Share() {
-        $(function(){
-
-            this.handleEvents();
-
-        }.bind(this));
-    }
-
-    Share.prototype.openPopup = function(element) {
-        // Width and height of the popup
-        var width = 626;
-        var height = 305;
-
-        // Gets the href from the button/link
-        var url = $(element).closest('a').attr('href');
-
-        // Calculate popup position
-        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
-        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
-
-        // Popup window features
-        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-
-        // Open popup
-        window.open(url, 'Share', windowFeatures);
-    }
-
-    /**
-     * Keeps track of events
-     * @return {void}
-     */
-    Share.prototype.handleEvents = function() {
-
-        $(document).on('click', '[data-action="share-popup"]', function (e) {
-            e.preventDefault();
-            this.openPopup(e.target);
-        }.bind(this));
-
-    }
-
-    return new Share();
-
-})(jQuery);
-
-//
-// @name Cookies
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Cookie = (function ($) {
-
-    function Cookie() {
-
-    }
-
-    /**
-     * Sets a cookie
-     * @param {string} name      Cookie name
-     * @param {string} value     Cookie value
-     * @param {void}   daysValid
-     */
-    Cookie.prototype.set = function (name, value, daysValid) {
-        var d = new Date();
-        d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
-
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
-
-        return true;
-    };
-
-    /**
-     * Gets a cookie
-     * @param  {string} name Cookie name
-     * @return {mixed}       Cookie value or empty string
-     */
-    Cookie.prototype.get = function(name) {
-        name = name + '=';
-        var ca = document.cookie.split(';');
-
-        for (var i=0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-
-            if (c.indexOf(name) === 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-
-        return '';
-    };
-
-    /**
-     * Destroys/removes a cookie
-     * @param  {string} name Cookie name
-     * @return {void}
-     */
-    Cookie.prototype.destory = function(name) {
-         this.set(name, '', -1);
-         return true;
-    };
-
-    /**
-     * Check if cookie value is the same as compare value
-     * @param  {string} name    Cookie name
-     * @param  {string} compare Compare value
-     * @return {boolean}
-     */
-    Cookie.prototype.check = function(name, compare) {
-         var value = this.get(name);
-         compare = compare.toString();
-
-         return value == compare;
-    };
-
-    return new Cookie();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.FeatureDetector = (function ($) {
-
-    function FeatureDetector() {
-        this.detectFlexbox();
-    }
-
-    FeatureDetector.prototype.detectFlexbox = function () {
-        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
-            return true;
-        }
-
-        $('html').addClass('no-flexbox');
-        return false;
-    };
-
-    return new FeatureDetector();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Highlight = (function ($) {
-
-    function Highlight() {
-        var highlightText = this.getQueryString('highlight');
-        if (!highlightText) {
-            return;
-        }
-
-        highlightText = highlightText.split('+');
-
-        // Filter out words with length < 3 chars
-        highlightText = highlightText.filter(function (value) {
-            return value.length > 2;
-        });
-
-        // Decode words
-        highlightText = highlightText.map(function (value) {
-            return decodeURIComponent(value);
-        });
-
-        this.highlightWords(highlightText, $('.main-container')[0]);
-    }
-
-    Highlight.prototype.highlightWords = function(words, element) {
-        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
-
-        var regex = new RegExp(pattern, 'gi');
-        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
-        element.innerHTML = element.innerHTML.replace(regex, repl);
-    };
-
-    Highlight.prototype.getQueryString = function (variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-
-        for (var i=0;i<vars.length;i++) {
-            var pair = vars[i].split("=");
-
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-
-        return(false);
-    };
-
-    return new Highlight();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Input = (function ($) {
-
-    function Input() {
-        $('form input, form select').on('invalid', function (e) {
-            this.invalidMessage(e.target);
-        }.bind(this));
-
-        $('form').on('submit', function (e) {
-            var isValid = this.validateDataRequire(e.target);
-
-            if (!isValid) {
-                e.preventDefault();
-                return false;
-            }
-
-            return true;
-        }.bind(this));
-    }
-
-    Input.prototype.invalidMessage = function (element) {
-        var $target = $(element);
-        var message = $target.attr('data-invalid-message');
-
-        if (message) {
-            element.setCustomValidity(message);
-        }
-
-        return false;
-    };
-
-    Input.prototype.validateDataRequire = function(form) {
-        var $form = $(form);
-        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
-        var checkboxNames = [];
-        var isValid = true;
-
-        $('input[type="checkbox"][data-require]').on('change', function (e) {
-            e.stopPropagation();
-            $form.find('.checkbox-invalid-msg').remove();
-        });
-
-        $checkboxes.each(function (index, element) {
-            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
-                return;
-            }
-
-            checkboxNames.push($(this).attr('name'));
-        });
-
-        $.each(checkboxNames, function (index, name) {
-            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
-                return;
-            }
-
-            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
-            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
-            isValid = false;
-        });
-
-        return isValid;
-    };
-
-    return new Input();
-
-})(jQuery);
-
-//
-// @name Local link
-// @description  Finds link items with outbound links and gives them outbound class
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.LocalLink = (function ($) {
-
-    function LocalLink() {
-        $(document).ready(function () {
-            var hostname = new RegExp(location.host);
-
-            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
-                var url = $(this).attr('href');
-                if (hostname.test(url)) {
-                    return;
-                }
-
-                $(this).addClass('link-item-outbound');
-            });
-        });
-    }
-
-    return new LocalLink();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ScrollElevator = (function ($) {
-
-    var elevatorSelector = '.scroll-elevator-toggle';
-    var scrollPosAdjuster = -50;
-    var scrolSpeed = 500;
-
-    function ScrollElevator() {
-        if ($(elevatorSelector).length === 0) {
-            return;
-        }
-
-        var $elevatorSelector = $(elevatorSelector);
-
-        $(document).on('click', '[href="#elevator-top"]', function (e) {
-            e.preventDefault();
-            $(this).blur();
-
-            $('html, body').animate({
-                scrollTop: 0
-            }, scrolSpeed);
-        });
-
-        this.appendElevator($elevatorSelector);
-        this.scrollSpy($elevatorSelector);
-    }
-
-    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
-        var scrollText = 'Scroll up';
-        var tooltipText = '';
-        var tooltipPosition = '';
-
-        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
-
-        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
-            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
-            $html.find('a span').html(scrollText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
-            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
-            $html.find('a').attr('data-tooltip', tooltipText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
-            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
-            $html.find('a').attr(tooltipPosition, '');
-        }
-
-        $html.appendTo($elevatorTarget);
-    };
-
-    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
-        var $document = $(document);
-        var $window = $(window);
-
-        $document.on('scroll load', function () {
-            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
-            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
-
-            if (scrollPos < scrollTarget) {
-                this.hideElevator();
-                return;
-            }
-
-            this.showElevator();
-            return;
-        }.bind(this));
-    };
-
-    ScrollElevator.prototype.showElevator = function() {
-        $('body').addClass('show-scroll-elevator');
-    };
-
-    ScrollElevator.prototype.hideElevator = function() {
-        $('body').removeClass('show-scroll-elevator');
-    };
-
-    return new ScrollElevator();
-
-})(jQuery);
-
-//
-// @name Local link
-// @description  Finds link items with outbound links and gives them outbound class
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.StickyScroll = (function ($) {
-
-    var _stickyElements = [];
-    var _isFloatingClass = 'is-sticky-scroll';
-
-    function StickyScroll() {
-        $(document).ready(function () {
-            this.init();
-        }.bind(this));
-    }
-
-    StickyScroll.prototype.init = function() {
-        var $elements = $('.sticky-scroll');
-
-        $elements.each(function (index, element) {
-            var $element = $(element);
-
-            _stickyElements.push({
-                element: $element,
-                offsetTop: $element.offset().top
-            })
-        });
-
-        $(window).on('scroll', function () {
-            this.scrolling();
-        }.bind(this));
-
-        this.scrolling();
-    };
-
-    /**
-     * Runs when scrolling
-     * @return {void}
-     */
-    StickyScroll.prototype.scrolling = function() {
-        var scrollOffset = $(window).scrollTop();
-
-        if ($('body').hasClass('admin-bar')) {
-            scrollOffset += 32;
-
-            if ($(window).width() < 783) {
-                scrollOffset += 14;
-            }
-        }
-
-        $.each(_stickyElements, function (index, item) {
-            if (scrollOffset > item.offsetTop) {
-                return this.stick(item.element);
-            }
-
-            return this.unstick(item.element);
-        }.bind(this));
-    };
-
-    /**
-     * Makes a element sticky
-     * @param  {object} $element jQuery element
-     * @return {bool}
-     */
-    StickyScroll.prototype.stick = function($element) {
-        if ($element.hasClass(_isFloatingClass)) {
-            return;
-        }
-
-        if (!$element.hasClass('navbar-transparent')) {
-            this.addAnchor($element);
-        }
-
-        $element.addClass(_isFloatingClass);
-        return true;
-    };
-
-    /**
-     * Makes a element non-sticky
-     * @param  {object} $element jQuery element
-     * @return {bool}
-     */
-    StickyScroll.prototype.unstick = function($element) {
-        if (!$element.hasClass(_isFloatingClass)) {
-            return;
-        }
-
-        if (!$element.hasClass('navbar-transparent')) {
-            this.removeAnchor($element);
-        }
-
-        $element.removeClass(_isFloatingClass);
-        return true;
-    };
-
-    StickyScroll.prototype.addAnchor = function($element) {
-        $('<div class="sticky-scroll-anchor"></div>').height($element.outerHeight()).insertBefore($element);
-        return true;
-    };
-
-    StickyScroll.prototype.removeAnchor = function($element) {
-        $element.prev('.sticky-scroll-anchor').remove();
-        return true;
-    };
-
-    return new StickyScroll();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.TableFilter = (function ($) {
-
-    function TableFilter() {
-        $('[data-table-filter]').each(function (index, element) {
-            this.init(element);
-        }.bind(this));
-    }
-
-    TableFilter.prototype.init = function(element) {
-        var $list = $(element);
-        var listId = $list.attr('data-table-filter');
-        var $input = $('[data-table-filter-input="' + listId + '"]');
-
-        $input.on('input', function (e) {
-            $list.find('[data-table-filter-empty]').remove();
-
-            $list.find('tbody tr:not([data-table-filter-exclude]):icontains(' + $input.val() + ')').show();
-            $list.find('tbody tr:not([data-table-filter-exclude]):not(:icontains(' + $input.val() + '))').hide();
-
-            if ($list.find('tbody tr:not([data-table-filter-exclude]):visible').length === 0 && $list.find('[data-table-filter-empty]').length === 0) {
-                $list.find('tbody tr:not([data-table-filter-exclude]):first').before('<tr data-table-filter-empty><td colspan="50">' + HelsingborgPrime.Args.get('tableFilter.empty') + '</td></tr>')
-            }
-        });
-    };
-
-    return new TableFilter();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Toggle = (function ($) {
-
-    function Toggle() {
-        $('[data-toggle]').on('click', function (e) {
-            var toggleTarget = $(this).attr('data-toggle');
-            var toggleText = $(this).attr('data-toggle-text');
-            var toggleClass = $(this).attr('data-toggle-class');
-
-            // Toggle the target
-            var $toggleTarget = $(toggleTarget);
-            $toggleTarget.slideToggle(200);
-
-            // Switch text
-            $(this).attr('data-toggle-text', $(this).text());
-            $(this).text(toggleText);
-
-            // Switch class
-            $(this).attr('data-toggle-class', $(this).attr('class'));
-            $(this).attr('class', toggleClass);
-        });
-    }
-
-    return new Toggle();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
-
-    function ToggleSubmenuItems() {
-        this.init();
-    }
-
-    ToggleSubmenuItems.prototype.init = function () {
-        $(".nav-mobile").each(function(menuIndex,menuObject){
-            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
-                if(event.offsetX > ($(event.target).width()-7)) {
-                    event.preventDefault();
-                    if(!this.useAjax(event.target)) {
-                        this.toggleSibling(event.target);
-                    } else {
-                        this.ajaxLoadItems(event.target);
-                    }
-                }
-            }.bind(this));
-        }.bind(this));
-    };
-
-    ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if($(target).siblings("ul").length) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
-    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
-        var markup      = '';
-        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
-           return v.indexOf('page-') === 0;
-        }).join().replace('page-','');
-
-        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
-
-            if(typeof response == 'object' && response.length != 0) {
-                $.each(response,function(index,pageObject){
-                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
-                }.bind(markup));
-                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
-                $(target).parent().addClass('current-menu-item current_page_item current');
-            } else {
-                window.location.href = $(target).attr('href');
-            }
-
-        }.bind(target)).fail(function(){
-            window.location.href = $(target).attr('href');
-        }.bind(target));
-    };
-
-    ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').attr('data-post-id');
-    };
-
-    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('current-menu-item current_page_item current');
-    };
-
-    return new ToggleSubmenuItems();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Datepicker = (function ($) {
-
-    function Datepicker() {
-        this.init();
-    }
-
-    Datepicker.prototype.init = function () {
-        // Single date
-        $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true
-        });
-
-        // Date range
-        $('.datepicker-range.datepicker-range-from').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
-            }
-        });
-
-        $('.datepicker-range.datepicker-range-to').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
-            }
-        });
-    };
-
-    return new Datepicker();
-
-})(jQuery);
-
-/* Datepicker language */
-(function(factory) {
-    if (typeof define === "function" && define.amd) {
-        define(["../widgets/datepicker"], factory);
-    } else {
-        factory( jQuery.datepicker );
-    }
-}(function(datepicker) {
-    datepicker.regional.sv = {
-        closeText: "Stäng",
-        prevText: "&#xAB;Förra",
-        nextText: "Nästa&#xBB;",
-        currentText: "Idag",
-        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
-        "Juli","Augusti","September","Oktober","November","December" ],
-        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
-        "Jul","Aug","Sep","Okt","Nov","Dec" ],
-        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
-        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
-        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
-        weekHeader: "Ve",
-        dateFormat: "yy-mm-dd",
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: "" };
-    datepicker.setDefaults(datepicker.regional.sv);
-
-    return datepicker.regional.sv;
-}));
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.EqualHeight = (function ($) {
-
-    function EqualHeight() {
-        // Initialize if flexbox not supported
-        if (!this.supportsFlexbox()) {
-            this.init();
-
-            $(window).on('resize', function () {
-                this.destroy();
-                this.init();
-            }.bind(this));
-        }
-    }
-
-    /**
-     * Check if browser supports flexbox
-     * @return {boolean}
-     */
-    EqualHeight.prototype.supportsFlexbox = function () {
-        if ($('html').hasClass('no-flexbox')) {
-            return false;
-        }
-
-        return true;
-    };
-
-    /**
-     * Resets heights to auto
-     * @return {void}
-     */
-    EqualHeight.prototype.destroy = function () {
-        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
-            $(element).css('height', 'auto');
-        }.bind(this));
-    };
-
-    /**
-     * Intializes equal height
-     * @return {void}
-     */
-    EqualHeight.prototype.init = function () {
-        $('[data-equal-container]').each(function (index, element) {
-            var maxHeight = this.getMaxHeight(element);
-            this.equalize(element, maxHeight);
-        }.bind(this));
-    };
-
-    /**
-     * Get the max height of the items
-     * @param  {string} el The parent element
-     * @return {integer}   The max height in pixels
-     */
-    EqualHeight.prototype.getMaxHeight = function (el) {
-        var heights = [];
-
-        $(el).find('[data-equal-item]').each(function (index, element) {
-            heights.push($(element).outerHeight());
-        }.bind(this));
-
-        var maxHeight = Math.max.apply(null, heights);
-
-        return maxHeight;
-    };
-
-    /**
-     * Set the heights of all items to the max height
-     * @param  {string}  parent    The parent element
-     * @param  {integer} maxHeight The max height
-     * @return {void}
-     */
-    EqualHeight.prototype.equalize = function(parent, maxHeight) {
-        $(parent).find('[data-equal-item]').each(function (index, element) {
-            $(element).css('height', maxHeight + 'px');
-        }.bind(this));
-    };
-
-    return new EqualHeight();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Menu = (function ($) {
-
-    function Menu() {
-    	this.init();
-    }
-
-    Menu.prototype.init = function () {
-	    this.bindEvents();
-    };
-
-    Menu.prototype.toggleMenu = function(triggerBtn) {
-        triggerBtn.toggleClass('open');
-
-        var target = $(triggerBtn.data('target'));
-
-        if (target.hasClass('nav-toggle-expand')) {
-            target.slideToggle();
-        } else {
-            target.toggleClass('open');
-        }
-
-        $('body').toggleClass('mobile-menu-open');
-    };
-
-    Menu.prototype.bindEvents = function () {
-        $('.menu-trigger').on('click', function (e) {
-            e.preventDefault();
-            this.toggleMenu($(e.target).closest('.menu-trigger'));
-        }.bind(this));
-    };
-
-    return new Menu();
-
-})(jQuery);
-
-//
-// @name Menu priority
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.MenuPriority = (function ($) {
-
-    var $nav = null;
-    var $btn = null;
-    var $vlinks = null;
-    var $hlinks = null;
-
-    var availableSpace = 0;
-    var breaks = [];
-    var breakWasTwoOrMore = false;
-
-    function MenuPriority() {
-        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
-            this.init();
-        }
-    }
-
-    MenuPriority.prototype.init = function () {
-        $nav = $('#main-menu').parent('.nav-group-overflow');
-        $vlinks = $('#main-menu');
-        $hlinks = $nav.find('.nav-grouped-overflow');
-        $btn = $nav.find('.dropdown-toggle');
-
-        this.updateNavigation();
-
-        $(window).on('resize', function (e) {
-            this.updateNavigation();
-        }.bind(this));
-    };
-
-    MenuPriority.prototype.updateNavigation = function () {
-        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
-
-        if (breaks.length == 1 && breakWasTwoOrMore === true) {
-            availableSpace = $nav.parent().first().width();
-            breakWasTwoOrMore= false;
-        }
-
-        // The visible list is overflowing the available space
-        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
-
-            // Record vlinks width
-            breaks.push($vlinks.width());
-
-            // Move last element to the grouped items
-            $vlinks.children().last().prependTo($hlinks);
-            $hlinks.removeClass('hidden');
-            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
-        } else {
-
-            // Check if there's space to move an item back to the nav
-            if (availableSpace > breaks[breaks.length-1]) {
-                $hlinks.children().first().appendTo($vlinks);
-                breaks.pop();
-                $btn.attr('data-item-count', breaks.length);
-            }
-
-            if (breaks.length < 1) {
-                $hlinks.addClass('hidden');
-                $btn.addClass('hidden').attr('data-item-count', breaks.length);
-            }
-        }
-
-        if (breaks.length > 1) {
-            breakWasTwoOrMore = true;
-        }
-
-        // Rerun if nav is still overflowing
-        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
-            this.updateNavigation();
-        }
-    };
-
-    return new MenuPriority();
-
-})(jQuery);
-
-//
-// @name Video Player
-// @description  Video functionalty for vimeo and youtube.
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Player = (function ($) {
-
-    //Declarations
-    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
-    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
-    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
-
-    //Check for players, if exists; Run player script.
-    function Player() {
-        if ($(".player").length) {
-            this.init();
-        }
-    }
-
-    //Listen for play argument
-    Player.prototype.init = function () {
-        $(".player a").on('click', function (e) {
-            this.initVideoPlayer($(e.target).closest('a'));
-        }.bind(this));
-
-        $(".player-playlist a").on('click', function (e) {
-            e.preventDefault();
-            this.switchVideo($(e.target).closest('a'));
-        }.bind(this));
-    };
-
-    //Init player on start
-    Player.prototype.initVideoPlayer = function(e) {
-        var videoid = e.attr('data-video-id');
-        var listid = e.attr('data-list-id');
-
-        if (this.isNumeric(videoid)) {
-            this.initVimeo(videoid, e);
-        } else {
-            if (listid) {
-                this.initYoutube(videoid, e, listid);
-            } else {
-                this.initYoutube(videoid, e);
-            }
-        }
-    };
-
-    Player.prototype.initVimeo = function(videoid, target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe src="//player.vimeo.com/video/' + videoid + '?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitVimeo = false;
-    };
-
-    Player.prototype.initYoutube = function(videoid, target, listid) {
-
-        if (typeof listid === 'undefined') {
-            listid = null;
-        }
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        if (listid) {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-        } else {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-        }
-
-        //Not first run anymore
-        this.playerFirstInitYoutube = false;
-    };
-
-    Player.prototype.initBambuser = function(videoid, target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitBambuser = false;
-    };
-
-    Player.prototype.switchVideo = function(element) {
-        var videoid = element.attr('data-video-id');
-        var listid = element.attr('data-list-id');
-
-        var $player = element.parents('.player-playlist').siblings('.player');
-        var $iframe = $player.children('iframe');
-
-        $player.find('a').hide();
-
-        if (!$player.find('.loading').length) {
-            $player.append('<div class="loading pos-absolute-center" style="width:300px;"><div></div><div></div><div></div><div></div></div>');
-        }
-
-        if (this.isNumeric(videoid)) {
-            this.initVimeo(videoid, $player.children('a'));
-        } else {
-            if (listid) {
-                this.initYoutube(videoid, $player.children('a'), listid);
-            } else {
-                this.initYoutube(videoid, $player.children('a'));
-            }
-        }
-
-        $iframe.remove();
-    };
-
-    Player.prototype.toggleControls = function(target) {
-        if (typeof target === 'undefined') {
-            console.error('Could not start player. Wrapper not found.');
-            return false;
-        }
-
-        target = target.parent();
-
-        if (target.hasClass('is-playing')) {
-            target.removeClass('is-playing');
-            $("html").removeClass('video-is-playing');
-            return true;
-        }
-
-        target.addClass('is-playing');
-        $("html").addClass('video-is-playing');
-        return true;
-    };
-
-    /**
-     * Reset all players, or with target id.
-     * @param  {object} target
-     * @return {bool}
-     */
-    Player.prototype.resetPlayer = function(target) {
-       if (typeof target !== 'undefined') {
-            $('.player iframe').remove();
-            $('.player').removeClass('is-playing');
-            $('html').removeClass('video-is-playing');
-            return false;
-        }
-
-        $('iframe', target).remove();
-        target.removeClass('is-playing');
-        $('html').removeClass('video-is-playing');
-        return true;
-    };
-
-    Player.prototype.isNumeric = function(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    };
-
-    return new Player();
-
-})($);
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Post = (function ($) {
-
-    function Post() {
-        this.bindEvents();
-    }
-
-    Post.prototype.bindEvents = function() {
-        $(document).on('click', '.post-collapsed article', function (e) {
-            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
-        }.bind(this));
-    };
-
-    return new Post();
-
-})(jQuery);
-
-//
 // @name Image upload
 // @description
 //
@@ -16840,5 +15556,1279 @@ HelsingborgPrime.Component.Slider = (function ($) {
     };
 
     return new Slider();
+
+})(jQuery);
+
+//
+// @name Cookies
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Cookie = (function ($) {
+
+    function Cookie() {
+
+    }
+
+    /**
+     * Sets a cookie
+     * @param {string} name      Cookie name
+     * @param {string} value     Cookie value
+     * @param {void}   daysValid
+     */
+    Cookie.prototype.set = function (name, value, daysValid) {
+        var d = new Date();
+        d.setTime(d.getTime() + (daysValid * 24 * 60 * 60 * 1000));
+
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value.toString() + "; " + expires + "; path=/";
+
+        return true;
+    };
+
+    /**
+     * Gets a cookie
+     * @param  {string} name Cookie name
+     * @return {mixed}       Cookie value or empty string
+     */
+    Cookie.prototype.get = function(name) {
+        name = name + '=';
+        var ca = document.cookie.split(';');
+
+        for (var i=0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return '';
+    };
+
+    /**
+     * Destroys/removes a cookie
+     * @param  {string} name Cookie name
+     * @return {void}
+     */
+    Cookie.prototype.destory = function(name) {
+         this.set(name, '', -1);
+         return true;
+    };
+
+    /**
+     * Check if cookie value is the same as compare value
+     * @param  {string} name    Cookie name
+     * @param  {string} compare Compare value
+     * @return {boolean}
+     */
+    Cookie.prototype.check = function(name, compare) {
+         var value = this.get(name);
+         compare = compare.toString();
+
+         return value == compare;
+    };
+
+    return new Cookie();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Datepicker = (function ($) {
+
+    function Datepicker() {
+        this.init();
+    }
+
+    Datepicker.prototype.init = function () {
+        // Single date
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+
+        // Date range
+        $('.datepicker-range.datepicker-range-from').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('.datepicker-range.datepicker-range-to').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+    };
+
+    return new Datepicker();
+
+})(jQuery);
+
+/* Datepicker language */
+(function(factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["../widgets/datepicker"], factory);
+    } else {
+        factory( jQuery.datepicker );
+    }
+}(function(datepicker) {
+    datepicker.regional.sv = {
+        closeText: "Stäng",
+        prevText: "&#xAB;Förra",
+        nextText: "Nästa&#xBB;",
+        currentText: "Idag",
+        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
+        "Juli","Augusti","September","Oktober","November","December" ],
+        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
+        "Jul","Aug","Sep","Okt","Nov","Dec" ],
+        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
+        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
+        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
+        weekHeader: "Ve",
+        dateFormat: "yy-mm-dd",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults(datepicker.regional.sv);
+
+    return datepicker.regional.sv;
+}));
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.EqualHeight = (function ($) {
+
+    function EqualHeight() {
+        // Initialize if flexbox not supported
+        if (!this.supportsFlexbox()) {
+            this.init();
+
+            $(window).on('resize', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+        }
+    }
+
+    /**
+     * Check if browser supports flexbox
+     * @return {boolean}
+     */
+    EqualHeight.prototype.supportsFlexbox = function () {
+        if ($('html').hasClass('no-flexbox')) {
+            return false;
+        }
+
+        return true;
+    };
+
+    /**
+     * Resets heights to auto
+     * @return {void}
+     */
+    EqualHeight.prototype.destroy = function () {
+        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
+            $(element).css('height', 'auto');
+        }.bind(this));
+    };
+
+    /**
+     * Intializes equal height
+     * @return {void}
+     */
+    EqualHeight.prototype.init = function () {
+        $('[data-equal-container]').each(function (index, element) {
+            var maxHeight = this.getMaxHeight(element);
+            this.equalize(element, maxHeight);
+        }.bind(this));
+    };
+
+    /**
+     * Get the max height of the items
+     * @param  {string} el The parent element
+     * @return {integer}   The max height in pixels
+     */
+    EqualHeight.prototype.getMaxHeight = function (el) {
+        var heights = [];
+
+        $(el).find('[data-equal-item]').each(function (index, element) {
+            heights.push($(element).outerHeight());
+        }.bind(this));
+
+        var maxHeight = Math.max.apply(null, heights);
+
+        return maxHeight;
+    };
+
+    /**
+     * Set the heights of all items to the max height
+     * @param  {string}  parent    The parent element
+     * @param  {integer} maxHeight The max height
+     * @return {void}
+     */
+    EqualHeight.prototype.equalize = function(parent, maxHeight) {
+        $(parent).find('[data-equal-item]').each(function (index, element) {
+            $(element).css('height', maxHeight + 'px');
+        }.bind(this));
+    };
+
+    return new EqualHeight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.FeatureDetector = (function ($) {
+
+    function FeatureDetector() {
+        this.detectFlexbox();
+    }
+
+    FeatureDetector.prototype.detectFlexbox = function () {
+        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
+            return true;
+        }
+
+        $('html').addClass('no-flexbox');
+        return false;
+    };
+
+    return new FeatureDetector();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Highlight = (function ($) {
+
+    function Highlight() {
+        var highlightText = this.getQueryString('highlight');
+        if (!highlightText) {
+            return;
+        }
+
+        highlightText = highlightText.split('+');
+
+        // Filter out words with length < 3 chars
+        highlightText = highlightText.filter(function (value) {
+            return value.length > 2;
+        });
+
+        // Decode words
+        highlightText = highlightText.map(function (value) {
+            return decodeURIComponent(value);
+        });
+
+        this.highlightWords(highlightText, $('.main-container')[0]);
+    }
+
+    Highlight.prototype.highlightWords = function(words, element) {
+        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
+
+        var regex = new RegExp(pattern, 'gi');
+        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
+        element.innerHTML = element.innerHTML.replace(regex, repl);
+    };
+
+    Highlight.prototype.getQueryString = function (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+
+        return(false);
+    };
+
+    return new Highlight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Input = (function ($) {
+
+    function Input() {
+        $('form input, form select').on('invalid', function (e) {
+            this.invalidMessage(e.target);
+        }.bind(this));
+
+        $('form').on('submit', function (e) {
+            var isValid = this.validateDataRequire(e.target);
+
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            return true;
+        }.bind(this));
+    }
+
+    Input.prototype.invalidMessage = function (element) {
+        var $target = $(element);
+        var message = $target.attr('data-invalid-message');
+
+        if (message) {
+            element.setCustomValidity(message);
+        }
+
+        return false;
+    };
+
+    Input.prototype.validateDataRequire = function(form) {
+        var $form = $(form);
+        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
+        var checkboxNames = [];
+        var isValid = true;
+
+        $('input[type="checkbox"][data-require]').on('change', function (e) {
+            e.stopPropagation();
+            $form.find('.checkbox-invalid-msg').remove();
+        });
+
+        $checkboxes.each(function (index, element) {
+            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
+                return;
+            }
+
+            checkboxNames.push($(this).attr('name'));
+        });
+
+        $.each(checkboxNames, function (index, name) {
+            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
+                return;
+            }
+
+            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
+            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
+            isValid = false;
+        });
+
+        return isValid;
+    };
+
+    return new Input();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.LocalLink = (function ($) {
+
+    function LocalLink() {
+        $(document).ready(function () {
+            var hostname = new RegExp(location.host);
+
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
+                var url = $(this).attr('href');
+                if (hostname.test(url)) {
+                    return;
+                }
+
+                $(this).addClass('link-item-outbound');
+            });
+        });
+    }
+
+    return new LocalLink();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Menu = (function ($) {
+
+    function Menu() {
+    	this.init();
+    }
+
+    Menu.prototype.init = function () {
+	    this.bindEvents();
+    };
+
+    Menu.prototype.toggleMenu = function(triggerBtn) {
+        triggerBtn.toggleClass('open');
+
+        var target = $(triggerBtn.data('target'));
+
+        if (target.hasClass('nav-toggle-expand')) {
+            target.slideToggle();
+        } else {
+            target.toggleClass('open');
+        }
+
+        $('body').toggleClass('mobile-menu-open');
+    };
+
+    Menu.prototype.bindEvents = function () {
+        $('.menu-trigger').on('click', function (e) {
+            e.preventDefault();
+            this.toggleMenu($(e.target).closest('.menu-trigger'));
+        }.bind(this));
+    };
+
+    return new Menu();
+
+})(jQuery);
+
+//
+// @name Menu priority
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.MenuPriority = (function ($) {
+
+    var $nav = null;
+    var $btn = null;
+    var $vlinks = null;
+    var $hlinks = null;
+
+    var availableSpace = 0;
+    var breaks = [];
+    var breakWasTwoOrMore = false;
+
+    function MenuPriority() {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
+            this.init();
+        }
+    }
+
+    MenuPriority.prototype.init = function () {
+        $nav = $('#main-menu').parent('.nav-group-overflow');
+        $vlinks = $('#main-menu');
+        $hlinks = $nav.find('.nav-grouped-overflow');
+        $btn = $nav.find('.dropdown-toggle');
+
+        this.updateNavigation();
+
+        $(window).on('resize', function (e) {
+            this.updateNavigation();
+        }.bind(this));
+    };
+
+    MenuPriority.prototype.updateNavigation = function () {
+        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
+
+        if (breaks.length == 1 && breakWasTwoOrMore === true) {
+            availableSpace = $nav.parent().first().width();
+            breakWasTwoOrMore= false;
+        }
+
+        // The visible list is overflowing the available space
+        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
+
+            // Record vlinks width
+            breaks.push($vlinks.width());
+
+            // Move last element to the grouped items
+            $vlinks.children().last().prependTo($hlinks);
+            $hlinks.removeClass('hidden');
+            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
+        } else {
+
+            // Check if there's space to move an item back to the nav
+            if (availableSpace > breaks[breaks.length-1]) {
+                $hlinks.children().first().appendTo($vlinks);
+                breaks.pop();
+                $btn.attr('data-item-count', breaks.length);
+            }
+
+            if (breaks.length < 1) {
+                $hlinks.addClass('hidden');
+                $btn.addClass('hidden').attr('data-item-count', breaks.length);
+            }
+        }
+
+        if (breaks.length > 1) {
+            breakWasTwoOrMore = true;
+        }
+
+        // Rerun if nav is still overflowing
+        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
+            this.updateNavigation();
+        }
+    };
+
+    return new MenuPriority();
+
+})(jQuery);
+
+//
+// @name Video Player
+// @description  Video functionalty for vimeo and youtube.
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Player = (function ($) {
+
+    //Declarations
+    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
+    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
+    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
+
+    //Check for players, if exists; Run player script.
+    function Player() {
+        if ($(".player").length) {
+            this.init();
+        }
+    }
+
+    //Listen for play argument
+    Player.prototype.init = function () {
+        $(".player a").on('click', function (e) {
+            this.initVideoPlayer($(e.target).closest('a'));
+        }.bind(this));
+
+        $(".player-playlist a").on('click', function (e) {
+            e.preventDefault();
+            this.switchVideo($(e.target).closest('a'));
+        }.bind(this));
+    };
+
+    //Init player on start
+    Player.prototype.initVideoPlayer = function(e) {
+        var videoid = e.attr('data-video-id');
+        var listid = e.attr('data-list-id');
+
+        if (this.isNumeric(videoid)) {
+            this.initVimeo(videoid, e);
+        } else {
+            if (listid) {
+                this.initYoutube(videoid, e, listid);
+            } else {
+                this.initYoutube(videoid, e);
+            }
+        }
+    };
+
+    Player.prototype.initVimeo = function(videoid, target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe src="//player.vimeo.com/video/' + videoid + '?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitVimeo = false;
+    };
+
+    Player.prototype.initYoutube = function(videoid, target, listid) {
+
+        if (typeof listid === 'undefined') {
+            listid = null;
+        }
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        if (listid) {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        } else {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        }
+
+        //Not first run anymore
+        this.playerFirstInitYoutube = false;
+    };
+
+    Player.prototype.initBambuser = function(videoid, target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitBambuser = false;
+    };
+
+    Player.prototype.switchVideo = function(element) {
+        var videoid = element.attr('data-video-id');
+        var listid = element.attr('data-list-id');
+
+        var $player = element.parents('.player-playlist').siblings('.player');
+        var $iframe = $player.children('iframe');
+
+        $player.find('a').hide();
+
+        if (!$player.find('.loading').length) {
+            $player.append('<div class="loading pos-absolute-center" style="width:300px;"><div></div><div></div><div></div><div></div></div>');
+        }
+
+        if (this.isNumeric(videoid)) {
+            this.initVimeo(videoid, $player.children('a'));
+        } else {
+            if (listid) {
+                this.initYoutube(videoid, $player.children('a'), listid);
+            } else {
+                this.initYoutube(videoid, $player.children('a'));
+            }
+        }
+
+        $iframe.remove();
+    };
+
+    Player.prototype.toggleControls = function(target) {
+        if (typeof target === 'undefined') {
+            console.error('Could not start player. Wrapper not found.');
+            return false;
+        }
+
+        target = target.parent();
+
+        if (target.hasClass('is-playing')) {
+            target.removeClass('is-playing');
+            $("html").removeClass('video-is-playing');
+            return true;
+        }
+
+        target.addClass('is-playing');
+        $("html").addClass('video-is-playing');
+        return true;
+    };
+
+    /**
+     * Reset all players, or with target id.
+     * @param  {object} target
+     * @return {bool}
+     */
+    Player.prototype.resetPlayer = function(target) {
+       if (typeof target !== 'undefined') {
+            $('.player iframe').remove();
+            $('.player').removeClass('is-playing');
+            $('html').removeClass('video-is-playing');
+            return false;
+        }
+
+        $('iframe', target).remove();
+        target.removeClass('is-playing');
+        $('html').removeClass('video-is-playing');
+        return true;
+    };
+
+    Player.prototype.isNumeric = function(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    };
+
+    return new Player();
+
+})($);
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Post = (function ($) {
+
+    function Post() {
+        this.bindEvents();
+    }
+
+    Post.prototype.bindEvents = function() {
+        $(document).on('click', '.post-collapsed article', function (e) {
+            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
+        }.bind(this));
+    };
+
+    return new Post();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ScrollElevator = (function ($) {
+
+    var elevatorSelector = '.scroll-elevator-toggle';
+    var scrollPosAdjuster = -50;
+    var scrolSpeed = 500;
+
+    function ScrollElevator() {
+        if ($(elevatorSelector).length === 0) {
+            return;
+        }
+
+        var $elevatorSelector = $(elevatorSelector);
+
+        $(document).on('click', '[href="#elevator-top"]', function (e) {
+            e.preventDefault();
+            $(this).blur();
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrolSpeed);
+        });
+
+        this.appendElevator($elevatorSelector);
+        this.scrollSpy($elevatorSelector);
+    }
+
+    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
+        var scrollText = 'Scroll up';
+        var tooltipText = '';
+        var tooltipPosition = '';
+
+        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
+
+        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
+            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
+            $html.find('a span').html(scrollText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
+            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
+            $html.find('a').attr('data-tooltip', tooltipText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
+            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
+            $html.find('a').attr(tooltipPosition, '');
+        }
+
+        $html.appendTo($elevatorTarget);
+    };
+
+    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
+        var $document = $(document);
+        var $window = $(window);
+
+        $document.on('scroll load', function () {
+            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
+            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
+
+            if (scrollPos < scrollTarget) {
+                this.hideElevator();
+                return;
+            }
+
+            this.showElevator();
+            return;
+        }.bind(this));
+    };
+
+    ScrollElevator.prototype.showElevator = function() {
+        $('body').addClass('show-scroll-elevator');
+    };
+
+    ScrollElevator.prototype.hideElevator = function() {
+        $('body').removeClass('show-scroll-elevator');
+    };
+
+    return new ScrollElevator();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.StickyScroll = (function ($) {
+
+    var _stickyElements = [];
+    var _isFloatingClass = 'is-sticky-scroll';
+
+    function StickyScroll() {
+        $(document).ready(function () {
+            this.init();
+        }.bind(this));
+    }
+
+    StickyScroll.prototype.init = function() {
+        var $elements = $('.sticky-scroll');
+
+        $elements.each(function (index, element) {
+            var $element = $(element);
+
+            _stickyElements.push({
+                element: $element,
+                offsetTop: $element.offset().top
+            })
+        });
+
+        $(window).on('scroll', function () {
+            this.scrolling();
+        }.bind(this));
+
+        this.scrolling();
+    };
+
+    /**
+     * Runs when scrolling
+     * @return {void}
+     */
+    StickyScroll.prototype.scrolling = function() {
+        var scrollOffset = $(window).scrollTop();
+
+        if ($('body').hasClass('admin-bar')) {
+            scrollOffset += 32;
+
+            if ($(window).width() < 783) {
+                scrollOffset += 14;
+            }
+        }
+
+        $.each(_stickyElements, function (index, item) {
+            if (scrollOffset > item.offsetTop) {
+                return this.stick(item.element);
+            }
+
+            return this.unstick(item.element);
+        }.bind(this));
+    };
+
+    /**
+     * Makes a element sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
+     */
+    StickyScroll.prototype.stick = function($element) {
+        if ($element.hasClass(_isFloatingClass)) {
+            return;
+        }
+
+        if (!$element.hasClass('navbar-transparent')) {
+            this.addAnchor($element);
+        }
+
+        $element.addClass(_isFloatingClass);
+        return true;
+    };
+
+    /**
+     * Makes a element non-sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
+     */
+    StickyScroll.prototype.unstick = function($element) {
+        if (!$element.hasClass(_isFloatingClass)) {
+            return;
+        }
+
+        if (!$element.hasClass('navbar-transparent')) {
+            this.removeAnchor($element);
+        }
+
+        $element.removeClass(_isFloatingClass);
+        return true;
+    };
+
+    StickyScroll.prototype.addAnchor = function($element) {
+        $('<div class="sticky-scroll-anchor"></div>').height($element.outerHeight()).insertBefore($element);
+        return true;
+    };
+
+    StickyScroll.prototype.removeAnchor = function($element) {
+        $element.prev('.sticky-scroll-anchor').remove();
+        return true;
+    };
+
+    return new StickyScroll();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.TableFilter = (function ($) {
+
+    function TableFilter() {
+        $('[data-table-filter]').each(function (index, element) {
+            this.init(element);
+        }.bind(this));
+    }
+
+    TableFilter.prototype.init = function(element) {
+        var $list = $(element);
+        var listId = $list.attr('data-table-filter');
+        var $input = $('[data-table-filter-input="' + listId + '"]');
+
+        $input.on('input', function (e) {
+            $list.find('[data-table-filter-empty]').remove();
+
+            $list.find('tbody tr:not([data-table-filter-exclude]):icontains(' + $input.val() + ')').show();
+            $list.find('tbody tr:not([data-table-filter-exclude]):not(:icontains(' + $input.val() + '))').hide();
+
+            if ($list.find('tbody tr:not([data-table-filter-exclude]):visible').length === 0 && $list.find('[data-table-filter-empty]').length === 0) {
+                $list.find('tbody tr:not([data-table-filter-exclude]):first').before('<tr data-table-filter-empty><td colspan="50">' + HelsingborgPrime.Args.get('tableFilter.empty') + '</td></tr>')
+            }
+        });
+    };
+
+    return new TableFilter();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Toggle = (function ($) {
+
+    function Toggle() {
+        $('[data-toggle]').on('click', function (e) {
+            var toggleTarget = $(this).attr('data-toggle');
+            var toggleText = $(this).attr('data-toggle-text');
+            var toggleClass = $(this).attr('data-toggle-class');
+
+            // Toggle the target
+            var $toggleTarget = $(toggleTarget);
+            $toggleTarget.slideToggle(200);
+
+            // Switch text
+            $(this).attr('data-toggle-text', $(this).text());
+            $(this).text(toggleText);
+
+            // Switch class
+            $(this).attr('data-toggle-class', $(this).attr('class'));
+            $(this).attr('class', toggleClass);
+        });
+    }
+
+    return new Toggle();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
+
+    function ToggleSubmenuItems() {
+        this.init();
+    }
+
+    ToggleSubmenuItems.prototype.init = function () {
+        $(document).on('click', 'button[data-load-submenu]', function(e) {
+            e.preventDefault();
+
+            if (!this.useAjax(e.target)) {
+                this.toggleSibling(e.target);
+            } else {
+                this.ajaxLoadItems(e.target);
+                this.toggleSibling(e.target);
+            }
+        }.bind(this));
+    };
+
+    ToggleSubmenuItems.prototype.useAjax = function (target) {
+        if ($(target).siblings("ul").length) {
+            return false;
+        }
+
+        return true;
+    };
+
+    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
+        var markup = '';
+        var parentId = this.getItemId(target);
+
+        $.get('/wp-json/municipio/v1/navigation/' + parentId, function(response){
+            if (response.length !== "") {
+                $(target).after(response);
+                $(target).siblings('.sub-menu');
+            } else {
+                window.location.href = $(target).attr('href');
+            }
+        }.bind(target)).fail(function(){
+            window.location.href = $(target).attr('href');
+        }.bind(target));
+    };
+
+    ToggleSubmenuItems.prototype.getItemId = function (target) {
+        return $(target).parent('li').data('page-id');
+    };
+
+    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
+        $(target).parent().toggleClass('is-expanded');
+    };
+
+    return new ToggleSubmenuItems();
+
+})(jQuery);
+
+//
+// @name Cookie consent
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.CookieConsent = (function ($) {
+
+    var _cookieConsentVisible = false;
+    var _useLocalStorage = true;
+    var _animationSpeed = 1000;
+
+    function CookieConsent() {
+        this.init();
+    }
+
+    CookieConsent.prototype.init = function () {
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+
+        if (showCookieConsent && !this.hasAccepted()) {
+            this.displayConsent();
+
+            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                e.preventDefault();
+                var btn = $(e.target).closest('button');
+                this.accept();
+            }.bind(this));
+        }
+    };
+
+    CookieConsent.prototype.displayConsent = function() {
+        var wrapper = $('body');
+
+        if ($('#wrapper:first-child').length > 0) {
+            wrapper = $('#wrapper:first-child');
+        }
+
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
+        }
+
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
+        }
+
+        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
+
+        wrapper.prepend('\
+            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
+                <div class="container"><div class="grid grid-table-md grid-va-middle">\
+                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
+                    <div class="grid-auto">' + consentText + '</div>\
+                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
+                </div></div>\
+            </div>\
+        ');
+
+        $('#cookie-consent').show();
+        _cookieConsentVisible = true;
+    };
+
+    CookieConsent.prototype.hasAccepted = function() {
+        if (_useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
+    };
+
+    CookieConsent.prototype.accept = function() {
+        $('#cookie-consent').remove();
+        _cookieConsentVisible = false;
+
+        if (_useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
+    };
+
+    return new CookieConsent();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
+
+    function ModalLimit() {
+    	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
+    }
+
+    ModalLimit.prototype.init = function () {
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
+		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
+    };
+
+    ModalLimit.prototype.toggleModalClass = function(){
+	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('html').removeClass('overflow-hidden');
+		}
+    };
+
+    return new ModalLimit();
+
+})(jQuery);
+
+//
+// @name Search top
+// @description  Open the top search
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.SearchTop = (function ($) {
+
+    function SearchTop() {
+        this.bindEvents();
+    }
+
+    SearchTop.prototype.bindEvents = function () {
+        $('.toggle-search-top').on('click', function (e) {
+            this.toggle(e);
+        }.bind(this));
+    };
+
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
+        $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
+    };
+
+    return new SearchTop();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.Share = (function ($) {
+
+    function Share() {
+        $(function(){
+
+            this.handleEvents();
+
+        }.bind(this));
+    }
+
+    Share.prototype.openPopup = function(element) {
+        // Width and height of the popup
+        var width = 626;
+        var height = 305;
+
+        // Gets the href from the button/link
+        var url = $(element).closest('a').attr('href');
+
+        // Calculate popup position
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+        // Popup window features
+        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+
+        // Open popup
+        window.open(url, 'Share', windowFeatures);
+    }
+
+    /**
+     * Keeps track of events
+     * @return {void}
+     */
+    Share.prototype.handleEvents = function() {
+
+        $(document).on('click', '[data-action="share-popup"]', function (e) {
+            e.preventDefault();
+            this.openPopup(e.target);
+        }.bind(this));
+
+    }
+
+    return new Share();
 
 })(jQuery);

@@ -78,6 +78,32 @@
         }
     }
 
+    [data-load-submenu] {
+        position: absolute;
+        right: 5px;
+        top: 7px;
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+        cursor: pointer;
+
+        &::after {
+            @include pricon($pricon-plus-o);
+            font-size: 1em;
+            color: $gray-light;
+        }
+    }
+
+    .is-expanded > [data-load-submenu] {
+        &::after {
+            @include pricon($pricon-minus-o);
+        }
+    }
+
+    .is-expanded > .sub-menu {
+        display: block;
+    }
+
     // Indicates currently active menu item that has children
     .has-children.current,
     .has-children.current-node,
