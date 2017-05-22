@@ -11918,41 +11918,45 @@ body:not(.material-no-radius) :not(.hero) .slider {
   border-radius: 2px; }
 
 /* line 64, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+.hero .slider {
+  border-radius: 0 !important; }
+
+/* line 68, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .creamy .slider .text-block.text-block-left:not([class*="stripe-"]):not([class*="stripe-"]),
 .creamy .slider .text-block.text-block-right:not([class*="stripe-"]):not([class*="stripe-"]) {
   background-color: #fff !important; }
 
-/* line 69, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 73, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider {
   position: relative;
   width: 100%;
   background: transparent;
   overflow: hidden; }
   @media print {
-    /* line 69, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 73, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider {
       display: none; } }
-  /* line 79, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 83, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider ul {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
-    /* line 82, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 86, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider ul li {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0; }
-      /* line 85, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 89, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider ul li:not(.current) {
         display: none; }
-  /* line 91, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 95, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider ul li a:hover {
     text-decoration: none; }
-  /* line 97, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 101, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.is-collapsed .type-featured > a,
   .slider .type-featured.is-collapsed > a {
     display: block;
@@ -11961,7 +11965,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     right: 0;
     bottom: 0;
     left: 0; }
-  /* line 102, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 106, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.is-collapsed .type-featured .text-block.text-block-left,
   .slider.is-collapsed .type-featured .text-block.text-block-right,
   .slider .type-featured.is-collapsed .text-block.text-block-left,
@@ -11970,7 +11974,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     margin-right: 0;
     margin-left: 0;
     width: 100%; }
-    /* line 109, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 113, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider.is-collapsed .type-featured .text-block.text-block-left ~ [class*="slider-image-"],
     .slider.is-collapsed .type-featured .text-block.text-block-right ~ [class*="slider-image-"],
     .slider .type-featured.is-collapsed .text-block.text-block-left ~ [class*="slider-image-"],
@@ -11978,24 +11982,24 @@ body:not(.material-no-radius) :not(.hero) .slider {
       margin-right: 0;
       margin-left: 0;
       width: 100%; }
-  /* line 119, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 123, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block,
   .slider .type-featured [class*="slider-image-"] {
     width: 50%;
     height: 100%; }
-  /* line 125, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 129, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-left {
     margin-right: 50%; }
-  /* line 129, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 133, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-right {
     margin-left: 50%; }
-  /* line 133, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 137, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-right ~ [class*="slider-image-"] {
     margin-right: 50%; }
-  /* line 137, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 141, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-left ~ [class*="slider-image-"] {
     margin-left: 50%; }
-  /* line 143, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 147, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .slider-image,
   .slider .slider-video,
   .slider .player {
@@ -12005,7 +12009,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     height: 100%;
     background-size: cover;
     background-position: center center; }
-    /* line 153, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 157, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider .slider-image video,
     .slider .slider-video video,
     .slider .player video {
@@ -12016,13 +12020,13 @@ body:not(.material-no-radius) :not(.hero) .slider {
       left: 50%;
       transform: translate(-50%, -50%); }
       @media screen and (orientation: portrait) {
-        /* line 153, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+        /* line 157, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
         .slider .slider-image video,
         .slider .slider-video video,
         .slider .player video {
           width: auto;
           height: 100%; } }
-  /* line 165, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 169, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider [class*="slider-nav-"] {
     position: absolute;
     top: 50%;
@@ -12038,25 +12042,25 @@ body:not(.material-no-radius) :not(.hero) .slider {
     text-align: center;
     line-height: 1;
     color: #fff; }
-    /* line 182, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 186, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider [class*="slider-nav-"]:not([class*="stripe-"]):hover {
       background-color: #F36E21; }
-  /* line 187, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 191, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .slider-nav-next {
     right: 0;
     border-radius: 50px 0 0 50px;
     padding-left: 1.2em;
     cursor: pointer; }
-  /* line 194, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 198, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .slider-nav-previous {
     left: 0;
     border-radius: 0 50px 50px 0;
     padding-right: 1.2em;
     cursor: pointer; }
-  /* line 201, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 205, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .content {
     transform: translateY(-32%) !important; }
-  /* line 205, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 209, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .text-block {
     padding: 10px 20px;
     position: absolute;
@@ -12071,14 +12075,14 @@ body:not(.material-no-radius) :not(.hero) .slider {
     color: #fff;
     font-size: .9em;
     display: block; }
-    /* line 216, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 220, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider .text-block.text-block-center {
       background-color: rgba(0, 0, 0, 0.4);
       text-align: center;
       padding: 0;
       top: 0;
       /* Small devices */ }
-      /* line 222, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 226, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider .text-block.text-block-center span {
         font-weight: normal;
         font-size: 2em;
@@ -12091,66 +12095,66 @@ body:not(.material-no-radius) :not(.hero) .slider {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        /* line 232, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+        /* line 236, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span em {
           margin-bottom: 10px;
           font-weight: normal; }
       @media screen and (max-width: 468px) {
-        /* line 240, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+        /* line 244, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.1em; }
-          /* line 242, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+          /* line 246, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
       @media screen and (min-width: 469px) and (max-width: 768px) {
-        /* line 249, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+        /* line 253, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.4em; }
-          /* line 251, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+          /* line 255, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
       @media screen and (min-width: 769px) and (max-width: 960px) {
-        /* line 258, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+        /* line 262, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.6em; }
-          /* line 260, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+          /* line 264, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
-    /* line 267, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+    /* line 271, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
     .slider .text-block:not([class*="stripe-"]) {
       background-color: rgba(243, 110, 33, 0.9); }
-      /* line 270, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 274, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-left:not([class*=stripe-]), .slider .text-block:not([class*="stripe-"]).text-block-right:not([class*=stripe-]) {
         background-color: #f6f5f2;
         border: 1px solid #e7e5e1; }
-      /* line 277, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 281, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]) .creamy.text-block-left:not([class*=stripe-]), .slider .text-block:not([class*="stripe-"]) .creamy.text-block-right:not([class*=stripe-]) {
         background-color: #ffffff;
         border-color: #e7e5e1; }
-      /* line 284, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 288, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-center {
         background-color: rgba(0, 0, 0, 0.4) !important; }
-      /* line 291, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+      /* line 295, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-left span, .slider .text-block:not([class*="stripe-"]).text-block-right span {
         color: #252525; }
 
-/* line 309, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 313, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .no-js .slider li:first-child {
   display: block; }
 
-/* line 314, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 318, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .no-js .slider .type-video a {
   display: none; }
 
-/* line 321, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 325, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-hover [class*="slider-nav-"] {
   opacity: 0; }
 
-/* line 326, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 330, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-hover:hover [class*="slider-nav-"] {
   opacity: 1; }
 
-/* line 333, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 337, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button,
 .slider-nav-bottom [class*="slider-nav-"] {
   top: auto;
@@ -12161,58 +12165,58 @@ body:not(.material-no-radius) :not(.hero) .slider {
   color: #8c8370;
   background-color: #ece9e3;
   z-index: 99999; }
-  /* line 344, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 348, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider-nav-bottom .flickity-prev-next-button:hover,
   .slider-nav-bottom [class*="slider-nav-"]:hover {
     color: #fff; }
 
-/* line 349, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 353, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.previous {
   left: 0; }
 
-/* line 353, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 357, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.next {
   right: 0; }
 
-/* line 359, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 363, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover .flickity-prev-next-button,
 .slider.slider-nav-hover .flickity-page-dots {
   transition: 300ms all ease-in-out;
   opacity: 0; }
 
-/* line 365, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 369, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover .flickity-page-dots {
   bottom: -20px; }
 
-/* line 369, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 373, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover:hover .flickity-prev-next-button,
 .slider.slider-nav-hover:hover .flickity-page-dots {
   display: block;
   opacity: 1; }
 
-/* line 375, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 379, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover:hover .flickity-page-dots {
   bottom: 15px; }
 
-/* line 380, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 384, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider .flickity-page-dots {
   bottom: 15px; }
-  /* line 383, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 387, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .flickity-page-dots .dot {
     background-color: #fff;
     opacity: .5; }
-  /* line 388, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 392, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider .flickity-page-dots .dot.is-selected {
     background-color: #F36E21;
     opacity: 1; }
 
-/* line 394, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 398, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider.slider-layout-circle {
   box-shadow: none !important; }
-  /* line 397, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 401, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .slide {
     padding: 20px; }
-  /* line 401, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 405, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .slider-image {
     border-radius: 50%;
     width: 80%;
@@ -12220,33 +12224,33 @@ body:not(.material-no-radius) :not(.hero) .slider {
     margin: 0 auto;
     height: 0;
     overflow: hidden; }
-  /* line 410, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 414, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .text-block,
   .slider.slider-layout-circle .text-block.text-block-center:not([class*="stripe-"]) {
     position: static;
     text-align: center;
     background-color: transparent !important;
     color: #252525; }
-  /* line 418, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 422, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .text-block.text-block-center span {
     position: static;
     text-shadow: none;
     font-size: 1.2em; }
 
-/* line 425, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 429, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
 .slider-height-restrictions.ratio-36-7.slider:not(.slider-layout-circle) {
   min-height: 350px; }
 
-/* line 430, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+/* line 434, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
 .slider:not(.slider-layout-circle) {
   height: 100%; }
-  /* line 433, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 437, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) [data-flickity] {
     width: 100%;
     height: 100%; }
-  /* line 439, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 443, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) .flickity-enabled,
   .slider:not(.slider-layout-circle) [data-flickity] {
@@ -12255,7 +12259,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     left: 0;
     right: 0;
     bottom: 0; }
-  /* line 449, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
+  /* line 453, /www/sites/hbgprime/wwwroot/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .slide,
   .slider:not(.slider-layout-circle) .flickity-enabled {
     width: 100%;
