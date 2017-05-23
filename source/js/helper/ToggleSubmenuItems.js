@@ -34,7 +34,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
 
         $(target).parents('li').first().addClass('is-loading');
 
-        $.get('/wp-json/municipio/v1/navigation/' + parentId, function(response){
+        $.get('/?load-submenu-id=' + parentId, function(response){
             if (response.length !== "") {
                 $(target).after(response);
                 $(target).siblings('.sub-menu');
