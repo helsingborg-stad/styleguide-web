@@ -62,6 +62,8 @@
 
     [data-load-submenu] {
         background-color: transparent;
+        border-left: none;
+        border-bottom: none;
 
         .icon::after {
             color: #fff;

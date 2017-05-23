@@ -9097,20 +9097,22 @@ body .tag {
     border-left: 8px solid rgba(255, 255, 255, 0.3); }
   /* line 63, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
   .nav-mobile [data-load-submenu] {
-    background-color: transparent; }
-    /* line 66, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
+    background-color: transparent;
+    border-left: none;
+    border-bottom: none; }
+    /* line 68, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
     .nav-mobile [data-load-submenu] .icon::after {
       color: #fff; }
 
-/* line 72, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
+/* line 74, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
 .nav-mobile-menu .search {
   background-color: #d5560c;
   padding: 10px; }
 
-/* line 77, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
+/* line 79, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
 .nav-mobile-menu .menu-help .nav-mobile {
   background-color: #ee5f0d; }
-  /* line 80, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
+  /* line 82, /www/sites/hbgprime/wwwroot/source/sass/component/navigation/_mobile.scss */
   .nav-mobile-menu .menu-help .nav-mobile a {
     color: #fff; }
 
