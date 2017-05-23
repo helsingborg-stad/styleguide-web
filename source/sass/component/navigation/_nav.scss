@@ -88,10 +88,15 @@
         cursor: pointer;
 
         border-left: 1px solid $creamy-darker;
-        padding: 8.5px 10px;
+        border-bottom: 1px solid $creamy-darker;
+        padding: 10px;
+        max-height: 39px;
+        overflow: hidden;
 
         .icon {
             display: block;
+            line-height: 1;
+            height: 19px;
         }
 
         .icon::after {

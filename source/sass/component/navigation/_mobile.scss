@@ -59,6 +59,14 @@
         border-top: none;
         border-left: 8px solid rgba(#fff, .3);
     }
+
+    [data-load-submenu] {
+        background-color: transparent;
+
+        .icon::after {
+            color: #fff;
+        }
+    }
 }
 
 .nav-mobile-menu .search {
