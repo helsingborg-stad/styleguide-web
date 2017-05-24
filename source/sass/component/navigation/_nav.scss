@@ -138,12 +138,6 @@
         }
     }
 
-    .is-expanded:not(.is-loading) > [data-load-submenu],
-    .is-expanded:not(.is-loading) > span > [data-load-submenu] {
-        background-color: $creamy;
-        height: 37px;
-    }
-
     // Indicates currently active menu item that has children
     .has-children.current,
     .has-children.current-node,
@@ -198,6 +192,11 @@
     margin-bottom: $content-gutter;
     @include material-radius;
     @include material-shadow;
+
+    .is-expanded:not(.is-loading) > [data-load-submenu],
+    .is-expanded:not(.is-loading) > span > [data-load-submenu] {
+        background-color: $creamy;
+    }
 }
 
 .nav-mobile {
