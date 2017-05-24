@@ -142,7 +142,8 @@
         }
 
         > .sub-menu,
-        > .children {
+        > .children,
+        > .span > .sub-menu {
             display: block;
         }
     }
