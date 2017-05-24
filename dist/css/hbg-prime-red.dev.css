@@ -8234,7 +8234,7 @@ button.btn-icon {
     border-left: 1px solid #e7e5e1;
     border-bottom: none;
     width: 40px;
-    height: 38px;
+    height: 37px;
     overflow: hidden; }
     /* line 106, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
     .nav-aside [data-load-submenu] .icon,
@@ -8294,7 +8294,7 @@ button.btn-icon {
   .nav-mobile .is-expanded:not(.is-loading) > [data-load-submenu],
   .nav-mobile .is-expanded:not(.is-loading) > span > [data-load-submenu] {
     background-color: #f6f5f2;
-    height: 40px; }
+    height: 37px; }
   /* line 153, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
   .nav-aside .has-children.current > a::after,
   .nav-aside .has-children.current-node > a::after,

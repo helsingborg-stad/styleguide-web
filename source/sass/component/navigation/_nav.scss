@@ -100,7 +100,7 @@
         border-left: 1px solid $creamy-darker;
         border-bottom: none;
         width: 40px;
-        height: 38px;
+        height: 37px;
         overflow: hidden;
 
         .icon {
@@ -141,7 +141,7 @@
     .is-expanded:not(.is-loading) > [data-load-submenu],
     .is-expanded:not(.is-loading) > span > [data-load-submenu] {
         background-color: $creamy;
-        height: 40px;
+        height: 37px;
     }
 
     // Indicates currently active menu item that has children
