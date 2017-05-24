@@ -15848,6 +15848,496 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
 
 })(jQuery);
 
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.FeatureDetector = (function ($) {
+
+    function FeatureDetector() {
+        this.detectFlexbox();
+    }
+
+    FeatureDetector.prototype.detectFlexbox = function () {
+        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
+            return true;
+        }
+
+        $('html').addClass('no-flexbox');
+        return false;
+    };
+
+    return new FeatureDetector();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Highlight = (function ($) {
+
+    function Highlight() {
+        var highlightText = this.getQueryString('highlight');
+        if (!highlightText) {
+            return;
+        }
+
+        highlightText = highlightText.split('+');
+
+        // Filter out words with length < 3 chars
+        highlightText = highlightText.filter(function (value) {
+            return value.length > 2;
+        });
+
+        // Decode words
+        highlightText = highlightText.map(function (value) {
+            return decodeURIComponent(value);
+        });
+
+        this.highlightWords(highlightText, $('.main-container')[0]);
+    }
+
+    Highlight.prototype.highlightWords = function(words, element) {
+        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
+
+        var regex = new RegExp(pattern, 'gi');
+        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
+        element.innerHTML = element.innerHTML.replace(regex, repl);
+    };
+
+    Highlight.prototype.getQueryString = function (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+
+        return(false);
+    };
+
+    return new Highlight();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Input = (function ($) {
+
+    function Input() {
+        $('form input, form select').on('invalid', function (e) {
+            this.invalidMessage(e.target);
+        }.bind(this));
+
+        $('form').on('submit', function (e) {
+            var isValid = this.validateDataRequire(e.target);
+
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            return true;
+        }.bind(this));
+    }
+
+    Input.prototype.invalidMessage = function (element) {
+        var $target = $(element);
+        var message = $target.attr('data-invalid-message');
+
+        if (message) {
+            element.setCustomValidity(message);
+        }
+
+        return false;
+    };
+
+    Input.prototype.validateDataRequire = function(form) {
+        var $form = $(form);
+        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
+        var checkboxNames = [];
+        var isValid = true;
+
+        $('input[type="checkbox"][data-require]').on('change', function (e) {
+            e.stopPropagation();
+            $form.find('.checkbox-invalid-msg').remove();
+        });
+
+        $checkboxes.each(function (index, element) {
+            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
+                return;
+            }
+
+            checkboxNames.push($(this).attr('name'));
+        });
+
+        $.each(checkboxNames, function (index, name) {
+            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
+                return;
+            }
+
+            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
+            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
+            isValid = false;
+        });
+
+        return isValid;
+    };
+
+    return new Input();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.LocalLink = (function ($) {
+
+    function LocalLink() {
+        $(document).ready(function () {
+            var hostname = new RegExp(location.host);
+
+            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
+                var url = $(this).attr('href');
+                if (hostname.test(url)) {
+                    return;
+                }
+
+                $(this).addClass('link-item-outbound');
+            });
+        });
+    }
+
+    return new LocalLink();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ScrollElevator = (function ($) {
+
+    var elevatorSelector = '.scroll-elevator-toggle';
+    var scrollPosAdjuster = -50;
+    var scrolSpeed = 500;
+
+    function ScrollElevator() {
+        if ($(elevatorSelector).length === 0) {
+            return;
+        }
+
+        var $elevatorSelector = $(elevatorSelector);
+
+        $(document).on('click', '[href="#elevator-top"]', function (e) {
+            e.preventDefault();
+            $(this).blur();
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrolSpeed);
+        });
+
+        this.appendElevator($elevatorSelector);
+        this.scrollSpy($elevatorSelector);
+    }
+
+    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
+        var scrollText = 'Scroll up';
+        var tooltipText = '';
+        var tooltipPosition = '';
+
+        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
+
+        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
+            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
+            $html.find('a span').html(scrollText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
+            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
+            $html.find('a').attr('data-tooltip', tooltipText);
+        }
+
+        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
+            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
+            $html.find('a').attr(tooltipPosition, '');
+        }
+
+        $html.appendTo($elevatorTarget);
+    };
+
+    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
+        var $document = $(document);
+        var $window = $(window);
+
+        $document.on('scroll load', function () {
+            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
+            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
+
+            if (scrollPos < scrollTarget) {
+                this.hideElevator();
+                return;
+            }
+
+            this.showElevator();
+            return;
+        }.bind(this));
+    };
+
+    ScrollElevator.prototype.showElevator = function() {
+        $('body').addClass('show-scroll-elevator');
+    };
+
+    ScrollElevator.prototype.hideElevator = function() {
+        $('body').removeClass('show-scroll-elevator');
+    };
+
+    return new ScrollElevator();
+
+})(jQuery);
+
+//
+// @name Local link
+// @description  Finds link items with outbound links and gives them outbound class
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.StickyScroll = (function ($) {
+
+    var _stickyElements = [];
+    var _isFloatingClass = 'is-sticky-scroll';
+
+    function StickyScroll() {
+        $(document).ready(function () {
+            this.init();
+        }.bind(this));
+    }
+
+    StickyScroll.prototype.init = function() {
+        var $elements = $('.sticky-scroll');
+
+        $elements.each(function (index, element) {
+            var $element = $(element);
+
+            _stickyElements.push({
+                element: $element,
+                offsetTop: $element.offset().top
+            })
+        });
+
+        $(window).on('scroll', function () {
+            this.scrolling();
+        }.bind(this));
+
+        this.scrolling();
+    };
+
+    /**
+     * Runs when scrolling
+     * @return {void}
+     */
+    StickyScroll.prototype.scrolling = function() {
+        var scrollOffset = $(window).scrollTop();
+
+        if ($('body').hasClass('admin-bar')) {
+            scrollOffset += 32;
+
+            if ($(window).width() < 783) {
+                scrollOffset += 14;
+            }
+        }
+
+        $.each(_stickyElements, function (index, item) {
+            if (scrollOffset > item.offsetTop) {
+                return this.stick(item.element);
+            }
+
+            return this.unstick(item.element);
+        }.bind(this));
+    };
+
+    /**
+     * Makes a element sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
+     */
+    StickyScroll.prototype.stick = function($element) {
+        if ($element.hasClass(_isFloatingClass)) {
+            return;
+        }
+
+        if (!$element.hasClass('navbar-transparent')) {
+            this.addAnchor($element);
+        }
+
+        $element.addClass(_isFloatingClass);
+        return true;
+    };
+
+    /**
+     * Makes a element non-sticky
+     * @param  {object} $element jQuery element
+     * @return {bool}
+     */
+    StickyScroll.prototype.unstick = function($element) {
+        if (!$element.hasClass(_isFloatingClass)) {
+            return;
+        }
+
+        if (!$element.hasClass('navbar-transparent')) {
+            this.removeAnchor($element);
+        }
+
+        $element.removeClass(_isFloatingClass);
+        return true;
+    };
+
+    StickyScroll.prototype.addAnchor = function($element) {
+        $('<div class="sticky-scroll-anchor"></div>').height($element.outerHeight()).insertBefore($element);
+        return true;
+    };
+
+    StickyScroll.prototype.removeAnchor = function($element) {
+        $element.prev('.sticky-scroll-anchor').remove();
+        return true;
+    };
+
+    return new StickyScroll();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.TableFilter = (function ($) {
+
+    function TableFilter() {
+        $('[data-table-filter]').each(function (index, element) {
+            this.init(element);
+        }.bind(this));
+    }
+
+    TableFilter.prototype.init = function(element) {
+        var $list = $(element);
+        var listId = $list.attr('data-table-filter');
+        var $input = $('[data-table-filter-input="' + listId + '"]');
+
+        $input.on('input', function (e) {
+            $list.find('[data-table-filter-empty]').remove();
+
+            $list.find('tbody tr:not([data-table-filter-exclude]):icontains(' + $input.val() + ')').show();
+            $list.find('tbody tr:not([data-table-filter-exclude]):not(:icontains(' + $input.val() + '))').hide();
+
+            if ($list.find('tbody tr:not([data-table-filter-exclude]):visible').length === 0 && $list.find('[data-table-filter-empty]').length === 0) {
+                $list.find('tbody tr:not([data-table-filter-exclude]):first').before('<tr data-table-filter-empty><td colspan="50">' + HelsingborgPrime.Args.get('tableFilter.empty') + '</td></tr>')
+            }
+        });
+    };
+
+    return new TableFilter();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Toggle = (function ($) {
+
+    function Toggle() {
+        $('[data-toggle]').on('click', function (e) {
+            var toggleTarget = $(this).attr('data-toggle');
+            var toggleText = $(this).attr('data-toggle-text');
+            var toggleClass = $(this).attr('data-toggle-class');
+
+            // Toggle the target
+            var $toggleTarget = $(toggleTarget);
+            $toggleTarget.slideToggle(200);
+
+            // Switch text
+            $(this).attr('data-toggle-text', $(this).text());
+            $(this).text(toggleText);
+
+            // Switch class
+            $(this).attr('data-toggle-class', $(this).attr('class'));
+            $(this).attr('class', toggleClass);
+        });
+    }
+
+    return new Toggle();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
+
+    function ToggleSubmenuItems() {
+        this.init();
+    }
+
+    ToggleSubmenuItems.prototype.init = function () {
+        $(document).on('click', 'button[data-load-submenu]', function(e) {
+            e.preventDefault();
+
+            if (!this.useAjax(e.target)) {
+                this.toggleSibling(e.target);
+            } else {
+                this.ajaxLoadItems(e.target);
+                this.toggleSibling(e.target);
+            }
+        }.bind(this));
+    };
+
+    ToggleSubmenuItems.prototype.useAjax = function (target) {
+        if ($(target).siblings("ul").length) {
+            return false;
+        }
+
+        return true;
+    };
+
+    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
+        var markup = '';
+        var parentId = this.getItemId(target);
+
+        $(target).parents('li').first().addClass('is-loading');
+
+        $.get('/?load-submenu-id=' + parentId, function(response){
+            if (response.length !== "") {
+                $(target).after(response);
+                $(target).siblings('.sub-menu');
+            } else {
+                window.location.href = $(target).attr('href');
+            }
+
+            $(target).parents('li').first().removeClass('is-loading');
+        }.bind(target)).fail(function(){
+            window.location.href = $(target).attr('href');
+        }.bind(target));
+    };
+
+    ToggleSubmenuItems.prototype.getItemId = function (target) {
+        return $(target).parent('li').data('page-id');
+    };
+
+    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
+        $(target).parent().toggleClass('is-expanded');
+    };
+
+    return new ToggleSubmenuItems();
+
+})(jQuery);
+
 //
 // @name Menu
 // @description  Function for closing the menu (cannot be done with just :target selector)
@@ -16021,178 +16511,6 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
     };
 
     return new EqualHeight();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.FeatureDetector = (function ($) {
-
-    function FeatureDetector() {
-        this.detectFlexbox();
-    }
-
-    FeatureDetector.prototype.detectFlexbox = function () {
-        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
-            return true;
-        }
-
-        $('html').addClass('no-flexbox');
-        return false;
-    };
-
-    return new FeatureDetector();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Highlight = (function ($) {
-
-    function Highlight() {
-        var highlightText = this.getQueryString('highlight');
-        if (!highlightText) {
-            return;
-        }
-
-        highlightText = highlightText.split('+');
-
-        // Filter out words with length < 3 chars
-        highlightText = highlightText.filter(function (value) {
-            return value.length > 2;
-        });
-
-        // Decode words
-        highlightText = highlightText.map(function (value) {
-            return decodeURIComponent(value);
-        });
-
-        this.highlightWords(highlightText, $('.main-container')[0]);
-    }
-
-    Highlight.prototype.highlightWords = function(words, element) {
-        var pattern = '(?![^<>]*>)(' + words.join('|') + ')';
-
-        var regex = new RegExp(pattern, 'gi');
-        var repl = '<mark class="mark-yellow no-padding">$1</mark>';
-        element.innerHTML = element.innerHTML.replace(regex, repl);
-    };
-
-    Highlight.prototype.getQueryString = function (variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-
-        for (var i=0;i<vars.length;i++) {
-            var pair = vars[i].split("=");
-
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-
-        return(false);
-    };
-
-    return new Highlight();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Input = (function ($) {
-
-    function Input() {
-        $('form input, form select').on('invalid', function (e) {
-            this.invalidMessage(e.target);
-        }.bind(this));
-
-        $('form').on('submit', function (e) {
-            var isValid = this.validateDataRequire(e.target);
-
-            if (!isValid) {
-                e.preventDefault();
-                return false;
-            }
-
-            return true;
-        }.bind(this));
-    }
-
-    Input.prototype.invalidMessage = function (element) {
-        var $target = $(element);
-        var message = $target.attr('data-invalid-message');
-
-        if (message) {
-            element.setCustomValidity(message);
-        }
-
-        return false;
-    };
-
-    Input.prototype.validateDataRequire = function(form) {
-        var $form = $(form);
-        var $checkboxes = $form.find('input[type="checkbox"][data-require]');
-        var checkboxNames = [];
-        var isValid = true;
-
-        $('input[type="checkbox"][data-require]').on('change', function (e) {
-            e.stopPropagation();
-            $form.find('.checkbox-invalid-msg').remove();
-        });
-
-        $checkboxes.each(function (index, element) {
-            if (checkboxNames.indexOf($(this).attr('name')) > -1) {
-                return;
-            }
-
-            checkboxNames.push($(this).attr('name'));
-        });
-
-        $.each(checkboxNames, function (index, name) {
-            if ($form.find('input[type="checkbox"][name="' + name + '"][data-require]:checked').length > 0) {
-                return;
-            }
-
-            $parent = $form.find('input[type="checkbox"][name="' + name + '"][data-require]').first().parents('.form-group');
-            $parent.append('<div class="checkbox-invalid-msg text-danger text-sm" aria-live="polite">Select at least one option</div>');
-            isValid = false;
-        });
-
-        return isValid;
-    };
-
-    return new Input();
-
-})(jQuery);
-
-//
-// @name Local link
-// @description  Finds link items with outbound links and gives them outbound class
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.LocalLink = (function ($) {
-
-    function LocalLink() {
-        $(document).ready(function () {
-            var hostname = new RegExp(location.host);
-
-            $('a[href].link-item:not(.link-item-outbound):not(.link-unavailable):not([href^="javascript:"]):not([href="#"])').each(function () {
-                var url = $(this).attr('href');
-                if (hostname.test(url)) {
-                    return;
-                }
-
-                $(this).addClass('link-item-outbound');
-            });
-        });
-    }
-
-    return new LocalLink();
 
 })(jQuery);
 
@@ -16516,323 +16834,5 @@ HelsingborgPrime.Helper.Post = (function ($) {
     };
 
     return new Post();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ScrollElevator = (function ($) {
-
-    var elevatorSelector = '.scroll-elevator-toggle';
-    var scrollPosAdjuster = -50;
-    var scrolSpeed = 500;
-
-    function ScrollElevator() {
-        if ($(elevatorSelector).length === 0) {
-            return;
-        }
-
-        var $elevatorSelector = $(elevatorSelector);
-
-        $(document).on('click', '[href="#elevator-top"]', function (e) {
-            e.preventDefault();
-            $(this).blur();
-
-            $('html, body').animate({
-                scrollTop: 0
-            }, scrolSpeed);
-        });
-
-        this.appendElevator($elevatorSelector);
-        this.scrollSpy($elevatorSelector);
-    }
-
-    ScrollElevator.prototype.appendElevator = function($elevatorTarget) {
-        var scrollText = 'Scroll up';
-        var tooltipText = '';
-        var tooltipPosition = '';
-
-        var $html = $('<div class="scroll-elevator"><a href="#elevator-top"><i></i><span></span></a></div>');
-
-        if (HelsingborgPrime.Args.get('scrollElevator.cta')) {
-            scrollText = HelsingborgPrime.Args.get('scrollElevator.cta');
-            $html.find('a span').html(scrollText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltip')) {
-            tooltipText = HelsingborgPrime.Args.get('scrollElevator.tooltip');
-            $html.find('a').attr('data-tooltip', tooltipText);
-        }
-
-        if (HelsingborgPrime.Args.get('scrollElevator.tooltipPosition')) {
-            tooltipPosition = HelsingborgPrime.Args.get('scrollElevator.tooltipPosition');
-            $html.find('a').attr(tooltipPosition, '');
-        }
-
-        $html.appendTo($elevatorTarget);
-    };
-
-    ScrollElevator.prototype.scrollSpy = function($elevatorTarget) {
-        var $document = $(document);
-        var $window = $(window);
-
-        $document.on('scroll load', function () {
-            var scrollTarget = $elevatorTarget.position().top + $elevatorTarget.height();
-            var scrollPos = $document.scrollTop() + $window.height() + scrollPosAdjuster;
-
-            if (scrollPos < scrollTarget) {
-                this.hideElevator();
-                return;
-            }
-
-            this.showElevator();
-            return;
-        }.bind(this));
-    };
-
-    ScrollElevator.prototype.showElevator = function() {
-        $('body').addClass('show-scroll-elevator');
-    };
-
-    ScrollElevator.prototype.hideElevator = function() {
-        $('body').removeClass('show-scroll-elevator');
-    };
-
-    return new ScrollElevator();
-
-})(jQuery);
-
-//
-// @name Local link
-// @description  Finds link items with outbound links and gives them outbound class
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.StickyScroll = (function ($) {
-
-    var _stickyElements = [];
-    var _isFloatingClass = 'is-sticky-scroll';
-
-    function StickyScroll() {
-        $(document).ready(function () {
-            this.init();
-        }.bind(this));
-    }
-
-    StickyScroll.prototype.init = function() {
-        var $elements = $('.sticky-scroll');
-
-        $elements.each(function (index, element) {
-            var $element = $(element);
-
-            _stickyElements.push({
-                element: $element,
-                offsetTop: $element.offset().top
-            })
-        });
-
-        $(window).on('scroll', function () {
-            this.scrolling();
-        }.bind(this));
-
-        this.scrolling();
-    };
-
-    /**
-     * Runs when scrolling
-     * @return {void}
-     */
-    StickyScroll.prototype.scrolling = function() {
-        var scrollOffset = $(window).scrollTop();
-
-        if ($('body').hasClass('admin-bar')) {
-            scrollOffset += 32;
-
-            if ($(window).width() < 783) {
-                scrollOffset += 14;
-            }
-        }
-
-        $.each(_stickyElements, function (index, item) {
-            if (scrollOffset > item.offsetTop) {
-                return this.stick(item.element);
-            }
-
-            return this.unstick(item.element);
-        }.bind(this));
-    };
-
-    /**
-     * Makes a element sticky
-     * @param  {object} $element jQuery element
-     * @return {bool}
-     */
-    StickyScroll.prototype.stick = function($element) {
-        if ($element.hasClass(_isFloatingClass)) {
-            return;
-        }
-
-        if (!$element.hasClass('navbar-transparent')) {
-            this.addAnchor($element);
-        }
-
-        $element.addClass(_isFloatingClass);
-        return true;
-    };
-
-    /**
-     * Makes a element non-sticky
-     * @param  {object} $element jQuery element
-     * @return {bool}
-     */
-    StickyScroll.prototype.unstick = function($element) {
-        if (!$element.hasClass(_isFloatingClass)) {
-            return;
-        }
-
-        if (!$element.hasClass('navbar-transparent')) {
-            this.removeAnchor($element);
-        }
-
-        $element.removeClass(_isFloatingClass);
-        return true;
-    };
-
-    StickyScroll.prototype.addAnchor = function($element) {
-        $('<div class="sticky-scroll-anchor"></div>').height($element.outerHeight()).insertBefore($element);
-        return true;
-    };
-
-    StickyScroll.prototype.removeAnchor = function($element) {
-        $element.prev('.sticky-scroll-anchor').remove();
-        return true;
-    };
-
-    return new StickyScroll();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.TableFilter = (function ($) {
-
-    function TableFilter() {
-        $('[data-table-filter]').each(function (index, element) {
-            this.init(element);
-        }.bind(this));
-    }
-
-    TableFilter.prototype.init = function(element) {
-        var $list = $(element);
-        var listId = $list.attr('data-table-filter');
-        var $input = $('[data-table-filter-input="' + listId + '"]');
-
-        $input.on('input', function (e) {
-            $list.find('[data-table-filter-empty]').remove();
-
-            $list.find('tbody tr:not([data-table-filter-exclude]):icontains(' + $input.val() + ')').show();
-            $list.find('tbody tr:not([data-table-filter-exclude]):not(:icontains(' + $input.val() + '))').hide();
-
-            if ($list.find('tbody tr:not([data-table-filter-exclude]):visible').length === 0 && $list.find('[data-table-filter-empty]').length === 0) {
-                $list.find('tbody tr:not([data-table-filter-exclude]):first').before('<tr data-table-filter-empty><td colspan="50">' + HelsingborgPrime.Args.get('tableFilter.empty') + '</td></tr>')
-            }
-        });
-    };
-
-    return new TableFilter();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Toggle = (function ($) {
-
-    function Toggle() {
-        $('[data-toggle]').on('click', function (e) {
-            var toggleTarget = $(this).attr('data-toggle');
-            var toggleText = $(this).attr('data-toggle-text');
-            var toggleClass = $(this).attr('data-toggle-class');
-
-            // Toggle the target
-            var $toggleTarget = $(toggleTarget);
-            $toggleTarget.slideToggle(200);
-
-            // Switch text
-            $(this).attr('data-toggle-text', $(this).text());
-            $(this).text(toggleText);
-
-            // Switch class
-            $(this).attr('data-toggle-class', $(this).attr('class'));
-            $(this).attr('class', toggleClass);
-        });
-    }
-
-    return new Toggle();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
-
-    function ToggleSubmenuItems() {
-        this.init();
-    }
-
-    ToggleSubmenuItems.prototype.init = function () {
-        $(document).on('click', 'button[data-load-submenu]', function(e) {
-            e.preventDefault();
-
-            if (!this.useAjax(e.target)) {
-                this.toggleSibling(e.target);
-            } else {
-                this.ajaxLoadItems(e.target);
-                this.toggleSibling(e.target);
-            }
-        }.bind(this));
-    };
-
-    ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if ($(target).siblings("ul").length) {
-            return false;
-        }
-
-        return true;
-    };
-
-    ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
-        var markup = '';
-        var parentId = this.getItemId(target);
-
-        $(target).parents('li').first().addClass('is-loading');
-
-        $.get('/?load-submenu-id=' + parentId, function(response){
-            if (response.length !== "") {
-                $(target).after(response);
-                $(target).siblings('.sub-menu');
-            } else {
-                window.location.href = $(target).attr('href');
-            }
-
-            $(target).parents('li').first().removeClass('is-loading');
-        }.bind(target)).fail(function(){
-            window.location.href = $(target).attr('href');
-        }.bind(target));
-    };
-
-    ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').data('page-id');
-    };
-
-    ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('is-expanded');
-    };
-
-    return new ToggleSubmenuItems();
 
 })(jQuery);

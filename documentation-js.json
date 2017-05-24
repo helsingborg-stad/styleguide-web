@@ -53,6 +53,14 @@
      "name": "Cookies"
     },
     {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
+    },
+    {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
+    },
+    {
      "name": "Menu",
      "description": "<p>Function for closing the menu (cannot be done with just :target selector)</p>\n"
     },
@@ -64,15 +72,11 @@
        "lang": "markup",
        "description": "",
        "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
-       "path": "~/source/js/helper/EqualHeight.js",
+       "path": "~/source/js/helper/equalHeight.js",
        "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
-    },
-    {
-     "name": "Local link",
-     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
     },
     {
      "name": "Menu",
@@ -93,15 +97,11 @@
        "lang": "markup",
        "description": "",
        "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
-       "path": "~/source/js/helper/Post.js",
+       "path": "~/source/js/helper/post.js",
        "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
-    },
-    {
-     "name": "Local link",
-     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
     }
    ]
   }
