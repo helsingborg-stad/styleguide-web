@@ -71,10 +71,11 @@
 
     // Indicates if a item has children
     .has-children,
+    .has-sub-menu,
     .page_item_has_children,
     .menu-item-has-children {
         a {
-            padding-right: 33px;
+            padding-right: 50px;
         }
 
         > a::after {
@@ -99,7 +100,7 @@
         border-left: 1px solid $creamy-darker;
         border-bottom: none;
         width: 40px;
-        height: 40px;
+        height: 38px;
         overflow: hidden;
 
         .icon {
@@ -163,14 +164,6 @@
         > .span > .sub-menu {
             display: block;
         }
-    }
-
-    // Current
-    .current,
-    .current-node,
-    .current-menu-item,
-    .is-expanded > .sub-menu {
-        background-color: $creamy;
     }
 
     .current,
