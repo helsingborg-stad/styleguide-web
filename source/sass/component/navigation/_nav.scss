@@ -39,6 +39,15 @@
         position: relative;
     }
 
+    li > span {
+        position: relative;
+        display: block;
+    }
+
+    li.has-sub-menu > span {
+        padding-right: 33px;
+    }
+
     li + li {
         border-top: 1px solid $creamy-darker;
     }
@@ -82,21 +91,21 @@
         position: absolute;
         right: 0;
         top: 0;
-        background-color: $creamy;
+        background-color: transparent;
         border: none;
         font-size: 1em;
         cursor: pointer;
 
         border-left: 1px solid $creamy-darker;
-        border-bottom: 1px solid $creamy-darker;
-        padding: 10px;
-        max-height: 39px;
+        border-bottom: none;
+        width: 39px;
+        height: 100%;
         overflow: hidden;
 
         .icon {
-            display: block;
-            line-height: 1;
-            height: 19px;
+            display: inline-block;
+            line-height: 0;
+            font-size: 18px;
         }
 
         .icon::after {
@@ -106,7 +115,8 @@
         }
     }
 
-    .is-expanded > [data-load-submenu] {
+    .is-expanded > [data-load-submenu],
+    .is-expanded > span > [data-load-submenu] {
         .icon::after {
             @include pricon($pricon-minus-o);
         }
@@ -116,7 +126,8 @@
         display: block;
     }
 
-    .is-expanded.is-loading > [data-load-submenu] {
+    .is-expanded.is-loading > [data-load-submenu],
+    .is-expanded.is-loading > span > [data-load-submenu] {
         .icon {
             animation: 500ms spinme infinite;
         }
@@ -124,6 +135,12 @@
         .icon::after {
             @include pricon($pricon-plus-o);
         }
+    }
+
+    .is-expanded:not(.is-loading) > [data-load-submenu],
+    .is-expanded:not(.is-loading) > span > [data-load-submenu] {
+        background-color: $creamy;
+        height: calc(100% + 1px);
     }
 
     // Indicates currently active menu item that has children
@@ -149,10 +166,10 @@
     }
 
     // Current
-
     .current,
     .current-node,
-    .current-menu-item {
+    .current-menu-item,
+    .is-expanded > .sub-menu {
         background-color: $creamy;
     }
 

@@ -21,7 +21,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if ($(target).siblings("ul").length) {
+        if ($(target).parents('li').first().children("ul").length) {
             return false;
         }
 
@@ -34,9 +34,10 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
 
         $(target).parents('li').first().addClass('is-loading');
 
-        $.get('/?load-submenu-id=' + parentId, function(response){
+        $.get('/wp-json/municipio/v1/navigation/' + parentId, function(response){
             if (response.length !== "") {
-                $(target).after(response);
+                console.log($(target).parents('li').first());
+                $(target).parents('li').first().append(response);
                 $(target).siblings('.sub-menu');
             } else {
                 window.location.href = $(target).attr('href');
@@ -49,11 +50,11 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').data('page-id');
+        return $(target).parents('li').first().data('page-id');
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('is-expanded');
+        $(target).parents('li').first().toggleClass('is-expanded');
     };
 
     return new ToggleSubmenuItems();
