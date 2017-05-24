@@ -8190,37 +8190,33 @@ button.btn-icon {
     .nav-aside a:hover,
     .nav-mobile a:hover {
       color: #ae0b05; }
-  /* line 77, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
-  .nav-aside .has-children a,
-  .nav-aside .has-sub-menu a,
-  .nav-aside .page_item_has_children a,
-  .nav-aside .menu-item-has-children a,
-  .nav-mobile .has-children a,
-  .nav-mobile .has-sub-menu a,
-  .nav-mobile .page_item_has_children a,
-  .nav-mobile .menu-item-has-children a {
-    padding-right: 50px; }
-  /* line 81, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
-  .nav-aside .has-children > a::after,
-  .nav-aside .has-sub-menu > a::after,
-  .nav-aside .page_item_has_children > a::after,
-  .nav-aside .menu-item-has-children > a::after,
-  .nav-mobile .has-children > a::after,
-  .nav-mobile .has-sub-menu > a::after,
-  .nav-mobile .page_item_has_children > a::after,
-  .nav-mobile .menu-item-has-children > a::after {
-    position: absolute;
-    right: 10px;
-    top: 11px;
-    font-family: hbg-pricons;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: -15%;
-    content: "";
-    font-size: 1em;
-    color: #7f7f7f; }
+  /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
+  .nav-aside .has-children,
+  .nav-aside .has-sub-menu,
+  .nav-aside .page_item_has_children,
+  .nav-aside .menu-item-has-children,
+  .nav-mobile .has-children,
+  .nav-mobile .has-sub-menu,
+  .nav-mobile .page_item_has_children,
+  .nav-mobile .menu-item-has-children {
+    /*> a::after {
+            position: absolute;
+            right: 10px;
+            top: 11px;
+            @include pricon($pricon-plus-o);
+            font-size: 1em;
+            color: $gray-light;
+        }*/ }
+    /* line 77, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
+    .nav-aside .has-children a,
+    .nav-aside .has-sub-menu a,
+    .nav-aside .page_item_has_children a,
+    .nav-aside .menu-item-has-children a,
+    .nav-mobile .has-children a,
+    .nav-mobile .has-sub-menu a,
+    .nav-mobile .page_item_has_children a,
+    .nav-mobile .menu-item-has-children a {
+      padding-right: 50px; }
   /* line 91, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_nav.scss */
   .nav-aside [data-load-submenu],
   .nav-mobile [data-load-submenu] {
