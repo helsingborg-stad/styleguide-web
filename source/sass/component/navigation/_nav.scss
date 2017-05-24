@@ -78,14 +78,14 @@
             padding-right: 50px;
         }
 
-        > a::after {
+        /*> a::after {
             position: absolute;
             right: 10px;
             top: 11px;
             @include pricon($pricon-plus-o);
             font-size: 1em;
             color: $gray-light;
-        }
+        }*/
     }
 
     [data-load-submenu] {
