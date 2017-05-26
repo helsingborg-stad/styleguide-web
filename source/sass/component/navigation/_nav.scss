@@ -63,9 +63,11 @@
         color: $base-font-color;
         text-decoration: none;
         position: relative;
+        transition: 300ms background;
 
         &:hover {
             color: $palette-4;
+            background: $creamy;
         }
     }
 
@@ -97,10 +99,9 @@
         font-size: 1em;
         cursor: pointer;
 
-        border-left: 1px solid $creamy-darker;
         border-bottom: none;
-        width: 40px;
-        height: 37px;
+        height: 2.3rem;
+        width: 2.4375rem;
         overflow: hidden;
 
         .icon {
@@ -110,16 +111,16 @@
         }
 
         .icon::after {
-            @include pricon($pricon-plus-o);
-            font-size: 1em;
-            color: $gray-light;
+            @include pricon($pricon-caret-down);
+            font-size: .5em;
+            color: $black;
         }
     }
 
     .is-expanded > [data-load-submenu],
     .is-expanded > span > [data-load-submenu] {
         .icon::after {
-            @include pricon($pricon-minus-o);
+            @include pricon($pricon-caret-up);
         }
     }
 
@@ -134,7 +135,8 @@
         }
 
         .icon::after {
-            @include pricon($pricon-plus-o);
+            font-size: .7em;
+            @include pricon($pricon-loading-o);
         }
     }
 
@@ -149,7 +151,7 @@
             right: 13px;
             top: 14px;
             @include pricon($pricon-caret-down);
-            font-size: .7em;
+            font-size: 1em;
             color: $gray-light;
         }
 
@@ -184,7 +186,7 @@
     .children {
         display: none;
         border-top: 1px solid $creamy-darker;
-        border-left: 8px solid $creamy-darker;
+        border-left: 6px solid $creamy-darker;
     }
 }
 
@@ -192,6 +194,10 @@
     margin-bottom: $content-gutter;
     @include material-radius;
     @include material-shadow;
+
+    [data-load-submenu] {
+        outline: 1px solid $creamy-darker;
+    }
 
     .is-expanded:not(.is-loading) > [data-load-submenu],
     .is-expanded:not(.is-loading) > span > [data-load-submenu] {
