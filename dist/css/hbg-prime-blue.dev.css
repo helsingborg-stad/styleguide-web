@@ -9679,32 +9679,26 @@ body:not(.material-no-shadow) .accordion {
     width: 1.1em;
     text-align: center; }
 
-/* line 206, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
-.accordion-boxes .accordion-toggle span,
-.accordion-box .accordion-toggle span,
-.accordion-list .accordion-toggle span {
-  font-size: 0.9em; }
-
-/* line 213, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 209, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-content article {
   margin-bottom: 0;
   width: 100%;
   overflow: auto; }
 
-/* line 220, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 216, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-list .accordion-section + .accordion-section {
   margin-top: 0;
   border-top: none; }
 
-/* line 225, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 221, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-list .accordion-section:nth-child(odd) {
   background: rgba(0, 0, 0, 0.01); }
 
-/* line 231, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 227, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-list.accordion-list-small .accordion-toggle {
   background: transparent; }
 
-/* line 236, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 232, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
 .accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
   font-family: hbg-pricons;
@@ -9715,13 +9709,13 @@ body:not(.material-no-shadow) .accordion {
   vertical-align: -15%;
   content: ""; }
 
-/* line 241, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 237, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 input[type="checkbox"]:checked ~ .accordion-toggle,
 input[type="radio"]:checked ~ .accordion-toggle,
 input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
   font-weight: bold; }
-  /* line 247, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 243, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-toggle h1, input[type="checkbox"]:checked ~ .accordion-toggle h2, input[type="checkbox"]:checked ~ .accordion-toggle h3, input[type="checkbox"]:checked ~ .accordion-toggle h4, input[type="checkbox"]:checked ~ .accordion-toggle .widget_calendar caption, .widget_calendar input[type="checkbox"]:checked ~ .accordion-toggle caption, input[type="checkbox"]:checked ~ .accordion-toggle h5, input[type="checkbox"]:checked ~ .accordion-toggle h6,
   input[type="radio"]:checked ~ .accordion-toggle h1,
   input[type="radio"]:checked ~ .accordion-toggle h2,
@@ -9748,86 +9742,86 @@ input[type="radio"]:target ~ .accordion-toggle {
   input[type="radio"]:target ~ .accordion-toggle h5,
   input[type="radio"]:target ~ .accordion-toggle h6 {
     font-weight: bold; }
-  /* line 251, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 247, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-toggle .label-number,
   input[type="radio"]:checked ~ .accordion-toggle .label-number,
   input[type="checkbox"]:target ~ .accordion-toggle .label-number,
   input[type="radio"]:target ~ .accordion-toggle .label-number {
     color: #11a636; }
 
-/* line 256, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 252, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-toggle {
   display: block;
   cursor: default; }
 
-/* line 266, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 262, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 label.accordion-toggle {
   cursor: pointer; }
 
-/* line 270, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 266, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 label.accordion-toggle.link-item {
   color: #005c86; }
-  /* line 273, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 269, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   label.accordion-toggle.link-item:hover {
     text-decoration: underline; }
 
-/* line 278, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 274, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-content {
   display: none; }
-  /* line 281, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 277, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"] ~ .accordion-content,
   input[type="radio"] ~ .accordion-content {
     display: none; }
     @media print {
-      /* line 281, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+      /* line 277, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
       input[type="checkbox"] ~ .accordion-content,
       input[type="radio"] ~ .accordion-content {
         display: block !important; } }
-  /* line 290, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 286, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   input[type="checkbox"]:checked ~ .accordion-content,
   input[type="radio"]:checked ~ .accordion-content,
   input[type="checkbox"]:target ~ .accordion-content,
   input[type="radio"]:target ~ .accordion-content {
     display: block; }
   @media print {
-    /* line 278, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 274, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-content {
       display: block !important; } }
-  /* line 301, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 297, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   .accordion-content table {
     width: 100%; }
-    /* line 304, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 300, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-content table td {
       padding-right: 5px; }
-    /* line 308, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 304, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-content table tr + tr td {
       padding-top: 5px; }
 
-/* line 314, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 310, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-table {
   display: table;
   table-layout: fixed;
   width: 100%; }
-  /* line 319, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 315, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   .accordion-table .column-header {
     display: table-cell;
     width: 2%; }
 
-/* line 325, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 321, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-table-head {
   background-color: #0069b4;
   color: #fff;
   font-weight: bold; }
 
-/* line 332, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 328, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .modal-body .accordion .accordion-section:first-child {
   border-top: none; }
 
-/* line 336, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 332, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .modal-body .accordion .accordion-section:last-child {
   border-bottom: none; }
 
-/* line 341, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 337, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .accordion-nav {
   background-color: #F6F5F2;
   margin: -20px;
@@ -9835,34 +9829,34 @@ label.accordion-toggle.link-item {
   padding: 10px 20px;
   border-top: 1px solid #E7E5E1; }
   @media print {
-    /* line 341, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+    /* line 337, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
     .accordion-nav {
       display: none; } }
 
-/* line 353, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 349, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 body:not(.material-no-shadow) .box-content .accordion {
   box-shadow: none; }
 
-/* line 357, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 353, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 .box-content .accordion {
   border: none;
   border-radius: 0; }
-  /* line 361, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 357, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   .box-content .accordion li,
   .box-content .accordion .accordion-section {
     border: none;
     border-top: 1px solid #e7e5e1; }
-  /* line 367, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+  /* line 363, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
   .box-content .accordion li:last-child,
   .box-content .accordion .accordion-section:last-child {
     border-bottom: 1px solid #e7e5e1; }
 
-/* line 373, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 369, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="next"] .fa,
 [data-accordion-nav="next"] .pricon {
   margin-left: 5px; }
 
-/* line 378, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
+/* line 374, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/accordion/_accordion.scss */
 [data-accordion-nav="prev"] .fa,
 [data-accordion-nav="prev"] .pricon {
   margin-right: 5px; }

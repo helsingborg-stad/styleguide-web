@@ -13,7 +13,7 @@
 //      <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-1">
 //         <label class="accordion-toggle" for="accordion-section-1">
-//             <h3>Ice cream</h3>
+//             Ice cream
 //         </label>
 //         <div class="accordion-content">
 //             Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.
@@ -22,7 +22,7 @@
 //     <section class="accordion-section">
 //         <input type="radio" name="active-section" id="accordion-section-2">
 //         <label class="accordion-toggle" for="accordion-section-2">
-//             <h3>Sugar plum</h3>
+//             <h3>Sugar plum (H3)</h3>
 //         </label>
 //         <div class="accordion-content">
 //             Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.
@@ -202,10 +202,6 @@
                 text-align: center;
             }
 		}
-
-        span {
-            font-size: 0.9em;
-        }
 	}
 
 }
