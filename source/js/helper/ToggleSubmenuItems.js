@@ -56,7 +56,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parents('li').first().data('page-id');
+        return $(target).data('load-submenu');
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
