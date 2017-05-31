@@ -8,16 +8,17 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     }
 
     ToggleSubmenuItems.prototype.init = function () {
+        var self = this;
         $(document).on('click', 'button[data-load-submenu]', function(e) {
             e.preventDefault();
 
-            if (!this.useAjax(e.target)) {
-                this.toggleSibling(e.target);
+            if (!self.useAjax(this)) {
+                self.toggleSibling(this);
             } else {
-                this.ajaxLoadItems(e.target);
-                this.toggleSibling(e.target);
+                self.ajaxLoadItems(this);
+                self.toggleSibling(this);
             }
-        }.bind(this));
+        });
     };
 
     ToggleSubmenuItems.prototype.useAjax = function (target) {
