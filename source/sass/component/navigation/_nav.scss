@@ -33,7 +33,7 @@
 
 .nav-aside,
 .nav-mobile {
-    border: 1px solid $creamy-darker;
+    border: 1px solid $creamy;
 
     li {
         position: relative;
@@ -49,7 +49,7 @@
     }
 
     li + li {
-        border-top: 1px solid $creamy-darker;
+        border-top: 1px solid $creamy;
     }
 
     li.menu-item-search {
@@ -186,8 +186,8 @@
     .sub-menu,
     .children {
         display: none;
-        border-top: 1px solid $creamy-darker;
-        border-left: 6px solid $creamy-darker;
+        border-top: 1px solid $creamy;
+        border-left: 6px solid $creamy;
     }
 }
 
@@ -197,7 +197,7 @@
     @include material-shadow;
 
     [data-load-submenu] {
-        outline: 1px solid $creamy-darker;
+        outline: 1px solid $creamy;
     }
 
     .is-expanded:not(.is-loading) > [data-load-submenu],
