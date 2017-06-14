@@ -8,16 +8,17 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     }
 
     ToggleSubmenuItems.prototype.init = function () {
+        var self = this;
         $(document).on('click', 'button[data-load-submenu]', function(e) {
             e.preventDefault();
 
-            if (!this.useAjax(e.target)) {
-                this.toggleSibling(e.target);
+            if (!self.useAjax(this)) {
+                self.toggleSibling(this);
             } else {
-                this.ajaxLoadItems(e.target);
-                this.toggleSibling(e.target);
+                self.ajaxLoadItems(this);
+                self.toggleSibling(this);
             }
-        }.bind(this));
+        });
     };
 
     ToggleSubmenuItems.prototype.useAjax = function (target) {
@@ -42,7 +43,6 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
             }
         }).done(function (response) {
             if (response.length !== "") {
-                console.log($(target).parents('li').first());
                 $(target).parents('li').first().append(response);
                 $(target).siblings('.sub-menu');
             } else {
@@ -56,7 +56,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parents('li').first().data('page-id');
+        return $(target).data('load-submenu');
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
