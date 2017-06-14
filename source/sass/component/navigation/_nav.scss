@@ -64,6 +64,7 @@
         text-decoration: none;
         position: relative;
         transition: 300ms background;
+        word-wrap: break-word;
 
         &:hover {
             color: $palette-4;
