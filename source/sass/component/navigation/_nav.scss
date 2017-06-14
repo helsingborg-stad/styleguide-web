@@ -193,8 +193,6 @@
 
 .nav-aside {
     margin-bottom: $content-gutter;
-    @include material-radius;
-    @include material-shadow;
 
     [data-load-submenu] {
         outline: 1px solid $creamy;
