@@ -102,7 +102,7 @@
         <div class="container">
             <div class="grid">
                 <div class="grid-lg-12">
-                    <a href="/" class="logotype"><img src="http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg" alt="Helsingborg Stad" width="239" height="68"></a>
+                    <a href="/" class="logotype"><img src="/logotype.svg" alt="Helsingborg Stad" width="239" height="68"></a>
                 </div>
             </div>
             <div class="grid">
