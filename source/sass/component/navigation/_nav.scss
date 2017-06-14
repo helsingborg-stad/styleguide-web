@@ -135,7 +135,7 @@
         }
 
         .icon::after {
-            font-size: .7em;
+            font-size: .8em;
             @include pricon($pricon-loading-o);
         }
     }
