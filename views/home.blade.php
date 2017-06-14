@@ -13,13 +13,13 @@
 
     <h3>Using GitHub CDN</h3>
     <p>
-        Copy and pase this CSS link to the <code>&lt;head&gt;</code> of your document.
+        Copy and pase this CSS link to the <code>&lt;head&gt;</code> of your document. Chage colorscheme by replaceing "red" in the path to the file. See avabile colorschemes in the selector at the top of the page.
     </p>
-    <pre><code class="html">&lt;link rel="stylesheet" href="{{ (strpos($_SERVER['SERVER_PROTOCOL'], 'https') === true) ? 'https://' : 'http://' }}{{ $_SERVER['SERVER_NAME'] }}/dist/css/hbg-prime.css"&gt;</code></pre>
+    <pre><code class="html">&lt;link rel='stylesheet' id='hbg-prime-css'  href='//helsingborg-stad.github.io/styleguide-web/dist/css/hbg-prime-red.min.css' type='text/css' media='all' /&gt;</code></pre>
 
     <p>
-        Include the JavaScript by copy and pasting the snippet below just before your <code>&lt;/body&gt;</code> closing tag.
+        Include the JavaScript by copy and pasting the snippet below just before your <code>&lt;/body&gt;</code> closing tag. The file bundles a stable version of jQuery.
     </p>
-    <pre><code class="html">&lt;link rel="stylesheet" href="{{ (strpos($_SERVER['SERVER_PROTOCOL'], 'https') === true) ? 'https://' : 'http://' }}{{ $_SERVER['SERVER_NAME'] }}/dist/css/hbg-prime.css"&gt;</code></pre>
+    <pre><code class="html">&lt;script type='text/javascript' src='//helsingborg-stad.github.io/styleguide-web/dist/js/hbg-prime.min.js' defer='defer'&gt;&lt;/script&gt;</code></pre>
 </article>
 @stop
