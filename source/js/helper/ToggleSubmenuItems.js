@@ -33,6 +33,11 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
         var markup = '';
         var parentId = this.getItemId(target);
 
+        if(typeof parentId == 'undefined') {
+            window.location.href = $(target).siblings("a").attr('href');
+            return false;
+        }
+
         $(target).parents('li').first().addClass('is-loading');
 
         $.ajax({
