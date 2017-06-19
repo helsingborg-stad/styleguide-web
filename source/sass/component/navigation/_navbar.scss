@@ -110,6 +110,10 @@
         padding: 10px 0;
     }
 
+    ul button {
+        display: none;
+    }
+
     &:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
     &:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a,
     &:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-ancestor > a {

@@ -8573,12 +8573,15 @@ button.btn-icon {
   .navbar ul.nav-sublevel a {
     padding: 10px 0; }
   /* line 113, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  .navbar ul button {
+    display: none; }
+  /* line 117, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a,
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-ancestor > a {
     position: relative;
     text-decoration: underline; }
-    /* line 119, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 123, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a::after,
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-page-ancestor > a::after,
     .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-ancestor > a::after {
@@ -8594,13 +8597,13 @@ button.btn-icon {
       border-bottom-color: #ffffff;
       border-width: 8px;
       margin-left: -5px; }
-  /* line 135, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 139, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a,
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a,
   .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a {
     position: relative;
     text-decoration: underline; }
-    /* line 141, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 145, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-item.has-children > a::after,
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-page-ancestor.has-children > a::after,
     .navbar:not(.navbar-transparent) .nav-has-sublevel .current-menu-ancestor.has-children > a::after {
@@ -8616,21 +8619,21 @@ button.btn-icon {
       border-bottom-color: rgba(255, 255, 255, 0.2);
       border-width: 8px;
       margin-left: -5px; }
-  /* line 157, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 161, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar .nav.nav-justify li {
     padding-right: 20px; }
-    /* line 160, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 164, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar .nav.nav-justify li:last-child {
       padding-right: 0; }
   @media (min-width: 769px) {
-    /* line 167, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 171, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar .menu-item-search {
       float: right; } }
 
-/* line 173, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+/* line 177, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
 .navbar .nav-sublevel {
   position: relative; }
-  /* line 176, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 180, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar .nav-sublevel::after {
     content: '';
     display: block;
@@ -8642,30 +8645,30 @@ button.btn-icon {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0); }
-  /* line 187, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 191, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar .nav-sublevel li {
     position: relative;
     z-index: 2; }
 
 @media (min-width: 769px) {
-  /* line 194, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 198, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .header-transparent .navbar {
     background-color: transparent; } }
 
-/* line 199, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+/* line 203, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
 .navbar-creamy {
   background-color: #f4f4f4;
   padding: 0 10px; }
-  /* line 203, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 207, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy a {
     display: block;
     padding: 10px 0;
     font-size: .9em;
     color: #252525; }
-  /* line 210, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+  /* line 214, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar-creamy.navbar-creamy-inner-shadow {
     position: relative; }
-    /* line 213, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
+    /* line 217, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
     .navbar-creamy.navbar-creamy-inner-shadow::after {
       display: block;
       content: '';
