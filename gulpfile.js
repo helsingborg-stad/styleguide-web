@@ -99,7 +99,8 @@ gulp.task('sass-font-awesome', function () {
         .pipe(gulp.dest('source/sass'));
 
     gulp.src(node_modules + 'font-awesome/fonts/*')
-        .pipe(gulp.dest('dist/fonts/'));
+        .pipe(gulp.dest('dist/fonts/'))
+        .pipe(copy('dist/' + package.version + '/fonts/', {prefix: 2}));
 });
 
 // Concatenate & Minify JS
@@ -202,7 +203,8 @@ gulp.task('iconfont', ['icons-scale'], function () {
               }))
               .pipe(gulp.dest('dist/'))
         })
-        .pipe(gulp.dest('dist/fonts/'));
+        .pipe(gulp.dest('dist/fonts/'))
+        .pipe(copy('dist/' + package.version + '/fonts/', {prefix: 2}));;
 });
 
 gulp.task('icons', function () {
