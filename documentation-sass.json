@@ -50,8 +50,8 @@
   "special": [
    "accordion",
    "modals",
-   "videoplayer",
    "slider",
+   "videoplayer",
    "tooltip"
   ],
   "other": [
@@ -91,6 +91,9 @@
    "tabs",
    "tags"
   ],
+  "gallery": [
+   "image grid"
+  ],
   "forms": [
    "datepicker",
    "file",
@@ -103,9 +106,6 @@
    "segment control",
    "select",
    "tag manager"
-  ],
-  "gallery": [
-   "image grid"
   ],
   "hero": [
    "hero"
@@ -1413,29 +1413,6 @@
      ]
     }
    ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
    "slider": [
     {
      "name": "Slider",
@@ -1492,6 +1469,29 @@
        "path": "~/source/sass/component/slider/_slider.scss",
        "example": "\n<div class=\"slider slider-nav-bottom slider-nav-hover\">\n        <div class=\"slide type-featured current\">\n             <a href=\"#\">\n                <span class=\"text-block text-block-left\">\n                   <span>\n                       <em class=\"title block-level h1\">Ipsum Fermentum Euismod</em>\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   </span>\n                 </span>\n                 <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n                 <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n             </a>\n        </div>\n        <div class=\"slide type-featured\">\n             <span class=\"text-block text-block-right\">\n                 <span>\n                     <em class=\"title block-level h1\">Amet Ornare Bibendum</em>\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"></div>\n        </div>\n        <div class=\"slide type-image has-text-block\">\n             <span class=\"text-block text-block-center\">\n                 <span>\n                     <em class=\"title text-xl block-level\">Ipsum Fermentum Euismod</em>\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 </span>\n             </span>\n             <div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"></div>\n             <div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"></div>\n        </div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"></div></div>\n        <div class=\"slide\"><div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"><a href=\"#video-player-101935278\" data-video-id=\"101935278\"></a></div></div>\n</div>",
        "escaped": "\n&lt;div class=\"slider slider-nav-bottom slider-nav-hover\"&gt;\n        &lt;div class=\"slide type-featured current\"&gt;\n             &lt;a href=\"#\"&gt;\n                &lt;span class=\"text-block text-block-left\"&gt;\n                   &lt;span&gt;\n                       &lt;em class=\"title block-level h1\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                   &lt;/span&gt;\n                 &lt;/span&gt;\n                 &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n                 &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n             &lt;/a&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-featured\"&gt;\n             &lt;span class=\"text-block text-block-right\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title block-level h1\"&gt;Amet Ornare Bibendum&lt;/em&gt;\n                     Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=499)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=500)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide type-image has-text-block\"&gt;\n             &lt;span class=\"text-block text-block-center\"&gt;\n                 &lt;span&gt;\n                     &lt;em class=\"title text-xl block-level\"&gt;Ipsum Fermentum Euismod&lt;/em&gt;\n                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.\n                 &lt;/span&gt;\n             &lt;/span&gt;\n             &lt;div class=\"slider-image slider-image-desktop hidden-xs hidden-sm\" style=\"background-image:url(https://unsplash.it/800/800/?image=496)\"&gt;&lt;/div&gt;\n             &lt;div class=\"slider-image slider-image-mobile hidden-md hidden-lg\" style=\"background-image:url(https://unsplash.it/800/800/?image=498)\"&gt;&lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=493');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image\" style=\"background-image:url('https://unsplash.it/800/800/?image=976');\"&gt;&lt;/div&gt;&lt;/div&gt;\n        &lt;div class=\"slide\"&gt;&lt;div class=\"slider-image player\" style=\"background-image:url('https://unsplash.it/800/800/?image=889');\"&gt;&lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2340,6 +2340,38 @@
     }
    ]
   },
+  "gallery": {
+   "image grid": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Gallery",
+       "section": "Image Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "path": "~/source/sass/component/gallery/_gallery.scss",
+       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "forms": {
    "datepicker": [
     {
@@ -2593,38 +2625,6 @@
        "path": "~/source/sass/component/form/_tag-manager.scss",
        "example": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"tag-manager\" data-input-name=\"tags\"&gt;\n    &lt;div class=\"tag-manager-input\"&gt;\n        &lt;div class=\"input-group\"&gt;\n            &lt;input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\"&gt;\n            &lt;span class=\"input-group-addon-btn\"&gt;&lt;button name=\"add-tag\" class=\"btn\"&gt;Add&lt;/button&gt;&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"tag-manager-selected\"&gt;\n        &lt;label class=\"label-sm\"&gt;Tags&lt;/label&gt;\n        &lt;ul class=\"tags\"&gt;\n            &lt;li&gt;\n                &lt;button class=\"btn btn-plain\" data-action=\"remove\"&gt;&times;&lt;/button&gt;\n                Predefined tag\n                &lt;input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\"&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "gallery": {
-   "image grid": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Gallery",
-       "section": "Image Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "path": "~/source/sass/component/gallery/_gallery.scss",
-       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box box-index lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
