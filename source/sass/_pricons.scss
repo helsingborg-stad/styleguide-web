@@ -143,6 +143,10 @@
 // <i class="pricon pricon-easy-read"></i> pricon-easy-read<br>
 // <i class="pricon pricon-union-jack"></i> pricon-union-jack<br>
 // <i class="pricon pricon-loading-o"></i> pricon-loading-o<br>
+// <i class="pricon pricon-right-skinny-arrow"></i> pricon-right-skinny-arrow<br>
+// <i class="pricon pricon-left-skinny-arrow"></i> pricon-left-skinny-arrow<br>
+// <i class="pricon pricon-right-fat-arrow"></i> pricon-right-fat-arrow<br>
+// <i class="pricon pricon-left-fat-arrow"></i> pricon-left-fat-arrow<br>
 // 
 //
 @font-face {
@@ -509,6 +513,10 @@ $pricon-sign-language: "\EA7C";
 $pricon-easy-read: "\EA7D";
 $pricon-union-jack: "\EA7E";
 $pricon-loading-o: "\EA7F";
+$pricon-right-skinny-arrow: "\EA80";
+$pricon-left-skinny-arrow: "\EA81";
+$pricon-right-fat-arrow: "\EA82";
+$pricon-left-fat-arrow: "\EA83";
 
 
 /* Glyphs */
@@ -639,6 +647,10 @@ $pricon-loading-o: "\EA7F";
 .pricon-easy-read:before { content: $pricon-easy-read }
 .pricon-union-jack:before { content: $pricon-union-jack }
 .pricon-loading-o:before { content: $pricon-loading-o }
+.pricon-right-skinny-arrow:before { content: $pricon-right-skinny-arrow }
+.pricon-left-skinny-arrow:before { content: $pricon-left-skinny-arrow }
+.pricon-right-fat-arrow:before { content: $pricon-right-fat-arrow }
+.pricon-left-fat-arrow:before { content: $pricon-left-fat-arrow }
 
 
 /* Mixin */
