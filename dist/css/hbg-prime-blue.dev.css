@@ -8573,7 +8573,7 @@ button.btn-icon {
   .navbar ul.nav-sublevel a {
     padding: 10px 0; }
   /* line 113, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
-  .navbar ul button {
+  .navbar ul button[data-load-submenu] {
     display: none; }
   /* line 117, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/navigation/_navbar.scss */
   .navbar:not(.navbar-transparent) .nav:not(.nav-dropdown) .current-menu-item > a,

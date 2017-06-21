@@ -110,7 +110,7 @@
         padding: 10px 0;
     }
 
-    ul button {
+    ul button[data-load-submenu] {
         display: none;
     }
 
