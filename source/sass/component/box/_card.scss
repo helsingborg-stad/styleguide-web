@@ -5,12 +5,13 @@
 // @page Boxes/Contact
 //
 // @state .vertical-card - Show description on the right hand side in desktop (identical to mobile).
+// @state .circular-card - Show description on the right hand side in desktop (identical to mobile).
 //
 // @markup
 // <div class="grid">
 //     <div class="grid-md-4">
 //         <span class="box box-card">
-//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=856">
+//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=64">
 //             <div class="box-content">
 //                 <h5>John Doe</h5>
 //                 <ul>
@@ -23,14 +24,32 @@
 //         </span>
 //     </div>
 // </div>
+//
 // <div class="grid">
 //	   <div class="grid-md-12">
 //         <span class="box box-card vertical-card">
-//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=832">
+//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=823">
 //             <div class="box-content">
 //                 <h5>Jane Roe</h5>
 //                 <ul>
 //						<li class="card-title">Macaroon princess</li>
+//                      <li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
+//                      <li><a class="link-item" href="mailto:jane.roe@helsingborg.se">jane.roe@helsingborg.se</a></li>
+//                      <li class="small description">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>
+//                 </ul>
+//             </div>
+//         </span>
+//     </div>
+// </div>
+//
+// <div class="grid">
+//     <div class="grid-md-4">
+//         <span class="box box-card circular-card">
+//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=838">
+//             <div class="box-content">
+//                 <h5>Jane Roe</h5>
+//                 <ul>
+//                      <li class="card-title">Macaroon princess</li>
 //                      <li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
 //                      <li><a class="link-item" href="mailto:jane.roe@helsingborg.se">jane.roe@helsingborg.se</a></li>
 //                      <li class="small description">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>
@@ -90,6 +109,20 @@
 		    }
 
 		}
+
+    }
+
+    &.circular-card {
+
+        .box-content {
+            text-align: center;
+        }
+
+        .box-image {
+            border-radius: 50%;
+            width: 60%;
+            margin: $grid-gutter-sm*2 20% $grid-gutter-sm 20%;
+        }
 
     }
 
