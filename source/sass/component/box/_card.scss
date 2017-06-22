@@ -99,7 +99,14 @@
 		    width: 180px;
 	    }
 
-	    @media screen and #{$screen-md-up} {
+        @media screen and #{$screen-xs} {
+            .box-image {
+                width: 100%;
+                float: none;
+            }
+        }
+
+	    @media screen and #{$screen-sm-up} {
 		    .box-content {
 			    margin-left: 180px;
 
@@ -113,15 +120,18 @@
     }
 
     &.circular-card {
-
-        .box-content {
-            text-align: center;
-        }
+        text-align: center;
 
         .box-image {
-            border-radius: 50%;
             width: 60%;
-            margin: $grid-gutter-sm*2 20% $grid-gutter-sm 20%;
+            max-width: 300px;
+            border-radius: 50%;
+            margin-top: $grid-gutter-sm*2;
+            margin-bottom: $grid-gutter-sm;
+        }
+
+        .box-content h5 {
+            font-size: $base-font-size*1.3;
         }
 
     }
