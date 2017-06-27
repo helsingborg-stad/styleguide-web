@@ -133,6 +133,31 @@
                     100ms background-color;
     }
 
+    &[class*="brick-columns-"] {
+        padding-bottom: 0;
+    }
+
+    &.brick-columns-3 {
+        height: 280px;
+        @media #{$screen-below-lg} {
+            height: 190px;
+        }
+    }
+
+    &.brick-columns-4 {
+        height: 400px;
+        @media #{$screen-below-lg} {
+            height: 260px;
+        }
+    }
+
+    &.brick-columns-6, &.brick-columns-12 {
+        height: 500px;
+        @media #{$screen-below-lg} {
+            height: 415px;
+        }
+    }
+
     &:hover {
         .box-content {
             transform: translateY(-$lead-height);
