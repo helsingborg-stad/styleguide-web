@@ -5,7 +5,6 @@
 // @page Boxes/Contact
 //
 // @state .vertical-card - Show description on the right hand side in desktop (identical to mobile).
-// @state .circular-card - Show description on the right hand side in desktop (identical to mobile).
 //
 // @markup
 // <div class="grid">
@@ -42,22 +41,6 @@
 //     </div>
 // </div>
 //
-// <div class="grid">
-//     <div class="grid-md-4">
-//         <span class="box box-card circular-card">
-//             <img class="box-image" src="https:\/\/unsplash.it/267/267/?image=838">
-//             <div class="box-content">
-//                 <h5>Jane Roe</h5>
-//                 <ul>
-//                      <li class="card-title">Macaroon princess</li>
-//                      <li><a class="link-item" href="tel:+4673000000">073 00 00 00</a></li>
-//                      <li><a class="link-item" href="mailto:jane.roe@helsingborg.se">jane.roe@helsingborg.se</a></li>
-//                      <li class="small description">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>
-//                 </ul>
-//             </div>
-//         </span>
-//     </div>
-// </div>
 //
 
 .box-card {
@@ -65,10 +48,25 @@
     background-color: #fff;
     border: 1px solid $creamy-darker;
     color: $base-font-color;
+    text-align: center;
 
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
 	}
+
+    .box-image {
+        width: 60%;
+        max-width: 300px;
+        border-radius: 50%;
+        margin-top: $grid-gutter-sm*2;
+        margin-bottom: $grid-gutter-sm;
+    }
+
+    .box-content {
+        h5 {
+            font-size: $base-font-size*1.3;
+        }
+    }
 
     .box-title {
         padding: 10px;
@@ -93,10 +91,13 @@
 
     &.vertical-card {
 	    overflow: hidden;
+        text-align: left;
 
 	    .box-image {
 		    float: left;
 		    width: 180px;
+            margin: 0;
+            border-radius: 0;
 	    }
 
         @media screen and #{$screen-xs} {
@@ -116,23 +117,6 @@
 		    }
 
 		}
-
-    }
-
-    &.circular-card {
-        text-align: center;
-
-        .box-image {
-            width: 60%;
-            max-width: 300px;
-            border-radius: 50%;
-            margin-top: $grid-gutter-sm*2;
-            margin-bottom: $grid-gutter-sm;
-        }
-
-        .box-content h5 {
-            font-size: $base-font-size*1.3;
-        }
 
     }
 
