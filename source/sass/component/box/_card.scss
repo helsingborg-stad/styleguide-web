@@ -48,18 +48,31 @@
     background-color: #fff;
     border: 1px solid $creamy-darker;
     color: $base-font-color;
-    text-align: center;
 
 	h1, h2, h3, h4, h5, h6 {
 		padding-bottom: 0;
 	}
 
-    .box-image {
+    &.has-image {
+        text-align: center;
+    }
+
+    .box-image,
+    figure {
         width: 60%;
         max-width: 300px;
         border-radius: 50%;
         margin-top: $grid-gutter-sm*2;
         margin-bottom: $grid-gutter-sm;
+        display: inline-block;
+    }
+
+    figure {
+        padding-bottom: 0;
+
+        &:after {
+            @include pricon($pricon-user);
+        }
     }
 
     .box-content {
@@ -93,7 +106,8 @@
 	    overflow: hidden;
         text-align: left;
 
-	    .box-image {
+	    .box-image,
+        figure {
 		    float: left;
 		    width: 180px;
             margin: 0;
@@ -101,14 +115,16 @@
 	    }
 
         @media screen and #{$screen-xs} {
-            .box-image {
+            .box-image,
+            figure {
                 width: 100%;
                 float: none;
+                max-width: 1000px;
             }
         }
 
 	    @media screen and #{$screen-sm-up} {
-		    .box-content {
+		    &.has-image .box-content {
 			    margin-left: 180px;
 
 			    ul, h1, h2, h3, h4, h5, h6 {

@@ -11658,75 +11658,94 @@ a.box-news:hover {
   display: block;
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  color: #252525;
-  text-align: center; }
-  /* line 53, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  color: #252525; }
+  /* line 52, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card h1, .box-card h2, .box-card h3, .box-card h4, .box-card .widget_calendar caption, .widget_calendar .box-card caption, .box-card h5, .box-card h6 {
     padding-bottom: 0; }
-  /* line 57, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
-  .box-card .box-image {
+  /* line 56, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  .box-card.has-image {
+    text-align: center; }
+  /* line 60, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  .box-card .box-image,
+  .box-card figure {
     width: 60%;
     max-width: 300px;
     border-radius: 50%;
     margin-top: 20px;
-    margin-bottom: 10px; }
-  /* line 66, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    margin-bottom: 10px;
+    display: inline-block; }
+  /* line 70, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  .box-card figure {
+    padding-bottom: 0; }
+    /* line 73, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    .box-card figure:after {
+      font-family: hbg-pricons;
+      line-height: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: -15%;
+      content: ""; }
+  /* line 79, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card .box-content h5 {
     font-size: 22.1px; }
-  /* line 71, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 84, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card .box-title {
     padding: 10px;
     padding-bottom: 0; }
-  /* line 76, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 89, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card a[href^="mailto:"] {
     word-break: break-all; }
-  /* line 80, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 93, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card .card-title {
     margin-bottom: 10px; }
-    /* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    /* line 96, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
     .box-card .card-title span {
       display: block; }
-  /* line 88, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 101, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card .description {
     margin-top: 10px; }
-  /* line 92, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 105, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card.vertical-card {
     overflow: hidden;
     text-align: left; }
-    /* line 96, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
-    .box-card.vertical-card .box-image {
+    /* line 109, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    .box-card.vertical-card .box-image,
+    .box-card.vertical-card figure {
       float: left;
       width: 180px;
       margin: 0;
       border-radius: 0; }
     @media screen and (min-width: 0) and (max-width: 468px) {
-      /* line 104, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
-      .box-card.vertical-card .box-image {
+      /* line 118, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+      .box-card.vertical-card .box-image,
+      .box-card.vertical-card figure {
         width: 100%;
-        float: none; } }
+        float: none;
+        max-width: 1000px; } }
     @media screen and (min-width: 469px) {
-      /* line 111, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
-      .box-card.vertical-card .box-content {
+      /* line 127, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+      .box-card.vertical-card.has-image .box-content {
         margin-left: 180px; }
-        /* line 114, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
-        .box-card.vertical-card .box-content ul, .box-card.vertical-card .box-content h1, .box-card.vertical-card .box-content h2, .box-card.vertical-card .box-content h3, .box-card.vertical-card .box-content h4, .box-card.vertical-card .box-content .widget_calendar caption, .widget_calendar .box-card.vertical-card .box-content caption, .box-card.vertical-card .box-content h5, .box-card.vertical-card .box-content h6 {
+        /* line 130, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+        .box-card.vertical-card.has-image .box-content ul, .box-card.vertical-card.has-image .box-content h1, .box-card.vertical-card.has-image .box-content h2, .box-card.vertical-card.has-image .box-content h3, .box-card.vertical-card.has-image .box-content h4, .box-card.vertical-card.has-image .box-content .widget_calendar caption, .widget_calendar .box-card.vertical-card.has-image .box-content caption, .box-card.vertical-card.has-image .box-content h5, .box-card.vertical-card.has-image .box-content h6 {
           padding-left: 10px; } }
   @media screen and (max-width: 769px) {
-    /* line 124, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    /* line 140, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
     .box-card .box-content {
       margin-left: 0; } }
 
-/* line 130, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+/* line 146, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
 .box-card-post {
   position: relative; }
-  /* line 133, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 149, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .box-image {
     width: 100%;
     padding-bottom: 56.25%;
     background-size: cover;
     background-position: center center;
     position: relative; }
-    /* line 140, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    /* line 156, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
     .box-card-post .box-image .box-card-post-category {
       display: block;
       position: absolute;
@@ -11734,27 +11753,27 @@ a.box-news:hover {
       left: 0;
       margin-left: 0;
       margin-top: 0; }
-  /* line 150, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 166, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .box-image img {
     display: none; }
-  /* line 154, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 170, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .box-content {
     color: #252525; }
-  /* line 158, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 174, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .box-content time {
     display: block;
     margin-bottom: 10px; }
-  /* line 163, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 179, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post.box-card-post-equal {
     width: 100%;
     padding-bottom: 150%;
     overflow: hidden; }
     @media screen and (max-width: 769px) {
-      /* line 163, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+      /* line 179, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
       .box-card-post.box-card-post-equal {
         padding-bottom: 0;
         overflow: visible; } }
-    /* line 173, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    /* line 189, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
     .box-card-post.box-card-post-equal .box-container {
       position: absolute;
       top: 0;
@@ -11762,19 +11781,19 @@ a.box-news:hover {
       padding: 5px;
       width: 100%; }
       @media screen and (max-width: 769px) {
-        /* line 173, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+        /* line 189, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
         .box-card-post.box-card-post-equal .box-container {
           position: static; } }
-  /* line 186, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 202, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .box-card-post-category {
     display: inline-block;
     padding: 0.1em 0.5em;
     margin-top: 10px;
     margin-left: 10px; }
-  /* line 193, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 209, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post .label {
     border-radius: 0 1px 1px 0; }
-  /* line 197, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 213, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post::after {
     display: block;
     content: '';
@@ -11784,11 +11803,11 @@ a.box-news:hover {
     right: 0;
     height: 40%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white); }
-  /* line 208, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+  /* line 224, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
   .box-card-post:hover {
     text-decoration: none;
     background-color: #f4f4f4; }
-    /* line 212, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
+    /* line 228, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_card.scss */
     .box-card-post:hover::after {
       background: linear-gradient(to bottom, rgba(244, 244, 244, 0), #f4f4f4); }
 
