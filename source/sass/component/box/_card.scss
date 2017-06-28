@@ -62,8 +62,7 @@
         width: 60%;
         max-width: 300px;
         border-radius: 50%;
-        margin-top: $grid-gutter-sm*2;
-        margin-bottom: $grid-gutter-sm;
+        margin: $grid-gutter-sm*2 20% $grid-gutter-sm 20%;
         display: inline-block;
     }
 
