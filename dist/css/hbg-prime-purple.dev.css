@@ -10808,29 +10808,25 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     margin-top: 5px; }
   /* line 36, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
   .box-index .label-category {
-    display: block;
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     left: 0;
     margin-left: 0;
-    margin-top: 0;
     display: inline-block;
-    padding: 0.1em 0.5em;
-    margin-top: 10px;
-    margin-left: 10px; }
-  /* line 49, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+    border-radius: 0; }
+  /* line 45, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
   .box-index time {
     display: block;
     margin-bottom: 10px; }
 
-/* line 55, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+/* line 51, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
 a.box-index {
   color: #252525; }
-  /* line 58, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+  /* line 54, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
   a.box-index:hover {
     text-decoration: none;
     background-color: #f4f4f4; }
-  /* line 63, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+  /* line 59, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
   a.box-index:after {
     font-family: hbg-pricons;
     line-height: 1;
@@ -10844,7 +10840,7 @@ a.box-index {
     bottom: 3px;
     right: 4px;
     font-size: 12px; }
-  /* line 72, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+  /* line 68, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
   a.box-index:before {
     content: "";
     position: absolute;
@@ -10856,7 +10852,7 @@ a.box-index {
     border-right-color: #dc0ca8;
     border-bottom-color: #dc0ca8; }
 
-/* line 87, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
+/* line 83, /websites/helsingborg/styleguide/styleguide-web/source/sass/component/box/_index.scss */
 .box-index-title.link-item, .widget_archive a.box-index-title,
 .widget_categories a.box-index-title,
 .widget_meta a.box-index-title,
