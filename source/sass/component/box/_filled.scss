@@ -33,6 +33,10 @@
     a, .link-item {
         text-decoration: underline;
     }
+
+    [class*="text-"] {
+        color: #fff;
+    }
 }
 
 .box-filled .box-index-title {
