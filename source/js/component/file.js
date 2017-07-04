@@ -31,7 +31,7 @@ HelsingborgPrime.Component.File = (function ($) {
         if ($fileinput.val() && $label.parent('li').length) {
             var max = $label.parent('li').parent('ul').attr('data-max');
 
-            if ($label.parent('li').parent('ul').find('li').length < max) {
+            if ($label.parent('li').parent('ul').find('li').length < max || max < 0) {
                 $label.parents('ul').append($duplicate);
             }
         }
