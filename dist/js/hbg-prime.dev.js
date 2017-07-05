@@ -15444,7 +15444,7 @@ HelsingborgPrime.Component.File = (function ($) {
     File.prototype.setSelected = function(fileinput) {
         var $fileinput = $(fileinput);
         var $label = $fileinput.parents('label.input-file');
-        var $duplicate = $label.parent('li').clone();
+        var $duplicate = $label.parent('li').clone().find('input').val('').end();
 
         if ($fileinput.val()) {
             $label.find('.input-file-selected').text($fileinput.val());
