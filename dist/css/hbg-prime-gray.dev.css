@@ -10928,14 +10928,17 @@ a.box-index {
   .widget_recent_comments .box-filled a {
     text-decoration: underline; }
   /* line 37, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+  .box-filled .title + .date {
+    display: block; }
+  /* line 41, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
   .box-filled [class*="text-"] {
     color: #fff; }
 
-/* line 42, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 46, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled .box-index-title {
   color: #fff !important; }
 
-/* line 46, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 50, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled .box-index-title.link-item::before, .box-filled .widget_archive a.box-index-title::before, .widget_archive .box-filled a.box-index-title::before, .box-filled
 .widget_categories a.box-index-title::before,
 .widget_categories .box-filled a.box-index-title::before, .box-filled
@@ -10947,123 +10950,123 @@ a.box-index {
 .widget_recent_comments .box-filled a.box-index-title::before {
   color: rgba(255, 255, 255, 0.7); }
 
-/* line 51, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 55, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-card .box-content {
   padding: 1em 1.5em;
   font-size: 1em; }
 
-/* line 57, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 61, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-1,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled {
   background-color: #ddd; }
 
-/* line 63, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-2,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 2) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 2) .box-filled {
   background-color: #333; }
 
-/* line 69, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-3,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled {
   background-color: #666; }
 
-/* line 75, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-4,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 4) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 4) .box-filled {
   background-color: #777; }
 
-/* line 81, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 85, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-5,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled {
   background-color: #000; }
 
-/* line 88, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 92, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-red-1.box-filled-red-1 {
   background-color: #f7a600; }
 
-/* line 92, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 96, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-red-2.box-filled-red-2 {
   background-color: #cb0050; }
 
-/* line 96, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 100, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-red-3.box-filled-red-3 {
   background-color: #ec6701; }
 
-/* line 100, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 104, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-red-4.box-filled-red-4 {
   background-color: #ae0b05; }
 
-/* line 104, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-red-5.box-filled-red-5 {
   background-color: #e3000f; }
 
-/* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 112, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-blue-1.box-filled-blue-1 {
   background-color: #4db4e7; }
 
-/* line 112, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 116, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-blue-2.box-filled-blue-2 {
   background-color: #0069b4; }
 
-/* line 116, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 120, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-blue-3.box-filled-blue-3 {
   background-color: #5ba1d8; }
 
-/* line 120, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 124, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-blue-4.box-filled-blue-4 {
   background-color: #005c86; }
 
-/* line 124, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 128, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-blue-5.box-filled-blue-5 {
   background-color: #0095db; }
 
-/* line 128, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 132, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-green-1.box-filled-green-1 {
   background-color: #afca05; }
 
-/* line 132, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 136, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-green-2.box-filled-green-2 {
   background-color: #11a636; }
 
-/* line 136, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 140, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-green-3.box-filled-green-3 {
   background-color: #a0c855; }
 
-/* line 140, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 144, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-green-4.box-filled-green-4 {
   background-color: #50811b; }
 
-/* line 144, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 148, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-green-5.box-filled-green-5 {
   background-color: #76b828; }
 
-/* line 148, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 152, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-purple-1.box-filled-purple-1 {
   background-color: #d35098; }
 
-/* line 152, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 156, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-purple-2.box-filled-purple-2 {
   background-color: #712082; }
 
-/* line 156, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 160, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-purple-3.box-filled-purple-3 {
   background-color: #a84c98; }
 
-/* line 160, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 164, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-purple-4.box-filled-purple-4 {
   background-color: #7b075e; }
 
-/* line 164, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+/* line 168, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
 .box-filled-purple-5.box-filled-purple-5 {
   background-color: #a61380; }
 
 @media print {
-  /* line 171, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
+  /* line 175, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_filled.scss */
   .box-filled-1,
   .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled,
   .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 1) .box-filled,

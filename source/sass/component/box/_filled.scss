@@ -34,6 +34,10 @@
         text-decoration: underline;
     }
 
+    .title + .date {
+        display: block;
+    }
+
     [class*="text-"] {
         color: #fff;
     }
