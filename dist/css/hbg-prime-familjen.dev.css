@@ -10787,11 +10787,17 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
   -ms-flex: 0 0 auto;
       flex: 0 0 auto; }
 
-/* line 52, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
+/* line 53, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
+.box-card-post .box-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/* line 63, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
 .box-image-container {
   position: relative; }
 
-/* line 56, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
+/* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
 [data-equal-item] .box-image-container {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto; }

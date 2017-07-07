@@ -49,6 +49,17 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     flex: 0 0 auto;
 }
 
+.box-card-post {
+    .box-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
 .box-image-container {
     position: relative;
 }
