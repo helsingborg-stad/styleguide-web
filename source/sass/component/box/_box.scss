@@ -40,7 +40,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     height: auto;
 }
 
-.creamy .box:not(.box-news) .box-content {
+.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
     background-color: #fff;
 }
 

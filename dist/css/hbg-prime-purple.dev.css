@@ -10778,7 +10778,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
   height: auto; }
 
 /* line 43, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
-.creamy .box:not(.box-news) .box-content {
+.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
   background-color: #fff; }
 
 /* line 47, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/component/box/_box.scss */
