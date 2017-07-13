@@ -4437,43 +4437,44 @@ b {
         flex-wrap: nowrap; }
     /* line 62, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table [class*="grid-"] {
+      display: block;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
-  /* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 68, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   .grid-table [class*="grid-"] {
     display: table-cell;
     float: none; }
-  /* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   .grid-table .grid-fit-content {
     width: 1%;
     white-space: nowrap; }
-  /* line 78, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-auto {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%; }
-  /* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-defined-width {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto; }
-  /* line 86, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 87, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-fit-content {
     -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     white-space: normal;
     width: auto; }
-  /* line 93, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 94, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   .grid-table.no-padding {
     padding-left: 0;
     padding-right: 0; }
-    /* line 97, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table.no-padding [class*="grid-"] {
       padding: 0; }
-  /* line 102, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+  /* line 103, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
   .grid-table .grid-col-icon {
     width: 1%;
     white-space: nowrap;
     padding-right: 0; }
-    /* line 107, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table .grid-col-icon {
       display: block;
       -ms-flex: 0 0 auto;
@@ -4504,43 +4505,44 @@ b {
           flex-wrap: nowrap; }
       /* line 62, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs [class*="grid-"] {
+        display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 68, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-xs [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-xs .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 78, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 86, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 87, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 93, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 94, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-xs.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 97, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       .grid-table-xs.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 102, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 103, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-xs .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 107, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4568,43 +4570,44 @@ b {
           flex-wrap: nowrap; }
       /* line 62, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm [class*="grid-"] {
+        display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 68, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-sm [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-sm .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 78, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 86, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 87, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 93, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 94, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-sm.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 97, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       .grid-table-sm.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 102, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 103, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-sm .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 107, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4632,43 +4635,44 @@ b {
           flex-wrap: nowrap; }
       /* line 62, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md [class*="grid-"] {
+        display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 68, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-md [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-md .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 78, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 86, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 87, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 93, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 94, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-md.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 97, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       .grid-table-md.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 102, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 103, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-md .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 107, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
@@ -4696,43 +4700,44 @@ b {
           flex-wrap: nowrap; }
       /* line 62, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg [class*="grid-"] {
+        display: block;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    /* line 67, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 68, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-lg [class*="grid-"] {
       display: table-cell;
       float: none; }
-    /* line 72, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 73, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-lg .grid-fit-content {
       width: 1%;
       white-space: nowrap; }
-    /* line 78, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 79, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-auto {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; }
-    /* line 82, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 83, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-defined-width {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
-    /* line 86, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 87, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-fit-content {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
       white-space: normal;
       width: auto; }
-    /* line 93, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 94, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-lg.no-padding {
       padding-left: 0;
       padding-right: 0; }
-      /* line 97, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 98, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       .grid-table-lg.no-padding [class*="grid-"] {
         padding: 0; }
-    /* line 102, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+    /* line 103, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
     .grid-table-lg .grid-col-icon {
       width: 1%;
       white-space: nowrap;
       padding-right: 0; }
-      /* line 107, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
+      /* line 108, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg .grid-col-icon {
         display: block;
         -ms-flex: 0 0 auto;
