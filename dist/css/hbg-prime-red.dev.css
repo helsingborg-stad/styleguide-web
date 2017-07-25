@@ -7063,27 +7063,27 @@ article + .page-footer {
   padding: 20px; }
 
 /* line 17, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/typography/_list.scss */
-.modularity-mod-text .box-content ul,
+.modularity-mod-text .box-content ul:not(.social-feed),
 .mce-content-body ul,
-article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist),
+article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed),
 .unordered-list {
   padding-left: 30px; }
   /* line 23, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/typography/_list.scss */
-  .modularity-mod-text .box-content ul li,
+  .modularity-mod-text .box-content ul:not(.social-feed) li,
   .mce-content-body ul li,
-  article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist) li,
+  article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed) li,
   .unordered-list li {
     position: relative; }
     /* line 26, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/typography/_list.scss */
-    .modularity-mod-text .box-content ul li + li,
+    .modularity-mod-text .box-content ul:not(.social-feed) li + li,
     .mce-content-body ul li + li,
-    article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist) li + li,
+    article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed) li + li,
     .unordered-list li + li {
       margin-top: 5px; }
     /* line 30, /Users/tommymorberg/Desktop/Helsingborg/Styleguide/source/sass/typography/_list.scss */
-    .modularity-mod-text .box-content ul li::before,
+    .modularity-mod-text .box-content ul:not(.social-feed) li::before,
     .mce-content-body ul li::before,
-    article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist) li::before,
+    article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed) li::before,
     .unordered-list li::before {
       position: absolute;
       left: -20px;
