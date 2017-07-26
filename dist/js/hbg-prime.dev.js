@@ -14892,7 +14892,19 @@ var ie = (function(){
 
 }());
 
-if (ie > 9 || typeof ie == 'undefined') {
+var ios = (function () {
+    var undef;
+
+    if (/iP(hone|od|ad)/.test(navigator.platform)) {
+        var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+        return parseInt(v[1], 10);
+    }
+
+    return undef;
+
+}());
+
+if ((ie > 9 || typeof ie == 'undefined') && (typeof ios == 'undefined' || ios >= 8)) {
     var hyperformWrapper = hyperform(window, {
         classes: {
             valid: 'valid',
