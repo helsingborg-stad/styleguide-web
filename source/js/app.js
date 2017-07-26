@@ -25,7 +25,7 @@ if (ie > 9 || typeof ie == 'undefined') {
         }
     });
 
-    hyperform.add_translation('sv', {
+    hyperform.addTranslation('sv', {
         TextTooLong: 'Använd %l eller färre tecken (du använder just nu %l tecken).',
         ValueMissing: 'Du måste fylla i detta fältet.',
         CheckboxMissing: 'Du måste kryssa för minst ett alternativ.',
@@ -47,7 +47,7 @@ if (ie > 9 || typeof ie == 'undefined') {
         BadInputNumber: 'Du måste ange en siffra.'
     });
 
-    hyperform.set_language("sv");
+    hyperform.setLanguage("sv");
 }
 
 $('html, body').removeClass('no-js');

@@ -69,6 +69,17 @@
    "news",
    "panel"
   ],
+  "buttons": [
+   "base",
+   "primary",
+   "contrasted",
+   "danger",
+   "plain",
+   "themed",
+   "sizes",
+   "block button",
+   "offcanvas button"
+  ],
   "navigation": [
    "dropdown",
    "breadcrumbs",
@@ -92,17 +103,6 @@
    "segment control",
    "select",
    "tag manager"
-  ],
-  "buttons": [
-   "base",
-   "primary",
-   "contrasted",
-   "danger",
-   "plain",
-   "themed",
-   "sizes",
-   "block button",
-   "offcanvas button"
   ],
   "gallery": [
    "image grid"
@@ -1798,6 +1798,279 @@
     }
    ]
   },
+  "buttons": {
+   "base": [
+    {
+     "name": "Button base",
+     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Base"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "primary": [
+    {
+     "name": "Button: Primary",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Primary"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "contrasted": [
+    {
+     "name": "Button: Contrasted",
+     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Contrasted"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "danger": [
+    {
+     "name": "Button: Danger",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Danger"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "plain": [
+    {
+     "name": "Button: Plain",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Plain"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "themed": [
+    {
+     "name": "Button: Themed buttons",
+     "description": "<p>Buttons with color theme colors</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Themed"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-theme-first",
+       "escaped": "btn-theme-first",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-second",
+       "escaped": "btn-theme-second",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-third",
+       "escaped": "btn-theme-third",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fourth",
+       "escaped": "btn-theme-fourth",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fifth",
+       "escaped": "btn-theme-fifth",
+       "description": ""
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "sizes": [
+    {
+     "name": "Button size",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Sizes"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "block button": [
+    {
+     "name": "Block button",
+     "description": "<p>Block button spans the full width of the container</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Block button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "offcanvas button": [
+    {
+     "name": "Offcanvas button",
+     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Offcanvas button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "path": "~/source/sass/component/button/_button.scss",
+       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "navigation": {
    "dropdown": [
     {
@@ -2320,279 +2593,6 @@
        "path": "~/source/sass/component/form/_tag-manager.scss",
        "example": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"tag-manager\" data-input-name=\"tags\"&gt;\n    &lt;div class=\"tag-manager-input\"&gt;\n        &lt;div class=\"input-group\"&gt;\n            &lt;input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\"&gt;\n            &lt;span class=\"input-group-addon-btn\"&gt;&lt;button name=\"add-tag\" class=\"btn\"&gt;Add&lt;/button&gt;&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"tag-manager-selected\"&gt;\n        &lt;label class=\"label-sm\"&gt;Tags&lt;/label&gt;\n        &lt;ul class=\"tags\"&gt;\n            &lt;li&gt;\n                &lt;button class=\"btn btn-plain\" data-action=\"remove\"&gt;&times;&lt;/button&gt;\n                Predefined tag\n                &lt;input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\"&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "buttons": {
-   "base": [
-    {
-     "name": "Button base",
-     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Base"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>",
-       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "primary": [
-    {
-     "name": "Button: Primary",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Primary"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "contrasted": [
-    {
-     "name": "Button: Contrasted",
-     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Contrasted"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "danger": [
-    {
-     "name": "Button: Danger",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Danger"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-danger\">Primary button</button>\n<button class=\"btn btn-danger disabled\">Primary disabled button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Primary disabled button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "plain": [
-    {
-     "name": "Button: Plain",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Plain"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "themed": [
-    {
-     "name": "Button: Themed buttons",
-     "description": "<p>Buttons with color theme colors</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Themed"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-theme-first",
-       "escaped": "btn-theme-first",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-second",
-       "escaped": "btn-theme-second",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-third",
-       "escaped": "btn-theme-third",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fourth",
-       "escaped": "btn-theme-fourth",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fifth",
-       "escaped": "btn-theme-fifth",
-       "description": ""
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "sizes": [
-    {
-     "name": "Button size",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Sizes"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "block button": [
-    {
-     "name": "Block button",
-     "description": "<p>Block button spans the full width of the container</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Block button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "offcanvas button": [
-    {
-     "name": "Offcanvas button",
-     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Offcanvas button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "path": "~/source/sass/component/button/_button.scss",
-       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
       }
      ]
     }
