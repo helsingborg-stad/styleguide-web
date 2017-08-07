@@ -11,6 +11,14 @@
      "name": "Language"
     },
     {
+     "name": "Modal",
+     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+    },
+    {
      "name": "Gallery",
      "description": "<p>Popup boxes for gallery items.</p>\n"
     },
@@ -19,12 +27,8 @@
      "description": ""
     },
     {
-     "name": "Modal",
-     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
-    },
-    {
-     "name": "Modal",
-     "description": "<p>Show accodrion dropdown, make linkable by updating adress bar</p>\n"
+     "name": "Slider",
+     "description": "<p>Sliding content</p>\n"
     },
     {
      "name": "Modal",
@@ -35,19 +39,7 @@
      "description": ""
     },
     {
-     "name": "Slider",
-     "description": "<p>Sliding content</p>\n"
-    },
-    {
      "name": "Cookies"
-    },
-    {
-     "name": "Local link",
-     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
-    },
-    {
-     "name": "Local link",
-     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
     },
     {
      "name": "Menu",
@@ -61,11 +53,15 @@
        "lang": "markup",
        "description": "",
        "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
-       "path": "~/source/js/helper/equalHeight.js",
+       "path": "~/source/js/helper/EqualHeight.js",
        "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
+    },
+    {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
     },
     {
      "name": "Menu",
@@ -86,11 +82,15 @@
        "lang": "markup",
        "description": "",
        "modifier": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
-       "path": "~/source/js/helper/post.js",
+       "path": "~/source/js/helper/Post.js",
        "example": "\n<div class=\"grid\" data-equal-container>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n    <div class=\"grid-md-6\" data-equal-item>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
+    },
+    {
+     "name": "Local link",
+     "description": "<p>Finds link items with outbound links and gives them outbound class</p>\n"
     },
     {
      "name": "Cookie consent"

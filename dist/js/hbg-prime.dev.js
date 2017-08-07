@@ -12196,2685 +12196,2599 @@ var datepicker = $.datepicker;
 
 
 }));
-/**
- * es6-weakmap - A WeakMap polyfill written in TypeScript, unit tested using Jasmine and Karma.
- *
- * @author Brenden Palmer
- * @version v0.0.1
- * @license MIT
- */
-!function(){"use strict";var e;!function(e){var t=function(){function e(){}return Object.defineProperty(e,"WEAKMAP_KEY_IDENTIFIER",{get:function(){return"WEAKMAP_KEY_IDENTIFIER_spF91dwX14_OZAbzyeCu3"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"WEAKMAP_SET_THROWABLE_MESSAGE",{get:function(){return"Invalid value used as weak map key"},enumerable:!0,configurable:!0}),e}();e.WeakMapConstants=t}(e||(e={}));var e;!function(e){var t=function(){function e(){if(null!==e.instance)throw"Get the instance of the WeakMapSequencer using the getInstance method.";this.identifier=0}return e.getInstance=function(){return null===e.instance&&(e.instance=new e),e.instance},e.prototype.next=function(){return this.identifier++},e.instance=null,e}();e.WeakMapSequencer=t}(e||(e={}));var e;!function(e){var t=function(){function t(){}return t.defineProperty=function(n){var r;if(t.isValidObject(n)===!1)throw new TypeError(e.WeakMapConstants.WEAKMAP_SET_THROWABLE_MESSAGE);if("undefined"==typeof n[e.WeakMapConstants.WEAKMAP_KEY_IDENTIFIER]){r=e.WeakMapSequencer.getInstance().next();try{Object.defineProperty(n,e.WeakMapConstants.WEAKMAP_KEY_IDENTIFIER,{enumerable:!1,configurable:!1,get:function(){return r}})}catch(a){throw new TypeError(e.WeakMapConstants.WEAKMAP_SET_THROWABLE_MESSAGE)}}else r=n[e.WeakMapConstants.WEAKMAP_KEY_IDENTIFIER];return r},t.getProperty=function(n){return t.isValidObject(n)===!0?n[e.WeakMapConstants.WEAKMAP_KEY_IDENTIFIER]:void 0},t.isValidObject=function(e){return e===Object(e)},t}();e.WeakMapUtils=t}(e||(e={}));var e;!function(e){var t=function(){function t(e){void 0===e&&(e=[]),this.map={};for(var t=0;t<e.length;t++){var n=e[t];n&&n.length>=2&&this.set(n[0],n[1])}}return t.prototype.get=function(t){if(this.has(t)===!0){var n=String(e.WeakMapUtils.getProperty(t));return this.map[n]}},t.prototype.has=function(t){var n=String(e.WeakMapUtils.getProperty(t));return void 0!==n&&"undefined"!=typeof this.map[n]},t.prototype["delete"]=function(t){if(this.has(t)===!0){var n=String(e.WeakMapUtils.getProperty(t));return delete this.map[n],!0}return!1},t.prototype.set=function(t,n){var r=String(e.WeakMapUtils.defineProperty(t));this.map[r]=n},t}();e.WeakMap=t}(e||(e={}));var e;!function(e){window.WeakMap||(window.WeakMap=e.WeakMap)}(e||(e={}))}();
 /*! hyperform.js.org */
 var hyperform = (function () {
-                       'use strict';
-
-                       var registry = Object.create(null);
-
-                       /**
-                        * run all actions registered for a hook
-                        *
-                        * Every action gets called with a state object as `this` argument and with the
-                        * hook's call arguments as call arguments.
-                        *
-                        * @return mixed the returned value of the action calls or undefined
-                        */
-                       function call_hook(hook) {
-                         var result;
-                         var call_args = Array.prototype.slice.call(arguments, 1);
-
-                         if (hook in registry) {
-                           result = registry[hook].reduce(function (args) {
-
-                             return function (previousResult, currentAction) {
-                               var interimResult = currentAction.apply({
-                                 state: previousResult,
-                                 hook: hook
-                               }, args);
-                               return interimResult !== undefined ? interimResult : previousResult;
-                             };
-                           }(call_args), result);
-                         }
-
-                         return result;
-                       }
-
-                       /**
-                        * Filter a value through hooked functions
-                        *
-                        * Allows for additional parameters:
-                        * js> do_filter('foo', null, current_element)
-                        */
-                       function do_filter(hook, initial_value) {
-                         var result = initial_value;
-                         var call_args = Array.prototype.slice.call(arguments, 1);
-
-                         if (hook in registry) {
-                           result = registry[hook].reduce(function (previousResult, currentAction) {
-                             call_args[0] = previousResult;
-                             var interimResult = currentAction.apply({
-                               state: previousResult,
-                               hook: hook
-                             }, call_args);
-                             return interimResult !== undefined ? interimResult : previousResult;
-                           }, result);
-                         }
-
-                         return result;
-                       }
-
-                       /**
-                        * remove an action again
-                        */
-                       function remove_hook(hook, action) {
-                         if (hook in registry) {
-                           for (var i = 0; i < registry[hook].length; i++) {
-                             if (registry[hook][i] === action) {
-                               registry[hook].splice(i, 1);
-                               break;
-                             }
-                           }
-                         }
-                       }
-                       /**
-                        * add an action to a hook
-                        */
-                       function add_hook(hook, action, position) {
-                         if (!(hook in registry)) {
-                           registry[hook] = [];
-                         }
-                         if (position === undefined) {
-                           position = registry[hook].length;
-                         }
-                         registry[hook].splice(position, 0, action);
-                       }
-
-                       /**
-                        * return either the data of a hook call or the result of action, if the
-                        * former is undefined
-                        *
-                        * @return function a function wrapper around action
-                        */
-                       function return_hook_or (hook, action) {
-                         return function () {
-                           var data = call_hook(hook, Array.prototype.slice.call(arguments));
-
-                           if (data !== undefined) {
-                             return data;
-                           }
-
-                           return action.apply(this, arguments);
-                         };
-                       }
-
-                       /* the following code is borrowed from the WebComponents project, licensed
-                        * under the BSD license. Source:
-                        * <https://github.com/webcomponents/webcomponentsjs/blob/5283db1459fa2323e5bfc8b9b5cc1753ed85e3d0/src/WebComponents/dom.js#L53-L78>
-                        */
-                       // defaultPrevented is broken in IE.
-                       // https://connect.microsoft.com/IE/feedback/details/790389/event-defaultprevented-returns-false-after-preventdefault-was-called
-
-                       var workingDefaultPrevented = function () {
-                         var e = document.createEvent('Event');
-                         e.initEvent('foo', true, true);
-                         e.preventDefault();
-                         return e.defaultPrevented;
-                       }();
-
-                       if (!workingDefaultPrevented) {
-                         (function () {
-                           var origPreventDefault = window.Event.prototype.preventDefault;
-                           window.Event.prototype.preventDefault = function () {
-                             if (!this.cancelable) {
-                               return;
-                             }
-
-                             origPreventDefault.call(this);
-
-                             Object.defineProperty(this, 'defaultPrevented', {
-                               get: function get() {
-                                 return true;
-                               },
-                               configurable: true
-                             });
-                           };
-                         })();
-                       }
-                       /* end of borrowed code */
-
-                       function create_event(name) {
-                         var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-                         var _ref$bubbles = _ref.bubbles;
-                         var bubbles = _ref$bubbles === undefined ? true : _ref$bubbles;
-                         var _ref$cancelable = _ref.cancelable;
-                         var cancelable = _ref$cancelable === undefined ? false : _ref$cancelable;
-
-                         var event = document.createEvent('Event');
-                         event.initEvent(name, bubbles, cancelable);
-                         return event;
-                       }
-
-                       function trigger_event (element, event) {
-                         var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-                         var _ref2$bubbles = _ref2.bubbles;
-                         var bubbles = _ref2$bubbles === undefined ? true : _ref2$bubbles;
-                         var _ref2$cancelable = _ref2.cancelable;
-                         var cancelable = _ref2$cancelable === undefined ? false : _ref2$cancelable;
-                         var payload = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-                         if (!(event instanceof window.Event)) {
-                           event = create_event(event, { bubbles: bubbles, cancelable: cancelable });
-                         }
-
-                         for (var key in payload) {
-                           if (payload.hasOwnProperty(key)) {
-                             event[key] = payload[key];
-                           }
-                         }
-
-                         element.dispatchEvent(event);
-
-                         return event;
-                       }
-
-                       /* and datetime-local? Spec says “Nah!” */
-
-                       var dates = ['datetime', 'date', 'month', 'week', 'time'];
-
-                       var plain_numbers = ['number', 'range'];
-
-                       /* everything that returns something meaningful for valueAsNumber and
-                        * can have the step attribute */
-                       var numbers = dates.concat(plain_numbers, 'datetime-local');
-
-                       /* the spec says to only check those for syntax in validity.typeMismatch.
-                        * ¯\_(ツ)_/¯ */
-                       var type_checked = ['email', 'url'];
-
-                       /* check these for validity.badInput */
-                       var input_checked = ['email', 'date', 'month', 'week', 'time', 'datetime', 'datetime-local', 'number', 'range', 'color'];
-
-                       var text_types = ['text', 'search', 'tel', 'password'].concat(type_checked);
-
-                       /* input element types, that are candidates for the validation API.
-                        * Missing from this set are: button, hidden, menu (from <button>), reset and
-                        * the types for non-<input> elements. */
-                       var validation_candidates = ['checkbox', 'color', 'file', 'image', 'radio', 'submit'].concat(numbers, text_types);
-
-                       /* all known types of <input> */
-                       var inputs = ['button', 'hidden', 'reset'].concat(validation_candidates);
-
-                       /* apparently <select> and <textarea> have types of their own */
-                       var non_inputs = ['select-one', 'select-multiple', 'textarea'];
-
-                       /* shim layer for the Element.matches method */
-
-                       var ep = window.Element.prototype;
-                       var native_matches = ep.matches || ep.matchesSelector || ep.msMatchesSelector || ep.webkitMatchesSelector;
-
-                       function matches (element, selector) {
-                                              return native_matches.call(element, selector);
-                       }
-
-                       /**
-                        * mark an object with a '__hyperform=true' property
-                        *
-                        * We use this to distinguish our properties from the native ones. Usage:
-                        * js> mark(obj);
-                        * js> assert(obj.__hyperform === true)
-                        */
-
-                       function mark (obj) {
-                         if (['object', 'function'].indexOf(typeof obj) > -1) {
-                           delete obj.__hyperform;
-                           Object.defineProperty(obj, '__hyperform', {
-                             configurable: true,
-                             enumerable: false,
-                             value: true
-                           });
-                         }
-
-                         return obj;
-                       }
-
-                       /**
-                        * the internal storage for messages
-                        */
-                       var store = new WeakMap();
-
-                       /* jshint -W053 */
-                       var message_store = {
-                         set: function set(element, message) {
-                           var is_custom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-                           if (element instanceof window.HTMLFieldSetElement) {
-                             var wrapped_form = get_wrapper(element);
-                             if (wrapped_form && !wrapped_form.settings.extendFieldset) {
-                               /* make this a no-op for <fieldset> in strict mode */
-                               return message_store;
-                             }
-                           }
-
-                           if (typeof message === 'string') {
-                             message = new String(message);
-                           }
-                           if (is_custom) {
-                             message.is_custom = true;
-                           }
-                           mark(message);
-                           store.set(element, message);
-
-                           /* allow the :invalid selector to match */
-                           if ('_original_setCustomValidity' in element) {
-                             element._original_setCustomValidity(message.toString());
-                           }
-
-                           return message_store;
-                         },
-                         get: function get(element) {
-                           var message = store.get(element);
-                           if (message === undefined && '_original_validationMessage' in element) {
-                             /* get the browser's validation message, if we have none. Maybe it
-                              * knows more than we. */
-                             message = new String(element._original_validationMessage);
-                           }
-                           return message ? message : new String('');
-                         },
-                         delete: function _delete(element) {
-                           if ('_original_setCustomValidity' in element) {
-                             element._original_setCustomValidity('');
-                           }
-                           return store.delete(element);
-                         }
-                       };
-
-                       /**
-                        * counter that will be incremented with every call
-                        *
-                        * Will enforce uniqueness, as long as no more than 1 hyperform scripts
-                        * are loaded. (In that case we still have the "random" part below.)
-                        */
-
-                       var uid = 0;
-
-                       /**
-                        * generate a random ID
-                        *
-                        * @see https://gist.github.com/gordonbrander/2230317
-                        */
-                       function generate_id () {
-                         var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'hf_';
-
-                         return prefix + uid++ + Math.random().toString(36).substr(2);
-                       }
-
-                       var warningsCache = new WeakMap();
-
-                       var DefaultRenderer = {
-
-                         /**
-                          * called when a warning should become visible
-                          */
-                         attachWarning: function attachWarning(warning, element) {
-                           /* should also work, if element is last,
-                            * http://stackoverflow.com/a/4793630/113195 */
-                           element.parentNode.insertBefore(warning, element.nextSibling);
-                         },
-
-                         /**
-                          * called when a warning should vanish
-                          */
-                         detachWarning: function detachWarning(warning, element) {
-                           warning.parentNode.removeChild(warning);
-                         },
-
-                         /**
-                          * called when feedback to an element's state should be handled
-                          *
-                          * i.e., showing and hiding warnings
-                          */
-                         showWarning: function showWarning(element) {
-                           var sub_radio = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-                           var msg = message_store.get(element).toString();
-                           var warning = warningsCache.get(element);
-
-                           if (msg) {
-                             if (!warning) {
-                               var wrapper = get_wrapper(element);
-                               warning = document.createElement('div');
-                               warning.className = wrapper && wrapper.settings.classes.warning || 'hf-warning';
-                               warning.id = generate_id();
-                               warning.setAttribute('aria-live', 'polite');
-                               warningsCache.set(element, warning);
-                             }
-
-                             element.setAttribute('aria-errormessage', warning.id);
-                             warning.textContent = msg;
-                             Renderer.attachWarning(warning, element);
-                           } else if (warning && warning.parentNode) {
-                             element.removeAttribute('aria-errormessage');
-                             Renderer.detachWarning(warning, element);
-                           }
-
-                           if (!sub_radio && element.type === 'radio' && element.form) {
-                             /* render warnings for all other same-name radios, too */
-                             Array.prototype.filter.call(document.getElementsByName(element.name), function (radio) {
-                               return radio.name === element.name && radio.form === element.form;
-                             }).map(function (radio) {
-                               return Renderer.showWarning(radio, 'sub_radio');
-                             });
-                           }
-                         }
-
-                       };
-
-                       var Renderer = {
-
-                         attachWarning: DefaultRenderer.attachWarning,
-                         detachWarning: DefaultRenderer.detachWarning,
-                         showWarning: DefaultRenderer.showWarning,
-
-                         set: function set(renderer, action) {
-                           if (renderer.indexOf('_') > -1) {
-                             /* global console */
-                             // TODO delete before next non-patch version
-                             console.log('Renderer.set: please use camelCase names. ' + renderer + ' will be removed in the next non-patch release.');
-                             renderer = renderer.replace(/_([a-z])/g, function (g) {
-                               return g[1].toUpperCase();
-                             });
-                           }
-                           if (!action) {
-                             action = DefaultRenderer[renderer];
-                           }
-                           Renderer[renderer] = action;
-                         }
-
-                       };
-
-                       /**
-                        * check element's validity and report an error back to the user
-                        */
-                       function reportValidity(element) {
-                         /* if this is a <form>, report validity of all child inputs */
-                         if (element instanceof window.HTMLFormElement) {
-                           return Array.prototype.map.call(element.elements, reportValidity).every(function (b) {
-                             return b;
-                           });
-                         }
-
-                         /* we copy checkValidity() here, b/c we have to check if the "invalid"
-                          * event was canceled. */
-                         var valid = ValidityState(element).valid;
-                         var event;
-                         if (valid) {
-                           var wrapped_form = get_wrapper(element);
-                           if (wrapped_form && wrapped_form.settings.validEvent) {
-                             event = trigger_event(element, 'valid', { cancelable: true });
-                           }
-                         } else {
-                           event = trigger_event(element, 'invalid', { cancelable: true });
-                         }
-
-                         if (!event || !event.defaultPrevented) {
-                           Renderer.showWarning(element);
-                         }
-
-                         return valid;
-                       }
-
-                       /**
-                        * submit a form, because `element` triggered it
-                        *
-                        * This method also dispatches a submit event on the form prior to the
-                        * submission. The event contains the trigger element as `submittedVia`.
-                        *
-                        * If the element is a button with a name, the name=value pair will be added
-                        * to the submitted data.
-                        */
-                       function submit_form_via(element) {
-                         /* apparently, the submit event is not triggered in most browsers on
-                          * the submit() method, so we do it manually here to model a natural
-                          * submit as closely as possible.
-                          * Now to the fun fact: If you trigger a submit event from a form, what
-                          * do you think should happen?
-                          * 1) the form will be automagically submitted by the browser, or
-                          * 2) nothing.
-                          * And as you already suspected, the correct answer is: both! Firefox
-                          * opts for 1), Chrome for 2). Yay! */
-                         var event_got_cancelled;
-
-                         var submit_event = create_event('submit', { cancelable: true });
-                         /* force Firefox to not submit the form, then fake preventDefault() */
-                         submit_event.preventDefault();
-                         Object.defineProperty(submit_event, 'defaultPrevented', {
-                           value: false,
-                           writable: true
-                         });
-                         Object.defineProperty(submit_event, 'preventDefault', {
-                           value: function value() {
-                             return submit_event.defaultPrevented = event_got_cancelled = true;
-                           },
-                           writable: true
-                         });
-                         trigger_event(element.form, submit_event, {}, { submittedVia: element });
-
-                         if (!event_got_cancelled) {
-                           add_submit_field(element);
-                           window.HTMLFormElement.prototype.submit.call(element.form);
-                           window.setTimeout(function () {
-                             return remove_submit_field(element);
-                           });
-                         }
-                       }
-
-                       /**
-                        * if a submit button was clicked, add its name=value by means of a type=hidden
-                        * input field
-                        */
-                       function add_submit_field(button) {
-                         if (['image', 'submit'].indexOf(button.type) > -1 && button.name) {
-                           var wrapper = get_wrapper(button.form) || {};
-                           var submit_helper = wrapper.submit_helper;
-                           if (submit_helper) {
-                             if (submit_helper.parentNode) {
-                               submit_helper.parentNode.removeChild(submit_helper);
-                             }
-                           } else {
-                             submit_helper = document.createElement('input');
-                             submit_helper.type = 'hidden';
-                             wrapper.submit_helper = submit_helper;
-                           }
-                           submit_helper.name = button.name;
-                           submit_helper.value = button.value;
-                           button.form.appendChild(submit_helper);
-                         }
-                       }
-
-                       /**
-                        * remove a possible helper input, that was added by `add_submit_field`
-                        */
-                       function remove_submit_field(button) {
-                         if (['image', 'submit'].indexOf(button.type) > -1 && button.name) {
-                           var wrapper = get_wrapper(button.form) || {};
-                           var submit_helper = wrapper.submit_helper;
-                           if (submit_helper && submit_helper.parentNode) {
-                             submit_helper.parentNode.removeChild(submit_helper);
-                           }
-                         }
-                       }
-
-                       /**
-                        * check a form's validity and submit it
-                        *
-                        * The method triggers a cancellable `validate` event on the form. If the
-                        * event is cancelled, form submission will be aborted, too.
-                        *
-                        * If the form is found to contain invalid fields, focus the first field.
-                        */
-                       function check(button) {
-                         /* trigger a "validate" event on the form to be submitted */
-                         var val_event = trigger_event(button.form, 'validate', { cancelable: true });
-                         if (val_event.defaultPrevented) {
-                           /* skip the whole submit thing, if the validation is canceled. A user
-                            * can still call form.submit() afterwards. */
-                           return;
-                         }
-
-                         var valid = true;
-                         var first_invalid;
-                         Array.prototype.map.call(button.form.elements, function (element) {
-                           if (!reportValidity(element)) {
-                             valid = false;
-                             if (!first_invalid && 'focus' in element) {
-                               first_invalid = element;
-                             }
-                           }
-                         });
-
-                         if (valid) {
-                           submit_form_via(button);
-                         } else if (first_invalid) {
-                           /* focus the first invalid element, if validation went south */
-                           first_invalid.focus();
-                           /* tell the tale, if anyone wants to react to it */
-                           trigger_event(button.form, 'forminvalid');
-                         }
-                       }
-
-                       /**
-                        * test if node is a submit button
-                        */
-                       function is_submit_button(node) {
-                         return (
-                           /* must be an input or button element... */
-                           (node.nodeName === 'INPUT' || node.nodeName === 'BUTTON') && (
-
-                           /* ...and have a submitting type */
-                           node.type === 'image' || node.type === 'submit')
-                         );
-                       }
-
-                       /**
-                        * test, if the click event would trigger a submit
-                        */
-                       function is_submitting_click(event, button) {
-                         return (
-                           /* prevented default: won't trigger a submit */
-                           !event.defaultPrevented && (
-
-                           /* left button or middle button (submits in Chrome) */
-                           !('button' in event) || event.button < 2) &&
-
-                           /* must be a submit button... */
-                           is_submit_button(button) &&
-
-                           /* the button needs a form, that's going to be submitted */
-                           button.form &&
-
-                           /* again, if the form should not be validated, we're out of the game */
-                           !button.form.hasAttribute('novalidate')
-                         );
-                       }
-
-                       /**
-                        * test, if the keypress event would trigger a submit
-                        */
-                       function is_submitting_keypress(event) {
-                         return (
-                           /* prevented default: won't trigger a submit */
-                           !event.defaultPrevented && (
-                           /* ...and <Enter> was pressed... */
-                           event.keyCode === 13 &&
-
-                           /* ...on an <input> that is... */
-                           event.target.nodeName === 'INPUT' &&
-
-                           /* ...a standard text input field (not checkbox, ...) */
-                           text_types.indexOf(event.target.type) > -1 ||
-                           /* or <Enter> or <Space> was pressed... */
-                           (event.keyCode === 13 || event.keyCode === 32) &&
-
-                           /* ...on a submit button */
-                           is_submit_button(event.target)) &&
-
-                           /* there's a form... */
-                           event.target.form &&
-
-                           /* ...and the form allows validation */
-                           !event.target.form.hasAttribute('novalidate')
-                         );
-                       }
-
-                       /**
-                        * catch clicks to children of <button>s
-                        */
-                       function get_clicked_button(element) {
-                         if (is_submit_button(element)) {
-                           return element;
-                         } else if (matches(element, 'button:not([type]) *, button[type="submit"] *')) {
-                           return get_clicked_button(element.parentNode);
-                         } else {
-                           return null;
-                         }
-                       }
-
-                       /**
-                        * return event handler to catch explicit submission by click on a button
-                        */
-                       function get_click_handler() {
-                         var ignore = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-                         return function (event) {
-                           var button = get_clicked_button(event.target);
-                           if (button && is_submitting_click(event, button)) {
-                             event.preventDefault();
-                             if (ignore || button.hasAttribute('formnovalidate')) {
-                               /* if validation should be ignored, we're not interested in any checks */
-                               submit_form_via(button);
-                             } else {
-                               check(button);
-                             }
-                           }
-                         };
-                       }
-                       var click_handler = get_click_handler();
-                       var ignored_click_handler = get_click_handler(true);
-
-                       /**
-                        * catch implicit submission by pressing <Enter> in some situations
-                        */
-                       function get_keypress_handler(ignore) {
-                         return function keypress_handler(event) {
-                           if (is_submitting_keypress(event)) {
-                             event.preventDefault();
-
-                             var wrapper = get_wrapper(event.target.form) || { settings: {} };
-                             if (wrapper.settings.preventImplicitSubmit) {
-                               /* user doesn't want an implicit submit. Cancel here. */
-                               return;
-                             }
-
-                             /* check, that there is no submit button in the form. Otherwise
-                             * that should be clicked. */
-                             var el = event.target.form.elements.length;
-                             var submit;
-                             for (var i = 0; i < el; i++) {
-                               if (['image', 'submit'].indexOf(event.target.form.elements[i].type) > -1) {
-                                 submit = event.target.form.elements[i];
-                                 break;
-                               }
-                             }
-
-                             if (submit) {
-                               submit.click();
-                             } else if (ignore) {
-                               submit_form_via(event.target);
-                             } else {
-                               check(event.target);
-                             }
-                           }
-                         };
-                       }
-                       var keypress_handler = get_keypress_handler();
-                       var ignored_keypress_handler = get_keypress_handler(true);
-
-                       /**
-                        * catch all relevant events _prior_ to a form being submitted
-                        *
-                        * @param bool ignore bypass validation, when an attempt to submit the
-                        *                    form is detected. True, when the wrapper's revalidate
-                        *                    setting is 'never'.
-                        */
-                       function catch_submit(listening_node) {
-                         var ignore = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-                         if (ignore) {
-                           listening_node.addEventListener('click', ignored_click_handler);
-                           listening_node.addEventListener('keypress', ignored_keypress_handler);
-                         } else {
-                           listening_node.addEventListener('click', click_handler);
-                           listening_node.addEventListener('keypress', keypress_handler);
-                         }
-                       }
-
-                       /**
-                        * decommission the event listeners from catch_submit() again
-                        */
-                       function uncatch_submit(listening_node) {
-                         listening_node.removeEventListener('click', ignored_click_handler);
-                         listening_node.removeEventListener('keypress', ignored_keypress_handler);
-                         listening_node.removeEventListener('click', click_handler);
-                         listening_node.removeEventListener('keypress', keypress_handler);
-                       }
-
-                       /**
-                        * remove `property` from element and restore _original_property, if present
-                        */
-                       function uninstall_property (element, property) {
-                         try {
-                           delete element[property];
-                         } catch (e) {
-                           /* Safari <= 9 and PhantomJS will end up here :-( Nothing to do except
-                            * warning */
-                           var wrapper = get_wrapper(element);
-                           if (wrapper && wrapper.settings.debug) {
-                             /* global console */
-                             console.log('[hyperform] cannot uninstall custom property ' + property);
-                           }
-                           return false;
-                         }
-
-                         var original_descriptor = Object.getOwnPropertyDescriptor(element, '_original_' + property);
-
-                         if (original_descriptor) {
-                           Object.defineProperty(element, property, original_descriptor);
-                         }
-                       }
-
-                       /**
-                        * add `property` to an element
-                        *
-                        * js> installer(element, 'foo', { value: 'bar' });
-                        * js> assert(element.foo === 'bar');
-                        */
-                       function install_property (element, property, descriptor) {
-                         descriptor.configurable = true;
-                         descriptor.enumerable = true;
-                         if ('value' in descriptor) {
-                           descriptor.writable = true;
-                         }
-
-                         var original_descriptor = Object.getOwnPropertyDescriptor(element, property);
-
-                         if (original_descriptor) {
-
-                           if (original_descriptor.configurable === false) {
-                             /* Safari <= 9 and PhantomJS will end up here :-( Nothing to do except
-                              * warning */
-                             var wrapper = get_wrapper(element);
-                             if (wrapper && wrapper.settings.debug) {
-                               /* global console */
-                               console.log('[hyperform] cannot install custom property ' + property);
-                             }
-                             return false;
-                           }
-
-                           /* we already installed that property... */
-                           if (original_descriptor.get && original_descriptor.get.__hyperform || original_descriptor.value && original_descriptor.value.__hyperform) {
-                             return;
-                           }
-
-                           /* publish existing property under new name, if it's not from us */
-                           Object.defineProperty(element, '_original_' + property, original_descriptor);
-                         }
-
-                         delete element[property];
-                         Object.defineProperty(element, property, descriptor);
-
-                         return true;
-                       }
-
-                       function is_field (element) {
-                               return element instanceof window.HTMLButtonElement || element instanceof window.HTMLInputElement || element instanceof window.HTMLSelectElement || element instanceof window.HTMLTextAreaElement || element instanceof window.HTMLFieldSetElement || element === window.HTMLButtonElement.prototype || element === window.HTMLInputElement.prototype || element === window.HTMLSelectElement.prototype || element === window.HTMLTextAreaElement.prototype || element === window.HTMLFieldSetElement.prototype;
-                       }
-
-                       /**
-                        * set a custom validity message or delete it with an empty string
-                        */
-                       function setCustomValidity(element, msg) {
-                         message_store.set(element, msg, true);
-                       }
-
-                       function sprintf (str) {
-                         for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-                           args[_key - 1] = arguments[_key];
-                         }
-
-                         var args_length = args.length;
-                         var global_index = 0;
-
-                         return str.replace(/%([0-9]+\$)?([sl])/g, function (match, position, type) {
-                           var local_index = global_index;
-                           if (position) {
-                             local_index = Number(position.replace(/\$$/, '')) - 1;
-                           }
-                           global_index += 1;
-
-                           var arg = '';
-                           if (args_length > local_index) {
-                             arg = args[local_index];
-                           }
-
-                           if (arg instanceof Date || typeof arg === 'number' || arg instanceof Number) {
-                             /* try getting a localized representation of dates and numbers, if the
-                              * browser supports this */
-                             if (type === 'l') {
-                               arg = (arg.toLocaleString || arg.toString).call(arg);
-                             } else {
-                               arg = arg.toString();
-                             }
-                           }
-
-                           return arg;
-                         });
-                       }
-
-                       /* For a given date, get the ISO week number
-                        *
-                        * Source: http://stackoverflow.com/a/6117889/113195
-                        *
-                        * Based on information at:
-                        *
-                        *    http://www.merlyn.demon.co.uk/weekcalc.htm#WNR
-                        *
-                        * Algorithm is to find nearest thursday, it's year
-                        * is the year of the week number. Then get weeks
-                        * between that date and the first day of that year.
-                        *
-                        * Note that dates in one year can be weeks of previous
-                        * or next year, overlap is up to 3 days.
-                        *
-                        * e.g. 2014/12/29 is Monday in week  1 of 2015
-                        *      2012/1/1   is Sunday in week 52 of 2011
-                        */
-
-                       function get_week_of_year (d) {
-                         /* Copy date so don't modify original */
-                         d = new Date(+d);
-                         d.setUTCHours(0, 0, 0);
-                         /* Set to nearest Thursday: current date + 4 - current day number
-                          * Make Sunday's day number 7 */
-                         d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-                         /* Get first day of year */
-                         var yearStart = new Date(d.getUTCFullYear(), 0, 1);
-                         /* Calculate full weeks to nearest Thursday */
-                         var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
-                         /* Return array of year and week number */
-                         return [d.getUTCFullYear(), weekNo];
-                       }
-
-                       function pad(num) {
-                         var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-
-                         var s = num + '';
-                         while (s.length < size) {
-                           s = '0' + s;
-                         }
-                         return s;
-                       }
-
-                       /**
-                        * calculate a string from a date according to HTML5
-                        */
-                       function date_to_string(date, element_type) {
-                         if (!(date instanceof Date)) {
-                           return null;
-                         }
-
-                         switch (element_type) {
-                           case 'datetime':
-                             return date_to_string(date, 'date') + 'T' + date_to_string(date, 'time');
-
-                           case 'datetime-local':
-                             return sprintf('%s-%s-%sT%s:%s:%s.%s', date.getFullYear(), pad(date.getMonth() + 1), pad(date.getDate()), pad(date.getHours()), pad(date.getMinutes()), pad(date.getSeconds()), pad(date.getMilliseconds(), 3)).replace(/(:00)?\.000$/, '');
-
-                           case 'date':
-                             return sprintf('%s-%s-%s', date.getUTCFullYear(), pad(date.getUTCMonth() + 1), pad(date.getUTCDate()));
-
-                           case 'month':
-                             return sprintf('%s-%s', date.getUTCFullYear(), pad(date.getUTCMonth() + 1));
-
-                           case 'week':
-                             var params = get_week_of_year(date);
-                             return sprintf.call(null, '%s-W%s', params[0], pad(params[1]));
-
-                           case 'time':
-                             return sprintf('%s:%s:%s.%s', pad(date.getUTCHours()), pad(date.getUTCMinutes()), pad(date.getUTCSeconds()), pad(date.getUTCMilliseconds(), 3)).replace(/(:00)?\.000$/, '');
-                         }
-
-                         return null;
-                       }
-
-                       /**
-                        * return a new Date() representing the ISO date for a week number
-                        *
-                        * @see http://stackoverflow.com/a/16591175/113195
-                        */
-
-                       function get_date_from_week (week, year) {
-                         var date = new Date(Date.UTC(year, 0, 1 + (week - 1) * 7));
-
-                         if (date.getUTCDay() <= 4 /* thursday */) {
-                             date.setUTCDate(date.getUTCDate() - date.getUTCDay() + 1);
-                           } else {
-                           date.setUTCDate(date.getUTCDate() + 8 - date.getUTCDay());
-                         }
-
-                         return date;
-                       }
-
-                       /**
-                        * calculate a date from a string according to HTML5
-                        */
-                       function string_to_date (string, element_type) {
-                         var date = new Date(0);
-                         var ms;
-                         switch (element_type) {
-                           case 'datetime':
-                             if (!/^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(string)) {
-                               return null;
-                             }
-                             ms = RegExp.$7 || '000';
-                             while (ms.length < 3) {
-                               ms += '0';
-                             }
-                             date.setUTCFullYear(Number(RegExp.$1));
-                             date.setUTCMonth(Number(RegExp.$2) - 1, Number(RegExp.$3));
-                             date.setUTCHours(Number(RegExp.$4), Number(RegExp.$5), Number(RegExp.$6 || 0), Number(ms));
-                             return date;
-
-                           case 'date':
-                             if (!/^([0-9]{4,})-([0-9]{2})-([0-9]{2})$/.test(string)) {
-                               return null;
-                             }
-                             date.setUTCFullYear(Number(RegExp.$1));
-                             date.setUTCMonth(Number(RegExp.$2) - 1, Number(RegExp.$3));
-                             return date;
-
-                           case 'month':
-                             if (!/^([0-9]{4,})-([0-9]{2})$/.test(string)) {
-                               return null;
-                             }
-                             date.setUTCFullYear(Number(RegExp.$1));
-                             date.setUTCMonth(Number(RegExp.$2) - 1, 1);
-                             return date;
-
-                           case 'week':
-                             if (!/^([0-9]{4,})-W(0[1-9]|[1234][0-9]|5[0-3])$/.test(string)) {
-                               return null;
-                             }
-                             return get_date_from_week(Number(RegExp.$2), Number(RegExp.$1));
-
-                           case 'time':
-                             if (!/^([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(string)) {
-                               return null;
-                             }
-                             ms = RegExp.$4 || '000';
-                             while (ms.length < 3) {
-                               ms += '0';
-                             }
-                             date.setUTCHours(Number(RegExp.$1), Number(RegExp.$2), Number(RegExp.$3 || 0), Number(ms));
-                             return date;
-                         }
-
-                         return null;
-                       }
-
-                       /**
-                        * calculate a date from a string according to HTML5
-                        */
-                       function string_to_number (string, element_type) {
-                         var rval = string_to_date(string, element_type);
-                         if (rval !== null) {
-                           return +rval;
-                         }
-                         /* not parseFloat, because we want NaN for invalid values like "1.2xxy" */
-                         return Number(string);
-                       }
-
-                       /**
-                        * get the element's type in a backwards-compatible way
-                        */
-                       function get_type (element) {
-                         if (element instanceof window.HTMLTextAreaElement) {
-                           return 'textarea';
-                         } else if (element instanceof window.HTMLSelectElement) {
-                           return element.hasAttribute('multiple') ? 'select-multiple' : 'select-one';
-                         } else if (element instanceof window.HTMLButtonElement) {
-                           return (element.getAttribute('type') || 'submit').toLowerCase();
-                         } else if (element instanceof window.HTMLInputElement) {
-                           var attr = (element.getAttribute('type') || '').toLowerCase();
-                           if (attr && inputs.indexOf(attr) > -1) {
-                             return attr;
-                           } else {
-                             /* perhaps the DOM has in-depth knowledge. Take that before returning
-                              * 'text'. */
-                             return element.type || 'text';
-                           }
-                         }
-
-                         return '';
-                       }
-
-                       /**
-                        * the following validation messages are from Firefox source,
-                        * http://mxr.mozilla.org/mozilla-central/source/dom/locales/en-US/chrome/dom/dom.properties
-                        * released under MPL license, http://mozilla.org/MPL/2.0/.
-                        */
-
-                       var catalog = {
-                         en: {
-                           TextTooLong: 'Please shorten this text to %l characters or less (you are currently using %l characters).',
-                           ValueMissing: 'Please fill out this field.',
-                           CheckboxMissing: 'Please check this box if you want to proceed.',
-                           RadioMissing: 'Please select one of these options.',
-                           FileMissing: 'Please select a file.',
-                           SelectMissing: 'Please select an item in the list.',
-                           InvalidEmail: 'Please enter an email address.',
-                           InvalidURL: 'Please enter a URL.',
-                           PatternMismatch: 'Please match the requested format.',
-                           PatternMismatchWithTitle: 'Please match the requested format: %l.',
-                           NumberRangeOverflow: 'Please select a value that is no more than %l.',
-                           DateRangeOverflow: 'Please select a value that is no later than %l.',
-                           TimeRangeOverflow: 'Please select a value that is no later than %l.',
-                           NumberRangeUnderflow: 'Please select a value that is no less than %l.',
-                           DateRangeUnderflow: 'Please select a value that is no earlier than %l.',
-                           TimeRangeUnderflow: 'Please select a value that is no earlier than %l.',
-                           StepMismatch: 'Please select a valid value. The two nearest valid values are %l and %l.',
-                           StepMismatchOneValue: 'Please select a valid value. The nearest valid value is %l.',
-                           BadInputNumber: 'Please enter a number.'
-                         }
-                       };
-
-                       /**
-                        * the global language Hyperform will use
-                        */
-                       var language = 'en';
-
-                       /**
-                        * the base language according to BCP47, i.e., only the piece before the first hyphen
-                        */
-                       var base_lang = 'en';
-
-                       /**
-                        * set the language for Hyperform’s messages
-                        */
-                       function set_language(newlang) {
-                         language = newlang;
-                         base_lang = newlang.replace(/[-_].*/, '');
-                       }
-
-                       /**
-                        * add a lookup catalog "string: translation" for a language
-                        */
-                       function add_translation(lang, new_catalog) {
-                         if (!(lang in catalog)) {
-                           catalog[lang] = {};
-                         }
-                         for (var key in new_catalog) {
-                           if (new_catalog.hasOwnProperty(key)) {
-                             catalog[lang][key] = new_catalog[key];
-                           }
-                         }
-                       }
-
-                       /**
-                        * return `s` translated into the current language
-                        *
-                        * Defaults to the base language and then English if the former has no
-                        * translation for `s`.
-                        */
-                       function _ (s) {
-                         if (language in catalog && s in catalog[language]) {
-                           return catalog[language][s];
-                         } else if (base_lang in catalog && s in catalog[base_lang]) {
-                           return catalog[base_lang][s];
-                         } else if (s in catalog.en) {
-                           return catalog.en[s];
-                         }
-                         return s;
-                       }
-
-                       var default_step = {
-                         'datetime-local': 60,
-                         datetime: 60,
-                         time: 60
-                       };
-
-                       var step_scale_factor = {
-                         'datetime-local': 1000,
-                         datetime: 1000,
-                         date: 86400000,
-                         week: 604800000,
-                         time: 1000
-                       };
-
-                       var default_step_base = {
-                         week: -259200000
-                       };
-
-                       var default_min = {
-                         range: 0
-                       };
-
-                       var default_max = {
-                         range: 100
-                       };
-
-                       /**
-                        * get previous and next valid values for a stepped input element
-                        */
-                       function get_next_valid (element) {
-                         var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
-                         var type = get_type(element);
-
-                         var aMin = element.getAttribute('min');
-                         var min = default_min[type] || NaN;
-                         if (aMin) {
-                           var pMin = string_to_number(aMin, type);
-                           if (!isNaN(pMin)) {
-                             min = pMin;
-                           }
-                         }
-
-                         var aMax = element.getAttribute('max');
-                         var max = default_max[type] || NaN;
-                         if (aMax) {
-                           var pMax = string_to_number(aMax, type);
-                           if (!isNaN(pMax)) {
-                             max = pMax;
-                           }
-                         }
-
-                         var aStep = element.getAttribute('step');
-                         var step = default_step[type] || 1;
-                         if (aStep && aStep.toLowerCase() === 'any') {
-                           /* quick return: we cannot calculate prev and next */
-                           return [_('any value'), _('any value')];
-                         } else if (aStep) {
-                           var pStep = string_to_number(aStep, type);
-                           if (!isNaN(pStep)) {
-                             step = pStep;
-                           }
-                         }
-
-                         var default_value = string_to_number(element.getAttribute('value'), type);
-
-                         var value = string_to_number(element.value || element.getAttribute('value'), type);
-
-                         if (isNaN(value)) {
-                           /* quick return: we cannot calculate without a solid base */
-                           return [_('any valid value'), _('any valid value')];
-                         }
-
-                         var step_base = !isNaN(min) ? min : !isNaN(default_value) ? default_value : default_step_base[type] || 0;
-
-                         var scale = step_scale_factor[type] || 1;
-
-                         var prev = step_base + Math.floor((value - step_base) / (step * scale)) * (step * scale) * n;
-                         var next = step_base + (Math.floor((value - step_base) / (step * scale)) + 1) * (step * scale) * n;
-
-                         if (prev < min) {
-                           prev = null;
-                         } else if (prev > max) {
-                           prev = max;
-                         }
-
-                         if (next > max) {
-                           next = null;
-                         } else if (next < min) {
-                           next = min;
-                         }
-
-                         /* convert to date objects, if appropriate */
-                         if (dates.indexOf(type) > -1) {
-                           prev = date_to_string(new Date(prev), type);
-                           next = date_to_string(new Date(next), type);
-                         }
-
-                         return [prev, next];
-                       }
-
-                       /**
-                        * implement the valueAsDate functionality
-                        *
-                        * @see https://html.spec.whatwg.org/multipage/forms.html#dom-input-valueasdate
-                        */
-                       function valueAsDate(element) {
-                         var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
-
-                         var type = get_type(element);
-                         if (dates.indexOf(type) > -1) {
-                           if (value !== undefined) {
-                             /* setter: value must be null or a Date() */
-                             if (value === null) {
-                               element.value = '';
-                             } else if (value instanceof Date) {
-                               if (isNaN(value.getTime())) {
-                                 element.value = '';
-                               } else {
-                                 element.value = date_to_string(value, type);
-                               }
-                             } else {
-                               throw new window.DOMException('valueAsDate setter encountered invalid value', 'TypeError');
-                             }
-                             return;
-                           }
-
-                           var value_date = string_to_date(element.value, type);
-                           return value_date instanceof Date ? value_date : null;
-                         } else if (value !== undefined) {
-                           /* trying to set a date on a not-date input fails */
-                           throw new window.DOMException('valueAsDate setter cannot set date on this element', 'InvalidStateError');
-                         }
-
-                         return null;
-                       }
-
-                       /**
-                        * implement the valueAsNumber functionality
-                        *
-                        * @see https://html.spec.whatwg.org/multipage/forms.html#dom-input-valueasnumber
-                        */
-                       function valueAsNumber(element) {
-                         var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
-
-                         var type = get_type(element);
-                         if (numbers.indexOf(type) > -1) {
-                           if (type === 'range' && element.hasAttribute('multiple')) {
-                             /* @see https://html.spec.whatwg.org/multipage/forms.html#do-not-apply */
-                             return NaN;
-                           }
-
-                           if (value !== undefined) {
-                             /* setter: value must be NaN or a finite number */
-                             if (isNaN(value)) {
-                               element.value = '';
-                             } else if (typeof value === 'number' && window.isFinite(value)) {
-                               try {
-                                 /* try setting as a date, but... */
-                                 valueAsDate(element, new Date(value));
-                               } catch (e) {
-                                 /* ... when valueAsDate is not responsible, ... */
-                                 if (!(e instanceof window.DOMException)) {
-                                   throw e;
-                                 }
-                                 /* ... set it via Number.toString(). */
-                                 element.value = value.toString();
-                               }
-                             } else {
-                               throw new window.DOMException('valueAsNumber setter encountered invalid value', 'TypeError');
-                             }
-                             return;
-                           }
-
-                           return string_to_number(element.value, type);
-                         } else if (value !== undefined) {
-                           /* trying to set a number on a not-number input fails */
-                           throw new window.DOMException('valueAsNumber setter cannot set number on this element', 'InvalidStateError');
-                         }
-
-                         return NaN;
-                       }
-
-                       /**
-                        *
-                        */
-                       function stepDown(element) {
-                         var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
-                         if (numbers.indexOf(get_type(element)) === -1) {
-                           throw new window.DOMException('stepDown encountered invalid type', 'InvalidStateError');
-                         }
-                         if ((element.getAttribute('step') || '').toLowerCase() === 'any') {
-                           throw new window.DOMException('stepDown encountered step "any"', 'InvalidStateError');
-                         }
-
-                         var prev = get_next_valid(element, n)[0];
-
-                         if (prev !== null) {
-                           valueAsNumber(element, prev);
-                         }
-                       }
-
-                       /**
-                        *
-                        */
-                       function stepUp(element) {
-                         var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
-                         if (numbers.indexOf(get_type(element)) === -1) {
-                           throw new window.DOMException('stepUp encountered invalid type', 'InvalidStateError');
-                         }
-                         if ((element.getAttribute('step') || '').toLowerCase() === 'any') {
-                           throw new window.DOMException('stepUp encountered step "any"', 'InvalidStateError');
-                         }
-
-                         var next = get_next_valid(element, n)[1];
-
-                         if (next !== null) {
-                           valueAsNumber(element, next);
-                         }
-                       }
-
-                       /**
-                        * get the validation message for an element, empty string, if the element
-                        * satisfies all constraints.
-                        */
-                       function validationMessage(element) {
-                         var msg = message_store.get(element);
-                         if (!msg) {
-                           return '';
-                         }
-
-                         /* make it a primitive again, since message_store returns String(). */
-                         return msg.toString();
-                       }
-
-                       /**
-                        * check, if an element will be subject to HTML5 validation at all
-                        */
-                       function willValidate(element) {
-                         return is_validation_candidate(element);
-                       }
-
-                       var gA = function gA(prop) {
-                         return function () {
-                           return do_filter('attr_get_' + prop, this.getAttribute(prop), this);
-                         };
-                       };
-
-                       var sA = function sA(prop) {
-                         return function (value) {
-                           this.setAttribute(prop, do_filter('attr_set_' + prop, value, this));
-                         };
-                       };
-
-                       var gAb = function gAb(prop) {
-                         return function () {
-                           return do_filter('attr_get_' + prop, this.hasAttribute(prop), this);
-                         };
-                       };
-
-                       var sAb = function sAb(prop) {
-                         return function (value) {
-                           if (do_filter('attr_set_' + prop, value, this)) {
-                             this.setAttribute(prop, prop);
-                           } else {
-                             this.removeAttribute(prop);
-                           }
-                         };
-                       };
-
-                       var gAn = function gAn(prop) {
-                         return function () {
-                           return do_filter('attr_get_' + prop, Math.max(0, Number(this.getAttribute(prop))), this);
-                         };
-                       };
-
-                       var sAn = function sAn(prop) {
-                         return function (value) {
-                           value = do_filter('attr_set_' + prop, value, this);
-                           if (/^[0-9]+$/.test(value)) {
-                             this.setAttribute(prop, value);
-                           }
-                         };
-                       };
-
-                       function install_properties(element) {
-                         var _arr = ['accept', 'max', 'min', 'pattern', 'placeholder', 'step'];
-
-                         for (var _i = 0; _i < _arr.length; _i++) {
-                           var prop = _arr[_i];
-                           install_property(element, prop, {
-                             get: gA(prop),
-                             set: sA(prop)
-                           });
-                         }
-
-                         var _arr2 = ['multiple', 'required', 'readOnly'];
-                         for (var _i2 = 0; _i2 < _arr2.length; _i2++) {
-                           var _prop = _arr2[_i2];
-                           install_property(element, _prop, {
-                             get: gAb(_prop.toLowerCase()),
-                             set: sAb(_prop.toLowerCase())
-                           });
-                         }
-
-                         var _arr3 = ['minLength', 'maxLength'];
-                         for (var _i3 = 0; _i3 < _arr3.length; _i3++) {
-                           var _prop2 = _arr3[_i3];
-                           install_property(element, _prop2, {
-                             get: gAn(_prop2.toLowerCase()),
-                             set: sAn(_prop2.toLowerCase())
-                           });
-                         }
-                       }
-
-                       function uninstall_properties(element) {
-                         var _arr4 = ['accept', 'max', 'min', 'pattern', 'placeholder', 'step', 'multiple', 'required', 'readOnly', 'minLength', 'maxLength'];
-
-                         for (var _i4 = 0; _i4 < _arr4.length; _i4++) {
-                           var prop = _arr4[_i4];
-                           uninstall_property(element, prop);
-                         }
-                       }
-
-                       var polyfills = {
-                         checkValidity: {
-                           value: mark(function () {
-                             return checkValidity(this);
-                           })
-                         },
-                         reportValidity: {
-                           value: mark(function () {
-                             return reportValidity(this);
-                           })
-                         },
-                         setCustomValidity: {
-                           value: mark(function (msg) {
-                             return setCustomValidity(this, msg);
-                           })
-                         },
-                         stepDown: {
-                           value: mark(function () {
-                             var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-                             return stepDown(this, n);
-                           })
-                         },
-                         stepUp: {
-                           value: mark(function () {
-                             var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-                             return stepUp(this, n);
-                           })
-                         },
-                         validationMessage: {
-                           get: mark(function () {
-                             return validationMessage(this);
-                           })
-                         },
-                         validity: {
-                           get: mark(function () {
-                             return ValidityState(this);
-                           })
-                         },
-                         valueAsDate: {
-                           get: mark(function () {
-                             return valueAsDate(this);
-                           }),
-                           set: mark(function (value) {
-                             valueAsDate(this, value);
-                           })
-                         },
-                         valueAsNumber: {
-                           get: mark(function () {
-                             return valueAsNumber(this);
-                           }),
-                           set: mark(function (value) {
-                             valueAsNumber(this, value);
-                           })
-                         },
-                         willValidate: {
-                           get: mark(function () {
-                             return willValidate(this);
-                           })
-                         }
-                       };
-
-                       function polyfill (element) {
-                         if (is_field(element)) {
-
-                           for (var prop in polyfills) {
-                             install_property(element, prop, polyfills[prop]);
-                           }
-
-                           install_properties(element);
-                         } else if (element instanceof window.HTMLFormElement || element === window.HTMLFormElement.prototype) {
-                           install_property(element, 'checkValidity', polyfills.checkValidity);
-                           install_property(element, 'reportValidity', polyfills.reportValidity);
-                         }
-                       }
-
-                       function polyunfill (element) {
-                         if (is_field(element)) {
-
-                           uninstall_property(element, 'checkValidity');
-                           uninstall_property(element, 'reportValidity');
-                           uninstall_property(element, 'setCustomValidity');
-                           uninstall_property(element, 'stepDown');
-                           uninstall_property(element, 'stepUp');
-                           uninstall_property(element, 'validationMessage');
-                           uninstall_property(element, 'validity');
-                           uninstall_property(element, 'valueAsDate');
-                           uninstall_property(element, 'valueAsNumber');
-                           uninstall_property(element, 'willValidate');
-
-                           uninstall_properties(element);
-                         } else if (element instanceof window.HTMLFormElement) {
-                           uninstall_property(element, 'checkValidity');
-                           uninstall_property(element, 'reportValidity');
-                         }
-                       }
-
-                       var instances = new WeakMap();
-
-                       /**
-                        * wrap <form>s, window or document, that get treated with the global
-                        * hyperform()
-                        */
-                       function Wrapper(form, settings) {
-
-                         /* do not allow more than one instance per form. Otherwise we'd end
-                          * up with double event handlers, polyfills re-applied, ... */
-                         var existing = instances.get(form);
-                         if (existing) {
-                           existing.settings = settings;
-                           return existing;
-                         }
-
-                         this.form = form;
-                         this.settings = settings;
-                         this.revalidator = this.revalidate.bind(this);
-
-                         instances.set(form, this);
-
-                         catch_submit(form, settings.revalidate === 'never');
-
-                         if (form === window || form.nodeType === 9) {
-                           /* install on the prototypes, when called for the whole document */
-                           this.install([window.HTMLButtonElement.prototype, window.HTMLInputElement.prototype, window.HTMLSelectElement.prototype, window.HTMLTextAreaElement.prototype, window.HTMLFieldSetElement.prototype]);
-                           polyfill(window.HTMLFormElement);
-                         } else if (form instanceof window.HTMLFormElement || form instanceof window.HTMLFieldSetElement) {
-                           this.install(form.elements);
-                           if (form instanceof window.HTMLFormElement) {
-                             polyfill(form);
-                           }
-                         }
-
-                         if (settings.revalidate === 'oninput' || settings.revalidate === 'hybrid') {
-                           /* in a perfect world we'd just bind to "input", but support here is
-                            * abysmal: http://caniuse.com/#feat=input-event */
-                           form.addEventListener('keyup', this.revalidator);
-                           form.addEventListener('change', this.revalidator);
-                         }
-                         if (settings.revalidate === 'onblur' || settings.revalidate === 'hybrid') {
-                           /* useCapture=true, because `blur` doesn't bubble. See
-                            * https://developer.mozilla.org/en-US/docs/Web/Events/blur#Event_delegation
-                            * for a discussion */
-                           form.addEventListener('blur', this.revalidator, true);
-                         }
-                       }
-
-                       Wrapper.prototype = {
-                         destroy: function destroy() {
-                           uncatch_submit(this.form);
-                           instances.delete(this.form);
-                           this.form.removeEventListener('keyup', this.revalidator);
-                           this.form.removeEventListener('change', this.revalidator);
-                           this.form.removeEventListener('blur', this.revalidator, true);
-                           if (this.form === window || this.form.nodeType === 9) {
-                             this.uninstall([window.HTMLButtonElement.prototype, window.HTMLInputElement.prototype, window.HTMLSelectElement.prototype, window.HTMLTextAreaElement.prototype, window.HTMLFieldSetElement.prototype]);
-                             polyunfill(window.HTMLFormElement);
-                           } else if (this.form instanceof window.HTMLFormElement || this.form instanceof window.HTMLFieldSetElement) {
-                             this.uninstall(this.form.elements);
-                             if (this.form instanceof window.HTMLFormElement) {
-                               polyunfill(this.form);
-                             }
-                           }
-                         },
-
-
-                         /**
-                          * revalidate an input element
-                          */
-                         revalidate: function revalidate(event) {
-                           if (event.target instanceof window.HTMLButtonElement || event.target instanceof window.HTMLTextAreaElement || event.target instanceof window.HTMLSelectElement || event.target instanceof window.HTMLInputElement) {
-
-                             if (this.settings.revalidate === 'hybrid') {
-                               /* "hybrid" somewhat simulates what browsers do. See for example
-                                * Firefox's :-moz-ui-invalid pseudo-class:
-                                * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
-                               if (event.type === 'blur' && event.target.value !== event.target.defaultValue || ValidityState(event.target).valid) {
-                                 /* on blur, update the report when the value has changed from the
-                                  * default or when the element is valid (possibly removing a still
-                                  * standing invalidity report). */
-                                 reportValidity(event.target);
-                               } else if (event.type === 'keyup' || event.type === 'change') {
-                                 if (ValidityState(event.target).valid) {
-                                   // report instantly, when an element becomes valid,
-                                   // postpone report to blur event, when an element is invalid
-                                   reportValidity(event.target);
-                                 }
-                               }
-                             } else {
-                               reportValidity(event.target);
-                             }
-                           }
-                         },
-
-
-                         /**
-                          * install the polyfills on each given element
-                          *
-                          * If you add elements dynamically, you have to call install() on them
-                          * yourself:
-                          *
-                          * js> var form = hyperform(document.forms[0]);
-                          * js> document.forms[0].appendChild(input);
-                          * js> form.install(input);
-                          *
-                          * You can skip this, if you called hyperform on window or document.
-                          */
-                         install: function install(els) {
-                           if (els instanceof window.Element) {
-                             els = [els];
-                           }
-
-                           var els_length = els.length;
-
-                           for (var i = 0; i < els_length; i++) {
-                             polyfill(els[i]);
-                           }
-                         },
-                         uninstall: function uninstall(els) {
-                           if (els instanceof window.Element) {
-                             els = [els];
-                           }
-
-                           var els_length = els.length;
-
-                           for (var i = 0; i < els_length; i++) {
-                             polyunfill(els[i]);
-                           }
-                         }
-                       };
-
-                       /**
-                        * try to get the appropriate wrapper for a specific element by looking up
-                        * its parent chain
-                        *
-                        * @return Wrapper | undefined
-                        */
-                       function get_wrapper(element) {
-                         var wrapped;
-
-                         if (element.form) {
-                           /* try a shortcut with the element's <form> */
-                           wrapped = instances.get(element.form);
-                         }
-
-                         /* walk up the parent nodes until document (including) */
-                         while (!wrapped && element) {
-                           wrapped = instances.get(element);
-                           element = element.parentNode;
-                         }
-
-                         if (!wrapped) {
-                           /* try the global instance, if exists. This may also be undefined. */
-                           wrapped = instances.get(window);
-                         }
-
-                         return wrapped;
-                       }
-
-                       /**
-                        * check if an element is a candidate for constraint validation
-                        *
-                        * @see https://html.spec.whatwg.org/multipage/forms.html#barred-from-constraint-validation
-                        */
-                       function is_validation_candidate (element) {
-
-                         /* allow a shortcut via filters, e.g. to validate type=hidden fields */
-                         var filtered = do_filter('is_validation_candidate', null, element);
-                         if (filtered !== null) {
-                           return !!filtered;
-                         }
-
-                         /* it must be any of those elements */
-                         if (element instanceof window.HTMLSelectElement || element instanceof window.HTMLTextAreaElement || element instanceof window.HTMLButtonElement || element instanceof window.HTMLInputElement) {
-
-                           var type = get_type(element);
-                           /* its type must be in the whitelist or missing (select, textarea) */
-                           if (!type || non_inputs.indexOf(type) > -1 || validation_candidates.indexOf(type) > -1) {
-
-                             /* it mustn't be disabled or readonly */
-                             if (!element.hasAttribute('disabled') && !element.hasAttribute('readonly')) {
-
-                               var wrapped_form = get_wrapper(element);
-                               /* it hasn't got the (non-standard) attribute 'novalidate' or its
-                                * parent form has got the strict parameter */
-                               if (wrapped_form && wrapped_form.settings.novalidateOnElements || !element.hasAttribute('novalidate') || !element.noValidate) {
-
-                                 /* it isn't part of a <fieldset disabled> */
-                                 var p = element.parentNode;
-                                 while (p && p.nodeType === 1) {
-                                   if (p instanceof window.HTMLFieldSetElement && p.hasAttribute('disabled')) {
-                                     /* quick return, if it's a child of a disabled fieldset */
-                                     return false;
-                                   } else if (p.nodeName.toUpperCase() === 'DATALIST') {
-                                     /* quick return, if it's a child of a datalist
-                                      * Do not use HTMLDataListElement to support older browsers,
-                                      * too.
-                                      * @see https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element:barred-from-constraint-validation
-                                      */
-                                     return false;
-                                   } else if (p === element.form) {
-                                     /* the outer boundary. We can stop looking for relevant
-                                      * fieldsets. */
-                                     break;
-                                   }
-                                   p = p.parentNode;
-                                 }
-
-                                 /* then it's a candidate */
-                                 return true;
-                               }
-                             }
-                           }
-                         }
-
-                         /* this is no HTML5 validation candidate... */
-                         return false;
-                       }
-
-                       function format_date (date) {
-                         var part = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
-
-                         switch (part) {
-                           case 'date':
-                             return (date.toLocaleDateString || date.toDateString).call(date);
-                           case 'time':
-                             return (date.toLocaleTimeString || date.toTimeString).call(date);
-                           case 'month':
-                             return 'toLocaleDateString' in date ? date.toLocaleDateString(undefined, {
-                               year: 'numeric',
-                               month: '2-digit'
-                             }) : date.toDateString();
-                           // case 'week':
-                           // TODO
-                           default:
-                             return (date.toLocaleString || date.toString).call(date);
-                         }
-                       }
-
-                       /**
-                        * patch String.length to account for non-BMP characters
-                        *
-                        * @see https://mathiasbynens.be/notes/javascript-unicode
-                        * We do not use the simple [...str].length, because it needs a ton of
-                        * polyfills in older browsers.
-                        */
-
-                       function unicode_string_length (str) {
-                         return str.match(/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/g).length;
-                       }
-
-                       /**
-                        * internal storage for custom error messages
-                        */
-
-                       var store$1 = new WeakMap();
-
-                       /**
-                        * register custom error messages per element
-                        */
-                       var custom_messages = {
-                         set: function set(element, validator, message) {
-                           var messages = store$1.get(element) || {};
-                           messages[validator] = message;
-                           store$1.set(element, messages);
-                           return custom_messages;
-                         },
-                         get: function get(element, validator) {
-                           var _default = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
-
-                           var messages = store$1.get(element);
-                           if (messages === undefined || !(validator in messages)) {
-                             var data_id = 'data-' + validator.replace(/[A-Z]/g, '-$&').toLowerCase();
-                             if (element.hasAttribute(data_id)) {
-                               /* if the element has a data-validator attribute, use this as fallback.
-                                * E.g., if validator == 'valueMissing', the element can specify a
-                                * custom validation message like this:
-                                *     <input data-value-missing="Oh noes!">
-                                */
-                               return element.getAttribute(data_id);
-                             }
-                             return _default;
-                           }
-                           return messages[validator];
-                         },
-                         delete: function _delete(element) {
-                           var validator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-                           if (!validator) {
-                             return store$1.delete(element);
-                           }
-                           var messages = store$1.get(element) || {};
-                           if (validator in messages) {
-                             delete messages[validator];
-                             store$1.set(element, messages);
-                             return true;
-                           }
-                           return false;
-                         }
-                       };
-
-                       var internal_registry = new WeakMap();
-
-                       /**
-                        * A registry for custom validators
-                        *
-                        * slim wrapper around a WeakMap to ensure the values are arrays
-                        * (hence allowing > 1 validators per element)
-                        */
-                       var custom_validator_registry = {
-                         set: function set(element, validator) {
-                           var current = internal_registry.get(element) || [];
-                           current.push(validator);
-                           internal_registry.set(element, current);
-                           return custom_validator_registry;
-                         },
-                         get: function get(element) {
-                           return internal_registry.get(element) || [];
-                         },
-                         delete: function _delete(element) {
-                           return internal_registry.delete(element);
-                         }
-                       };
-
-                       /**
-                        * test whether the element suffers from bad input
-                        */
-                       function test_bad_input (element) {
-                         var type = get_type(element);
-
-                         if (!is_validation_candidate(element) || input_checked.indexOf(type) === -1) {
-                           /* we're not interested, thanks! */
-                           return true;
-                         }
-
-                         /* the browser hides some bad input from the DOM, e.g. malformed numbers,
-                          * email addresses with invalid punycode representation, ... We try to resort
-                          * to the original method here. The assumption is, that a browser hiding
-                          * bad input will hopefully also always support a proper
-                          * ValidityState.badInput */
-                         if (!element.value) {
-                           if ('_original_validity' in element && !element._original_validity.__hyperform) {
-                             return !element._original_validity.badInput;
-                           }
-                           /* no value and no original badInput: Assume all's right. */
-                           return true;
-                         }
-
-                         var result = true;
-                         switch (type) {
-                           case 'color':
-                             result = /^#[a-f0-9]{6}$/.test(element.value);
-                             break;
-                           case 'number':
-                           case 'range':
-                             result = !isNaN(Number(element.value));
-                             break;
-                           case 'datetime':
-                           case 'date':
-                           case 'month':
-                           case 'week':
-                           case 'time':
-                             result = string_to_date(element.value, type) !== null;
-                             break;
-                           case 'datetime-local':
-                             result = /^([0-9]{4,})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(element.value);
-                             break;
-                           case 'tel':
-                             /* spec says No! Phone numbers can have all kinds of formats, so this
-                              * is expected to be a free-text field. */
-                             // TODO we could allow a setting 'phone_regex' to be evaluated here.
-                             break;
-                           case 'email':
-                             break;
-                         }
-
-                         return result;
-                       }
-
-                       /**
-                        * test the max attribute
-                        *
-                        * we use Number() instead of parseFloat(), because an invalid attribute
-                        * value like "123abc" should result in an error.
-                        */
-                       function test_max (element) {
-                         var type = get_type(element);
-
-                         if (!is_validation_candidate(element) || !element.value || !element.hasAttribute('max')) {
-                           /* we're not responsible here */
-                           return true;
-                         }
-
-                         var value = void 0,
-                             max = void 0;
-                         if (dates.indexOf(type) > -1) {
-                           value = 1 * string_to_date(element.value, type);
-                           max = 1 * (string_to_date(element.getAttribute('max'), type) || NaN);
-                         } else {
-                           value = Number(element.value);
-                           max = Number(element.getAttribute('max'));
-                         }
-
-                         return isNaN(max) || value <= max;
-                       }
-
-                       /**
-                        * test the maxlength attribute
-                        */
-                       function test_maxlength (element) {
-                         if (!is_validation_candidate(element) || !element.value || text_types.indexOf(get_type(element)) === -1 || !element.hasAttribute('maxlength') || !element.getAttribute('maxlength') // catch maxlength=""
-                         ) {
-                             return true;
-                           }
-
-                         var maxlength = parseInt(element.getAttribute('maxlength'), 10);
-
-                         /* check, if the maxlength value is usable at all.
-                          * We allow maxlength === 0 to basically disable input (Firefox does, too).
-                          */
-                         if (isNaN(maxlength) || maxlength < 0) {
-                           return true;
-                         }
-
-                         return unicode_string_length(element.value) <= maxlength;
-                       }
-
-                       /**
-                        * test the min attribute
-                        *
-                        * we use Number() instead of parseFloat(), because an invalid attribute
-                        * value like "123abc" should result in an error.
-                        */
-                       function test_min (element) {
-                         var type = get_type(element);
-
-                         if (!is_validation_candidate(element) || !element.value || !element.hasAttribute('min')) {
-                           /* we're not responsible here */
-                           return true;
-                         }
-
-                         var value = void 0,
-                             min = void 0;
-                         if (dates.indexOf(type) > -1) {
-                           value = 1 * string_to_date(element.value, type);
-                           min = 1 * (string_to_date(element.getAttribute('min'), type) || NaN);
-                         } else {
-                           value = Number(element.value);
-                           min = Number(element.getAttribute('min'));
-                         }
-
-                         return isNaN(min) || value >= min;
-                       }
-
-                       /**
-                        * test the minlength attribute
-                        */
-                       function test_minlength (element) {
-                         if (!is_validation_candidate(element) || !element.value || text_types.indexOf(get_type(element)) === -1 || !element.hasAttribute('minlength') || !element.getAttribute('minlength') // catch minlength=""
-                         ) {
-                             return true;
-                           }
-
-                         var minlength = parseInt(element.getAttribute('minlength'), 10);
-
-                         /* check, if the minlength value is usable at all. */
-                         if (isNaN(minlength) || minlength < 0) {
-                           return true;
-                         }
-
-                         return unicode_string_length(element.value) >= minlength;
-                       }
-
-                       /**
-                        * test the pattern attribute
-                        */
-                       function test_pattern (element) {
-                           return !is_validation_candidate(element) || !element.value || !element.hasAttribute('pattern') || new RegExp('^(?:' + element.getAttribute('pattern') + ')$').test(element.value);
-                       }
-
-                       /**
-                        * test the required attribute
-                        */
-                       function test_required (element) {
-                         if (!is_validation_candidate(element) || !element.hasAttribute('required')) {
-                           /* nothing to do */
-                           return true;
-                         }
-
-                         /* we don't need get_type() for element.type, because "checkbox" and "radio"
-                          * are well supported. */
-                         switch (element.type) {
-                           case 'checkbox':
-                             return element.checked;
-                           //break;
-                           case 'radio':
-                             /* radio inputs have "required" fulfilled, if _any_ other radio
-                              * with the same name in this form is checked. */
-                             return !!(element.checked || element.form && Array.prototype.filter.call(document.getElementsByName(element.name), function (radio) {
-                               return radio.name === element.name && radio.form === element.form && radio.checked;
-                             }).length > 0);
-                           //break;
-                           default:
-                             return !!element.value;
-                         }
-                       }
-
-                       /**
-                        * test the step attribute
-                        */
-                       function test_step (element) {
-                         var type = get_type(element);
-
-                         if (!is_validation_candidate(element) || !element.value || numbers.indexOf(type) === -1 || (element.getAttribute('step') || '').toLowerCase() === 'any') {
-                           /* we're not responsible here. Note: If no step attribute is given, we
-                            * need to validate against the default step as per spec. */
-                           return true;
-                         }
-
-                         var step = element.getAttribute('step');
-                         if (step) {
-                           step = string_to_number(step, type);
-                         } else {
-                           step = default_step[type] || 1;
-                         }
-
-                         if (step <= 0 || isNaN(step)) {
-                           /* error in specified "step". We cannot validate against it, so the value
-                            * is true. */
-                           return true;
-                         }
-
-                         var scale = step_scale_factor[type] || 1;
-
-                         var value = string_to_number(element.value, type);
-                         var min = string_to_number(element.getAttribute('min') || element.getAttribute('value') || '', type);
-
-                         if (isNaN(min)) {
-                           min = default_step_base[type] || 0;
-                         }
-
-                         if (type === 'month') {
-                           /* type=month has month-wide steps. See
-                            * https://html.spec.whatwg.org/multipage/forms.html#month-state-%28type=month%29
-                            */
-                           min = new Date(min).getUTCFullYear() * 12 + new Date(min).getUTCMonth();
-                           value = new Date(value).getUTCFullYear() * 12 + new Date(value).getUTCMonth();
-                         }
-
-                         var result = Math.abs(min - value) % (step * scale);
-
-                         return result < 0.00000001 ||
-                         /* crappy floating-point arithmetics! */
-                         result > step * scale - 0.00000001;
-                       }
-
-                       var ws_on_start_or_end = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-
-                       /**
-                        * trim a string of whitespace
-                        *
-                        * We don't use String.trim() to remove the need to polyfill it.
-                        */
-                       function trim (str) {
-                         return str.replace(ws_on_start_or_end, '');
-                       }
-
-                       /**
-                        * split a string on comma and trim the components
-                        *
-                        * As specified at
-                        * https://html.spec.whatwg.org/multipage/infrastructure.html#split-a-string-on-commas
-                        * plus removing empty entries.
-                        */
-                       function comma_split (str) {
-                         return str.split(',').map(function (item) {
-                           return trim(item);
-                         }).filter(function (b) {
-                           return b;
-                         });
-                       }
-
-                       /* we use a dummy <a> where we set the href to test URL validity
-                        * The definition is out of the "global" scope so that JSDOM can be instantiated
-                        * after loading Hyperform for tests.
-                        */
-                       var url_canary;
-
-                       /* see https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address */
-                       var email_pattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-                       /**
-                        * test the type-inherent syntax
-                        */
-                       function test_type (element) {
-                         var type = get_type(element);
-
-                         if (!is_validation_candidate(element) || type !== 'file' && !element.value || type !== 'file' && type_checked.indexOf(type) === -1) {
-                           /* we're not responsible for this element */
-                           return true;
-                         }
-
-                         var is_valid = true;
-
-                         switch (type) {
-                           case 'url':
-                             if (!url_canary) {
-                               url_canary = document.createElement('a');
-                             }
-                             var value = trim(element.value);
-                             url_canary.href = value;
-                             is_valid = url_canary.href === value || url_canary.href === value + '/';
-                             break;
-                           case 'email':
-                             if (element.hasAttribute('multiple')) {
-                               is_valid = comma_split(element.value).every(function (value) {
-                                 return email_pattern.test(value);
-                               });
-                             } else {
-                               is_valid = email_pattern.test(trim(element.value));
-                             }
-                             break;
-                           case 'file':
-                             if ('files' in element && element.files.length && element.hasAttribute('accept')) {
-                               var patterns = comma_split(element.getAttribute('accept')).map(function (pattern) {
-                                 if (/^(audio|video|image)\/\*$/.test(pattern)) {
-                                   pattern = new RegExp('^' + RegExp.$1 + '/.+$');
-                                 }
-                                 return pattern;
-                               });
-
-                               if (!patterns.length) {
-                                 break;
-                               }
-
-                               fileloop: for (var i = 0; i < element.files.length; i++) {
-                                 /* we need to match a whitelist, so pre-set with false */
-                                 var file_valid = false;
-
-                                 patternloop: for (var j = 0; j < patterns.length; j++) {
-                                   var file = element.files[i];
-                                   var pattern = patterns[j];
-
-                                   var fileprop = file.type;
-
-                                   if (typeof pattern === 'string' && pattern.substr(0, 1) === '.') {
-                                     if (file.name.search('.') === -1) {
-                                       /* no match with any file ending */
-                                       continue patternloop;
-                                     }
-
-                                     fileprop = file.name.substr(file.name.lastIndexOf('.'));
-                                   }
-
-                                   if (fileprop.search(pattern) === 0) {
-                                     /* we found one match and can quit looking */
-                                     file_valid = true;
-                                     break patternloop;
-                                   }
-                                 }
-
-                                 if (!file_valid) {
-                                   is_valid = false;
-                                   break fileloop;
-                                 }
-                               }
-                             }
-                         }
-
-                         return is_valid;
-                       }
-
-                       /**
-                        * boilerplate function for all tests but customError
-                        */
-                       function check$1(test, react) {
-                         return function (element) {
-                           var invalid = !test(element);
-                           if (invalid) {
-                             react(element);
-                           }
-                           return invalid;
-                         };
-                       }
-
-                       /**
-                        * create a common function to set error messages
-                        */
-                       function set_msg(element, msgtype, _default) {
-                         message_store.set(element, custom_messages.get(element, msgtype, _default));
-                       }
-
-                       var badInput = check$1(test_bad_input, function (element) {
-                         return set_msg(element, 'badInput', _('Please match the requested type.'));
-                       });
-
-                       function customError(element) {
-                         /* check, if there are custom validators in the registry, and call
-                          * them. */
-                         var custom_validators = custom_validator_registry.get(element);
-                         var cvl = custom_validators.length;
-                         var valid = true;
-
-                         if (cvl) {
-                           for (var i = 0; i < cvl; i++) {
-                             var result = custom_validators[i](element);
-                             if (result !== undefined && !result) {
-                               valid = false;
-                               /* break on first invalid response */
-                               break;
-                             }
-                           }
-                         }
-
-                         /* check, if there are other validity messages already */
-                         if (valid) {
-                           var msg = message_store.get(element);
-                           valid = !(msg.toString() && 'is_custom' in msg);
-                         }
-
-                         return !valid;
-                       }
-
-                       var patternMismatch = check$1(test_pattern, function (element) {
-                         set_msg(element, 'patternMismatch', element.title ? sprintf(_('PatternMismatchWithTitle'), element.title) : _('PatternMismatch'));
-                       });
-
-                       /**
-                        * TODO: when rangeOverflow and rangeUnderflow are both called directly and
-                        * successful, the inRange and outOfRange classes won't get removed, unless
-                        * element.validityState.valid is queried, too.
-                        */
-                       var rangeOverflow = check$1(test_max, function (element) {
-                         var type = get_type(element);
-                         var wrapper = get_wrapper(element);
-                         var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
-                         var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
-
-                         var msg = void 0;
-
-                         switch (type) {
-                           case 'date':
-                           case 'datetime':
-                           case 'datetime-local':
-                             msg = sprintf(_('DateRangeOverflow'), format_date(string_to_date(element.getAttribute('max'), type), type));
-                             break;
-                           case 'time':
-                             msg = sprintf(_('TimeRangeOverflow'), format_date(string_to_date(element.getAttribute('max'), type), type));
-                             break;
-                           // case 'number':
-                           default:
-                             msg = sprintf(_('NumberRangeOverflow'), string_to_number(element.getAttribute('max'), type));
-                             break;
-                         }
-
-                         set_msg(element, 'rangeOverflow', msg);
-                         element.classList.add(outOfRangeClass);
-                         element.classList.remove(inRangeClass);
-                       });
-
-                       var rangeUnderflow = check$1(test_min, function (element) {
-                         var type = get_type(element);
-                         var wrapper = get_wrapper(element);
-                         var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
-                         var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
-
-                         var msg = void 0;
-
-                         switch (type) {
-                           case 'date':
-                           case 'datetime':
-                           case 'datetime-local':
-                             msg = sprintf(_('DateRangeUnderflow'), format_date(string_to_date(element.getAttribute('min'), type), type));
-                             break;
-                           case 'time':
-                             msg = sprintf(_('TimeRangeUnderflow'), format_date(string_to_date(element.getAttribute('min'), type), type));
-                             break;
-                           // case 'number':
-                           default:
-                             msg = sprintf(_('NumberRangeUnderflow'), string_to_number(element.getAttribute('min'), type));
-                             break;
-                         }
-
-                         set_msg(element, 'rangeUnderflow', msg);
-                         element.classList.add(outOfRangeClass);
-                         element.classList.remove(inRangeClass);
-                       });
-
-                       var stepMismatch = check$1(test_step, function (element) {
-                         var list = get_next_valid(element);
-                         var min = list[0];
-                         var max = list[1];
-                         var sole = false;
-                         var msg = void 0;
-
-                         if (min === null) {
-                           sole = max;
-                         } else if (max === null) {
-                           sole = min;
-                         }
-
-                         if (sole !== false) {
-                           msg = sprintf(_('StepMismatchOneValue'), sole);
-                         } else {
-                           msg = sprintf(_('StepMismatch'), min, max);
-                         }
-                         set_msg(element, 'stepMismatch', msg);
-                       });
-
-                       var tooLong = check$1(test_maxlength, function (element) {
-                         set_msg(element, 'tooLong', sprintf(_('TextTooLong'), element.getAttribute('maxlength'), unicode_string_length(element.value)));
-                       });
-
-                       var tooShort = check$1(test_minlength, function (element) {
-                         set_msg(element, 'tooShort', sprintf(_('Please lengthen this text to %l characters or more (you are currently using %l characters).'), element.getAttribute('minlength'), unicode_string_length(element.value)));
-                       });
-
-                       var typeMismatch = check$1(test_type, function (element) {
-                         var msg = _('Please use the appropriate format.');
-                         var type = get_type(element);
-
-                         if (type === 'email') {
-                           if (element.hasAttribute('multiple')) {
-                             msg = _('Please enter a comma separated list of email addresses.');
-                           } else {
-                             msg = _('InvalidEmail');
-                           }
-                         } else if (type === 'url') {
-                           msg = _('InvalidURL');
-                         } else if (type === 'file') {
-                           msg = _('Please select a file of the correct type.');
-                         }
-
-                         set_msg(element, 'typeMismatch', msg);
-                       });
-
-                       var valueMissing = check$1(test_required, function (element) {
-                         var msg = _('ValueMissing');
-                         var type = get_type(element);
-
-                         if (type === 'checkbox') {
-                           msg = _('CheckboxMissing');
-                         } else if (type === 'radio') {
-                           msg = _('RadioMissing');
-                         } else if (type === 'file') {
-                           if (element.hasAttribute('multiple')) {
-                             msg = _('Please select one or more files.');
-                           } else {
-                             msg = _('FileMissing');
-                           }
-                         } else if (element instanceof window.HTMLSelectElement) {
-                           msg = _('SelectMissing');
-                         }
-
-                         set_msg(element, 'valueMissing', msg);
-                       });
-
-                       var validity_state_checkers = {
-                         badInput: badInput,
-                         customError: customError,
-                         patternMismatch: patternMismatch,
-                         rangeOverflow: rangeOverflow,
-                         rangeUnderflow: rangeUnderflow,
-                         stepMismatch: stepMismatch,
-                         tooLong: tooLong,
-                         tooShort: tooShort,
-                         typeMismatch: typeMismatch,
-                         valueMissing: valueMissing
-                       };
-
-                       /**
-                        * the validity state constructor
-                        */
-                       var ValidityState = function ValidityState(element) {
-                         if (!(element instanceof window.HTMLElement)) {
-                           throw new Error('cannot create a ValidityState for a non-element');
-                         }
-
-                         var cached = ValidityState.cache.get(element);
-                         if (cached) {
-                           return cached;
-                         }
-
-                         if (!(this instanceof ValidityState)) {
-                           /* working around a forgotten `new` */
-                           return new ValidityState(element);
-                         }
-
-                         this.element = element;
-                         ValidityState.cache.set(element, this);
-                       };
-
-                       /**
-                        * the prototype for new validityState instances
-                        */
-                       var ValidityStatePrototype = {};
-                       ValidityState.prototype = ValidityStatePrototype;
-
-                       ValidityState.cache = new WeakMap();
-
-                       /**
-                        * copy functionality from the validity checkers to the ValidityState
-                        * prototype
-                        */
-                       for (var prop in validity_state_checkers) {
-                         Object.defineProperty(ValidityStatePrototype, prop, {
-                           configurable: true,
-                           enumerable: true,
-                           get: function (func) {
-                             return function () {
-                               return func(this.element);
-                             };
-                           }(validity_state_checkers[prop]),
-                           set: undefined
-                         });
-                       }
-
-                       /**
-                        * the "valid" property calls all other validity checkers and returns true,
-                        * if all those return false.
-                        *
-                        * This is the major access point for _all_ other API methods, namely
-                        * (check|report)Validity().
-                        */
-                       Object.defineProperty(ValidityStatePrototype, 'valid', {
-                         configurable: true,
-                         enumerable: true,
-                         get: function get() {
-                           var wrapper = get_wrapper(this.element);
-                           var validClass = wrapper && wrapper.settings.classes.valid || 'hf-valid';
-                           var invalidClass = wrapper && wrapper.settings.classes.invalid || 'hf-invalid';
-                           var userInvalidClass = wrapper && wrapper.settings.classes.userInvalid || 'hf-user-invalid';
-                           var userValidClass = wrapper && wrapper.settings.classes.userValid || 'hf-user-valid';
-                           var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
-                           var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
-                           var validatedClass = wrapper && wrapper.settings.classes.validated || 'hf-validated';
-
-                           this.element.classList.add(validatedClass);
-
-                           if (is_validation_candidate(this.element)) {
-                             for (var _prop in validity_state_checkers) {
-                               if (validity_state_checkers[_prop](this.element)) {
-                                 this.element.classList.add(invalidClass);
-                                 this.element.classList.remove(validClass);
-                                 this.element.classList.remove(userValidClass);
-                                 if (this.element.value !== this.element.defaultValue) {
-                                   this.element.classList.add(userInvalidClass);
-                                 } else {
-                                   this.element.classList.remove(userInvalidClass);
-                                 }
-                                 this.element.setAttribute('aria-invalid', 'true');
-                                 return false;
-                               }
-                             }
-                           }
-
-                           message_store.delete(this.element);
-                           this.element.classList.remove(invalidClass, userInvalidClass, outOfRangeClass);
-                           this.element.classList.add(validClass, inRangeClass);
-                           if (this.element.value !== this.element.defaultValue) {
-                             this.element.classList.add(userValidClass);
-                           } else {
-                             this.element.classList.remove(userValidClass);
-                           }
-                           this.element.setAttribute('aria-invalid', 'false');
-                           return true;
-                         },
-                         set: undefined
-                       });
-
-                       /**
-                        * mark the validity prototype, because that is what the client-facing
-                        * code deals with mostly, not the property descriptor thing */
-                       mark(ValidityStatePrototype);
-
-                       /**
-                        * check an element's validity with respect to it's form
-                        */
-                       var checkValidity = return_hook_or('checkValidity', function (element) {
-                         /* if this is a <form>, check validity of all child inputs */
-                         if (element instanceof window.HTMLFormElement) {
-                           return Array.prototype.map.call(element.elements, checkValidity).every(function (b) {
-                             return b;
-                           });
-                         }
-
-                         /* default is true, also for elements that are no validation candidates */
-                         var valid = ValidityState(element).valid;
-                         if (valid) {
-                           var wrapped_form = get_wrapper(element);
-                           if (wrapped_form && wrapped_form.settings.validEvent) {
-                             trigger_event(element, 'valid');
-                           }
-                         } else {
-                           trigger_event(element, 'invalid', { cancelable: true });
-                         }
-
-                         return valid;
-                       });
-
-                       var version = '0.9.6';
-
-                       /* deprecate the old snake_case names
-                        * TODO: delme before next non-patch release
-                        */
-                       function w(name) {
-                         var deprecated_message = 'Please use camelCase method names! The name "%s" is deprecated and will be removed in the next non-patch release.';
-                         /* global console */
-                         console.log(sprintf(deprecated_message, name));
-                       }
-
-                       /**
-                        * public hyperform interface:
-                        */
-                       function hyperform(form) {
-                         var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-                         var classes = _ref.classes;
-                         var _ref$debug = _ref.debug;
-                         var debug = _ref$debug === undefined ? false : _ref$debug;
-                         var extend_fieldset = _ref.extend_fieldset;
-                         var extendFieldset = _ref.extendFieldset;
-                         var novalidate_on_elements = _ref.novalidate_on_elements;
-                         var novalidateOnElements = _ref.novalidateOnElements;
-                         var prevent_implicit_submit = _ref.prevent_implicit_submit;
-                         var preventImplicitSubmit = _ref.preventImplicitSubmit;
-                         var revalidate = _ref.revalidate;
-                         var _ref$strict = _ref.strict;
-                         var strict = _ref$strict === undefined ? false : _ref$strict;
-                         var valid_event = _ref.valid_event;
-                         var validEvent = _ref.validEvent;
-
-
-                         if (!classes) {
-                           classes = {};
-                         }
-                         // TODO: clean up before next non-patch release
-                         if (extendFieldset === undefined) {
-                           if (extend_fieldset === undefined) {
-                             extendFieldset = !strict;
-                           } else {
-                             w('extend_fieldset');
-                             extendFieldset = extend_fieldset;
-                           }
-                         }
-                         if (novalidateOnElements === undefined) {
-                           if (novalidate_on_elements === undefined) {
-                             novalidateOnElements = !strict;
-                           } else {
-                             w('novalidate_on_elements');
-                             novalidateOnElements = novalidate_on_elements;
-                           }
-                         }
-                         if (preventImplicitSubmit === undefined) {
-                           if (prevent_implicit_submit === undefined) {
-                             preventImplicitSubmit = false;
-                           } else {
-                             w('prevent_implicit_submit');
-                             preventImplicitSubmit = prevent_implicit_submit;
-                           }
-                         }
-                         if (revalidate === undefined) {
-                           /* other recognized values: 'oninput', 'onblur', 'onsubmit' and 'never' */
-                           revalidate = strict ? 'onsubmit' : 'hybrid';
-                         }
-                         if (validEvent === undefined) {
-                           if (valid_event === undefined) {
-                             validEvent = !strict;
-                           } else {
-                             w('valid_event');
-                             validEvent = valid_event;
-                           }
-                         }
-
-                         var settings = { debug: debug, strict: strict, preventImplicitSubmit: preventImplicitSubmit, revalidate: revalidate,
-                           validEvent: validEvent, extendFieldset: extendFieldset, classes: classes };
-
-                         if (form instanceof window.NodeList || form instanceof window.HTMLCollection || form instanceof Array) {
-                           return Array.prototype.map.call(form, function (element) {
-                             return hyperform(element, settings);
-                           });
-                         }
-
-                         return new Wrapper(form, settings);
-                       }
-
-                       hyperform.version = version;
-
-                       hyperform.checkValidity = checkValidity;
-                       hyperform.reportValidity = reportValidity;
-                       hyperform.setCustomValidity = setCustomValidity;
-                       hyperform.stepDown = stepDown;
-                       hyperform.stepUp = stepUp;
-                       hyperform.validationMessage = validationMessage;
-                       hyperform.ValidityState = ValidityState;
-                       hyperform.valueAsDate = valueAsDate;
-                       hyperform.valueAsNumber = valueAsNumber;
-                       hyperform.willValidate = willValidate;
-
-                       hyperform.setLanguage = function (lang) {
-                         set_language(lang);return hyperform;
-                       };
-                       hyperform.addTranslation = function (lang, catalog) {
-                         add_translation(lang, catalog);return hyperform;
-                       };
-                       hyperform.setRenderer = function (renderer, action) {
-                         Renderer.set(renderer, action);return hyperform;
-                       };
-                       hyperform.addValidator = function (element, validator) {
-                         custom_validator_registry.set(element, validator);return hyperform;
-                       };
-                       hyperform.setMessage = function (element, validator, message) {
-                         custom_messages.set(element, validator, message);return hyperform;
-                       };
-                       hyperform.addHook = function (hook, action, position) {
-                         add_hook(hook, action, position);return hyperform;
-                       };
-                       hyperform.removeHook = function (hook, action) {
-                         remove_hook(hook, action);return hyperform;
-                       };
-
-                       // TODO: Remove in next non-patch version
-                       hyperform.set_language = function (lang) {
-                         w('set_language');set_language(lang);return hyperform;
-                       };
-                       hyperform.add_translation = function (lang, catalog) {
-                         w('add_translation');add_translation(lang, catalog);return hyperform;
-                       };
-                       hyperform.set_renderer = function (renderer, action) {
-                         w('set_renderer');Renderer.set(renderer, action);return hyperform;
-                       };
-                       hyperform.add_validator = function (element, validator) {
-                         w('add_validator');custom_validator_registry.set(element, validator);return hyperform;
-                       };
-                       hyperform.set_message = function (element, validator, message) {
-                         w('set_message');custom_messages.set(element, validator, message);return hyperform;
-                       };
-                       hyperform.add_hook = function (hook, action, position) {
-                         w('add_hook');add_hook(hook, action, position);return hyperform;
-                       };
-                       hyperform.remove_hook = function (hook, action) {
-                         w('remove_hook');remove_hook(hook, action);return hyperform;
-                       };
-
-                       if (document.currentScript && document.currentScript.hasAttribute('data-hf-autoload')) {
-                         hyperform(window);
-                       }
-
-                       return hyperform;
+        'use strict';
+
+        var registry = Object.create(null);
+
+        /**
+         * run all actions registered for a hook
+         *
+         * Every action gets called with a state object as `this` argument and with the
+         * hook's call arguments as call arguments.
+         *
+         * @return mixed the returned value of the action calls or undefined
+         */
+        function call_hook(hook) {
+          var result;
+          var call_args = Array.prototype.slice.call(arguments, 1);
+
+          if (hook in registry) {
+            result = registry[hook].reduce(function (args) {
+
+              return function (previousResult, currentAction) {
+                var interimResult = currentAction.apply({
+                  state: previousResult,
+                  hook: hook
+                }, args);
+                return interimResult !== undefined ? interimResult : previousResult;
+              };
+            }(call_args), result);
+          }
+
+          return result;
+        }
+
+        /**
+         * Filter a value through hooked functions
+         *
+         * Allows for additional parameters:
+         * js> do_filter('foo', null, current_element)
+         */
+        function do_filter(hook, initial_value) {
+          var result = initial_value;
+          var call_args = Array.prototype.slice.call(arguments, 1);
+
+          if (hook in registry) {
+            result = registry[hook].reduce(function (previousResult, currentAction) {
+              call_args[0] = previousResult;
+              var interimResult = currentAction.apply({
+                state: previousResult,
+                hook: hook
+              }, call_args);
+              return interimResult !== undefined ? interimResult : previousResult;
+            }, result);
+          }
+
+          return result;
+        }
+
+        /**
+         * remove an action again
+         */
+        function remove_hook(hook, action) {
+          if (hook in registry) {
+            for (var i = 0; i < registry[hook].length; i++) {
+              if (registry[hook][i] === action) {
+                registry[hook].splice(i, 1);
+                break;
+              }
+            }
+          }
+        }
+        /**
+         * add an action to a hook
+         */
+        function add_hook(hook, action, position) {
+          if (!(hook in registry)) {
+            registry[hook] = [];
+          }
+          if (position === undefined) {
+            position = registry[hook].length;
+          }
+          registry[hook].splice(position, 0, action);
+        }
+
+        /**
+         * return either the data of a hook call or the result of action, if the
+         * former is undefined
+         *
+         * @return function a function wrapper around action
+         */
+        function return_hook_or (hook, action) {
+          return function () {
+            var data = call_hook(hook, Array.prototype.slice.call(arguments));
+
+            if (data !== undefined) {
+              return data;
+            }
+
+            return action.apply(this, arguments);
+          };
+        }
+
+        /* the following code is borrowed from the WebComponents project, licensed
+         * under the BSD license. Source:
+         * <https://github.com/webcomponents/webcomponentsjs/blob/5283db1459fa2323e5bfc8b9b5cc1753ed85e3d0/src/WebComponents/dom.js#L53-L78>
+         */
+        // defaultPrevented is broken in IE.
+        // https://connect.microsoft.com/IE/feedback/details/790389/event-defaultprevented-returns-false-after-preventdefault-was-called
+
+        var workingDefaultPrevented = function () {
+          var e = document.createEvent('Event');
+          e.initEvent('foo', true, true);
+          e.preventDefault();
+          return e.defaultPrevented;
+        }();
+
+        if (!workingDefaultPrevented) {
+          (function () {
+            var origPreventDefault = window.Event.prototype.preventDefault;
+            window.Event.prototype.preventDefault = function () {
+              if (!this.cancelable) {
+                return;
+              }
+
+              origPreventDefault.call(this);
+
+              Object.defineProperty(this, 'defaultPrevented', {
+                get: function get() {
+                  return true;
+                },
+                configurable: true
+              });
+            };
+          })();
+        }
+        /* end of borrowed code */
+
+        function create_event(name) {
+          var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+          var _ref$bubbles = _ref.bubbles;
+          var bubbles = _ref$bubbles === undefined ? true : _ref$bubbles;
+          var _ref$cancelable = _ref.cancelable;
+          var cancelable = _ref$cancelable === undefined ? false : _ref$cancelable;
+
+          var event = document.createEvent('Event');
+          event.initEvent(name, bubbles, cancelable);
+          return event;
+        }
+
+        function trigger_event (element, event) {
+          var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+          var _ref2$bubbles = _ref2.bubbles;
+          var bubbles = _ref2$bubbles === undefined ? true : _ref2$bubbles;
+          var _ref2$cancelable = _ref2.cancelable;
+          var cancelable = _ref2$cancelable === undefined ? false : _ref2$cancelable;
+          var payload = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+
+          if (!(event instanceof window.Event)) {
+            event = create_event(event, { bubbles: bubbles, cancelable: cancelable });
+          }
+
+          for (var key in payload) {
+            if (payload.hasOwnProperty(key)) {
+              event[key] = payload[key];
+            }
+          }
+
+          element.dispatchEvent(event);
+
+          return event;
+        }
+
+        /* and datetime-local? Spec says “Nah!” */
+
+        var dates = ['datetime', 'date', 'month', 'week', 'time'];
+
+        var plain_numbers = ['number', 'range'];
+
+        /* everything that returns something meaningful for valueAsNumber and
+         * can have the step attribute */
+        var numbers = dates.concat(plain_numbers, 'datetime-local');
+
+        /* the spec says to only check those for syntax in validity.typeMismatch.
+         * ¯\_(ツ)_/¯ */
+        var type_checked = ['email', 'url'];
+
+        /* check these for validity.badInput */
+        var input_checked = ['email', 'date', 'month', 'week', 'time', 'datetime', 'datetime-local', 'number', 'range', 'color'];
+
+        var text_types = ['text', 'search', 'tel', 'password'].concat(type_checked);
+
+        /* input element types, that are candidates for the validation API.
+         * Missing from this set are: button, hidden, menu (from <button>), reset and
+         * the types for non-<input> elements. */
+        var validation_candidates = ['checkbox', 'color', 'file', 'image', 'radio', 'submit'].concat(numbers, text_types);
+
+        /* all known types of <input> */
+        var inputs = ['button', 'hidden', 'reset'].concat(validation_candidates);
+
+        /* apparently <select> and <textarea> have types of their own */
+        var non_inputs = ['select-one', 'select-multiple', 'textarea'];
+
+        /**
+         * mark an object with a '__hyperform=true' property
+         *
+         * We use this to distinguish our properties from the native ones. Usage:
+         * js> mark(obj);
+         * js> assert(obj.__hyperform === true)
+         */
+
+        function mark (obj) {
+          if (['object', 'function'].indexOf(typeof obj) > -1) {
+            delete obj.__hyperform;
+            Object.defineProperty(obj, '__hyperform', {
+              configurable: true,
+              enumerable: false,
+              value: true
+            });
+          }
+
+          return obj;
+        }
+
+        /**
+         * the internal storage for messages
+         */
+        var store = new WeakMap();
+
+        /* jshint -W053 */
+        var message_store = {
+          set: function set(element, message) {
+            var is_custom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+            if (element instanceof window.HTMLFieldSetElement) {
+              var wrapped_form = get_wrapper(element);
+              if (wrapped_form && !wrapped_form.settings.extend_fieldset) {
+                /* make this a no-op for <fieldset> in strict mode */
+                return message_store;
+              }
+            }
+
+            if (typeof message === 'string') {
+              message = new String(message);
+            }
+            if (is_custom) {
+              message.is_custom = true;
+            }
+            mark(message);
+            store.set(element, message);
+
+            /* allow the :invalid selector to match */
+            if ('_original_setCustomValidity' in element) {
+              element._original_setCustomValidity(message.toString());
+            }
+
+            return message_store;
+          },
+          get: function get(element) {
+            var message = store.get(element);
+            if (message === undefined && '_original_validationMessage' in element) {
+              /* get the browser's validation message, if we have none. Maybe it
+               * knows more than we. */
+              message = new String(element._original_validationMessage);
+            }
+            return message ? message : new String('');
+          },
+          delete: function _delete(element) {
+            if ('_original_setCustomValidity' in element) {
+              element._original_setCustomValidity('');
+            }
+            return store.delete(element);
+          }
+        };
+
+        /**
+         * counter that will be incremented with every call
+         *
+         * Will enforce uniqueness, as long as no more than 1 hyperform scripts
+         * are loaded. (In that case we still have the "random" part below.)
+         */
+
+        var uid = 0;
+
+        /**
+         * generate a random ID
+         *
+         * @see https://gist.github.com/gordonbrander/2230317
+         */
+        function generate_id () {
+          var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'hf_';
+
+          return prefix + uid++ + Math.random().toString(36).substr(2);
+        }
+
+        var warnings_cache = new WeakMap();
+
+        var DefaultRenderer = {
+
+          /**
+           * called when a warning should become visible
+           */
+          attach_warning: function attach_warning(warning, element) {
+            /* should also work, if element is last,
+             * http://stackoverflow.com/a/4793630/113195 */
+            element.parentNode.insertBefore(warning, element.nextSibling);
+          },
+
+          /**
+           * called when a warning should vanish
+           */
+          detach_warning: function detach_warning(warning, element) {
+            warning.parentNode.removeChild(warning);
+          },
+
+          /**
+           * called when feedback to an element's state should be handled
+           *
+           * i.e., showing and hiding warnings
+           */
+          show_warning: function show_warning(element) {
+            var sub_radio = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+            var msg = message_store.get(element).toString();
+            var warning = warnings_cache.get(element);
+
+            if (msg) {
+              if (!warning) {
+                var wrapper = get_wrapper(element);
+                warning = document.createElement('div');
+                warning.className = wrapper && wrapper.settings.classes.warning || 'hf-warning';
+                warning.id = generate_id();
+                warning.setAttribute('aria-live', 'polite');
+                warnings_cache.set(element, warning);
+              }
+
+              element.setAttribute('aria-errormessage', warning.id);
+              warning.textContent = msg;
+              Renderer.attach_warning(warning, element);
+            } else if (warning && warning.parentNode) {
+              element.removeAttribute('aria-errormessage');
+              Renderer.detach_warning(warning, element);
+            }
+
+            if (!sub_radio && element.type === 'radio' && element.form) {
+              /* render warnings for all other same-name radios, too */
+              Array.prototype.filter.call(document.getElementsByName(element.name), function (radio) {
+                return radio.name === element.name && radio.form === element.form;
+              }).map(function (radio) {
+                return Renderer.show_warning(radio, 'sub_radio');
+              });
+            }
+          }
+
+        };
+
+        var Renderer = {
+
+          attach_warning: DefaultRenderer.attach_warning,
+          detach_warning: DefaultRenderer.detach_warning,
+          show_warning: DefaultRenderer.show_warning,
+
+          set: function set(renderer, action) {
+            if (!action) {
+              action = DefaultRenderer[renderer];
+            }
+            Renderer[renderer] = action;
+          }
+
+        };
+
+        /**
+         * check element's validity and report an error back to the user
+         */
+        function reportValidity(element) {
+          /* if this is a <form>, report validity of all child inputs */
+          if (element instanceof window.HTMLFormElement) {
+            return Array.prototype.map.call(element.elements, reportValidity).every(function (b) {
+              return b;
+            });
+          }
+
+          /* we copy checkValidity() here, b/c we have to check if the "invalid"
+           * event was canceled. */
+          var valid = ValidityState(element).valid;
+          var event;
+          if (valid) {
+            var wrapped_form = get_wrapper(element);
+            if (wrapped_form && wrapped_form.settings.valid_event) {
+              event = trigger_event(element, 'valid', { cancelable: true });
+            }
+          } else {
+            event = trigger_event(element, 'invalid', { cancelable: true });
+          }
+
+          if (!event || !event.defaultPrevented) {
+            Renderer.show_warning(element);
+          }
+
+          return valid;
+        }
+
+        /**
+         * submit a form, because `element` triggered it
+         *
+         * This method also dispatches a submit event on the form prior to the
+         * submission. The event contains the trigger element as `submittedVia`.
+         *
+         * If the element is a button with a name, the name=value pair will be added
+         * to the submitted data.
+         */
+        function submit_form_via(element) {
+          /* apparently, the submit event is not triggered in most browsers on
+           * the submit() method, so we do it manually here to model a natural
+           * submit as closely as possible.
+           * Now to the fun fact: If you trigger a submit event from a form, what
+           * do you think should happen?
+           * 1) the form will be automagically submitted by the browser, or
+           * 2) nothing.
+           * And as you already suspected, the correct answer is: both! Firefox
+           * opts for 1), Chrome for 2). Yay! */
+          var event_got_cancelled;
+
+          var submit_event = create_event('submit', { cancelable: true });
+          /* force Firefox to not submit the form, then fake preventDefault() */
+          submit_event.preventDefault();
+          Object.defineProperty(submit_event, 'defaultPrevented', {
+            value: false,
+            writable: true
+          });
+          Object.defineProperty(submit_event, 'preventDefault', {
+            value: function value() {
+              return submit_event.defaultPrevented = event_got_cancelled = true;
+            },
+            writable: true
+          });
+          trigger_event(element.form, submit_event, {}, { submittedVia: element });
+
+          if (!event_got_cancelled) {
+            add_submit_field(element);
+            window.HTMLFormElement.prototype.submit.call(element.form);
+            window.setTimeout(function () {
+              return remove_submit_field(element);
+            });
+          }
+        }
+
+        /**
+         * if a submit button was clicked, add its name=value by means of a type=hidden
+         * input field
+         */
+        function add_submit_field(button) {
+          if (['image', 'submit'].indexOf(button.type) > -1 && button.name) {
+            var wrapper = get_wrapper(button.form) || {};
+            var submit_helper = wrapper.submit_helper;
+            if (submit_helper) {
+              if (submit_helper.parentNode) {
+                submit_helper.parentNode.removeChild(submit_helper);
+              }
+            } else {
+              submit_helper = document.createElement('input');
+              submit_helper.type = 'hidden';
+              wrapper.submit_helper = submit_helper;
+            }
+            submit_helper.name = button.name;
+            submit_helper.value = button.value;
+            button.form.appendChild(submit_helper);
+          }
+        }
+
+        /**
+         * remove a possible helper input, that was added by `add_submit_field`
+         */
+        function remove_submit_field(button) {
+          if (['image', 'submit'].indexOf(button.type) > -1 && button.name) {
+            var wrapper = get_wrapper(button.form) || {};
+            var submit_helper = wrapper.submit_helper;
+            if (submit_helper && submit_helper.parentNode) {
+              submit_helper.parentNode.removeChild(submit_helper);
+            }
+          }
+        }
+
+        /**
+         * check a form's validity and submit it
+         *
+         * The method triggers a cancellable `validate` event on the form. If the
+         * event is cancelled, form submission will be aborted, too.
+         *
+         * If the form is found to contain invalid fields, focus the first field.
+         */
+        function check(event) {
+          /* trigger a "validate" event on the form to be submitted */
+          var val_event = trigger_event(event.target.form, 'validate', { cancelable: true });
+          if (val_event.defaultPrevented) {
+            /* skip the whole submit thing, if the validation is canceled. A user
+             * can still call form.submit() afterwards. */
+            return;
+          }
+
+          var valid = true;
+          var first_invalid;
+          Array.prototype.map.call(event.target.form.elements, function (element) {
+            if (!reportValidity(element)) {
+              valid = false;
+              if (!first_invalid && 'focus' in element) {
+                first_invalid = element;
+              }
+            }
+          });
+
+          if (valid) {
+            submit_form_via(event.target);
+          } else if (first_invalid) {
+            /* focus the first invalid element, if validation went south */
+            first_invalid.focus();
+          }
+        }
+
+        /**
+         * test if node is a submit button
+         */
+        function is_submit_button(node) {
+          return (
+            /* must be an input or button element... */
+            (node.nodeName === 'INPUT' || node.nodeName === 'BUTTON') && (
+
+            /* ...and have a submitting type */
+            node.type === 'image' || node.type === 'submit')
+          );
+        }
+
+        /**
+         * test, if the click event would trigger a submit
+         */
+        function is_submitting_click(event) {
+          return (
+            /* prevented default: won't trigger a submit */
+            !event.defaultPrevented && (
+
+            /* left button or middle button (submits in Chrome) */
+            !('button' in event) || event.button < 2) &&
+
+            /* must be a submit button... */
+            is_submit_button(event.target) &&
+
+            /* the button needs a form, that's going to be submitted */
+            event.target.form &&
+
+            /* again, if the form should not be validated, we're out of the game */
+            !event.target.form.hasAttribute('novalidate')
+          );
+        }
+
+        /**
+         * test, if the keypress event would trigger a submit
+         */
+        function is_submitting_keypress(event) {
+          return (
+            /* prevented default: won't trigger a submit */
+            !event.defaultPrevented && (
+            /* ...and <Enter> was pressed... */
+            event.keyCode === 13 &&
+
+            /* ...on an <input> that is... */
+            event.target.nodeName === 'INPUT' &&
+
+            /* ...a standard text input field (not checkbox, ...) */
+            text_types.indexOf(event.target.type) > -1 ||
+            /* or <Enter> or <Space> was pressed... */
+            (event.keyCode === 13 || event.keyCode === 32) &&
+
+            /* ...on a submit button */
+            is_submit_button(event.target)) &&
+
+            /* there's a form... */
+            event.target.form &&
+
+            /* ...and the form allows validation */
+            !event.target.form.hasAttribute('novalidate')
+          );
+        }
+
+        /**
+         * catch explicit submission by click on a button
+         */
+        function click_handler(event) {
+          if (is_submitting_click(event)) {
+            event.preventDefault();
+            if (is_submit_button(event.target) && event.target.hasAttribute('formnovalidate')) {
+              /* if validation should be ignored, we're not interested in any checks */
+              submit_form_via(event.target);
+            } else {
+              check(event);
+            }
+          }
+        }
+
+        /**
+         * catch explicit submission by click on a button, but circumvent validation
+         */
+        function ignored_click_handler(event) {
+          if (is_submitting_click(event)) {
+            event.preventDefault();
+            submit_form_via(event.target);
+          }
+        }
+
+        /**
+         * catch implicit submission by pressing <Enter> in some situations
+         */
+        function keypress_handler(event) {
+          if (is_submitting_keypress(event)) {
+            var wrapper = get_wrapper(event.target.form) || { settings: {} };
+            if (wrapper.settings.prevent_implicit_submit) {
+              /* user doesn't want an implicit submit. Cancel here. */
+              event.preventDefault();
+              return;
+            }
+
+            /* check, that there is no submit button in the form. Otherwise
+             * that should be clicked. */
+            var el = event.target.form.elements.length;
+            var submit;
+            for (var i = 0; i < el; i++) {
+              if (['image', 'submit'].indexOf(event.target.form.elements[i].type) > -1) {
+                submit = event.target.form.elements[i];
+                break;
+              }
+            }
+
+            event.preventDefault();
+            if (submit) {
+              submit.click();
+            } else {
+              check(event);
+            }
+          }
+        }
+
+        /**
+         * catch implicit submission by pressing <Enter> in some situations, but circumvent validation
+         */
+        function ignored_keypress_handler(event) {
+          if (is_submitting_keypress(event)) {
+            /* check, that there is no submit button in the form. Otherwise
+             * that should be clicked. */
+            var el = event.target.form.elements.length;
+            var submit;
+            for (var i = 0; i < el; i++) {
+              if (['image', 'submit'].indexOf(event.target.form.elements[i].type) > -1) {
+                submit = event.target.form.elements[i];
+                break;
+              }
+            }
+
+            event.preventDefault();
+            if (submit) {
+              submit.click();
+            } else {
+              submit_form_via(event.target);
+            }
+          }
+        }
+
+        /**
+         * catch all relevant events _prior_ to a form being submitted
+         *
+         * @param bool ignore bypass validation, when an attempt to submit the
+         *                    form is detected. True, when the wrapper's revalidate
+         *                    setting is 'never'.
+         */
+        function catch_submit(listening_node) {
+          var ignore = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+          if (ignore) {
+            listening_node.addEventListener('click', ignored_click_handler);
+            listening_node.addEventListener('keypress', ignored_keypress_handler);
+          } else {
+            listening_node.addEventListener('click', click_handler);
+            listening_node.addEventListener('keypress', keypress_handler);
+          }
+        }
+
+        /**
+         * decommission the event listeners from catch_submit() again
+         */
+        function uncatch_submit(listening_node) {
+          listening_node.removeEventListener('click', ignored_click_handler);
+          listening_node.removeEventListener('keypress', ignored_keypress_handler);
+          listening_node.removeEventListener('click', click_handler);
+          listening_node.removeEventListener('keypress', keypress_handler);
+        }
+
+        /**
+         * remove `property` from element and restore _original_property, if present
+         */
+
+        function uninstall_property (element, property) {
+          delete element[property];
+
+          var original_descriptor = Object.getOwnPropertyDescriptor(element, '_original_' + property);
+
+          if (original_descriptor) {
+            Object.defineProperty(element, property, original_descriptor);
+          }
+        }
+
+        /**
+         * add `property` to an element
+         *
+         * js> installer(element, 'foo', { value: 'bar' });
+         * js> assert(element.foo === 'bar');
+         */
+        function install_property (element, property, descriptor) {
+          descriptor.configurable = true;
+          descriptor.enumerable = true;
+          if ('value' in descriptor) {
+            descriptor.writable = true;
+          }
+
+          var original_descriptor = Object.getOwnPropertyDescriptor(element, property);
+
+          if (original_descriptor) {
+
+            if (original_descriptor.configurable === false) {
+              var wrapper = get_wrapper(element);
+              if (wrapper && wrapper.settings.debug) {
+                /* global console */
+                console.log('[hyperform] cannot install custom property ' + property);
+              }
+              return false;
+            }
+
+            /* we already installed that property... */
+            if (original_descriptor.get && original_descriptor.get.__hyperform || original_descriptor.value && original_descriptor.value.__hyperform) {
+              return;
+            }
+
+            /* publish existing property under new name, if it's not from us */
+            Object.defineProperty(element, '_original_' + property, original_descriptor);
+          }
+
+          delete element[property];
+          Object.defineProperty(element, property, descriptor);
+
+          return true;
+        }
+
+        function is_field (element) {
+                return element instanceof window.HTMLButtonElement || element instanceof window.HTMLInputElement || element instanceof window.HTMLSelectElement || element instanceof window.HTMLTextAreaElement || element instanceof window.HTMLFieldSetElement || element === window.HTMLButtonElement.prototype || element === window.HTMLInputElement.prototype || element === window.HTMLSelectElement.prototype || element === window.HTMLTextAreaElement.prototype || element === window.HTMLFieldSetElement.prototype;
+        }
+
+        /**
+         * set a custom validity message or delete it with an empty string
+         */
+        function setCustomValidity(element, msg) {
+          message_store.set(element, msg, true);
+        }
+
+        function sprintf (str) {
+          for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+            args[_key - 1] = arguments[_key];
+          }
+
+          var args_length = args.length;
+          var global_index = 0;
+
+          return str.replace(/%([0-9]+\$)?([sl])/g, function (match, position, type) {
+            var local_index = global_index;
+            if (position) {
+              local_index = Number(position.replace(/\$$/, '')) - 1;
+            }
+            global_index += 1;
+
+            var arg = '';
+            if (args_length > local_index) {
+              arg = args[local_index];
+            }
+
+            if (arg instanceof Date || typeof arg === 'number' || arg instanceof Number) {
+              /* try getting a localized representation of dates and numbers, if the
+               * browser supports this */
+              if (type === 'l') {
+                arg = (arg.toLocaleString || arg.toString).call(arg);
+              } else {
+                arg = arg.toString();
+              }
+            }
+
+            return arg;
+          });
+        }
+
+        /* For a given date, get the ISO week number
+         *
+         * Source: http://stackoverflow.com/a/6117889/113195
+         *
+         * Based on information at:
+         *
+         *    http://www.merlyn.demon.co.uk/weekcalc.htm#WNR
+         *
+         * Algorithm is to find nearest thursday, it's year
+         * is the year of the week number. Then get weeks
+         * between that date and the first day of that year.
+         *
+         * Note that dates in one year can be weeks of previous
+         * or next year, overlap is up to 3 days.
+         *
+         * e.g. 2014/12/29 is Monday in week  1 of 2015
+         *      2012/1/1   is Sunday in week 52 of 2011
+         */
+
+        function get_week_of_year (d) {
+          /* Copy date so don't modify original */
+          d = new Date(+d);
+          d.setUTCHours(0, 0, 0);
+          /* Set to nearest Thursday: current date + 4 - current day number
+           * Make Sunday's day number 7 */
+          d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+          /* Get first day of year */
+          var yearStart = new Date(d.getUTCFullYear(), 0, 1);
+          /* Calculate full weeks to nearest Thursday */
+          var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+          /* Return array of year and week number */
+          return [d.getUTCFullYear(), weekNo];
+        }
+
+        function pad(num) {
+          var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+
+          var s = num + '';
+          while (s.length < size) {
+            s = '0' + s;
+          }
+          return s;
+        }
+
+        /**
+         * calculate a string from a date according to HTML5
+         */
+        function date_to_string(date, element_type) {
+          if (!(date instanceof Date)) {
+            return null;
+          }
+
+          switch (element_type) {
+            case 'datetime':
+              return date_to_string(date, 'date') + 'T' + date_to_string(date, 'time');
+
+            case 'datetime-local':
+              return sprintf('%s-%s-%sT%s:%s:%s.%s', date.getFullYear(), pad(date.getMonth() + 1), pad(date.getDate()), pad(date.getHours()), pad(date.getMinutes()), pad(date.getSeconds()), pad(date.getMilliseconds(), 3)).replace(/(:00)?\.000$/, '');
+
+            case 'date':
+              return sprintf('%s-%s-%s', date.getUTCFullYear(), pad(date.getUTCMonth() + 1), pad(date.getUTCDate()));
+
+            case 'month':
+              return sprintf('%s-%s', date.getUTCFullYear(), pad(date.getUTCMonth() + 1));
+
+            case 'week':
+              var params = get_week_of_year(date);
+              return sprintf.call(null, '%s-W%s', params[0], pad(params[1]));
+
+            case 'time':
+              return sprintf('%s:%s:%s.%s', pad(date.getUTCHours()), pad(date.getUTCMinutes()), pad(date.getUTCSeconds()), pad(date.getUTCMilliseconds(), 3)).replace(/(:00)?\.000$/, '');
+          }
+
+          return null;
+        }
+
+        /**
+         * return a new Date() representing the ISO date for a week number
+         *
+         * @see http://stackoverflow.com/a/16591175/113195
+         */
+
+        function get_date_from_week (week, year) {
+          var date = new Date(Date.UTC(year, 0, 1 + (week - 1) * 7));
+
+          if (date.getUTCDay() <= 4 /* thursday */) {
+              date.setUTCDate(date.getUTCDate() - date.getUTCDay() + 1);
+            } else {
+            date.setUTCDate(date.getUTCDate() + 8 - date.getUTCDay());
+          }
+
+          return date;
+        }
+
+        /**
+         * calculate a date from a string according to HTML5
+         */
+        function string_to_date (string, element_type) {
+          var date = new Date(0);
+          var ms;
+          switch (element_type) {
+            case 'datetime':
+              if (!/^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(string)) {
+                return null;
+              }
+              ms = RegExp.$7 || '000';
+              while (ms.length < 3) {
+                ms += '0';
+              }
+              date.setUTCFullYear(Number(RegExp.$1));
+              date.setUTCMonth(Number(RegExp.$2) - 1, Number(RegExp.$3));
+              date.setUTCHours(Number(RegExp.$4), Number(RegExp.$5), Number(RegExp.$6 || 0), Number(ms));
+              return date;
+
+            case 'date':
+              if (!/^([0-9]{4,})-([0-9]{2})-([0-9]{2})$/.test(string)) {
+                return null;
+              }
+              date.setUTCFullYear(Number(RegExp.$1));
+              date.setUTCMonth(Number(RegExp.$2) - 1, Number(RegExp.$3));
+              return date;
+
+            case 'month':
+              if (!/^([0-9]{4,})-([0-9]{2})$/.test(string)) {
+                return null;
+              }
+              date.setUTCFullYear(Number(RegExp.$1));
+              date.setUTCMonth(Number(RegExp.$2) - 1, 1);
+              return date;
+
+            case 'week':
+              if (!/^([0-9]{4,})-W(0[1-9]|[1234][0-9]|5[0-3])$/.test(string)) {
+                return null;
+              }
+              return get_date_from_week(Number(RegExp.$2), Number(RegExp.$1));
+
+            case 'time':
+              if (!/^([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(string)) {
+                return null;
+              }
+              ms = RegExp.$4 || '000';
+              while (ms.length < 3) {
+                ms += '0';
+              }
+              date.setUTCHours(Number(RegExp.$1), Number(RegExp.$2), Number(RegExp.$3 || 0), Number(ms));
+              return date;
+          }
+
+          return null;
+        }
+
+        /**
+         * calculate a date from a string according to HTML5
+         */
+        function string_to_number (string, element_type) {
+          var rval = string_to_date(string, element_type);
+          if (rval !== null) {
+            return +rval;
+          }
+          /* not parseFloat, because we want NaN for invalid values like "1.2xxy" */
+          return Number(string);
+        }
+
+        /**
+         * get the element's type in a backwards-compatible way
+         */
+        function get_type (element) {
+          if (element instanceof window.HTMLTextAreaElement) {
+            return 'textarea';
+          } else if (element instanceof window.HTMLSelectElement) {
+            return element.hasAttribute('multiple') ? 'select-multiple' : 'select-one';
+          } else if (element instanceof window.HTMLButtonElement) {
+            return (element.getAttribute('type') || 'submit').toLowerCase();
+          } else if (element instanceof window.HTMLInputElement) {
+            var attr = (element.getAttribute('type') || '').toLowerCase();
+            if (attr && inputs.indexOf(attr) > -1) {
+              return attr;
+            } else {
+              /* perhaps the DOM has in-depth knowledge. Take that before returning
+               * 'text'. */
+              return element.type || 'text';
+            }
+          }
+
+          return '';
+        }
+
+        /**
+         * the following validation messages are from Firefox source,
+         * http://mxr.mozilla.org/mozilla-central/source/dom/locales/en-US/chrome/dom/dom.properties
+         * released under MPL license, http://mozilla.org/MPL/2.0/.
+         */
+
+        var catalog = {
+          en: {
+            TextTooLong: 'Please shorten this text to %l characters or less (you are currently using %l characters).',
+            ValueMissing: 'Please fill out this field.',
+            CheckboxMissing: 'Please check this box if you want to proceed.',
+            RadioMissing: 'Please select one of these options.',
+            FileMissing: 'Please select a file.',
+            SelectMissing: 'Please select an item in the list.',
+            InvalidEmail: 'Please enter an email address.',
+            InvalidURL: 'Please enter a URL.',
+            PatternMismatch: 'Please match the requested format.',
+            PatternMismatchWithTitle: 'Please match the requested format: %l.',
+            NumberRangeOverflow: 'Please select a value that is no more than %l.',
+            DateRangeOverflow: 'Please select a value that is no later than %l.',
+            TimeRangeOverflow: 'Please select a value that is no later than %l.',
+            NumberRangeUnderflow: 'Please select a value that is no less than %l.',
+            DateRangeUnderflow: 'Please select a value that is no earlier than %l.',
+            TimeRangeUnderflow: 'Please select a value that is no earlier than %l.',
+            StepMismatch: 'Please select a valid value. The two nearest valid values are %l and %l.',
+            StepMismatchOneValue: 'Please select a valid value. The nearest valid value is %l.',
+            BadInputNumber: 'Please enter a number.'
+          }
+        };
+
+        var language = 'en';
+
+        function set_language(newlang) {
+          language = newlang;
+        }
+
+        function add_translation(lang, new_catalog) {
+          if (!(lang in catalog)) {
+            catalog[lang] = {};
+          }
+          for (var key in new_catalog) {
+            if (new_catalog.hasOwnProperty(key)) {
+              catalog[lang][key] = new_catalog[key];
+            }
+          }
+        }
+
+        function _ (s) {
+          if (language in catalog && s in catalog[language]) {
+            return catalog[language][s];
+          } else if (s in catalog.en) {
+            return catalog.en[s];
+          }
+          return s;
+        }
+
+        var default_step = {
+          'datetime-local': 60,
+          datetime: 60,
+          time: 60
+        };
+
+        var step_scale_factor = {
+          'datetime-local': 1000,
+          datetime: 1000,
+          date: 86400000,
+          week: 604800000,
+          time: 1000
+        };
+
+        var default_step_base = {
+          week: -259200000
+        };
+
+        var default_min = {
+          range: 0
+        };
+
+        var default_max = {
+          range: 100
+        };
+
+        /**
+         * get previous and next valid values for a stepped input element
+         */
+        function get_next_valid (element) {
+          var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+          var type = get_type(element);
+
+          var aMin = element.getAttribute('min');
+          var min = default_min[type] || NaN;
+          if (aMin) {
+            var pMin = string_to_number(aMin, type);
+            if (!isNaN(pMin)) {
+              min = pMin;
+            }
+          }
+
+          var aMax = element.getAttribute('max');
+          var max = default_max[type] || NaN;
+          if (aMax) {
+            var pMax = string_to_number(aMax, type);
+            if (!isNaN(pMax)) {
+              max = pMax;
+            }
+          }
+
+          var aStep = element.getAttribute('step');
+          var step = default_step[type] || 1;
+          if (aStep && aStep.toLowerCase() === 'any') {
+            /* quick return: we cannot calculate prev and next */
+            return [_('any value'), _('any value')];
+          } else if (aStep) {
+            var pStep = string_to_number(aStep, type);
+            if (!isNaN(pStep)) {
+              step = pStep;
+            }
+          }
+
+          var default_value = string_to_number(element.getAttribute('value'), type);
+
+          var value = string_to_number(element.value || element.getAttribute('value'), type);
+
+          if (isNaN(value)) {
+            /* quick return: we cannot calculate without a solid base */
+            return [_('any valid value'), _('any valid value')];
+          }
+
+          var step_base = !isNaN(min) ? min : !isNaN(default_value) ? default_value : default_step_base[type] || 0;
+
+          var scale = step_scale_factor[type] || 1;
+
+          var prev = step_base + Math.floor((value - step_base) / (step * scale)) * (step * scale) * n;
+          var next = step_base + (Math.floor((value - step_base) / (step * scale)) + 1) * (step * scale) * n;
+
+          if (prev < min) {
+            prev = null;
+          } else if (prev > max) {
+            prev = max;
+          }
+
+          if (next > max) {
+            next = null;
+          } else if (next < min) {
+            next = min;
+          }
+
+          /* convert to date objects, if appropriate */
+          if (dates.indexOf(type) > -1) {
+            prev = date_to_string(new Date(prev), type);
+            next = date_to_string(new Date(next), type);
+          }
+
+          return [prev, next];
+        }
+
+        /**
+         * implement the valueAsDate functionality
+         *
+         * @see https://html.spec.whatwg.org/multipage/forms.html#dom-input-valueasdate
+         */
+        function valueAsDate(element) {
+          var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+
+          var type = get_type(element);
+          if (dates.indexOf(type) > -1) {
+            if (value !== undefined) {
+              /* setter: value must be null or a Date() */
+              if (value === null) {
+                element.value = '';
+              } else if (value instanceof Date) {
+                if (isNaN(value.getTime())) {
+                  element.value = '';
+                } else {
+                  element.value = date_to_string(value, type);
+                }
+              } else {
+                throw new window.DOMException('valueAsDate setter encountered invalid value', 'TypeError');
+              }
+              return;
+            }
+
+            var value_date = string_to_date(element.value, type);
+            return value_date instanceof Date ? value_date : null;
+          } else if (value !== undefined) {
+            /* trying to set a date on a not-date input fails */
+            throw new window.DOMException('valueAsDate setter cannot set date on this element', 'InvalidStateError');
+          }
+
+          return null;
+        }
+
+        /**
+         * implement the valueAsNumber functionality
+         *
+         * @see https://html.spec.whatwg.org/multipage/forms.html#dom-input-valueasnumber
+         */
+        function valueAsNumber(element) {
+          var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+
+          var type = get_type(element);
+          if (numbers.indexOf(type) > -1) {
+            if (type === 'range' && element.hasAttribute('multiple')) {
+              /* @see https://html.spec.whatwg.org/multipage/forms.html#do-not-apply */
+              return NaN;
+            }
+
+            if (value !== undefined) {
+              /* setter: value must be NaN or a finite number */
+              if (isNaN(value)) {
+                element.value = '';
+              } else if (typeof value === 'number' && window.isFinite(value)) {
+                try {
+                  /* try setting as a date, but... */
+                  valueAsDate(element, new Date(value));
+                } catch (e) {
+                  /* ... when valueAsDate is not responsible, ... */
+                  if (!(e instanceof window.DOMException)) {
+                    throw e;
+                  }
+                  /* ... set it via Number.toString(). */
+                  element.value = value.toString();
+                }
+              } else {
+                throw new window.DOMException('valueAsNumber setter encountered invalid value', 'TypeError');
+              }
+              return;
+            }
+
+            return string_to_number(element.value, type);
+          } else if (value !== undefined) {
+            /* trying to set a number on a not-number input fails */
+            throw new window.DOMException('valueAsNumber setter cannot set number on this element', 'InvalidStateError');
+          }
+
+          return NaN;
+        }
+
+        /**
+         *
+         */
+        function stepDown(element) {
+          var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+          if (numbers.indexOf(get_type(element)) === -1) {
+            throw new window.DOMException('stepDown encountered invalid type', 'InvalidStateError');
+          }
+          if ((element.getAttribute('step') || '').toLowerCase() === 'any') {
+            throw new window.DOMException('stepDown encountered step "any"', 'InvalidStateError');
+          }
+
+          var prev = get_next_valid(element, n)[0];
+
+          if (prev !== null) {
+            valueAsNumber(element, prev);
+          }
+        }
+
+        /**
+         *
+         */
+        function stepUp(element) {
+          var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+          if (numbers.indexOf(get_type(element)) === -1) {
+            throw new window.DOMException('stepUp encountered invalid type', 'InvalidStateError');
+          }
+          if ((element.getAttribute('step') || '').toLowerCase() === 'any') {
+            throw new window.DOMException('stepUp encountered step "any"', 'InvalidStateError');
+          }
+
+          var next = get_next_valid(element, n)[1];
+
+          if (next !== null) {
+            valueAsNumber(element, next);
+          }
+        }
+
+        /**
+         * get the validation message for an element, empty string, if the element
+         * satisfies all constraints.
+         */
+        function validationMessage(element) {
+          var msg = message_store.get(element);
+          if (!msg) {
+            return '';
+          }
+
+          /* make it a primitive again, since message_store returns String(). */
+          return msg.toString();
+        }
+
+        /**
+         * check, if an element will be subject to HTML5 validation at all
+         */
+        function willValidate(element) {
+          return is_validation_candidate(element);
+        }
+
+        var gA = function gA(prop) {
+          return function () {
+            return do_filter('attr_get_' + prop, this.getAttribute(prop), this);
+          };
+        };
+
+        var sA = function sA(prop) {
+          return function (value) {
+            this.setAttribute(prop, do_filter('attr_set_' + prop, value, this));
+          };
+        };
+
+        var gAb = function gAb(prop) {
+          return function () {
+            return do_filter('attr_get_' + prop, this.hasAttribute(prop), this);
+          };
+        };
+
+        var sAb = function sAb(prop) {
+          return function (value) {
+            if (do_filter('attr_set_' + prop, value, this)) {
+              this.setAttribute(prop, prop);
+            } else {
+              this.removeAttribute(prop);
+            }
+          };
+        };
+
+        var gAn = function gAn(prop) {
+          return function () {
+            return do_filter('attr_get_' + prop, Math.max(0, Number(this.getAttribute(prop))), this);
+          };
+        };
+
+        var sAn = function sAn(prop) {
+          return function (value) {
+            value = do_filter('attr_set_' + prop, value, this);
+            if (/^[0-9]+$/.test(value)) {
+              this.setAttribute(prop, value);
+            }
+          };
+        };
+
+        function install_properties(element) {
+          var _arr = ['accept', 'max', 'min', 'pattern', 'placeholder', 'step'];
+
+          for (var _i = 0; _i < _arr.length; _i++) {
+            var prop = _arr[_i];
+            install_property(element, prop, {
+              get: gA(prop),
+              set: sA(prop)
+            });
+          }
+
+          var _arr2 = ['multiple', 'required', 'readOnly'];
+          for (var _i2 = 0; _i2 < _arr2.length; _i2++) {
+            var _prop = _arr2[_i2];
+            install_property(element, _prop, {
+              get: gAb(_prop.toLowerCase()),
+              set: sAb(_prop.toLowerCase())
+            });
+          }
+
+          var _arr3 = ['minLength', 'maxLength'];
+          for (var _i3 = 0; _i3 < _arr3.length; _i3++) {
+            var _prop2 = _arr3[_i3];
+            install_property(element, _prop2, {
+              get: gAn(_prop2.toLowerCase()),
+              set: sAn(_prop2.toLowerCase())
+            });
+          }
+        }
+
+        function uninstall_properties(element) {
+          var _arr4 = ['accept', 'max', 'min', 'pattern', 'placeholder', 'step', 'multiple', 'required', 'readOnly', 'minLength', 'maxLength'];
+
+          for (var _i4 = 0; _i4 < _arr4.length; _i4++) {
+            var prop = _arr4[_i4];
+            uninstall_property(element, prop);
+          }
+        }
+
+        var polyfills = {
+          checkValidity: {
+            value: mark(function () {
+              return checkValidity(this);
+            })
+          },
+          reportValidity: {
+            value: mark(function () {
+              return reportValidity(this);
+            })
+          },
+          setCustomValidity: {
+            value: mark(function (msg) {
+              return setCustomValidity(this, msg);
+            })
+          },
+          stepDown: {
+            value: mark(function () {
+              var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+              return stepDown(this, n);
+            })
+          },
+          stepUp: {
+            value: mark(function () {
+              var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+              return stepUp(this, n);
+            })
+          },
+          validationMessage: {
+            get: mark(function () {
+              return validationMessage(this);
+            })
+          },
+          validity: {
+            get: mark(function () {
+              return ValidityState(this);
+            })
+          },
+          valueAsDate: {
+            get: mark(function () {
+              return valueAsDate(this);
+            }),
+            set: mark(function (value) {
+              valueAsDate(this, value);
+            })
+          },
+          valueAsNumber: {
+            get: mark(function () {
+              return valueAsNumber(this);
+            }),
+            set: mark(function (value) {
+              valueAsNumber(this, value);
+            })
+          },
+          willValidate: {
+            get: mark(function () {
+              return willValidate(this);
+            })
+          }
+        };
+
+        function polyfill (element) {
+          if (is_field(element)) {
+
+            for (var prop in polyfills) {
+              install_property(element, prop, polyfills[prop]);
+            }
+
+            install_properties(element);
+          } else if (element instanceof window.HTMLFormElement || element === window.HTMLFormElement.prototype) {
+            install_property(element, 'checkValidity', polyfills.checkValidity);
+            install_property(element, 'reportValidity', polyfills.reportValidity);
+          }
+        }
+
+        function polyunfill (element) {
+          if (is_field(element)) {
+
+            uninstall_property(element, 'checkValidity');
+            uninstall_property(element, 'reportValidity');
+            uninstall_property(element, 'setCustomValidity');
+            uninstall_property(element, 'stepDown');
+            uninstall_property(element, 'stepUp');
+            uninstall_property(element, 'validationMessage');
+            uninstall_property(element, 'validity');
+            uninstall_property(element, 'valueAsDate');
+            uninstall_property(element, 'valueAsNumber');
+            uninstall_property(element, 'willValidate');
+
+            uninstall_properties(element);
+          } else if (element instanceof window.HTMLFormElement) {
+            uninstall_property(element, 'checkValidity');
+            uninstall_property(element, 'reportValidity');
+          }
+        }
+
+        var instances = new WeakMap();
+
+        /**
+         * wrap <form>s, window or document, that get treated with the global
+         * hyperform()
+         */
+        function Wrapper(form, settings) {
+
+          /* do not allow more than one instance per form. Otherwise we'd end
+           * up with double event handlers, polyfills re-applied, ... */
+          var existing = instances.get(form);
+          if (existing) {
+            existing.settings = settings;
+            return existing;
+          }
+
+          this.form = form;
+          this.settings = settings;
+          this.revalidator = this.revalidate.bind(this);
+
+          instances.set(form, this);
+
+          catch_submit(form, settings.revalidate === 'never');
+
+          if (form === window || form.nodeType === 9) {
+            /* install on the prototypes, when called for the whole document */
+            this.install([window.HTMLButtonElement.prototype, window.HTMLInputElement.prototype, window.HTMLSelectElement.prototype, window.HTMLTextAreaElement.prototype, window.HTMLFieldSetElement.prototype]);
+            polyfill(window.HTMLFormElement);
+          } else if (form instanceof window.HTMLFormElement || form instanceof window.HTMLFieldSetElement) {
+            this.install(form.elements);
+            if (form instanceof window.HTMLFormElement) {
+              polyfill(form);
+            }
+          }
+
+          if (settings.revalidate === 'oninput' || settings.revalidate === 'hybrid') {
+            /* in a perfect world we'd just bind to "input", but support here is
+              * abysmal: http://caniuse.com/#feat=input-event */
+            form.addEventListener('keyup', this.revalidator);
+            form.addEventListener('change', this.revalidator);
+          }
+          if (settings.revalidate === 'onblur' || settings.revalidate === 'hybrid') {
+            /* useCapture=true, because `blur` doesn't bubble. See
+              * https://developer.mozilla.org/en-US/docs/Web/Events/blur#Event_delegation
+              * for a discussion */
+            form.addEventListener('blur', this.revalidator, true);
+          }
+        }
+
+        Wrapper.prototype = {
+          destroy: function destroy() {
+            uncatch_submit(this.form);
+            instances.delete(this.form);
+            this.form.removeEventListener('keyup', this.revalidator);
+            this.form.removeEventListener('change', this.revalidator);
+            this.form.removeEventListener('blur', this.revalidator, true);
+            if (this.form === window || this.form.nodeType === 9) {
+              this.uninstall([window.HTMLButtonElement.prototype, window.HTMLInputElement.prototype, window.HTMLSelectElement.prototype, window.HTMLTextAreaElement.prototype, window.HTMLFieldSetElement.prototype]);
+              polyunfill(window.HTMLFormElement);
+            } else if (this.form instanceof window.HTMLFormElement || this.form instanceof window.HTMLFieldSetElement) {
+              this.uninstall(this.form.elements);
+              if (this.form instanceof window.HTMLFormElement) {
+                polyunfill(this.form);
+              }
+            }
+          },
+
+
+          /**
+           * revalidate an input element
+           */
+          revalidate: function revalidate(event) {
+            if (event.target instanceof window.HTMLButtonElement || event.target instanceof window.HTMLTextAreaElement || event.target instanceof window.HTMLSelectElement || event.target instanceof window.HTMLInputElement) {
+
+              if (this.settings.revalidate === 'hybrid') {
+                /* "hybrid" somewhat simulates what browsers do. See for example
+                 * Firefox's :-moz-ui-invalid pseudo-class:
+                 * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
+                if (event.type === 'blur' && event.target.value !== event.target.defaultValue || ValidityState(event.target).valid) {
+                  /* on blur, update the report when the value has changed from the
+                   * default or when the element is valid (possibly removing a still
+                   * standing invalidity report). */
+                  reportValidity(event.target);
+                } else if (event.type === 'keyup' || event.type === 'change') {
+                  if (ValidityState(event.target).valid) {
+                    // report instantly, when an element becomes valid,
+                    // postpone report to blur event, when an element is invalid
+                    reportValidity(event.target);
+                  }
+                }
+              } else {
+                reportValidity(event.target);
+              }
+            }
+          },
+
+
+          /**
+           * install the polyfills on each given element
+           *
+           * If you add elements dynamically, you have to call install() on them
+           * yourself:
+           *
+           * js> var form = hyperform(document.forms[0]);
+           * js> document.forms[0].appendChild(input);
+           * js> form.install(input);
+           *
+           * You can skip this, if you called hyperform on window or document.
+           */
+          install: function install(els) {
+            if (els instanceof window.Element) {
+              els = [els];
+            }
+
+            var els_length = els.length;
+
+            for (var i = 0; i < els_length; i++) {
+              polyfill(els[i]);
+            }
+          },
+          uninstall: function uninstall(els) {
+            if (els instanceof window.Element) {
+              els = [els];
+            }
+
+            var els_length = els.length;
+
+            for (var i = 0; i < els_length; i++) {
+              polyunfill(els[i]);
+            }
+          }
+        };
+
+        /**
+         * try to get the appropriate wrapper for a specific element by looking up
+         * its parent chain
+         *
+         * @return Wrapper | undefined
+         */
+        function get_wrapper(element) {
+          var wrapped;
+
+          if (element.form) {
+            /* try a shortcut with the element's <form> */
+            wrapped = instances.get(element.form);
+          }
+
+          /* walk up the parent nodes until document (including) */
+          while (!wrapped && element) {
+            wrapped = instances.get(element);
+            element = element.parentNode;
+          }
+
+          if (!wrapped) {
+            /* try the global instance, if exists. This may also be undefined. */
+            wrapped = instances.get(window);
+          }
+
+          return wrapped;
+        }
+
+        /**
+         * check if an element is a candidate for constraint validation
+         *
+         * @see https://html.spec.whatwg.org/multipage/forms.html#barred-from-constraint-validation
+         */
+        function is_validation_candidate (element) {
+
+          /* allow a shortcut via filters, e.g. to validate type=hidden fields */
+          var filtered = do_filter('is_validation_candidate', null, element);
+          if (filtered !== null) {
+            return !!filtered;
+          }
+
+          /* it must be any of those elements */
+          if (element instanceof window.HTMLSelectElement || element instanceof window.HTMLTextAreaElement || element instanceof window.HTMLButtonElement || element instanceof window.HTMLInputElement) {
+
+            var type = get_type(element);
+            /* its type must be in the whitelist or missing (select, textarea) */
+            if (!type || non_inputs.indexOf(type) > -1 || validation_candidates.indexOf(type) > -1) {
+
+              /* it mustn't be disabled or readonly */
+              if (!element.hasAttribute('disabled') && !element.hasAttribute('readonly')) {
+
+                var wrapped_form = get_wrapper(element);
+                /* it hasn't got the (non-standard) attribute 'novalidate' or its
+                 * parent form has got the strict parameter */
+                if (wrapped_form && wrapped_form.settings.novalidate_on_elements || !element.hasAttribute('novalidate') || !element.noValidate) {
+
+                  /* it isn't part of a <fieldset disabled> */
+                  var p = element.parentNode;
+                  while (p && p.nodeType === 1) {
+                    if (p instanceof window.HTMLFieldSetElement && p.hasAttribute('disabled')) {
+                      /* quick return, if it's a child of a disabled fieldset */
+                      return false;
+                    } else if (p.nodeName.toUpperCase() === 'DATALIST') {
+                      /* quick return, if it's a child of a datalist
+                       * Do not use HTMLDataListElement to support older browsers,
+                       * too.
+                       * @see https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element:barred-from-constraint-validation
+                       */
+                      return false;
+                    } else if (p === element.form) {
+                      /* the outer boundary. We can stop looking for relevant
+                       * fieldsets. */
+                      break;
+                    }
+                    p = p.parentNode;
+                  }
+
+                  /* then it's a candidate */
+                  return true;
+                }
+              }
+            }
+          }
+
+          /* this is no HTML5 validation candidate... */
+          return false;
+        }
+
+        function format_date (date) {
+          var part = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+
+          switch (part) {
+            case 'date':
+              return (date.toLocaleDateString || date.toDateString).call(date);
+            case 'time':
+              return (date.toLocaleTimeString || date.toTimeString).call(date);
+            case 'month':
+              return 'toLocaleDateString' in date ? date.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: '2-digit'
+              }) : date.toDateString();
+            // case 'week':
+            // TODO
+            default:
+              return (date.toLocaleString || date.toString).call(date);
+          }
+        }
+
+        /**
+         * patch String.length to account for non-BMP characters
+         *
+         * @see https://mathiasbynens.be/notes/javascript-unicode
+         * We do not use the simple [...str].length, because it needs a ton of
+         * polyfills in older browsers.
+         */
+
+        function unicode_string_length (str) {
+          return str.match(/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/g).length;
+        }
+
+        /**
+         * internal storage for custom error messages
+         */
+
+        var store$1 = new WeakMap();
+
+        /**
+         * register custom error messages per element
+         */
+        var custom_messages = {
+          set: function set(element, validator, message) {
+            var messages = store$1.get(element) || {};
+            messages[validator] = message;
+            store$1.set(element, messages);
+            return custom_messages;
+          },
+          get: function get(element, validator) {
+            var _default = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
+
+            var messages = store$1.get(element);
+            if (messages === undefined || !(validator in messages)) {
+              var data_id = 'data-' + validator.replace(/[A-Z]/g, '-$&').toLowerCase();
+              if (element.hasAttribute(data_id)) {
+                /* if the element has a data-validator attribute, use this as fallback.
+                 * E.g., if validator == 'valueMissing', the element can specify a
+                 * custom validation message like this:
+                 *     <input data-value-missing="Oh noes!">
+                 */
+                return element.getAttribute(data_id);
+              }
+              return _default;
+            }
+            return messages[validator];
+          },
+          delete: function _delete(element) {
+            var validator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+            if (!validator) {
+              return store$1.delete(element);
+            }
+            var messages = store$1.get(element) || {};
+            if (validator in messages) {
+              delete messages[validator];
+              store$1.set(element, messages);
+              return true;
+            }
+            return false;
+          }
+        };
+
+        var internal_registry = new WeakMap();
+
+        /**
+         * A registry for custom validators
+         *
+         * slim wrapper around a WeakMap to ensure the values are arrays
+         * (hence allowing > 1 validators per element)
+         */
+        var custom_validator_registry = {
+          set: function set(element, validator) {
+            var current = internal_registry.get(element) || [];
+            current.push(validator);
+            internal_registry.set(element, current);
+            return custom_validator_registry;
+          },
+          get: function get(element) {
+            return internal_registry.get(element) || [];
+          },
+          delete: function _delete(element) {
+            return internal_registry.delete(element);
+          }
+        };
+
+        /**
+         * test whether the element suffers from bad input
+         */
+        function test_bad_input (element) {
+          var type = get_type(element);
+
+          if (!is_validation_candidate(element) || input_checked.indexOf(type) === -1) {
+            /* we're not interested, thanks! */
+            return true;
+          }
+
+          /* the browser hides some bad input from the DOM, e.g. malformed numbers,
+           * email addresses with invalid punycode representation, ... We try to resort
+           * to the original method here. The assumption is, that a browser hiding
+           * bad input will hopefully also always support a proper
+           * ValidityState.badInput */
+          if (!element.value) {
+            if ('_original_validity' in element && !element._original_validity.__hyperform) {
+              return !element._original_validity.badInput;
+            }
+            /* no value and no original badInput: Assume all's right. */
+            return true;
+          }
+
+          var result = true;
+          switch (type) {
+            case 'color':
+              result = /^#[a-f0-9]{6}$/.test(element.value);
+              break;
+            case 'number':
+            case 'range':
+              result = !isNaN(Number(element.value));
+              break;
+            case 'datetime':
+            case 'date':
+            case 'month':
+            case 'week':
+            case 'time':
+              result = string_to_date(element.value, type) !== null;
+              break;
+            case 'datetime-local':
+              result = /^([0-9]{4,})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9])(?:\.([0-9]{1,3}))?)?$/.test(element.value);
+              break;
+            case 'tel':
+              /* spec says No! Phone numbers can have all kinds of formats, so this
+               * is expected to be a free-text field. */
+              // TODO we could allow a setting 'phone_regex' to be evaluated here.
+              break;
+            case 'email':
+              break;
+          }
+
+          return result;
+        }
+
+        /**
+         * test the max attribute
+         *
+         * we use Number() instead of parseFloat(), because an invalid attribute
+         * value like "123abc" should result in an error.
+         */
+        function test_max (element) {
+          var type = get_type(element);
+
+          if (!is_validation_candidate(element) || !element.value || !element.hasAttribute('max')) {
+            /* we're not responsible here */
+            return true;
+          }
+
+          var value = void 0,
+              max = void 0;
+          if (dates.indexOf(type) > -1) {
+            value = 1 * string_to_date(element.value, type);
+            max = 1 * (string_to_date(element.getAttribute('max'), type) || NaN);
+          } else {
+            value = Number(element.value);
+            max = Number(element.getAttribute('max'));
+          }
+
+          return isNaN(max) || value <= max;
+        }
+
+        /**
+         * test the maxlength attribute
+         */
+        function test_maxlength (element) {
+          if (!is_validation_candidate(element) || !element.value || text_types.indexOf(get_type(element)) === -1 || !element.hasAttribute('maxlength') || !element.getAttribute('maxlength') // catch maxlength=""
+          ) {
+              return true;
+            }
+
+          var maxlength = parseInt(element.getAttribute('maxlength'), 10);
+
+          /* check, if the maxlength value is usable at all.
+           * We allow maxlength === 0 to basically disable input (Firefox does, too).
+           */
+          if (isNaN(maxlength) || maxlength < 0) {
+            return true;
+          }
+
+          return unicode_string_length(element.value) <= maxlength;
+        }
+
+        /**
+         * test the min attribute
+         *
+         * we use Number() instead of parseFloat(), because an invalid attribute
+         * value like "123abc" should result in an error.
+         */
+        function test_min (element) {
+          var type = get_type(element);
+
+          if (!is_validation_candidate(element) || !element.value || !element.hasAttribute('min')) {
+            /* we're not responsible here */
+            return true;
+          }
+
+          var value = void 0,
+              min = void 0;
+          if (dates.indexOf(type) > -1) {
+            value = 1 * string_to_date(element.value, type);
+            min = 1 * (string_to_date(element.getAttribute('min'), type) || NaN);
+          } else {
+            value = Number(element.value);
+            min = Number(element.getAttribute('min'));
+          }
+
+          return isNaN(min) || value >= min;
+        }
+
+        /**
+         * test the minlength attribute
+         */
+        function test_minlength (element) {
+          if (!is_validation_candidate(element) || !element.value || text_types.indexOf(get_type(element)) === -1 || !element.hasAttribute('minlength') || !element.getAttribute('minlength') // catch minlength=""
+          ) {
+              return true;
+            }
+
+          var minlength = parseInt(element.getAttribute('minlength'), 10);
+
+          /* check, if the minlength value is usable at all. */
+          if (isNaN(minlength) || minlength < 0) {
+            return true;
+          }
+
+          return unicode_string_length(element.value) >= minlength;
+        }
+
+        /**
+         * test the pattern attribute
+         */
+        function test_pattern (element) {
+            return !is_validation_candidate(element) || !element.value || !element.hasAttribute('pattern') || new RegExp('^(?:' + element.getAttribute('pattern') + ')$').test(element.value);
+        }
+
+        /**
+         * test the required attribute
+         */
+        function test_required (element) {
+          if (!is_validation_candidate(element) || !element.hasAttribute('required')) {
+            /* nothing to do */
+            return true;
+          }
+
+          /* we don't need get_type() for element.type, because "checkbox" and "radio"
+           * are well supported. */
+          switch (element.type) {
+            case 'checkbox':
+              return element.checked;
+            //break;
+            case 'radio':
+              /* radio inputs have "required" fulfilled, if _any_ other radio
+               * with the same name in this form is checked. */
+              return !!(element.checked || element.form && Array.prototype.filter.call(document.getElementsByName(element.name), function (radio) {
+                return radio.name === element.name && radio.form === element.form && radio.checked;
+              }).length > 0);
+            //break;
+            default:
+              return !!element.value;
+          }
+        }
+
+        /**
+         * test the step attribute
+         */
+        function test_step (element) {
+          var type = get_type(element);
+
+          if (!is_validation_candidate(element) || !element.value || numbers.indexOf(type) === -1 || (element.getAttribute('step') || '').toLowerCase() === 'any') {
+            /* we're not responsible here. Note: If no step attribute is given, we
+             * need to validate against the default step as per spec. */
+            return true;
+          }
+
+          var step = element.getAttribute('step');
+          if (step) {
+            step = string_to_number(step, type);
+          } else {
+            step = default_step[type] || 1;
+          }
+
+          if (step <= 0 || isNaN(step)) {
+            /* error in specified "step". We cannot validate against it, so the value
+             * is true. */
+            return true;
+          }
+
+          var scale = step_scale_factor[type] || 1;
+
+          var value = string_to_number(element.value, type);
+          var min = string_to_number(element.getAttribute('min') || element.getAttribute('value') || '', type);
+
+          if (isNaN(min)) {
+            min = default_step_base[type] || 0;
+          }
+
+          if (type === 'month') {
+            /* type=month has month-wide steps. See
+             * https://html.spec.whatwg.org/multipage/forms.html#month-state-%28type=month%29
+             */
+            min = new Date(min).getUTCFullYear() * 12 + new Date(min).getUTCMonth();
+            value = new Date(value).getUTCFullYear() * 12 + new Date(value).getUTCMonth();
+          }
+
+          var result = Math.abs(min - value) % (step * scale);
+
+          return result < 0.00000001 ||
+          /* crappy floating-point arithmetics! */
+          result > step * scale - 0.00000001;
+        }
+
+        var ws_on_start_or_end = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+
+        /**
+         * trim a string of whitespace
+         *
+         * We don't use String.trim() to remove the need to polyfill it.
+         */
+        function trim (str) {
+          return str.replace(ws_on_start_or_end, '');
+        }
+
+        /**
+         * split a string on comma and trim the components
+         *
+         * As specified at
+         * https://html.spec.whatwg.org/multipage/infrastructure.html#split-a-string-on-commas
+         * plus removing empty entries.
+         */
+        function comma_split (str) {
+          return str.split(',').map(function (item) {
+            return trim(item);
+          }).filter(function (b) {
+            return b;
+          });
+        }
+
+        /* we use a dummy <a> where we set the href to test URL validity
+         * The definition is out of the "global" scope so that JSDOM can be instantiated
+         * after loading Hyperform for tests.
+         */
+        var url_canary;
+
+        /* see https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address */
+        var email_pattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+        /**
+         * test the type-inherent syntax
+         */
+        function test_type (element) {
+          var type = get_type(element);
+
+          if (!is_validation_candidate(element) || type !== 'file' && !element.value || type !== 'file' && type_checked.indexOf(type) === -1) {
+            /* we're not responsible for this element */
+            return true;
+          }
+
+          var is_valid = true;
+
+          switch (type) {
+            case 'url':
+              if (!url_canary) {
+                url_canary = document.createElement('a');
+              }
+              var value = trim(element.value);
+              url_canary.href = value;
+              is_valid = url_canary.href === value || url_canary.href === value + '/';
+              break;
+            case 'email':
+              if (element.hasAttribute('multiple')) {
+                is_valid = comma_split(element.value).every(function (value) {
+                  return email_pattern.test(value);
+                });
+              } else {
+                is_valid = email_pattern.test(trim(element.value));
+              }
+              break;
+            case 'file':
+              if ('files' in element && element.files.length && element.hasAttribute('accept')) {
+                var patterns = comma_split(element.getAttribute('accept')).map(function (pattern) {
+                  if (/^(audio|video|image)\/\*$/.test(pattern)) {
+                    pattern = new RegExp('^' + RegExp.$1 + '/.+$');
+                  }
+                  return pattern;
+                });
+
+                if (!patterns.length) {
+                  break;
+                }
+
+                fileloop: for (var i = 0; i < element.files.length; i++) {
+                  /* we need to match a whitelist, so pre-set with false */
+                  var file_valid = false;
+
+                  patternloop: for (var j = 0; j < patterns.length; j++) {
+                    var file = element.files[i];
+                    var pattern = patterns[j];
+
+                    var fileprop = file.type;
+
+                    if (typeof pattern === 'string' && pattern.substr(0, 1) === '.') {
+                      if (file.name.search('.') === -1) {
+                        /* no match with any file ending */
+                        continue patternloop;
+                      }
+
+                      fileprop = file.name.substr(file.name.lastIndexOf('.'));
+                    }
+
+                    if (fileprop.search(pattern) === 0) {
+                      /* we found one match and can quit looking */
+                      file_valid = true;
+                      break patternloop;
+                    }
+                  }
+
+                  if (!file_valid) {
+                    is_valid = false;
+                    break fileloop;
+                  }
+                }
+              }
+          }
+
+          return is_valid;
+        }
+
+        /**
+         * boilerplate function for all tests but customError
+         */
+        function check$1(test, react) {
+          return function (element) {
+            var invalid = !test(element);
+            if (invalid) {
+              react(element);
+            }
+            return invalid;
+          };
+        }
+
+        /**
+         * create a common function to set error messages
+         */
+        function set_msg(element, msgtype, _default) {
+          message_store.set(element, custom_messages.get(element, msgtype, _default));
+        }
+
+        var badInput = check$1(test_bad_input, function (element) {
+          return set_msg(element, 'badInput', _('Please match the requested type.'));
+        });
+
+        function customError(element) {
+          /* check, if there are custom validators in the registry, and call
+           * them. */
+          var custom_validators = custom_validator_registry.get(element);
+          var cvl = custom_validators.length;
+          var valid = true;
+
+          if (cvl) {
+            for (var i = 0; i < cvl; i++) {
+              var result = custom_validators[i](element);
+              if (result !== undefined && !result) {
+                valid = false;
+                /* break on first invalid response */
+                break;
+              }
+            }
+          }
+
+          /* check, if there are other validity messages already */
+          if (valid) {
+            var msg = message_store.get(element);
+            valid = !(msg.toString() && 'is_custom' in msg);
+          }
+
+          return !valid;
+        }
+
+        var patternMismatch = check$1(test_pattern, function (element) {
+          set_msg(element, 'patternMismatch', element.title ? sprintf(_('PatternMismatchWithTitle'), element.title) : _('PatternMismatch'));
+        });
+
+        /**
+         * TODO: when rangeOverflow and rangeUnderflow are both called directly and
+         * successful, the inRange and outOfRange classes won't get removed, unless
+         * element.validityState.valid is queried, too.
+         */
+        var rangeOverflow = check$1(test_max, function (element) {
+          var type = get_type(element);
+          var wrapper = get_wrapper(element);
+          var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
+          var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
+
+          var msg = void 0;
+
+          switch (type) {
+            case 'date':
+            case 'datetime':
+            case 'datetime-local':
+              msg = sprintf(_('DateRangeOverflow'), format_date(string_to_date(element.getAttribute('max'), type), type));
+              break;
+            case 'time':
+              msg = sprintf(_('TimeRangeOverflow'), format_date(string_to_date(element.getAttribute('max'), type), type));
+              break;
+            // case 'number':
+            default:
+              msg = sprintf(_('NumberRangeOverflow'), string_to_number(element.getAttribute('max'), type));
+              break;
+          }
+
+          set_msg(element, 'rangeOverflow', msg);
+          element.classList.add(outOfRangeClass);
+          element.classList.remove(inRangeClass);
+        });
+
+        var rangeUnderflow = check$1(test_min, function (element) {
+          var type = get_type(element);
+          var wrapper = get_wrapper(element);
+          var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
+          var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
+
+          var msg = void 0;
+
+          switch (type) {
+            case 'date':
+            case 'datetime':
+            case 'datetime-local':
+              msg = sprintf(_('DateRangeUnderflow'), format_date(string_to_date(element.getAttribute('min'), type), type));
+              break;
+            case 'time':
+              msg = sprintf(_('TimeRangeUnderflow'), format_date(string_to_date(element.getAttribute('min'), type), type));
+              break;
+            // case 'number':
+            default:
+              msg = sprintf(_('NumberRangeUnderflow'), string_to_number(element.getAttribute('min'), type));
+              break;
+          }
+
+          set_msg(element, 'rangeUnderflow', msg);
+          element.classList.add(outOfRangeClass);
+          element.classList.remove(inRangeClass);
+        });
+
+        var stepMismatch = check$1(test_step, function (element) {
+          var list = get_next_valid(element);
+          var min = list[0];
+          var max = list[1];
+          var sole = false;
+          var msg = void 0;
+
+          if (min === null) {
+            sole = max;
+          } else if (max === null) {
+            sole = min;
+          }
+
+          if (sole !== false) {
+            msg = sprintf(_('StepMismatchOneValue'), sole);
+          } else {
+            msg = sprintf(_('StepMismatch'), min, max);
+          }
+          set_msg(element, 'stepMismatch', msg);
+        });
+
+        var tooLong = check$1(test_maxlength, function (element) {
+          set_msg(element, 'tooLong', sprintf(_('TextTooLong'), element.getAttribute('maxlength'), unicode_string_length(element.value)));
+        });
+
+        var tooShort = check$1(test_minlength, function (element) {
+          set_msg(element, 'tooShort', sprintf(_('Please lengthen this text to %l characters or more (you are currently using %l characters).'), element.getAttribute('maxlength'), unicode_string_length(element.value)));
+        });
+
+        var typeMismatch = check$1(test_type, function (element) {
+          var msg = _('Please use the appropriate format.');
+          var type = get_type(element);
+
+          if (type === 'email') {
+            if (element.hasAttribute('multiple')) {
+              msg = _('Please enter a comma separated list of email addresses.');
+            } else {
+              msg = _('InvalidEmail');
+            }
+          } else if (type === 'url') {
+            msg = _('InvalidURL');
+          } else if (type === 'file') {
+            msg = _('Please select a file of the correct type.');
+          }
+
+          set_msg(element, 'typeMismatch', msg);
+        });
+
+        var valueMissing = check$1(test_required, function (element) {
+          var msg = _('ValueMissing');
+          var type = get_type(element);
+
+          if (type === 'checkbox') {
+            msg = _('CheckboxMissing');
+          } else if (type === 'radio') {
+            msg = _('RadioMissing');
+          } else if (type === 'file') {
+            if (element.hasAttribute('multiple')) {
+              msg = _('Please select one or more files.');
+            } else {
+              msg = _('FileMissing');
+            }
+          } else if (element instanceof window.HTMLSelectElement) {
+            msg = _('SelectMissing');
+          }
+
+          set_msg(element, 'valueMissing', msg);
+        });
+
+        var validity_state_checkers = {
+          badInput: badInput,
+          customError: customError,
+          patternMismatch: patternMismatch,
+          rangeOverflow: rangeOverflow,
+          rangeUnderflow: rangeUnderflow,
+          stepMismatch: stepMismatch,
+          tooLong: tooLong,
+          tooShort: tooShort,
+          typeMismatch: typeMismatch,
+          valueMissing: valueMissing
+        };
+
+        /**
+         * the validity state constructor
+         */
+        var ValidityState = function ValidityState(element) {
+          if (!(element instanceof window.HTMLElement)) {
+            throw new Error('cannot create a ValidityState for a non-element');
+          }
+
+          var cached = ValidityState.cache.get(element);
+          if (cached) {
+            return cached;
+          }
+
+          if (!(this instanceof ValidityState)) {
+            /* working around a forgotten `new` */
+            return new ValidityState(element);
+          }
+
+          this.element = element;
+          ValidityState.cache.set(element, this);
+        };
+
+        /**
+         * the prototype for new validityState instances
+         */
+        var ValidityStatePrototype = {};
+        ValidityState.prototype = ValidityStatePrototype;
+
+        ValidityState.cache = new WeakMap();
+
+        /**
+         * copy functionality from the validity checkers to the ValidityState
+         * prototype
+         */
+        for (var prop in validity_state_checkers) {
+          Object.defineProperty(ValidityStatePrototype, prop, {
+            configurable: true,
+            enumerable: true,
+            get: function (func) {
+              return function () {
+                return func(this.element);
+              };
+            }(validity_state_checkers[prop]),
+            set: undefined
+          });
+        }
+
+        /**
+         * the "valid" property calls all other validity checkers and returns true,
+         * if all those return false.
+         *
+         * This is the major access point for _all_ other API methods, namely
+         * (check|report)Validity().
+         */
+        Object.defineProperty(ValidityStatePrototype, 'valid', {
+          configurable: true,
+          enumerable: true,
+          get: function get() {
+            var wrapper = get_wrapper(this.element);
+            var validClass = wrapper && wrapper.settings.classes.valid || 'hf-valid';
+            var invalidClass = wrapper && wrapper.settings.classes.invalid || 'hf-invalid';
+            var userInvalidClass = wrapper && wrapper.settings.classes.userInvalid || 'hf-user-invalid';
+            var userValidClass = wrapper && wrapper.settings.classes.userValid || 'hf-user-valid';
+            var inRangeClass = wrapper && wrapper.settings.classes.inRange || 'hf-in-range';
+            var outOfRangeClass = wrapper && wrapper.settings.classes.outOfRange || 'hf-out-of-range';
+            var validatedClass = wrapper && wrapper.settings.classes.validated || 'hf-validated';
+
+            this.element.classList.add(validatedClass);
+
+            if (is_validation_candidate(this.element)) {
+              for (var _prop in validity_state_checkers) {
+                if (validity_state_checkers[_prop](this.element)) {
+                  this.element.classList.add(invalidClass);
+                  this.element.classList.remove(validClass);
+                  this.element.classList.remove(userValidClass);
+                  if (this.element.value !== this.element.defaultValue) {
+                    this.element.classList.add(userInvalidClass);
+                  } else {
+                    this.element.classList.remove(userInvalidClass);
+                  }
+                  this.element.setAttribute('aria-invalid', 'true');
+                  return false;
+                }
+              }
+            }
+
+            message_store.delete(this.element);
+            this.element.classList.remove(invalidClass, userInvalidClass, outOfRangeClass);
+            this.element.classList.add(validClass, inRangeClass);
+            if (this.element.value !== this.element.defaultValue) {
+              this.element.classList.add(userValidClass);
+            } else {
+              this.element.classList.remove(userValidClass);
+            }
+            this.element.setAttribute('aria-invalid', 'false');
+            return true;
+          },
+          set: undefined
+        });
+
+        /**
+         * mark the validity prototype, because that is what the client-facing
+         * code deals with mostly, not the property descriptor thing */
+        mark(ValidityStatePrototype);
+
+        /**
+         * check an element's validity with respect to it's form
+         */
+        var checkValidity = return_hook_or('checkValidity', function (element) {
+          /* if this is a <form>, check validity of all child inputs */
+          if (element instanceof window.HTMLFormElement) {
+            return Array.prototype.map.call(element.elements, checkValidity).every(function (b) {
+              return b;
+            });
+          }
+
+          /* default is true, also for elements that are no validation candidates */
+          var valid = ValidityState(element).valid;
+          if (valid) {
+            var wrapped_form = get_wrapper(element);
+            if (wrapped_form && wrapped_form.settings.valid_event) {
+              trigger_event(element, 'valid');
+            }
+          } else {
+            trigger_event(element, 'invalid', { cancelable: true });
+          }
+
+          return valid;
+        });
+
+        var active = false;
+
+        /**
+         * this small CSS snippet fixes a problem in Chrome, where a click on
+         * a button's child node has this child as event.target. This confuses
+         * our "is this a submitting click" check.
+         *
+         * Why not just check the parent node? Because we check _every_ click,
+         * and _every_ keypress possibly on on the whole page, to determine, if
+         * this one might be a form submitting event. And checking all parent nodes
+         * on every user interaction seems a bit... excessive.
+         */
+        function fixButtonEvents () {
+          if (!active) {
+            var style = document.createElement("style");
+
+            style.className = 'hf-styles';
+            /* WebKit :(. See https://davidwalsh.name/add-rules-stylesheets */
+            style.appendChild(document.createTextNode(""));
+            document.head.appendChild(style);
+
+            style.sheet.insertRule('button:not([type]) *,button[type="submit"] *,button[type="image"] *{pointer-events:none}', 0);
+
+            active = true;
+          }
+        }
+
+        var version = '0.8.15';
+
+        /**
+         * public hyperform interface:
+         */
+        function hyperform(form) {
+          var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+          var _ref$debug = _ref.debug;
+          var debug = _ref$debug === undefined ? false : _ref$debug;
+          var _ref$strict = _ref.strict;
+          var strict = _ref$strict === undefined ? false : _ref$strict;
+          var _ref$prevent_implicit = _ref.prevent_implicit_submit;
+          var prevent_implicit_submit = _ref$prevent_implicit === undefined ? false : _ref$prevent_implicit;
+          var revalidate = _ref.revalidate;
+          var valid_event = _ref.valid_event;
+          var extend_fieldset = _ref.extend_fieldset;
+          var novalidate_on_elements = _ref.novalidate_on_elements;
+          var classes = _ref.classes;
+
+
+          /* run this only, when we really create a Hyperform instance */
+          fixButtonEvents();
+
+          if (revalidate === undefined) {
+            /* other recognized values: 'oninput', 'onblur', 'onsubmit' and 'never' */
+            revalidate = strict ? 'onsubmit' : 'hybrid';
+          }
+          if (valid_event === undefined) {
+            valid_event = !strict;
+          }
+          if (extend_fieldset === undefined) {
+            extend_fieldset = !strict;
+          }
+          if (novalidate_on_elements === undefined) {
+            novalidate_on_elements = !strict;
+          }
+          if (!classes) {
+            classes = {};
+          }
+
+          var settings = { debug: debug, strict: strict, prevent_implicit_submit: prevent_implicit_submit, revalidate: revalidate,
+            valid_event: valid_event, extend_fieldset: extend_fieldset, classes: classes };
+
+          if (form instanceof window.NodeList || form instanceof window.HTMLCollection || form instanceof Array) {
+            return Array.prototype.map.call(form, function (element) {
+              return hyperform(element, settings);
+            });
+          }
+
+          return new Wrapper(form, settings);
+        }
+
+        hyperform.version = version;
+
+        hyperform.checkValidity = checkValidity;
+        hyperform.reportValidity = reportValidity;
+        hyperform.setCustomValidity = setCustomValidity;
+        hyperform.stepDown = stepDown;
+        hyperform.stepUp = stepUp;
+        hyperform.validationMessage = validationMessage;
+        hyperform.ValidityState = ValidityState;
+        hyperform.valueAsDate = valueAsDate;
+        hyperform.valueAsNumber = valueAsNumber;
+        hyperform.willValidate = willValidate;
+
+        hyperform.set_language = function (lang) {
+          set_language(lang);return hyperform;
+        };
+        hyperform.add_translation = function (lang, catalog) {
+          add_translation(lang, catalog);return hyperform;
+        };
+        hyperform.set_renderer = function (renderer, action) {
+          Renderer.set(renderer, action);return hyperform;
+        };
+        hyperform.add_validator = function (element, validator) {
+          custom_validator_registry.set(element, validator);return hyperform;
+        };
+        hyperform.set_message = function (element, validator, message) {
+          custom_messages.set(element, validator, message);return hyperform;
+        };
+        hyperform.add_hook = function (hook, action, position) {
+          add_hook(hook, action, position);return hyperform;
+        };
+        hyperform.remove_hook = function (hook, action) {
+          remove_hook(hook, action);return hyperform;
+        };
+
+        return hyperform;
 
 }());
 /*!
- * Flickity PACKAGED v2.0.9
+ * Flickity PACKAGED v2.0.5
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
  * or Flickity Commercial License for commercial use
  *
  * http://flickity.metafizzy.co
- * Copyright 2017 Metafizzy
+ * Copyright 2016 Metafizzy
  */
 
-!function(t,e){"function"==typeof define&&define.amd?define("jquery-bridget/jquery-bridget",["jquery"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("jquery")):t.jQueryBridget=e(t,t.jQuery)}(window,function(t,e){"use strict";function i(i,o,a){function h(t,e,n){var s,o="$()."+i+'("'+e+'")';return t.each(function(t,h){var l=a.data(h,i);if(!l)return void r(i+" not initialized. Cannot call methods, i.e. "+o);var c=l[e];if(!c||"_"==e.charAt(0))return void r(o+" is not a valid method");var d=c.apply(l,n);s=void 0===s?d:s}),void 0!==s?s:t}function l(t,e){t.each(function(t,n){var s=a.data(n,i);s?(s.option(e),s._init()):(s=new o(n,e),a.data(n,i,s))})}a=a||e||t.jQuery,a&&(o.prototype.option||(o.prototype.option=function(t){a.isPlainObject(t)&&(this.options=a.extend(!0,this.options,t))}),a.fn[i]=function(t){if("string"==typeof t){var e=s.call(arguments,1);return h(this,t,e)}return l(this,t),this},n(a))}function n(t){!t||t&&t.bridget||(t.bridget=i)}var s=Array.prototype.slice,o=t.console,r="undefined"==typeof o?function(){}:function(t){o.error(t)};return n(e||t.jQuery),i}),function(t,e){"function"==typeof define&&define.amd?define("ev-emitter/ev-emitter",e):"object"==typeof module&&module.exports?module.exports=e():t.EvEmitter=e()}("undefined"!=typeof window?window:this,function(){function t(){}var e=t.prototype;return e.on=function(t,e){if(t&&e){var i=this._events=this._events||{},n=i[t]=i[t]||[];return n.indexOf(e)==-1&&n.push(e),this}},e.once=function(t,e){if(t&&e){this.on(t,e);var i=this._onceEvents=this._onceEvents||{},n=i[t]=i[t]||{};return n[e]=!0,this}},e.off=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){var n=i.indexOf(e);return n!=-1&&i.splice(n,1),this}},e.emitEvent=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){i=i.slice(0),e=e||[];for(var n=this._onceEvents&&this._onceEvents[t],s=0;s<i.length;s++){var o=i[s],r=n&&n[o];r&&(this.off(t,o),delete n[o]),o.apply(this,e)}return this}},e.allOff=function(){delete this._events,delete this._onceEvents},t}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("get-size/get-size",[],function(){return e()}):"object"==typeof module&&module.exports?module.exports=e():t.getSize=e()}(window,function(){"use strict";function t(t){var e=parseFloat(t),i=t.indexOf("%")==-1&&!isNaN(e);return i&&e}function e(){}function i(){for(var t={width:0,height:0,innerWidth:0,innerHeight:0,outerWidth:0,outerHeight:0},e=0;e<l;e++){var i=h[e];t[i]=0}return t}function n(t){var e=getComputedStyle(t);return e||a("Style returned "+e+". Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1"),e}function s(){if(!c){c=!0;var e=document.createElement("div");e.style.width="200px",e.style.padding="1px 2px 3px 4px",e.style.borderStyle="solid",e.style.borderWidth="1px 2px 3px 4px",e.style.boxSizing="border-box";var i=document.body||document.documentElement;i.appendChild(e);var s=n(e);o.isBoxSizeOuter=r=200==t(s.width),i.removeChild(e)}}function o(e){if(s(),"string"==typeof e&&(e=document.querySelector(e)),e&&"object"==typeof e&&e.nodeType){var o=n(e);if("none"==o.display)return i();var a={};a.width=e.offsetWidth,a.height=e.offsetHeight;for(var c=a.isBorderBox="border-box"==o.boxSizing,d=0;d<l;d++){var u=h[d],f=o[u],p=parseFloat(f);a[u]=isNaN(p)?0:p}var v=a.paddingLeft+a.paddingRight,g=a.paddingTop+a.paddingBottom,m=a.marginLeft+a.marginRight,y=a.marginTop+a.marginBottom,E=a.borderLeftWidth+a.borderRightWidth,S=a.borderTopWidth+a.borderBottomWidth,b=c&&r,x=t(o.width);x!==!1&&(a.width=x+(b?0:v+E));var C=t(o.height);return C!==!1&&(a.height=C+(b?0:g+S)),a.innerWidth=a.width-(v+E),a.innerHeight=a.height-(g+S),a.outerWidth=a.width+m,a.outerHeight=a.height+y,a}}var r,a="undefined"==typeof console?e:function(t){console.error(t)},h=["paddingLeft","paddingRight","paddingTop","paddingBottom","marginLeft","marginRight","marginTop","marginBottom","borderLeftWidth","borderRightWidth","borderTopWidth","borderBottomWidth"],l=h.length,c=!1;return o}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("desandro-matches-selector/matches-selector",e):"object"==typeof module&&module.exports?module.exports=e():t.matchesSelector=e()}(window,function(){"use strict";var t=function(){var t=window.Element.prototype;if(t.matches)return"matches";if(t.matchesSelector)return"matchesSelector";for(var e=["webkit","moz","ms","o"],i=0;i<e.length;i++){var n=e[i],s=n+"MatchesSelector";if(t[s])return s}}();return function(e,i){return e[t](i)}}),function(t,e){"function"==typeof define&&define.amd?define("fizzy-ui-utils/utils",["desandro-matches-selector/matches-selector"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("desandro-matches-selector")):t.fizzyUIUtils=e(t,t.matchesSelector)}(window,function(t,e){var i={};i.extend=function(t,e){for(var i in e)t[i]=e[i];return t},i.modulo=function(t,e){return(t%e+e)%e},i.makeArray=function(t){var e=[];if(Array.isArray(t))e=t;else if(t&&"object"==typeof t&&"number"==typeof t.length)for(var i=0;i<t.length;i++)e.push(t[i]);else e.push(t);return e},i.removeFrom=function(t,e){var i=t.indexOf(e);i!=-1&&t.splice(i,1)},i.getParent=function(t,i){for(;t.parentNode&&t!=document.body;)if(t=t.parentNode,e(t,i))return t},i.getQueryElement=function(t){return"string"==typeof t?document.querySelector(t):t},i.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},i.filterFindElements=function(t,n){t=i.makeArray(t);var s=[];return t.forEach(function(t){if(t instanceof HTMLElement){if(!n)return void s.push(t);e(t,n)&&s.push(t);for(var i=t.querySelectorAll(n),o=0;o<i.length;o++)s.push(i[o])}}),s},i.debounceMethod=function(t,e,i){var n=t.prototype[e],s=e+"Timeout";t.prototype[e]=function(){var t=this[s];t&&clearTimeout(t);var e=arguments,o=this;this[s]=setTimeout(function(){n.apply(o,e),delete o[s]},i||100)}},i.docReady=function(t){var e=document.readyState;"complete"==e||"interactive"==e?setTimeout(t):document.addEventListener("DOMContentLoaded",t)},i.toDashed=function(t){return t.replace(/(.)([A-Z])/g,function(t,e,i){return e+"-"+i}).toLowerCase()};var n=t.console;return i.htmlInit=function(e,s){i.docReady(function(){var o=i.toDashed(s),r="data-"+o,a=document.querySelectorAll("["+r+"]"),h=document.querySelectorAll(".js-"+o),l=i.makeArray(a).concat(i.makeArray(h)),c=r+"-options",d=t.jQuery;l.forEach(function(t){var i,o=t.getAttribute(r)||t.getAttribute(c);try{i=o&&JSON.parse(o)}catch(a){return void(n&&n.error("Error parsing "+r+" on "+t.className+": "+a))}var h=new e(t,i);d&&d.data(t,s,h)})})},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/cell",["get-size/get-size"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("get-size")):(t.Flickity=t.Flickity||{},t.Flickity.Cell=e(t,t.getSize))}(window,function(t,e){function i(t,e){this.element=t,this.parent=e,this.create()}var n=i.prototype;return n.create=function(){this.element.style.position="absolute",this.x=0,this.shift=0},n.destroy=function(){this.element.style.position="";var t=this.parent.originSide;this.element.style[t]=""},n.getSize=function(){this.size=e(this.element)},n.setPosition=function(t){this.x=t,this.updateTarget(),this.renderPosition(t)},n.updateTarget=n.setDefaultTarget=function(){var t="left"==this.parent.originSide?"marginLeft":"marginRight";this.target=this.x+this.size[t]+this.size.width*this.parent.cellAlign},n.renderPosition=function(t){var e=this.parent.originSide;this.element.style[e]=this.parent.getPositionValue(t)},n.wrapShift=function(t){this.shift=t,this.renderPosition(this.x+this.parent.slideableWidth*t)},n.remove=function(){this.element.parentNode.removeChild(this.element)},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/slide",e):"object"==typeof module&&module.exports?module.exports=e():(t.Flickity=t.Flickity||{},t.Flickity.Slide=e())}(window,function(){"use strict";function t(t){this.parent=t,this.isOriginLeft="left"==t.originSide,this.cells=[],this.outerWidth=0,this.height=0}var e=t.prototype;return e.addCell=function(t){if(this.cells.push(t),this.outerWidth+=t.size.outerWidth,this.height=Math.max(t.size.outerHeight,this.height),1==this.cells.length){this.x=t.x;var e=this.isOriginLeft?"marginLeft":"marginRight";this.firstMargin=t.size[e]}},e.updateTarget=function(){var t=this.isOriginLeft?"marginRight":"marginLeft",e=this.getLastCell(),i=e?e.size[t]:0,n=this.outerWidth-(this.firstMargin+i);this.target=this.x+this.firstMargin+n*this.parent.cellAlign},e.getLastCell=function(){return this.cells[this.cells.length-1]},e.select=function(){this.changeSelectedClass("add")},e.unselect=function(){this.changeSelectedClass("remove")},e.changeSelectedClass=function(t){this.cells.forEach(function(e){e.element.classList[t]("is-selected")})},e.getCellElements=function(){return this.cells.map(function(t){return t.element})},t}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/animate",["fizzy-ui-utils/utils"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("fizzy-ui-utils")):(t.Flickity=t.Flickity||{},t.Flickity.animatePrototype=e(t,t.fizzyUIUtils))}(window,function(t,e){var i=t.requestAnimationFrame||t.webkitRequestAnimationFrame,n=0;i||(i=function(t){var e=(new Date).getTime(),i=Math.max(0,16-(e-n)),s=setTimeout(t,i);return n=e+i,s});var s={};s.startAnimation=function(){this.isAnimating||(this.isAnimating=!0,this.restingFrames=0,this.animate())},s.animate=function(){this.applyDragForce(),this.applySelectedAttraction();var t=this.x;if(this.integratePhysics(),this.positionSlider(),this.settle(t),this.isAnimating){var e=this;i(function(){e.animate()})}};var o=function(){var t=document.documentElement.style;return"string"==typeof t.transform?"transform":"WebkitTransform"}();return s.positionSlider=function(){var t=this.x;this.options.wrapAround&&this.cells.length>1&&(t=e.modulo(t,this.slideableWidth),t-=this.slideableWidth,this.shiftWrapCells(t)),t+=this.cursorPosition,t=this.options.rightToLeft&&o?-t:t;var i=this.getPositionValue(t);this.slider.style[o]=this.isAnimating?"translate3d("+i+",0,0)":"translateX("+i+")";var n=this.slides[0];if(n){var s=-this.x-n.target,r=s/this.slidesWidth;this.dispatchEvent("scroll",null,[r,s])}},s.positionSliderAtSelected=function(){this.cells.length&&(this.x=-this.selectedSlide.target,this.positionSlider())},s.getPositionValue=function(t){return this.options.percentPosition?.01*Math.round(t/this.size.innerWidth*1e4)+"%":Math.round(t)+"px"},s.settle=function(t){this.isPointerDown||Math.round(100*this.x)!=Math.round(100*t)||this.restingFrames++,this.restingFrames>2&&(this.isAnimating=!1,delete this.isFreeScrolling,this.positionSlider(),this.dispatchEvent("settle"))},s.shiftWrapCells=function(t){var e=this.cursorPosition+t;this._shiftCells(this.beforeShiftCells,e,-1);var i=this.size.innerWidth-(t+this.slideableWidth+this.cursorPosition);this._shiftCells(this.afterShiftCells,i,1)},s._shiftCells=function(t,e,i){for(var n=0;n<t.length;n++){var s=t[n],o=e>0?i:0;s.wrapShift(o),e-=s.size.outerWidth}},s._unshiftCells=function(t){if(t&&t.length)for(var e=0;e<t.length;e++)t[e].wrapShift(0)},s.integratePhysics=function(){this.x+=this.velocity,this.velocity*=this.getFrictionFactor()},s.applyForce=function(t){this.velocity+=t},s.getFrictionFactor=function(){return 1-this.options[this.isFreeScrolling?"freeScrollFriction":"friction"]},s.getRestingPosition=function(){return this.x+this.velocity/(1-this.getFrictionFactor())},s.applyDragForce=function(){if(this.isPointerDown){var t=this.dragX-this.x,e=t-this.velocity;this.applyForce(e)}},s.applySelectedAttraction=function(){if(!this.isPointerDown&&!this.isFreeScrolling&&this.cells.length){var t=this.selectedSlide.target*-1-this.x,e=t*this.options.selectedAttraction;this.applyForce(e)}},s}),function(t,e){if("function"==typeof define&&define.amd)define("flickity/js/flickity",["ev-emitter/ev-emitter","get-size/get-size","fizzy-ui-utils/utils","./cell","./slide","./animate"],function(i,n,s,o,r,a){return e(t,i,n,s,o,r,a)});else if("object"==typeof module&&module.exports)module.exports=e(t,require("ev-emitter"),require("get-size"),require("fizzy-ui-utils"),require("./cell"),require("./slide"),require("./animate"));else{var i=t.Flickity;t.Flickity=e(t,t.EvEmitter,t.getSize,t.fizzyUIUtils,i.Cell,i.Slide,i.animatePrototype)}}(window,function(t,e,i,n,s,o,r){function a(t,e){for(t=n.makeArray(t);t.length;)e.appendChild(t.shift())}function h(t,e){var i=n.getQueryElement(t);if(!i)return void(d&&d.error("Bad element for Flickity: "+(i||t)));if(this.element=i,this.element.flickityGUID){var s=f[this.element.flickityGUID];return s.option(e),s}l&&(this.$element=l(this.element)),this.options=n.extend({},this.constructor.defaults),this.option(e),this._create()}var l=t.jQuery,c=t.getComputedStyle,d=t.console,u=0,f={};h.defaults={accessibility:!0,cellAlign:"center",freeScrollFriction:.075,friction:.28,namespaceJQueryEvents:!0,percentPosition:!0,resize:!0,selectedAttraction:.025,setGallerySize:!0},h.createMethods=[];var p=h.prototype;n.extend(p,e.prototype),p._create=function(){var e=this.guid=++u;this.element.flickityGUID=e,f[e]=this,this.selectedIndex=0,this.restingFrames=0,this.x=0,this.velocity=0,this.originSide=this.options.rightToLeft?"right":"left",this.viewport=document.createElement("div"),this.viewport.className="flickity-viewport",this._createSlider(),(this.options.resize||this.options.watchCSS)&&t.addEventListener("resize",this),h.createMethods.forEach(function(t){this[t]()},this),this.options.watchCSS?this.watchCSS():this.activate()},p.option=function(t){n.extend(this.options,t)},p.activate=function(){if(!this.isActive){this.isActive=!0,this.element.classList.add("flickity-enabled"),this.options.rightToLeft&&this.element.classList.add("flickity-rtl"),this.getSize();var t=this._filterFindCellElements(this.element.children);a(t,this.slider),this.viewport.appendChild(this.slider),this.element.appendChild(this.viewport),this.reloadCells(),this.options.accessibility&&(this.element.tabIndex=0,this.element.addEventListener("keydown",this)),this.emitEvent("activate");var e,i=this.options.initialIndex;e=this.isInitActivated?this.selectedIndex:void 0!==i&&this.cells[i]?i:0,this.select(e,!1,!0),this.isInitActivated=!0}},p._createSlider=function(){var t=document.createElement("div");t.className="flickity-slider",t.style[this.originSide]=0,this.slider=t},p._filterFindCellElements=function(t){return n.filterFindElements(t,this.options.cellSelector)},p.reloadCells=function(){this.cells=this._makeCells(this.slider.children),this.positionCells(),this._getWrapShiftCells(),this.setGallerySize()},p._makeCells=function(t){var e=this._filterFindCellElements(t),i=e.map(function(t){return new s(t,this)},this);return i},p.getLastCell=function(){return this.cells[this.cells.length-1]},p.getLastSlide=function(){return this.slides[this.slides.length-1]},p.positionCells=function(){this._sizeCells(this.cells),this._positionCells(0)},p._positionCells=function(t){t=t||0,this.maxCellHeight=t?this.maxCellHeight||0:0;var e=0;if(t>0){var i=this.cells[t-1];e=i.x+i.size.outerWidth}for(var n=this.cells.length,s=t;s<n;s++){var o=this.cells[s];o.setPosition(e),e+=o.size.outerWidth,this.maxCellHeight=Math.max(o.size.outerHeight,this.maxCellHeight)}this.slideableWidth=e,this.updateSlides(),this._containSlides(),this.slidesWidth=n?this.getLastSlide().target-this.slides[0].target:0},p._sizeCells=function(t){t.forEach(function(t){t.getSize()})},p.updateSlides=function(){if(this.slides=[],this.cells.length){var t=new o(this);this.slides.push(t);var e="left"==this.originSide,i=e?"marginRight":"marginLeft",n=this._getCanCellFit();this.cells.forEach(function(e,s){if(!t.cells.length)return void t.addCell(e);var r=t.outerWidth-t.firstMargin+(e.size.outerWidth-e.size[i]);n.call(this,s,r)?t.addCell(e):(t.updateTarget(),t=new o(this),this.slides.push(t),t.addCell(e))},this),t.updateTarget(),this.updateSelectedSlide()}},p._getCanCellFit=function(){var t=this.options.groupCells;if(!t)return function(){return!1};if("number"==typeof t){var e=parseInt(t,10);return function(t){return t%e!==0}}var i="string"==typeof t&&t.match(/^(\d+)%$/),n=i?parseInt(i[1],10)/100:1;return function(t,e){return e<=(this.size.innerWidth+1)*n}},p._init=p.reposition=function(){this.positionCells(),this.positionSliderAtSelected()},p.getSize=function(){this.size=i(this.element),this.setCellAlign(),this.cursorPosition=this.size.innerWidth*this.cellAlign};var v={center:{left:.5,right:.5},left:{left:0,right:1},right:{right:0,left:1}};return p.setCellAlign=function(){var t=v[this.options.cellAlign];this.cellAlign=t?t[this.originSide]:this.options.cellAlign},p.setGallerySize=function(){if(this.options.setGallerySize){var t=this.options.adaptiveHeight&&this.selectedSlide?this.selectedSlide.height:this.maxCellHeight;this.viewport.style.height=t+"px"}},p._getWrapShiftCells=function(){if(this.options.wrapAround){this._unshiftCells(this.beforeShiftCells),this._unshiftCells(this.afterShiftCells);var t=this.cursorPosition,e=this.cells.length-1;this.beforeShiftCells=this._getGapCells(t,e,-1),t=this.size.innerWidth-this.cursorPosition,this.afterShiftCells=this._getGapCells(t,0,1)}},p._getGapCells=function(t,e,i){for(var n=[];t>0;){var s=this.cells[e];if(!s)break;n.push(s),e+=i,t-=s.size.outerWidth}return n},p._containSlides=function(){if(this.options.contain&&!this.options.wrapAround&&this.cells.length){var t=this.options.rightToLeft,e=t?"marginRight":"marginLeft",i=t?"marginLeft":"marginRight",n=this.slideableWidth-this.getLastCell().size[i],s=n<this.size.innerWidth,o=this.cursorPosition+this.cells[0].size[e],r=n-this.size.innerWidth*(1-this.cellAlign);this.slides.forEach(function(t){s?t.target=n*this.cellAlign:(t.target=Math.max(t.target,o),t.target=Math.min(t.target,r))},this)}},p.dispatchEvent=function(t,e,i){var n=e?[e].concat(i):i;if(this.emitEvent(t,n),l&&this.$element){t+=this.options.namespaceJQueryEvents?".flickity":"";var s=t;if(e){var o=l.Event(e);o.type=t,s=o}this.$element.trigger(s,i)}},p.select=function(t,e,i){this.isActive&&(t=parseInt(t,10),this._wrapSelect(t),(this.options.wrapAround||e)&&(t=n.modulo(t,this.slides.length)),this.slides[t]&&(this.selectedIndex=t,this.updateSelectedSlide(),i?this.positionSliderAtSelected():this.startAnimation(),this.options.adaptiveHeight&&this.setGallerySize(),this.dispatchEvent("select"),this.dispatchEvent("cellSelect")))},p._wrapSelect=function(t){var e=this.slides.length,i=this.options.wrapAround&&e>1;if(!i)return t;var s=n.modulo(t,e),o=Math.abs(s-this.selectedIndex),r=Math.abs(s+e-this.selectedIndex),a=Math.abs(s-e-this.selectedIndex);!this.isDragSelect&&r<o?t+=e:!this.isDragSelect&&a<o&&(t-=e),t<0?this.x-=this.slideableWidth:t>=e&&(this.x+=this.slideableWidth)},p.previous=function(t,e){this.select(this.selectedIndex-1,t,e)},p.next=function(t,e){this.select(this.selectedIndex+1,t,e)},p.updateSelectedSlide=function(){var t=this.slides[this.selectedIndex];t&&(this.unselectSelectedSlide(),this.selectedSlide=t,t.select(),this.selectedCells=t.cells,this.selectedElements=t.getCellElements(),this.selectedCell=t.cells[0],this.selectedElement=this.selectedElements[0])},p.unselectSelectedSlide=function(){this.selectedSlide&&this.selectedSlide.unselect()},p.selectCell=function(t,e,i){var n;"number"==typeof t?n=this.cells[t]:("string"==typeof t&&(t=this.element.querySelector(t)),n=this.getCell(t));for(var s=0;n&&s<this.slides.length;s++){var o=this.slides[s],r=o.cells.indexOf(n);if(r!=-1)return void this.select(s,e,i)}},p.getCell=function(t){for(var e=0;e<this.cells.length;e++){var i=this.cells[e];if(i.element==t)return i}},p.getCells=function(t){t=n.makeArray(t);var e=[];return t.forEach(function(t){var i=this.getCell(t);i&&e.push(i)},this),e},p.getCellElements=function(){return this.cells.map(function(t){return t.element})},p.getParentCell=function(t){var e=this.getCell(t);return e?e:(t=n.getParent(t,".flickity-slider > *"),this.getCell(t))},p.getAdjacentCellElements=function(t,e){if(!t)return this.selectedSlide.getCellElements();e=void 0===e?this.selectedIndex:e;var i=this.slides.length;if(1+2*t>=i)return this.getCellElements();for(var s=[],o=e-t;o<=e+t;o++){var r=this.options.wrapAround?n.modulo(o,i):o,a=this.slides[r];a&&(s=s.concat(a.getCellElements()))}return s},p.uiChange=function(){this.emitEvent("uiChange")},p.childUIPointerDown=function(t){this.emitEvent("childUIPointerDown",[t])},p.onresize=function(){this.watchCSS(),this.resize()},n.debounceMethod(h,"onresize",150),p.resize=function(){if(this.isActive){this.getSize(),this.options.wrapAround&&(this.x=n.modulo(this.x,this.slideableWidth)),this.positionCells(),this._getWrapShiftCells(),this.setGallerySize(),this.emitEvent("resize");var t=this.selectedElements&&this.selectedElements[0];this.selectCell(t,!1,!0)}},p.watchCSS=function(){var t=this.options.watchCSS;if(t){var e=c(this.element,":after").content;e.indexOf("flickity")!=-1?this.activate():this.deactivate()}},p.onkeydown=function(t){if(this.options.accessibility&&(!document.activeElement||document.activeElement==this.element))if(37==t.keyCode){var e=this.options.rightToLeft?"next":"previous";this.uiChange(),this[e]()}else if(39==t.keyCode){var i=this.options.rightToLeft?"previous":"next";this.uiChange(),this[i]()}},p.deactivate=function(){this.isActive&&(this.element.classList.remove("flickity-enabled"),this.element.classList.remove("flickity-rtl"),this.cells.forEach(function(t){t.destroy()}),this.unselectSelectedSlide(),this.element.removeChild(this.viewport),a(this.slider.children,this.element),this.options.accessibility&&(this.element.removeAttribute("tabIndex"),this.element.removeEventListener("keydown",this)),this.isActive=!1,this.emitEvent("deactivate"))},p.destroy=function(){this.deactivate(),t.removeEventListener("resize",this),this.emitEvent("destroy"),l&&this.$element&&l.removeData(this.element,"flickity"),delete this.element.flickityGUID,delete f[this.guid]},n.extend(p,r),h.data=function(t){t=n.getQueryElement(t);var e=t&&t.flickityGUID;return e&&f[e]},n.htmlInit(h,"flickity"),l&&l.bridget&&l.bridget("flickity",h),h.setJQuery=function(t){l=t},h.Cell=s,h}),function(t,e){"function"==typeof define&&define.amd?define("unipointer/unipointer",["ev-emitter/ev-emitter"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("ev-emitter")):t.Unipointer=e(t,t.EvEmitter)}(window,function(t,e){function i(){}function n(){}var s=n.prototype=Object.create(e.prototype);s.bindStartEvent=function(t){this._bindStartEvent(t,!0)},s.unbindStartEvent=function(t){this._bindStartEvent(t,!1)},s._bindStartEvent=function(t,e){e=void 0===e||!!e;var i=e?"addEventListener":"removeEventListener";t[i]("mousedown",this),t[i]("touchstart",this)},s.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},s.getTouch=function(t){for(var e=0;e<t.length;e++){var i=t[e];if(i.identifier==this.pointerIdentifier)return i}},s.onmousedown=function(t){var e=t.button;e&&0!==e&&1!==e||this._pointerDown(t,t)},s.ontouchstart=function(t){this._pointerDown(t,t.changedTouches[0])},s.onpointerdown=function(t){this._pointerDown(t,t)},s._pointerDown=function(t,e){this.isPointerDown||(this.isPointerDown=!0,this.pointerIdentifier=void 0!==e.pointerId?e.pointerId:e.identifier,this.pointerDown(t,e))},s.pointerDown=function(t,e){this._bindPostStartEvents(t),this.emitEvent("pointerDown",[t,e])};var o={mousedown:["mousemove","mouseup"],touchstart:["touchmove","touchend","touchcancel"],pointerdown:["pointermove","pointerup","pointercancel"]};return s._bindPostStartEvents=function(e){if(e){var i=o[e.type];i.forEach(function(e){t.addEventListener(e,this)},this),this._boundPointerEvents=i}},s._unbindPostStartEvents=function(){this._boundPointerEvents&&(this._boundPointerEvents.forEach(function(e){t.removeEventListener(e,this)},this),delete this._boundPointerEvents)},s.onmousemove=function(t){this._pointerMove(t,t)},s.onpointermove=function(t){t.pointerId==this.pointerIdentifier&&this._pointerMove(t,t)},s.ontouchmove=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerMove(t,e)},s._pointerMove=function(t,e){this.pointerMove(t,e)},s.pointerMove=function(t,e){this.emitEvent("pointerMove",[t,e])},s.onmouseup=function(t){this._pointerUp(t,t)},s.onpointerup=function(t){t.pointerId==this.pointerIdentifier&&this._pointerUp(t,t)},s.ontouchend=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerUp(t,e)},s._pointerUp=function(t,e){this._pointerDone(),this.pointerUp(t,e)},s.pointerUp=function(t,e){this.emitEvent("pointerUp",[t,e])},s._pointerDone=function(){this.isPointerDown=!1,delete this.pointerIdentifier,this._unbindPostStartEvents(),this.pointerDone()},s.pointerDone=i,s.onpointercancel=function(t){t.pointerId==this.pointerIdentifier&&this._pointerCancel(t,t)},s.ontouchcancel=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerCancel(t,e)},s._pointerCancel=function(t,e){this._pointerDone(),this.pointerCancel(t,e)},s.pointerCancel=function(t,e){this.emitEvent("pointerCancel",[t,e])},n.getPointerPoint=function(t){return{x:t.pageX,y:t.pageY}},n}),function(t,e){"function"==typeof define&&define.amd?define("unidragger/unidragger",["unipointer/unipointer"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("unipointer")):t.Unidragger=e(t,t.Unipointer)}(window,function(t,e){function i(){}var n=i.prototype=Object.create(e.prototype);return n.bindHandles=function(){this._bindHandles(!0)},n.unbindHandles=function(){this._bindHandles(!1)},n._bindHandles=function(e){e=void 0===e||!!e;for(var i=e?"addEventListener":"removeEventListener",n=0;n<this.handles.length;n++){var s=this.handles[n];this._bindStartEvent(s,e),s[i]("click",this),t.PointerEvent&&(s.style.touchAction=e?this._touchActionValue:"")}},n._touchActionValue="none",n.pointerDown=function(t,e){if("INPUT"==t.target.nodeName&&"range"==t.target.type)return this.isPointerDown=!1,void delete this.pointerIdentifier;this._dragPointerDown(t,e);var i=document.activeElement;i&&i.blur&&i.blur(),this._bindPostStartEvents(t),this.emitEvent("pointerDown",[t,e])},n._dragPointerDown=function(t,i){this.pointerDownPoint=e.getPointerPoint(i);var n=this.canPreventDefaultOnPointerDown(t,i);n&&t.preventDefault()},n.canPreventDefaultOnPointerDown=function(t){return"SELECT"!=t.target.nodeName},n.pointerMove=function(t,e){var i=this._dragPointerMove(t,e);this.emitEvent("pointerMove",[t,e,i]),this._dragMove(t,e,i)},n._dragPointerMove=function(t,i){var n=e.getPointerPoint(i),s={x:n.x-this.pointerDownPoint.x,y:n.y-this.pointerDownPoint.y};return!this.isDragging&&this.hasDragStarted(s)&&this._dragStart(t,i),s},n.hasDragStarted=function(t){return Math.abs(t.x)>3||Math.abs(t.y)>3},n.pointerUp=function(t,e){this.emitEvent("pointerUp",[t,e]),this._dragPointerUp(t,e)},n._dragPointerUp=function(t,e){this.isDragging?this._dragEnd(t,e):this._staticClick(t,e)},n._dragStart=function(t,i){this.isDragging=!0,this.dragStartPoint=e.getPointerPoint(i),this.isPreventingClicks=!0,this.dragStart(t,i)},n.dragStart=function(t,e){this.emitEvent("dragStart",[t,e])},n._dragMove=function(t,e,i){this.isDragging&&this.dragMove(t,e,i)},n.dragMove=function(t,e,i){t.preventDefault(),this.emitEvent("dragMove",[t,e,i])},n._dragEnd=function(t,e){this.isDragging=!1,setTimeout(function(){delete this.isPreventingClicks}.bind(this)),this.dragEnd(t,e)},n.dragEnd=function(t,e){this.emitEvent("dragEnd",[t,e])},n.onclick=function(t){this.isPreventingClicks&&t.preventDefault()},n._staticClick=function(t,e){if(!this.isIgnoringMouseUp||"mouseup"!=t.type){var i=t.target.nodeName;"INPUT"!=i&&"TEXTAREA"!=i||t.target.focus(),this.staticClick(t,e),"mouseup"!=t.type&&(this.isIgnoringMouseUp=!0,setTimeout(function(){delete this.isIgnoringMouseUp}.bind(this),400))}},n.staticClick=function(t,e){this.emitEvent("staticClick",[t,e])},i.getPointerPoint=e.getPointerPoint,i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/drag",["./flickity","unidragger/unidragger","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("unidragger"),require("fizzy-ui-utils")):t.Flickity=e(t,t.Flickity,t.Unidragger,t.fizzyUIUtils)}(window,function(t,e,i,n){function s(t){var e=d[t.type],i=u[t.target.nodeName];return e||i}function o(){return{x:t.pageXOffset,y:t.pageYOffset}}n.extend(e.defaults,{draggable:!0,dragThreshold:3}),e.createMethods.push("_createDrag");var r=e.prototype;n.extend(r,i.prototype),r._touchActionValue="pan-y";var a="createTouch"in document,h=!1;r._createDrag=function(){this.on("activate",this.bindDrag),this.on("uiChange",this._uiChangeDrag),this.on("childUIPointerDown",this._childUIPointerDownDrag),this.on("deactivate",this.unbindDrag),a&&!h&&(t.addEventListener("touchmove",function(){}),h=!0)},r.bindDrag=function(){this.options.draggable&&!this.isDragBound&&(this.element.classList.add("is-draggable"),this.handles=[this.viewport],this.bindHandles(),this.isDragBound=!0)},r.unbindDrag=function(){this.isDragBound&&(this.element.classList.remove("is-draggable"),this.unbindHandles(),delete this.isDragBound)},r._uiChangeDrag=function(){delete this.isFreeScrolling},r._childUIPointerDownDrag=function(t){t.preventDefault(),this.pointerDownFocus(t)};var l={TEXTAREA:!0,INPUT:!0,OPTION:!0},c={radio:!0,checkbox:!0,button:!0,submit:!0,image:!0,file:!0};r.pointerDown=function(e,i){var n=l[e.target.nodeName]&&!c[e.target.type];if(n)return this.isPointerDown=!1,void delete this.pointerIdentifier;this._dragPointerDown(e,i);var s=document.activeElement;s&&s.blur&&s!=this.element&&s!=document.body&&s.blur(),this.pointerDownFocus(e),this.dragX=this.x,this.viewport.classList.add("is-pointer-down"),this._bindPostStartEvents(e),this.pointerDownScroll=o(),t.addEventListener("scroll",this),this.dispatchEvent("pointerDown",e,[i])},r.pointerDownFocus=function(e){var i=s(e);if(this.options.accessibility&&!i){var n=t.pageYOffset;this.element.focus(),t.pageYOffset!=n&&t.scrollTo(t.pageXOffset,n)}};var d={touchstart:!0,pointerdown:!0},u={INPUT:!0,SELECT:!0};return r.canPreventDefaultOnPointerDown=function(t){var e=s(t);return!e},r.hasDragStarted=function(t){return Math.abs(t.x)>this.options.dragThreshold},r.pointerUp=function(t,e){delete this.isTouchScrolling,this.viewport.classList.remove("is-pointer-down"),this.dispatchEvent("pointerUp",t,[e]),this._dragPointerUp(t,e)},r.pointerDone=function(){t.removeEventListener("scroll",this),delete this.pointerDownScroll},r.dragStart=function(e,i){this.dragStartPosition=this.x,this.startAnimation(),t.removeEventListener("scroll",this),this.dispatchEvent("dragStart",e,[i])},r.pointerMove=function(t,e){var i=this._dragPointerMove(t,e);this.dispatchEvent("pointerMove",t,[e,i]),this._dragMove(t,e,i)},r.dragMove=function(t,e,i){t.preventDefault(),this.previousDragX=this.dragX;var n=this.options.rightToLeft?-1:1,s=this.dragStartPosition+i.x*n;if(!this.options.wrapAround&&this.slides.length){var o=Math.max(-this.slides[0].target,this.dragStartPosition);s=s>o?.5*(s+o):s;var r=Math.min(-this.getLastSlide().target,this.dragStartPosition);s=s<r?.5*(s+r):s}this.dragX=s,this.dragMoveTime=new Date,this.dispatchEvent("dragMove",t,[e,i])},r.dragEnd=function(t,e){this.options.freeScroll&&(this.isFreeScrolling=!0);var i=this.dragEndRestingSelect();if(this.options.freeScroll&&!this.options.wrapAround){var n=this.getRestingPosition();this.isFreeScrolling=-n>this.slides[0].target&&-n<this.getLastSlide().target}else this.options.freeScroll||i!=this.selectedIndex||(i+=this.dragEndBoostSelect());delete this.previousDragX,this.isDragSelect=this.options.wrapAround,this.select(i),delete this.isDragSelect,this.dispatchEvent("dragEnd",t,[e])},r.dragEndRestingSelect=function(){var t=this.getRestingPosition(),e=Math.abs(this.getSlideDistance(-t,this.selectedIndex)),i=this._getClosestResting(t,e,1),n=this._getClosestResting(t,e,-1),s=i.distance<n.distance?i.index:n.index;
-return s},r._getClosestResting=function(t,e,i){for(var n=this.selectedIndex,s=1/0,o=this.options.contain&&!this.options.wrapAround?function(t,e){return t<=e}:function(t,e){return t<e};o(e,s)&&(n+=i,s=e,e=this.getSlideDistance(-t,n),null!==e);)e=Math.abs(e);return{distance:s,index:n-i}},r.getSlideDistance=function(t,e){var i=this.slides.length,s=this.options.wrapAround&&i>1,o=s?n.modulo(e,i):e,r=this.slides[o];if(!r)return null;var a=s?this.slideableWidth*Math.floor(e/i):0;return t-(r.target+a)},r.dragEndBoostSelect=function(){if(void 0===this.previousDragX||!this.dragMoveTime||new Date-this.dragMoveTime>100)return 0;var t=this.getSlideDistance(-this.dragX,this.selectedIndex),e=this.previousDragX-this.dragX;return t>0&&e>0?1:t<0&&e<0?-1:0},r.staticClick=function(t,e){var i=this.getParentCell(t.target),n=i&&i.element,s=i&&this.cells.indexOf(i);this.dispatchEvent("staticClick",t,[e,n,s])},r.onscroll=function(){var t=o(),e=this.pointerDownScroll.x-t.x,i=this.pointerDownScroll.y-t.y;(Math.abs(e)>3||Math.abs(i)>3)&&this._pointerDone()},e}),function(t,e){"function"==typeof define&&define.amd?define("tap-listener/tap-listener",["unipointer/unipointer"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("unipointer")):t.TapListener=e(t,t.Unipointer)}(window,function(t,e){function i(t){this.bindTap(t)}var n=i.prototype=Object.create(e.prototype);return n.bindTap=function(t){t&&(this.unbindTap(),this.tapElement=t,this._bindStartEvent(t,!0))},n.unbindTap=function(){this.tapElement&&(this._bindStartEvent(this.tapElement,!0),delete this.tapElement)},n.pointerUp=function(i,n){if(!this.isIgnoringMouseUp||"mouseup"!=i.type){var s=e.getPointerPoint(n),o=this.tapElement.getBoundingClientRect(),r=t.pageXOffset,a=t.pageYOffset,h=s.x>=o.left+r&&s.x<=o.right+r&&s.y>=o.top+a&&s.y<=o.bottom+a;if(h&&this.emitEvent("tap",[i,n]),"mouseup"!=i.type){this.isIgnoringMouseUp=!0;var l=this;setTimeout(function(){delete l.isIgnoringMouseUp},400)}}},n.destroy=function(){this.pointerDone(),this.unbindTap()},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/prev-next-button",["./flickity","tap-listener/tap-listener","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("tap-listener"),require("fizzy-ui-utils")):e(t,t.Flickity,t.TapListener,t.fizzyUIUtils)}(window,function(t,e,i,n){"use strict";function s(t,e){this.direction=t,this.parent=e,this._create()}function o(t){return"string"==typeof t?t:"M "+t.x0+",50 L "+t.x1+","+(t.y1+50)+" L "+t.x2+","+(t.y2+50)+" L "+t.x3+",50  L "+t.x2+","+(50-t.y2)+" L "+t.x1+","+(50-t.y1)+" Z"}var r="http://www.w3.org/2000/svg";s.prototype=new i,s.prototype._create=function(){this.isEnabled=!0,this.isPrevious=this.direction==-1;var t=this.parent.options.rightToLeft?1:-1;this.isLeft=this.direction==t;var e=this.element=document.createElement("button");e.className="flickity-prev-next-button",e.className+=this.isPrevious?" previous":" next",e.setAttribute("type","button"),this.disable(),e.setAttribute("aria-label",this.isPrevious?"previous":"next");var i=this.createSVG();e.appendChild(i),this.on("tap",this.onTap),this.parent.on("select",this.update.bind(this)),this.on("pointerDown",this.parent.childUIPointerDown.bind(this.parent))},s.prototype.activate=function(){this.bindTap(this.element),this.element.addEventListener("click",this),this.parent.element.appendChild(this.element)},s.prototype.deactivate=function(){this.parent.element.removeChild(this.element),i.prototype.destroy.call(this),this.element.removeEventListener("click",this)},s.prototype.createSVG=function(){var t=document.createElementNS(r,"svg");t.setAttribute("viewBox","0 0 100 100");var e=document.createElementNS(r,"path"),i=o(this.parent.options.arrowShape);return e.setAttribute("d",i),e.setAttribute("class","arrow"),this.isLeft||e.setAttribute("transform","translate(100, 100) rotate(180) "),t.appendChild(e),t},s.prototype.onTap=function(){if(this.isEnabled){this.parent.uiChange();var t=this.isPrevious?"previous":"next";this.parent[t]()}},s.prototype.handleEvent=n.handleEvent,s.prototype.onclick=function(){var t=document.activeElement;t&&t==this.element&&this.onTap()},s.prototype.enable=function(){this.isEnabled||(this.element.disabled=!1,this.isEnabled=!0)},s.prototype.disable=function(){this.isEnabled&&(this.element.disabled=!0,this.isEnabled=!1)},s.prototype.update=function(){var t=this.parent.slides;if(this.parent.options.wrapAround&&t.length>1)return void this.enable();var e=t.length?t.length-1:0,i=this.isPrevious?0:e,n=this.parent.selectedIndex==i?"disable":"enable";this[n]()},s.prototype.destroy=function(){this.deactivate()},n.extend(e.defaults,{prevNextButtons:!0,arrowShape:{x0:10,x1:60,y1:50,x2:70,y2:40,x3:30}}),e.createMethods.push("_createPrevNextButtons");var a=e.prototype;return a._createPrevNextButtons=function(){this.options.prevNextButtons&&(this.prevButton=new s((-1),this),this.nextButton=new s(1,this),this.on("activate",this.activatePrevNextButtons))},a.activatePrevNextButtons=function(){this.prevButton.activate(),this.nextButton.activate(),this.on("deactivate",this.deactivatePrevNextButtons)},a.deactivatePrevNextButtons=function(){this.prevButton.deactivate(),this.nextButton.deactivate(),this.off("deactivate",this.deactivatePrevNextButtons)},e.PrevNextButton=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/page-dots",["./flickity","tap-listener/tap-listener","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("tap-listener"),require("fizzy-ui-utils")):e(t,t.Flickity,t.TapListener,t.fizzyUIUtils)}(window,function(t,e,i,n){function s(t){this.parent=t,this._create()}s.prototype=new i,s.prototype._create=function(){this.holder=document.createElement("ol"),this.holder.className="flickity-page-dots",this.dots=[],this.on("tap",this.onTap),this.on("pointerDown",this.parent.childUIPointerDown.bind(this.parent))},s.prototype.activate=function(){this.setDots(),this.bindTap(this.holder),this.parent.element.appendChild(this.holder)},s.prototype.deactivate=function(){this.parent.element.removeChild(this.holder),i.prototype.destroy.call(this)},s.prototype.setDots=function(){var t=this.parent.slides.length-this.dots.length;t>0?this.addDots(t):t<0&&this.removeDots(-t)},s.prototype.addDots=function(t){for(var e=document.createDocumentFragment(),i=[];t;){var n=document.createElement("li");n.className="dot",e.appendChild(n),i.push(n),t--}this.holder.appendChild(e),this.dots=this.dots.concat(i)},s.prototype.removeDots=function(t){var e=this.dots.splice(this.dots.length-t,t);e.forEach(function(t){this.holder.removeChild(t)},this)},s.prototype.updateSelected=function(){this.selectedDot&&(this.selectedDot.className="dot"),this.dots.length&&(this.selectedDot=this.dots[this.parent.selectedIndex],this.selectedDot.className="dot is-selected")},s.prototype.onTap=function(t){var e=t.target;if("LI"==e.nodeName){this.parent.uiChange();var i=this.dots.indexOf(e);this.parent.select(i)}},s.prototype.destroy=function(){this.deactivate()},e.PageDots=s,n.extend(e.defaults,{pageDots:!0}),e.createMethods.push("_createPageDots");var o=e.prototype;return o._createPageDots=function(){this.options.pageDots&&(this.pageDots=new s(this),this.on("activate",this.activatePageDots),this.on("select",this.updateSelectedPageDots),this.on("cellChange",this.updatePageDots),this.on("resize",this.updatePageDots),this.on("deactivate",this.deactivatePageDots))},o.activatePageDots=function(){this.pageDots.activate()},o.updateSelectedPageDots=function(){this.pageDots.updateSelected()},o.updatePageDots=function(){this.pageDots.setDots()},o.deactivatePageDots=function(){this.pageDots.deactivate()},e.PageDots=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/player",["ev-emitter/ev-emitter","fizzy-ui-utils/utils","./flickity"],function(t,i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(require("ev-emitter"),require("fizzy-ui-utils"),require("./flickity")):e(t.EvEmitter,t.fizzyUIUtils,t.Flickity)}(window,function(t,e,i){function n(t){this.parent=t,this.state="stopped",o&&(this.onVisibilityChange=function(){this.visibilityChange()}.bind(this),this.onVisibilityPlay=function(){this.visibilityPlay()}.bind(this))}var s,o;"hidden"in document?(s="hidden",o="visibilitychange"):"webkitHidden"in document&&(s="webkitHidden",o="webkitvisibilitychange"),n.prototype=Object.create(t.prototype),n.prototype.play=function(){if("playing"!=this.state){var t=document[s];if(o&&t)return void document.addEventListener(o,this.onVisibilityPlay);this.state="playing",o&&document.addEventListener(o,this.onVisibilityChange),this.tick()}},n.prototype.tick=function(){if("playing"==this.state){var t=this.parent.options.autoPlay;t="number"==typeof t?t:3e3;var e=this;this.clear(),this.timeout=setTimeout(function(){e.parent.next(!0),e.tick()},t)}},n.prototype.stop=function(){this.state="stopped",this.clear(),o&&document.removeEventListener(o,this.onVisibilityChange)},n.prototype.clear=function(){clearTimeout(this.timeout)},n.prototype.pause=function(){"playing"==this.state&&(this.state="paused",this.clear())},n.prototype.unpause=function(){"paused"==this.state&&this.play()},n.prototype.visibilityChange=function(){var t=document[s];this[t?"pause":"unpause"]()},n.prototype.visibilityPlay=function(){this.play(),document.removeEventListener(o,this.onVisibilityPlay)},e.extend(i.defaults,{pauseAutoPlayOnHover:!0}),i.createMethods.push("_createPlayer");var r=i.prototype;return r._createPlayer=function(){this.player=new n(this),this.on("activate",this.activatePlayer),this.on("uiChange",this.stopPlayer),this.on("pointerDown",this.stopPlayer),this.on("deactivate",this.deactivatePlayer)},r.activatePlayer=function(){this.options.autoPlay&&(this.player.play(),this.element.addEventListener("mouseenter",this))},r.playPlayer=function(){this.player.play()},r.stopPlayer=function(){this.player.stop()},r.pausePlayer=function(){this.player.pause()},r.unpausePlayer=function(){this.player.unpause()},r.deactivatePlayer=function(){this.player.stop(),this.element.removeEventListener("mouseenter",this)},r.onmouseenter=function(){this.options.pauseAutoPlayOnHover&&(this.player.pause(),this.element.addEventListener("mouseleave",this))},r.onmouseleave=function(){this.player.unpause(),this.element.removeEventListener("mouseleave",this)},i.Player=n,i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/add-remove-cell",["./flickity","fizzy-ui-utils/utils"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("fizzy-ui-utils")):e(t,t.Flickity,t.fizzyUIUtils)}(window,function(t,e,i){function n(t){var e=document.createDocumentFragment();return t.forEach(function(t){e.appendChild(t.element)}),e}var s=e.prototype;return s.insert=function(t,e){var i=this._makeCells(t);if(i&&i.length){var s=this.cells.length;e=void 0===e?s:e;var o=n(i),r=e==s;if(r)this.slider.appendChild(o);else{var a=this.cells[e].element;this.slider.insertBefore(o,a)}if(0===e)this.cells=i.concat(this.cells);else if(r)this.cells=this.cells.concat(i);else{var h=this.cells.splice(e,s-e);this.cells=this.cells.concat(i).concat(h)}this._sizeCells(i);var l=e>this.selectedIndex?0:i.length;this._cellAddedRemoved(e,l)}},s.append=function(t){this.insert(t,this.cells.length)},s.prepend=function(t){this.insert(t,0)},s.remove=function(t){var e,n,s=this.getCells(t),o=0,r=s.length;for(e=0;e<r;e++){n=s[e];var a=this.cells.indexOf(n)<this.selectedIndex;o-=a?1:0}for(e=0;e<r;e++)n=s[e],n.remove(),i.removeFrom(this.cells,n);s.length&&this._cellAddedRemoved(0,o)},s._cellAddedRemoved=function(t,e){e=e||0,this.selectedIndex+=e,this.selectedIndex=Math.max(0,Math.min(this.slides.length-1,this.selectedIndex)),this.cellChange(t,!0),this.emitEvent("cellAddedRemoved",[t,e])},s.cellSizeChange=function(t){var e=this.getCell(t);if(e){e.getSize();var i=this.cells.indexOf(e);this.cellChange(i)}},s.cellChange=function(t,e){var i=this.slideableWidth;if(this._positionCells(t),this._getWrapShiftCells(),this.setGallerySize(),this.emitEvent("cellChange",[t]),this.options.freeScroll){var n=i-this.slideableWidth;this.x+=n*this.cellAlign,this.positionSlider()}else e&&this.positionSliderAtSelected(),this.select(this.selectedIndex)},e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/lazyload",["./flickity","fizzy-ui-utils/utils"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("fizzy-ui-utils")):e(t,t.Flickity,t.fizzyUIUtils)}(window,function(t,e,i){"use strict";function n(t){if("IMG"==t.nodeName&&t.getAttribute("data-flickity-lazyload"))return[t];var e=t.querySelectorAll("img[data-flickity-lazyload]");return i.makeArray(e)}function s(t,e){this.img=t,this.flickity=e,this.load()}e.createMethods.push("_createLazyload");var o=e.prototype;return o._createLazyload=function(){this.on("select",this.lazyLoad)},o.lazyLoad=function(){var t=this.options.lazyLoad;if(t){var e="number"==typeof t?t:0,i=this.getAdjacentCellElements(e),o=[];i.forEach(function(t){var e=n(t);o=o.concat(e)}),o.forEach(function(t){new s(t,this)},this)}},s.prototype.handleEvent=i.handleEvent,s.prototype.load=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.img.getAttribute("data-flickity-lazyload"),this.img.removeAttribute("data-flickity-lazyload")},s.prototype.onload=function(t){this.complete(t,"flickity-lazyloaded")},s.prototype.onerror=function(t){this.complete(t,"flickity-lazyerror")},s.prototype.complete=function(t,e){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this);var i=this.flickity.getParentCell(this.img),n=i&&i.element;this.flickity.cellSizeChange(n),this.img.classList.add(e),this.flickity.dispatchEvent("lazyLoad",t,n)},e.LazyLoader=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/index",["./flickity","./drag","./prev-next-button","./page-dots","./player","./add-remove-cell","./lazyload"],e):"object"==typeof module&&module.exports&&(module.exports=e(require("./flickity"),require("./drag"),require("./prev-next-button"),require("./page-dots"),require("./player"),require("./add-remove-cell"),require("./lazyload")))}(window,function(t){return t}),function(t,e){"function"==typeof define&&define.amd?define("flickity-as-nav-for/as-nav-for",["flickity/js/index","fizzy-ui-utils/utils"],e):"object"==typeof module&&module.exports?module.exports=e(require("flickity"),require("fizzy-ui-utils")):t.Flickity=e(t.Flickity,t.fizzyUIUtils)}(window,function(t,e){function i(t,e,i){return(e-t)*i+t}t.createMethods.push("_createAsNavFor");var n=t.prototype;return n._createAsNavFor=function(){this.on("activate",this.activateAsNavFor),this.on("deactivate",this.deactivateAsNavFor),this.on("destroy",this.destroyAsNavFor);var t=this.options.asNavFor;if(t){var e=this;setTimeout(function(){e.setNavCompanion(t)})}},n.setNavCompanion=function(i){i=e.getQueryElement(i);var n=t.data(i);if(n&&n!=this){this.navCompanion=n;var s=this;this.onNavCompanionSelect=function(){s.navCompanionSelect()},n.on("select",this.onNavCompanionSelect),this.on("staticClick",this.onNavStaticClick),this.navCompanionSelect(!0)}},n.navCompanionSelect=function(t){if(this.navCompanion){var e=this.navCompanion.selectedCells[0],n=this.navCompanion.cells.indexOf(e),s=n+this.navCompanion.selectedCells.length-1,o=Math.floor(i(n,s,this.navCompanion.cellAlign));if(this.selectCell(o,!1,t),this.removeNavSelectedElements(),!(o>=this.cells.length)){var r=this.cells.slice(n,s+1);this.navSelectedElements=r.map(function(t){return t.element}),this.changeNavSelectedClass("add")}}},n.changeNavSelectedClass=function(t){this.navSelectedElements.forEach(function(e){e.classList[t]("is-nav-selected")})},n.activateAsNavFor=function(){this.navCompanionSelect(!0)},n.removeNavSelectedElements=function(){this.navSelectedElements&&(this.changeNavSelectedClass("remove"),delete this.navSelectedElements)},n.onNavStaticClick=function(t,e,i,n){"number"==typeof n&&this.navCompanion.selectCell(n)},n.deactivateAsNavFor=function(){this.removeNavSelectedElements()},n.destroyAsNavFor=function(){this.navCompanion&&(this.navCompanion.off("select",this.onNavCompanionSelect),this.off("staticClick",this.onNavStaticClick),delete this.navCompanion)},t}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("imagesloaded/imagesloaded",["ev-emitter/ev-emitter"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("ev-emitter")):t.imagesLoaded=e(t,t.EvEmitter)}("undefined"!=typeof window?window:this,function(t,e){function i(t,e){for(var i in e)t[i]=e[i];return t}function n(t){var e=[];if(Array.isArray(t))e=t;else if("number"==typeof t.length)for(var i=0;i<t.length;i++)e.push(t[i]);else e.push(t);return e}function s(t,e,o){return this instanceof s?("string"==typeof t&&(t=document.querySelectorAll(t)),this.elements=n(t),this.options=i({},this.options),"function"==typeof e?o=e:i(this.options,e),o&&this.on("always",o),this.getImages(),a&&(this.jqDeferred=new a.Deferred),void setTimeout(function(){this.check()}.bind(this))):new s(t,e,o)}function o(t){this.img=t}function r(t,e){this.url=t,this.element=e,this.img=new Image}var a=t.jQuery,h=t.console;s.prototype=Object.create(e.prototype),s.prototype.options={},s.prototype.getImages=function(){this.images=[],this.elements.forEach(this.addElementImages,this)},s.prototype.addElementImages=function(t){"IMG"==t.nodeName&&this.addImage(t),this.options.background===!0&&this.addElementBackgroundImages(t);var e=t.nodeType;if(e&&l[e]){for(var i=t.querySelectorAll("img"),n=0;n<i.length;n++){var s=i[n];this.addImage(s)}if("string"==typeof this.options.background){var o=t.querySelectorAll(this.options.background);for(n=0;n<o.length;n++){var r=o[n];this.addElementBackgroundImages(r)}}}};var l={1:!0,9:!0,11:!0};return s.prototype.addElementBackgroundImages=function(t){var e=getComputedStyle(t);if(e)for(var i=/url\((['"])?(.*?)\1\)/gi,n=i.exec(e.backgroundImage);null!==n;){var s=n&&n[2];s&&this.addBackground(s,t),n=i.exec(e.backgroundImage)}},s.prototype.addImage=function(t){var e=new o(t);this.images.push(e)},s.prototype.addBackground=function(t,e){var i=new r(t,e);this.images.push(i)},s.prototype.check=function(){function t(t,i,n){setTimeout(function(){e.progress(t,i,n)})}var e=this;return this.progressedCount=0,this.hasAnyBroken=!1,this.images.length?void this.images.forEach(function(e){e.once("progress",t),e.check()}):void this.complete()},s.prototype.progress=function(t,e,i){this.progressedCount++,this.hasAnyBroken=this.hasAnyBroken||!t.isLoaded,this.emitEvent("progress",[this,t,e]),this.jqDeferred&&this.jqDeferred.notify&&this.jqDeferred.notify(this,t),this.progressedCount==this.images.length&&this.complete(),this.options.debug&&h&&h.log("progress: "+i,t,e)},s.prototype.complete=function(){var t=this.hasAnyBroken?"fail":"done";if(this.isComplete=!0,this.emitEvent(t,[this]),this.emitEvent("always",[this]),this.jqDeferred){var e=this.hasAnyBroken?"reject":"resolve";this.jqDeferred[e](this)}},o.prototype=Object.create(e.prototype),o.prototype.check=function(){var t=this.getIsImageComplete();return t?void this.confirm(0!==this.img.naturalWidth,"naturalWidth"):(this.proxyImage=new Image,this.proxyImage.addEventListener("load",this),this.proxyImage.addEventListener("error",this),this.img.addEventListener("load",this),this.img.addEventListener("error",this),void(this.proxyImage.src=this.img.src))},o.prototype.getIsImageComplete=function(){return this.img.complete&&void 0!==this.img.naturalWidth},o.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.img,e])},o.prototype.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},o.prototype.onload=function(){this.confirm(!0,"onload"),this.unbindEvents()},o.prototype.onerror=function(){this.confirm(!1,"onerror"),this.unbindEvents()},o.prototype.unbindEvents=function(){this.proxyImage.removeEventListener("load",this),this.proxyImage.removeEventListener("error",this),this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},r.prototype=Object.create(o.prototype),r.prototype.check=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.url;var t=this.getIsImageComplete();t&&(this.confirm(0!==this.img.naturalWidth,"naturalWidth"),this.unbindEvents())},r.prototype.unbindEvents=function(){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},r.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.element,e])},s.makeJQueryPlugin=function(e){e=e||t.jQuery,e&&(a=e,a.fn.imagesLoaded=function(t,e){var i=new s(this,t,e);return i.jqDeferred.promise(a(this))})},s.makeJQueryPlugin(),s}),function(t,e){"function"==typeof define&&define.amd?define(["flickity/js/index","imagesloaded/imagesloaded"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("flickity"),require("imagesloaded")):t.Flickity=e(t,t.Flickity,t.imagesLoaded)}(window,function(t,e,i){"use strict";e.createMethods.push("_createImagesLoaded");var n=e.prototype;return n._createImagesLoaded=function(){this.on("activate",this.imagesLoaded)},n.imagesLoaded=function(){function t(t,i){var n=e.getParentCell(i.img);e.cellSizeChange(n&&n.element),e.options.freeScroll||e.positionSliderAtSelected()}if(this.options.imagesLoaded){var e=this;i(this.slider).on("progress",t)}},e});
+!function(t,e){"function"==typeof define&&define.amd?define("jquery-bridget/jquery-bridget",["jquery"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("jquery")):t.jQueryBridget=e(t,t.jQuery)}(window,function(t,e){"use strict";function i(i,o,a){function l(t,e,n){var s,o="$()."+i+'("'+e+'")';return t.each(function(t,l){var h=a.data(l,i);if(!h)return void r(i+" not initialized. Cannot call methods, i.e. "+o);var c=h[e];if(!c||"_"==e.charAt(0))return void r(o+" is not a valid method");var d=c.apply(h,n);s=void 0===s?d:s}),void 0!==s?s:t}function h(t,e){t.each(function(t,n){var s=a.data(n,i);s?(s.option(e),s._init()):(s=new o(n,e),a.data(n,i,s))})}a=a||e||t.jQuery,a&&(o.prototype.option||(o.prototype.option=function(t){a.isPlainObject(t)&&(this.options=a.extend(!0,this.options,t))}),a.fn[i]=function(t){if("string"==typeof t){var e=s.call(arguments,1);return l(this,t,e)}return h(this,t),this},n(a))}function n(t){!t||t&&t.bridget||(t.bridget=i)}var s=Array.prototype.slice,o=t.console,r="undefined"==typeof o?function(){}:function(t){o.error(t)};return n(e||t.jQuery),i}),function(t,e){"function"==typeof define&&define.amd?define("ev-emitter/ev-emitter",e):"object"==typeof module&&module.exports?module.exports=e():t.EvEmitter=e()}("undefined"!=typeof window?window:this,function(){function t(){}var e=t.prototype;return e.on=function(t,e){if(t&&e){var i=this._events=this._events||{},n=i[t]=i[t]||[];return n.indexOf(e)==-1&&n.push(e),this}},e.once=function(t,e){if(t&&e){this.on(t,e);var i=this._onceEvents=this._onceEvents||{},n=i[t]=i[t]||{};return n[e]=!0,this}},e.off=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){var n=i.indexOf(e);return n!=-1&&i.splice(n,1),this}},e.emitEvent=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){var n=0,s=i[n];e=e||[];for(var o=this._onceEvents&&this._onceEvents[t];s;){var r=o&&o[s];r&&(this.off(t,s),delete o[s]),s.apply(this,e),n+=r?0:1,s=i[n]}return this}},t}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("get-size/get-size",[],function(){return e()}):"object"==typeof module&&module.exports?module.exports=e():t.getSize=e()}(window,function(){"use strict";function t(t){var e=parseFloat(t),i=t.indexOf("%")==-1&&!isNaN(e);return i&&e}function e(){}function i(){for(var t={width:0,height:0,innerWidth:0,innerHeight:0,outerWidth:0,outerHeight:0},e=0;e<h;e++){var i=l[e];t[i]=0}return t}function n(t){var e=getComputedStyle(t);return e||a("Style returned "+e+". Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1"),e}function s(){if(!c){c=!0;var e=document.createElement("div");e.style.width="200px",e.style.padding="1px 2px 3px 4px",e.style.borderStyle="solid",e.style.borderWidth="1px 2px 3px 4px",e.style.boxSizing="border-box";var i=document.body||document.documentElement;i.appendChild(e);var s=n(e);o.isBoxSizeOuter=r=200==t(s.width),i.removeChild(e)}}function o(e){if(s(),"string"==typeof e&&(e=document.querySelector(e)),e&&"object"==typeof e&&e.nodeType){var o=n(e);if("none"==o.display)return i();var a={};a.width=e.offsetWidth,a.height=e.offsetHeight;for(var c=a.isBorderBox="border-box"==o.boxSizing,d=0;d<h;d++){var u=l[d],f=o[u],p=parseFloat(f);a[u]=isNaN(p)?0:p}var v=a.paddingLeft+a.paddingRight,g=a.paddingTop+a.paddingBottom,m=a.marginLeft+a.marginRight,y=a.marginTop+a.marginBottom,S=a.borderLeftWidth+a.borderRightWidth,E=a.borderTopWidth+a.borderBottomWidth,b=c&&r,x=t(o.width);x!==!1&&(a.width=x+(b?0:v+S));var C=t(o.height);return C!==!1&&(a.height=C+(b?0:g+E)),a.innerWidth=a.width-(v+S),a.innerHeight=a.height-(g+E),a.outerWidth=a.width+m,a.outerHeight=a.height+y,a}}var r,a="undefined"==typeof console?e:function(t){console.error(t)},l=["paddingLeft","paddingRight","paddingTop","paddingBottom","marginLeft","marginRight","marginTop","marginBottom","borderLeftWidth","borderRightWidth","borderTopWidth","borderBottomWidth"],h=l.length,c=!1;return o}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("desandro-matches-selector/matches-selector",e):"object"==typeof module&&module.exports?module.exports=e():t.matchesSelector=e()}(window,function(){"use strict";var t=function(){var t=Element.prototype;if(t.matches)return"matches";if(t.matchesSelector)return"matchesSelector";for(var e=["webkit","moz","ms","o"],i=0;i<e.length;i++){var n=e[i],s=n+"MatchesSelector";if(t[s])return s}}();return function(e,i){return e[t](i)}}),function(t,e){"function"==typeof define&&define.amd?define("fizzy-ui-utils/utils",["desandro-matches-selector/matches-selector"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("desandro-matches-selector")):t.fizzyUIUtils=e(t,t.matchesSelector)}(window,function(t,e){var i={};i.extend=function(t,e){for(var i in e)t[i]=e[i];return t},i.modulo=function(t,e){return(t%e+e)%e},i.makeArray=function(t){var e=[];if(Array.isArray(t))e=t;else if(t&&"number"==typeof t.length)for(var i=0;i<t.length;i++)e.push(t[i]);else e.push(t);return e},i.removeFrom=function(t,e){var i=t.indexOf(e);i!=-1&&t.splice(i,1)},i.getParent=function(t,i){for(;t!=document.body;)if(t=t.parentNode,e(t,i))return t},i.getQueryElement=function(t){return"string"==typeof t?document.querySelector(t):t},i.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},i.filterFindElements=function(t,n){t=i.makeArray(t);var s=[];return t.forEach(function(t){if(t instanceof HTMLElement){if(!n)return void s.push(t);e(t,n)&&s.push(t);for(var i=t.querySelectorAll(n),o=0;o<i.length;o++)s.push(i[o])}}),s},i.debounceMethod=function(t,e,i){var n=t.prototype[e],s=e+"Timeout";t.prototype[e]=function(){var t=this[s];t&&clearTimeout(t);var e=arguments,o=this;this[s]=setTimeout(function(){n.apply(o,e),delete o[s]},i||100)}},i.docReady=function(t){var e=document.readyState;"complete"==e||"interactive"==e?setTimeout(t):document.addEventListener("DOMContentLoaded",t)},i.toDashed=function(t){return t.replace(/(.)([A-Z])/g,function(t,e,i){return e+"-"+i}).toLowerCase()};var n=t.console;return i.htmlInit=function(e,s){i.docReady(function(){var o=i.toDashed(s),r="data-"+o,a=document.querySelectorAll("["+r+"]"),l=document.querySelectorAll(".js-"+o),h=i.makeArray(a).concat(i.makeArray(l)),c=r+"-options",d=t.jQuery;h.forEach(function(t){var i,o=t.getAttribute(r)||t.getAttribute(c);try{i=o&&JSON.parse(o)}catch(a){return void(n&&n.error("Error parsing "+r+" on "+t.className+": "+a))}var l=new e(t,i);d&&d.data(t,s,l)})})},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/cell",["get-size/get-size"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("get-size")):(t.Flickity=t.Flickity||{},t.Flickity.Cell=e(t,t.getSize))}(window,function(t,e){function i(t,e){this.element=t,this.parent=e,this.create()}var n=i.prototype;return n.create=function(){this.element.style.position="absolute",this.x=0,this.shift=0},n.destroy=function(){this.element.style.position="";var t=this.parent.originSide;this.element.style[t]=""},n.getSize=function(){this.size=e(this.element)},n.setPosition=function(t){this.x=t,this.updateTarget(),this.renderPosition(t)},n.updateTarget=n.setDefaultTarget=function(){var t="left"==this.parent.originSide?"marginLeft":"marginRight";this.target=this.x+this.size[t]+this.size.width*this.parent.cellAlign},n.renderPosition=function(t){var e=this.parent.originSide;this.element.style[e]=this.parent.getPositionValue(t)},n.wrapShift=function(t){this.shift=t,this.renderPosition(this.x+this.parent.slideableWidth*t)},n.remove=function(){this.element.parentNode.removeChild(this.element)},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/slide",e):"object"==typeof module&&module.exports?module.exports=e():(t.Flickity=t.Flickity||{},t.Flickity.Slide=e())}(window,function(){"use strict";function t(t){this.parent=t,this.isOriginLeft="left"==t.originSide,this.cells=[],this.outerWidth=0,this.height=0}var e=t.prototype;return e.addCell=function(t){if(this.cells.push(t),this.outerWidth+=t.size.outerWidth,this.height=Math.max(t.size.outerHeight,this.height),1==this.cells.length){this.x=t.x;var e=this.isOriginLeft?"marginLeft":"marginRight";this.firstMargin=t.size[e]}},e.updateTarget=function(){var t=this.isOriginLeft?"marginRight":"marginLeft",e=this.getLastCell(),i=e?e.size[t]:0,n=this.outerWidth-(this.firstMargin+i);this.target=this.x+this.firstMargin+n*this.parent.cellAlign},e.getLastCell=function(){return this.cells[this.cells.length-1]},e.select=function(){this.changeSelectedClass("add")},e.unselect=function(){this.changeSelectedClass("remove")},e.changeSelectedClass=function(t){this.cells.forEach(function(e){e.element.classList[t]("is-selected")})},e.getCellElements=function(){return this.cells.map(function(t){return t.element})},t}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/animate",["fizzy-ui-utils/utils"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("fizzy-ui-utils")):(t.Flickity=t.Flickity||{},t.Flickity.animatePrototype=e(t,t.fizzyUIUtils))}(window,function(t,e){var i=t.requestAnimationFrame||t.webkitRequestAnimationFrame,n=0;i||(i=function(t){var e=(new Date).getTime(),i=Math.max(0,16-(e-n)),s=setTimeout(t,i);return n=e+i,s});var s={};s.startAnimation=function(){this.isAnimating||(this.isAnimating=!0,this.restingFrames=0,this.animate())},s.animate=function(){this.applyDragForce(),this.applySelectedAttraction();var t=this.x;if(this.integratePhysics(),this.positionSlider(),this.settle(t),this.isAnimating){var e=this;i(function(){e.animate()})}};var o=function(){var t=document.documentElement.style;return"string"==typeof t.transform?"transform":"WebkitTransform"}();return s.positionSlider=function(){var t=this.x;this.options.wrapAround&&this.cells.length>1&&(t=e.modulo(t,this.slideableWidth),t-=this.slideableWidth,this.shiftWrapCells(t)),t+=this.cursorPosition,t=this.options.rightToLeft&&o?-t:t;var i=this.getPositionValue(t);this.slider.style[o]=this.isAnimating?"translate3d("+i+",0,0)":"translateX("+i+")";var n=this.slides[0];if(n){var s=-this.x-n.target,r=s/this.slidesWidth;this.dispatchEvent("scroll",null,[r,s])}},s.positionSliderAtSelected=function(){this.cells.length&&(this.x=-this.selectedSlide.target,this.positionSlider())},s.getPositionValue=function(t){return this.options.percentPosition?.01*Math.round(t/this.size.innerWidth*1e4)+"%":Math.round(t)+"px"},s.settle=function(t){this.isPointerDown||Math.round(100*this.x)!=Math.round(100*t)||this.restingFrames++,this.restingFrames>2&&(this.isAnimating=!1,delete this.isFreeScrolling,this.positionSlider(),this.dispatchEvent("settle"))},s.shiftWrapCells=function(t){var e=this.cursorPosition+t;this._shiftCells(this.beforeShiftCells,e,-1);var i=this.size.innerWidth-(t+this.slideableWidth+this.cursorPosition);this._shiftCells(this.afterShiftCells,i,1)},s._shiftCells=function(t,e,i){for(var n=0;n<t.length;n++){var s=t[n],o=e>0?i:0;s.wrapShift(o),e-=s.size.outerWidth}},s._unshiftCells=function(t){if(t&&t.length)for(var e=0;e<t.length;e++)t[e].wrapShift(0)},s.integratePhysics=function(){this.x+=this.velocity,this.velocity*=this.getFrictionFactor()},s.applyForce=function(t){this.velocity+=t},s.getFrictionFactor=function(){return 1-this.options[this.isFreeScrolling?"freeScrollFriction":"friction"]},s.getRestingPosition=function(){return this.x+this.velocity/(1-this.getFrictionFactor())},s.applyDragForce=function(){if(this.isPointerDown){var t=this.dragX-this.x,e=t-this.velocity;this.applyForce(e)}},s.applySelectedAttraction=function(){if(!this.isPointerDown&&!this.isFreeScrolling&&this.cells.length){var t=this.selectedSlide.target*-1-this.x,e=t*this.options.selectedAttraction;this.applyForce(e)}},s}),function(t,e){if("function"==typeof define&&define.amd)define("flickity/js/flickity",["ev-emitter/ev-emitter","get-size/get-size","fizzy-ui-utils/utils","./cell","./slide","./animate"],function(i,n,s,o,r,a){return e(t,i,n,s,o,r,a)});else if("object"==typeof module&&module.exports)module.exports=e(t,require("ev-emitter"),require("get-size"),require("fizzy-ui-utils"),require("./cell"),require("./slide"),require("./animate"));else{var i=t.Flickity;t.Flickity=e(t,t.EvEmitter,t.getSize,t.fizzyUIUtils,i.Cell,i.Slide,i.animatePrototype)}}(window,function(t,e,i,n,s,o,r){function a(t,e){for(t=n.makeArray(t);t.length;)e.appendChild(t.shift())}function l(t,e){var i=n.getQueryElement(t);if(!i)return void(d&&d.error("Bad element for Flickity: "+(i||t)));if(this.element=i,this.element.flickityGUID){var s=f[this.element.flickityGUID];return s.option(e),s}h&&(this.$element=h(this.element)),this.options=n.extend({},this.constructor.defaults),this.option(e),this._create()}var h=t.jQuery,c=t.getComputedStyle,d=t.console,u=0,f={};l.defaults={accessibility:!0,cellAlign:"center",freeScrollFriction:.075,friction:.28,namespaceJQueryEvents:!0,percentPosition:!0,resize:!0,selectedAttraction:.025,setGallerySize:!0},l.createMethods=[];var p=l.prototype;n.extend(p,e.prototype),p._create=function(){var e=this.guid=++u;this.element.flickityGUID=e,f[e]=this,this.selectedIndex=0,this.restingFrames=0,this.x=0,this.velocity=0,this.originSide=this.options.rightToLeft?"right":"left",this.viewport=document.createElement("div"),this.viewport.className="flickity-viewport",this._createSlider(),(this.options.resize||this.options.watchCSS)&&t.addEventListener("resize",this),l.createMethods.forEach(function(t){this[t]()},this),this.options.watchCSS?this.watchCSS():this.activate()},p.option=function(t){n.extend(this.options,t)},p.activate=function(){if(!this.isActive){this.isActive=!0,this.element.classList.add("flickity-enabled"),this.options.rightToLeft&&this.element.classList.add("flickity-rtl"),this.getSize();var t=this._filterFindCellElements(this.element.children);a(t,this.slider),this.viewport.appendChild(this.slider),this.element.appendChild(this.viewport),this.reloadCells(),this.options.accessibility&&(this.element.tabIndex=0,this.element.addEventListener("keydown",this)),this.emitEvent("activate");var e,i=this.options.initialIndex;e=this.isInitActivated?this.selectedIndex:void 0!==i&&this.cells[i]?i:0,this.select(e,!1,!0),this.isInitActivated=!0}},p._createSlider=function(){var t=document.createElement("div");t.className="flickity-slider",t.style[this.originSide]=0,this.slider=t},p._filterFindCellElements=function(t){return n.filterFindElements(t,this.options.cellSelector)},p.reloadCells=function(){this.cells=this._makeCells(this.slider.children),this.positionCells(),this._getWrapShiftCells(),this.setGallerySize()},p._makeCells=function(t){var e=this._filterFindCellElements(t),i=e.map(function(t){return new s(t,this)},this);return i},p.getLastCell=function(){return this.cells[this.cells.length-1]},p.getLastSlide=function(){return this.slides[this.slides.length-1]},p.positionCells=function(){this._sizeCells(this.cells),this._positionCells(0)},p._positionCells=function(t){t=t||0,this.maxCellHeight=t?this.maxCellHeight||0:0;var e=0;if(t>0){var i=this.cells[t-1];e=i.x+i.size.outerWidth}for(var n=this.cells.length,s=t;s<n;s++){var o=this.cells[s];o.setPosition(e),e+=o.size.outerWidth,this.maxCellHeight=Math.max(o.size.outerHeight,this.maxCellHeight)}this.slideableWidth=e,this.updateSlides(),this._containSlides(),this.slidesWidth=n?this.getLastSlide().target-this.slides[0].target:0},p._sizeCells=function(t){t.forEach(function(t){t.getSize()})},p.updateSlides=function(){if(this.slides=[],this.cells.length){var t=new o(this);this.slides.push(t);var e="left"==this.originSide,i=e?"marginRight":"marginLeft",n=this._getCanCellFit();this.cells.forEach(function(e,s){if(!t.cells.length)return void t.addCell(e);var r=t.outerWidth-t.firstMargin+(e.size.outerWidth-e.size[i]);n.call(this,s,r)?t.addCell(e):(t.updateTarget(),t=new o(this),this.slides.push(t),t.addCell(e))},this),t.updateTarget(),this.updateSelectedSlide()}},p._getCanCellFit=function(){var t=this.options.groupCells;if(!t)return function(){return!1};if("number"==typeof t){var e=parseInt(t,10);return function(t){return t%e!==0}}var i="string"==typeof t&&t.match(/^(\d+)%$/),n=i?parseInt(i[1],10)/100:1;return function(t,e){return e<=(this.size.innerWidth+1)*n}},p._init=p.reposition=function(){this.positionCells(),this.positionSliderAtSelected()},p.getSize=function(){this.size=i(this.element),this.setCellAlign(),this.cursorPosition=this.size.innerWidth*this.cellAlign};var v={center:{left:.5,right:.5},left:{left:0,right:1},right:{right:0,left:1}};return p.setCellAlign=function(){var t=v[this.options.cellAlign];this.cellAlign=t?t[this.originSide]:this.options.cellAlign},p.setGallerySize=function(){if(this.options.setGallerySize){var t=this.options.adaptiveHeight&&this.selectedSlide?this.selectedSlide.height:this.maxCellHeight;this.viewport.style.height=t+"px"}},p._getWrapShiftCells=function(){if(this.options.wrapAround){this._unshiftCells(this.beforeShiftCells),this._unshiftCells(this.afterShiftCells);var t=this.cursorPosition,e=this.cells.length-1;this.beforeShiftCells=this._getGapCells(t,e,-1),t=this.size.innerWidth-this.cursorPosition,this.afterShiftCells=this._getGapCells(t,0,1)}},p._getGapCells=function(t,e,i){for(var n=[];t>0;){var s=this.cells[e];if(!s)break;n.push(s),e+=i,t-=s.size.outerWidth}return n},p._containSlides=function(){if(this.options.contain&&!this.options.wrapAround&&this.cells.length){var t=this.options.rightToLeft,e=t?"marginRight":"marginLeft",i=t?"marginLeft":"marginRight",n=this.slideableWidth-this.getLastCell().size[i],s=n<this.size.innerWidth,o=this.cursorPosition+this.cells[0].size[e],r=n-this.size.innerWidth*(1-this.cellAlign);this.slides.forEach(function(t){s?t.target=n*this.cellAlign:(t.target=Math.max(t.target,o),t.target=Math.min(t.target,r))},this)}},p.dispatchEvent=function(t,e,i){var n=e?[e].concat(i):i;if(this.emitEvent(t,n),h&&this.$element){t+=this.options.namespaceJQueryEvents?".flickity":"";var s=t;if(e){var o=h.Event(e);o.type=t,s=o}this.$element.trigger(s,i)}},p.select=function(t,e,i){this.isActive&&(t=parseInt(t,10),this._wrapSelect(t),(this.options.wrapAround||e)&&(t=n.modulo(t,this.slides.length)),this.slides[t]&&(this.selectedIndex=t,this.updateSelectedSlide(),i?this.positionSliderAtSelected():this.startAnimation(),this.options.adaptiveHeight&&this.setGallerySize(),this.dispatchEvent("select"),this.dispatchEvent("cellSelect")))},p._wrapSelect=function(t){var e=this.slides.length,i=this.options.wrapAround&&e>1;if(!i)return t;var s=n.modulo(t,e),o=Math.abs(s-this.selectedIndex),r=Math.abs(s+e-this.selectedIndex),a=Math.abs(s-e-this.selectedIndex);!this.isDragSelect&&r<o?t+=e:!this.isDragSelect&&a<o&&(t-=e),t<0?this.x-=this.slideableWidth:t>=e&&(this.x+=this.slideableWidth)},p.previous=function(t,e){this.select(this.selectedIndex-1,t,e)},p.next=function(t,e){this.select(this.selectedIndex+1,t,e)},p.updateSelectedSlide=function(){var t=this.slides[this.selectedIndex];t&&(this.unselectSelectedSlide(),this.selectedSlide=t,t.select(),this.selectedCells=t.cells,this.selectedElements=t.getCellElements(),this.selectedCell=t.cells[0],this.selectedElement=this.selectedElements[0])},p.unselectSelectedSlide=function(){this.selectedSlide&&this.selectedSlide.unselect()},p.selectCell=function(t,e,i){var n;"number"==typeof t?n=this.cells[t]:("string"==typeof t&&(t=this.element.querySelector(t)),n=this.getCell(t));for(var s=0;n&&s<this.slides.length;s++){var o=this.slides[s],r=o.cells.indexOf(n);if(r!=-1)return void this.select(s,e,i)}},p.getCell=function(t){for(var e=0;e<this.cells.length;e++){var i=this.cells[e];if(i.element==t)return i}},p.getCells=function(t){t=n.makeArray(t);var e=[];return t.forEach(function(t){var i=this.getCell(t);i&&e.push(i)},this),e},p.getCellElements=function(){return this.cells.map(function(t){return t.element})},p.getParentCell=function(t){var e=this.getCell(t);return e?e:(t=n.getParent(t,".flickity-slider > *"),this.getCell(t))},p.getAdjacentCellElements=function(t,e){if(!t)return this.selectedSlide.getCellElements();e=void 0===e?this.selectedIndex:e;var i=this.slides.length;if(1+2*t>=i)return this.getCellElements();for(var s=[],o=e-t;o<=e+t;o++){var r=this.options.wrapAround?n.modulo(o,i):o,a=this.slides[r];a&&(s=s.concat(a.getCellElements()))}return s},p.uiChange=function(){this.emitEvent("uiChange")},p.childUIPointerDown=function(t){this.emitEvent("childUIPointerDown",[t])},p.onresize=function(){this.watchCSS(),this.resize()},n.debounceMethod(l,"onresize",150),p.resize=function(){if(this.isActive){this.getSize(),this.options.wrapAround&&(this.x=n.modulo(this.x,this.slideableWidth)),this.positionCells(),this._getWrapShiftCells(),this.setGallerySize(),this.emitEvent("resize");var t=this.selectedElements&&this.selectedElements[0];this.selectCell(t,!1,!0)}},p.watchCSS=function(){var t=this.options.watchCSS;if(t){var e=c(this.element,":after").content;e.indexOf("flickity")!=-1?this.activate():this.deactivate()}},p.onkeydown=function(t){if(this.options.accessibility&&(!document.activeElement||document.activeElement==this.element))if(37==t.keyCode){var e=this.options.rightToLeft?"next":"previous";this.uiChange(),this[e]()}else if(39==t.keyCode){var i=this.options.rightToLeft?"previous":"next";this.uiChange(),this[i]()}},p.deactivate=function(){this.isActive&&(this.element.classList.remove("flickity-enabled"),this.element.classList.remove("flickity-rtl"),this.cells.forEach(function(t){t.destroy()}),this.unselectSelectedSlide(),this.element.removeChild(this.viewport),a(this.slider.children,this.element),this.options.accessibility&&(this.element.removeAttribute("tabIndex"),this.element.removeEventListener("keydown",this)),this.isActive=!1,this.emitEvent("deactivate"))},p.destroy=function(){this.deactivate(),t.removeEventListener("resize",this),this.emitEvent("destroy"),h&&this.$element&&h.removeData(this.element,"flickity"),delete this.element.flickityGUID,delete f[this.guid]},n.extend(p,r),l.data=function(t){t=n.getQueryElement(t);var e=t&&t.flickityGUID;return e&&f[e]},n.htmlInit(l,"flickity"),h&&h.bridget&&h.bridget("flickity",l),l.Cell=s,l}),function(t,e){"function"==typeof define&&define.amd?define("unipointer/unipointer",["ev-emitter/ev-emitter"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("ev-emitter")):t.Unipointer=e(t,t.EvEmitter)}(window,function(t,e){function i(){}function n(){}var s=n.prototype=Object.create(e.prototype);s.bindStartEvent=function(t){this._bindStartEvent(t,!0)},s.unbindStartEvent=function(t){this._bindStartEvent(t,!1)},s._bindStartEvent=function(e,i){i=void 0===i||!!i;var n=i?"addEventListener":"removeEventListener";t.navigator.pointerEnabled?e[n]("pointerdown",this):t.navigator.msPointerEnabled?e[n]("MSPointerDown",this):(e[n]("mousedown",this),e[n]("touchstart",this))},s.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},s.getTouch=function(t){for(var e=0;e<t.length;e++){var i=t[e];if(i.identifier==this.pointerIdentifier)return i}},s.onmousedown=function(t){var e=t.button;e&&0!==e&&1!==e||this._pointerDown(t,t)},s.ontouchstart=function(t){this._pointerDown(t,t.changedTouches[0])},s.onMSPointerDown=s.onpointerdown=function(t){this._pointerDown(t,t)},s._pointerDown=function(t,e){this.isPointerDown||(this.isPointerDown=!0,this.pointerIdentifier=void 0!==e.pointerId?e.pointerId:e.identifier,this.pointerDown(t,e))},s.pointerDown=function(t,e){this._bindPostStartEvents(t),this.emitEvent("pointerDown",[t,e])};var o={mousedown:["mousemove","mouseup"],touchstart:["touchmove","touchend","touchcancel"],pointerdown:["pointermove","pointerup","pointercancel"],MSPointerDown:["MSPointerMove","MSPointerUp","MSPointerCancel"]};return s._bindPostStartEvents=function(e){if(e){var i=o[e.type];i.forEach(function(e){t.addEventListener(e,this)},this),this._boundPointerEvents=i}},s._unbindPostStartEvents=function(){this._boundPointerEvents&&(this._boundPointerEvents.forEach(function(e){t.removeEventListener(e,this)},this),delete this._boundPointerEvents)},s.onmousemove=function(t){this._pointerMove(t,t)},s.onMSPointerMove=s.onpointermove=function(t){t.pointerId==this.pointerIdentifier&&this._pointerMove(t,t)},s.ontouchmove=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerMove(t,e)},s._pointerMove=function(t,e){this.pointerMove(t,e)},s.pointerMove=function(t,e){this.emitEvent("pointerMove",[t,e])},s.onmouseup=function(t){this._pointerUp(t,t)},s.onMSPointerUp=s.onpointerup=function(t){t.pointerId==this.pointerIdentifier&&this._pointerUp(t,t)},s.ontouchend=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerUp(t,e)},s._pointerUp=function(t,e){this._pointerDone(),this.pointerUp(t,e)},s.pointerUp=function(t,e){this.emitEvent("pointerUp",[t,e])},s._pointerDone=function(){this.isPointerDown=!1,delete this.pointerIdentifier,this._unbindPostStartEvents(),this.pointerDone()},s.pointerDone=i,s.onMSPointerCancel=s.onpointercancel=function(t){t.pointerId==this.pointerIdentifier&&this._pointerCancel(t,t)},s.ontouchcancel=function(t){var e=this.getTouch(t.changedTouches);e&&this._pointerCancel(t,e)},s._pointerCancel=function(t,e){this._pointerDone(),this.pointerCancel(t,e)},s.pointerCancel=function(t,e){this.emitEvent("pointerCancel",[t,e])},n.getPointerPoint=function(t){return{x:t.pageX,y:t.pageY}},n}),function(t,e){"function"==typeof define&&define.amd?define("unidragger/unidragger",["unipointer/unipointer"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("unipointer")):t.Unidragger=e(t,t.Unipointer)}(window,function(t,e){function i(){}function n(){}var s=n.prototype=Object.create(e.prototype);s.bindHandles=function(){this._bindHandles(!0)},s.unbindHandles=function(){this._bindHandles(!1)};var o=t.navigator;return s._bindHandles=function(t){t=void 0===t||!!t;var e;e=o.pointerEnabled?function(e){e.style.touchAction=t?"none":""}:o.msPointerEnabled?function(e){e.style.msTouchAction=t?"none":""}:i;for(var n=t?"addEventListener":"removeEventListener",s=0;s<this.handles.length;s++){var r=this.handles[s];this._bindStartEvent(r,t),e(r),r[n]("click",this)}},s.pointerDown=function(t,e){if("INPUT"==t.target.nodeName&&"range"==t.target.type)return this.isPointerDown=!1,void delete this.pointerIdentifier;this._dragPointerDown(t,e);var i=document.activeElement;i&&i.blur&&i.blur(),this._bindPostStartEvents(t),this.emitEvent("pointerDown",[t,e])},s._dragPointerDown=function(t,i){this.pointerDownPoint=e.getPointerPoint(i);var n=this.canPreventDefaultOnPointerDown(t,i);n&&t.preventDefault()},s.canPreventDefaultOnPointerDown=function(t){return"SELECT"!=t.target.nodeName},s.pointerMove=function(t,e){var i=this._dragPointerMove(t,e);this.emitEvent("pointerMove",[t,e,i]),this._dragMove(t,e,i)},s._dragPointerMove=function(t,i){var n=e.getPointerPoint(i),s={x:n.x-this.pointerDownPoint.x,y:n.y-this.pointerDownPoint.y};return!this.isDragging&&this.hasDragStarted(s)&&this._dragStart(t,i),s},s.hasDragStarted=function(t){return Math.abs(t.x)>3||Math.abs(t.y)>3},s.pointerUp=function(t,e){this.emitEvent("pointerUp",[t,e]),this._dragPointerUp(t,e)},s._dragPointerUp=function(t,e){this.isDragging?this._dragEnd(t,e):this._staticClick(t,e)},s._dragStart=function(t,i){this.isDragging=!0,this.dragStartPoint=e.getPointerPoint(i),this.isPreventingClicks=!0,this.dragStart(t,i)},s.dragStart=function(t,e){this.emitEvent("dragStart",[t,e])},s._dragMove=function(t,e,i){this.isDragging&&this.dragMove(t,e,i)},s.dragMove=function(t,e,i){t.preventDefault(),this.emitEvent("dragMove",[t,e,i])},s._dragEnd=function(t,e){this.isDragging=!1,setTimeout(function(){delete this.isPreventingClicks}.bind(this)),this.dragEnd(t,e)},s.dragEnd=function(t,e){this.emitEvent("dragEnd",[t,e])},s.onclick=function(t){this.isPreventingClicks&&t.preventDefault()},s._staticClick=function(t,e){if(!this.isIgnoringMouseUp||"mouseup"!=t.type){var i=t.target.nodeName;"INPUT"!=i&&"TEXTAREA"!=i||t.target.focus(),this.staticClick(t,e),"mouseup"!=t.type&&(this.isIgnoringMouseUp=!0,setTimeout(function(){delete this.isIgnoringMouseUp}.bind(this),400))}},s.staticClick=function(t,e){this.emitEvent("staticClick",[t,e])},n.getPointerPoint=e.getPointerPoint,n}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/drag",["./flickity","unidragger/unidragger","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("unidragger"),require("fizzy-ui-utils")):t.Flickity=e(t,t.Flickity,t.Unidragger,t.fizzyUIUtils)}(window,function(t,e,i,n){function s(){return{x:t.pageXOffset,y:t.pageYOffset}}n.extend(e.defaults,{draggable:!0,dragThreshold:3}),e.createMethods.push("_createDrag");var o=e.prototype;n.extend(o,i.prototype);var r="createTouch"in document,a=!1;o._createDrag=function(){this.on("activate",this.bindDrag),this.on("uiChange",this._uiChangeDrag),this.on("childUIPointerDown",this._childUIPointerDownDrag),this.on("deactivate",this.unbindDrag),r&&!a&&(t.addEventListener("touchmove",function(){}),a=!0)},o.bindDrag=function(){this.options.draggable&&!this.isDragBound&&(this.element.classList.add("is-draggable"),this.handles=[this.viewport],this.bindHandles(),this.isDragBound=!0)},o.unbindDrag=function(){this.isDragBound&&(this.element.classList.remove("is-draggable"),this.unbindHandles(),delete this.isDragBound)},o._uiChangeDrag=function(){delete this.isFreeScrolling},o._childUIPointerDownDrag=function(t){t.preventDefault(),this.pointerDownFocus(t)};var l={TEXTAREA:!0,INPUT:!0,OPTION:!0},h={radio:!0,checkbox:!0,button:!0,submit:!0,image:!0,file:!0};o.pointerDown=function(e,i){var n=l[e.target.nodeName]&&!h[e.target.type];if(n)return this.isPointerDown=!1,void delete this.pointerIdentifier;this._dragPointerDown(e,i);var o=document.activeElement;o&&o.blur&&o!=this.element&&o!=document.body&&o.blur(),this.pointerDownFocus(e),this.dragX=this.x,this.viewport.classList.add("is-pointer-down"),this._bindPostStartEvents(e),this.pointerDownScroll=s(),t.addEventListener("scroll",this),this.dispatchEvent("pointerDown",e,[i])};var c={touchstart:!0,MSPointerDown:!0},d={INPUT:!0,SELECT:!0};return o.pointerDownFocus=function(e){if(this.options.accessibility&&!c[e.type]&&!d[e.target.nodeName]){var i=t.pageYOffset;this.element.focus(),t.pageYOffset!=i&&t.scrollTo(t.pageXOffset,i)}},o.canPreventDefaultOnPointerDown=function(t){var e="touchstart"==t.type,i=t.target.nodeName;return!e&&"SELECT"!=i},o.hasDragStarted=function(t){return Math.abs(t.x)>this.options.dragThreshold},o.pointerUp=function(t,e){delete this.isTouchScrolling,this.viewport.classList.remove("is-pointer-down"),this.dispatchEvent("pointerUp",t,[e]),this._dragPointerUp(t,e)},o.pointerDone=function(){t.removeEventListener("scroll",this),delete this.pointerDownScroll},o.dragStart=function(e,i){this.dragStartPosition=this.x,this.startAnimation(),t.removeEventListener("scroll",this),this.dispatchEvent("dragStart",e,[i])},o.pointerMove=function(t,e){var i=this._dragPointerMove(t,e);this.dispatchEvent("pointerMove",t,[e,i]),this._dragMove(t,e,i)},o.dragMove=function(t,e,i){t.preventDefault(),this.previousDragX=this.dragX;var n=this.options.rightToLeft?-1:1,s=this.dragStartPosition+i.x*n;if(!this.options.wrapAround&&this.slides.length){var o=Math.max(-this.slides[0].target,this.dragStartPosition);s=s>o?.5*(s+o):s;var r=Math.min(-this.getLastSlide().target,this.dragStartPosition);s=s<r?.5*(s+r):s}this.dragX=s,this.dragMoveTime=new Date,this.dispatchEvent("dragMove",t,[e,i])},o.dragEnd=function(t,e){this.options.freeScroll&&(this.isFreeScrolling=!0);var i=this.dragEndRestingSelect();if(this.options.freeScroll&&!this.options.wrapAround){var n=this.getRestingPosition();this.isFreeScrolling=-n>this.slides[0].target&&-n<this.getLastSlide().target}else this.options.freeScroll||i!=this.selectedIndex||(i+=this.dragEndBoostSelect());delete this.previousDragX,this.isDragSelect=this.options.wrapAround,this.select(i),delete this.isDragSelect,this.dispatchEvent("dragEnd",t,[e])},o.dragEndRestingSelect=function(){
+var t=this.getRestingPosition(),e=Math.abs(this.getSlideDistance(-t,this.selectedIndex)),i=this._getClosestResting(t,e,1),n=this._getClosestResting(t,e,-1),s=i.distance<n.distance?i.index:n.index;return s},o._getClosestResting=function(t,e,i){for(var n=this.selectedIndex,s=1/0,o=this.options.contain&&!this.options.wrapAround?function(t,e){return t<=e}:function(t,e){return t<e};o(e,s)&&(n+=i,s=e,e=this.getSlideDistance(-t,n),null!==e);)e=Math.abs(e);return{distance:s,index:n-i}},o.getSlideDistance=function(t,e){var i=this.slides.length,s=this.options.wrapAround&&i>1,o=s?n.modulo(e,i):e,r=this.slides[o];if(!r)return null;var a=s?this.slideableWidth*Math.floor(e/i):0;return t-(r.target+a)},o.dragEndBoostSelect=function(){if(void 0===this.previousDragX||!this.dragMoveTime||new Date-this.dragMoveTime>100)return 0;var t=this.getSlideDistance(-this.dragX,this.selectedIndex),e=this.previousDragX-this.dragX;return t>0&&e>0?1:t<0&&e<0?-1:0},o.staticClick=function(t,e){var i=this.getParentCell(t.target),n=i&&i.element,s=i&&this.cells.indexOf(i);this.dispatchEvent("staticClick",t,[e,n,s])},o.onscroll=function(){var t=s(),e=this.pointerDownScroll.x-t.x,i=this.pointerDownScroll.y-t.y;(Math.abs(e)>3||Math.abs(i)>3)&&this._pointerDone()},e}),function(t,e){"function"==typeof define&&define.amd?define("tap-listener/tap-listener",["unipointer/unipointer"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("unipointer")):t.TapListener=e(t,t.Unipointer)}(window,function(t,e){function i(t){this.bindTap(t)}var n=i.prototype=Object.create(e.prototype);return n.bindTap=function(t){t&&(this.unbindTap(),this.tapElement=t,this._bindStartEvent(t,!0))},n.unbindTap=function(){this.tapElement&&(this._bindStartEvent(this.tapElement,!0),delete this.tapElement)},n.pointerUp=function(i,n){if(!this.isIgnoringMouseUp||"mouseup"!=i.type){var s=e.getPointerPoint(n),o=this.tapElement.getBoundingClientRect(),r=t.pageXOffset,a=t.pageYOffset,l=s.x>=o.left+r&&s.x<=o.right+r&&s.y>=o.top+a&&s.y<=o.bottom+a;if(l&&this.emitEvent("tap",[i,n]),"mouseup"!=i.type){this.isIgnoringMouseUp=!0;var h=this;setTimeout(function(){delete h.isIgnoringMouseUp},400)}}},n.destroy=function(){this.pointerDone(),this.unbindTap()},i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/prev-next-button",["./flickity","tap-listener/tap-listener","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("tap-listener"),require("fizzy-ui-utils")):e(t,t.Flickity,t.TapListener,t.fizzyUIUtils)}(window,function(t,e,i,n){"use strict";function s(t,e){this.direction=t,this.parent=e,this._create()}function o(t){return"string"==typeof t?t:"M "+t.x0+",50 L "+t.x1+","+(t.y1+50)+" L "+t.x2+","+(t.y2+50)+" L "+t.x3+",50  L "+t.x2+","+(50-t.y2)+" L "+t.x1+","+(50-t.y1)+" Z"}var r="http://www.w3.org/2000/svg";s.prototype=new i,s.prototype._create=function(){this.isEnabled=!0,this.isPrevious=this.direction==-1;var t=this.parent.options.rightToLeft?1:-1;this.isLeft=this.direction==t;var e=this.element=document.createElement("button");e.className="flickity-prev-next-button",e.className+=this.isPrevious?" previous":" next",e.setAttribute("type","button"),this.disable(),e.setAttribute("aria-label",this.isPrevious?"previous":"next");var i=this.createSVG();e.appendChild(i),this.on("tap",this.onTap),this.parent.on("select",this.update.bind(this)),this.on("pointerDown",this.parent.childUIPointerDown.bind(this.parent))},s.prototype.activate=function(){this.bindTap(this.element),this.element.addEventListener("click",this),this.parent.element.appendChild(this.element)},s.prototype.deactivate=function(){this.parent.element.removeChild(this.element),i.prototype.destroy.call(this),this.element.removeEventListener("click",this)},s.prototype.createSVG=function(){var t=document.createElementNS(r,"svg");t.setAttribute("viewBox","0 0 100 100");var e=document.createElementNS(r,"path"),i=o(this.parent.options.arrowShape);return e.setAttribute("d",i),e.setAttribute("class","arrow"),this.isLeft||e.setAttribute("transform","translate(100, 100) rotate(180) "),t.appendChild(e),t},s.prototype.onTap=function(){if(this.isEnabled){this.parent.uiChange();var t=this.isPrevious?"previous":"next";this.parent[t]()}},s.prototype.handleEvent=n.handleEvent,s.prototype.onclick=function(){var t=document.activeElement;t&&t==this.element&&this.onTap()},s.prototype.enable=function(){this.isEnabled||(this.element.disabled=!1,this.isEnabled=!0)},s.prototype.disable=function(){this.isEnabled&&(this.element.disabled=!0,this.isEnabled=!1)},s.prototype.update=function(){var t=this.parent.slides;if(this.parent.options.wrapAround&&t.length>1)return void this.enable();var e=t.length?t.length-1:0,i=this.isPrevious?0:e,n=this.parent.selectedIndex==i?"disable":"enable";this[n]()},s.prototype.destroy=function(){this.deactivate()},n.extend(e.defaults,{prevNextButtons:!0,arrowShape:{x0:10,x1:60,y1:50,x2:70,y2:40,x3:30}}),e.createMethods.push("_createPrevNextButtons");var a=e.prototype;return a._createPrevNextButtons=function(){this.options.prevNextButtons&&(this.prevButton=new s((-1),this),this.nextButton=new s(1,this),this.on("activate",this.activatePrevNextButtons))},a.activatePrevNextButtons=function(){this.prevButton.activate(),this.nextButton.activate(),this.on("deactivate",this.deactivatePrevNextButtons)},a.deactivatePrevNextButtons=function(){this.prevButton.deactivate(),this.nextButton.deactivate(),this.off("deactivate",this.deactivatePrevNextButtons)},e.PrevNextButton=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/page-dots",["./flickity","tap-listener/tap-listener","fizzy-ui-utils/utils"],function(i,n,s){return e(t,i,n,s)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("tap-listener"),require("fizzy-ui-utils")):e(t,t.Flickity,t.TapListener,t.fizzyUIUtils)}(window,function(t,e,i,n){function s(t){this.parent=t,this._create()}s.prototype=new i,s.prototype._create=function(){this.holder=document.createElement("ol"),this.holder.className="flickity-page-dots",this.dots=[],this.on("tap",this.onTap),this.on("pointerDown",this.parent.childUIPointerDown.bind(this.parent))},s.prototype.activate=function(){this.setDots(),this.bindTap(this.holder),this.parent.element.appendChild(this.holder)},s.prototype.deactivate=function(){this.parent.element.removeChild(this.holder),i.prototype.destroy.call(this)},s.prototype.setDots=function(){var t=this.parent.slides.length-this.dots.length;t>0?this.addDots(t):t<0&&this.removeDots(-t)},s.prototype.addDots=function(t){for(var e=document.createDocumentFragment(),i=[];t;){var n=document.createElement("li");n.className="dot",e.appendChild(n),i.push(n),t--}this.holder.appendChild(e),this.dots=this.dots.concat(i)},s.prototype.removeDots=function(t){var e=this.dots.splice(this.dots.length-t,t);e.forEach(function(t){this.holder.removeChild(t)},this)},s.prototype.updateSelected=function(){this.selectedDot&&(this.selectedDot.className="dot"),this.dots.length&&(this.selectedDot=this.dots[this.parent.selectedIndex],this.selectedDot.className="dot is-selected")},s.prototype.onTap=function(t){var e=t.target;if("LI"==e.nodeName){this.parent.uiChange();var i=this.dots.indexOf(e);this.parent.select(i)}},s.prototype.destroy=function(){this.deactivate()},e.PageDots=s,n.extend(e.defaults,{pageDots:!0}),e.createMethods.push("_createPageDots");var o=e.prototype;return o._createPageDots=function(){this.options.pageDots&&(this.pageDots=new s(this),this.on("activate",this.activatePageDots),this.on("select",this.updateSelectedPageDots),this.on("cellChange",this.updatePageDots),this.on("resize",this.updatePageDots),this.on("deactivate",this.deactivatePageDots))},o.activatePageDots=function(){this.pageDots.activate()},o.updateSelectedPageDots=function(){this.pageDots.updateSelected()},o.updatePageDots=function(){this.pageDots.setDots()},o.deactivatePageDots=function(){this.pageDots.deactivate()},e.PageDots=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/player",["ev-emitter/ev-emitter","fizzy-ui-utils/utils","./flickity"],function(t,i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(require("ev-emitter"),require("fizzy-ui-utils"),require("./flickity")):e(t.EvEmitter,t.fizzyUIUtils,t.Flickity)}(window,function(t,e,i){function n(t){this.parent=t,this.state="stopped",o&&(this.onVisibilityChange=function(){this.visibilityChange()}.bind(this),this.onVisibilityPlay=function(){this.visibilityPlay()}.bind(this))}var s,o;"hidden"in document?(s="hidden",o="visibilitychange"):"webkitHidden"in document&&(s="webkitHidden",o="webkitvisibilitychange"),n.prototype=Object.create(t.prototype),n.prototype.play=function(){if("playing"!=this.state){var t=document[s];if(o&&t)return void document.addEventListener(o,this.onVisibilityPlay);this.state="playing",o&&document.addEventListener(o,this.onVisibilityChange),this.tick()}},n.prototype.tick=function(){if("playing"==this.state){var t=this.parent.options.autoPlay;t="number"==typeof t?t:3e3;var e=this;this.clear(),this.timeout=setTimeout(function(){e.parent.next(!0),e.tick()},t)}},n.prototype.stop=function(){this.state="stopped",this.clear(),o&&document.removeEventListener(o,this.onVisibilityChange)},n.prototype.clear=function(){clearTimeout(this.timeout)},n.prototype.pause=function(){"playing"==this.state&&(this.state="paused",this.clear())},n.prototype.unpause=function(){"paused"==this.state&&this.play()},n.prototype.visibilityChange=function(){var t=document[s];this[t?"pause":"unpause"]()},n.prototype.visibilityPlay=function(){this.play(),document.removeEventListener(o,this.onVisibilityPlay)},e.extend(i.defaults,{pauseAutoPlayOnHover:!0}),i.createMethods.push("_createPlayer");var r=i.prototype;return r._createPlayer=function(){this.player=new n(this),this.on("activate",this.activatePlayer),this.on("uiChange",this.stopPlayer),this.on("pointerDown",this.stopPlayer),this.on("deactivate",this.deactivatePlayer)},r.activatePlayer=function(){this.options.autoPlay&&(this.player.play(),this.element.addEventListener("mouseenter",this))},r.playPlayer=function(){this.player.play()},r.stopPlayer=function(){this.player.stop()},r.pausePlayer=function(){this.player.pause()},r.unpausePlayer=function(){this.player.unpause()},r.deactivatePlayer=function(){this.player.stop(),this.element.removeEventListener("mouseenter",this)},r.onmouseenter=function(){this.options.pauseAutoPlayOnHover&&(this.player.pause(),this.element.addEventListener("mouseleave",this))},r.onmouseleave=function(){this.player.unpause(),this.element.removeEventListener("mouseleave",this)},i.Player=n,i}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/add-remove-cell",["./flickity","fizzy-ui-utils/utils"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("fizzy-ui-utils")):e(t,t.Flickity,t.fizzyUIUtils)}(window,function(t,e,i){function n(t){var e=document.createDocumentFragment();return t.forEach(function(t){e.appendChild(t.element)}),e}var s=e.prototype;return s.insert=function(t,e){var i=this._makeCells(t);if(i&&i.length){var s=this.cells.length;e=void 0===e?s:e;var o=n(i),r=e==s;if(r)this.slider.appendChild(o);else{var a=this.cells[e].element;this.slider.insertBefore(o,a)}if(0===e)this.cells=i.concat(this.cells);else if(r)this.cells=this.cells.concat(i);else{var l=this.cells.splice(e,s-e);this.cells=this.cells.concat(i).concat(l)}this._sizeCells(i);var h=e>this.selectedIndex?0:i.length;this._cellAddedRemoved(e,h)}},s.append=function(t){this.insert(t,this.cells.length)},s.prepend=function(t){this.insert(t,0)},s.remove=function(t){var e,n,s=this.getCells(t),o=0,r=s.length;for(e=0;e<r;e++){n=s[e];var a=this.cells.indexOf(n)<this.selectedIndex;o-=a?1:0}for(e=0;e<r;e++)n=s[e],n.remove(),i.removeFrom(this.cells,n);s.length&&this._cellAddedRemoved(0,o)},s._cellAddedRemoved=function(t,e){e=e||0,this.selectedIndex+=e,this.selectedIndex=Math.max(0,Math.min(this.slides.length-1,this.selectedIndex)),this.cellChange(t,!0),this.emitEvent("cellAddedRemoved",[t,e])},s.cellSizeChange=function(t){var e=this.getCell(t);if(e){e.getSize();var i=this.cells.indexOf(e);this.cellChange(i)}},s.cellChange=function(t,e){var i=this.slideableWidth;if(this._positionCells(t),this._getWrapShiftCells(),this.setGallerySize(),this.emitEvent("cellChange",[t]),this.options.freeScroll){var n=i-this.slideableWidth;this.x+=n*this.cellAlign,this.positionSlider()}else e&&this.positionSliderAtSelected(),this.select(this.selectedIndex)},e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/lazyload",["./flickity","fizzy-ui-utils/utils"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("./flickity"),require("fizzy-ui-utils")):e(t,t.Flickity,t.fizzyUIUtils)}(window,function(t,e,i){"use strict";function n(t){if("IMG"==t.nodeName&&t.getAttribute("data-flickity-lazyload"))return[t];var e=t.querySelectorAll("img[data-flickity-lazyload]");return i.makeArray(e)}function s(t,e){this.img=t,this.flickity=e,this.load()}e.createMethods.push("_createLazyload");var o=e.prototype;return o._createLazyload=function(){this.on("select",this.lazyLoad)},o.lazyLoad=function(){var t=this.options.lazyLoad;if(t){var e="number"==typeof t?t:0,i=this.getAdjacentCellElements(e),o=[];i.forEach(function(t){var e=n(t);o=o.concat(e)}),o.forEach(function(t){new s(t,this)},this)}},s.prototype.handleEvent=i.handleEvent,s.prototype.load=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.img.getAttribute("data-flickity-lazyload"),this.img.removeAttribute("data-flickity-lazyload")},s.prototype.onload=function(t){this.complete(t,"flickity-lazyloaded")},s.prototype.onerror=function(t){this.complete(t,"flickity-lazyerror")},s.prototype.complete=function(t,e){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this);var i=this.flickity.getParentCell(this.img),n=i&&i.element;this.flickity.cellSizeChange(n),this.img.classList.add(e),this.flickity.dispatchEvent("lazyLoad",t,n)},e.LazyLoader=s,e}),function(t,e){"function"==typeof define&&define.amd?define("flickity/js/index",["./flickity","./drag","./prev-next-button","./page-dots","./player","./add-remove-cell","./lazyload"],e):"object"==typeof module&&module.exports&&(module.exports=e(require("./flickity"),require("./drag"),require("./prev-next-button"),require("./page-dots"),require("./player"),require("./add-remove-cell"),require("./lazyload")))}(window,function(t){return t}),function(t,e){"function"==typeof define&&define.amd?define("flickity-as-nav-for/as-nav-for",["flickity/js/index","fizzy-ui-utils/utils"],e):"object"==typeof module&&module.exports?module.exports=e(require("flickity"),require("fizzy-ui-utils")):t.Flickity=e(t.Flickity,t.fizzyUIUtils)}(window,function(t,e){function i(t,e,i){return(e-t)*i+t}t.createMethods.push("_createAsNavFor");var n=t.prototype;return n._createAsNavFor=function(){this.on("activate",this.activateAsNavFor),this.on("deactivate",this.deactivateAsNavFor),this.on("destroy",this.destroyAsNavFor);var t=this.options.asNavFor;if(t){var e=this;setTimeout(function(){e.setNavCompanion(t)})}},n.setNavCompanion=function(i){i=e.getQueryElement(i);var n=t.data(i);if(n&&n!=this){this.navCompanion=n;var s=this;this.onNavCompanionSelect=function(){s.navCompanionSelect()},n.on("select",this.onNavCompanionSelect),this.on("staticClick",this.onNavStaticClick),this.navCompanionSelect(!0)}},n.navCompanionSelect=function(t){if(this.navCompanion){var e=this.navCompanion.selectedCells[0],n=this.navCompanion.cells.indexOf(e),s=n+this.navCompanion.selectedCells.length-1,o=Math.floor(i(n,s,this.navCompanion.cellAlign));if(this.selectCell(o,!1,t),this.removeNavSelectedElements(),!(o>=this.cells.length)){var r=this.cells.slice(n,s+1);this.navSelectedElements=r.map(function(t){return t.element}),this.changeNavSelectedClass("add")}}},n.changeNavSelectedClass=function(t){this.navSelectedElements.forEach(function(e){e.classList[t]("is-nav-selected")})},n.activateAsNavFor=function(){this.navCompanionSelect(!0)},n.removeNavSelectedElements=function(){this.navSelectedElements&&(this.changeNavSelectedClass("remove"),delete this.navSelectedElements)},n.onNavStaticClick=function(t,e,i,n){"number"==typeof n&&this.navCompanion.selectCell(n)},n.deactivateAsNavFor=function(){this.removeNavSelectedElements()},n.destroyAsNavFor=function(){this.navCompanion&&(this.navCompanion.off("select",this.onNavCompanionSelect),this.off("staticClick",this.onNavStaticClick),delete this.navCompanion)},t}),function(t,e){"use strict";"function"==typeof define&&define.amd?define("imagesloaded/imagesloaded",["ev-emitter/ev-emitter"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("ev-emitter")):t.imagesLoaded=e(t,t.EvEmitter)}(window,function(t,e){function i(t,e){for(var i in e)t[i]=e[i];return t}function n(t){var e=[];if(Array.isArray(t))e=t;else if("number"==typeof t.length)for(var i=0;i<t.length;i++)e.push(t[i]);else e.push(t);return e}function s(t,e,o){return this instanceof s?("string"==typeof t&&(t=document.querySelectorAll(t)),this.elements=n(t),this.options=i({},this.options),"function"==typeof e?o=e:i(this.options,e),o&&this.on("always",o),this.getImages(),a&&(this.jqDeferred=new a.Deferred),void setTimeout(function(){this.check()}.bind(this))):new s(t,e,o)}function o(t){this.img=t}function r(t,e){this.url=t,this.element=e,this.img=new Image}var a=t.jQuery,l=t.console;s.prototype=Object.create(e.prototype),s.prototype.options={},s.prototype.getImages=function(){this.images=[],this.elements.forEach(this.addElementImages,this)},s.prototype.addElementImages=function(t){"IMG"==t.nodeName&&this.addImage(t),this.options.background===!0&&this.addElementBackgroundImages(t);var e=t.nodeType;if(e&&h[e]){for(var i=t.querySelectorAll("img"),n=0;n<i.length;n++){var s=i[n];this.addImage(s)}if("string"==typeof this.options.background){var o=t.querySelectorAll(this.options.background);for(n=0;n<o.length;n++){var r=o[n];this.addElementBackgroundImages(r)}}}};var h={1:!0,9:!0,11:!0};return s.prototype.addElementBackgroundImages=function(t){var e=getComputedStyle(t);if(e)for(var i=/url\((['"])?(.*?)\1\)/gi,n=i.exec(e.backgroundImage);null!==n;){var s=n&&n[2];s&&this.addBackground(s,t),n=i.exec(e.backgroundImage)}},s.prototype.addImage=function(t){var e=new o(t);this.images.push(e)},s.prototype.addBackground=function(t,e){var i=new r(t,e);this.images.push(i)},s.prototype.check=function(){function t(t,i,n){setTimeout(function(){e.progress(t,i,n)})}var e=this;return this.progressedCount=0,this.hasAnyBroken=!1,this.images.length?void this.images.forEach(function(e){e.once("progress",t),e.check()}):void this.complete()},s.prototype.progress=function(t,e,i){this.progressedCount++,this.hasAnyBroken=this.hasAnyBroken||!t.isLoaded,this.emitEvent("progress",[this,t,e]),this.jqDeferred&&this.jqDeferred.notify&&this.jqDeferred.notify(this,t),this.progressedCount==this.images.length&&this.complete(),this.options.debug&&l&&l.log("progress: "+i,t,e)},s.prototype.complete=function(){var t=this.hasAnyBroken?"fail":"done";if(this.isComplete=!0,this.emitEvent(t,[this]),this.emitEvent("always",[this]),this.jqDeferred){var e=this.hasAnyBroken?"reject":"resolve";this.jqDeferred[e](this)}},o.prototype=Object.create(e.prototype),o.prototype.check=function(){var t=this.getIsImageComplete();return t?void this.confirm(0!==this.img.naturalWidth,"naturalWidth"):(this.proxyImage=new Image,this.proxyImage.addEventListener("load",this),this.proxyImage.addEventListener("error",this),this.img.addEventListener("load",this),this.img.addEventListener("error",this),void(this.proxyImage.src=this.img.src))},o.prototype.getIsImageComplete=function(){return this.img.complete&&void 0!==this.img.naturalWidth},o.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.img,e])},o.prototype.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},o.prototype.onload=function(){this.confirm(!0,"onload"),this.unbindEvents()},o.prototype.onerror=function(){this.confirm(!1,"onerror"),this.unbindEvents()},o.prototype.unbindEvents=function(){this.proxyImage.removeEventListener("load",this),this.proxyImage.removeEventListener("error",this),this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},r.prototype=Object.create(o.prototype),r.prototype.check=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.url;var t=this.getIsImageComplete();t&&(this.confirm(0!==this.img.naturalWidth,"naturalWidth"),this.unbindEvents())},r.prototype.unbindEvents=function(){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},r.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.element,e])},s.makeJQueryPlugin=function(e){e=e||t.jQuery,e&&(a=e,a.fn.imagesLoaded=function(t,e){var i=new s(this,t,e);return i.jqDeferred.promise(a(this))})},s.makeJQueryPlugin(),s}),function(t,e){"function"==typeof define&&define.amd?define(["flickity/js/index","imagesloaded/imagesloaded"],function(i,n){return e(t,i,n)}):"object"==typeof module&&module.exports?module.exports=e(t,require("flickity"),require("imagesloaded")):t.Flickity=e(t,t.Flickity,t.imagesLoaded)}(window,function(t,e,i){"use strict";e.createMethods.push("_createImagesLoaded");var n=e.prototype;return n._createImagesLoaded=function(){this.on("activate",this.imagesLoaded)},n.imagesLoaded=function(){function t(t,i){var n=e.getParentCell(i.img);e.cellSizeChange(n&&n.element),e.options.freeScroll||e.positionSliderAtSelected()}if(this.options.imagesLoaded){var e=this;i(this.slider).on("progress",t)}},e});
 var HelsingborgPrime = {};
 var ie = (function(){
 
@@ -14992,6 +14906,102 @@ HelsingborgPrime.Args = (function ($) {
     };
 
     return new Args();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Accordion = (function ($) {
+
+    function Accordion() {
+    	this.init();
+    }
+
+    Accordion.prototype.init = function () {
+        $(document).on('click', 'label.accordion-toggle', function(e) {
+            var $input = $('#' + $(this).attr('for'));
+
+            if ($input.prop('checked') === false) {
+                window.location.hash = '#' + $(this).attr('for');
+            } else {
+                if ($input.is('[type="radio"]')) {
+                    var name = $input.attr('name');
+                    var value = $input.val();
+                    var id = $input.attr('id');
+
+                    var $parent = $input.parent('section');
+                    $input.remove();
+
+                    setTimeout(function () {
+                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
+                    }, 1);
+
+                }
+
+                window.location.hash = '_';
+            }
+		});
+
+        $('.accordion-search input').on('input', function (e) {
+            var where = $(e.target).parents('.accordion');
+            var what = $(e.target).val();
+
+            this.filter(what, where);
+        }.bind(this));
+    };
+
+    Accordion.prototype.filter = function(what, where) {
+        where.find('.accordion-section').hide();
+        where.find('.accordion-section:icontains(' + what + ')').show();
+    };
+
+    return new Accordion();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Show accodrion dropdown, make linkable by updating adress bar
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Dropdown = (function ($) {
+
+    function Dropdown() {
+        this.handleEvents();
+    }
+
+    Dropdown.prototype.handleEvents = function () {
+        $('[data-dropdown]').on('click', function (e) {
+            e.preventDefault();
+
+            var targetElement = $(this).attr('data-dropdown');
+            $(targetElement).toggleClass('dropdown-target-open');
+            $(this).toggleClass('dropdown-open');
+            $(this).parent().find(targetElement).toggle();
+            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
+        });
+
+        $('body').on('click', function (e) {
+            var $target = $(e.target);
+
+            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
+                return;
+            }
+
+            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
+            $('.dropdown-target-open').toggle();
+            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
+        });
+    };
+
+    return new Dropdown();
 
 })(jQuery);
 
@@ -15255,6 +15265,102 @@ HelsingborgPrime.Component.ImageUpload = (function ($) {
 })(jQuery);
 
 //
+// @name Slider
+// @description  Sliding content
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Component = HelsingborgPrime.Component || {};
+
+HelsingborgPrime.Component.Slider = (function ($) {
+
+    var autoslideIntervals = [];
+
+    function Slider() {
+        this.preloadImage();
+        this.triggerAutoplay();
+
+        $('.slider').each(function (index, element) {
+            var $slider = $(element);
+
+            this.detectIfIsCollapsed(element);
+
+            if ($slider.find('[data-flickity]')) {
+                return;
+            }
+
+            $slider.flickity({
+                cellSelector: '.slide',
+                cellAlign: 'center',
+                setGallerySize: false,
+                wrapAround: true,
+            });
+
+        }.bind(this));
+
+        $(window).resize(function() {
+            $('.slider').each(function (index, element) {
+                this.detectIfIsCollapsed(element);
+            }.bind(this));
+        }.bind(this));
+    }
+
+    /**
+     * Add collapsed class
+     */
+    Slider.prototype.detectIfIsCollapsed = function (slider) {
+        if ($(slider).width() <= 500) {
+            $(slider).addClass("is-collapsed");
+        } else {
+            $(slider).removeClass("is-collapsed");
+        }
+
+        $(slider).find('.slide').each(function (index, slide) {
+            if ($(slide).width() <= 500) {
+                $(slide).addClass("is-collapsed");
+            } else {
+                $(slide).removeClass("is-collapsed");
+            }
+        });
+    };
+
+    Slider.prototype.preloadImage = function () {
+        setTimeout(function(){
+
+            var normal_img = [];
+            var mobile_img = [];
+
+            $(".slider .slide").each(function(index, slide) {
+
+                if ($(".slider-image-mobile", slide).length) {
+                    normal_img.index = new Image();
+                    normal_img.index.src = $(".slider-image-desktop", slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
+                if ($(".slider-image-mobile", slide).length) {
+                    mobile_img.index = new Image();
+                    mobile_img.index.src = $(".slider-image-mobile", slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+                }
+
+            });
+
+        },5000);
+    };
+
+    Slider.prototype.triggerAutoplay = function () {
+        setTimeout(function(){
+            $(".slider .slide .slider-video video").each(function(index, video) {
+                if (typeof $(video).attr('autoplay') !== 'undefined' && $(video).attr('autoplay') !== 'false') {
+                    video.play();
+                }
+            });
+        },300);
+    };
+
+    return new Slider();
+
+})(jQuery);
+
+//
 // @name Modal
 // @description  Show accodrion dropdown, make linkable by updating adress bar
 //
@@ -15423,102 +15529,6 @@ HelsingborgPrime.Component.TagManager = (function ($) {
 })(jQuery);
 
 //
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Accordion = (function ($) {
-
-    function Accordion() {
-    	this.init();
-    }
-
-    Accordion.prototype.init = function () {
-        $(document).on('click', 'label.accordion-toggle', function(e) {
-            var $input = $('#' + $(this).attr('for'));
-
-            if ($input.prop('checked') === false) {
-                window.location.hash = '#' + $(this).attr('for');
-            } else {
-                if ($input.is('[type="radio"]')) {
-                    var name = $input.attr('name');
-                    var value = $input.val();
-                    var id = $input.attr('id');
-
-                    var $parent = $input.parent('section');
-                    $input.remove();
-
-                    setTimeout(function () {
-                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
-                    }, 1);
-
-                }
-
-                window.location.hash = '_';
-            }
-		});
-
-        $('.accordion-search input').on('input', function (e) {
-            var where = $(e.target).parents('.accordion');
-            var what = $(e.target).val();
-
-            this.filter(what, where);
-        }.bind(this));
-    };
-
-    Accordion.prototype.filter = function(what, where) {
-        where.find('.accordion-section').hide();
-        where.find('.accordion-section:icontains(' + what + ')').show();
-    };
-
-    return new Accordion();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Show accodrion dropdown, make linkable by updating adress bar
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Dropdown = (function ($) {
-
-    function Dropdown() {
-        this.handleEvents();
-    }
-
-    Dropdown.prototype.handleEvents = function () {
-        $('[data-dropdown]').on('click', function (e) {
-            e.preventDefault();
-
-            var targetElement = $(this).attr('data-dropdown');
-            $(targetElement).toggleClass('dropdown-target-open');
-            $(this).toggleClass('dropdown-open');
-            $(this).parent().find(targetElement).toggle();
-            $(this).parent().find(targetElement).find('input[data-dropdown-focus]').focus();
-        });
-
-        $('body').on('click', function (e) {
-            var $target = $(e.target);
-
-            if ($target.closest('.dropdown-target-open').length || $target.closest('[data-dropdown]').length || $target.closest('.backdrop').length) {
-                return;
-            }
-
-            $('[data-dropdown].dropdown-open').removeClass('dropdown-open');
-            $('.dropdown-target-open').toggle();
-            $('.dropdown-target-open').removeClass('dropdown-target-open is-highlighted');
-        });
-    };
-
-    return new Dropdown();
-
-})(jQuery);
-
-//
 // @name File selector
 // @description
 //
@@ -15558,102 +15568,6 @@ HelsingborgPrime.Component.File = (function ($) {
     };
 
     return new File();
-
-})(jQuery);
-
-//
-// @name Slider
-// @description  Sliding content
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Component = HelsingborgPrime.Component || {};
-
-HelsingborgPrime.Component.Slider = (function ($) {
-
-    var autoslideIntervals = [];
-
-    function Slider() {
-        this.preloadImage();
-        this.triggerAutoplay();
-
-        $('.slider').each(function (index, element) {
-            var $slider = $(element);
-
-            this.detectIfIsCollapsed(element);
-
-            if ($slider.find('[data-flickity]')) {
-                return;
-            }
-
-            $slider.flickity({
-                cellSelector: '.slide',
-                cellAlign: 'center',
-                setGallerySize: false,
-                wrapAround: true,
-            });
-
-        }.bind(this));
-
-        $(window).resize(function() {
-            $('.slider').each(function (index, element) {
-                this.detectIfIsCollapsed(element);
-            }.bind(this));
-        }.bind(this));
-    }
-
-    /**
-     * Add collapsed class
-     */
-    Slider.prototype.detectIfIsCollapsed = function (slider) {
-        if ($(slider).width() <= 500) {
-            $(slider).addClass("is-collapsed");
-        } else {
-            $(slider).removeClass("is-collapsed");
-        }
-
-        $(slider).find('.slide').each(function (index, slide) {
-            if ($(slide).width() <= 500) {
-                $(slide).addClass("is-collapsed");
-            } else {
-                $(slide).removeClass("is-collapsed");
-            }
-        });
-    };
-
-    Slider.prototype.preloadImage = function () {
-        setTimeout(function(){
-
-            var normal_img = [];
-            var mobile_img = [];
-
-            $(".slider .slide").each(function(index, slide) {
-
-                if ($(".slider-image-mobile", slide).length) {
-                    normal_img.index = new Image();
-                    normal_img.index.src = $(".slider-image-desktop", slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-                }
-
-                if ($(".slider-image-mobile", slide).length) {
-                    mobile_img.index = new Image();
-                    mobile_img.index.src = $(".slider-image-mobile", slide).css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-                }
-
-            });
-
-        },5000);
-    };
-
-    Slider.prototype.triggerAutoplay = function () {
-        setTimeout(function(){
-            $(".slider .slide .slider-video video").each(function(index, video) {
-                if (typeof $(video).attr('autoplay') !== 'undefined' && $(video).attr('autoplay') !== 'false') {
-                    video.play();
-                }
-            });
-        },300);
-    };
-
-    return new Slider();
 
 })(jQuery);
 
@@ -15732,6 +15646,182 @@ HelsingborgPrime.Helper.Cookie = (function ($) {
     };
 
     return new Cookie();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Datepicker = (function ($) {
+
+    function Datepicker() {
+        this.init();
+    }
+
+    Datepicker.prototype.init = function () {
+        // Single date
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+
+        // Date range
+        $('.datepicker-range.datepicker-range-from').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('.datepicker-range.datepicker-range-to').datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function(selectedDate) {
+                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+    };
+
+    return new Datepicker();
+
+})(jQuery);
+
+/* Datepicker language */
+(function(factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["../widgets/datepicker"], factory);
+    } else {
+        factory( jQuery.datepicker );
+    }
+}(function(datepicker) {
+    datepicker.regional.sv = {
+        closeText: "Stäng",
+        prevText: "&#xAB;Förra",
+        nextText: "Nästa&#xBB;",
+        currentText: "Idag",
+        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
+        "Juli","Augusti","September","Oktober","November","December" ],
+        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
+        "Jul","Aug","Sep","Okt","Nov","Dec" ],
+        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
+        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
+        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
+        weekHeader: "Ve",
+        dateFormat: "yy-mm-dd",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults(datepicker.regional.sv);
+
+    return datepicker.regional.sv;
+}));
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.EqualHeight = (function ($) {
+
+    function EqualHeight() {
+        // Initialize if flexbox not supported
+        if (!this.supportsFlexbox()) {
+            this.init();
+
+            $(window).on('resize', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+        }
+    }
+
+    /**
+     * Check if browser supports flexbox
+     * @return {boolean}
+     */
+    EqualHeight.prototype.supportsFlexbox = function () {
+        if ($('html').hasClass('no-flexbox')) {
+            return false;
+        }
+
+        return true;
+    };
+
+    /**
+     * Resets heights to auto
+     * @return {void}
+     */
+    EqualHeight.prototype.destroy = function () {
+        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
+            $(element).css('height', 'auto');
+        }.bind(this));
+    };
+
+    /**
+     * Intializes equal height
+     * @return {void}
+     */
+    EqualHeight.prototype.init = function () {
+        $('[data-equal-container]').each(function (index, element) {
+            var maxHeight = this.getMaxHeight(element);
+            this.equalize(element, maxHeight);
+        }.bind(this));
+    };
+
+    /**
+     * Get the max height of the items
+     * @param  {string} el The parent element
+     * @return {integer}   The max height in pixels
+     */
+    EqualHeight.prototype.getMaxHeight = function (el) {
+        var heights = [];
+
+        $(el).find('[data-equal-item]').each(function (index, element) {
+            heights.push($(element).outerHeight());
+        }.bind(this));
+
+        var maxHeight = Math.max.apply(null, heights);
+
+        return maxHeight;
+    };
+
+    /**
+     * Set the heights of all items to the max height
+     * @param  {string}  parent    The parent element
+     * @param  {integer} maxHeight The max height
+     * @return {void}
+     */
+    EqualHeight.prototype.equalize = function(parent, maxHeight) {
+        $(parent).find('[data-equal-item]').each(function (index, element) {
+            $(element).css('height', maxHeight + 'px');
+        }.bind(this));
+    };
+
+    return new EqualHeight();
 
 })(jQuery);
 
@@ -15904,6 +15994,329 @@ HelsingborgPrime.Helper.LocalLink = (function ($) {
     }
 
     return new LocalLink();
+
+})(jQuery);
+
+//
+// @name Menu
+// @description  Function for closing the menu (cannot be done with just :target selector)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Menu = (function ($) {
+
+    function Menu() {
+    	this.init();
+    }
+
+    Menu.prototype.init = function () {
+	    this.bindEvents();
+    };
+
+    Menu.prototype.toggleMenu = function(triggerBtn) {
+        triggerBtn.toggleClass('open');
+
+        var target = $(triggerBtn.data('target'));
+
+        if (target.hasClass('nav-toggle-expand')) {
+            target.slideToggle();
+        } else {
+            target.toggleClass('open');
+        }
+
+        $('body').toggleClass('mobile-menu-open');
+    };
+
+    Menu.prototype.bindEvents = function () {
+        $('.menu-trigger').on('click', function (e) {
+            e.preventDefault();
+            this.toggleMenu($(e.target).closest('.menu-trigger'));
+        }.bind(this));
+    };
+
+    return new Menu();
+
+})(jQuery);
+
+//
+// @name Menu priority
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.MenuPriority = (function ($) {
+
+    var $nav = null;
+    var $btn = null;
+    var $vlinks = null;
+    var $hlinks = null;
+
+    var availableSpace = 0;
+    var breaks = [];
+    var breakWasTwoOrMore = false;
+
+    function MenuPriority() {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
+            this.init();
+        }
+    }
+
+    MenuPriority.prototype.init = function () {
+        $nav = $('#main-menu').parent('.nav-group-overflow');
+        $vlinks = $('#main-menu');
+        $hlinks = $nav.find('.nav-grouped-overflow');
+        $btn = $nav.find('.dropdown-toggle');
+
+        this.updateNavigation();
+
+        $(window).on('resize', function (e) {
+            this.updateNavigation();
+        }.bind(this));
+    };
+
+    MenuPriority.prototype.updateNavigation = function () {
+        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
+
+        if (breaks.length == 1 && breakWasTwoOrMore === true) {
+            availableSpace = $nav.parent().first().width();
+            breakWasTwoOrMore= false;
+        }
+
+        // The visible list is overflowing the available space
+        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
+
+            // Record vlinks width
+            breaks.push($vlinks.width());
+
+            // Move last element to the grouped items
+            $vlinks.children().last().prependTo($hlinks);
+            $hlinks.removeClass('hidden');
+            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
+        } else {
+
+            // Check if there's space to move an item back to the nav
+            if (availableSpace > breaks[breaks.length-1]) {
+                $hlinks.children().first().appendTo($vlinks);
+                breaks.pop();
+                $btn.attr('data-item-count', breaks.length);
+            }
+
+            if (breaks.length < 1) {
+                $hlinks.addClass('hidden');
+                $btn.addClass('hidden').attr('data-item-count', breaks.length);
+            }
+        }
+
+        if (breaks.length > 1) {
+            breakWasTwoOrMore = true;
+        }
+
+        // Rerun if nav is still overflowing
+        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
+            this.updateNavigation();
+        }
+    };
+
+    return new MenuPriority();
+
+})(jQuery);
+
+//
+// @name Video Player
+// @description  Video functionalty for vimeo and youtube.
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Player = (function ($) {
+
+    //Declarations
+    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
+    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
+    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
+
+    //Check for players, if exists; Run player script.
+    function Player() {
+        if ($(".player").length) {
+            this.init();
+        }
+    }
+
+    //Listen for play argument
+    Player.prototype.init = function () {
+        $(".player a").on('click', function (e) {
+            this.initVideoPlayer($(e.target).closest('a'));
+        }.bind(this));
+
+        $(".player-playlist a").on('click', function (e) {
+            e.preventDefault();
+            this.switchVideo($(e.target).closest('a'));
+        }.bind(this));
+    };
+
+    //Init player on start
+    Player.prototype.initVideoPlayer = function(e) {
+        var videoid = e.attr('data-video-id');
+        var listid = e.attr('data-list-id');
+
+        if (this.isNumeric(videoid)) {
+            this.initVimeo(videoid, e);
+        } else {
+            if (listid) {
+                this.initYoutube(videoid, e, listid);
+            } else {
+                this.initYoutube(videoid, e);
+            }
+        }
+    };
+
+    Player.prototype.initVimeo = function(videoid, target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe src="//player.vimeo.com/video/' + videoid + '?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitVimeo = false;
+    };
+
+    Player.prototype.initYoutube = function(videoid, target, listid) {
+
+        if (typeof listid === 'undefined') {
+            listid = null;
+        }
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        if (listid) {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        } else {
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        }
+
+        //Not first run anymore
+        this.playerFirstInitYoutube = false;
+    };
+
+    Player.prototype.initBambuser = function(videoid, target) {
+
+        //Remove controls
+        this.toggleControls(target);
+
+        //Append player
+        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        //Not first run anymore
+        this.playerFirstInitBambuser = false;
+    };
+
+    Player.prototype.switchVideo = function(element) {
+        var videoid = element.attr('data-video-id');
+        var listid = element.attr('data-list-id');
+
+        var $player = element.parents('.player-playlist').siblings('.player');
+        var $iframe = $player.children('iframe');
+
+        $player.find('a').hide();
+
+        if (!$player.find('.loading').length) {
+            $player.append('<div class="loading pos-absolute-center" style="width:300px;"><div></div><div></div><div></div><div></div></div>');
+        }
+
+        if (this.isNumeric(videoid)) {
+            this.initVimeo(videoid, $player.children('a'));
+        } else {
+            if (listid) {
+                this.initYoutube(videoid, $player.children('a'), listid);
+            } else {
+                this.initYoutube(videoid, $player.children('a'));
+            }
+        }
+
+        $iframe.remove();
+    };
+
+    Player.prototype.toggleControls = function(target) {
+        if (typeof target === 'undefined') {
+            console.error('Could not start player. Wrapper not found.');
+            return false;
+        }
+
+        target = target.parent();
+
+        if (target.hasClass('is-playing')) {
+            target.removeClass('is-playing');
+            $("html").removeClass('video-is-playing');
+            return true;
+        }
+
+        target.addClass('is-playing');
+        $("html").addClass('video-is-playing');
+        return true;
+    };
+
+    /**
+     * Reset all players, or with target id.
+     * @param  {object} target
+     * @return {bool}
+     */
+    Player.prototype.resetPlayer = function(target) {
+       if (typeof target !== 'undefined') {
+            $('.player iframe').remove();
+            $('.player').removeClass('is-playing');
+            $('html').removeClass('video-is-playing');
+            return false;
+        }
+
+        $('iframe', target).remove();
+        target.removeClass('is-playing');
+        $('html').removeClass('video-is-playing');
+        return true;
+    };
+
+    Player.prototype.isNumeric = function(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    };
+
+    return new Player();
+
+})($);
+
+//
+// @name EqualHeight
+// @description  Sets element heights equally to the heighest item
+//
+// @markup
+// <div class="grid" data-equal-container>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+//     <div class="grid-md-6" data-equal-item>
+//
+//     </div>
+// </div>
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
+
+HelsingborgPrime.Helper.Post = (function ($) {
+
+    function Post() {
+        this.bindEvents();
+    }
+
+    Post.prototype.bindEvents = function() {
+        $(document).on('click', '.post-collapsed article', function (e) {
+            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
+        }.bind(this));
+    };
+
+    return new Post();
 
 })(jQuery);
 
@@ -16234,505 +16647,6 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     return new ToggleSubmenuItems();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Datepicker = (function ($) {
-
-    function Datepicker() {
-        this.init();
-    }
-
-    Datepicker.prototype.init = function () {
-        // Single date
-        $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true
-        });
-
-        // Date range
-        $('.datepicker-range.datepicker-range-from').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-to').datepicker('option', 'minDate', selectedDate);
-            }
-        });
-
-        $('.datepicker-range.datepicker-range-to').datepicker({
-            dateFormat: 'yy-mm-dd',
-            firstDay: 1,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            onClose: function(selectedDate) {
-                $('.datepicker-range.datepicker-range-from').datepicker('option', 'maxDate', selectedDate);
-            }
-        });
-    };
-
-    return new Datepicker();
-
-})(jQuery);
-
-/* Datepicker language */
-(function(factory) {
-    if (typeof define === "function" && define.amd) {
-        define(["../widgets/datepicker"], factory);
-    } else {
-        factory( jQuery.datepicker );
-    }
-}(function(datepicker) {
-    datepicker.regional.sv = {
-        closeText: "Stäng",
-        prevText: "&#xAB;Förra",
-        nextText: "Nästa&#xBB;",
-        currentText: "Idag",
-        monthNames: [ "Januari","Februari","Mars","April","Maj","Juni",
-        "Juli","Augusti","September","Oktober","November","December" ],
-        monthNamesShort: [ "Jan","Feb","Mar","Apr","Maj","Jun",
-        "Jul","Aug","Sep","Okt","Nov","Dec" ],
-        dayNamesShort: [ "Sön","Mån","Tis","Ons","Tor","Fre","Lör" ],
-        dayNames: [ "Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag" ],
-        dayNamesMin: [ "Sö","Må","Ti","On","To","Fr","Lö" ],
-        weekHeader: "Ve",
-        dateFormat: "yy-mm-dd",
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: "" };
-    datepicker.setDefaults(datepicker.regional.sv);
-
-    return datepicker.regional.sv;
-}));
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.EqualHeight = (function ($) {
-
-    function EqualHeight() {
-        // Initialize if flexbox not supported
-        if (!this.supportsFlexbox()) {
-            this.init();
-
-            $(window).on('resize', function () {
-                this.destroy();
-                this.init();
-            }.bind(this));
-        }
-    }
-
-    /**
-     * Check if browser supports flexbox
-     * @return {boolean}
-     */
-    EqualHeight.prototype.supportsFlexbox = function () {
-        if ($('html').hasClass('no-flexbox')) {
-            return false;
-        }
-
-        return true;
-    };
-
-    /**
-     * Resets heights to auto
-     * @return {void}
-     */
-    EqualHeight.prototype.destroy = function () {
-        $('[data-equal-container] [data-equal-item]').each(function (index, element) {
-            $(element).css('height', 'auto');
-        }.bind(this));
-    };
-
-    /**
-     * Intializes equal height
-     * @return {void}
-     */
-    EqualHeight.prototype.init = function () {
-        $('[data-equal-container]').each(function (index, element) {
-            var maxHeight = this.getMaxHeight(element);
-            this.equalize(element, maxHeight);
-        }.bind(this));
-    };
-
-    /**
-     * Get the max height of the items
-     * @param  {string} el The parent element
-     * @return {integer}   The max height in pixels
-     */
-    EqualHeight.prototype.getMaxHeight = function (el) {
-        var heights = [];
-
-        $(el).find('[data-equal-item]').each(function (index, element) {
-            heights.push($(element).outerHeight());
-        }.bind(this));
-
-        var maxHeight = Math.max.apply(null, heights);
-
-        return maxHeight;
-    };
-
-    /**
-     * Set the heights of all items to the max height
-     * @param  {string}  parent    The parent element
-     * @param  {integer} maxHeight The max height
-     * @return {void}
-     */
-    EqualHeight.prototype.equalize = function(parent, maxHeight) {
-        $(parent).find('[data-equal-item]').each(function (index, element) {
-            $(element).css('height', maxHeight + 'px');
-        }.bind(this));
-    };
-
-    return new EqualHeight();
-
-})(jQuery);
-
-//
-// @name Menu
-// @description  Function for closing the menu (cannot be done with just :target selector)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Menu = (function ($) {
-
-    function Menu() {
-    	this.init();
-    }
-
-    Menu.prototype.init = function () {
-	    this.bindEvents();
-    };
-
-    Menu.prototype.toggleMenu = function(triggerBtn) {
-        triggerBtn.toggleClass('open');
-
-        var target = $(triggerBtn.data('target'));
-
-        if (target.hasClass('nav-toggle-expand')) {
-            target.slideToggle();
-        } else {
-            target.toggleClass('open');
-        }
-
-        $('body').toggleClass('mobile-menu-open');
-    };
-
-    Menu.prototype.bindEvents = function () {
-        $('.menu-trigger').on('click', function (e) {
-            e.preventDefault();
-            this.toggleMenu($(e.target).closest('.menu-trigger'));
-        }.bind(this));
-    };
-
-    return new Menu();
-
-})(jQuery);
-
-//
-// @name Menu priority
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.MenuPriority = (function ($) {
-
-    var $nav = null;
-    var $btn = null;
-    var $vlinks = null;
-    var $hlinks = null;
-
-    var availableSpace = 0;
-    var breaks = [];
-    var breakWasTwoOrMore = false;
-
-    function MenuPriority() {
-        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify')) {
-            this.init();
-        }
-    }
-
-    MenuPriority.prototype.init = function () {
-        $nav = $('#main-menu').parent('.nav-group-overflow');
-        $vlinks = $('#main-menu');
-        $hlinks = $nav.find('.nav-grouped-overflow');
-        $btn = $nav.find('.dropdown-toggle');
-
-        this.updateNavigation();
-
-        $(window).on('resize', function (e) {
-            this.updateNavigation();
-        }.bind(this));
-    };
-
-    MenuPriority.prototype.updateNavigation = function () {
-        availableSpace = $btn.is(':visible') ? $nav.parent().first().width() - ($btn.width() + parseFloat($nav.attr('data-btn-width'))) : $nav.parent().first().width();
-
-        if (breaks.length == 1 && breakWasTwoOrMore === true) {
-            availableSpace = $nav.parent().first().width();
-            breakWasTwoOrMore= false;
-        }
-
-        // The visible list is overflowing the available space
-        if ($vlinks.width() > 0 && $vlinks.width() > availableSpace) {
-
-            // Record vlinks width
-            breaks.push($vlinks.width());
-
-            // Move last element to the grouped items
-            $vlinks.children().last().prependTo($hlinks);
-            $hlinks.removeClass('hidden');
-            $btn.removeClass('hidden').attr('data-item-count', breaks.length);
-        } else {
-
-            // Check if there's space to move an item back to the nav
-            if (availableSpace > breaks[breaks.length-1]) {
-                $hlinks.children().first().appendTo($vlinks);
-                breaks.pop();
-                $btn.attr('data-item-count', breaks.length);
-            }
-
-            if (breaks.length < 1) {
-                $hlinks.addClass('hidden');
-                $btn.addClass('hidden').attr('data-item-count', breaks.length);
-            }
-        }
-
-        if (breaks.length > 1) {
-            breakWasTwoOrMore = true;
-        }
-
-        // Rerun if nav is still overflowing
-        if ($nav.is(':visible') && $vlinks.width() > availableSpace && breaks.length > 0 && breaks.length < $vlinks.children('li').length) {
-            this.updateNavigation();
-        }
-    };
-
-    return new MenuPriority();
-
-})(jQuery);
-
-//
-// @name Video Player
-// @description  Video functionalty for vimeo and youtube.
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Player = (function ($) {
-
-    //Declarations
-    var playerFirstInitYoutube = true; //Indicates wheter to load Youtube api or not.
-    var playerFirstInitVimeo = true; //Indicates wheter to load Vimeo api or not.
-    var playerFirstInitBambuser = true; //Indicates wheter to load Bambuser api or not.
-
-    //Check for players, if exists; Run player script.
-    function Player() {
-        if ($(".player").length) {
-            this.init();
-        }
-    }
-
-    //Listen for play argument
-    Player.prototype.init = function () {
-        $(".player a").on('click', function (e) {
-            this.initVideoPlayer($(e.target).closest('a'));
-        }.bind(this));
-
-        $(".player-playlist a").on('click', function (e) {
-            e.preventDefault();
-            this.switchVideo($(e.target).closest('a'));
-        }.bind(this));
-    };
-
-    //Init player on start
-    Player.prototype.initVideoPlayer = function(e) {
-        var videoid = e.attr('data-video-id');
-        var listid = e.attr('data-list-id');
-
-        if (this.isNumeric(videoid)) {
-            this.initVimeo(videoid, e);
-        } else {
-            if (listid) {
-                this.initYoutube(videoid, e, listid);
-            } else {
-                this.initYoutube(videoid, e);
-            }
-        }
-    };
-
-    Player.prototype.initVimeo = function(videoid, target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe src="//player.vimeo.com/video/' + videoid + '?portrait=0&color=333&autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitVimeo = false;
-    };
-
-    Player.prototype.initYoutube = function(videoid, target, listid) {
-
-        if (typeof listid === 'undefined') {
-            listid = null;
-        }
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        if (listid) {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-        } else {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-        }
-
-        //Not first run anymore
-        this.playerFirstInitYoutube = false;
-    };
-
-    Player.prototype.initBambuser = function(videoid, target) {
-
-        //Remove controls
-        this.toggleControls(target);
-
-        //Append player
-        $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//embed.bambuser.com/broadcast/' +videoid+ '?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        //Not first run anymore
-        this.playerFirstInitBambuser = false;
-    };
-
-    Player.prototype.switchVideo = function(element) {
-        var videoid = element.attr('data-video-id');
-        var listid = element.attr('data-list-id');
-
-        var $player = element.parents('.player-playlist').siblings('.player');
-        var $iframe = $player.children('iframe');
-
-        $player.find('a').hide();
-
-        if (!$player.find('.loading').length) {
-            $player.append('<div class="loading pos-absolute-center" style="width:300px;"><div></div><div></div><div></div><div></div></div>');
-        }
-
-        if (this.isNumeric(videoid)) {
-            this.initVimeo(videoid, $player.children('a'));
-        } else {
-            if (listid) {
-                this.initYoutube(videoid, $player.children('a'), listid);
-            } else {
-                this.initYoutube(videoid, $player.children('a'));
-            }
-        }
-
-        $iframe.remove();
-    };
-
-    Player.prototype.toggleControls = function(target) {
-        if (typeof target === 'undefined') {
-            console.error('Could not start player. Wrapper not found.');
-            return false;
-        }
-
-        target = target.parent();
-
-        if (target.hasClass('is-playing')) {
-            target.removeClass('is-playing');
-            $("html").removeClass('video-is-playing');
-            return true;
-        }
-
-        target.addClass('is-playing');
-        $("html").addClass('video-is-playing');
-        return true;
-    };
-
-    /**
-     * Reset all players, or with target id.
-     * @param  {object} target
-     * @return {bool}
-     */
-    Player.prototype.resetPlayer = function(target) {
-       if (typeof target !== 'undefined') {
-            $('.player iframe').remove();
-            $('.player').removeClass('is-playing');
-            $('html').removeClass('video-is-playing');
-            return false;
-        }
-
-        $('iframe', target).remove();
-        target.removeClass('is-playing');
-        $('html').removeClass('video-is-playing');
-        return true;
-    };
-
-    Player.prototype.isNumeric = function(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    };
-
-    return new Player();
-
-})($);
-
-//
-// @name EqualHeight
-// @description  Sets element heights equally to the heighest item
-//
-// @markup
-// <div class="grid" data-equal-container>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-//     <div class="grid-md-6" data-equal-item>
-//
-//     </div>
-// </div>
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
-
-HelsingborgPrime.Helper.Post = (function ($) {
-
-    function Post() {
-        this.bindEvents();
-    }
-
-    Post.prototype.bindEvents = function() {
-        $(document).on('click', '.post-collapsed article', function (e) {
-            $(e.target).closest('article').parents('.post-collapsed').addClass('post-expanded');
-        }.bind(this));
-    };
-
-    return new Post();
 
 })(jQuery);
 
