@@ -23,7 +23,7 @@ class App
      */
     public function createCacheDir()
     {
-        if (!file_exists(BASEPATH . "cache")) {
+        if (!is_dir(BASEPATH . "cache")) {
             mkdir(BASEPATH . "cache");
         }
     }
