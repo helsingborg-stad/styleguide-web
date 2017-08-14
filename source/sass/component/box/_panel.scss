@@ -100,7 +100,10 @@
     .box-content,
     .dataTables_wrapper {
         border: 1px solid $creamy-darker;
-        border-top: 0;
+    }
+
+    .box-title + .box-content {
+        border-top: none;
     }
 
     .table, {
