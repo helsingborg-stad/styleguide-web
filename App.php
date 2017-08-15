@@ -13,7 +13,19 @@ class App
         $this->page = isset($_GET['p']) ? $_GET['p'] : 'home';
         $this->documentation = json_decode(file_get_contents(DOCUMENTATION_SASS_PATH));
 
+        $this->createCacheDir();
         $this->loadPage();
+    }
+
+    /**
+     * Automatically creates a cache dir for blade
+     * @return string Theme
+     */
+    public function createCacheDir()
+    {
+        if (!is_dir(BASEPATH . "cache")) {
+            mkdir(BASEPATH . "cache");
+        }
     }
 
     /**
