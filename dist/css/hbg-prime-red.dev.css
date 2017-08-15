@@ -9012,16 +9012,17 @@ body .tag {
   line-height: 1;
   margin-right: 3px;
   color: #252525;
-  letter-spacing: 0.3px; }
+  letter-spacing: 0.3px;
+  white-space: nowrap; }
   /* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
   body:not(.material-no-radius) body .tag {
     border-radius: 2px; }
 
-/* line 49, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_tags.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_tags.scss */
 .tags-white li {
   background: #fff; }
 
-/* line 56, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_tags.scss */
+/* line 57, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_tags.scss */
 .tags.show-tagsign a:before {
   content: "#"; }
 
@@ -11240,56 +11241,60 @@ a.box-index {
   .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .dataTables_wrapper,
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .box-content,
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .dataTables_wrapper {
-    border: 1px solid #e5e5e5;
-    border-top: 0; }
-  /* line 106, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+    border: 1px solid #e5e5e5; }
+  /* line 105, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+  .box-panel .box-title + .box-content,
+  .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .box-title + .box-content,
+  .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .box-title + .box-content {
+    border-top: none; }
+  /* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
   .box-panel .table,
   .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .table,
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .table {
     border-top: 0;
     background-color: #fff; }
-  /* line 111, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+  /* line 114, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
   .box-panel .box-title + ul:not(.social-feed-gallery):not(.accordion),
   .sidebar-content-area [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery):not(.accordion),
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) .box-title + ul:not(.social-feed-gallery):not(.accordion) {
     border-top: 0; }
-  /* line 115, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+  /* line 118, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
   .box-panel > ul.accordion,
   .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul.accordion,
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul.accordion {
     background-color: #fff; }
-  /* line 119, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+  /* line 122, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
   .box-panel > ul:not(.social-feed-gallery):not(.accordion),
   .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion),
   .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) {
     background-color: #fff;
     border: 1px solid #e5e5e5; }
-    /* line 123, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+    /* line 126, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
     .box-panel > ul:not(.social-feed-gallery):not(.accordion) li,
     .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li,
     .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li {
       padding: 10px 15px; }
-    /* line 127, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+    /* line 130, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
     .box-panel > ul:not(.social-feed-gallery):not(.accordion) li + li,
     .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li,
     .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li {
       border-top: 1px solid #e5e5e5; }
-    /* line 132, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+    /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
     .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a,
     .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a,
     .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a {
       display: table; }
-      /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+      /* line 138, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
       .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover,
       .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover,
       .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover {
         text-decoration: none !important; }
-        /* line 138, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+        /* line 141, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
         .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title,
         .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title,
         .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a:hover .title {
           text-decoration: underline !important; }
-      /* line 143, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+      /* line 146, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
       .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
       .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
       .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
@@ -11298,7 +11303,7 @@ a.box-index {
       .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
         display: block; }
         @media (min-width: 769px) {
-          /* line 143, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+          /* line 146, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
           .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
           .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
           .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
@@ -11307,7 +11312,7 @@ a.box-index {
           .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
             display: table-cell; } }
   @media all and (min-width: 769px) and (-ms-high-contrast: none), (min-width: 769px) and (-ms-high-contrast: active) {
-    /* line 143, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+    /* line 146, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
     .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
     .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
     .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
@@ -11315,7 +11320,7 @@ a.box-index {
     .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .title,
     .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
       padding-left: 20px; } }
-      /* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+      /* line 159, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
       .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
       .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
       .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
@@ -11323,13 +11328,13 @@ a.box-index {
         width: 1%;
         padding-left: 20px; }
         @media (min-width: 769px) {
-          /* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+          /* line 159, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
           .box-panel > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
           .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date,
           .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion):not(.social-feed) a .date {
             text-align: right; } }
 
-/* line 173, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+/* line 176, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
 .box-panel-secondary .box-title,
 .box-panel-secondary .widgettitle,
 .box-panel-secondary > h1,
@@ -11388,7 +11393,7 @@ a.box-index {
   background-color: transparent !important;
   border-bottom: 3px solid #cb0050;
   color: #cb0050; }
-  /* line 193, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
+  /* line 196, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_panel.scss */
   .box-panel-secondary .box-title a,
   .box-panel-secondary .widgettitle a,
   .box-panel-secondary > h1 a,
