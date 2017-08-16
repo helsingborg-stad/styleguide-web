@@ -54,7 +54,16 @@
 //         <div class="slide"><div class="slider-image" style="background-image:url('https:\/\/unsplash.it/800/800/?image=976');"></div></div>
 //         <div class="slide"><div class="slider-image player" style="background-image:url('https:\/\/unsplash.it/800/800/?image=889');"><a href="#video-player-101935278" data-video-id="101935278"></a></div></div>
 // </div>
-//
+
+.sidebar-right-sidebar,
+.sidebar-left-sidebar-bottom,
+.sidebar-left-sidebar-top,
+.sidebar-content-area,
+.sidebar-content-area-bottom {
+    .slider {
+        margin-bottom: $grid-gutter-md;
+    }
+}
 
 :not(.hero) .slider {
     @include material-shadow;
