@@ -12,27 +12,32 @@ HelsingborgPrime.Component.File = (function ($) {
     }
 
     File.prototype.handleEvents = function () {
-        $(document).on('change', '.input-file input[type="file"]', function (e) {
-            this.setSelected(e.target);
-        }.bind(this));
+        if($('.input-file input[type="file"]').length) {
+            $(document).on('change', '.input-file input[type="file"]', function (e) {
+                this.setSelected(e.target);
+            }.bind(this));
 
-        $('.input-file input[type="file"]').trigger('change');
+            $('.input-file input[type="file"]').trigger('change');
+        }
     };
 
     File.prototype.setSelected = function(fileinput) {
-        var $fileinput = $(fileinput);
-        var $label = $fileinput.parents('label.input-file');
-        var $duplicate = $label.parent('li').clone().find('input').val('').end();
 
-        if ($fileinput.val()) {
-            $label.find('.input-file-selected').text($fileinput.val());
-        }
+        if($(fileinput).length) {
+            var $fileinput = $(fileinput);
+            var $label = $fileinput.parents('label.input-file');
+            var $duplicate = $label.parent('li').clone().find('input').val('').end();
 
-        if ($fileinput.val() && $label.parent('li').length) {
-            var max = $label.parent('li').parent('ul').attr('data-max');
+            if ($fileinput.val()) {
+                $label.find('.input-file-selected').text($fileinput.val());
+            }
 
-            if ($label.parent('li').parent('ul').find('li').length < max || max < 0) {
-                $label.parents('ul').append($duplicate);
+            if ($fileinput.val() && $label.parent('li').length) {
+                var max = $label.parent('li').parent('ul').attr('data-max');
+
+                if ($label.parent('li').parent('ul').find('li').length < max || max < 0) {
+                    $label.parents('ul').append($duplicate);
+                }
             }
         }
     };
