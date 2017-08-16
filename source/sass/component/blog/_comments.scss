@@ -34,7 +34,17 @@
 // <ul class="comments">
 //     <li class="comment">
 //         <header>
-//             <em>The Baker</em> <time>4 minutes ago</time>
+//              <div class="author-image">
+//                  <a href="#">
+//                      <img src="https://unsplash.it/200/200?image=1005">
+//                  </a>
+//              </div>
+//              <div class="author-name">
+//                  <a class="author-link" href="#">
+//                      <em>The Baker</em>
+//                  </a>
+//              </div>
+//              <time>4 minutes ago</time>
 //         </header>
 //         <div class="comment-text">
 //             Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.
@@ -42,7 +52,17 @@
 //     </li>
 //     <li class="comment">
 //         <header>
-//             <em>The Baker</em> <time>8 minutes ago</time>
+//             <div class="author-image">
+//                  <a href="#">
+//                      <i class="pricon pricon-2x pricon-user-o"></i>
+//                  </a>
+//             </div>
+//              <div class="author-name">
+//                  <a class="author-link" href="#">
+//                      <em>The Baker</em>
+//                  </a>
+//              </div>
+//             <time>8 minutes ago</time>
 //         </header>
 //         <div class="comment-text">
 //              Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.
@@ -60,12 +80,15 @@
     time {
         color: $gray;
         font-size: .9em;
-        margin-left: 10px;
         cursor: default;
     }
 
     & + .comment, .answers {
-        margin-top: $content-gutter;
+        margin-top: $content-gutter * 2;
+    }
+
+    i {
+        color: $palette-2;
     }
 
     .comment-text {
@@ -91,12 +114,43 @@
 
     }
 
-    a {
+    a:not(.author-link) {
         color: #fff;
         text-decoration: underline;
 
         &:hover {
             color: rgba(#fff, .8);
+        }
+    }
+
+
+    .author-image, .author-name, .author-image a, .author-name a, time {
+        line-height: 40px;
+    }
+
+    .author-image {
+
+        border-radius: 100%;
+        margin-left: $content-gutter / 2.5;
+
+        img {
+            width: 36px;
+            height: auto;
+            display: block;
+            border-radius: 100%;
+        }
+    }
+
+    header {
+        @include clearfix;
+        margin-bottom: $content-gutter;
+
+        .author-image, .author-name, time {
+            float: left !important;
+        }
+
+        .author-image, .author-name {
+            margin-right: $content-gutter;
         }
     }
 
@@ -107,30 +161,48 @@
         }
     }
 
-    &:nth-child(4n + 2) .comment-text {
-        background-color: $palette-3;
-        color: #fff;
+    &:nth-child(4n + 2) {
+        .comment-text {
+            background-color: $palette-3;
+            color: #fff;
 
-        &::before {
-            @include arrow('up', 8px, $palette-3);
+            &::before {
+                @include arrow('up', 8px, $palette-3);
+            }
+        }
+
+        .author-image i {
+            color: $palette-3;
+        }
+
+    }
+
+    &:nth-child(4n + 3) {
+        .comment-text {
+            background-color: $palette-4;
+            color: #fff;
+
+            &::before {
+                @include arrow('up', 8px, $palette-4);
+            }
+        }
+
+        .author-image i {
+            color: $palette-4;
         }
     }
 
-    &:nth-child(4n + 3) .comment-text {
-        background-color: $palette-4;
-        color: #fff;
+    &:nth-child(4n + 4) {
+        .comment-text {
+            background-color: $palette-5;
+            color: #fff;
 
-        &::before {
-            @include arrow('up', 8px, $palette-4);
+            &::before {
+                @include arrow('up', 8px, $palette-5);
+            }
         }
-    }
-
-    &:nth-child(4n + 4) .comment-text {
-        background-color: $palette-5;
-        color: #fff;
-
-        &::before {
-            @include arrow('up', 8px, $palette-5);
+        .author-image i {
+            color: $palette-5;
         }
     }
 }
