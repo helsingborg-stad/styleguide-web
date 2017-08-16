@@ -59,19 +59,13 @@
 .sidebar-left-sidebar-bottom,
 .sidebar-left-sidebar-top,
 .sidebar-content-area,
-.sidebar-content-area-bottom {
+.sidebar-content-area-bottom,
+article {
     .slider {
+        @include material-shadow;
+        @include material-radius;
         margin-bottom: $grid-gutter-md;
     }
-}
-
-:not(.hero) .slider {
-    @include material-shadow;
-    @include material-radius;
-}
-
-.hero .slider {
-    border-radius: 0 !important;
 }
 
 .creamy .slider .text-block.text-block-left:not([class*="stripe-"]):not([class*="stripe-"]),
