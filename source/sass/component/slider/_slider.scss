@@ -59,6 +59,7 @@
 :not(.hero) .slider {
     @include material-shadow;
     @include material-radius;
+    margin-bottom: $grid-gutter-md;
 }
 
 .hero .slider {
