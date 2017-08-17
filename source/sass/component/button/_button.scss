@@ -69,6 +69,14 @@ input[type="button"].btn::-moz-focus-inner {
     }
 }
 
+.input-group-addon-btn {
+    .btn,
+    .read-more {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
 .read-more {
     display: block !important;
     text-align: center;
