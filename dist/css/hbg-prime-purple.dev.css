@@ -11834,9 +11834,8 @@ a.box-news:hover {
   display: block;
   padding: 0;
   padding-bottom: 100%;
-  overflow: hidden;
-  margin-bottom: 30px; }
-  /* line 40, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  overflow: hidden; }
+  /* line 39, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-image {
     position: absolute;
     display: block;
@@ -11848,10 +11847,10 @@ a.box-news:hover {
     background-position: center center;
     overflow: hidden;
     transition: 300ms all ease-in-out; }
-    /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+    /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
     .box-post-brick .box-image img {
       display: none; }
-    /* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+    /* line 57, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
     .box-post-brick .box-image::after {
       display: block;
       position: absolute;
@@ -11861,7 +11860,7 @@ a.box-news:hover {
       height: 100%;
       content: '';
       background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)); }
-  /* line 70, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 69, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-content {
     position: absolute;
     left: 0;
@@ -11869,7 +11868,7 @@ a.box-news:hover {
     bottom: 0;
     padding: 15px 20px;
     transition: 300ms all ease-in-out; }
-  /* line 80, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 79, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .post-title {
     font-weight: bold;
     color: #fff;
@@ -11877,18 +11876,18 @@ a.box-news:hover {
     text-transform: none;
     margin-bottom: 0px;
     margin-top: 5px; }
-  /* line 89, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 88, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-post-brick-category {
     color: #fff;
     display: block; }
-  /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 93, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-post-brick-date {
     padding: 2px 5px;
     font-size: 1rem;
     line-height: 1;
     background-color: #fff;
     color: #000; }
-  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 101, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-post-brick-lead {
     opacity: 0;
     padding: 0 20px 0 20px;
@@ -11901,7 +11900,7 @@ a.box-news:hover {
     left: 0;
     right: 0;
     transform: translateY(100%); }
-    /* line 115, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+    /* line 114, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
     .box-post-brick .box-post-brick-lead::after {
       display: block;
       position: absolute;
@@ -11911,50 +11910,50 @@ a.box-news:hover {
       height: 100%;
       content: '';
       background: linear-gradient(to bottom, transparent, black); }
-  /* line 127, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 126, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick .box-post-brick-action {
     opacity: 0;
     position: absolute;
     bottom: 20px;
     right: 20px;
     transition: 300ms opacity ease-in-out, 100ms background-color; }
-  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick[class*="brick-columns-"] {
     padding-bottom: 0; }
-  /* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 139, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick.brick-columns-3 {
     height: 280px; }
     @media (max-width: 961px) {
-      /* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+      /* line 139, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
       .box-post-brick.brick-columns-3 {
         height: 190px; } }
-  /* line 147, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 146, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick.brick-columns-4 {
     height: 400px; }
     @media (max-width: 961px) {
-      /* line 147, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+      /* line 146, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
       .box-post-brick.brick-columns-4 {
         height: 260px; } }
-  /* line 154, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 153, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick.brick-columns-6, .box-post-brick.brick-columns-12 {
     height: 500px; }
     @media (max-width: 961px) {
-      /* line 154, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+      /* line 153, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
       .box-post-brick.brick-columns-6, .box-post-brick.brick-columns-12 {
         height: 415px; } }
-  /* line 162, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick:hover .box-content {
     transform: translateY(-150px); }
-  /* line 166, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 165, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick:hover .box-post-brick-lead {
     opacity: 1;
     transform: translateY(0); }
-  /* line 171, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+  /* line 170, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
   .box-post-brick:hover .box-post-brick-action {
     display: block;
     opacity: 1; }
 
-/* line 178, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .modularity-mod-sites .box-post-brick .box-image svg {
   position: absolute;
   top: 50%;
@@ -11962,23 +11961,23 @@ a.box-news:hover {
   transform: translate(-50%, -50%);
   width: 70%; }
 
-/* line 183, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 182, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 1) > .box-post-brick {
   background-color: #d35098; }
 
-/* line 187, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 186, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 2) > .box-post-brick {
   background-color: #712082; }
 
-/* line 191, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 190, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 3) > .box-post-brick {
   background-color: #a84c98; }
 
-/* line 195, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 194, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 4) > .box-post-brick {
   background-color: #7b075e; }
 
-/* line 199, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
+/* line 198, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 5) > .box-post-brick {
   background-color: #a61380; }
 
@@ -12129,58 +12128,76 @@ a.box-news:hover {
         font-size: .8em;
         line-height: .8em; } }
 
-/* line 2, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
-body:not(.material-no-shadow) :not(.hero) .slider {
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
-  @media print {
-    /* line 2, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
-    body:not(.material-no-shadow) :not(.hero) .slider {
-      box-shadow: none; } }
-
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
-body:not(.material-no-radius) :not(.hero) .slider {
-  border-radius: 2px; }
-
 /* line 64, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
-.hero .slider {
-  border-radius: 0 !important; }
+.sidebar-right-sidebar .slider,
+.sidebar-left-sidebar-bottom .slider,
+.sidebar-left-sidebar-top .slider,
+.sidebar-content-area .slider,
+.sidebar-content-area-bottom .slider,
+article .slider {
+  margin-bottom: 30px; }
+  /* line 2, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
+  body:not(.material-no-shadow) .sidebar-right-sidebar .slider, body:not(.material-no-shadow)
+  .sidebar-left-sidebar-bottom .slider, body:not(.material-no-shadow)
+  .sidebar-left-sidebar-top .slider, body:not(.material-no-shadow)
+  .sidebar-content-area .slider, body:not(.material-no-shadow)
+  .sidebar-content-area-bottom .slider, body:not(.material-no-shadow)
+  article .slider {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+    @media print {
+      /* line 2, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
+      body:not(.material-no-shadow) .sidebar-right-sidebar .slider, body:not(.material-no-shadow)
+      .sidebar-left-sidebar-bottom .slider, body:not(.material-no-shadow)
+      .sidebar-left-sidebar-top .slider, body:not(.material-no-shadow)
+      .sidebar-content-area .slider, body:not(.material-no-shadow)
+      .sidebar-content-area-bottom .slider, body:not(.material-no-shadow)
+      article .slider {
+        box-shadow: none; } }
+  /* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
+  body:not(.material-no-radius) .sidebar-right-sidebar .slider, body:not(.material-no-radius)
+  .sidebar-left-sidebar-bottom .slider, body:not(.material-no-radius)
+  .sidebar-left-sidebar-top .slider, body:not(.material-no-radius)
+  .sidebar-content-area .slider, body:not(.material-no-radius)
+  .sidebar-content-area-bottom .slider, body:not(.material-no-radius)
+  article .slider {
+    border-radius: 2px; }
 
-/* line 68, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 71, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .creamy .slider .text-block.text-block-left:not([class*="stripe-"]):not([class*="stripe-"]),
 .creamy .slider .text-block.text-block-right:not([class*="stripe-"]):not([class*="stripe-"]) {
   background-color: #fff !important; }
 
-/* line 73, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 76, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider {
   position: relative;
   width: 100%;
   background: transparent;
   overflow: hidden; }
   @media print {
-    /* line 73, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 76, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider {
       display: none; } }
-  /* line 83, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 86, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider ul {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
-    /* line 86, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 89, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider ul li {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0; }
-      /* line 89, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 92, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider ul li:not(.current) {
         display: none; }
-  /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 98, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider ul li a:hover {
     text-decoration: none; }
-  /* line 101, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 104, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.is-collapsed .type-featured > a,
   .slider .type-featured.is-collapsed > a {
     display: block;
@@ -12189,7 +12206,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     right: 0;
     bottom: 0;
     left: 0; }
-  /* line 106, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.is-collapsed .type-featured .text-block.text-block-left,
   .slider.is-collapsed .type-featured .text-block.text-block-right,
   .slider .type-featured.is-collapsed .text-block.text-block-left,
@@ -12198,7 +12215,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     margin-right: 0;
     margin-left: 0;
     width: 100%; }
-    /* line 113, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 116, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider.is-collapsed .type-featured .text-block.text-block-left ~ [class*="slider-image-"],
     .slider.is-collapsed .type-featured .text-block.text-block-right ~ [class*="slider-image-"],
     .slider .type-featured.is-collapsed .text-block.text-block-left ~ [class*="slider-image-"],
@@ -12206,24 +12223,24 @@ body:not(.material-no-radius) :not(.hero) .slider {
       margin-right: 0;
       margin-left: 0;
       width: 100%; }
-  /* line 123, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 126, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block,
   .slider .type-featured [class*="slider-image-"] {
     width: 50%;
     height: 100%; }
-  /* line 129, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 132, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-left {
     margin-right: 50%; }
-  /* line 133, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-right {
     margin-left: 50%; }
-  /* line 137, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-right ~ [class*="slider-image-"] {
     margin-right: 50%; }
-  /* line 141, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 144, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .type-featured .text-block.text-block-left ~ [class*="slider-image-"] {
     margin-left: 50%; }
-  /* line 147, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .slider-image,
   .slider .slider-video,
   .slider .player {
@@ -12233,7 +12250,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     height: 100%;
     background-size: cover;
     background-position: center center; }
-    /* line 157, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 160, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider .slider-image video,
     .slider .slider-video video,
     .slider .player video {
@@ -12244,13 +12261,13 @@ body:not(.material-no-radius) :not(.hero) .slider {
       left: 50%;
       transform: translate(-50%, -50%); }
       @media screen and (orientation: portrait) {
-        /* line 157, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+        /* line 160, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
         .slider .slider-image video,
         .slider .slider-video video,
         .slider .player video {
           width: auto;
           height: 100%; } }
-  /* line 169, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 172, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider [class*="slider-nav-"] {
     position: absolute;
     top: 50%;
@@ -12266,25 +12283,25 @@ body:not(.material-no-radius) :not(.hero) .slider {
     text-align: center;
     line-height: 1;
     color: #fff; }
-    /* line 186, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 189, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider [class*="slider-nav-"]:not([class*="stripe-"]):hover {
       background-color: #712082; }
-  /* line 191, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 194, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .slider-nav-next {
     right: 0;
     border-radius: 50px 0 0 50px;
     padding-left: 1.2em;
     cursor: pointer; }
-  /* line 198, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 201, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .slider-nav-previous {
     left: 0;
     border-radius: 0 50px 50px 0;
     padding-right: 1.2em;
     cursor: pointer; }
-  /* line 205, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 208, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .content {
     transform: translateY(-32%) !important; }
-  /* line 209, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .text-block {
     padding: 10px 20px;
     position: absolute;
@@ -12299,14 +12316,14 @@ body:not(.material-no-radius) :not(.hero) .slider {
     color: #fff;
     font-size: .9em;
     display: block; }
-    /* line 220, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 223, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider .text-block.text-block-center {
       background-color: rgba(0, 0, 0, 0.4);
       text-align: center;
       padding: 0;
       top: 0;
       /* Small devices */ }
-      /* line 226, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 229, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider .text-block.text-block-center span {
         font-weight: normal;
         font-size: 2em;
@@ -12319,66 +12336,66 @@ body:not(.material-no-radius) :not(.hero) .slider {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        /* line 236, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+        /* line 239, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span em {
           margin-bottom: 10px;
           font-weight: normal; }
       @media screen and (max-width: 468px) {
-        /* line 244, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+        /* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.1em; }
-          /* line 246, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+          /* line 249, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
       @media screen and (min-width: 469px) and (max-width: 768px) {
-        /* line 253, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+        /* line 256, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.4em; }
-          /* line 255, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+          /* line 258, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
       @media screen and (min-width: 769px) and (max-width: 960px) {
-        /* line 262, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+        /* line 265, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
         .slider .text-block.text-block-center span {
           font-size: 1.6em; }
-          /* line 264, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+          /* line 267, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
           .slider .text-block.text-block-center span em {
             font-size: 1.2em; } }
-    /* line 271, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    /* line 274, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
     .slider .text-block:not([class*="stripe-"]) {
       background-color: rgba(113, 32, 130, 0.9); }
-      /* line 274, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 277, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-left:not([class*=stripe-]), .slider .text-block:not([class*="stripe-"]).text-block-right:not([class*=stripe-]) {
         background-color: #f4f4f4;
         border: 1px solid #e5e5e5; }
-      /* line 281, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 284, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]) .creamy.text-block-left:not([class*=stripe-]), .slider .text-block:not([class*="stripe-"]) .creamy.text-block-right:not([class*=stripe-]) {
         background-color: #ffffff;
         border-color: #e5e5e5; }
-      /* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 291, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-center {
         background-color: rgba(0, 0, 0, 0.4) !important; }
-      /* line 295, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+      /* line 298, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
       .slider .text-block:not([class*="stripe-"]).text-block-left span, .slider .text-block:not([class*="stripe-"]).text-block-right span {
         color: #252525; }
 
-/* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 316, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .no-js .slider li:first-child {
   display: block; }
 
-/* line 318, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 321, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .no-js .slider .type-video a {
   display: none; }
 
-/* line 325, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 328, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-nav-hover [class*="slider-nav-"] {
   opacity: 0; }
 
-/* line 330, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 333, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-nav-hover:hover [class*="slider-nav-"] {
   opacity: 1; }
 
-/* line 337, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 340, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button,
 .slider-nav-bottom [class*="slider-nav-"] {
   top: auto;
@@ -12389,58 +12406,58 @@ body:not(.material-no-radius) :not(.hero) .slider {
   color: #7f7f7f;
   background-color: #e7e7e7;
   z-index: 99999; }
-  /* line 348, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 351, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider-nav-bottom .flickity-prev-next-button:hover,
   .slider-nav-bottom [class*="slider-nav-"]:hover {
     color: #fff; }
 
-/* line 353, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 356, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.previous {
   left: 0; }
 
-/* line 357, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 360, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-nav-bottom .flickity-prev-next-button.next {
   right: 0; }
 
-/* line 363, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 366, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover .flickity-prev-next-button,
 .slider.slider-nav-hover .flickity-page-dots {
   transition: 300ms all ease-in-out;
   opacity: 0; }
 
-/* line 369, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover .flickity-page-dots {
   bottom: -20px; }
 
-/* line 373, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 376, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover:hover .flickity-prev-next-button,
 .slider.slider-nav-hover:hover .flickity-page-dots {
   display: block;
   opacity: 1; }
 
-/* line 379, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 382, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider.slider-nav-hover:hover .flickity-page-dots {
   bottom: 15px; }
 
-/* line 384, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 387, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider .flickity-page-dots {
   bottom: 15px; }
-  /* line 387, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 390, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .flickity-page-dots .dot {
     background-color: #fff;
     opacity: .5; }
-  /* line 392, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 395, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider .flickity-page-dots .dot.is-selected {
     background-color: #712082;
     opacity: 1; }
 
-/* line 398, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 401, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider.slider-layout-circle {
   box-shadow: none !important; }
-  /* line 401, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 404, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .slide {
     padding: 20px; }
-  /* line 405, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 408, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .slider-image {
     border-radius: 50%;
     width: 80%;
@@ -12448,33 +12465,33 @@ body:not(.material-no-radius) :not(.hero) .slider {
     margin: 0 auto;
     height: 0;
     overflow: hidden; }
-  /* line 414, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 417, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .text-block,
   .slider.slider-layout-circle .text-block.text-block-center:not([class*="stripe-"]) {
     position: static;
     text-align: center;
     background-color: transparent !important;
     color: #252525; }
-  /* line 422, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 425, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.slider-layout-circle .text-block.text-block-center span {
     position: static;
     text-shadow: none;
     font-size: 1.2em; }
 
-/* line 429, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 432, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
 .slider-height-restrictions.ratio-36-7.slider:not(.slider-layout-circle) {
   min-height: 350px; }
 
-/* line 434, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 437, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider:not(.slider-layout-circle) {
   height: 100%; }
-  /* line 437, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 440, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) [data-flickity] {
     width: 100%;
     height: 100%; }
-  /* line 443, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 446, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) .flickity-enabled,
   .slider:not(.slider-layout-circle) [data-flickity] {
@@ -12483,7 +12500,7 @@ body:not(.material-no-radius) :not(.hero) .slider {
     left: 0;
     right: 0;
     bottom: 0; }
-  /* line 453, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 456, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .slide,
   .slider:not(.slider-layout-circle) .flickity-enabled {
     width: 100%;

@@ -54,6 +54,13 @@
    "slider",
    "tooltip"
   ],
+  "other": [
+   "general"
+  ],
+  "blog": [
+   "comments",
+   "post"
+  ],
   "boxes": [
    "contact",
    "filled",
@@ -83,13 +90,6 @@
    "help",
    "tabs",
    "tags"
-  ],
-  "other": [
-   "general"
-  ],
-  "blog": [
-   "comments",
-   "post"
   ],
   "forms": [
    "datepicker",
@@ -1541,6 +1541,82 @@
     }
    ]
   },
+  "other": {
+   "general": [
+    {
+     "name": "Comment form",
+     "description": "<p>Standard WordPress comment form, please use the comment_form() WP function to show comment form</p>\n"
+    }
+   ]
+  },
+  "blog": {
+   "comments": [
+    {
+     "name": "Comments",
+     "description": "<p>List of comments</p>\n",
+     "page": [
+      {
+       "nav": "Blog",
+       "section": "Comments"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"comments\">\n    <li class=\"comment\">\n        <header>\n             <div class=\"author-image\">\n                 <a href=\"#\">\n                     <img src=\"https:unsplash.it/200/200?image=1005\">\n                 </a>\n             </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n             <time>4 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        </div>\n    </li>\n    <li class=\"comment\">\n        <header>\n            <div class=\"author-image\">\n                 <a href=\"#\">\n                     <i class=\"pricon pricon-2x pricon-user-o\"></i>\n                 </a>\n            </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n            <time>8 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/blog/_comments.scss",
+       "example": "\n<ul class=\"comments\">\n    <li class=\"comment\">\n        <header>\n             <div class=\"author-image\">\n                 <a href=\"#\">\n                     <img src=\"https:unsplash.it/200/200?image=1005\">\n                 </a>\n             </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n             <time>4 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        </div>\n    </li>\n    <li class=\"comment\">\n        <header>\n            <div class=\"author-image\">\n                 <a href=\"#\">\n                     <i class=\"pricon pricon-2x pricon-user-o\"></i>\n                 </a>\n            </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n            <time>8 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"comments\"&gt;\n    &lt;li class=\"comment\"&gt;\n        &lt;header&gt;\n             &lt;div class=\"author-image\"&gt;\n                 &lt;a href=\"#\"&gt;\n                     &lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n             &lt;div class=\"author-name\"&gt;\n                 &lt;a class=\"author-link\" href=\"#\"&gt;\n                     &lt;em&gt;The Baker&lt;/em&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n             &lt;time&gt;4 minutes ago&lt;/time&gt;\n        &lt;/header&gt;\n        &lt;div class=\"comment-text\"&gt;\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li class=\"comment\"&gt;\n        &lt;header&gt;\n            &lt;div class=\"author-image\"&gt;\n                 &lt;a href=\"#\"&gt;\n                     &lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;\n                 &lt;/a&gt;\n            &lt;/div&gt;\n             &lt;div class=\"author-name\"&gt;\n                 &lt;a class=\"author-link\" href=\"#\"&gt;\n                     &lt;em&gt;The Baker&lt;/em&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n            &lt;time&gt;8 minutes ago&lt;/time&gt;\n        &lt;/header&gt;\n        &lt;div class=\"comment-text\"&gt;\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "post": [
+    {
+     "name": "Post",
+     "description": "<p>A simple blog post</p>\n",
+     "page": [
+      {
+       "nav": "Blog",
+       "section": "Post"
+      }
+     ],
+     "state": [
+      {
+       "name": ".post-full",
+       "escaped": "post-full",
+       "description": "Shows the full post"
+      },
+      {
+       "name": ".post-collapsed",
+       "escaped": "post-collapsed",
+       "description": "Collapsed post (faded out content)"
+      },
+      {
+       "name": ".post-compressed",
+       "escaped": "post-compressed",
+       "description": "Minimal post"
+      },
+      {
+       "name": ".post-single",
+       "escaped": "post-single",
+       "description": "Single post"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
+       "path": "~/source/sass/component/blog/_post.scss",
+       "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
+       "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "boxes": {
    "contact": [
     {
@@ -2259,82 +2335,6 @@
        "path": "~/source/sass/component/navigation/_tags.scss",
        "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
        "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "other": {
-   "general": [
-    {
-     "name": "Comment form",
-     "description": "<p>Standard WordPress comment form, please use the comment_form() WP function to show comment form</p>\n"
-    }
-   ]
-  },
-  "blog": {
-   "comments": [
-    {
-     "name": "Comments",
-     "description": "<p>List of comments</p>\n",
-     "page": [
-      {
-       "nav": "Blog",
-       "section": "Comments"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"comments\">\n    <li class=\"comment\">\n        <header>\n             <div class=\"author-image\">\n                 <a href=\"#\">\n                     <img src=\"https:unsplash.it/200/200?image=1005\">\n                 </a>\n             </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n             <time>4 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        </div>\n    </li>\n    <li class=\"comment\">\n        <header>\n            <div class=\"author-image\">\n                 <a href=\"#\">\n                     <i class=\"pricon pricon-2x pricon-user-o\"></i>\n                 </a>\n            </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n            <time>8 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/blog/_comments.scss",
-       "example": "\n<ul class=\"comments\">\n    <li class=\"comment\">\n        <header>\n             <div class=\"author-image\">\n                 <a href=\"#\">\n                     <img src=\"https:unsplash.it/200/200?image=1005\">\n                 </a>\n             </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n             <time>4 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        </div>\n    </li>\n    <li class=\"comment\">\n        <header>\n            <div class=\"author-image\">\n                 <a href=\"#\">\n                     <i class=\"pricon pricon-2x pricon-user-o\"></i>\n                 </a>\n            </div>\n             <div class=\"author-name\">\n                 <a class=\"author-link\" href=\"#\">\n                     <em>The Baker</em>\n                 </a>\n             </div>\n            <time>8 minutes ago</time>\n        </header>\n        <div class=\"comment-text\">\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"comments\"&gt;\n    &lt;li class=\"comment\"&gt;\n        &lt;header&gt;\n             &lt;div class=\"author-image\"&gt;\n                 &lt;a href=\"#\"&gt;\n                     &lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n             &lt;div class=\"author-name\"&gt;\n                 &lt;a class=\"author-link\" href=\"#\"&gt;\n                     &lt;em&gt;The Baker&lt;/em&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n             &lt;time&gt;4 minutes ago&lt;/time&gt;\n        &lt;/header&gt;\n        &lt;div class=\"comment-text\"&gt;\n            Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li class=\"comment\"&gt;\n        &lt;header&gt;\n            &lt;div class=\"author-image\"&gt;\n                 &lt;a href=\"#\"&gt;\n                     &lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;\n                 &lt;/a&gt;\n            &lt;/div&gt;\n             &lt;div class=\"author-name\"&gt;\n                 &lt;a class=\"author-link\" href=\"#\"&gt;\n                     &lt;em&gt;The Baker&lt;/em&gt;\n                 &lt;/a&gt;\n             &lt;/div&gt;\n            &lt;time&gt;8 minutes ago&lt;/time&gt;\n        &lt;/header&gt;\n        &lt;div class=\"comment-text\"&gt;\n             Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "post": [
-    {
-     "name": "Post",
-     "description": "<p>A simple blog post</p>\n",
-     "page": [
-      {
-       "nav": "Blog",
-       "section": "Post"
-      }
-     ],
-     "state": [
-      {
-       "name": ".post-full",
-       "escaped": "post-full",
-       "description": "Shows the full post"
-      },
-      {
-       "name": ".post-collapsed",
-       "escaped": "post-collapsed",
-       "description": "Collapsed post (faded out content)"
-      },
-      {
-       "name": ".post-compressed",
-       "escaped": "post-compressed",
-       "description": "Minimal post"
-      },
-      {
-       "name": ".post-single",
-       "escaped": "post-single",
-       "description": "Single post"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
-       "path": "~/source/sass/component/blog/_post.scss",
-       "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
-       "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
       }
      ]
     }
