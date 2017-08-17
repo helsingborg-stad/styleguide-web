@@ -1,0 +1,11 @@
+.section {
+    margin: 0;
+    min-height: $grid-gutter-md*2;
+    height: 50vh;
+}
+
+@media screen and #{$screen-below-md} {
+    .section + .section {
+        margin-top: $grid-gutter-md;
+    }
+}

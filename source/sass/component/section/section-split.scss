@@ -1,0 +1,141 @@
+//
+// @name Section 50% info 50% image
+// @description No description
+//
+// @page Section/Split
+//
+// @markup
+// <section class="section section-split image-focus-right-top image-right text-bottom background-color-1">
+//     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url(https:\/\/unsplash.it/800/450?image=1001);"></div>
+//     <div class="container">
+//         <div class="grid">
+//             <div class="grid-xs-12 grid-md-7 grid-lg-6">
+//                 <article class="module-article">
+//                  <h2>This is flex.</h2>
+//                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
+//                  <p><a class="btn btn-lg btn-btn" href="https:\/\/www.youtube.com/watch?v=ug4c2mqlE_0">Läs mer om det här. Awesome!</a></p>
+//                 </article>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="section-image hidden-xs hidden-sm" style="background-image: url(https:\/\/unsplash.it/500/600?image=1001);"></div>
+// </section>
+
+.section-split {
+
+    position: relative;
+
+    @media screen and #{$screen-md-up} {
+        &:after,
+        .section-image {
+            @include cover();
+            content: "";
+            z-index: 5;
+            background-color: $creamy;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    @media screen and #{$screen-below-md} {
+        padding: $grid-gutter-lg/2 0;
+        .section-image-mobile {
+            background-size: cover;
+            margin-bottom: $grid-gutter-md;
+        }
+    }
+
+    @media screen and #{$screen-below-md} {
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .section-image {
+        z-index: 7;
+    }
+
+    @media screen and #{$screen-md-up} {
+        .module-article {
+            padding-right: $grid-gutter-lg;
+            margin-bottom: $grid-gutter-md;
+        }
+    }
+
+    /* Backgrounds */
+
+    &.background-color-1 {
+        @include btn-theme($palette-1);
+    }
+
+    &.background-color-2 {
+        @include btn-theme($palette-2);
+    }
+
+    &.background-color-3 {
+        @include btn-theme($palette-3);
+    }
+
+    &.background-color-4 {
+        @include btn-theme($palette-4);
+    }
+
+    &.background-color-5 {
+        @include btn-theme($palette-5);
+    }
+
+    /* Text alignment */
+
+    &.text-top .container {
+        align-self: flex-start;
+    }
+
+    &.text-bottom .container {
+        align-self: flex-end;
+    }
+
+    /* Image alignment */
+
+    &.image-left {
+        &:after,
+        .section-image {
+            right: 50%;
+            @media screen and #{$screen-below-lg} {
+                right: 61%;
+            }
+        }
+        .grid {
+            justify-content: flex-end;
+        }
+    }
+
+    &.image-right {
+
+        &:after,
+        .section-image {
+            left: 50%;
+            @media screen and #{$screen-below-lg} {
+                left: 61%;
+            }
+        }
+
+        .grid {
+            justify-content: flex-start;
+        }
+    }
+
+    /* Image focusing */
+
+    $vertical-positions: top center bottom;
+    $horizontal-positions: left center right;
+
+    @each $vertical-position in $vertical-positions {
+        @each $horizontal-position in $horizontal-positions {
+            &.image-focus-#{$horizontal-position}-#{$vertical-position}:after,
+            &.image-focus-#{$horizontal-position}-#{$vertical-position} .section-image {
+                background-position: #{$horizontal-position} #{$vertical-position};
+            }
+        }
+    }
+}

@@ -117,6 +117,9 @@
    "search form",
    "search results"
   ],
+  "section": [
+   "split"
+  ],
   "stripe": [
    "general"
   ],
@@ -2751,6 +2754,30 @@
        "path": "~/source/sass/component/search/_search-results.scss",
        "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
        "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "section": {
+   "split": [
+    {
+     "name": "Section 50% info 50% image",
+     "description": "<p>No description</p>\n",
+     "page": [
+      {
+       "nav": "Section",
+       "section": "Split"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<section class=\"section section-split image-focus-right-top image-right text-bottom background-color-1\">\n    <div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"></div>\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-xs-12 grid-md-7 grid-lg-6\">\n                <article class=\"module-article\">\n                 <h2>This is flex.</h2>\n                 <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>\n                 <p><a class=\"btn btn-lg btn-btn\" href=\"https:www.youtube.com/watch?v=ug4c2mqlE_0\">Läs mer om det här. Awesome!</a></p>\n                </article>\n            </div>\n        </div>\n    </div>\n    <div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\"></div>\n</section>",
+       "path": "~/source/sass/component/section/section-split.scss",
+       "example": "\n<section class=\"section section-split image-focus-right-top image-right text-bottom background-color-1\">\n    <div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"></div>\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-xs-12 grid-md-7 grid-lg-6\">\n                <article class=\"module-article\">\n                 <h2>This is flex.</h2>\n                 <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>\n                 <p><a class=\"btn btn-lg btn-btn\" href=\"https:www.youtube.com/watch?v=ug4c2mqlE_0\">Läs mer om det här. Awesome!</a></p>\n                </article>\n            </div>\n        </div>\n    </div>\n    <div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\"></div>\n</section>",
+       "escaped": "\n&lt;section class=\"section section-split image-focus-right-top image-right text-bottom background-color-1\"&gt;\n    &lt;div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"&gt;&lt;/div&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-xs-12 grid-md-7 grid-lg-6\"&gt;\n                &lt;article class=\"module-article\"&gt;\n                 &lt;h2&gt;This is flex.&lt;/h2&gt;\n                 &lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.&lt;/p&gt;\n                 &lt;p&gt;&lt;a class=\"btn btn-lg btn-btn\" href=\"https:www.youtube.com/watch?v=ug4c2mqlE_0\"&gt;Läs mer om det här. Awesome!&lt;/a&gt;&lt;/p&gt;\n                &lt;/article&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\"&gt;&lt;/div&gt;\n&lt;/section&gt;"
       }
      ]
     }

@@ -30,6 +30,7 @@
 @import 'mixin/box';
 @import 'mixin/material';
 @import 'mixin/render';
+@import 'mixin/blur';
 
 // ***************************************************************
 // *** Layout
@@ -136,6 +137,9 @@
 @import 'component/footer/footer';
 
 @import 'component/error/404';
+
+@import 'component/section/section';
+@import 'component/section/section-split';
 
 // ***************************************************************
 // *** Utilities
