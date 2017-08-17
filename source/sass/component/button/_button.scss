@@ -44,6 +44,9 @@ input[type="button"].btn::-moz-focus-inner {
     text-decoration: none;
     cursor: pointer;
     margin: 0;
+    margin-top: ($content-gutter / 3) / 2;
+    margin-bottom: ($content-gutter / 3) / 2;
+
 
     &:hover,
     &:focus {
