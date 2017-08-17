@@ -101,6 +101,10 @@
         img {
             @extend .img-inherit-width;
         }
+
+        @media print {
+            color: $base-font-color;
+        }
     }
 
     .btn.btn-plain {
