@@ -4,17 +4,61 @@
 //
 // @page Section/Full
 //
+// @state .section-sm/md/lg - Sets a minimum height on the section. Aproxmently 60px, 40% 100%.
+// @state .padding-sm/md/lg - Sets a padding on the area.
+// @state .image-focus-right-top - Sets focal point of the image. Supports standard placement. Refer to the css documentation.
+// @state .background-color-1 - A background color for the text.
+// @state .columnize-2/3 - Makes columns from text.
+//
 // @markup
-// <section class="section section-full image-focus-right-top background-color-1 vertical-gutter-lg text-alignment-center">
+// <section class="section section-full image-focus-right-top background-color-2 section-md padding-lg columnize-2" style="background-image: url(https:\/\/unsplash.it/1250/800?image=1001);">
 //     <div class="container">
 //         <div class="grid">
 //             <div class="grid-xs-12">
 //                 <article class="module-article">
-//                  <h2>This is flex.</h2>
-//                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
-//                  <p><a class="btn btn-lg btn-btn" href="https:\/\/www.youtube.com/watch?v=ug4c2mqlE_0">Läs mer om det här. Awesome!</a></p>
+//                      <h2 class="gutter-bottom">This is flex.</h2>
+//                      <div class="text-content">
+//                          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
+//                          <p>Croissant dragée powder tootsie roll cupcake macaroon icing gummi bears tiramisu. Topping donut sweet chupa chups lemon drops halvah biscuit macaroon apple pie. Tootsie roll bonbon cheesecake dragée candy jelly beans croissant. Brownie halvah icing. Wafer chupa chups sweet marzipan croissant icing. Sugar plum chocolate cake jelly gingerbread sugar plum bear claw chocolate bar biscuit croissant. Macaroon muffin gummi bears topping chupa chups oat cake.</p>
+//                      </div>
 //                 </article>
 //             </div>
 //         </div>
 //     </div>
 // </section>
+
+.section-full {
+
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    .container {
+        backdrop-filter: blur(2px);
+    }
+
+    .module-article {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    @media screen and #{$screen-md-up} {
+
+        &.columnize-2 .text-content {
+            column-count: 2;
+            column-gap: $grid-gutter-lg*2;
+            text-align: left;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        &.columnize-3 .text-content {
+            column-count: 3;
+            column-gap: $grid-gutter-md;
+            text-align: left;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+    }
+
+}

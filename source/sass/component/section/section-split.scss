@@ -4,8 +4,16 @@
 //
 // @page Section/Split
 //
+// @state .section-sm/md/lg - Sets a minimum height on the section. Aproxmently 60px, 40% 100%.
+// @state .padding-sm/md/lg - Sets a padding on the area.
+// @state .image-left/right - Where to place the image in the split view
+// @state .image-focus-right-top - Sets focal point of the image. Supports standard placement. Refer to the css documentation.
+// @state .background-color-1 - A background color for the text.
+// @state .text-top/middle/bottom - Where to place the text vertically.
+//
+//
 // @markup
-// <section class="section section-split image-focus-right-top image-right text-middle background-color-1 section-lg padding-lg">
+// <section class="section section-split image-focus-right-top image-right text-middle background-color-1 section-md padding-md">
 //     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url(https:\/\/unsplash.it/800/450?image=1001);"></div>
 //     <div class="container">
 //     <div class="grid">
@@ -39,7 +47,7 @@
         }
     }
 
-    @media screen and #{$screen-below-md} {
+    @media screen and #{$screen-sm} {
         .section-image-mobile {
             background-size: cover;
         }
@@ -56,13 +64,12 @@
         z-index: 7;
     }
 
-    .module-article {
-        margin: 0;
-    }
+    /* Article paddings */
 
-    @media screen and #{$screen-md-up} {
+    @media screen and #{$screen-xs} {
         .module-article {
-            margin: 0 $grid-gutter-md;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
     }
 
@@ -72,9 +79,15 @@
         }
     }
 
-    @media screen and #{$screen-below-md} {
+    @media screen and #{$screen-md} {
         .module-article {
-            margin: $grid-gutter-md;
+            margin: 0;
+        }
+    }
+
+    @media screen and #{$screen-lg} {
+        .module-article {
+            margin: 0 $grid-gutter-sm 0 0;
         }
     }
 
@@ -82,28 +95,6 @@
         .module-article {
             margin-left: 0;
         }
-    }
-
-    /* Backgrounds */
-
-    &.background-color-1 {
-        @include btn-theme($palette-1);
-    }
-
-    &.background-color-2 {
-        @include btn-theme($palette-2);
-    }
-
-    &.background-color-3 {
-        @include btn-theme($palette-3);
-    }
-
-    &.background-color-4 {
-        @include btn-theme($palette-4);
-    }
-
-    &.background-color-5 {
-        @include btn-theme($palette-5);
     }
 
     /* Text alignment */
@@ -150,20 +141,6 @@
 
         .grid {
             justify-content: flex-start;
-        }
-    }
-
-    /* Image focusing */
-
-    $vertical-positions: top center bottom;
-    $horizontal-positions: left center right;
-
-    @each $vertical-position in $vertical-positions {
-        @each $horizontal-position in $horizontal-positions {
-            &.image-focus-#{$horizontal-position}-#{$vertical-position}:after,
-            &.image-focus-#{$horizontal-position}-#{$vertical-position} .section-image {
-                background-position: #{$horizontal-position} #{$vertical-position};
-            }
         }
     }
 
