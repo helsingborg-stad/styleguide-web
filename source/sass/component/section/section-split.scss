@@ -5,7 +5,7 @@
 // @page Section/Split
 //
 // @markup
-// <section class="section section-split image-focus-right-top image-right text-middle background-color-1 section-lg.padding-lg">
+// <section class="section section-split image-focus-right-top image-right text-middle background-color-1 section-lg padding-lg">
 //     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url(https:\/\/unsplash.it/800/450?image=1001);"></div>
 //     <div class="container">
 //     <div class="grid">
@@ -40,7 +40,6 @@
     }
 
     @media screen and #{$screen-below-md} {
-        padding: $grid-gutter-lg/2 0;
         .section-image-mobile {
             background-size: cover;
         }
@@ -63,7 +62,7 @@
 
     @media screen and #{$screen-md-up} {
         .module-article {
-            margin: $grid-gutter-md;
+            margin: 0 $grid-gutter-md;
         }
     }
 

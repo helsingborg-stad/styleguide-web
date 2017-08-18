@@ -3,19 +3,6 @@
 .section {
     margin: 0;
     min-height: $grid-gutter-md*2;
-
-    &.text-medium {
-        h1, h2, h3, h4, h5, h6 {
-            font-size: 1.2em;
-        }
-        p, ol, ul {
-            font-size: 1.2em;
-        }
-    }
-
-    &.text-large {
-        font-size: 1.5em;
-    }
 }
 
 @media screen and #{$screen-below-md} {
@@ -26,92 +13,62 @@
 
 /* Coverage & vertical padding */
 
-.section {
+@media screen and #{$screen-md-up} {
 
-    $padding-small: 5vh;
-    $padding-medium: 7vh;
-    $padding-large: 10vh;
+    .section {
 
-    $section-small: $grid-gutter-md*2;
-    $section-medium: 40vh;
-    $section-large: 100vh;
-
-    /* Small section */
-
-    &.section-sm.padding-sm {
-        min-height: $section-small;
-        .module-article {
-            padding-top: $padding-small;
-            padding-bottom: $padding-small;
+        /* Paddings */
+        &.padding-sm .module-article {
+            padding-top: 5vh;
+            padding-bottom: 5vh;
         }
+
+        &.padding-md .module-article {
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+        }
+
+        &.padding-lg .module-article {
+            padding-top: 20vh;
+            padding-bottom: 20vh;
+        }
+
+        /* Heights */
+        &.section-sm .module-article {
+            min-height: $grid-gutter-md*2;
+        }
+
+        &.section-md .module-article {
+            min-height: 40vh;
+        }
+
+        &.section-lg .module-article {
+            min-height: 100vh;
+        }
+
     }
 
-    &.section-sm.padding-md {
-        min-height: $section-small;
-        .module-article {
-            padding-top: $padding-medium;
-            padding-bottom: $padding-medium;
+}
+
+/* Font sizes */
+
+@media screen and #{$screen-md-up} {
+
+    .section {
+
+        &.text-md {
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1.2em;
+            }
+            p, ol, ul {
+                font-size: 1.2em;
+            }
         }
-    }
 
-    &.section-sm.padding-lg {
-        min-height: $section-small;
-        .module-article {
-            padding-top: $padding-large;
-            padding-bottom: $padding-large;
+        &.text-lg {
+            font-size: 1.5em;
         }
-    }
 
-    /* Medium section */
-
-    &.section-md.padding-sm {
-        min-height: $section-medium -($padding-small*2);
-        .module-article {
-            padding-top: $padding-small;
-            padding-bottom: $padding-small;
-        }
-    }
-
-    &.section-md.padding-md {
-        min-height: $section-medium -($padding-medium*2);
-        .module-article {
-            padding-top: $padding-medium;
-            padding-bottom: $padding-medium;
-        }
-    }
-
-    &.section-md.padding-lg {
-        min-height: $section-medium -($padding-large*2);
-        .module-article {
-            padding-top: $padding-large;
-            padding-bottom: $padding-large;
-        }
-    }
-
-    /* Large section */
-
-    &.section-lg.padding-sm {
-        min-height: $section-large -($padding-small*2);
-        .module-article {
-            padding-top: $padding-small;
-            padding-bottom: $padding-small;
-        }
-    }
-
-    &.section-lg.padding-md {
-        min-height: $section-large -($padding-medium*2);
-        .module-article {
-            padding-top: $padding-medium;
-            padding-bottom: $padding-medium;
-        }
-    }
-
-    &.section-lg.padding-lg {
-        min-height: $section-large -($padding-large*2);
-        .module-article {
-            padding-top: $padding-large;
-            padding-bottom: $padding-large;
-        }
     }
 
 }
