@@ -11,12 +11,12 @@
 // @state .columnize-2/3 - Makes columns from text.
 //
 // @markup
-// <section class="section section-full image-focus-right-top background-color-2 section-md padding-lg columnize-2" style="background-image: url(https:\/\/unsplash.it/1250/800?image=1001);">
+// <section class="section section-full image-focus-right-top background-color-2 section-md padding-lg columnize-2 text-lg" style="background-image: url(https:\/\/unsplash.it/1250/800?image=1001);">
 //     <div class="container">
 //         <div class="grid">
 //             <div class="grid-xs-12">
 //                 <article class="module-article">
-//                      <h2 class="gutter-bottom">This is flex.</h2>
+//                      <h2 class="section-title">Cheesecake chocolate cake</h2>
 //                      <div class="text-content">
 //                          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
 //                          <p>Croissant dragée powder tootsie roll cupcake macaroon icing gummi bears tiramisu. Topping donut sweet chupa chups lemon drops halvah biscuit macaroon apple pie. Tootsie roll bonbon cheesecake dragée candy jelly beans croissant. Brownie halvah icing. Wafer chupa chups sweet marzipan croissant icing. Sugar plum chocolate cake jelly gingerbread sugar plum bear claw chocolate bar biscuit croissant. Macaroon muffin gummi bears topping chupa chups oat cake.</p>
@@ -48,7 +48,6 @@
             column-gap: $grid-gutter-lg*2;
             text-align: left;
             text-align: justify;
-            text-justify: inter-word;
         }
 
         &.columnize-3 .text-content {
@@ -56,7 +55,6 @@
             column-gap: $grid-gutter-md;
             text-align: left;
             text-align: justify;
-            text-justify: inter-word;
         }
 
     }
