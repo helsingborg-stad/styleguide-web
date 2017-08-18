@@ -14533,7 +14533,7 @@ img[src$=".svg"].footer-signature {
   box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.07); }
   /* line 8, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
   .section .module-article {
-    max-width: 700px; }
+    max-width: none; }
     /* line 11, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
     .section .module-article .text-content {
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
@@ -14808,6 +14808,16 @@ img[src$=".svg"].footer-signature {
       column-gap: 30px;
       text-align: left;
       text-align: justify; } }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .module-article {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .module-article {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
 
 @font-face {
   font-family: system;

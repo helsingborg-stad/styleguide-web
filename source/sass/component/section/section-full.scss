@@ -59,4 +59,18 @@
 
     }
 
+    @media screen and #{$screen-xs} {
+        .module-article {
+            margin-top: $grid-gutter-sm;
+            margin-bottom: $grid-gutter-sm;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .module-article {
+            margin-top: $grid-gutter-sm;
+            margin-bottom: $grid-gutter-md;
+        }
+    }
+
 }

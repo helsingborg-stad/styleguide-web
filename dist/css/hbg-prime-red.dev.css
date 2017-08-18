@@ -14808,6 +14808,16 @@ img[src$=".svg"].footer-signature {
       column-gap: 30px;
       text-align: left;
       text-align: justify; } }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .module-article {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .module-article {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
 
 @font-face {
   font-family: system;
