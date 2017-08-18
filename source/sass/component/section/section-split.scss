@@ -5,20 +5,22 @@
 // @page Section/Split
 //
 // @markup
-// <section class="section section-split image-focus-right-top image-right text-bottom background-color-1">
+// <section class="section section-split image-focus-right-top image-right text-middle background-color-1 section-lg.padding-lg">
 //     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url(https:\/\/unsplash.it/800/450?image=1001);"></div>
 //     <div class="container">
-//         <div class="grid">
-//             <div class="grid-xs-12 grid-md-7 grid-lg-6">
-//                 <article class="module-article">
-//                  <h2>This is flex.</h2>
-//                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
-//                  <p><a class="btn btn-lg btn-btn" href="https:\/\/www.youtube.com/watch?v=ug4c2mqlE_0">Läs mer om det här. Awesome!</a></p>
-//                 </article>
-//             </div>
-//         </div>
+//     <div class="grid">
+//      <div class="grid-xs-12 grid-md-7 grid-lg-6">
+//          <div class="vertical-alignment-wrapper">
+//              <article class="module-article">
+//                  <h2>Cheesecake chocolate cake</h2>
+//                  <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>
+//                  <p><a class="btn btn-lg btn-btn" href="https:\/\/www.youtube.com/watch?v=ug4c2mqlE_0">Cotton candy donut</a></p>
+//              </article>
+//          </div>
+//      </div>
 //     </div>
-//     <div class="section-image hidden-xs hidden-sm" style="background-image: url(https:\/\/unsplash.it/500/600?image=1001);"></div>
+//     </div>
+//     <div class="section-image hidden-xs hidden-sm" style="background-image: url(https:\/\/unsplash.it/500/600?image=1001);" data-equal-item></div>
 // </section>
 
 .section-split {
@@ -41,7 +43,6 @@
         padding: $grid-gutter-lg/2 0;
         .section-image-mobile {
             background-size: cover;
-            margin-bottom: $grid-gutter-md;
         }
     }
 
@@ -56,10 +57,31 @@
         z-index: 7;
     }
 
+    .module-article {
+        margin: 0;
+    }
+
     @media screen and #{$screen-md-up} {
         .module-article {
-            padding-right: $grid-gutter-lg;
-            margin-bottom: $grid-gutter-md;
+            margin: $grid-gutter-md;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .module-article {
+            margin: $grid-gutter-md 0;
+        }
+    }
+
+    @media screen and #{$screen-below-md} {
+        .module-article {
+            margin: $grid-gutter-md;
+        }
+    }
+
+    @media screen and #{$screen-lg-up} {
+        .module-article {
+            margin-left: 0;
         }
     }
 
@@ -87,12 +109,19 @@
 
     /* Text alignment */
 
-    &.text-top .container {
-        align-self: flex-start;
+    .vertical-alignment-wrapper {
+        display: table-cell;
+        vertical-align: middle;
     }
 
-    &.text-bottom .container {
-        align-self: flex-end;
+    &.text-top .vertical-alignment-wrapper {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    &.text-bottom .vertical-alignment-wrapper {
+        display: table-cell;
+        vertical-align: bottom;
     }
 
     /* Image alignment */
@@ -135,6 +164,23 @@
             &.image-focus-#{$horizontal-position}-#{$vertical-position}:after,
             &.image-focus-#{$horizontal-position}-#{$vertical-position} .section-image {
                 background-position: #{$horizontal-position} #{$vertical-position};
+            }
+        }
+    }
+
+    /* Height inherit */
+
+    @media screen and #{$screen-md-up} {
+        > .container {
+            height: inherit;
+            > .grid {
+                height: inherit;
+                > div {
+                    height: inherit;
+                    > .vertical-alignment-wrapper {
+                        height: inherit;
+                    }
+                }
             }
         }
     }
