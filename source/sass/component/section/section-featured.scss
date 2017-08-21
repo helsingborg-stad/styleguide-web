@@ -12,7 +12,7 @@
 // @state .effect-parallax - Make background image stay put, creates an efficient parallax illusion. This function should not be used with images of illustrative importantness, as they can be cropped weird. Cannot be combined with image focusing.
 //
 // @markup
-// <section class="section section-featured background-color-4 section-md padding-md text-md image-right effect-multiply effect-parallax" style="background-image: url(https:\/\/unsplash.it/1250/1250?image=1005); ">
+// <section class="section section-featured background-4 section-md padding-md text-md image-right effect-multiply effect-parallax" style="background-image: url(https:\/\/unsplash.it/1250/1250?image=1005); ">
 //     <div class="container">
 //      <div class="grid">
 //          <div class="grid-xs-12">
@@ -24,8 +24,7 @@
 //                          <div class="section-text grid-xs-12 grid-lg-8">
 //                              <h2>Cheesecake chocolate cake</h2>
 //                              <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>
-//                              <p> Candy canes macaroon brownie gingerbread sweet croissant marshmallow. Soufflé halvah toffee. Cake marzipan wafer jelly beans. Marzipan jelly beans icing liquorice. Fruitcake jujubes tart sugar plum ice cream caramels cotton candy dragée. Powder fruitcake jelly beans danish jelly beans. Halvah marzipan cake muffin.</p>
-//                              <p>Cake pie biscuit caramels donut sweet gummi bears cupcake cookie. Sesame snaps dragée toffee. Jujubes powder marshmallow tootsie roll marzipan wafer cookie.</p>
+//                              <p> Candy canes macaroon brownie gingerbread sweet croissant marshmallow. Soufflé halvah toffee. Cake marzipan wafer jelly beans. Marzipan jelly beans icing liquorice.</p>
 //                          </div>
 //                      </div>
 //                  </article>
@@ -65,8 +64,13 @@
         flex-direction: column;
         font-size: calc(2em + 5vw);
 
-        img, svg {
+        img {
             width: 100%;
+            height: auto;
+        }
+
+        svg {
+            width: 60%;
             height: auto;
         }
 

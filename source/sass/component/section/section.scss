@@ -34,39 +34,35 @@
 
 /* Coverage & vertical padding */
 
-@media screen and #{$screen-md-up} {
+.section {
 
-    .section {
+    /* Paddings */
+    &.padding-sm .section-article {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
 
-        /* Paddings */
-        &.padding-sm .section-article {
-            padding-top: 5vh;
-            padding-bottom: 5vh;
-        }
+    &.padding-md .section-article {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
 
-        &.padding-md .section-article {
-            padding-top: 10vh;
-            padding-bottom: 10vh;
-        }
+    &.padding-lg .section-article {
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
 
-        &.padding-lg .section-article {
-            padding-top: 20vh;
-            padding-bottom: 20vh;
-        }
+    /* Heights */
+    &.section-sm .section-article {
+        min-height: $grid-gutter-md*2;
+    }
 
-        /* Heights */
-        &.section-sm .section-article {
-            min-height: $grid-gutter-md*2;
-        }
+    &.section-md .section-article {
+        min-height: 40vh;
+    }
 
-        &.section-md .section-article {
-            min-height: 40vh;
-        }
-
-        &.section-lg .section-article {
-            min-height: 100vh;
-        }
-
+    &.section-lg .section-article {
+        min-height: 100vh;
     }
 
 }
@@ -154,23 +150,23 @@
 
 .section {
 
-    &.background-color-1 {
+    &.background-1 {
         @include btn-theme($palette-1);
     }
 
-    &.background-color-2 {
+    &.background-2 {
         @include btn-theme($palette-2);
     }
 
-    &.background-color-3 {
+    &.background-3 {
         @include btn-theme($palette-3);
     }
 
-    &.background-color-4 {
+    &.background-4 {
         @include btn-theme($palette-4);
     }
 
-    &.background-color-5 {
+    &.background-5 {
         @include btn-theme($palette-5);
     }
 
@@ -213,11 +209,11 @@
 
     @each $vertical-position in $vertical-positions {
         @each $horizontal-position in $horizontal-positions {
+            &.image-focus-#{$horizontal-position}-#{$vertical-position},
             &.image-focus-#{$horizontal-position}-#{$vertical-position}:after,
             &.image-focus-#{$horizontal-position}-#{$vertical-position} .section-image {
                 background-position: #{$horizontal-position} #{$vertical-position};
             }
         }
     }
-
 }

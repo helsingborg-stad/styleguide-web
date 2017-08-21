@@ -13,7 +13,7 @@
 // @state .effect-parallax - Make background image stay put, creates an efficient parallax illusion. This function should not be used with images of illustrative importantness, as they can be cropped weird. Cannot be combined with image focusing.
 //
 // @markup
-// <section class="section section-full image-focus-right-top background-color-2 section-md padding-lg columnize-2 text-lg effect-multiply" style="background-image: url(https:\/\/unsplash.it/1250/800?image=1001);">
+// <section class="section section-full image-focus-right-top background-2 section-md padding-lg columnize-2 text-lg effect-multiply" style="background-image: url(https:\/\/unsplash.it/1250/800?image=1001);">
 //     <div class="container">
 //         <div class="grid">
 //             <div class="grid-xs-12">
@@ -48,6 +48,17 @@
 
     @media screen and #{$screen-md-up} {
 
+        &.columnize-2 .section-title,
+        &.columnize-3 .section-title {
+            text-align: left;
+        }
+
+        &.columnize-2 .section-title {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         &.columnize-2 .section-text {
             column-count: 2;
             column-gap: $grid-gutter-lg*2;
@@ -69,14 +80,12 @@
 
     @media screen and #{$screen-xs} {
         .section-article {
-            margin-top: $grid-gutter-sm;
             margin-bottom: $grid-gutter-sm;
         }
     }
 
     @media screen and #{$screen-sm} {
         .section-article {
-            margin-top: $grid-gutter-sm;
             margin-bottom: $grid-gutter-md;
         }
     }

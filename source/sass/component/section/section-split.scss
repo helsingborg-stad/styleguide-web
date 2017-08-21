@@ -13,7 +13,7 @@
 //
 //
 // @markup
-// <section class="section section-split image-focus-right-top image-left text-middle background-color-1 section-md padding-md text-md">
+// <section class="section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md">
 //     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url(https:\/\/unsplash.it/800/450?image=1001);"></div>
 //     <div class="container">
 //     <div class="grid">
@@ -36,6 +36,21 @@
 .section-split {
 
     position: relative;
+
+    @media screen and #{$screen-below-md} {
+        &.padding-sm .section-article,
+        &.padding-md .section-article,
+        &.padding-lg .section-article {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        &.section-sm .section-article,
+        &.section-md .section-article,
+        &.section-lg .section-article {
+            min-height: 0;
+        }
+    }
 
     @media screen and #{$screen-md-up} {
         &:after,

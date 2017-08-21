@@ -50,7 +50,7 @@
             margin-top: 5px;
         }
 
-        body.section > .container {
+        .page-section > .container {
             max-width: initial;
         }
 
@@ -67,7 +67,7 @@
     <?php $body_class = strtolower($section[0]->page[0]->nav); ?>
 @endforeach
 
-<body class="no-js {{ $body_class }}">
+<body class="no-js page-{{ $body_class }}">
 
     <nav class="navbar">
         <div class="container">
