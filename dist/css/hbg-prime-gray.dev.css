@@ -14824,18 +14824,21 @@ img[src$=".svg"].footer-signature {
     vertical-align: middle; }
   /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .content-grid {
-    justify-content: flex-end; }
+    flex-direction: row; }
     @media screen and (min-width: 961px) {
       /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured.image-left .content-grid {
         text-align: left; } }
   /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .content-grid {
-    justify-content: flex-start; }
+    flex-direction: row-reverse; }
     @media screen and (min-width: 961px) {
       /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured.image-right .content-grid {
         text-align: right; } }
+    /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    .section-featured.image-right .content-grid h1, .section-featured.image-right .content-grid .h1, .section-featured.image-right .content-grid h2, .section-featured.image-right .content-grid .h2, .section-featured.image-right .content-grid h3, .section-featured.image-right .content-grid .h3, .section-featured.image-right .content-grid h4, .section-featured.image-right .content-grid .widget_calendar caption, .widget_calendar .section-featured.image-right .content-grid caption, .section-featured.image-right .content-grid .h4, .section-featured.image-right .content-grid h5, .section-featured.image-right .content-grid .h5, .section-featured.image-right .content-grid h6, .section-featured.image-right .content-grid .h6, .section-featured.image-right .content-grid p, .section-featured.image-right .content-grid ol, .section-featured.image-right .content-grid ul {
+      margin-left: auto; }
 
 @font-face {
   font-family: system;

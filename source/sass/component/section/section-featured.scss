@@ -85,7 +85,7 @@
 
     &.image-left {
         .content-grid {
-            justify-content: flex-end;
+            flex-direction: row;
 
             @media screen and #{$screen-lg-up} {
                 text-align: left;
@@ -95,11 +95,16 @@
 
     &.image-right {
         .content-grid {
-            justify-content: flex-start;
+            flex-direction: row-reverse;
 
             @media screen and #{$screen-lg-up} {
                 text-align: right;
             }
+
+            h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, ol, ul {
+                margin-left: auto;
+            }
+
         }
     }
 
