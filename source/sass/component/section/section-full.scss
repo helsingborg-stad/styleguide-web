@@ -17,7 +17,7 @@
 //     <div class="container">
 //         <div class="grid">
 //             <div class="grid-xs-12">
-//                 <article class="module-article">
+//                 <article class="section-article">
 //                      <h2 class="section-title">Cheesecake chocolate cake</h2>
 //                      <div class="section-text">
 //                          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.</p>
@@ -37,9 +37,13 @@
         backdrop-filter: blur(2px);
     }
 
-    .module-article {
+    .section-article {
         text-align: center;
         margin: 0 auto;
+    }
+
+    .section-title {
+        margin-bottom: $grid-gutter-md;
     }
 
     @media screen and #{$screen-md-up} {
@@ -49,6 +53,9 @@
             column-gap: $grid-gutter-lg*2;
             text-align: left;
             text-align: justify;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         &.columnize-3 .section-text {
@@ -61,14 +68,14 @@
     }
 
     @media screen and #{$screen-xs} {
-        .module-article {
+        .section-article {
             margin-top: $grid-gutter-sm;
             margin-bottom: $grid-gutter-sm;
         }
     }
 
     @media screen and #{$screen-sm} {
-        .module-article {
+        .section-article {
             margin-top: $grid-gutter-sm;
             margin-bottom: $grid-gutter-md;
         }

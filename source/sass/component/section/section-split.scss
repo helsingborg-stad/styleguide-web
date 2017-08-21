@@ -19,7 +19,7 @@
 //     <div class="grid">
 //      <div class="grid-xs-12 grid-md-7 grid-lg-6">
 //          <div class="vertical-alignment-wrapper">
-//              <article class="module-article">
+//              <article class="section-article">
 //                  <h2 class="section-title">Cheesecake chocolate cake</h2>
 //                  <div class="section-text">
 //                      <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>
@@ -49,12 +49,6 @@
         }
     }
 
-    @media screen and #{$screen-sm} {
-        .section-image-mobile {
-            background-size: cover;
-        }
-    }
-
     @media screen and #{$screen-below-md} {
         .btn {
             display: block;
@@ -66,35 +60,43 @@
         z-index: 7;
     }
 
+    .section-image-mobile {
+        background-size: cover;
+    }
+
     /* Article paddings */
 
     @media screen and #{$screen-xs} {
-        .module-article {
+        .section-article {
             margin-top: 5px;
             margin-bottom: 10px;
         }
     }
 
     @media screen and #{$screen-sm} {
-        .module-article {
+        .section-article {
             margin: $grid-gutter-md 0;
         }
     }
 
     @media screen and #{$screen-md} {
-        .module-article {
+        .section-article {
             margin: 0;
         }
     }
 
     @media screen and #{$screen-lg} {
-        .module-article {
+        &.image-right .section-article {
             margin: 0 $grid-gutter-sm 0 0;
+        }
+
+        &.image-left .section-article {
+            margin: 0 0 0 $grid-gutter-sm;
         }
     }
 
     @media screen and #{$screen-lg-up} {
-        .module-article {
+        .section-article {
             margin-left: 0;
         }
     }

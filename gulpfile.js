@@ -85,7 +85,6 @@ gulp.task('sass-dist', function() {
 gulp.task('sass-dev', function() {
     return gulp.src('source/sass/themes/*.scss')
             .pipe(sass({ sourceComments: true }))
-            .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
             .pipe(gulp.dest('dist/css'))
             .pipe(browserSync.stream());
@@ -254,6 +253,12 @@ gulp.task('instructions', function() {
 // Default Task
 gulp.task('default', ['instructions','sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 
+// Only watch dev (faster)
+gulp.task('quick', function () {
+    console.log("NOTICE: Always run default 'gulp' command before pushing to production! This task will not autoprefix or recompile minified versions.");
+    gulp.watch('source/sass/**/*.scss', ['sass-dev']);
+});
+
 //BrowserSync
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -263,7 +268,6 @@ gulp.task('browser-sync', function() {
 
 //Watch with BrowserSync
 gulp.task('watch-bs', ['browser-sync'], function () {
-
     gulp.watch('source/js/**/*.js', ['scripts', browserSync.reload]);
     gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
 

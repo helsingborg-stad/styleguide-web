@@ -1,9 +1,3 @@
-/* Styleguide fix for optimal display */
-
-body.section > .container {
-    max-width: initial;
-}
-
 /* General */
 
 .section {
@@ -11,7 +5,7 @@ body.section > .container {
     min-height: $grid-gutter-md*2;
     box-shadow: inset 0 0 500px rgba(0,0,0,.07);
 
-    .module-article {
+    .section-article {
         max-width: none;
 
         .section-text {
@@ -43,34 +37,113 @@ body.section > .container {
     .section {
 
         /* Paddings */
-        &.padding-sm .module-article {
+        &.padding-sm .section-article {
             padding-top: 5vh;
             padding-bottom: 5vh;
         }
 
-        &.padding-md .module-article {
+        &.padding-md .section-article {
             padding-top: 10vh;
             padding-bottom: 10vh;
         }
 
-        &.padding-lg .module-article {
+        &.padding-lg .section-article {
             padding-top: 20vh;
             padding-bottom: 20vh;
         }
 
         /* Heights */
-        &.section-sm .module-article {
+        &.section-sm .section-article {
             min-height: $grid-gutter-md*2;
         }
 
-        &.section-md .module-article {
+        &.section-md .section-article {
             min-height: 40vh;
         }
 
-        &.section-lg .module-article {
+        &.section-lg .section-article {
             min-height: 100vh;
         }
 
+    }
+
+}
+
+/* Titles */
+
+.section .section-article {
+
+    h1, .h1 {
+        font-size: calc(2.2rem + 1vw);
+        color: $palette-4;
+
+        @media screen and #{$screen-xs} {
+            font-size: 1.8rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 2rem;
+        }
+    }
+
+    h2, .h2 {
+        font-size: calc(1.5rem + 1vw);
+
+        @media screen and #{$screen-xs} {
+            font-size: 1.6rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 1.5rem;
+        }
+    }
+
+    h3, .h3 {
+        font-size: calc(1.3rem + 1vw);
+
+        @media screen and #{$screen-xs} {
+            font-size: 1.3rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 1.2rem;
+        }
+    }
+
+    h4, .h4 {
+        font-size: calc(1.15rem + 1vw);;
+
+        @media screen and #{$screen-xs} {
+            font-size: 1.15rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 1.15rem;
+        }
+    }
+
+    h5, .h5 {
+        font-size: calc(1.1rem + 1vw);;
+
+        @media screen and #{$screen-xs} {
+            font-size: 1.1rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 1.1rem;
+        }
+    }
+
+    h6, .h6 {
+        font-size: calc(1.1rem + 1vw);
+
+        @media screen and #{$screen-xs} {
+            font-size: 1rem;
+        }
+
+        @media screen and #{$screen-sm} {
+            font-size: 1rem;
+        }
     }
 
 }
@@ -109,6 +182,7 @@ body.section > .container {
 
         .section-title {
             font-size: calc(1.5em + 1vw);
+            line-height: 1.1em;
             max-width: none;
         }
 

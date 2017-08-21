@@ -56,6 +56,7 @@ http://flickity.metafizzy.co
   background: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   /* vertically center */
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/node_modules/flickity/dist/flickity.css */
@@ -998,41 +999,63 @@ http://flickity.metafizzy.co
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear; }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8); }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
 
 @keyframes fa-spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
+    -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/font-awesome.min.css */
@@ -4443,19 +4466,14 @@ b {
   padding-right: 0; }
   /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table {
-    display: -ms-flexbox !important;
     display: flex !important;
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap; }
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap; }
     /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table [class*="grid-"] {
       display: block;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+      flex: 1 1 auto; }
   /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   .grid-table [class*="grid-"] {
     display: table-cell;
@@ -4466,16 +4484,13 @@ b {
     white-space: nowrap; }
   /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-auto {
-    -ms-flex: 1 1 0%;
-        flex: 1 1 0%; }
+    flex: 1 1 0%; }
   /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-defined-width {
-    -ms-flex: 0 0 auto;
-        flex: 0 0 auto; }
+    flex: 0 0 auto; }
   /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   html:not(.no-flexbox) .grid-table .grid-fit-content {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
     white-space: normal;
     width: auto; }
   /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
@@ -4493,8 +4508,7 @@ b {
     /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table .grid-col-icon {
       display: block;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+      flex: 0 0 auto;
       min-width: 40px; }
   /* line 216, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
   .grid-table.grid-table-autofit [class*="grid-"] {
@@ -4511,19 +4525,14 @@ b {
     padding-right: 0; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs {
-      display: -ms-flexbox !important;
       display: flex !important;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+      flex: 0 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap; }
       /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs [class*="grid-"] {
         display: block;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
+        flex: 1 1 auto; }
     /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     .grid-table-xs [class*="grid-"] {
       display: table-cell;
@@ -4534,16 +4543,13 @@ b {
       white-space: nowrap; }
     /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-auto {
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+      flex: 1 1 0%; }
     /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-defined-width {
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+      flex: 0 0 auto; }
     /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-xs .grid-fit-content {
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      flex: 0 1 auto;
       white-space: normal;
       width: auto; }
     /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
@@ -4561,8 +4567,7 @@ b {
       /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-xs .grid-col-icon {
         display: block;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        flex: 0 0 auto;
         min-width: 40px; } }
 
 @media (min-width: 469px) {
@@ -4576,19 +4581,14 @@ b {
     padding-right: 0; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm {
-      display: -ms-flexbox !important;
       display: flex !important;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+      flex: 0 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap; }
       /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm [class*="grid-"] {
         display: block;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
+        flex: 1 1 auto; }
     /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     .grid-table-sm [class*="grid-"] {
       display: table-cell;
@@ -4599,16 +4599,13 @@ b {
       white-space: nowrap; }
     /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-auto {
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+      flex: 1 1 0%; }
     /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-defined-width {
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+      flex: 0 0 auto; }
     /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-sm .grid-fit-content {
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      flex: 0 1 auto;
       white-space: normal;
       width: auto; }
     /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
@@ -4626,8 +4623,7 @@ b {
       /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-sm .grid-col-icon {
         display: block;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        flex: 0 0 auto;
         min-width: 40px; } }
 
 @media (min-width: 769px) {
@@ -4641,19 +4637,14 @@ b {
     padding-right: 0; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md {
-      display: -ms-flexbox !important;
       display: flex !important;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+      flex: 0 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap; }
       /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md [class*="grid-"] {
         display: block;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
+        flex: 1 1 auto; }
     /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     .grid-table-md [class*="grid-"] {
       display: table-cell;
@@ -4664,16 +4655,13 @@ b {
       white-space: nowrap; }
     /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-auto {
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+      flex: 1 1 0%; }
     /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-defined-width {
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+      flex: 0 0 auto; }
     /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-md .grid-fit-content {
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      flex: 0 1 auto;
       white-space: normal;
       width: auto; }
     /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
@@ -4691,8 +4679,7 @@ b {
       /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-md .grid-col-icon {
         display: block;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        flex: 0 0 auto;
         min-width: 40px; } }
 
 @media (min-width: 961px) {
@@ -4706,19 +4693,14 @@ b {
     padding-right: 0; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg {
-      display: -ms-flexbox !important;
       display: flex !important;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+      flex: 0 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap; }
       /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg [class*="grid-"] {
         display: block;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
+        flex: 1 1 auto; }
     /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     .grid-table-lg [class*="grid-"] {
       display: table-cell;
@@ -4729,16 +4711,13 @@ b {
       white-space: nowrap; }
     /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-auto {
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+      flex: 1 1 0%; }
     /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-defined-width {
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+      flex: 0 0 auto; }
     /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
     html:not(.no-flexbox) .grid-table-lg .grid-fit-content {
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      flex: 0 1 auto;
       white-space: normal;
       width: auto; }
     /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
@@ -4756,8 +4735,7 @@ b {
       /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
       html:not(.no-flexbox) .grid-table-lg .grid-col-icon {
         display: block;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        flex: 0 0 auto;
         min-width: 40px; } }
 
 /* line 248, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
@@ -4773,440 +4751,356 @@ b {
 
 /* line 259, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
 .grid-va-middle {
-  -ms-flex-align: center;
-      align-items: center; }
+  align-items: center; }
   /* line 262, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
   .grid-va-middle [class*="grid-"] {
     vertical-align: middle; }
 
 /* line 267, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
 .grid-va-bottom {
-  -ms-flex-align: end;
-      align-items: flex-end; }
+  align-items: flex-end; }
   /* line 270, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
   .grid-va-bottom [class*="grid-"] {
     vertical-align: bottom; }
 
 /* line 275, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
 .grid-va-top {
-  -ms-flex-align: top;
-      align-items: top; }
+  align-items: top; }
   /* line 278, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
   .grid-va-top [class*="grid-"] {
     vertical-align: top; }
 
 /* line 283, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
 .grid-va-bottom {
-  -ms-flex-align: bottom;
-      align-items: bottom; }
+  align-items: bottom; }
   /* line 286, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
   .grid-va-bottom [class*="grid-"] {
     vertical-align: bottom; }
 
 /* line 3, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) .grid {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap; }
   /* line 9, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid > div:not([class*="grid-"]) {
-    -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
+    flex: 1 0 auto;
+    flex-basis: 100%; }
 
 /* line 15, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) [class*="grid-"] {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex: 1 0 auto;
+  flex-basis: 100%;
   max-width: 100%;
   float: none; }
 
 /* line 22, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) .grid-auto {
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0; }
+  flex: 1 1 auto;
+  flex-basis: 0; }
 
 /* line 27, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) .grid-defined-width {
-  -ms-flex: 0 0 auto !important;
-      flex: 0 0 auto !important; }
+  flex: 0 0 auto !important; }
 
 /* line 31, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) .grid-fit-content {
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+  flex: 0 1 auto;
   width: auto; }
 
 @media (min-width: 0) {
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
     max-width: 8.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
     max-width: 16.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
     max-width: 25%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
     max-width: 33.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
+    flex-basis: 41.66667%;
     max-width: 41.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
     max-width: 50%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
     max-width: 58.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
+    flex-basis: 66.66667%;
     max-width: 66.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
+    flex-basis: 75%;
     max-width: 75%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
+    flex-basis: 83.33333%;
     max-width: 83.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
+    flex-basis: 91.66667%;
     max-width: 91.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     max-width: 100%; }
   /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-auto {
-    -ms-flex: 1 1 0%;
-        flex: 1 1 0%;
+    flex: 1 1 0%;
     max-width: none; }
   /* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-xs-fit-content {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 469px) {
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
     max-width: 8.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
     max-width: 16.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
     max-width: 25%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
     max-width: 33.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
+    flex-basis: 41.66667%;
     max-width: 41.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
     max-width: 50%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
     max-width: 58.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
+    flex-basis: 66.66667%;
     max-width: 66.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
+    flex-basis: 75%;
     max-width: 75%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
+    flex-basis: 83.33333%;
     max-width: 83.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
+    flex-basis: 91.66667%;
     max-width: 91.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     max-width: 100%; }
   /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-auto {
-    -ms-flex: 1 1 0%;
-        flex: 1 1 0%;
+    flex: 1 1 0%;
     max-width: none; }
   /* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-sm-fit-content {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 769px) {
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
     max-width: 8.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
     max-width: 16.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
     max-width: 25%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
     max-width: 33.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
+    flex-basis: 41.66667%;
     max-width: 41.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
     max-width: 50%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
     max-width: 58.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
+    flex-basis: 66.66667%;
     max-width: 66.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
+    flex-basis: 75%;
     max-width: 75%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
+    flex-basis: 83.33333%;
     max-width: 83.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
+    flex-basis: 91.66667%;
     max-width: 91.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     max-width: 100%; }
   /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-auto {
-    -ms-flex: 1 1 0%;
-        flex: 1 1 0%;
+    flex: 1 1 0%;
     max-width: none; }
   /* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-md-fit-content {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
     width: auto; } }
 
 @media (min-width: 961px) {
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
     max-width: 8.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
     max-width: 16.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
     max-width: 25%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
     max-width: 33.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
+    flex-basis: 41.66667%;
     max-width: 41.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
     max-width: 50%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
     max-width: 58.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
+    flex-basis: 66.66667%;
     max-width: 66.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
+    flex-basis: 75%;
     max-width: 75%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
+    flex-basis: 83.33333%;
     max-width: 83.33333%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
+    flex-basis: 91.66667%;
     max-width: 91.66667%; }
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     max-width: 100%; }
   /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-auto {
-    -ms-flex: 1 1 0%;
-        flex: 1 1 0%;
+    flex: 1 1 0%;
     max-width: none; }
   /* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_grid.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-lg-fit-content {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
     width: auto; } }
 
 @media print {
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-1.grid-print-1 {
     width: auto;
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
     max-width: 8.33333%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-2.grid-print-2 {
     width: auto;
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
     max-width: 16.66667%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-3.grid-print-3 {
     width: auto;
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
     max-width: 25%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-4.grid-print-4 {
     width: auto;
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
     max-width: 33.33333%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-5.grid-print-5 {
     width: auto;
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
+    flex-basis: 41.66667%;
     max-width: 41.66667%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-6.grid-print-6 {
     width: auto;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
     max-width: 50%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-7.grid-print-7 {
     width: auto;
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
     max-width: 58.33333%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-8.grid-print-8 {
     width: auto;
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
+    flex-basis: 66.66667%;
     max-width: 66.66667%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-9.grid-print-9 {
     width: auto;
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
+    flex-basis: 75%;
     max-width: 75%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-10.grid-print-10 {
     width: auto;
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
+    flex-basis: 83.33333%;
     max-width: 83.33333%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-11.grid-print-11 {
     width: auto;
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
+    flex-basis: 91.66667%;
     max-width: 91.66667%; }
   /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-print-12.grid-print-12 {
     width: auto;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     max-width: 100%; }
   /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
   :not(.no-flexbox):not(.is-draggable) .grid-tester::after {
@@ -5215,7 +5109,6 @@ b {
 /* line 67, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) [data-equal-container] > [class*="grid-"],
 :not(.no-flexbox):not(.is-draggable) [data-equal-container] > [data-equal-item] {
-  display: -ms-flexbox;
   display: flex;
   min-height: .5px;
   -ms-flex-preferred-size: auto; }
@@ -5251,12 +5144,10 @@ section + section {
 @media (max-width: 769px) {
   /* line 8, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_sidebars.scss */
   .sidebar-left-sidebar {
-    -ms-flex-order: 3;
-        order: 3; }
+    order: 3; }
   /* line 12, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_sidebars.scss */
   .sidebar-right-sidebar {
-    -ms-flex-order: 2;
-        order: 2; } }
+    order: 2; } }
 
 /* line 18, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_sidebars.scss */
 .sidebar-content-area-bottom {
@@ -7566,9 +7457,7 @@ input[type="button"].btn::-moz-focus-inner {
 /* line 24, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn,
 .read-more {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: inline-block;
   vertical-align: middle;
   padding: 7.5px 15px;
@@ -8435,10 +8324,7 @@ button.btn-icon {
   display: block;
   position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: .99;
   transition: 100ms;
   display: inline-block; }
@@ -9470,9 +9356,7 @@ body:not(.material-no-shadow) .accordion {
 /* line 100, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/accordion/_accordion.scss */
 .column-header {
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  hyphens: auto; }
 
 /* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/accordion/_accordion.scss */
 .accordion-boxes .accordion-toggle,
@@ -10445,10 +10329,8 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
 @media (max-width: 769px) {
   /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/notice/_notice.scss */
   html:not(.no-flexbox) .notice .grid-auto {
-    -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex: 1 1 auto;
+    flex-basis: 100%;
     padding: 5px 0; } }
 
 /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/notice/_notice.scss */
@@ -10748,14 +10630,11 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
   margin-bottom: 10px; }
   /* line 7, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box[data-equal-item] {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
+    flex-direction: column; }
     /* line 11, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .box[data-equal-item] .box-content {
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+      flex: 1 1 auto; }
   @media (min-width: 469px) and (max-width: 768px) {
     /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
     .box {
@@ -10839,8 +10718,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
 .box-content {
   padding: 10px;
   font-size: .9em;
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto; }
+  flex: 1 1 auto; }
 
 /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-content img {
@@ -10854,13 +10732,15 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
 /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-image {
   width: 100%;
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto; }
+  flex: 0 0 auto; }
 
 /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-card-post .box-image {
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover; }
 
 /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
@@ -10869,8 +10749,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
 
 /* line 67, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 [data-equal-item] .box-image-container {
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto; }
+  flex: 0 0 auto; }
 
 /* line 21, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
 .box-index {
@@ -12528,7 +12407,6 @@ article .slider {
 @supports (display: flex) {
   /* line 12, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/slider/_animate.scss */
   .slider-next .slider-out.type-featured {
-    display: -ms-flexbox !important;
     display: flex !important; } }
 
 /* line 18, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/slider/_animate.scss */
@@ -12545,7 +12423,6 @@ article .slider {
 @supports (display: flex) {
   /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/slider/_animate.scss */
   .slider-previous .slider-out.type-featured {
-    display: -ms-flexbox !important;
     display: flex !important; } }
 
 @keyframes slider-next-in {
@@ -13058,9 +12935,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
 textarea,
 select,
 button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border-radius: 0; }
 
 /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_forms.scss */
@@ -13931,9 +13806,7 @@ option {
   /* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_gravity-forms.scss */
   .gform_drop_area .button {
     line-height: 1.6;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
     display: inline-block;
     vertical-align: middle;
     padding: 5px 10px;
@@ -14525,66 +14398,135 @@ img[src$=".svg"].footer-signature {
   font-size: 1.5em;
   color: #ae0b05; }
 
-/* Styleguide fix for optimal display */
-/* line 3, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-body.section > .container {
-  max-width: initial; }
-
 /* General */
-/* line 9, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 3, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section {
   margin: 0;
   min-height: 60px;
   box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.07); }
-  /* line 14, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-  .section .module-article {
+  /* line 8, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+  .section .section-article {
     max-width: none; }
-    /* line 18, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section .module-article .section-text p, .section .module-article .section-text ul, .section .module-article .section-text ol, .section .module-article .section-text h1, .section .module-article .section-text h2, .section .module-article .section-text h3, .section .module-article .section-text h4, .section .module-article .section-text .widget_calendar caption, .widget_calendar .section .module-article .section-text caption, .section .module-article .section-text h5, .section .module-article .section-text h6 {
+    /* line 12, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article .section-text p, .section .section-article .section-text ul, .section .section-article .section-text ol, .section .section-article .section-text h1, .section .section-article .section-text h2, .section .section-article .section-text h3, .section .section-article .section-text h4, .section .section-article .section-text .widget_calendar caption, .widget_calendar .section .section-article .section-text caption, .section .section-article .section-text h5, .section .section-article .section-text h6 {
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
 
 /* Paralax effect */
-/* line 27, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 21, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.effect-parallax {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; }
 
 /* Multiply effect */
-/* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.effect-multiply {
   background-blend-mode: multiply; }
 
 /* Coverage & vertical padding */
 @media screen and (min-width: 769px) {
-  /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+  /* line 37, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
   .section {
     /* Paddings */
     /* Heights */ }
-    /* line 46, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.padding-sm .module-article {
+    /* line 40, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.padding-sm .section-article {
       padding-top: 5vh;
       padding-bottom: 5vh; }
-    /* line 51, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.padding-md .module-article {
+    /* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.padding-md .section-article {
       padding-top: 10vh;
       padding-bottom: 10vh; }
-    /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.padding-lg .module-article {
+    /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.padding-lg .section-article {
       padding-top: 20vh;
       padding-bottom: 20vh; }
-    /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.section-sm .module-article {
+    /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.section-sm .section-article {
       min-height: 60px; }
-    /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.section-md .module-article {
+    /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.section-md .section-article {
       min-height: 40vh; }
-    /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-    .section.section-lg .module-article {
+    /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section.section-lg .section-article {
       min-height: 100vh; } }
 
+/* Titles */
+/* line 76, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h1, .section .section-article .h1 {
+  font-size: calc(2.2rem + 1vw);
+  color: #ae0b05; }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 76, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h1, .section .section-article .h1 {
+      font-size: 1.8rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 76, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h1, .section .section-article .h1 {
+      font-size: 2rem; } }
+
+/* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h2, .section .section-article .h2 {
+  font-size: calc(1.5rem + 1vw); }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h2, .section .section-article .h2 {
+      font-size: 1.6rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h2, .section .section-article .h2 {
+      font-size: 1.5rem; } }
+
+/* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h3, .section .section-article .h3 {
+  font-size: calc(1.3rem + 1vw); }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h3, .section .section-article .h3 {
+      font-size: 1.3rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h3, .section .section-article .h3 {
+      font-size: 1.2rem; } }
+
+/* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
+  font-size: calc(1.15rem + 1vw); }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
+      font-size: 1.15rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
+      font-size: 1.15rem; } }
+
+/* line 125, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h5, .section .section-article .h5 {
+  font-size: calc(1.1rem + 1vw); }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 125, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h5, .section .section-article .h5 {
+      font-size: 1.1rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 125, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h5, .section .section-article .h5 {
+      font-size: 1.1rem; } }
+
+/* line 137, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+.section .section-article h6, .section .section-article .h6 {
+  font-size: calc(1.1rem + 1vw); }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    /* line 137, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h6, .section .section-article .h6 {
+      font-size: 1rem; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    /* line 137, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+    .section .section-article h6, .section .section-article .h6 {
+      font-size: 1rem; } }
+
 /* Backgrounds */
-/* line 82, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.background-color-1 {
   background-color: #f7a600;
   border-color: #f7a600;
@@ -14594,7 +14536,7 @@ body.section > .container {
     background-color: #e89c00;
     border-color: #e89c00; }
 
-/* line 86, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 159, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.background-color-2 {
   background-color: #cb0050;
   border-color: #cb0050;
@@ -14604,7 +14546,7 @@ body.section > .container {
     background-color: #bc004a;
     border-color: #bc004a; }
 
-/* line 90, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 163, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.background-color-3 {
   background-color: #ec6701;
   border-color: #ec6701;
@@ -14614,7 +14556,7 @@ body.section > .container {
     background-color: #dd6001;
     border-color: #dd6001; }
 
-/* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 167, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.background-color-4 {
   background-color: #ae0b05;
   border-color: #ae0b05;
@@ -14624,7 +14566,7 @@ body.section > .container {
     background-color: #9f0a05;
     border-color: #9f0a05; }
 
-/* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 171, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.background-color-5 {
   background-color: #e3000f;
   border-color: #e3000f;
@@ -14636,59 +14578,60 @@ body.section > .container {
 
 /* Font sizes */
 @media screen and (min-width: 469px) {
-  /* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+  /* line 183, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
   .section .section-title {
     font-size: calc(1.5em + 1vw);
+    line-height: 1.1em;
     max-width: none; }
-  /* line 116, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+  /* line 190, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
   .section.text-md .section-title {
     font-size: calc(2em + 1vw); }
-  /* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+  /* line 196, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
   .section.text-lg .section-title {
     font-size: calc(2.3em + 1vw); } }
 
 /* Image focusing */
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-left-top:after,
 .section.image-focus-left-top .section-image {
   background-position: left top; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-center-top:after,
 .section.image-focus-center-top .section-image {
   background-position: center top; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-right-top:after,
 .section.image-focus-right-top .section-image {
   background-position: right top; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-left-center:after,
 .section.image-focus-left-center .section-image {
   background-position: left center; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-center-center:after,
 .section.image-focus-center-center .section-image {
   background-position: center center; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-right-center:after,
 .section.image-focus-right-center .section-image {
   background-position: right center; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-left-bottom:after,
 .section.image-focus-left-bottom .section-image {
   background-position: left bottom; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-center-bottom:after,
 .section.image-focus-center-bottom .section-image {
   background-position: center bottom; }
 
-/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
+/* line 214, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .section.image-focus-right-bottom:after,
 .section.image-focus-right-bottom .section-image {
   background-position: right bottom; }
@@ -14714,88 +14657,88 @@ body.section > .container {
       background-color: #f4f4f4;
       background-size: cover;
       background-position: center; } }
-  @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .section-image-mobile {
-      background-size: cover; } }
   @media screen and (max-width: 769px) {
-    /* line 59, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split .btn {
       display: block;
       text-align: center; } }
-  /* line 65, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 59, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split .section-image {
     z-index: 7; }
+  /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  .section-split .section-image-mobile {
+    background-size: cover; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 72, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .module-article {
+    /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split .section-article {
       margin-top: 5px;
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .module-article {
+    /* line 77, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split .section-article {
       margin: 30px 0; } }
   @media screen and (min-width: 769px) and (max-width: 960px) {
-    /* line 85, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .module-article {
+    /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split .section-article {
       margin: 0; } }
   @media screen and (min-width: 961px) {
-    /* line 91, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .module-article {
-      margin: 0 10px 0 0; } }
+    /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split.image-right .section-article {
+      margin: 0 10px 0 0; }
+    /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split.image-left .section-article {
+      margin: 0 0 0 10px; } }
   @media screen and (min-width: 961px) {
-    /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
-    .section-split .module-article {
+    /* line 99, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    .section-split .section-article {
       margin-left: 0; } }
-  /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 106, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: middle; }
-  /* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.text-top .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: top; }
-  /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 116, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.text-bottom .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: bottom; }
-  /* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-left:after,
   .section-split.image-left .section-image {
     right: 50%; }
     @media screen and (max-width: 961px) {
-      /* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split.image-left:after,
       .section-split.image-left .section-image {
         right: 61%; } }
-  /* line 129, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 131, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-left .grid {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
-  /* line 136, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    justify-content: flex-end; }
+  /* line 138, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-right:after,
   .section-split.image-right .section-image {
     left: 50%; }
     @media screen and (max-width: 961px) {
-      /* line 136, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 138, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split.image-right:after,
       .section-split.image-right .section-image {
         left: 61%; } }
-  /* line 144, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 146, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-right .grid {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    justify-content: flex-start; }
   @media screen and (min-width: 769px) {
-    /* line 152, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split > .container {
       height: inherit; }
-      /* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 156, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split > .container > .grid {
         height: inherit; }
-        /* line 156, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+        /* line 158, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
         .section-split > .container > .grid > div {
           height: inherit; }
-          /* line 158, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+          /* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
           .section-split > .container > .grid > div > .vertical-alignment-wrapper {
             height: inherit; } }
 
@@ -14804,33 +14747,38 @@ body.section > .container {
   background-size: cover; }
   /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
   .section-full .container {
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px); }
+    backdrop-filter: blur(2px); }
   /* line 40, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-  .section-full .module-article {
+  .section-full .section-article {
     text-align: center;
     margin: 0 auto; }
+  /* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  .section-full .section-title {
+    margin-bottom: 30px; }
   @media screen and (min-width: 769px) {
-    /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 51, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full.columnize-2 .section-text {
       column-count: 2;
       column-gap: 60px;
       text-align: left;
-      text-align: justify; }
-    /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+      text-align: justify;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto; }
+    /* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full.columnize-3 .section-text {
       column-count: 3;
       column-gap: 30px;
       text-align: left;
       text-align: justify; } }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-    .section-full .module-article {
+    /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .section-article {
       margin-top: 10px;
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-    .section-full .module-article {
+    /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .section-article {
       margin-top: 10px;
       margin-bottom: 30px; } }
 
@@ -14841,8 +14789,7 @@ body.section > .container {
   /* Image alignment */ }
   /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured .container {
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px); }
+    backdrop-filter: blur(2px); }
   @media screen and (max-width: 769px) {
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .btn {
@@ -14858,12 +14805,9 @@ body.section > .container {
     text-align: center; }
   /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured .section-image {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     font-size: calc(2em + 5vw); }
     /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img, .section-featured .section-image svg {
@@ -14880,16 +14824,14 @@ body.section > .container {
     vertical-align: middle; }
   /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .content-grid {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    justify-content: flex-end; }
     @media screen and (min-width: 961px) {
       /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured.image-left .content-grid {
         text-align: left; } }
   /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .content-grid {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    justify-content: flex-start; }
     @media screen and (min-width: 961px) {
       /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured.image-right .content-grid {
@@ -15073,6 +15015,8 @@ body.section > .container {
 
 /* line 173, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_text.scss */
 .avoid-break-inside {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
   break-inside: avoid; }
 
 /* line 188, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_text.scss */
@@ -15842,10 +15786,7 @@ input[type="datetime-local"]:not(input):not(select):not(.checkbox):not(.radio):d
 input[type="color"]:not(input):not(select):not(.checkbox):not(.radio):disabled,
 textarea:not(input):not(select):not(.checkbox):not(.radio):disabled, input[type="checkbox"]:not(input):not(select):not(.checkbox):not(.radio):disabled,
 input[type="radio"]:not(input):not(select):not(.checkbox):not(.radio):disabled, select:not(input):not(select):not(.checkbox):not(.radio):disabled {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 /* line 20, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_interaction.scss */
 .disabled, input[type="text"]:disabled,
@@ -16158,8 +16099,7 @@ input[type="radio"]:disabled, select:disabled {
     display: block !important; }
   /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_visibility.scss */
   .print-grow {
-    -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
+    flex: 1 1 auto;
     max-width: 100%; } }
 
 /* line 12, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_accessibility.scss */
@@ -17207,14 +17147,11 @@ div.spinner {
   margin-bottom: 10px; }
   /* line 7, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   [class^="widget_"]:not(.widget_calendar)[data-equal-item] {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
+    flex-direction: column; }
     /* line 11, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     [class^="widget_"]:not(.widget_calendar)[data-equal-item] .box-content {
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+      flex: 1 1 auto; }
   @media (min-width: 469px) and (max-width: 768px) {
     /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget.scss */
     [class^="widget_"]:not(.widget_calendar) {
@@ -17382,10 +17319,7 @@ body:not(.material-no-shadow) .widget_calendar {
 /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget-calendar.scss */
 .widget_calendar table {
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   border: 1px solid #e5e5e5; }
 
 /* line 84, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget-calendar.scss */

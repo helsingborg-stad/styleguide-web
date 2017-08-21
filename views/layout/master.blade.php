@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" type="text/css" href="https://highlightjs.org/static/demo/styles/github-gist.css">
-    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime-{{ isset($theme) ? $theme : 'red' }}.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/hbg-prime-{{ isset($theme) ? $theme : 'red' }}.dev.css">
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
@@ -48,6 +48,10 @@
 
         .states ul li + li {
             margin-top: 5px;
+        }
+
+        body.section > .container {
+            max-width: initial;
         }
 
     </style>
