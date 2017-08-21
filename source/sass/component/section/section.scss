@@ -19,9 +19,11 @@
 /* Paralax effect */
 
 .section.effect-parallax {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    @media screen and #{$screen-md-up} {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
 }
 
 /* Multiply effect */
