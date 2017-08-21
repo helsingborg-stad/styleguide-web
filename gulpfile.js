@@ -20,6 +20,7 @@ var bump = require('gulp-bump');
 var filter = require('gulp-filter');
 var tag_version = require('gulp-tag-version');
 var sassJson = require('gulp-sass-json');
+var browserSync = require('browser-sync').create();
 
 // Icon plugins
 var svgscaler = require('svg-scaler');
@@ -77,7 +78,8 @@ gulp.task('sass-dist', function() {
                 uniqueSelectors: true
             }))
             .pipe(gulp.dest('dist/css'))
-            .pipe(copy('dist/' + package.version + '/css/', {prefix: 2}));
+            .pipe(copy('dist/' + package.version + '/css/', {prefix: 2}))
+            .pipe(browserSync.stream());
 });
 
 gulp.task('sass-dev', function() {
@@ -85,7 +87,8 @@ gulp.task('sass-dev', function() {
             .pipe(sass({ sourceComments: true }))
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
-            .pipe(gulp.dest('dist/css'));
+            .pipe(gulp.dest('dist/css'))
+            .pipe(browserSync.stream());
 });
 
 gulp.task('sass-json', function () {
@@ -251,3 +254,17 @@ gulp.task('instructions', function() {
 // Default Task
 gulp.task('default', ['instructions','sass-font-awesome', 'sass-dev', 'sass-dist', 'scripts', 'dss-sass', 'dss-js', 'watch']);
 
+//BrowserSync
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "hbgprime.dev"
+    });
+});
+
+//Watch with BrowserSync
+gulp.task('watch-bs', ['browser-sync'], function () {
+
+    gulp.watch('source/js/**/*.js', ['scripts', browserSync.reload]);
+    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+
+});
