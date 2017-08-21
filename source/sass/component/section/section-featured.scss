@@ -1,0 +1,106 @@
+//
+// @name Featured section
+// @description A text featuring a specific item. With a simple image or icon (all content is padded). All "boxes" is compatible to embed inside .grid class.
+//
+// @page Section/Featured
+//
+// @state .section-sm/md/lg - Sets a minimum height on the section. Aproxmently 60px, 40% 100%.
+// @state .padding-sm/md/lg - Sets a padding on the area.
+// @state .image-left/right - Where to place the image in the split view
+// @state .background-color-1 - A background color for the text.
+// @state .effect-multiply - Make color shite trough image
+// @state .effect-parallax - Make background image stay put, creates an efficient parallax illusion. This function should not be used with images of illustrative importantness, as they can be cropped weird. Cannot be combined with image focusing.
+//
+// @markup
+// <section class="section section-featured background-color-4 section-md padding-md text-md image-right effect-multiply effect-parallax" style="background-image: url(https:\/\/unsplash.it/1250/1250?image=1005); ">
+//     <div class="container">
+//      <div class="grid">
+//          <div class="grid-xs-12">
+//                  <article class="module-article">
+//                      <div class="grid content-grid">
+//                          <div class="section-image grid-xs-12 grid-lg-4 text-center">
+//                              <i class="pricon pricon-construction"></i>
+//                          </div>
+//                          <div class="section-text grid-xs-12 grid-lg-8">
+//                              <h2>Cheesecake chocolate cake</h2>
+//                              <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>
+//                              <p> Candy canes macaroon brownie gingerbread sweet croissant marshmallow. Soufflé halvah toffee. Cake marzipan wafer jelly beans. Marzipan jelly beans icing liquorice. Fruitcake jujubes tart sugar plum ice cream caramels cotton candy dragée. Powder fruitcake jelly beans danish jelly beans. Halvah marzipan cake muffin.</p>
+//                              <p>Cake pie biscuit caramels donut sweet gummi bears cupcake cookie. Sesame snaps dragée toffee. Jujubes powder marshmallow tootsie roll marzipan wafer cookie.</p>
+//                          </div>
+//                      </div>
+//                  </article>
+//          </div>
+//      </div>
+//     </div>
+// </section>
+
+.section-featured {
+
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    .container {
+        backdrop-filter: blur(2px);
+    }
+
+    @media screen and #{$screen-below-md} {
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media screen and #{$screen-below-md} {
+        text-align: left;
+    }
+
+    .section-title {
+        display: block;
+        text-align: center;
+    }
+
+    .section-image {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: calc(2em + 5vw);
+
+        img, svg {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and #{$screen-below-lg} {
+            margin-bottom: $grid-gutter-md;
+            margin-top: $grid-gutter-md;
+        }
+    }
+
+    .content-grid {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /* Image alignment */
+
+    &.image-left {
+        .content-grid {
+            justify-content: flex-end;
+
+            @media screen and #{$screen-lg-up} {
+                text-align: left;
+            }
+        }
+    }
+
+    &.image-right {
+        .content-grid {
+            justify-content: flex-start;
+
+            @media screen and #{$screen-lg-up} {
+                text-align: right;
+            }
+        }
+    }
+
+}

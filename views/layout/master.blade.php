@@ -58,7 +58,13 @@
         </style>
     </noscript>
 </head>
-<body class="no-js">
+
+@foreach ($docs as $section)
+    <?php $body_class = strtolower($section[0]->page[0]->nav); ?>
+@endforeach
+
+<body class="no-js {{ $body_class }}">
+
     <nav class="navbar">
         <div class="container">
             <div class="grid">

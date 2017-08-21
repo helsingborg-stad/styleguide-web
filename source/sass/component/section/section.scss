@@ -1,5 +1,11 @@
+/* Styleguide fix for optimal display */
+
+body.section > .container {
+    max-width: initial;
+}
 
 /* General */
+
 .section {
     margin: 0;
     min-height: $grid-gutter-md*2;
@@ -8,10 +14,26 @@
     .module-article {
         max-width: none;
 
-        .text-content {
-            text-shadow: 0 0 3px rgba(0,0,0,.2);
+        .section-text {
+            p, ul, ol, h1, h2, h3, h4, h5, h6 {
+                text-shadow: 0 0 3px rgba(0,0,0,.2);
+            }
         }
     }
+}
+
+/* Paralax effect */
+
+.section.effect-parallax {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Multiply effect */
+
+.section.effect-multiply {
+    background-blend-mode: multiply;
 }
 
 /* Coverage & vertical padding */
@@ -123,5 +145,3 @@
     }
 
 }
-
-/* Text adjustment */
