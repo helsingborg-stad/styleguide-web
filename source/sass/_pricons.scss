@@ -149,6 +149,7 @@
 // <i class="pricon pricon-left-fat-arrow"></i> pricon-left-fat-arrow<br>
 // <i class="pricon pricon-comments"></i> pricon-comments<br>
 // <i class="pricon pricon-close-o"></i> pricon-close-o<br>
+// <i class="pricon pricon-reply"></i> pricon-reply<br>
 // 
 //
 @font-face {
@@ -521,6 +522,7 @@ $pricon-right-fat-arrow: "\EA82";
 $pricon-left-fat-arrow: "\EA83";
 $pricon-comments: "\EA84";
 $pricon-close-o: "\EA85";
+$pricon-reply: "\EA86";
 
 
 /* Glyphs */
@@ -657,6 +659,7 @@ $pricon-close-o: "\EA85";
 .pricon-left-fat-arrow:before { content: $pricon-left-fat-arrow }
 .pricon-comments:before { content: $pricon-comments }
 .pricon-close-o:before { content: $pricon-close-o }
+.pricon-reply:before { content: $pricon-reply }
 
 
 /* Mixin */

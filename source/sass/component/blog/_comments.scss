@@ -71,6 +71,13 @@
 // </ul>
 //
 
+.comments {
+    .comment-respond {
+        margin-top: $content-gutter * 2;
+        margin-bottom: $content-gutter * 3;
+    }
+}
+
 .comment {
 
     em {
@@ -92,9 +99,9 @@
     }
 
     .comment-text {
-
         @include material-shadow;
         @include material-radius-medium;
+
         position: relative;
         padding: $content-gutter/1.5 $content-gutter;
         margin-top: 10px;
@@ -102,14 +109,14 @@
         color: #fff;
 
         &::before {
+            @include arrow('up', 8px, $palette-2);
+
             display: block;
             content: '';
 
             position: absolute;
             top: -8px;
             left: 15px;
-
-            @include arrow('up', 8px, $palette-2);
         }
 
     }
@@ -123,9 +130,31 @@
         }
     }
 
-
-    .author-image, .author-name, .author-image a, .author-name a, time {
+    .author-image, .author-name, .author-image a, .author-name a, time, .reply {
         line-height: 40px;
+    }
+
+    .reply {
+        text-align: right;
+
+        a {
+            text-decoration: none !important;
+            color: $gray;
+            font-size: .9em;
+
+            &:hover {color: $palette-2;}
+        }
+
+        a:before {
+            text-decoration: none !important;
+            margin-right: $content-gutter / 2;
+        }
+
+        a:before {
+            @include pricon($pricon-reply);
+        }
+
+        a:hover {}
     }
 
     .author-image {
