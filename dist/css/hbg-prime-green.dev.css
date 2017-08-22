@@ -11908,7 +11908,7 @@ a.box-news:hover {
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_script.scss */
 .box-script {
-  box-shadow: none; }
+  box-shadow: none !important; }
 
 /* Gallery styling */
 /* line 25, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/gallery/_gallery.scss */
@@ -12605,8 +12605,9 @@ ol.player-playlist {
     opacity: .7;
     transition: opacity 200ms ease;
     color: #fff;
-    line-height: 1; }
-    /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+    line-height: 1;
+    text-decoration: none; }
+    /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
     .player > a::before {
       display: inline-block;
       color: #fff;
@@ -12617,25 +12618,27 @@ ol.player-playlist {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-    /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+    /* line 95, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+    .player > a:hover, .player > a:active, .player > a:visited {
+      text-decoration: none; }
+    /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
     .player > a:hover {
-      text-decoration: none;
       opacity: 1; }
-  /* line 100, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+  /* line 106, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
   .player iframe {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
-  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+  /* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
   .player.is-playing a {
     opacity: 0; }
 
-/* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+/* line 117, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
 .no-js .player a {
   opacity: 1; }
-  /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+  /* line 120, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
   .no-js .player a::before {
     font-family: hbg-pricons;
     line-height: 1;
@@ -12645,7 +12648,7 @@ ol.player-playlist {
     vertical-align: -15%;
     content: "";
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.8); }
-  /* line 119, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+  /* line 125, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
   .no-js .player a::after {
     display: block;
     content: attr(data-unavailable);
@@ -12653,7 +12656,7 @@ ol.player-playlist {
     line-height: 1.3;
     text-shadow: 0 0 10px black; }
 
-/* line 128, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
+/* line 134, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/player/_player.scss */
 .player + .player {
   margin-top: 15px; }
 

@@ -84,6 +84,7 @@ ol.player-playlist {
         transition: opacity 200ms ease;
         color: #fff;
         line-height: 1;
+        text-decoration: none;
 
         &::before {
             display: inline-block;
@@ -91,8 +92,13 @@ ol.player-playlist {
             @include pricon($pricon-play-o);
         }
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:visited {
             text-decoration: none;
+        }
+
+        &:hover {
             opacity: 1;
         }
     }
