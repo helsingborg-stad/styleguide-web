@@ -11904,11 +11904,11 @@ a.box-news:hover {
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_iframe.scss */
 .box-iframe {
-  box-shadow: none; }
+  box-shadow: none !important; }
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_script.scss */
 .box-script {
-  box-shadow: none; }
+  box-shadow: none !important; }
 
 /* Gallery styling */
 /* line 25, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/gallery/_gallery.scss */
