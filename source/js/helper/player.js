@@ -70,9 +70,9 @@ HelsingborgPrime.Helper.Player = (function ($) {
 
         //Append player
         if (listid) {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&list=' + listid + '&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         } else {
-            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $(target).parent().append('<iframe type="text/html" width="100%" height="100%"src="//www.youtube.com/embed/' + videoid + '?autoplay=1&autohide=1&cc_load_policy=0&enablejsapi=1&modestbranding=1&origin=styleguide.dev&showinfo=0&autohide=1&iv_load_policy=3&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         }
 
         //Not first run anymore
