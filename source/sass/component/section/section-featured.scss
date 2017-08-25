@@ -35,7 +35,6 @@
 
 .section-featured {
 
-    background-blend-mode: multiply;
     background-size: cover;
 
     .container {
@@ -53,36 +52,33 @@
         text-align: left;
     }
 
-    .section-title {
-        display: block;
-        text-align: center;
-    }
-
     .section-image {
         display: flex;
         justify-content: center;
         flex-direction: column;
         font-size: calc(2em + 5vw);
 
-        img {
+        img[src$=".jpg"],
+        img[src$=".jpgeg"],
+        img[src$=".png"] {
             width: 100%;
             height: auto;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
         }
 
-        svg {
+        img[src$=".svg"],
+        svg,
+        i {
             width: 60%;
             height: auto;
+            margin-left: 20%;
+            margin-right: 20%;
         }
 
         @media screen and #{$screen-below-lg} {
             margin-bottom: $grid-gutter-md;
             margin-top: $grid-gutter-md;
         }
-    }
-
-    .content-grid {
-        display: table-cell;
-        vertical-align: middle;
     }
 
     /* Image alignment */
@@ -109,6 +105,10 @@
                 margin-left: auto;
             }
 
+        }
+
+        &.justify-text .section-text .section-title {
+            text-align: left;
         }
     }
 

@@ -81,7 +81,7 @@
     }
 
     /* Article paddings */
-
+/*
     @media screen and #{$screen-xs} {
         .section-article {
             margin-top: 5px;
@@ -117,23 +117,7 @@
         }
     }
 
-    /* Text alignment */
-
-    .vertical-alignment-wrapper {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    &.text-top .vertical-alignment-wrapper {
-        display: table-cell;
-        vertical-align: top;
-    }
-
-    &.text-bottom .vertical-alignment-wrapper {
-        display: table-cell;
-        vertical-align: bottom;
-    }
-
+*/
     /* Image alignment */
 
     &.image-left {
@@ -173,9 +157,6 @@
                 height: inherit;
                 > div {
                     height: inherit;
-                    > .vertical-alignment-wrapper {
-                        height: inherit;
-                    }
                 }
             }
         }

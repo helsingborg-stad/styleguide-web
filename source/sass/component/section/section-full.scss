@@ -42,38 +42,31 @@
         margin: 0 auto;
     }
 
+    .grid.content-grid {
+        flex: 1;
+    }
+
     .section-title {
         margin-bottom: $grid-gutter-md;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @media screen and #{$screen-md-up} {
 
-        &.columnize-2 .section-title,
-        &.columnize-3 .section-title {
-            text-align: left;
-        }
-
-        &.columnize-2 .section-title {
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        &.columnize-2 .section-text {
+        &.columnize-2 .section-text div {
             column-count: 2;
             column-gap: $grid-gutter-lg*2;
             text-align: left;
-            text-align: justify;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        &.columnize-3 .section-text {
+        &.columnize-3 .section-text div {
             column-count: 3;
             column-gap: $grid-gutter-md;
             text-align: left;
-            text-align: justify;
         }
 
     }
