@@ -14758,81 +14758,82 @@ img[src$=".svg"].footer-signature {
       text-align: center; } }
   /* line 74, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split .section-image {
-    z-index: 7; }
-  /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    z-index: 7;
+    background-color: inherit; }
+  /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split .section-image-mobile {
     background-size: cover; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 85, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 86, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split .section-article {
       margin-top: 5px;
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split .section-article {
       margin: 30px 0; } }
   @media screen and (min-width: 769px) and (max-width: 960px) {
-    /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 99, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split .section-article {
       margin: 0; } }
   @media screen and (min-width: 961px) {
-    /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split.image-right .section-article {
       margin: 0 10px 0 0; }
-    /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split.image-left .section-article {
       margin: 0 0 0 10px; } }
   @media screen and (min-width: 961px) {
-    /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 115, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split .section-article {
       margin-left: 0; } }
-  /* line 121, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: middle; }
-  /* line 126, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 127, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.text-top .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: top; }
-  /* line 131, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.text-bottom .vertical-alignment-wrapper {
     display: table-cell;
     vertical-align: bottom; }
-  /* line 139, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-left:after,
   .section-split.image-left .section-image {
     right: 50%; }
     @media screen and (max-width: 961px) {
-      /* line 139, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split.image-left:after,
       .section-split.image-left .section-image {
         right: 61%; } }
-  /* line 146, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 147, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-left .grid {
     justify-content: flex-end; }
-  /* line 153, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-right:after,
   .section-split.image-right .section-image {
     left: 50%; }
     @media screen and (max-width: 961px) {
-      /* line 153, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split.image-right:after,
       .section-split.image-right .section-image {
         left: 61%; } }
-  /* line 161, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+  /* line 162, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
   .section-split.image-right .grid {
     justify-content: flex-start; }
   @media screen and (min-width: 769px) {
-    /* line 169, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+    /* line 170, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
     .section-split > .container {
       height: inherit; }
-      /* line 171, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+      /* line 172, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
       .section-split > .container > .grid {
         height: inherit; }
-        /* line 173, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+        /* line 174, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
         .section-split > .container > .grid > div {
           height: inherit; }
-          /* line 175, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
+          /* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-split.scss */
           .section-split > .container > .grid > div > .vertical-alignment-wrapper {
             height: inherit; } }
 
