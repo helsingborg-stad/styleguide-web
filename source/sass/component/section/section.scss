@@ -28,8 +28,41 @@
 
 /* Multiply effect */
 
-.section.effect-multiply {
+.section-full.effect-multiply,
+.section-featured.effect-multiply {
+    .container {
+        position: relative;
+        z-index: $level-2;
+    }
+
+    &:after {
+        @include cover();
+        background-blend-mode: multiply;
+        content: "";
+        background: inherit;
+        z-index: $level-1;
+    }
+}
+
+.section-split.effect-multiply .section-image {
     background-blend-mode: multiply;
+}
+
+/* Blur effect */
+
+.section.effect-blur {
+    .container {
+        position: relative;
+        z-index: $level-2;
+    }
+
+    &:after {
+        @include cover();
+        content: "";
+        background: inherit;
+        z-index: $level-1;
+        filter: blur(2px);
+    }
 }
 
 /* Coverage & vertical padding */
