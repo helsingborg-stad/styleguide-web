@@ -1,237 +1,244 @@
 //
-// @name Comment form
-// @description Standard WordPress comment form, please use the comment_form() WP function to show comment form
-//
-
-.comment-respond {
-    @include material-shadow;
-    @include material-radius;
-    padding: $content-gutter * 2;
-    background-color: $creamy;
-    border: 1px solid $creamy-darker;
-
-    p {
-        @extend .form-group;
-    }
-
-    .comment-notes {
-        font-size: .8em;
-        font-style: italic;
-    }
-
-    p + p {
-        margin-top: $content-gutter;
-    }
-}
-
-//
 // @name Comments
 // @description List of comments
 //
 // @page Blog/Comments
 //
 // @markup
-// <ul class="comments">
-//     <li class="comment">
-//         <header>
-//              <div class="author-image">
-//                  <a href="#">
-//                      <img src="https://unsplash.it/200/200?image=1005">
-//                  </a>
-//              </div>
-//              <div class="author-name">
-//                  <a class="author-link" href="#">
-//                      <em>The Baker</em>
-//                  </a>
-//              </div>
-//              <time>4 minutes ago</time>
-//         </header>
-//         <div class="comment-text">
-//             Powder cheesecake donut tart pastry macaroon powder dragée pudding. Cupcake cake wafer chocolate bar oat cake cotton candy dessert bear claw. Liquorice oat cake dragée.
-//         </div>
-//     </li>
-//     <li class="comment">
-//         <header>
-//             <div class="author-image">
-//                  <a href="#">
-//                      <i class="pricon pricon-2x pricon-user-o"></i>
-//                  </a>
-//             </div>
-//              <div class="author-name">
-//                  <a class="author-link" href="#">
-//                      <em>The Baker</em>
-//                  </a>
-//              </div>
-//             <time>8 minutes ago</time>
-//         </header>
-//         <div class="comment-text">
-//              Donut dragée tart. Chocolate bar topping muffin dragée ice cream. Oat cake cotton candy tootsie roll muffin fruitcake biscuit ice cream jelly beans. Danish chocolate bar danish.
-//         </div>
-//     </li>
-// </ul>
+//<div class="comments-wrapper">
+//    <ul class="comments" id="comments">
+//        <li class="comment" id="comment-9999">
+//            <div class="author-image">
+//                <a href="#"><img src="https://unsplash.it/200/200?image=1005"></a>
+//            </div>
+//            <div class="comment-body">
+//                <div class="comment-header">
+//                    <em class="author-name"><a href="#">Random hero</a></em>
+//                    <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                </div>
+//                <div class="comment-content">
+//                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                </div>
+//                <div class="comment-footer">
+//                    <span class="like">
+//                        <a class="like-button" href="#" data-comment-id="9999"><span id="like-count">0</span></a>
+//                    </span>
+//                    <span class="reply">
+//                        <a class="comment-reply-link" href="#">Svara</a>
+//                    </span>
+//                </div>
+//            </div>
+//
+//            <ul class="answers">
+//                <li class="answer" id="answer-9999">
+//                    <div class="author-image">
+//                        <a href="#"><img src="https://unsplash.it/200/200?image=1005"></a>
+//                    </div>
+//                    <div class="comment-body">
+//                        <div class="comment-header">
+//                            <em class="author-name"><a href="#">Random hero 2</a></em>
+//                            <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                        </div>
+//                        <div class="comment-content">
+//                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                        </div>
+//                        <div class="comment-footer">
+//                            <span class="like">
+//                                <a class="like-button" href="#" data-comment-id="9999"><span id="like-count">0</span></a>
+//                            </span>
+//                            <span class="reply">
+//                                <a class="comment-reply-link" href="#">Svara</a>
+//                            </span>
+//                        </div>
+//                    </div>
+//                </li>
+//
+//                <li class="answer" id="answer-9999">
+//                    <div class="author-image">
+//                         <a href="#"><img src="https://unsplash.it/200/200?image=1005"></a>
+//                    </div>
+//                    <div class="comment-body">
+//                        <div class="comment-header">
+//                            <em class="author-name"><a href="#">Random hero 3</a></em>
+//                            <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                        </div>
+//                        <div class="comment-content">
+//                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                        </div>
+//                        <div class="comment-footer">
+//                            <span class="like">
+//                                <a class="like-button active" href="#" data-comment-id="9999"><span id="like-count">11</span></a>
+//                            </span>
+//                            <span class="reply">
+//                                <a class="comment-reply-link" href="#">Svara</a>
+//                            </span>
+//                        </div>
+//                    </div>
+//                </li>
+//            </ul>
+//        </li>
+//        <li class="comment" id="comment-9999">
+//            <div class="author-image">
+//                <a href="#"><i class="pricon pricon-2x pricon-user-o"></i></a>
+//            </div>
+//            <div class="comment-body">
+//                <div class="comment-header">
+//                    <em class="author-name"><a href="#">Random hero</a></em>
+//                    <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                </div>
+//                <div class="comment-content">
+//                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                </div>
+//                <div class="comment-footer">
+//                    <span class="like">
+//                        <a class="like-button active" href="#" data-comment-id="9999"><span id="like-count">11</span></a>
+//                    </span>
+//                    <span class="reply">
+//                        <a class="comment-reply-link" href="#">Svara</a>
+//                    </span>
+//                </div>
+//            </div>
+//
+//            <ul class="answers">
+//                <li class="answer" id="answer-9999">
+//                    <div class="author-image">
+//                        <a href="#"><i class="pricon pricon-2x pricon-user-o"></i></a>
+//                    </div>
+//                    <div class="comment-body">
+//                        <div class="comment-header">
+//                            <em class="author-name"><a href="#">Random hero 2</a></em>
+//                            <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                        </div>
+//                        <div class="comment-content">
+//                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                        </div>
+//                        <div class="comment-footer">
+//                            <span class="like">
+//                                <a class="like-button" href="#" data-comment-id="9999"><span id="like-count">0</span></a>
+//                            </span>
+//                            <span class="reply">
+//                                <a class="comment-reply-link" href="#">Svara</a>
+//                            </span>
+//                        </div>
+//                    </div>
+//                </li>
+//
+//                <li class="answer" id="answer-9999">
+//                    <div class="author-image">
+//                        <a href="#"><i class="pricon pricon-2x pricon-user-o"></i></a>
+//                    </div>
+//                    <div class="comment-body">
+//                        <div class="comment-header">
+//                            <em class="author-name"><a href="#">Random hero 3</a></em>
+//                            <time data-tooltip="2017-08-22 kl. 08:36" data-tooltip-right datetime="2017-08-22 06:36:28">20 minuter sedan</time>
+//                        </div>
+//                        <div class="comment-content">
+//                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>
+//                        </div>
+//                        <div class="comment-footer">
+//                            <span class="like">
+//                                <a class="like-button active" href="#" data-comment-id="9999"><span id="like-count">11</span></a>
+//                            </span>
+//                            <span class="reply">
+//                                <a class="comment-reply-link" href="#">Svara</a>
+//                            </span>
+//                        </div>
+//                    </div>
+//                </li>
+//            </ul>
+//        </li>
+//    </ul>
+//</div>
 //
 
 .comments {
     .comment-respond {
-        margin-top: $content-gutter * 2;
-        margin-bottom: $content-gutter * 3;
+        margin-bottom: $content-gutter * 4;
     }
 }
 
-.comment {
+li.comment {
+    margin-bottom: $content-gutter * 2;
 
-    em {
-        font-weight: bold;
+    li.answer {
+        margin-bottom: $content-gutter * 2;
     }
 
-    time {
-        color: $gray;
-        font-size: .9em;
-        cursor: default;
+    &:not(:last-child) ul.answers {
+        margin-bottom: $content-gutter * 2;
     }
 
-    & + .comment, .answers {
+    ul.answers {
         margin-top: $content-gutter * 2;
+        padding-left: $content-gutter * 3.5;
     }
 
-    i {
-        color: $palette-2;
-    }
-
-    .comment-text {
-        @include material-shadow;
-        @include material-radius-medium;
-
-        position: relative;
-        padding: $content-gutter/1.5 $content-gutter;
-        margin-top: 10px;
-        background-color: $palette-2;
-        color: #fff;
-
-        &::before {
-            @include arrow('up', 8px, $palette-2);
-
-            display: block;
-            content: '';
-
-            position: absolute;
-            top: -8px;
-            left: 15px;
-        }
-
-    }
-
-    a:not(.author-link) {
-        color: #fff;
-        text-decoration: underline;
-
-        &:hover {
-            color: rgba(#fff, .8);
-        }
-    }
-
-    .author-image, .author-name, .author-image a, .author-name a, time, .reply {
-        line-height: 40px;
-    }
-
-    .reply {
-        text-align: right;
-
-        a {
-            text-decoration: none !important;
-            color: $gray;
-            font-size: .9em;
-
-            &:hover {color: $palette-2;}
-        }
-
-        a:before {
-            text-decoration: none !important;
-            margin-right: $content-gutter / 2;
-        }
-
-        a:before {
-            @include pricon($pricon-reply);
-        }
-
-        a:hover {}
+    .author-image, .comment-body {
+        display: table-cell;
+        vertical-align: top;
     }
 
     .author-image {
-
         border-radius: 100%;
-        margin-left: $content-gutter / 2.5;
+        padding-right: $content-gutter * 1;
+
+        i {
+            font-size: $content-gutter * 2.5;
+            display: inline;
+            vertical-align: top;
+        }
 
         img {
-            width: 36px;
+            width: $content-gutter * 2.5;
             height: auto;
             display: block;
             border-radius: 100%;
         }
     }
 
-    header {
-        @include clearfix;
-        margin-bottom: $content-gutter;
+    .comment-header {
+        line-height: 2em;
 
-        .author-image, .author-name, time {
-            float: left !important;
-        }
+        em {font-weight: bold;}
 
-        .author-image, .author-name {
-            margin-right: $content-gutter;
-        }
-    }
-
-    .answers {
-        padding-left: 3%;
-        .comment-text {
-            opacity: .7;
+        time {
+            margin-left: $content-gutter / 2;
+            color: $gray;
+            font-size: .9em;
         }
     }
 
-    &:nth-child(4n + 2) {
-        .comment-text {
-            background-color: $palette-3;
-            color: #fff;
-
-            &::before {
-                @include arrow('up', 8px, $palette-3);
-            }
-        }
-
-        .author-image i {
-            color: $palette-3;
-        }
-
+    .comment-content {
+        margin-top: $content-gutter / 2;
     }
 
-    &:nth-child(4n + 3) {
-        .comment-text {
-            background-color: $palette-4;
-            color: #fff;
+    .comment-footer {
+        margin-top: $content-gutter / 2;
 
-            &::before {
-                @include arrow('up', 8px, $palette-4);
-            }
+        span:not(:last-child) {
+            margin-right: $content-gutter / 2;
         }
 
-        .author-image i {
+        a {
+            color: $gray;
+            font-size: .9em;
+            text-decoration: none !important;
+        }
+
+        a:hover{
             color: $palette-4;
         }
-    }
 
-    &:nth-child(4n + 4) {
-        .comment-text {
-            background-color: $palette-5;
-            color: #fff;
+        .like-button.active {
+             color: $palette-3;
+        }
 
-            &::before {
-                @include arrow('up', 8px, $palette-5);
-            }
+        .reply a:before, .like a:before {
+            margin-right: $content-gutter / 2;
         }
-        .author-image i {
-            color: $palette-5;
-        }
+
+        .reply a:before {@include pricon($pricon-reply);}
+        .like a:before {@include pricon($pricon-thumbs-up);}
+
     }
 }

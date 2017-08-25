@@ -63,9 +63,11 @@
     </noscript>
 </head>
 
+@if (isset($docs))
 @foreach ($docs as $section)
     <?php $body_class = strtolower($section[0]->page[0]->nav); ?>
 @endforeach
+@endif
 
 <body class="no-js page-{{ $body_class }}">
 

@@ -1,0 +1,56 @@
+//
+// @name Comment form
+// @description Standard WordPress comment form, ignore the markup please use the comment_form() WP function to show comment form
+//
+// @page Blog/Comments form
+//
+// @markup
+// <div id="respond" class="comment-respond">
+// <h3 id="reply-title" class="comment-reply-title">Kommentera
+// <small><a rel="nofollow" id="cancel-comment-reply-link" href="/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond" style="display:none;">Avbryt svar</a></small></h3>          <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+// <p class="logged-in-as"><a href="#" aria-label="Inloggad som Random hero. Redigera din profil.">Inloggad som Random hero</a>. <a href="#">Logga ut?</a></p><div class="fake-hide"><input name="931dc17c3e18362_fi" type="text" value="445bbe0145edb56" size="30"></div><div class="fake-hide"><input class="hidden" name="931dc17c3e18362_bl" type="text" value="" size="30"></div><p class="comment-form-comment"><label for="comment">Kommentar</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="btn btn-primary" value="Skicka kommentar"> <input type="hidden" name="comment_post_ID" value="7662" id="comment_post_ID">
+// <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+// </p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="bfc33d1b01"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+// <style>.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}</style><div class="fake-hide"><img src="#"></div>           </form>
+// </div>
+//
+
+.comment-respond {
+
+    .comment-reply-title {
+        margin-bottom: $content-gutter / 3;
+    }
+
+    margin-bottom: $content-gutter * 2;
+
+    textarea {
+        background: $creamy;
+        border: none;
+        box-shadow: none;
+
+        height: 100px;
+
+        max-width: 100% !important;
+    }
+
+    .logged-in-as {
+        margin-bottom: $content-gutter;
+    }
+
+    label {
+        display: none !important;
+    }
+
+    p {
+        @extend .form-group;
+    }
+
+    .comment-notes {
+        font-size: .8em;
+        font-style: italic;
+    }
+
+    p.form-submit {
+        margin-top: $content-gutter;
+    }
+}

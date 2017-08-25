@@ -269,6 +269,6 @@ gulp.task('browser-sync', function() {
 //Watch with BrowserSync
 gulp.task('watch-bs', ['browser-sync'], function () {
     gulp.watch('source/js/**/*.js', ['scripts', browserSync.reload]);
-    gulp.watch('source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+    gulp.watch('source/sass/**/*.scss', ['sass-dev']);
 
 });
