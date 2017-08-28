@@ -1,0 +1,34 @@
+//
+// @name Vertical navbar
+// @description A vertical vanbar design to slide up & down in the content.
+//
+// @page Navigation/Scroll
+//
+// @state .current - The currently active page number
+//
+// @markup
+// <ul class="scroll-dots">
+//     <li><a href="#1">1</a></li>
+//     <li><a class="current" href="#2">2</a></li>
+//     <li><a href="#3">3</a></li>
+//     <li><a href="#3">3</a></li>
+//     <li><a href="#3">3</a></li>
+// </ul>
+//
+
+.scroll-dots {
+
+	li {
+		display: block;
+		width: $grid-gutter-sm;
+	}
+
+	a {
+		background-color: #fff;
+		display: block;
+	}
+
+	a.current {
+
+	}
+}
