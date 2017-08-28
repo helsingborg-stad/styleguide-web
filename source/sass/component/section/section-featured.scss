@@ -71,8 +71,9 @@
         i {
             width: 60%;
             height: auto;
-            margin-left: 20%;
-            margin-right: 20%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @media screen and #{$screen-below-lg} {
