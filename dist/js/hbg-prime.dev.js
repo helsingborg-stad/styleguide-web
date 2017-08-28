@@ -16741,6 +16741,166 @@ HelsingborgPrime.Helper.Post = (function ($) {
 
 })(jQuery);
 
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
+
+HelsingborgPrime.ScrollDot.ClickJack = (function ($) {
+
+    var ScrollDotTriggers = [
+        '.scroll-dots li a'
+    ];
+
+    var ScrollDotTargets = [
+        'section.section-featured',
+        'section.section-full',
+        'section.section-split'
+    ];
+
+    var ScrollDotSettings = {
+        scrollSpeed: 450,
+        scrollOffset: 0
+    };
+
+    function ClickJack() {
+        ScrollDotTriggers.forEach(function(element) {
+            if($(element).length) {
+                $(element).each(function(index,item) {
+                    if(this.isAnchorLink($(item).attr('href')) && this.anchorLinkExists($(item).attr('href'))) {
+                        this.bindScrollDot(item,$(item).attr('href'));
+                    }
+                }.bind(this));
+            }
+        }.bind(this));
+    }
+
+    ClickJack.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    ClickJack.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        ScrollDotTargets.forEach(function(element) {
+            if($(element + id).length) {
+               linkExist = true;
+               return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    ClickJack.prototype.bindScrollDot = function (trigger,target) {
+        $(trigger).on('click',function(event){
+            event.preventDefault();
+            this.updateHash(target);
+            var targetOffset = $(target).offset();
+            $('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(ScrollDotSettings.scrollOffset))}, ScrollDotSettings.scrollSpeed);
+        }.bind(this));
+    };
+
+    ClickJack.prototype.updateHash = function(hash) {
+        if(history.pushState) {
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
+        } else {
+            window.location.hash = hash;
+        }
+    }
+
+    new ClickJack();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
+
+HelsingborgPrime.ScrollDot.Highlight = (function ($) {
+
+    var ScrollTopValue = 0;
+
+    var ScrollTopOffset = 0;
+
+    var ScrollMenuWrapperActiveClass = 'current';
+
+    var HighlightTrigger = "section.section-split, section.section-full, section.section-featured";
+
+    var ScrollMenuWrapper = [
+        '.scroll-dots'
+    ];
+
+    function Highlight() {
+        ScrollTopValue = $(window).scrollTop();
+        $(window).on('scroll', function (e) {
+            var scrolledToItem = null;
+            ScrollTopValue = $(window).scrollTop() + ScrollTopOffset + $("#site-header").outerHeight();
+            $(HighlightTrigger).each(function (index,item) {
+                if(ScrollTopValue >= $(item).offset().top) {
+                    scrolledToItem = item;
+                    return;
+                }
+            });
+            this.cleanHighlight();
+            this.highlightMenuItem("#" + $(scrolledToItem).attr('id'));
+        }.bind(this));
+    }
+
+    Highlight.prototype.highlightMenuItem = function (id) {
+        if(this.isAnchorLink(id) && this.anchorLinkExists(id)){
+            this.addWrapperClass('is-active');
+            ScrollMenuWrapper.forEach(function(element) {
+                $("a[href='" + id + "']", element).addClass(ScrollMenuWrapperActiveClass);
+            });
+        }
+    };
+
+    Highlight.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    Highlight.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        ScrollMenuWrapper.forEach(function(element) {
+            if($("a[href='" + id + "']",element).length) {
+                linkExist = true;
+                return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    Highlight.prototype.cleanHighlight = function () {
+        this.removeWrapperClass('is-active');
+        ScrollMenuWrapper.forEach(function(element) {
+            $("a",element).removeClass(ScrollMenuWrapperActiveClass);
+        }.bind(this));
+    };
+
+    Highlight.prototype.addWrapperClass = function (class) {
+        ScrollMenuWrapper.forEach(function(element) {
+            $(element).addClass(class);
+        }.bind(this));
+    };
+
+    Highlight.prototype.removeWrapperClass = function (class) {
+        ScrollMenuWrapper.forEach(function(element) {
+            $(element).removeClass(class);
+        }.bind(this));
+    };
+
+    new Highlight();
+
+})(jQuery);
+
 //
 // @name Cookie consent
 //
@@ -16951,3 +17111,60 @@ HelsingborgPrime.Prompt.Share = (function ($) {
     return new Share();
 
 })(jQuery);
+
+/*!
+ * Bez @VERSION
+ * http://github.com/rdallasgray/bez
+ *
+ * A plugin to convert CSS3 cubic-bezier co-ordinates to jQuery-compatible easing functions
+ *
+ * With thanks to Nikolay Nemshilov for clarification on the cubic-bezier maths
+ * See http://st-on-it.blogspot.com/2011/05/calculating-cubic-bezier-function.html
+ *
+ * Copyright @YEAR Robert Dallas Gray. All rights reserved.
+ * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
+ */
+(function(factory) {
+  if (typeof exports === "object") {
+    factory(require("jquery"));
+  } else if (typeof define === "function" && define.amd) {
+    define(["jquery"], factory);
+  } else {
+    factory(jQuery);
+  }
+}(function($) {
+  $.extend({ bez: function(encodedFuncName, coOrdArray) {
+    if ($.isArray(encodedFuncName)) {
+      coOrdArray = encodedFuncName;
+      encodedFuncName = 'bez_' + coOrdArray.join('_').replace(/\./g, 'p');
+    }
+    if (typeof $.easing[encodedFuncName] !== "function") {
+      var polyBez = function(p1, p2) {
+        var A = [null, null], B = [null, null], C = [null, null],
+            bezCoOrd = function(t, ax) {
+              C[ax] = 3 * p1[ax], B[ax] = 3 * (p2[ax] - p1[ax]) - C[ax], A[ax] = 1 - C[ax] - B[ax];
+              return t * (C[ax] + t * (B[ax] + t * A[ax]));
+            },
+            xDeriv = function(t) {
+              return C[0] + t * (2 * B[0] + 3 * A[0] * t);
+            },
+            xForT = function(t) {
+              var x = t, i = 0, z;
+              while (++i < 14) {
+                z = bezCoOrd(x, 0) - t;
+                if (Math.abs(z) < 1e-3) break;
+                x -= z / xDeriv(x);
+              }
+              return x;
+            };
+        return function(t) {
+          return bezCoOrd(xForT(t), 1);
+        }
+      };
+      $.easing[encodedFuncName] = function(x, t, b, c, d) {
+        return c * polyBez([coOrdArray[0], coOrdArray[1]], [coOrdArray[2], coOrdArray[3]])(t/d) + b;
+      }
+    }
+    return encodedFuncName;
+  }});
+}));
