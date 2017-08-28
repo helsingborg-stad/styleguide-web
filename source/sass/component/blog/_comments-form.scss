@@ -19,25 +19,31 @@
 
     .comment-reply-title {
         margin-bottom: $content-gutter / 3;
+        small {margin-left: $content-gutter / 2;}
     }
 
     margin-bottom: $content-gutter * 2;
 
-    textarea {
-        background: $creamy;
-        border: none;
-        box-shadow: none;
-
-        height: 100px;
-
+    textarea, input#author, input#email, input#url {
+        background: $creamy  !important;
+        border: none  !important;
+        box-shadow: none !important;
         max-width: 100% !important;
+    }
+
+    h3#reply-title small {
+        margin-left: 7.5px;
+    }
+
+    textarea {
+        height: 100px;
     }
 
     .logged-in-as {
         margin-bottom: $content-gutter;
     }
 
-    label {
+    .comment-form-comment label {
         display: none !important;
     }
 
@@ -52,5 +58,9 @@
 
     p.form-submit {
         margin-top: $content-gutter;
+    }
+
+    label + input:not(.btn) {
+        margin-top: $content-gutter / 2;
     }
 }

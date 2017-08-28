@@ -186,6 +186,7 @@ li.comment {
             font-size: $content-gutter * 2.5;
             display: inline;
             vertical-align: top;
+            color: $palette-4;
         }
 
         img {
@@ -199,7 +200,10 @@ li.comment {
     .comment-header {
         line-height: 2em;
 
-        em {font-weight: bold;}
+        em {
+            font-weight: bold;
+            color: $palette-4;
+        }
 
         time {
             margin-left: $content-gutter / 2;
@@ -213,6 +217,7 @@ li.comment {
     }
 
     .comment-footer {
+        position: relative;
         margin-top: $content-gutter / 2;
 
         span:not(:last-child) {
@@ -239,6 +244,19 @@ li.comment {
 
         .reply a:before {@include pricon($pricon-reply);}
         .like a:before {@include pricon($pricon-thumbs-up);}
+
+        span, span > a {display: inline-block;}
+        span + span:before {
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 1em;
+            background-color: #e5e5e5;
+
+            position: relative;
+            bottom: -3px;
+            margin-right: $content-gutter / 2;
+        }
 
     }
 }
