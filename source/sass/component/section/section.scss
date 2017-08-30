@@ -51,6 +51,17 @@
     }
 }
 
+/* Effects */
+
+section[class^="effect-"], section[class*=" effect-"] {
+    &:after {
+        @include cover();
+        content: "";
+        background: inherit;
+        z-index: $level-1;
+    }
+}
+
 /* Paralax effect */
 
 .section.effect-parallax {
@@ -65,17 +76,15 @@
 
 .section-full.effect-multiply,
 .section-featured.effect-multiply {
+    background-blend-mode: multiply;
+
     .container {
         position: relative;
         z-index: $level-2;
     }
 
     &:after {
-        @include cover();
-        background-blend-mode: multiply;
-        content: "";
-        background: inherit;
-        z-index: $level-1;
+        opacity: .7;
     }
 }
 
@@ -92,12 +101,13 @@
     }
 
     &:after {
-        @include cover();
-        margin: -5px;
-        content: "";
-        background: inherit;
-        z-index: $level-1;
         filter: blur(2px);
+    }
+}
+
+.section.effect-blur:not(.effect-multiply) {
+    &:after {
+        margin: -5px;
     }
 }
 
@@ -174,7 +184,7 @@
 .section .section-article {
 
     h1, .h1 {
-        font-size: calc(2.2rem + 1vw);
+        font-size: 2.7rem;
         color: $palette-4;
 
         @media screen and #{$screen-xs} {
@@ -187,7 +197,7 @@
     }
 
     h2, .h2 {
-        font-size: calc(1.5rem + 1vw);
+        font-size: 2.5rem;
 
         @media screen and #{$screen-xs} {
             font-size: 1.6rem;
@@ -199,7 +209,7 @@
     }
 
     h3, .h3 {
-        font-size: calc(1.3rem + 1vw);
+        font-size: 2rem;
 
         @media screen and #{$screen-xs} {
             font-size: 1.3rem;
@@ -211,7 +221,7 @@
     }
 
     h4, .h4 {
-        font-size: calc(1.15rem + 1vw);;
+        font-size: 1.15rem;
 
         @media screen and #{$screen-xs} {
             font-size: 1.15rem;
@@ -223,7 +233,7 @@
     }
 
     h5, .h5 {
-        font-size: calc(1.1rem + 1vw);;
+        font-size: 1.1rem;
 
         @media screen and #{$screen-xs} {
             font-size: 1.1rem;
@@ -235,7 +245,7 @@
     }
 
     h6, .h6 {
-        font-size: calc(1.1rem + 1vw);
+        font-size: 1.1rem;
 
         @media screen and #{$screen-xs} {
             font-size: 1rem;
@@ -270,33 +280,6 @@
 
     &.background-5 {
         @include btn-theme($palette-5);
-    }
-
-}
-
-/* Font sizes */
-
-@media screen and #{$screen-sm-up} {
-
-    .section {
-
-        .section-title {
-            font-size: calc(1.5em + 1vw);
-            line-height: 1.1em;
-        }
-
-        &.text-md {
-            .section-title {
-                font-size: calc(2em + 1vw);
-            }
-        }
-
-        &.text-lg {
-            .section-title {
-                font-size: calc(2.3em + 1vw);
-            }
-        }
-
     }
 
 }
