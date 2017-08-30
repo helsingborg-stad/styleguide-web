@@ -33,13 +33,11 @@
 
     background-size: cover;
 
-    .container {
-        backdrop-filter: blur(2px);
-    }
-
     .section-article {
-        text-align: center;
-        margin: 0 auto;
+        @media screen and #{$screen-md-up} {
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 
     .grid.content-grid {
@@ -47,9 +45,20 @@
     }
 
     .section-title {
-        margin-bottom: $grid-gutter-md;
-        margin-left: auto;
-        margin-right: auto;
+
+        @media screen and #{$screen-md-up} {
+            margin-bottom: $grid-gutter-md;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .column-enabler {
+        p, ul, ol {
+            &:first-child {
+                margin-top: $grid-gutter-md/2;
+            }
+        }
     }
 
     @media screen and #{$screen-md-up} {

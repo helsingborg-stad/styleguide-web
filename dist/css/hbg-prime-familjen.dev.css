@@ -14937,23 +14937,25 @@ img[src$=".svg"].footer-signature {
 /* line 32, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
 .section-full {
   background-size: cover; }
-  /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-  .section-full .container {
-    backdrop-filter: blur(2px); }
-  /* line 40, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-  .section-full .section-article {
-    text-align: center;
-    margin: 0 auto; }
-  /* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  @media screen and (min-width: 769px) {
+    /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .section-article {
+      text-align: center;
+      margin: 0 auto; } }
+  /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
   .section-full .grid.content-grid {
     flex: 1; }
-  /* line 49, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-  .section-full .section-title {
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto; }
   @media screen and (min-width: 769px) {
-    /* line 57, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full .section-title {
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto; } }
+  /* line 58, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  .section-full .column-enabler p:first-child, .section-full .column-enabler ul:first-child, .section-full .column-enabler ol:first-child {
+    margin-top: 15px; }
+  @media screen and (min-width: 769px) {
+    /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full.columnize-2 .section-text div {
       column-count: 2;
       column-gap: 60px;
@@ -14961,17 +14963,17 @@ img[src$=".svg"].footer-signature {
       max-width: 800px;
       margin-left: auto;
       margin-right: auto; }
-    /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 75, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full.columnize-3 .section-text div {
       column-count: 3;
       column-gap: 30px;
       text-align: left; } }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 75, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 84, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 81, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 90, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 30px; } }
 
