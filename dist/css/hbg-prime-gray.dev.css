@@ -14952,7 +14952,7 @@ img[src$=".svg"].footer-signature {
       margin-left: auto;
       margin-right: auto; } }
   /* line 58, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
-  .section-full .column-enabler p:first-child, .section-full .column-enabler ul:first-child, .section-full .column-enabler ol:first-child {
+  .section-full:not(.columnize-2):not(.columnize-3) .column-enabler p:first-child, .section-full:not(.columnize-2):not(.columnize-3) .column-enabler ul:first-child, .section-full:not(.columnize-2):not(.columnize-3) .column-enabler ol:first-child {
     margin-top: 15px; }
   @media screen and (min-width: 769px) {
     /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */

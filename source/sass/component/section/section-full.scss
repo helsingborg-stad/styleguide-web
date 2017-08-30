@@ -53,7 +53,7 @@
         }
     }
 
-    .column-enabler {
+    &:not(.columnize-2):not(.columnize-3) .column-enabler {
         p, ul, ol {
             &:first-child {
                 margin-top: $grid-gutter-md/2;
