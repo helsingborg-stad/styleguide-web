@@ -15,7 +15,7 @@
 // </div>
 //
 
-.comment-respond {
+.comment-respond.comment-respond-new {
 
     .comment-reply-title {
         margin-bottom: $content-gutter / 3;
@@ -62,5 +62,29 @@
 
     label + input:not(.btn) {
         margin-top: $content-gutter / 2;
+    }
+}
+
+/*
+ *  Old styles for comments-form (deprecated)
+ */
+.comment-respond:not(.comment-respond-new) {
+    @include material-shadow;
+    @include material-radius;
+    padding: $content-gutter * 2;
+    background-color: $creamy;
+    border: 1px solid $creamy-darker;
+
+    p {
+        @extend .form-group;
+    }
+
+    .comment-notes {
+        font-size: .8em;
+        font-style: italic;
+    }
+
+    p + p {
+        margin-top: $content-gutter;
     }
 }

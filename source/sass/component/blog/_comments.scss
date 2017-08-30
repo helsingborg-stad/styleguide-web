@@ -151,13 +151,10 @@
 //</div>
 //
 
-.comments {
-    .comment-respond {
-        margin-bottom: $content-gutter * 4;
-    }
-}
-
-li.comment {
+/*
+ *  New styles for comments
+ */
+li.comment.comment-new {
     margin-bottom: $content-gutter * 2;
 
     li.answer {
@@ -257,6 +254,181 @@ li.comment {
             bottom: -3px;
             margin-right: $content-gutter / 2;
         }
+        span#like-count {pointer-events: none;}
 
+    }
+}
+
+.comments.comments-new {
+    .comment-respond {
+        margin-bottom: $content-gutter * 4;
+    }
+}
+
+/*
+ *  Old styles for comments (deprecated)
+ */
+.comment:not(.comment-new) {
+
+    em {
+        font-weight: bold;
+    }
+
+    time {
+        color: $gray;
+        font-size: .9em;
+        cursor: default;
+    }
+
+    & + .comment, .answers {
+        margin-top: $content-gutter * 2;
+    }
+
+    i {
+        color: $palette-2;
+    }
+
+    .comment-text {
+        @include material-shadow;
+        @include material-radius-medium;
+
+        position: relative;
+        padding: $content-gutter/1.5 $content-gutter;
+        margin-top: 10px;
+        background-color: $palette-2;
+        color: #fff;
+
+        &::before {
+            @include arrow('up', 8px, $palette-2);
+
+            display: block;
+            content: '';
+
+            position: absolute;
+            top: -8px;
+            left: 15px;
+        }
+
+    }
+
+    a:not(.author-link) {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: rgba(#fff, .8);
+        }
+    }
+
+    .author-image, .author-name, .author-image a, .author-name a, time, .reply {
+        line-height: 40px;
+    }
+
+    .reply {
+        text-align: right;
+
+        a {
+            text-decoration: none !important;
+            color: $gray;
+            font-size: .9em;
+
+            &:hover {color: $palette-2;}
+        }
+
+        a:before {
+            text-decoration: none !important;
+            margin-right: $content-gutter / 2;
+        }
+
+        a:before {
+            @include pricon($pricon-reply);
+        }
+
+        a:hover {}
+    }
+
+    .author-image {
+
+        border-radius: 100%;
+        margin-left: $content-gutter / 2.5;
+
+        img {
+            width: 36px;
+            height: auto;
+            display: block;
+            border-radius: 100%;
+        }
+    }
+
+    header {
+        @include clearfix;
+        margin-bottom: $content-gutter;
+
+        .author-image, .author-name, time {
+            float: left !important;
+        }
+
+        .author-image, .author-name {
+            margin-right: $content-gutter;
+        }
+    }
+
+    .answers {
+        padding-left: 3%;
+        .comment-text {
+            opacity: .7;
+        }
+    }
+
+    &:nth-child(4n + 2) {
+        .comment-text {
+            background-color: $palette-3;
+            color: #fff;
+
+            &::before {
+                @include arrow('up', 8px, $palette-3);
+            }
+        }
+
+        .author-image i {
+            color: $palette-3;
+        }
+
+    }
+
+    &:nth-child(4n + 3) {
+        .comment-text {
+            background-color: $palette-4;
+            color: #fff;
+
+            &::before {
+                @include arrow('up', 8px, $palette-4);
+            }
+        }
+
+        .author-image i {
+            color: $palette-4;
+        }
+    }
+
+    &:nth-child(4n + 4) {
+        .comment-text {
+            background-color: $palette-5;
+            color: #fff;
+
+            &::before {
+                @include arrow('up', 8px, $palette-5);
+            }
+        }
+        .author-image i {
+            color: $palette-5;
+        }
+    }
+}
+
+.comments:not(.comments-new) {
+    .comment-respond {
+        margin-top: $content-gutter * 2;
+        margin-bottom: $content-gutter * 3;
     }
 }
