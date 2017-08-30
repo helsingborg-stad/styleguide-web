@@ -9068,49 +9068,49 @@ body .tag {
   .nav-mobile-menu .menu-help .nav-mobile a {
     color: #fff; }
 
-/* line 19, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+/* line 19, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
 .scroll-dots {
   transition: opacity 500ms;
   opacity: 0;
   width: 12px; }
-  /* line 24, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 24, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots.is-active {
     opacity: 1; }
-  /* line 28, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 28, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots li {
     position: relative;
     display: block;
     width: 12px;
     height: 12px; }
-  /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots li + li {
     margin-top: 13px; }
-  /* line 39, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 39, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
     display: block;
     border: 1px solid #fff;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     transition: transform 150ms, background 150ms, margin 100ms; }
-  /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 49, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a.current {
     cursor: default; }
-  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a.current,
   .scroll-dots a:hover {
     transform: scale(1.3);
-    background-color: rgba(255, 255, 255, 0.3); }
-  /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #eee; }
+  /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a:before {
     display: none; }
-  /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a:hover:before {
     position: absolute;
     z-index: 99999;
@@ -9137,11 +9137,11 @@ body .tag {
         /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
         body:not(.material-no-shadow) .scroll-dots a:hover:before {
           box-shadow: none; } }
-  /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 87, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a:hover:before,
   .scroll-dots a:active:before {
     display: block; }
-  /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_vertical.scss */
+  /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/scroll-dots.scss */
   .scroll-dots a.current:before,
   .scroll-dots a[data-link-tooltip=""]:before,
   .scroll-dots a:not([data-link-tooltip]):before {
@@ -15028,16 +15028,9 @@ img[src$=".svg"].footer-signature {
   /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .content-grid {
     flex-direction: row-reverse; }
-    @media screen and (min-width: 961px) {
-      /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
-      .section-featured.image-right .content-grid {
-        text-align: right; } }
-    /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured.image-right .content-grid h1, .section-featured.image-right .content-grid .h1, .section-featured.image-right .content-grid h2, .section-featured.image-right .content-grid .h2, .section-featured.image-right .content-grid h3, .section-featured.image-right .content-grid .h3, .section-featured.image-right .content-grid h4, .section-featured.image-right .content-grid .widget_calendar caption, .widget_calendar .section-featured.image-right .content-grid caption, .section-featured.image-right .content-grid .h4, .section-featured.image-right .content-grid h5, .section-featured.image-right .content-grid .h5, .section-featured.image-right .content-grid h6, .section-featured.image-right .content-grid .h6, .section-featured.image-right .content-grid p, .section-featured.image-right .content-grid ol, .section-featured.image-right .content-grid ul {
       margin-left: auto; }
-  /* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
-  .section-featured.image-right.justify-text .section-text .section-title {
-    text-align: left; }
 
 @font-face {
   font-family: system;
