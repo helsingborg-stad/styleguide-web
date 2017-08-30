@@ -37,10 +37,6 @@
 
     background-size: cover;
 
-    .container {
-        backdrop-filter: blur(2px);
-    }
-
     @media screen and #{$screen-below-md} {
         .btn {
             display: block;
@@ -52,6 +48,12 @@
         text-align: left;
     }
 
+    @media screen and #{$screen-lg-up} {
+        .section-title {
+            margin-top: -.6rem;
+        }
+    }
+
     .section-image {
         display: flex;
         justify-content: center;
@@ -59,7 +61,7 @@
         font-size: calc(2em + 5vw);
 
         img[src$=".jpg"],
-        img[src$=".jpgeg"],
+        img[src$=".jpeg"],
         img[src$=".png"] {
             width: 100%;
             height: auto;
@@ -105,4 +107,21 @@
         }
     }
 
+
+    /* Vertical alignment */
+
+    &.text-middle {
+        align-items: center;
+        display: flex;
+    }
+
+    &.text-top {
+        align-items: flex-start;
+        display: flex;
+    }
+
+    &.text-bottom {
+        align-items: flex-end;
+        display: flex;
+    }
 }

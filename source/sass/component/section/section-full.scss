@@ -92,4 +92,21 @@
         }
     }
 
+    /* Vertical alignment */
+
+    &.text-middle {
+        align-items: center;
+        display: flex;
+    }
+
+    &.text-top {
+        align-items: flex-start;
+        display: flex;
+    }
+
+    &.text-bottom {
+        align-items: flex-end;
+        display: flex;
+    }
+
 }

@@ -6,6 +6,10 @@
     overflow: hidden;
     min-height: $grid-gutter-md*2;
 
+    .container {
+        width: 100%;
+    }
+
     .section-article {
         max-width: none;
         display: flex;
@@ -52,16 +56,15 @@
 }
 
 /* Font size */
+@media screen and #{$screen-lg-up} {
+    .section.fontsize-large h2.section-title {
+        font-size: 3rem;
+    }
 
-.section.fontsize-large h2.section-title {
-    font-size: 3rem;
+    .section.fontsize-xlarge h2.section-title {
+        font-size: 4rem;
+    }
 }
-
-.section.fontsize-xlarge h2.section-title {
-    font-size: 4rem;
-}
-
-
 
 /* Effects */
 
@@ -146,50 +149,46 @@
 .section {
 
     /* Paddings */
-    &.padding-sm .section-article {
+    &.section-full.padding-sm,
+    &.section-featured.padding-sm,
+    &.section-split.padding-sm .section-article {
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
 
-    &.padding-md .section-article {
+    &.section-full.padding-md,
+    &.section-featured.padding-md,
+    &.section-split.padding-md .section-article {
         padding-top: 10vh;
         padding-bottom: 10vh;
     }
 
-    &.padding-lg .section-article {
+    &.section-full.padding-lg,
+    &.section-featured.padding-lg,
+    &.section-split.padding-lg .section-article {
         padding-top: 20vh;
         padding-bottom: 20vh;
     }
 
     /* Heights */
-    &.section-sm .section-article {
+    &.section-full.section-sm,
+    &.section-featured.section-sm,
+    &.section-split.section-sm .section-article {
         min-height: $grid-gutter-md*2;
     }
 
-    &.section-md .section-article {
+    &.section-full.section-md,
+    &.section-featured.section-md,
+    &.section-split.section-md .section-article {
         min-height: 40vh;
     }
 
-    &.section-lg .section-article {
+    &.section-full.section-lg,
+    &.section-featured.section-lg,
+    &.section-split.section-lg .section-article {
         min-height: 97vh;
     }
 
-}
-
-/* Vertical alignment */
-
-.section {
-    &.text-middle .content-grid {
-        align-items: center;
-    }
-
-    &.text-top .content-grid {
-        align-items: flex-start;
-    }
-
-    &.text-bottom .content-grid {
-        align-items: flex-end;
-    }
 }
 
 /* Titles */

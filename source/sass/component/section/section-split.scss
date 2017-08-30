@@ -80,6 +80,10 @@
         background-size: cover;
     }
 
+    .section-submodules {
+        margin-top: $grid-gutter-md;
+    }
+
     /* Article paddings */
     @media screen and #{$screen-xs} {
         .section-article {
@@ -145,5 +149,19 @@
                 }
             }
         }
+    }
+
+    /* Vertical alignment */
+
+    &.text-middle .content-grid {
+        align-items: center;
+    }
+
+    &.text-top .content-grid {
+        align-items: flex-start;
+    }
+
+    &.text-bottom .content-grid {
+        align-items: flex-end;
     }
 }
