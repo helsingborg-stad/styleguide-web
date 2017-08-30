@@ -14995,216 +14995,62 @@ HelsingborgPrime.Args = (function ($) {
 
 })(jQuery);
 
-//
-// @name Cookie consent
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.CookieConsent = (function ($) {
-
-    var _cookieConsentVisible = false;
-    var _useLocalStorage = true;
-    var _animationSpeed = 1000;
-
-    function CookieConsent() {
-        this.init();
+/*!
+ * Bez @VERSION
+ * http://github.com/rdallasgray/bez
+ *
+ * A plugin to convert CSS3 cubic-bezier co-ordinates to jQuery-compatible easing functions
+ *
+ * With thanks to Nikolay Nemshilov for clarification on the cubic-bezier maths
+ * See http://st-on-it.blogspot.com/2011/05/calculating-cubic-bezier-function.html
+ *
+ * Copyright @YEAR Robert Dallas Gray. All rights reserved.
+ * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
+ */
+(function(factory) {
+  if (typeof exports === "object") {
+    factory(require("jquery"));
+  } else if (typeof define === "function" && define.amd) {
+    define(["jquery"], factory);
+  } else {
+    factory(jQuery);
+  }
+}(function($) {
+  $.extend({ bez: function(encodedFuncName, coOrdArray) {
+    if ($.isArray(encodedFuncName)) {
+      coOrdArray = encodedFuncName;
+      encodedFuncName = 'bez_' + coOrdArray.join('_').replace(/\./g, 'p');
     }
-
-    CookieConsent.prototype.init = function () {
-        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
-
-        if (showCookieConsent && !this.hasAccepted()) {
-            this.displayConsent();
-
-            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
-                e.preventDefault();
-                var btn = $(e.target).closest('button');
-                this.accept();
-            }.bind(this));
+    if (typeof $.easing[encodedFuncName] !== "function") {
+      var polyBez = function(p1, p2) {
+        var A = [null, null], B = [null, null], C = [null, null],
+            bezCoOrd = function(t, ax) {
+              C[ax] = 3 * p1[ax], B[ax] = 3 * (p2[ax] - p1[ax]) - C[ax], A[ax] = 1 - C[ax] - B[ax];
+              return t * (C[ax] + t * (B[ax] + t * A[ax]));
+            },
+            xDeriv = function(t) {
+              return C[0] + t * (2 * B[0] + 3 * A[0] * t);
+            },
+            xForT = function(t) {
+              var x = t, i = 0, z;
+              while (++i < 14) {
+                z = bezCoOrd(x, 0) - t;
+                if (Math.abs(z) < 1e-3) break;
+                x -= z / xDeriv(x);
+              }
+              return x;
+            };
+        return function(t) {
+          return bezCoOrd(xForT(t), 1);
         }
-    };
-
-    CookieConsent.prototype.displayConsent = function() {
-        var wrapper = $('body');
-
-        if ($('#wrapper:first-child').length > 0) {
-            wrapper = $('#wrapper:first-child');
-        }
-
-        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
-        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
-            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
-        }
-
-        var buttonText = 'Got it';
-        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
-            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
-        }
-
-        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
-
-        wrapper.prepend('\
-            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
-                <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
-                    <div class="grid-auto">' + consentText + '</div>\
-                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
-                </div></div>\
-            </div>\
-        ');
-
-        $('#cookie-consent').show();
-        _cookieConsentVisible = true;
-    };
-
-    CookieConsent.prototype.hasAccepted = function() {
-        if (_useLocalStorage) {
-            return window.localStorage.getItem('cookie-consent');
-        } else {
-            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
-        }
-    };
-
-    CookieConsent.prototype.accept = function() {
-        $('#cookie-consent').remove();
-        _cookieConsentVisible = false;
-
-        if (_useLocalStorage) {
-            try {
-                window.localStorage.setItem('cookie-consent', true);
-                return true;
-            } catch(e) {
-                return false;
-            }
-        } else {
-            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
-        }
-    };
-
-    return new CookieConsent();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.ModalLimit = (function ($) {
-
-    function ModalLimit() {
-    	this.init();
-
-        $('[data-action="modal-close"]').on('click', function (e) {
-            e.preventDefault();
-            $(e.target).parents('.modal').removeClass('modal-open').hide();
-        });
+      };
+      $.easing[encodedFuncName] = function(x, t, b, c, d) {
+        return c * polyBez([coOrdArray[0], coOrdArray[1]], [coOrdArray[2], coOrdArray[3]])(t/d) + b;
+      }
     }
-
-    ModalLimit.prototype.init = function () {
-	    this.toggleModalClass();
-
-        $(window).bind('hashchange', function() {
-			this.toggleModalClass();
-		}.bind(this));
-
-        $('.modal a[href="#close"]').on('click', function (e) {
-            $('html, body').removeClass('overflow-hidden');
-        });
-    };
-
-    ModalLimit.prototype.toggleModalClass = function(){
-	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
-			$('html').addClass('overflow-hidden');
-		} else {
-			$('html').removeClass('overflow-hidden');
-		}
-    };
-
-    return new ModalLimit();
-
-})(jQuery);
-
-//
-// @name Search top
-// @description  Open the top search
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.SearchTop = (function ($) {
-
-    function SearchTop() {
-        this.bindEvents();
-    }
-
-    SearchTop.prototype.bindEvents = function () {
-        $('.toggle-search-top').on('click', function (e) {
-            this.toggle(e);
-        }.bind(this));
-    };
-
-    SearchTop.prototype.toggle = function (e) {
-        e.preventDefault();
-        $('.search-top').slideToggle(300);
-        $('.search-top').find('input[type=search]').focus();
-    };
-
-    return new SearchTop();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.Share = (function ($) {
-
-    function Share() {
-        $(function(){
-
-            this.handleEvents();
-
-        }.bind(this));
-    }
-
-    Share.prototype.openPopup = function(element) {
-        // Width and height of the popup
-        var width = 626;
-        var height = 305;
-
-        // Gets the href from the button/link
-        var url = $(element).closest('a').attr('href');
-
-        // Calculate popup position
-        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
-        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
-
-        // Popup window features
-        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-
-        // Open popup
-        window.open(url, 'Share', windowFeatures);
-    }
-
-    /**
-     * Keeps track of events
-     * @return {void}
-     */
-    Share.prototype.handleEvents = function() {
-
-        $(document).on('click', '[data-action="share-popup"]', function (e) {
-            e.preventDefault();
-            this.openPopup(e.target);
-        }.bind(this));
-
-    }
-
-    return new Share();
-
-})(jQuery);
+    return encodedFuncName;
+  }});
+}));
 
 //
 // @name Cookies
@@ -16285,6 +16131,164 @@ HelsingborgPrime.Helper.Post = (function ($) {
 
 })(jQuery);
 
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
+
+HelsingborgPrime.ScrollDot.ClickJack = (function ($) {
+
+    var ScrollDotTriggers = [
+        '.scroll-dots li a'
+    ];
+
+    var ScrollDotTargets = [
+        'section',
+    ];
+
+    var ScrollDotSettings = {
+        scrollSpeed: 450,
+        scrollOffset: 0
+    };
+
+    function ClickJack() {
+        ScrollDotTriggers.forEach(function(element) {
+            if($(element).length) {
+                $(element).each(function(index,item) {
+                    if(this.isAnchorLink($(item).attr('href')) && this.anchorLinkExists($(item).attr('href'))) {
+                        this.bindScrollDot(item,$(item).attr('href'));
+                    }
+                }.bind(this));
+            }
+        }.bind(this));
+    }
+
+    ClickJack.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    ClickJack.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        ScrollDotTargets.forEach(function(element) {
+            if($(element + id).length) {
+               linkExist = true;
+               return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    ClickJack.prototype.bindScrollDot = function (trigger,target) {
+        $(trigger).on('click',function(event){
+            event.preventDefault();
+            this.updateHash(target);
+            var targetOffset = $(target).offset();
+            $('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(ScrollDotSettings.scrollOffset))}, ScrollDotSettings.scrollSpeed);
+        }.bind(this));
+    };
+
+    ClickJack.prototype.updateHash = function(hash) {
+        if(history.pushState) {
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
+        } else {
+            window.location.hash = hash;
+        }
+    }
+
+    new ClickJack();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
+
+HelsingborgPrime.ScrollDot.Highlight = (function ($) {
+
+    var ScrollTopValue = 0;
+
+    var ScrollTopOffset = 0;
+
+    var ScrollMenuWrapperActiveClass = 'current';
+
+    var HighlightTrigger = "section.section-split, section.section-full, section.section-featured";
+
+    var ScrollMenuWrapper = [
+        '.scroll-dots'
+    ];
+
+    function Highlight() {
+        ScrollTopValue = $(window).scrollTop();
+        $(window).on('scroll', function (e) {
+            var scrolledToItem = null;
+            ScrollTopValue = $(window).scrollTop() + ScrollTopOffset + $("#site-header").outerHeight();
+            $(HighlightTrigger).each(function (index,item) {
+                if(ScrollTopValue >= $(item).offset().top) {
+                    scrolledToItem = item;
+                    return;
+                }
+            });
+            this.cleanHighlight();
+            this.highlightMenuItem("#" + $(scrolledToItem).attr('id'));
+        }.bind(this));
+    }
+
+    Highlight.prototype.highlightMenuItem = function (id) {
+        if(this.isAnchorLink(id) && this.anchorLinkExists(id)){
+            this.addWrapperClass('is-active');
+            ScrollMenuWrapper.forEach(function(element) {
+                $("a[href='" + id + "']", element).addClass(ScrollMenuWrapperActiveClass);
+            });
+        }
+    };
+
+    Highlight.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    Highlight.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        ScrollMenuWrapper.forEach(function(element) {
+            if($("a[href='" + id + "']",element).length) {
+                linkExist = true;
+                return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    Highlight.prototype.cleanHighlight = function () {
+        this.removeWrapperClass('is-active');
+        ScrollMenuWrapper.forEach(function(element) {
+            $("a",element).removeClass(ScrollMenuWrapperActiveClass);
+        }.bind(this));
+    };
+
+    Highlight.prototype.addWrapperClass = function (class) {
+        ScrollMenuWrapper.forEach(function(element) {
+            $(element).addClass(class);
+        }.bind(this));
+    };
+
+    Highlight.prototype.removeWrapperClass = function (class) {
+        ScrollMenuWrapper.forEach(function(element) {
+            $(element).removeClass(class);
+        }.bind(this));
+    };
+
+    new Highlight();
+
+})(jQuery);
+
 //
 // @name Gallery
 // @description  Popup boxes for gallery items.
@@ -16712,221 +16716,6 @@ HelsingborgPrime.Component.TagManager = (function ($) {
 
 })(jQuery);
 
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
-
-HelsingborgPrime.ScrollDot.ClickJack = (function ($) {
-
-    var ScrollDotTriggers = [
-        '.scroll-dots li a'
-    ];
-
-    var ScrollDotTargets = [
-        'section',
-    ];
-
-    var ScrollDotSettings = {
-        scrollSpeed: 450,
-        scrollOffset: 0
-    };
-
-    function ClickJack() {
-        ScrollDotTriggers.forEach(function(element) {
-            if($(element).length) {
-                $(element).each(function(index,item) {
-                    if(this.isAnchorLink($(item).attr('href')) && this.anchorLinkExists($(item).attr('href'))) {
-                        this.bindScrollDot(item,$(item).attr('href'));
-                    }
-                }.bind(this));
-            }
-        }.bind(this));
-    }
-
-    ClickJack.prototype.isAnchorLink = function (href) {
-        if(/^#/.test(href) === true && href.length > 1) {
-            return true;
-        } else {
-            return false;
-        }
-    };
-
-    ClickJack.prototype.anchorLinkExists = function (id) {
-        var linkExist = false;
-        ScrollDotTargets.forEach(function(element) {
-            if($(element + id).length) {
-               linkExist = true;
-               return true;
-            }
-        }.bind(this));
-        return linkExist;
-    };
-
-    ClickJack.prototype.bindScrollDot = function (trigger,target) {
-        $(trigger).on('click',function(event){
-            event.preventDefault();
-            this.updateHash(target);
-            var targetOffset = $(target).offset();
-            $('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(ScrollDotSettings.scrollOffset))}, ScrollDotSettings.scrollSpeed);
-        }.bind(this));
-    };
-
-    ClickJack.prototype.updateHash = function(hash) {
-        if(history.pushState) {
-            if(hash === "" ) {
-                history.pushState(null, null, "#");
-            } else {
-                history.pushState(null, null, hash);
-            }
-        } else {
-            window.location.hash = hash;
-        }
-    }
-
-    new ClickJack();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.ScrollDot = HelsingborgPrime.ScrollDot || {};
-
-HelsingborgPrime.ScrollDot.Highlight = (function ($) {
-
-    var ScrollTopValue = 0;
-
-    var ScrollTopOffset = 0;
-
-    var ScrollMenuWrapperActiveClass = 'current';
-
-    var HighlightTrigger = "section.section-split, section.section-full, section.section-featured";
-
-    var ScrollMenuWrapper = [
-        '.scroll-dots'
-    ];
-
-    function Highlight() {
-        ScrollTopValue = $(window).scrollTop();
-        $(window).on('scroll', function (e) {
-            var scrolledToItem = null;
-            ScrollTopValue = $(window).scrollTop() + ScrollTopOffset + $("#site-header").outerHeight();
-            $(HighlightTrigger).each(function (index,item) {
-                if(ScrollTopValue >= $(item).offset().top) {
-                    scrolledToItem = item;
-                    return;
-                }
-            });
-            this.cleanHighlight();
-            this.highlightMenuItem("#" + $(scrolledToItem).attr('id'));
-        }.bind(this));
-    }
-
-    Highlight.prototype.highlightMenuItem = function (id) {
-        if(this.isAnchorLink(id) && this.anchorLinkExists(id)){
-            this.addWrapperClass('is-active');
-            ScrollMenuWrapper.forEach(function(element) {
-                $("a[href='" + id + "']", element).addClass(ScrollMenuWrapperActiveClass);
-            });
-        }
-    };
-
-    Highlight.prototype.isAnchorLink = function (href) {
-        if(/^#/.test(href) === true && href.length > 1) {
-            return true;
-        } else {
-            return false;
-        }
-    };
-
-    Highlight.prototype.anchorLinkExists = function (id) {
-        var linkExist = false;
-        ScrollMenuWrapper.forEach(function(element) {
-            if($("a[href='" + id + "']",element).length) {
-                linkExist = true;
-                return true;
-            }
-        }.bind(this));
-        return linkExist;
-    };
-
-    Highlight.prototype.cleanHighlight = function () {
-        this.removeWrapperClass('is-active');
-        ScrollMenuWrapper.forEach(function(element) {
-            $("a",element).removeClass(ScrollMenuWrapperActiveClass);
-        }.bind(this));
-    };
-
-    Highlight.prototype.addWrapperClass = function (class) {
-        ScrollMenuWrapper.forEach(function(element) {
-            $(element).addClass(class);
-        }.bind(this));
-    };
-
-    Highlight.prototype.removeWrapperClass = function (class) {
-        ScrollMenuWrapper.forEach(function(element) {
-            $(element).removeClass(class);
-        }.bind(this));
-    };
-
-    new Highlight();
-
-})(jQuery);
-
-/*!
- * Bez @VERSION
- * http://github.com/rdallasgray/bez
- *
- * A plugin to convert CSS3 cubic-bezier co-ordinates to jQuery-compatible easing functions
- *
- * With thanks to Nikolay Nemshilov for clarification on the cubic-bezier maths
- * See http://st-on-it.blogspot.com/2011/05/calculating-cubic-bezier-function.html
- *
- * Copyright @YEAR Robert Dallas Gray. All rights reserved.
- * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
- */
-(function(factory) {
-  if (typeof exports === "object") {
-    factory(require("jquery"));
-  } else if (typeof define === "function" && define.amd) {
-    define(["jquery"], factory);
-  } else {
-    factory(jQuery);
-  }
-}(function($) {
-  $.extend({ bez: function(encodedFuncName, coOrdArray) {
-    if ($.isArray(encodedFuncName)) {
-      coOrdArray = encodedFuncName;
-      encodedFuncName = 'bez_' + coOrdArray.join('_').replace(/\./g, 'p');
-    }
-    if (typeof $.easing[encodedFuncName] !== "function") {
-      var polyBez = function(p1, p2) {
-        var A = [null, null], B = [null, null], C = [null, null],
-            bezCoOrd = function(t, ax) {
-              C[ax] = 3 * p1[ax], B[ax] = 3 * (p2[ax] - p1[ax]) - C[ax], A[ax] = 1 - C[ax] - B[ax];
-              return t * (C[ax] + t * (B[ax] + t * A[ax]));
-            },
-            xDeriv = function(t) {
-              return C[0] + t * (2 * B[0] + 3 * A[0] * t);
-            },
-            xForT = function(t) {
-              var x = t, i = 0, z;
-              while (++i < 14) {
-                z = bezCoOrd(x, 0) - t;
-                if (Math.abs(z) < 1e-3) break;
-                x -= z / xDeriv(x);
-              }
-              return x;
-            };
-        return function(t) {
-          return bezCoOrd(xForT(t), 1);
-        }
-      };
-      $.easing[encodedFuncName] = function(x, t, b, c, d) {
-        return c * polyBez([coOrdArray[0], coOrdArray[1]], [coOrdArray[2], coOrdArray[3]])(t/d) + b;
-      }
-    }
-    return encodedFuncName;
-  }});
-}));
-
 //
 // @name Modal
 // @description  Show accodrion dropdown, make linkable by updating adress bar
@@ -17164,5 +16953,216 @@ HelsingborgPrime.Component.Slider = (function ($) {
     };
 
     return new Slider();
+
+})(jQuery);
+
+//
+// @name Cookie consent
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.CookieConsent = (function ($) {
+
+    var _cookieConsentVisible = false;
+    var _useLocalStorage = true;
+    var _animationSpeed = 1000;
+
+    function CookieConsent() {
+        this.init();
+    }
+
+    CookieConsent.prototype.init = function () {
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+
+        if (showCookieConsent && !this.hasAccepted()) {
+            this.displayConsent();
+
+            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                e.preventDefault();
+                var btn = $(e.target).closest('button');
+                this.accept();
+            }.bind(this));
+        }
+    };
+
+    CookieConsent.prototype.displayConsent = function() {
+        var wrapper = $('body');
+
+        if ($('#wrapper:first-child').length > 0) {
+            wrapper = $('#wrapper:first-child');
+        }
+
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
+        }
+
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
+        }
+
+        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
+
+        wrapper.prepend('\
+            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
+                <div class="container"><div class="grid grid-table-md grid-va-middle">\
+                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
+                    <div class="grid-auto">' + consentText + '</div>\
+                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
+                </div></div>\
+            </div>\
+        ');
+
+        $('#cookie-consent').show();
+        _cookieConsentVisible = true;
+    };
+
+    CookieConsent.prototype.hasAccepted = function() {
+        if (_useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
+    };
+
+    CookieConsent.prototype.accept = function() {
+        $('#cookie-consent').remove();
+        _cookieConsentVisible = false;
+
+        if (_useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
+    };
+
+    return new CookieConsent();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
+
+    function ModalLimit() {
+    	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
+    }
+
+    ModalLimit.prototype.init = function () {
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
+		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
+    };
+
+    ModalLimit.prototype.toggleModalClass = function(){
+	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('html').removeClass('overflow-hidden');
+		}
+    };
+
+    return new ModalLimit();
+
+})(jQuery);
+
+//
+// @name Search top
+// @description  Open the top search
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.SearchTop = (function ($) {
+
+    function SearchTop() {
+        this.bindEvents();
+    }
+
+    SearchTop.prototype.bindEvents = function () {
+        $('.toggle-search-top').on('click', function (e) {
+            this.toggle(e);
+        }.bind(this));
+    };
+
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
+        $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
+    };
+
+    return new SearchTop();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.Share = (function ($) {
+
+    function Share() {
+        $(function(){
+
+            this.handleEvents();
+
+        }.bind(this));
+    }
+
+    Share.prototype.openPopup = function(element) {
+        // Width and height of the popup
+        var width = 626;
+        var height = 305;
+
+        // Gets the href from the button/link
+        var url = $(element).closest('a').attr('href');
+
+        // Calculate popup position
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+        // Popup window features
+        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+
+        // Open popup
+        window.open(url, 'Share', windowFeatures);
+    }
+
+    /**
+     * Keeps track of events
+     * @return {void}
+     */
+    Share.prototype.handleEvents = function() {
+
+        $(document).on('click', '[data-action="share-popup"]', function (e) {
+            e.preventDefault();
+            this.openPopup(e.target);
+        }.bind(this));
+
+    }
+
+    return new Share();
 
 })(jQuery);
