@@ -30,7 +30,12 @@
 
 .section.text-color-dark {
     .section-text {
-        p, ul, ol, h1, h2, h3, h4, h5, h6 {
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $palette-4;
+        }
+
+        p, ul, ol {
             color: $black;
         }
     }
