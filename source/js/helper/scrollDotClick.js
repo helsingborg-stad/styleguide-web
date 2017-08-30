@@ -8,9 +8,7 @@ HelsingborgPrime.ScrollDot.ClickJack = (function ($) {
     ];
 
     var ScrollDotTargets = [
-        'section.section-featured',
-        'section.section-full',
-        'section.section-split'
+        'section',
     ];
 
     var ScrollDotSettings = {
