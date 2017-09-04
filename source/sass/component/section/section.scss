@@ -336,3 +336,9 @@
         }
     }
 }
+
+/* Margin to submodules */
+
+.grid + .grid.section-submodules {
+    margin-top: $grid-gutter-md*2;
+}
