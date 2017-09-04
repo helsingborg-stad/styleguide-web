@@ -91,32 +91,24 @@
 
     /* Image alignment */
 
-    &.image-left {
-        .content-grid {
-            flex-direction: row;
 
-            @media screen and #{$screen-lg-up} {
-                text-align: left;
-            }
-        }
-        .section-article {
-            margin-left: auto;
-
-        }
-    }
-
-    &.image-right {
-        .content-grid {
-            flex-direction: row-reverse;
-
-            h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, ol, ul {
+        &.image-left {
+            .section-article {
                 margin-left: auto;
             }
-
         }
-        .section-article {
-            margin-right: auto;
 
+        &.image-right {
+            .section-article {
+                margin-right: auto;
+            }
+        }
+    @media screen and #{$screen-below-lg} {
+        &.image-left, &.image-right {
+            .section-article {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 

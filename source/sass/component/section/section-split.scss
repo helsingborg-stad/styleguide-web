@@ -35,12 +35,14 @@
 
 .section-split {
 
-      .section-article {
+
+
+    .section-article {
         max-width: 700px;
         margin: auto;
     }
 
-    position: relative;
+
 
     @media screen and #{$screen-below-md} {
 
@@ -60,13 +62,12 @@
 
     @media screen and #{$screen-md-up} {
         .section-article {
-        padding-left: $content-gutter * 4;
-        padding-right: $content-gutter * 4;
+            padding-left: $content-gutter * 4;
+            padding-right: $content-gutter * 4;
         }
 
         &:after,
         .section-image {
-
             content: "";
             z-index: 5;
             background-color: $creamy;
@@ -112,7 +113,6 @@
     }
 
     /* Height inherit */
-
 
     @media screen and #{$screen-md-up} {
         > .container {

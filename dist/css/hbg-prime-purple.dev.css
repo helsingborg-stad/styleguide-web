@@ -3997,6 +3997,16 @@ b {
     .container:not(.container-fullwidth) {
       margin: 0 10px; } }
 
+@media (min-width: 469px) and (max-width: 768px) {
+  /* line 28, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/layout/_container.scss */
+  .container.container-fullwidth {
+    margin: 0 20px; } }
+
+@media (min-width: 0) and (max-width: 468px) {
+  /* line 28, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/layout/_container.scss */
+  .container.container-fullwidth {
+    margin: 0 10px; } }
+
 /* line 28, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/layout/_grid.scss */
 .grid {
   width: auto; }
@@ -14730,16 +14740,16 @@ img[src$=".svg"].footer-signature {
   width: 100%;
   height: 100%;
   left: 0;
-  z-index: 1200; }
+  z-index: 3000; }
 
 /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay .container {
   position: relative;
-  z-index: 2000; }
+  z-index: 4000 !important; }
 
 /* line 59, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-hi .overlay {
-  opacity: 0.75; }
+  opacity: 0.25; }
 
 /* line 60, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-md .overlay {
@@ -14747,7 +14757,7 @@ img[src$=".svg"].footer-signature {
 
 /* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-lo .overlay {
-  opacity: 0.25; }
+  opacity: 0.75; }
 
 /* Text color */
 /* line 70, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
@@ -15003,32 +15013,31 @@ img[src$=".svg"].footer-signature {
 
 /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
 .section-split {
-  position: relative;
   /* Image alignment */
   /* Height inherit */
   /* Vertical alignment */ }
-  /* line 38, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 40, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split .section-article {
     max-width: 700px;
     margin: auto; }
   @media screen and (max-width: 769px) {
-    /* line 47, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+    /* line 49, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
     .section-split.padding-sm .section-article,
     .section-split.padding-md .section-article,
     .section-split.padding-lg .section-article {
       padding-top: 0;
       padding-bottom: 0; }
-    /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+    /* line 56, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
     .section-split.section-sm .section-article,
     .section-split.section-md .section-article,
     .section-split.section-lg .section-article {
       min-height: 0; } }
   @media screen and (min-width: 769px) {
-    /* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+    /* line 64, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
     .section-split .section-article {
       padding-left: 60px;
       padding-right: 60px; }
-    /* line 67, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+    /* line 69, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
     .section-split:after,
     .section-split .section-image {
       content: "";
@@ -15037,24 +15046,24 @@ img[src$=".svg"].footer-signature {
       background-size: cover;
       background-position: center; } }
   @media screen and (max-width: 769px) {
-    /* line 79, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+    /* line 80, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
     .section-split .btn {
       display: block;
       text-align: center; } }
-  /* line 85, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 86, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split .section-image {
     z-index: 7;
     background-color: inherit; }
-  /* line 90, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 91, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split .section-image-mobile {
     background-size: cover; }
-  /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split .section-submodules {
     margin-top: 30px; }
-  /* line 103, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 104, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split.image-left .grid {
     justify-content: flex-end; }
-  /* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
+  /* line 110, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-split.scss */
   .section-split.image-right .grid {
     justify-content: flex-start; }
   @media screen and (min-width: 769px) {
@@ -15083,11 +15092,11 @@ img[src$=".svg"].footer-signature {
   /* Vertical alignment */ }
   /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full .section-article {
+    text-align: center;
     max-width: 800px; }
     @media screen and (min-width: 769px) {
       /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
       .section-full .section-article {
-        text-align: center;
         margin: 0 auto; } }
   /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full .grid.content-grid {
@@ -15100,11 +15109,11 @@ img[src$=".svg"].footer-signature {
     .section-full .section-title {
       margin-left: auto;
       margin-right: auto; } }
-  /* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+  /* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full:not(.columnize-2):not(.columnize-3) .column-enabler p:first-child, .section-full:not(.columnize-2):not(.columnize-3) .column-enabler ul:first-child, .section-full:not(.columnize-2):not(.columnize-3) .column-enabler ol:first-child {
     margin-top: 15px; }
   @media screen and (min-width: 769px) {
-    /* line 71, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+    /* line 70, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
     .section-full.columnize-2 .section-text div {
       column-count: 2;
       column-gap: 60px;
@@ -15112,28 +15121,28 @@ img[src$=".svg"].footer-signature {
       max-width: 800px;
       margin-left: auto;
       margin-right: auto; }
-    /* line 80, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+    /* line 79, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
     .section-full.columnize-3 .section-text div {
       column-count: 3;
       column-gap: 30px;
       text-align: left; } }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 89, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+    /* line 88, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+    /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 30px; } }
-  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+  /* line 101, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full.text-middle {
     align-items: center;
     display: flex; }
-  /* line 107, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+  /* line 106, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full.text-top {
     align-items: flex-start;
     display: flex; }
-  /* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
+  /* line 111, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-full.scss */
   .section-full.text-bottom {
     align-items: flex-end;
     display: flex; }
@@ -15185,34 +15194,26 @@ img[src$=".svg"].footer-signature {
       .section-featured .section-image {
         margin-bottom: 30px;
         margin-top: 30px; } }
-  /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
-  .section-featured.image-left .content-grid {
-    flex-direction: row; }
-    @media screen and (min-width: 961px) {
-      /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
-      .section-featured.image-left .content-grid {
-        text-align: left; } }
-  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 96, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .section-article {
     margin-left: auto; }
-  /* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
-  .section-featured.image-right .content-grid {
-    flex-direction: row-reverse; }
-    /* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
-    .section-featured.image-right .content-grid h1, .section-featured.image-right .content-grid .h1, .section-featured.image-right .content-grid h2, .section-featured.image-right .content-grid .h2, .section-featured.image-right .content-grid h3, .section-featured.image-right .content-grid .h3, .section-featured.image-right .content-grid h4, .section-featured.image-right .content-grid .widget_calendar caption, .widget_calendar .section-featured.image-right .content-grid caption, .section-featured.image-right .content-grid .h4, .section-featured.image-right .content-grid h5, .section-featured.image-right .content-grid .h5, .section-featured.image-right .content-grid h6, .section-featured.image-right .content-grid .h6, .section-featured.image-right .content-grid p, .section-featured.image-right .content-grid ol, .section-featured.image-right .content-grid ul {
-      margin-left: auto; }
-  /* line 117, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .section-article {
     margin-right: auto; }
-  /* line 128, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  @media screen and (max-width: 961px) {
+    /* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+    .section-featured.image-left .section-article, .section-featured.image-right .section-article {
+      margin-left: auto;
+      margin-right: auto; } }
+  /* line 120, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-middle .section-content {
     align-items: center;
     display: flex; }
-  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 128, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-top .section-content {
     align-items: flex-start;
     display: flex; }
-  /* line 144, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-bottom .section-content {
     align-items: flex-end;
     display: flex; }

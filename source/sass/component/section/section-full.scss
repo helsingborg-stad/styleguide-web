@@ -35,10 +35,10 @@
 
     .section-article {
         @media screen and #{$screen-md-up} {
-            text-align: center;
+
             margin: 0 auto;
         }
-
+        text-align: center;
         max-width: 800px;
     }
 
@@ -51,7 +51,6 @@
     }
 
     .section-title {
-
         @media screen and #{$screen-md-up} {
             margin-left: auto;
             margin-right: auto;
