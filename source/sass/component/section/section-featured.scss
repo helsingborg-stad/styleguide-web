@@ -70,7 +70,7 @@
         img[src$=".jpeg"],
         img[src$=".png"] {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
 
         img[src$=".svg"],

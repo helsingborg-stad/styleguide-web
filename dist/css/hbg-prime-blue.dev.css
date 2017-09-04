@@ -15181,7 +15181,7 @@ img[src$=".svg"].footer-signature {
     .section-featured .section-image img[src$=".jpeg"],
     .section-featured .section-image img[src$=".png"] {
       width: 100%;
-      height: auto; }
+      height: 100%; }
     /* line 76, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img[src$=".svg"],
     .section-featured .section-image svg,
