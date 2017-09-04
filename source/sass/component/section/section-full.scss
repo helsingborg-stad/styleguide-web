@@ -57,17 +57,9 @@
         }
     }
 
-    &:not(.columnize-2):not(.columnize-3) .column-enabler {
-        p, ul, ol {
-            &:first-child {
-                margin-top: $grid-gutter-md/2;
-            }
-        }
-    }
-
     @media screen and #{$screen-md-up} {
 
-        &.columnize-2 .section-text div {
+        &.columnize-2 .section-text {
             column-count: 2;
             column-gap: $grid-gutter-lg*2;
             text-align: left;
@@ -76,7 +68,7 @@
             margin-right: auto;
         }
 
-        &.columnize-3 .section-text div {
+        &.columnize-3 .section-text {
             column-count: 3;
             column-gap: $grid-gutter-md;
             text-align: left;
