@@ -15663,6 +15663,217 @@ HelsingborgPrime.Component.Slider = (function ($) {
 })(jQuery);
 
 //
+// @name Cookie consent
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.CookieConsent = (function ($) {
+
+    var _cookieConsentVisible = false;
+    var _useLocalStorage = true;
+    var _animationSpeed = 1000;
+
+    function CookieConsent() {
+        this.init();
+    }
+
+    CookieConsent.prototype.init = function () {
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+
+        if (showCookieConsent && !this.hasAccepted()) {
+            this.displayConsent();
+
+            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                e.preventDefault();
+                var btn = $(e.target).closest('button');
+                this.accept();
+            }.bind(this));
+        }
+    };
+
+    CookieConsent.prototype.displayConsent = function() {
+        var wrapper = $('body');
+
+        if ($('#wrapper:first-child').length > 0) {
+            wrapper = $('#wrapper:first-child');
+        }
+
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
+        }
+
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
+        }
+
+        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
+
+        wrapper.prepend('\
+            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
+                <div class="container"><div class="grid grid-table-md grid-va-middle">\
+                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
+                    <div class="grid-auto">' + consentText + '</div>\
+                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
+                </div></div>\
+            </div>\
+        ');
+
+        $('#cookie-consent').show();
+        _cookieConsentVisible = true;
+    };
+
+    CookieConsent.prototype.hasAccepted = function() {
+        if (_useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
+    };
+
+    CookieConsent.prototype.accept = function() {
+        $('#cookie-consent').remove();
+        _cookieConsentVisible = false;
+
+        if (_useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
+    };
+
+    return new CookieConsent();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
+
+    function ModalLimit() {
+    	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
+    }
+
+    ModalLimit.prototype.init = function () {
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
+		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
+    };
+
+    ModalLimit.prototype.toggleModalClass = function(){
+	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('html').removeClass('overflow-hidden');
+		}
+    };
+
+    return new ModalLimit();
+
+})(jQuery);
+
+//
+// @name Search top
+// @description  Open the top search
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.SearchTop = (function ($) {
+
+    function SearchTop() {
+        this.bindEvents();
+    }
+
+    SearchTop.prototype.bindEvents = function () {
+        $('.toggle-search-top').on('click', function (e) {
+            this.toggle(e);
+        }.bind(this));
+    };
+
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
+        $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
+    };
+
+    return new SearchTop();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.Share = (function ($) {
+
+    function Share() {
+        $(function(){
+
+            this.handleEvents();
+
+        }.bind(this));
+    }
+
+    Share.prototype.openPopup = function(element) {
+        // Width and height of the popup
+        var width = 626;
+        var height = 305;
+
+        // Gets the href from the button/link
+        var url = $(element).closest('a').attr('href');
+
+        // Calculate popup position
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+        // Popup window features
+        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+
+        // Open popup
+        window.open(url, 'Share', windowFeatures);
+    }
+
+    /**
+     * Keeps track of events
+     * @return {void}
+     */
+    Share.prototype.handleEvents = function() {
+
+        $(document).on('click', '[data-action="share-popup"]', function (e) {
+            e.preventDefault();
+            this.openPopup(e.target);
+        }.bind(this));
+
+    }
+
+    return new Share();
+
+})(jQuery);
+
+//
 // @name Cookies
 //
 HelsingborgPrime = HelsingborgPrime || {};
@@ -16899,6 +17110,184 @@ HelsingborgPrime.ScrollDot.Highlight = (function ($) {
 
 })(jQuery);
 
+var withinViewport = (function() {
+
+  // Cutting the mustard
+  // http://webfieldmanual.com/guides/cutting-the-mustard.html
+
+  if (window.requestAnimationFrame && document.documentElement.classList) {
+
+    // Passes the test so add enhanced class to HTML tag
+    document.documentElement.classList.add('enhanced');
+
+    // Throttle
+    // https://underscorejs.org/#throttle
+    var throttle = function(func, wait, options) {
+      var _ = {
+        now: Date.now || function() {
+          return new Date().getTime();
+        }
+      };
+      var context, args, result;
+      var timeout = null;
+      var previous = 0;
+      if (!options) {
+        options = {};
+      }
+      var later = function() {
+        previous = options.leading === false ? 0 : _.now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) {
+          context = args = null;
+        }
+      };
+      return function() {
+        var now = _.now();
+        if (!previous && options.leading === false) {
+          previous = now;
+        }
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+          if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+          }
+          previous = now;
+          result = func.apply(context, args);
+          if (!timeout) {
+            context = args = null;
+          }
+        } else if (!timeout && options.trailing !== false) {
+          timeout = setTimeout(later, remaining);
+        }
+        return result;
+      };
+    };
+
+    // requestAnimationFrame
+    // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+    var _requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame;
+
+    // Global class for revealing element
+    var revealer = document.querySelectorAll('.animate');
+                   document.documentElement.classList.add('scroll-animations-enabled');
+
+    // Get the viewport (window) dimensions
+    var getViewportSize = function() {
+      return {
+        width: window.document.documentElement.clientWidth,
+        height: window.document.documentElement.clientHeight
+      };
+    };
+
+    // Get the current scoll position
+    var getCurrentScroll = function() {
+      return {
+        x: window.pageXOffset,
+        y: window.pageYOffset
+      };
+    };
+
+    // Get element dimensions and position
+    var getElemInfo = function(elem) {
+      var offsetTop = 0;
+      var offsetLeft = 0;
+      var offsetHeight = elem.offsetHeight;
+      var offsetWidth = elem.offsetWidth;
+
+      do {
+        if (!isNaN(elem.offsetTop)) {
+          offsetTop += elem.offsetTop;
+        }
+        if (!isNaN(elem.offsetLeft)) {
+          offsetLeft += elem.offsetLeft;
+        }
+      } while ((elem = elem.offsetParent) !== null);
+
+      return {
+        top: offsetTop,
+        left: offsetLeft,
+        height: offsetHeight,
+        width: offsetWidth
+      };
+    };
+
+    // Check visibility of the element in the viewport
+    var checkVisibility = function(elem) {
+      var viewportSize = getViewportSize();
+      var currentScroll = getCurrentScroll();
+      var elemInfo = getElemInfo(elem);
+      var spaceOffset = 0.2;
+      var elemHeight = elemInfo.height;
+      var elemWidth = elemInfo.width;
+      var elemTop = elemInfo.top;
+      var elemLeft = elemInfo.left;
+      var elemBottom = elemTop + elemHeight;
+      var elemRight = elemLeft + elemWidth;
+
+      var checkBoundaries = function() {
+        // Defining the element boundaries and extra space offset
+        var top = elemTop + elemHeight * spaceOffset;
+        var left = elemLeft + elemWidth * spaceOffset;
+        var bottom = elemBottom - elemHeight * spaceOffset;
+        var right = elemRight - elemWidth * spaceOffset;
+
+        // Defining the window boundaries and window offset
+        var wTop = currentScroll.y + 0;
+        var wLeft = currentScroll.x + 0;
+        var wBottom = currentScroll.y - 0 + viewportSize.height;
+        var wRight = currentScroll.x - 0 + viewportSize.width;
+
+        // Check if the element is within boundary
+        return (top < wBottom) && (bottom > wTop) && (left > wLeft) && (right < wRight);
+      };
+
+      return checkBoundaries();
+    };
+
+    // Run a loop with checkVisibility() and add / remove classes to the elements
+    var toggleElement = function() {
+      for (var i = 0; i < revealer.length; i++) {
+        if (checkVisibility(revealer[i])) {
+          revealer[i].classList.add('animated');
+        } else {
+          revealer[i].classList.remove('animated');
+        }
+      }
+    };
+
+    // Throttle events and requestAnimationFrame
+    var scrollHandler = throttle(function() {
+      _requestAnimationFrame(toggleElement);
+    }, 300);
+
+    var resizeHandler = throttle(function() {
+      _requestAnimationFrame(toggleElement);
+    }, 300);
+
+    scrollHandler();
+
+    // Listening for events
+    if (window.addEventListener) {
+      addEventListener('scroll', scrollHandler, false);
+      addEventListener('resize', resizeHandler, false);
+    } else if (window.attachEvent) {
+      window.attachEvent('onscroll', scrollHandler);
+      window.attachEvent('onresize', resizeHandler);
+    } else {
+      window.onscroll = scrollHandler;
+      window.onresize = resizeHandler;
+    }
+
+  }
+
+  return withinViewport;
+
+}());
+
 /*!
  * Bez @VERSION
  * http://github.com/rdallasgray/bez
@@ -16955,214 +17344,3 @@ HelsingborgPrime.ScrollDot.Highlight = (function ($) {
     return encodedFuncName;
   }});
 }));
-
-//
-// @name Cookie consent
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.CookieConsent = (function ($) {
-
-    var _cookieConsentVisible = false;
-    var _useLocalStorage = true;
-    var _animationSpeed = 1000;
-
-    function CookieConsent() {
-        this.init();
-    }
-
-    CookieConsent.prototype.init = function () {
-        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
-
-        if (showCookieConsent && !this.hasAccepted()) {
-            this.displayConsent();
-
-            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
-                e.preventDefault();
-                var btn = $(e.target).closest('button');
-                this.accept();
-            }.bind(this));
-        }
-    };
-
-    CookieConsent.prototype.displayConsent = function() {
-        var wrapper = $('body');
-
-        if ($('#wrapper:first-child').length > 0) {
-            wrapper = $('#wrapper:first-child');
-        }
-
-        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
-        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
-            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
-        }
-
-        var buttonText = 'Got it';
-        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
-            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
-        }
-
-        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
-
-        wrapper.prepend('\
-            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
-                <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
-                    <div class="grid-auto">' + consentText + '</div>\
-                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
-                </div></div>\
-            </div>\
-        ');
-
-        $('#cookie-consent').show();
-        _cookieConsentVisible = true;
-    };
-
-    CookieConsent.prototype.hasAccepted = function() {
-        if (_useLocalStorage) {
-            return window.localStorage.getItem('cookie-consent');
-        } else {
-            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
-        }
-    };
-
-    CookieConsent.prototype.accept = function() {
-        $('#cookie-consent').remove();
-        _cookieConsentVisible = false;
-
-        if (_useLocalStorage) {
-            try {
-                window.localStorage.setItem('cookie-consent', true);
-                return true;
-            } catch(e) {
-                return false;
-            }
-        } else {
-            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
-        }
-    };
-
-    return new CookieConsent();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.ModalLimit = (function ($) {
-
-    function ModalLimit() {
-    	this.init();
-
-        $('[data-action="modal-close"]').on('click', function (e) {
-            e.preventDefault();
-            $(e.target).parents('.modal').removeClass('modal-open').hide();
-        });
-    }
-
-    ModalLimit.prototype.init = function () {
-	    this.toggleModalClass();
-
-        $(window).bind('hashchange', function() {
-			this.toggleModalClass();
-		}.bind(this));
-
-        $('.modal a[href="#close"]').on('click', function (e) {
-            $('html, body').removeClass('overflow-hidden');
-        });
-    };
-
-    ModalLimit.prototype.toggleModalClass = function(){
-	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
-			$('html').addClass('overflow-hidden');
-		} else {
-			$('html').removeClass('overflow-hidden');
-		}
-    };
-
-    return new ModalLimit();
-
-})(jQuery);
-
-//
-// @name Search top
-// @description  Open the top search
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.SearchTop = (function ($) {
-
-    function SearchTop() {
-        this.bindEvents();
-    }
-
-    SearchTop.prototype.bindEvents = function () {
-        $('.toggle-search-top').on('click', function (e) {
-            this.toggle(e);
-        }.bind(this));
-    };
-
-    SearchTop.prototype.toggle = function (e) {
-        e.preventDefault();
-        $('.search-top').slideToggle(300);
-        $('.search-top').find('input[type=search]').focus();
-    };
-
-    return new SearchTop();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.Share = (function ($) {
-
-    function Share() {
-        $(function(){
-
-            this.handleEvents();
-
-        }.bind(this));
-    }
-
-    Share.prototype.openPopup = function(element) {
-        // Width and height of the popup
-        var width = 626;
-        var height = 305;
-
-        // Gets the href from the button/link
-        var url = $(element).closest('a').attr('href');
-
-        // Calculate popup position
-        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
-        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
-
-        // Popup window features
-        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-
-        // Open popup
-        window.open(url, 'Share', windowFeatures);
-    }
-
-    /**
-     * Keeps track of events
-     * @return {void}
-     */
-    Share.prototype.handleEvents = function() {
-
-        $(document).on('click', '[data-action="share-popup"]', function (e) {
-            e.preventDefault();
-            this.openPopup(e.target);
-        }.bind(this));
-
-    }
-
-    return new Share();
-
-})(jQuery);
