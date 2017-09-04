@@ -138,4 +138,11 @@
         }
 
     }
+
+
+    /*  Image Frame */
+    &.image-frame-width-lg img {border: solid 10px;}
+    &.image-frame-width-md img {border: solid 7px;}
+    &.image-frame-width-sm img {border: solid 5px;}
+
 }

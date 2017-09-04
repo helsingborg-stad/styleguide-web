@@ -81,12 +81,16 @@
     .section-article {
 
         h1, h2, h3, h4, h5, h6 {
-            color: rgba(255, 255, 255, 0.87);
+            color: white;
         }
 
         p, ul, ol {
-            color: rgba(255, 255, 255, 0.87);
+            color: white;
         }
+    }
+
+    a.no-color {
+        color: white;
     }
 }
 
