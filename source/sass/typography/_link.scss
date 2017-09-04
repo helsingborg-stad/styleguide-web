@@ -9,6 +9,10 @@ a,
     }
 }
 
+a.no-color {
+    color: $base-font-color;
+}
+
 .mce-content-body a:not([class]),
 article a:not([class]),
 article a.link-item {

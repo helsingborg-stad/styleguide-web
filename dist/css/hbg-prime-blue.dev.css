@@ -7082,6 +7082,10 @@ a,
     text-decoration: underline; }
 
 /* line 12, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+a.no-color {
+  color: #252525; }
+
+/* line 16, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 .mce-content-body a:not([class]),
 article a:not([class]),
 article a.link-item,
@@ -7105,7 +7109,7 @@ article
 article a {
   color: #0069b4;
   text-decoration: underline; }
-  /* line 18, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+  /* line 22, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):hover,
   article a:not([class]):hover,
   article a.link-item:hover,
@@ -7128,7 +7132,7 @@ article a {
   .widget_recent_comments
   article a:hover {
     color: #0095db; }
-  /* line 22, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+  /* line 26, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
   .mce-content-body a:not([class]):visited,
   article a:not([class]):visited,
   article a.link-item:visited,
@@ -7151,7 +7155,7 @@ article a {
   .widget_recent_comments
   article a:visited {
     color: #712082; }
-    /* line 25, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+    /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
     .mce-content-body a:not([class]):visited:hover,
     article a:not([class]):visited:hover,
     article a.link-item:visited:hover,
@@ -7175,7 +7179,7 @@ article a {
     article a:visited:hover {
       color: #a61380; }
 
-/* line 31, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+/* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box,
 .link-box a {
   display: block;
@@ -7185,27 +7189,27 @@ a.link-box,
   border-radius: 3px;
   overflow: hidden;
   color: #fff; }
-  /* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+  /* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
   a.link-box:hover,
   .link-box a:hover {
     background-color: #005a9b; }
 
-/* line 46, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+/* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(2),
 .link-box:nth-of-type(2) a {
   background-color: #005c86; }
 
-/* line 51, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+/* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
   background-color: #0095db; }
 
-/* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+/* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
   background-color: #5ba1d8; }
 
-/* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
+/* line 65, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 .link-box + .link-box {
   margin-top: 5px; }
 
@@ -11906,17 +11910,10 @@ a.box-news:hover {
       transform: translate(-50%, -50%);
       height: 100%;
       width: auto; }
-  /* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
-  .box-news-circular .box-content h3 {
-    font-size: 1.2em; }
-  /* line 215, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
-  .box-news-circular p {
-    color: #252525;
-    text-decoration: none; }
-  /* line 220, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
+  /* line 209, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
   .box-news-circular:hover {
     text-decoration: none; }
-    /* line 223, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
+    /* line 212, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_news.scss */
     .box-news-circular:hover h3 {
       text-decoration: underline; }
 
