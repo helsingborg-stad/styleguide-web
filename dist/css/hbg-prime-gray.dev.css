@@ -15019,18 +15019,10 @@ img[src$=".svg"].footer-signature {
 
 /* General animations */
 /* line 346, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-.scroll-animations-enabled .section.animate .section-content,
-.scroll-animations-enabled .section.animate .section-submodules,
-.scroll-animations-enabled .section.animate .section-image {
-  opacity: 0;
-  transition: 100ms opacity; }
-
-/* line 353, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
 .scroll-animations-enabled .section.animate.animated .section-content,
 .scroll-animations-enabled .section.animate.animated .section-submodules,
 .scroll-animations-enabled .section.animate.animated .section-image {
-  animation: fade-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  opacity: 1; }
+  animation: fade-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 /**
  * ----------------------------------------
