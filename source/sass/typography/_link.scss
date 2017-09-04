@@ -1,4 +1,4 @@
-a:not(.no-color),
+a,
 .link {
     color: $palette-4;
     text-decoration: none;
@@ -7,6 +7,10 @@ a:not(.no-color),
     &:focus {
         text-decoration: underline;
     }
+}
+
+a.no-color {
+    color: $base-font-color;
 }
 
 .mce-content-body a:not([class]),
