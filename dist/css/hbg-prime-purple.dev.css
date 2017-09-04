@@ -7071,12 +7071,12 @@ li + li.title {
   margin-top: 8px; }
 
 /* line 1, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/typography/_link.scss */
-a,
+a:not(.no-color),
 .link {
   color: #7b075e;
   text-decoration: none; }
   /* line 6, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/typography/_link.scss */
-  a:hover, a:focus,
+  a:not(.no-color):hover, a:not(.no-color):focus,
   .link:hover,
   .link:focus {
     text-decoration: underline; }
