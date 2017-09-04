@@ -349,6 +349,7 @@
     .section.animate .section-submodules,
     .section.animate .section-image {
         opacity: 0;
+        transition: 100ms opacity;
     }
 
     .section.animate.animated .section-content,
