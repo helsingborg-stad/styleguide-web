@@ -8,7 +8,7 @@
 // <div class="container"></div>
 //
 
-.container {
+.container:not(.container-fullwidth) {
     margin: 0 auto;
     max-width: $screen-lg-max;
 

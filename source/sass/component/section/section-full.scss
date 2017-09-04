@@ -38,16 +38,21 @@
             text-align: center;
             margin: 0 auto;
         }
+
+        max-width: 800px;
     }
 
     .grid.content-grid {
         flex: 1;
     }
 
+    .container {
+        width: 100%;
+    }
+
     .section-title {
 
         @media screen and #{$screen-md-up} {
-            margin-bottom: $grid-gutter-md;
             margin-left: auto;
             margin-right: auto;
         }

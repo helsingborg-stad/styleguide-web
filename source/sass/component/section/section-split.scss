@@ -35,9 +35,15 @@
 
 .section-split {
 
+      .section-article {
+        max-width: 700px;
+        margin: auto;
+    }
+
     position: relative;
 
     @media screen and #{$screen-below-md} {
+
         &.padding-sm .section-article,
         &.padding-md .section-article,
         &.padding-lg .section-article {
@@ -53,9 +59,14 @@
     }
 
     @media screen and #{$screen-md-up} {
+        .section-article {
+        padding-left: $content-gutter * 4;
+        padding-right: $content-gutter * 4;
+        }
+
         &:after,
         .section-image {
-            @include cover();
+
             content: "";
             z-index: 5;
             background-color: $creamy;
@@ -84,60 +95,24 @@
         margin-top: $grid-gutter-md;
     }
 
-    /* Article paddings */
-    @media screen and #{$screen-xs} {
-        .section-article {
-            margin: $grid-gutter-md 5px;
-        }
-    }
 
-    @media screen and #{$screen-sm} {
-        .section-article {
-            margin: $grid-gutter-md 5px;
-        }
-    }
-
-    @media screen and #{$screen-lg} {
-        &.image-right .section-article {
-            margin: 0 $grid-gutter-md*2 0 0;
-        }
-
-        &.image-left .section-article {
-            margin: 0 0 0 $grid-gutter-md*2;
-        }
-    }
 
     /* Image alignment */
 
     &.image-left {
-        &:after,
-        .section-image {
-            right: 50%;
-            @media screen and #{$screen-below-lg} {
-                right: 61%;
-            }
-        }
         .grid {
             justify-content: flex-end;
         }
     }
 
     &.image-right {
-
-        &:after,
-        .section-image {
-            left: 50%;
-            @media screen and #{$screen-below-lg} {
-                left: 61%;
-            }
-        }
-
         .grid {
             justify-content: flex-start;
         }
     }
 
     /* Height inherit */
+
 
     @media screen and #{$screen-md-up} {
         > .container {
