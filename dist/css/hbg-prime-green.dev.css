@@ -15192,28 +15192,27 @@ img[src$=".svg"].footer-signature {
     @media screen and (max-width: 961px) {
       /* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
       .section-featured .section-image {
-        margin-bottom: 30px;
-        margin-top: 30px; } }
-  /* line 96, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+        margin-bottom: 30px; } }
+  /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .section-article {
     margin-left: auto; }
-  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 101, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .section-article {
     margin-right: auto; }
   @media screen and (max-width: 961px) {
-    /* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+    /* line 107, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
     .section-featured.image-left .section-article, .section-featured.image-right .section-article {
       margin-left: auto;
       margin-right: auto; } }
-  /* line 120, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 119, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-middle .section-content {
     align-items: center;
     display: flex; }
-  /* line 128, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 127, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-top .section-content {
     align-items: flex-start;
     display: flex; }
-  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
+  /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section-featured.scss */
   .section-featured.text-bottom .section-content {
     align-items: flex-end;
     display: flex; }
