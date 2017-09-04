@@ -342,3 +342,49 @@
 .grid + .grid.section-submodules {
     margin-top: $grid-gutter-md*2;
 }
+
+/* General animations */
+.scroll-animations-enabled {
+    .section.animate .section-content,
+    .section.animate .section-submodules,
+    .section.animate .section-image {
+        opacity: 0;
+    }
+
+    .section.animate.animated .section-content,
+    .section.animate.animated .section-submodules,
+    .section.animate.animated .section-image {
+        animation: fade-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        opacity: 1;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}

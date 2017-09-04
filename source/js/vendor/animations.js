@@ -154,9 +154,6 @@ var withinViewport = (function() {
 
     var resizeHandler = throttle(function() {
       _requestAnimationFrame(toggleElement);
-
-      // For demo purposes only
-      fullscreenIntro();
     }, 300);
 
     scrollHandler();
