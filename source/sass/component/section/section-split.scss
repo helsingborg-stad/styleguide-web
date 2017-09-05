@@ -35,14 +35,10 @@
 
 .section-split {
 
-
-
     .section-article {
         max-width: 700px;
         margin: auto;
     }
-
-
 
     @media screen and #{$screen-below-md} {
 
@@ -95,8 +91,6 @@
     .section-submodules {
         margin-top: $grid-gutter-md;
     }
-
-
 
     /* Image alignment */
 

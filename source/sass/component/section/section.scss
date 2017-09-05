@@ -2,17 +2,16 @@
 
 .section {
 
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    min-height: $grid-gutter-md*2;
+
     &.image-right {
         .grid {
             flex-direction: row-reverse;
         }
     }
-
-
-    position: relative;
-    margin: 0;
-    overflow: hidden;
-    min-height: $grid-gutter-md*2;
 
     article {
         margin-bottom: 0;
@@ -39,7 +38,9 @@
 }
 
 /* Overlay Effect */
+
 .section {
+
     &.effect-overlay {
         .overlay {
             top: 0;
@@ -56,9 +57,17 @@
         }
     }
 
-    &.effect-overlay.effect-overlay-opacity-hi .overlay {opacity: 0.25;}
-    &.effect-overlay.effect-overlay-opacity-md .overlay {opacity: 0.50;}
-    &.effect-overlay.effect-overlay-opacity-lo .overlay {opacity: 0.75;}
+    &.effect-overlay.effect-overlay-opacity-hi .overlay {
+        opacity: 0.25;
+    }
+
+    &.effect-overlay.effect-overlay-opacity-md .overlay {
+        opacity: 0.50;
+    }
+
+    &.effect-overlay.effect-overlay-opacity-lo .overlay {
+        opacity: 0.75;
+    }
 }
 
 
