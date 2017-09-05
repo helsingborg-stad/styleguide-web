@@ -68,13 +68,17 @@ HelsingborgPrime.ScrollDot.Highlight = (function ($) {
 
     Highlight.prototype.addWrapperClass = function (class) {
         ScrollMenuWrapper.forEach(function(element) {
-            $(element).addClass(class);
+            if(!$(element).hasClass(class)) {
+                $(element).addClass(class);
+            }
         }.bind(this));
     };
 
     Highlight.prototype.removeWrapperClass = function (class) {
         ScrollMenuWrapper.forEach(function(element) {
-            $(element).removeClass(class);
+            if($(element).hasClass(class)) {
+                $(element).removeClass(class);
+            }
         }.bind(this));
     };
 
