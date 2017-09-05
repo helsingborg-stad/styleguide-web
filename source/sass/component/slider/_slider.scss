@@ -272,7 +272,17 @@ article {
         }
 
         &:not([class*="stripe-"]) {
-            background-color: rgba($palette-2, .9);
+            background-image: inherit;
+            background-size: inherit;
+            background-color: $palette-2;
+            background-blend-mode: multiply;
+            background-position: center bottom;
+
+            /* IE 10 and 11 */
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                background-image: none;
+                background-color: rgba($palette-2, .9);
+            }
 
             &.text-block-left:not([class*=stripe-]),
             &.text-block-right:not([class*=stripe-]) {
