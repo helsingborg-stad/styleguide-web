@@ -1,11 +1,12 @@
 /* General */
 
 .section {
-
+    background: white;
     position: relative;
     margin: 0;
     overflow: hidden;
     min-height: $grid-gutter-md*2;
+    -webkit-backface-visibility: hidden;
 
     &.image-right {
         .grid {
@@ -396,4 +397,66 @@
             transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Section divider */
+$section-pad-sm: 5vh;
+$section-pad-md: 10vh;
+$section-pad-lg: 20vh;
+
+$divider-size: 5.5vw;
+
+.has-divider + div {
+
+    .section.padding-sm:not(.section-split) {
+        padding-top: calc(#{$section-pad-sm} + (#{$divider-size} * 1)) !important;
+    }
+
+    .section.padding-md:not(.section-split) {
+        padding-top: calc(#{$section-pad-md} + (#{$divider-size} * 1)) !important;
+    }
+
+    .section.padding-lg:not(.section-split) {
+        padding-top: calc(#{$section-pad-lg} + (#{$divider-size} * 1)) !important;
+    }
+
+    .section-split.padding-sm .section-article {
+        padding-top: calc(#{$section-pad-sm} + (#{$divider-size} * 1)) !important;
+    }
+    .section-split.padding-md .section-article {
+        padding-top: calc(#{$section-pad-md} + (#{$divider-size} * 1)) !important;
+    }
+    .section-split.padding-lg .section-article {
+        padding-top: calc(#{$section-pad-lg} + (#{$divider-size} * 1)) !important;
+    }
+
+}
+
+.divider-skew, .divider-skew-reverse  {
+    position: relative;
+    overflow: visible;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: $divider-size;
+        background: inherit;
+        position: absolute;
+        bottom: $divider-size / 2 * -1;
+        z-index: $level-4;
+        pointer-events: none;
+    }
+
+    .container {
+        z-index: $level-5;
+        position: relative;
+    }
+}
+
+.divider-skew:after {
+    transform: skew(0, 3deg);
+}
+
+.divider-skew-reverse:after {
+    transform: skew(0, -3deg);
 }
