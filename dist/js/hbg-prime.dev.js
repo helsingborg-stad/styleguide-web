@@ -17252,13 +17252,11 @@ var withinViewport = (function() {
       return checkBoundaries();
     };
 
-    // Run a loop with checkVisibility() and add / remove classes to the elements
+    // Run a loop with checkVisibility() add class
     var toggleElement = function() {
       for (var i = 0; i < revealer.length; i++) {
         if (checkVisibility(revealer[i])) {
           revealer[i].classList.add('animated');
-        } else {
-          revealer[i].classList.remove('animated');
         }
       }
     };
