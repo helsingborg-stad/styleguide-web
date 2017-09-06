@@ -444,7 +444,7 @@ article {
 .slider.ratio-36-7, .slider.ratio-10-3 {
     @media screen and (max-width: $screen-sm-max) {
         max-height: none !important;
-        &:before {padding-top: 75%;}
+        @include aspect-ratio(1, 1);
     }
 }
 

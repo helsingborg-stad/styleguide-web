@@ -12691,10 +12691,25 @@ article .slider {
 @media screen and (max-width: 768px) {
   /* line 444, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider.ratio-36-7, .slider.ratio-10-3 {
-    max-height: none !important; }
-    /* line 447, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    max-height: none !important;
+    position: relative; }
+    /* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_positioning.scss */
     .slider.ratio-36-7:before, .slider.ratio-10-3:before {
-      padding-top: 75%; } }
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%; }
+    /* line 49, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_positioning.scss */
+    .slider.ratio-36-7 > .content,
+    .slider.ratio-36-7 > iframe, .slider.ratio-10-3 > .content,
+    .slider.ratio-10-3 > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important; } }
 
 /* line 451, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
