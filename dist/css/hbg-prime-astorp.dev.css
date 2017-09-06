@@ -14467,25 +14467,28 @@ option {
 /* line 44, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .modularity-mod-social .box-filled {
   padding-bottom: 18px; }
+  /* line 47, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  .modularity-mod-social .box-filled .box-content {
+    padding-bottom: 0px; }
 
-/* line 48, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 52, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .box-filled .mod-social-user time {
   color: #fff;
   font-size: .8em;
   line-height: 1;
   margin-top: 3px; }
 
-/* line 57, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .social-feed-twitter li,
 .social-feed-facebook li {
-  padding: 15px !important; }
+  padding: 15px 0 15px 0 !important; }
 
-/* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 65, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .social-feed-twitter .mod-social-story,
 .social-feed-facebook .mod-social-story {
   margin-top: 10px; }
 
-/* line 65, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 69, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .social-feed-twitter .mod-social-attachment,
 .social-feed-facebook .mod-social-attachment {
   font-size: .9em;
@@ -14495,67 +14498,67 @@ option {
   padding: 10px;
   border: 1px solid #e5e5e5;
   background-color: #f4f4f4; }
-  /* line 78, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 82, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-twitter .mod-social-attachment .mod-social-attachment-image,
   .social-feed-facebook .mod-social-attachment .mod-social-attachment-image {
     display: block;
     float: left;
     width: 20%;
     height: auto; }
-  /* line 85, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 89, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-twitter .mod-social-attachment .mod-social-attachment-content,
   .social-feed-facebook .mod-social-attachment .mod-social-attachment-content {
     float: left;
     width: 80%;
     padding-left: 15px;
     color: #252525; }
-    /* line 91, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-twitter .mod-social-attachment .mod-social-attachment-content h4, .social-feed-twitter .mod-social-attachment .mod-social-attachment-content .widget_calendar caption, .widget_calendar .social-feed-twitter .mod-social-attachment .mod-social-attachment-content caption,
     .social-feed-facebook .mod-social-attachment .mod-social-attachment-content h4,
     .social-feed-facebook .mod-social-attachment .mod-social-attachment-content .widget_calendar caption, .widget_calendar
     .social-feed-facebook .mod-social-attachment .mod-social-attachment-content caption {
       color: #252525 !important;
       font-size: 1.1em; }
-    /* line 96, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 100, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-twitter .mod-social-attachment .mod-social-attachment-content p,
     .social-feed-facebook .mod-social-attachment .mod-social-attachment-content p {
       margin-bottom: 5px; }
-    /* line 100, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 104, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-twitter .mod-social-attachment .mod-social-attachment-content .caption,
     .social-feed-facebook .mod-social-attachment .mod-social-attachment-content .caption {
       color: #464646;
       text-transform: uppercase;
       font-size: .8em; }
 
-/* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .social-feed-twitter .mod-social-attachment-type-added_photos,
 .social-feed-facebook .mod-social-attachment-type-added_photos {
   background-color: transparent;
   border: none;
   padding: 0; }
-  /* line 113, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 117, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-twitter .mod-social-attachment-type-added_photos *,
   .social-feed-facebook .mod-social-attachment-type-added_photos * {
     display: none; }
-  /* line 117, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 121, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-twitter .mod-social-attachment-type-added_photos .mod-social-attachment-image,
   .social-feed-facebook .mod-social-attachment-type-added_photos .mod-social-attachment-image {
     display: block;
     float: none; }
 
-/* line 124, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 128, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .box-filled .social-feed-twitter li,
 .box-filled .social-feed-facebook li {
   padding: 15px 0 !important; }
 
-/* line 129, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+/* line 133, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
 .social-feed-instagram,
 .social-feed-pinterest {
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-top: 0;
   font-size: 0; }
-  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-instagram li,
   .social-feed-pinterest li {
     display: inline-block;
@@ -14563,11 +14566,11 @@ option {
     border: 0;
     padding: 0; }
   @media (max-width: 769px) {
-    /* line 144, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 148, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-instagram li,
     .social-feed-pinterest li {
       width: 50% !important; } }
-  /* line 149, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 153, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-instagram .mod-social-image,
   .social-feed-pinterest .mod-social-image {
     display: block;
@@ -14579,11 +14582,11 @@ option {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-  /* line 162, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 166, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-instagram .mod-social-attachment-image,
   .social-feed-pinterest .mod-social-attachment-image {
     display: none; }
-  /* line 166, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 170, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-instagram .mod-social-user,
   .social-feed-pinterest .mod-social-user {
     position: absolute;
@@ -14596,19 +14599,39 @@ option {
     color: #fff;
     font-size: .8rem;
     line-height: 1.2; }
-    /* line 179, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 183, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-instagram .mod-social-user img,
     .social-feed-pinterest .mod-social-user img {
       display: none; }
-    /* line 183, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+    /* line 187, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
     .social-feed-instagram .mod-social-user time,
     .social-feed-pinterest .mod-social-user time {
       color: #fff;
       display: block; }
-  /* line 189, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  /* line 193, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
   .social-feed-instagram .mod-social-story,
   .social-feed-pinterest .mod-social-story {
     display: none; }
+
+/* line 199, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+.social-feed-button {
+  padding-top: 10px; }
+  /* line 202, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+  .social-feed-button .btn {
+    text-decoration: none; }
+
+/* line 207, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+.modularity-mod-social .box-content {
+  padding-top: 0px; }
+
+/* line 211, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+.box-panel .social-feed-wrapper > .social-feed-button {
+  padding: 10px;
+  background-color: #fff; }
+
+/* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/social-feed/story.scss */
+.box-filled .social-feed-wrapper {
+  padding: 10px 10px 0 10px; }
 
 /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/footer/_footer.scss */
 .main-footer {
