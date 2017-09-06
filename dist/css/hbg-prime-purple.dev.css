@@ -15199,24 +15199,30 @@ img[src$=".svg"].footer-signature {
     .section-full.columnize-3 .section-text {
       column-count: 3;
       column-gap: 30px;
+      text-align: left; }
+    /* line 77, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full.columnize-2 .section-title {
+      text-align: left; }
+    /* line 81, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    .section-full.columnize-3 .section-title {
       text-align: left; } }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 80, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 10px; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 86, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+    /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
     .section-full .section-article {
       margin-bottom: 30px; } }
-  /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
   .section-full.text-middle {
     align-items: center;
     display: flex; }
-  /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  /* line 106, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
   .section-full.text-top {
     align-items: flex-start;
     display: flex; }
-  /* line 103, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
+  /* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/section/section-full.scss */
   .section-full.text-bottom {
     align-items: flex-end;
     display: flex; }
