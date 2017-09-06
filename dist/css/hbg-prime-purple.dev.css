@@ -12688,20 +12688,28 @@ article .slider {
     text-shadow: none;
     font-size: 1.2em; }
 
-/* line 442, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+@media screen and (max-width: 768px) {
+  /* line 444, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  .slider.ratio-36-7, .slider.ratio-10-3 {
+    max-height: none !important; }
+    /* line 447, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+    .slider.ratio-36-7:before, .slider.ratio-10-3:before {
+      padding-top: 75%; } }
+
+/* line 451, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
 .slider-height-restrictions.ratio-36-7.slider:not(.slider-layout-circle) {
   min-height: 350px; }
 
-/* line 447, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+/* line 456, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
 .slider:not(.slider-layout-circle) {
   height: 100%; }
-  /* line 450, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 459, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) [data-flickity] {
     width: 100%;
     height: 100%; }
-  /* line 456, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 465, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .flickity-viewport,
   .slider:not(.slider-layout-circle) .flickity-enabled,
   .slider:not(.slider-layout-circle) [data-flickity] {
@@ -12710,7 +12718,7 @@ article .slider {
     left: 0;
     right: 0;
     bottom: 0; }
-  /* line 466, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
+  /* line 475, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/slider/_slider.scss */
   .slider:not(.slider-layout-circle) .slide,
   .slider:not(.slider-layout-circle) .flickity-enabled {
     width: 100%;

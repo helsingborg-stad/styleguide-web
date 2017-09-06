@@ -439,6 +439,15 @@ article {
     }
 }
 
+
+//Require 4:3 (square) ratio on tablet vertical & mobile
+.slider.ratio-36-7, .slider.ratio-10-3 {
+    @media screen and (max-width: $screen-sm-max) {
+        max-height: none !important;
+        &:before {padding-top: 75%;}
+    }
+}
+
 .slider-height-restrictions.ratio-10-3.slider:not(.slider-layout-circle),
 .slider-height-restrictions.ratio-36-7.slider:not(.slider-layout-circle) {
     min-height: 350px;
