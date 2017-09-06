@@ -74,6 +74,14 @@
             text-align: left;
         }
 
+        &.columnize-2 .section-title {
+            text-align: left;
+        }
+
+        &.columnize-3 .section-title {
+            text-align: left;
+        }
+
     }
 
     @media screen and #{$screen-xs} {
