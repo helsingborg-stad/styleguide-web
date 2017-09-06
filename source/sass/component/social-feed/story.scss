@@ -43,6 +43,10 @@
 
 .modularity-mod-social .box-filled {
     padding-bottom: 18px;
+
+    .box-content {
+        padding-bottom: 0px;
+    }
 }
 
 .box-filled .mod-social-user time {
@@ -55,7 +59,7 @@
 .social-feed-twitter,
 .social-feed-facebook {
     li {
-        padding: 15px !important;
+        padding: 15px 0 15px 0 !important;
     }
 
     .mod-social-story {
@@ -189,4 +193,26 @@
     .mod-social-story {
         display: none;
     }
+}
+
+
+.social-feed-button {
+    padding-top: 10px;
+
+    .btn {
+        text-decoration: none;
+    }
+}
+
+.modularity-mod-social .box-content {
+    padding-top: 0px;
+}
+
+.box-panel .social-feed-wrapper > .social-feed-button {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.box-filled .social-feed-wrapper {
+    padding: 10px 10px 0 10px;
 }
