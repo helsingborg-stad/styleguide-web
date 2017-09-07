@@ -8811,7 +8811,7 @@ button.btn-icon {
   font-size: .9rem; }
   /* line 20, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_breadcrumb.scss */
   .breadcrumbs i {
-    text-align: text-top; }
+    vertical-align: text-top; }
   /* line 24, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_breadcrumb.scss */
   .breadcrumbs li {
     display: inline-block; }
