@@ -10154,28 +10154,32 @@ li.comment.comment-new {
   /* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   li.comment.comment-new .comment-content {
     margin-top: 7.5px; }
-  /* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 215, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    li.comment.comment-new .comment-content img {
+      max-width: 100%;
+      height: auto; }
+  /* line 221, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   li.comment.comment-new .comment-footer {
     position: relative;
     margin-top: 7.5px; }
-    /* line 220, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 225, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer span:not(:last-child) {
       margin-right: 7.5px; }
-    /* line 224, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 229, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer a {
       color: #979797;
       font-size: .9em;
       text-decoration: none !important; }
-    /* line 230, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 235, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer a:hover {
       color: #50811b; }
-    /* line 234, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 239, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .like-button.active {
       color: #a0c855; }
-    /* line 238, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 243, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .reply a:before, li.comment.comment-new .comment-footer .like a:before {
       margin-right: 7.5px; }
-    /* line 242, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .reply a:before {
       font-family: hbg-pricons;
       line-height: 1;
@@ -10184,7 +10188,7 @@ li.comment.comment-new {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-    /* line 243, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 248, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .like a:before {
       font-family: hbg-pricons;
       line-height: 1;
@@ -10193,10 +10197,10 @@ li.comment.comment-new {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-    /* line 245, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 250, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer span, li.comment.comment-new .comment-footer span > a {
       display: inline-block; }
-    /* line 246, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 251, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer span + span:before {
       display: inline-block;
       content: '';
@@ -10206,36 +10210,36 @@ li.comment.comment-new {
       position: relative;
       bottom: -3px;
       margin-right: 7.5px; }
-    /* line 257, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 262, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer span#like-count {
       pointer-events: none; }
 
-/* line 263, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 268, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comments.comments-new .comment-respond {
   margin-bottom: 60px; }
 
 /*
  *  Old styles for comments (deprecated)
  */
-/* line 273, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 278, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) em {
   font-weight: bold; }
 
-/* line 277, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 282, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) time {
   color: #979797;
   font-size: .9em;
   cursor: default; }
 
-/* line 283, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) + .comment, .comment:not(.comment-new) .answers {
   margin-top: 30px; }
 
-/* line 287, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 292, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) i {
   color: #11a636; }
 
-/* line 291, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 296, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) .comment-text {
   position: relative;
   padding: 10px 15px;
@@ -10252,7 +10256,7 @@ li.comment.comment-new {
   /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
   body:not(.material-no-radius) .comment:not(.comment-new) .comment-text {
     border-radius: 4px; }
-  /* line 301, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 306, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .comment-text::before {
     width: 0;
     height: 0;
@@ -10266,34 +10270,34 @@ li.comment.comment-new {
     top: -8px;
     left: 15px; }
 
-/* line 314, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 319, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) a:not(.author-link) {
   color: #fff;
   text-decoration: underline; }
-  /* line 318, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 323, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) a:not(.author-link):hover {
     color: rgba(255, 255, 255, 0.8); }
 
-/* line 323, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 328, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) .author-image, .comment:not(.comment-new) .author-name, .comment:not(.comment-new) .author-image a, .comment:not(.comment-new) .author-name a, .comment:not(.comment-new) time, .comment:not(.comment-new) .reply {
   line-height: 40px; }
 
-/* line 327, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 332, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) .reply {
   text-align: right; }
-  /* line 330, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 335, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .reply a {
     text-decoration: none !important;
     color: #979797;
     font-size: .9em; }
-    /* line 335, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+    /* line 340, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
     .comment:not(.comment-new) .reply a:hover {
       color: #11a636; }
-  /* line 338, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 343, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .reply a:before {
     text-decoration: none !important;
     margin-right: 7.5px; }
-  /* line 343, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 348, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .reply a:before {
     font-family: hbg-pricons;
     line-height: 1;
@@ -10303,18 +10307,18 @@ li.comment.comment-new {
     vertical-align: -15%;
     content: ""; }
 
-/* line 350, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 355, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) .author-image {
   border-radius: 100%;
   margin-left: 6px; }
-  /* line 355, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 360, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .author-image img {
     width: 36px;
     height: auto;
     display: block;
     border-radius: 100%; }
 
-/* line 363, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 368, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) header {
   margin-bottom: 15px; }
   /* line 15, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_mixins.scss */
@@ -10322,25 +10326,25 @@ li.comment.comment-new {
     content: "";
     display: table;
     clear: both; }
-  /* line 367, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) header .author-image, .comment:not(.comment-new) header .author-name, .comment:not(.comment-new) header time {
     float: left !important; }
-  /* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 376, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) header .author-image, .comment:not(.comment-new) header .author-name {
     margin-right: 15px; }
 
-/* line 376, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 381, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new) .answers {
   padding-left: 3%; }
-  /* line 378, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 383, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new) .answers .comment-text {
     opacity: .7; }
 
-/* line 384, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 389, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 2) .comment-text {
   background-color: #a0c855;
   color: #fff; }
-  /* line 388, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 393, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new):nth-child(4n + 2) .comment-text::before {
     width: 0;
     height: 0;
@@ -10349,15 +10353,15 @@ li.comment.comment-new {
     border-bottom: 8px solid #a0c855;
     border-left: 8px solid transparent; }
 
-/* line 393, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 398, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 2) .author-image i {
   color: #a0c855; }
 
-/* line 400, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 405, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 3) .comment-text {
   background-color: #50811b;
   color: #fff; }
-  /* line 404, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 409, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new):nth-child(4n + 3) .comment-text::before {
     width: 0;
     height: 0;
@@ -10366,15 +10370,15 @@ li.comment.comment-new {
     border-bottom: 8px solid #50811b;
     border-left: 8px solid transparent; }
 
-/* line 409, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 414, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 3) .author-image i {
   color: #50811b; }
 
-/* line 415, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 420, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 4) .comment-text {
   background-color: #76b828;
   color: #fff; }
-  /* line 419, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+  /* line 424, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new):nth-child(4n + 4) .comment-text::before {
     width: 0;
     height: 0;
@@ -10383,11 +10387,11 @@ li.comment.comment-new {
     border-bottom: 8px solid #76b828;
     border-left: 8px solid transparent; }
 
-/* line 423, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 428, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 4) .author-image i {
   color: #76b828; }
 
-/* line 430, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
+/* line 435, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_comments.scss */
 .comments:not(.comments-new) .comment-respond {
   margin-top: 30px;
   margin-bottom: 45px; }

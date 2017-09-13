@@ -211,6 +211,11 @@ li.comment.comment-new {
 
     .comment-content {
         margin-top: $content-gutter / 2;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     .comment-footer {
