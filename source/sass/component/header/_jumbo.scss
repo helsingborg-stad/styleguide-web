@@ -65,16 +65,22 @@
     }
 }
 
-.site-header.header-jumbo .logotype {
-    padding: 10px 0;
-    color: #fff;
-
-    svg, img {
-        height: 50px;
+.site-header.header-jumbo {
+    ul > li > a {
+        padding: 21px 0;
     }
 
-    h1 {
+    .logotype {
+        padding: 10px 0;
         color: #fff;
+
+        svg, img {
+            height: 50px;
+        }
+
+        h1 {
+            color: #fff;
+        }
     }
 }
 
