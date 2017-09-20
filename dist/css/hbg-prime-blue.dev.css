@@ -9427,6 +9427,20 @@ body .tag {
 .modal-backdrop-white .modal-content {
   border: none; }
 
+/* line 260, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/modal/_modal.scss */
+html[data-useragent*="Windows"][data-useragent*="Firefox"] .modal[class*='modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="Firefox"] .modal[class^=' modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="rv:11"] .modal[class*='modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="rv:11"] .modal[class^=' modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="MSIE"] .modal[class*='modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="MSIE"] .modal[class^=' modal-backdrop-'] .backdrop {
+  right: 17px !important; }
+
+/* line 267, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/modal/_modal.scss */
+html[data-useragent*="Windows"][data-useragent*="Edge"] .modal[class*='modal-backdrop-'] .backdrop,
+html[data-useragent*="Windows"][data-useragent*="Edge"] .modal[class^=' modal-backdrop-'] .backdrop {
+  right: 12px !important; }
+
 /* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/mixin/_material.scss */
 body:not(.material-no-radius) .accordion {
   border-radius: 2px; }
