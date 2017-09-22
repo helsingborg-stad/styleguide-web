@@ -7041,7 +7041,7 @@ article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist)
       content: '';
       width: 6px;
       height: 6px;
-      background-color: #f69517; }
+      background-color: #245588; }
 
 /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_list.scss */
 article .mod-inlaylist ul.nav {
@@ -7223,12 +7223,12 @@ a.link-box:nth-of-type(2),
 /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(3),
 .link-box:nth-of-type(3) a {
-  background-color: #9eba21; }
+  background-color: #88abd0; }
 
 /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 a.link-box:nth-of-type(4),
 .link-box:nth-of-type(4) a {
-  background-color: #f69517; }
+  background-color: #245588; }
 
 /* line 65, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/typography/_link.scss */
 .link-box + .link-box {
@@ -7660,13 +7660,13 @@ input[type="button"].btn::-moz-focus-inner {
 
 /* line 118, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn.btn-primary {
-  background-color: #f69517;
+  background-color: #245588;
   color: #fff;
-  border-color: #f69517; }
+  border-color: #245588; }
   /* line 123, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
   .btn.btn-primary:hover, .btn.btn-primary:focus {
-    background-color: #f48e09;
-    border-color: #f48e09; }
+    background-color: #214d7c;
+    border-color: #214d7c; }
 
 /* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn.btn-contrasted {
@@ -7726,13 +7726,13 @@ a.btn.btn-plain,
 
 /* line 240, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn-theme-third {
-  background-color: #f69517;
-  border-color: #f69517;
+  background-color: #245588;
+  border-color: #245588;
   color: #fff; }
   /* line 226, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
   .btn-theme-third:hover {
-    background-color: #f48e09;
-    border-color: #f48e09; }
+    background-color: #214d7c;
+    border-color: #214d7c; }
 
 /* line 244, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn-theme-fourth {
@@ -7746,13 +7746,13 @@ a.btn.btn-plain,
 
 /* line 248, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn-theme-fifth {
-  background-color: #9eba21;
-  border-color: #9eba21;
+  background-color: #88abd0;
+  border-color: #88abd0;
   color: #fff; }
   /* line 226, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
   .btn-theme-fifth:hover {
-    background-color: #93ad1f;
-    border-color: #93ad1f; }
+    background-color: #7da3cc;
+    border-color: #7da3cc; }
 
 /* line 267, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/button/_button.scss */
 .btn-sm {
@@ -8010,7 +8010,7 @@ button.btn-icon {
 
 /* line 103, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/header/_casual.scss */
 .site-header.header-contrasted-nav .navbar-mainmenu:not(.navbar-creamy) {
-  background-color: rgba(158, 186, 33, 0.8); }
+  background-color: rgba(136, 171, 208, 0.8); }
 
 /* line 107, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/header/_casual.scss */
 .site-header.header-contrasted-nav > .container {
@@ -8391,7 +8391,7 @@ button.btn-icon {
     top: -2px;
     width: 28px;
     height: 4px;
-    background-color: #9eba21;
+    background-color: #88abd0;
     transition: 200ms;
     border-radius: 1px; }
     /* line 249, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_nav.scss */
@@ -8400,7 +8400,7 @@ button.btn-icon {
       content: "";
       height: 4px;
       width: 28px;
-      background-color: #798f19;
+      background-color: #6391c2;
       position: absolute;
       z-index: -1;
       transition: 200ms 100ms;
@@ -9070,13 +9070,13 @@ body .tag {
     color: #fff; }
     /* line 21, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_mobile.scss */
     .nav-mobile a:hover {
-      background-color: #f69517;
+      background-color: #245588;
       color: #fff !important; }
   /* line 27, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_mobile.scss */
   .nav-mobile .current,
   .nav-mobile .current-node,
   .nav-mobile .current-menu-item {
-    background-color: #f69517; }
+    background-color: #245588; }
   /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_mobile.scss */
   .nav-mobile .sub-menu .current > a::before,
   .nav-mobile .sub-menu .current-menu-item > a::before {
@@ -9409,7 +9409,7 @@ body .tag {
 
 /* line 236, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-3 .backdrop {
-  background-color: rgba(246, 149, 23, 0.95); }
+  background-color: rgba(36, 85, 136, 0.95); }
 
 /* line 240, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-4 .backdrop {
@@ -10193,7 +10193,7 @@ li.comment.comment-new {
       color: #3d6a98; }
     /* line 239, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .like-button.active {
-      color: #f69517; }
+      color: #245588; }
     /* line 243, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
     li.comment.comment-new .comment-footer .reply a:before, li.comment.comment-new .comment-footer .like a:before {
       margin-right: 7.5px; }
@@ -10360,7 +10360,7 @@ li.comment.comment-new {
 
 /* line 389, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 2) .comment-text {
-  background-color: #f69517;
+  background-color: #245588;
   color: #fff; }
   /* line 393, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new):nth-child(4n + 2) .comment-text::before {
@@ -10368,12 +10368,12 @@ li.comment.comment-new {
     height: 0;
     border-top: none;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #f69517;
+    border-bottom: 8px solid #245588;
     border-left: 8px solid transparent; }
 
 /* line 398, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 2) .author-image i {
-  color: #f69517; }
+  color: #245588; }
 
 /* line 405, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 3) .comment-text {
@@ -10394,7 +10394,7 @@ li.comment.comment-new {
 
 /* line 420, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 4) .comment-text {
-  background-color: #9eba21;
+  background-color: #88abd0;
   color: #fff; }
   /* line 424, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
   .comment:not(.comment-new):nth-child(4n + 4) .comment-text::before {
@@ -10402,12 +10402,12 @@ li.comment.comment-new {
     height: 0;
     border-top: none;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #9eba21;
+    border-bottom: 8px solid #88abd0;
     border-left: 8px solid transparent; }
 
 /* line 428, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comment:not(.comment-new):nth-child(4n + 4) .author-image i {
-  color: #9eba21; }
+  color: #88abd0; }
 
 /* line 435, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/blog/_comments.scss */
 .comments:not(.comments-new) .comment-respond {
@@ -10802,13 +10802,13 @@ li.comment.comment-new {
     background-color: #3e3e3f; }
   /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/stripe/_stripe.scss */
   .stripe div:nth-child(3) {
-    background-color: #f69517; }
+    background-color: #245588; }
   /* line 74, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/stripe/_stripe.scss */
   .stripe div:nth-child(4) {
     background-color: #3d6a98; }
   /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/stripe/_stripe.scss */
   .stripe div:nth-child(5) {
-    background-color: #9eba21; }
+    background-color: #88abd0; }
   @media (min-width: 469px) {
     /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/stripe/_stripe.scss */
     .stripe {
@@ -11264,7 +11264,7 @@ a.box-index {
 .box-filled-3,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 3) .box-filled {
-  background-color: #f69517; }
+  background-color: #245588; }
 
 /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_filled.scss */
 .box-filled-4,
@@ -11276,7 +11276,7 @@ a.box-index {
 .box-filled-5,
 .sidebar-right-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled,
 .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled {
-  background-color: #9eba21; }
+  background-color: #88abd0; }
 
 /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_filled.scss */
 .box-filled-red-1.box-filled-red-1 {
@@ -12191,7 +12191,7 @@ a.box-news:hover {
 
 /* line 190, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 3) > .box-post-brick {
-  background-color: #f69517; }
+  background-color: #245588; }
 
 /* line 194, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 4) > .box-post-brick {
@@ -12199,7 +12199,7 @@ a.box-news:hover {
 
 /* line 198, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_grid-post.scss */
 .grid > [class*="grid-"]:nth-child(5n + 5) > .box-post-brick {
-  background-color: #9eba21; }
+  background-color: #88abd0; }
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_iframe.scss */
 .box-iframe {
@@ -13809,13 +13809,13 @@ option {
     /* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_datepicker.scss */
     .ui-datepicker-calendar td a.ui-state-active,
     .ui-datepicker-calendar td span.ui-state-active {
-      background-color: #f69517;
+      background-color: #245588;
       font-weight: bold;
       color: #fff; }
       /* line 128, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_datepicker.scss */
       .ui-datepicker-calendar td a.ui-state-active:hover,
       .ui-datepicker-calendar td span.ui-state-active:hover {
-        background-color: #ea8809; }
+        background-color: #1f4874; }
     /* line 133, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_datepicker.scss */
     .ui-datepicker-calendar td a:hover,
     .ui-datepicker-calendar td span:hover {
@@ -14204,9 +14204,9 @@ option {
     cursor: pointer;
     margin: 0;
     border-radius: 3px !important;
-    background-color: #f69517;
+    background-color: #245588;
     color: #fff;
-    border-color: #f69517; }
+    border-color: #245588; }
     /* line 126, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_gravity-forms.scss */
     .gform_drop_area .button:hover, .gform_drop_area .button:focus {
       background-color: #dddddd;
@@ -14255,8 +14255,8 @@ option {
         box-shadow: none; }
     /* line 150, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/form/_gravity-forms.scss */
     .gform_drop_area .button:hover, .gform_drop_area .button:focus {
-      background-color: #f48e09;
-      border-color: #f48e09; }
+      background-color: #214d7c;
+      border-color: #214d7c; }
 
 /* line 22, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/dropdown/_dropdown.scss */
 .dropdown {
@@ -16521,12 +16521,12 @@ input[type="radio"]:disabled, select:disabled {
     left: auto; }
   /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_loading.scss */
   .loading div:nth-of-type(3) {
-    background-color: #f69517;
+    background-color: #245588;
     width: 60px;
     animation: 2000ms loading-bar-3 ease-in-out infinite; }
   /* line 66, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_loading.scss */
   .loading div:nth-of-type(4) {
-    background-color: #9eba21;
+    background-color: #88abd0;
     width: 25px;
     animation: 2000ms loading-bar-4 ease-in-out infinite;
     right: 0;
@@ -17606,7 +17606,7 @@ body:not(.material-no-radius) .material-radius {
 .blipper-theme-3,
 .blipper-theme-3::before,
 .blipper-theme-3::after {
-  background-color: #f69517; }
+  background-color: #245588; }
 
 /* line 75, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/utility/_blipper.scss */
 .blipper-theme-4,
@@ -17618,7 +17618,7 @@ body:not(.material-no-radius) .material-radius {
 .blipper-theme-5,
 .blipper-theme-5::before,
 .blipper-theme-5::after {
-  background-color: #9eba21; }
+  background-color: #88abd0; }
 
 @keyframes blipper {
   70% {
