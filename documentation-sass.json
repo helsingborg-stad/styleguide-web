@@ -103,8 +103,8 @@
    "select",
    "tag manager"
   ],
-  "hero": [
-   "hero"
+  "gallery": [
+   "image grid"
   ],
   "notice": [
    "notice"
@@ -121,6 +121,9 @@
   "stripe": [
    "general"
   ],
+  "hero": [
+   "hero"
+  ],
   "tables": [
    "basic"
   ],
@@ -132,9 +135,6 @@
    "wp widget: search",
    "wp widget: text",
    "wp utility: caption"
-  ],
-  "gallery": [
-   "image grid"
   ]
  },
  "pages": {
@@ -1409,10 +1409,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close pricon pricon-close-o\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
        "path": "~/source/sass/component/modal/_modal.scss",
-       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
+       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close pricon pricon-close-o\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content material-shadow-lg\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close pricon pricon-close-o\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
@@ -2645,25 +2645,33 @@
     }
    ]
   },
-  "hero": {
-   "hero": [
+  "gallery": {
+   "image grid": [
     {
-     "name": "Hero",
-     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
      "page": [
       {
-       "nav": "Hero",
-       "section": "Hero"
+       "nav": "Gallery",
+       "section": "Image Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/hero/_hero.scss",
-       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "path": "~/source/sass/component/gallery/_gallery.scss",
+       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -2992,6 +3000,30 @@
     }
    ]
   },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/hero/_hero.scss",
+       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "tables": {
    "basic": [
     {
@@ -3194,38 +3226,6 @@
        "path": "~/source/sass/component/wordpress/_wp-caption.scss",
        "example": "\n<div class=\"wp-caption alignnone\">\n <img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\">\n <p class=\"wp-caption-text\">Gingerbread gummies lollipop chocolate cake.</p>\n</div>",
        "escaped": "\n&lt;div class=\"wp-caption alignnone\"&gt;\n &lt;img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\"&gt;\n &lt;p class=\"wp-caption-text\"&gt;Gingerbread gummies lollipop chocolate cake.&lt;/p&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "gallery": {
-   "image grid": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Gallery",
-       "section": "Image Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "path": "~/source/sass/component/gallery/_gallery.scss",
-       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }

@@ -21,9 +21,9 @@
 // @markup
 // 	<a href="#modal-target">Gummi bear modal</a>
 // 	<div id="modal-target" class="modal modal-backdrop-1 modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
-//		<div class="modal-content">
+//		<div class="modal-content material-shadow-lg">
 //     		<div class="modal-header">
-//				<a class="btn btn-close" href="#close"></a>
+//				<a class="btn btn-close pricon pricon-close-o" href="#close"></a>
 //         		<h2 class="modal-title">Gummi bears caramels</h2>
 //       	</div>
 //       	<div class="modal-body">
@@ -54,12 +54,13 @@
 
 	/* Backdrops */
 	&[class*='modal-backdrop-'] .backdrop,
-	&[class^=' modal-backdrop-'] .backdrop{
+	&[class^=' modal-backdrop-'] .backdrop {
 		@include cover();
 		position: fixed;
 		content: "";
 		z-index: $level-9;
 		display: block;
+        box-shadow: inset 0 0 500px rgba(#000,.1);
 	}
 
 	/* Css open/close logic */
@@ -86,8 +87,8 @@
 
 	.btn-close {
 		position: absolute;
-		top: 0;
-		right: 1em;
+		top: .35em;
+		right: .35em;
         background-color: transparent;
         color: $base-font-color;
         font-size: 1.5em;
@@ -95,28 +96,20 @@
         text-align: center;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
+        opacity: .9;
         border: none;
-        @include center(false, true);
+        margin: 0;
 
         &:hover {
-            color: $danger-bg;
+            opacity: 1;
         }
-
-		&:after {
-            @include center();
-            right: 0;
-			@include hbg-icon('\f00d');
-		}
 	}
-
 }
 
 .modal-footer {
 	padding: 1em;
 	border-top: 1px solid $creamy-darker;
     background: #fff;
-    border-radius: 0 0 5px 5px;
 }
 
 .modal-body {
@@ -141,7 +134,7 @@
 
     @media screen and #{$screen-sm-up} {
         margin: $grid-gutter-md auto;
-        border-radius: 5px;
+        border-radius: 1px;
     }
 
     @media screen and #{$screen-lg-up} {
