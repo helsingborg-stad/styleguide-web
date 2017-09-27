@@ -23,7 +23,7 @@
 // 	<div id="modal-target" class="modal modal-backdrop-1 modal-medium" tabindex="-1" role="dialog" aria-hidden="true">
 //		<div class="modal-content material-shadow-lg">
 //     		<div class="modal-header">
-//				<a class="btn btn-close pricon pricon-close-o" href="#close"></a>
+//				<a class="btn btn-close" href="#close"></a>
 //         		<h2 class="modal-title">Gummi bears caramels</h2>
 //       	</div>
 //       	<div class="modal-body">
@@ -87,8 +87,8 @@
 
 	.btn-close {
 		position: absolute;
-		top: .35em;
-		right: .35em;
+		top: .45em;
+		right: .45em;
         background-color: transparent;
         color: $base-font-color;
         font-size: 1.5em;
@@ -100,8 +100,16 @@
         border: none;
         margin: 0;
 
-        &:hover {
-            opacity: 1;
+        &:hvoer {
+            &:before {
+                font-weight: 400;
+                @include pricon($pricon-close);
+            }
+        }
+
+        &:before {
+            font-weight: 400;
+            @include pricon($pricon-close-o);
         }
 	}
 }

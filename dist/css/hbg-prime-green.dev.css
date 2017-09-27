@@ -9246,8 +9246,8 @@ body .tag {
   /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
   .modal-header .btn-close {
     position: absolute;
-    top: .35em;
-    right: .35em;
+    top: .45em;
+    right: .45em;
     background-color: transparent;
     color: #252525;
     font-size: 1.5em;
@@ -9258,25 +9258,42 @@ body .tag {
     opacity: .9;
     border: none;
     margin: 0; }
-    /* line 103, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
-    .modal-header .btn-close:hover {
-      opacity: 1; }
+    /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    .modal-header .btn-close:hvoer:before {
+      font-weight: 400;
+      font-family: hbg-pricons;
+      line-height: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: -15%;
+      content: ""; }
+    /* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    .modal-header .btn-close:before {
+      font-weight: 400;
+      font-family: hbg-pricons;
+      line-height: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: -15%;
+      content: ""; }
 
-/* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 117, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-footer {
   padding: 1em;
   border-top: 1px solid #e5e5e5;
   background: #fff; }
 
-/* line 115, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 123, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-body {
   background-color: #f9f9f9; }
-  /* line 118, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+  /* line 126, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
   .modal-body article {
     padding: 1em;
     margin-bottom: 0; }
 
-/* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-content {
   position: relative;
   z-index: 10000;
@@ -9284,34 +9301,34 @@ body .tag {
   background-color: #fff;
   overflow: hidden; }
   @media screen and (min-width: 469px) {
-    /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-content {
       margin: 10px auto; } }
   @media screen and (min-width: 469px) {
-    /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-content {
       margin: 30px auto;
       border-radius: 1px; } }
   @media screen and (min-width: 961px) {
-    /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-content {
       margin: 60px auto; } }
 
 /* Modifiers - size */
-/* line 147, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-large .modal-content,
 .modal-lg .modal-content {
   width: 100%;
   min-height: 100vh;
   margin: 0; }
 
-/* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 162, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-large .btn-close,
 .modal-lg .btn-close {
   top: 43%;
   right: 2em; }
 
-/* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-large .modal-footer,
 .modal-lg .modal-footer {
   position: absolute;
@@ -9319,96 +9336,96 @@ body .tag {
   width: 100%;
   background: #fff; }
 
-/* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-medium .modal-content,
 .modal-md .modal-content {
   width: 70%; }
   @media screen and (min-width: 0) {
-    /* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-medium .modal-content,
     .modal-md .modal-content {
       width: 100%; } }
   @media screen and (min-width: 469px) {
-    /* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-medium .modal-content,
     .modal-md .modal-content {
       width: 90%; } }
   @media screen and (min-width: 769px) {
-    /* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-medium .modal-content,
     .modal-md .modal-content {
       width: 80%; } }
 
-/* line 185, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 193, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-small .modal-content,
 .modal-sm .modal-content {
   width: 50%; }
   @media screen and (min-width: 0) {
-    /* line 185, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 193, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-small .modal-content,
     .modal-sm .modal-content {
       width: 100%; } }
   @media screen and (min-width: 469px) {
-    /* line 185, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 193, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-small .modal-content,
     .modal-sm .modal-content {
       width: 90%; } }
   @media screen and (min-width: 769px) {
-    /* line 185, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 193, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-small .modal-content,
     .modal-sm .modal-content {
       width: 60%; } }
 
-/* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-xsmall .modal-content,
 .modal-xs .modal-content {
   width: 40%; }
   @media screen and (min-width: 0) {
-    /* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-xsmall .modal-content,
     .modal-xs .modal-content {
       width: 100%; } }
   @media screen and (min-width: 469px) {
-    /* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-xsmall .modal-content,
     .modal-xs .modal-content {
       width: 90%; } }
   @media screen and (min-width: 769px) {
-    /* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+    /* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
     .modal-xsmall .modal-content,
     .modal-xs .modal-content {
       width: 40%; } }
 
 /* Modifiers - color */
-/* line 221, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 229, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-1 .backdrop {
   background-color: rgba(175, 202, 5, 0.95); }
 
-/* line 225, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 233, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-2 .backdrop {
   background-color: rgba(17, 166, 54, 0.95); }
 
-/* line 229, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 237, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-3 .backdrop {
   background-color: rgba(160, 200, 85, 0.95); }
 
-/* line 233, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 241, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-4 .backdrop {
   background-color: rgba(80, 129, 27, 0.95); }
 
-/* line 237, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 245, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-black .backdrop {
   background-color: rgba(0, 0, 0, 0.95); }
 
-/* line 241, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 249, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-white .backdrop {
   background-color: rgba(223, 229, 234, 0.95); }
 
-/* line 245, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 253, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 .modal-backdrop-white .modal-content {
   border: none; }
 
-/* line 253, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 261, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 html[data-useragent*="Windows"][data-useragent*="Firefox"] .modal[class*='modal-backdrop-'] .backdrop,
 html[data-useragent*="Windows"][data-useragent*="Firefox"] .modal[class^=' modal-backdrop-'] .backdrop,
 html[data-useragent*="Windows"][data-useragent*="rv:11"] .modal[class*='modal-backdrop-'] .backdrop,
@@ -9417,7 +9434,7 @@ html[data-useragent*="Windows"][data-useragent*="MSIE"] .modal[class*='modal-bac
 html[data-useragent*="Windows"][data-useragent*="MSIE"] .modal[class^=' modal-backdrop-'] .backdrop {
   right: 17px !important; }
 
-/* line 260, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
+/* line 268, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/modal/_modal.scss */
 html[data-useragent*="Windows"][data-useragent*="Edge"] .modal[class*='modal-backdrop-'] .backdrop,
 html[data-useragent*="Windows"][data-useragent*="Edge"] .modal[class^=' modal-backdrop-'] .backdrop {
   right: 12px !important; }
