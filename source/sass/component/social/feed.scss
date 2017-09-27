@@ -5,10 +5,11 @@
 //
 // @page Social/Feed
 //
-// @state .social-comressed - Apperance is adjusted to fit a narrow view horizontally.
+// @state .social-compressed - Apperance is adjusted to fit a narrow view horizontally.
+// @state .column-count-1/2/3/4 - Number of columns in masonry
 //
 // @markup
-// <ul class="social social-feed-v2">
+// <ul class="social social-feed-v2 social-compressed">
 //  <li class="social-item material">
 //      <div class="social-image">
 //          <a href="#post">
@@ -135,6 +136,7 @@
 //      </div>
 //  </li>
 // </ul>
+// <a class="btn btn-primary btn-block" href="#feed">View all posts</a>
 
 
 $user-image-size: 50px;
@@ -144,6 +146,22 @@ $user-image-size: 50px;
     column-gap: $grid-gutter-md/2;
     background-color: #eee;
     padding: 10px;
+
+    &.column-count-1 {
+        column-count: 1;
+    }
+
+    &.column-count-2 {
+        column-count: 2;
+    }
+
+    &.column-count-3 {
+        column-count: 3;
+    }
+
+    &.column-count-4 {
+        column-count: 4;
+    }
 
     .social-item {
         background-color: #fff;
@@ -303,4 +321,39 @@ $user-image-size: 50px;
             font-size: .8em;
         }
     }
+}
+
+.social.social-compressed.social-feed-v2 {
+
+    .social-image {
+        height: 70px;
+
+        &:after,
+        &:before {
+            display: none;
+        }
+
+        img {
+            opacity: .5;
+        }
+    }
+
+    .social-item:hover .social-image img {
+        opacity: .3;
+    }
+
+    .social-user {
+        margin-top: -70px;
+        padding: 10px 0;
+
+        .social-author,
+        .social-publish {
+            color: #fff;
+        }
+    }
+
+    .social-footer {
+        display: none;
+    }
+
 }
