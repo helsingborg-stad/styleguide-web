@@ -152,6 +152,7 @@
 // <i class="pricon pricon-reply"></i> pricon-reply<br>
 // <i class="pricon pricon-thumbs-up"></i> pricon-thumbs-up<br>
 // <i class="pricon pricon-thumbs-up-o"></i> pricon-thumbs-up-o<br>
+// <i class="pricon pricon-eye"></i> pricon-eye<br>
 // 
 //
 @font-face {
@@ -527,6 +528,7 @@ $pricon-close-o: "\EA85";
 $pricon-reply: "\EA86";
 $pricon-thumbs-up: "\EA87";
 $pricon-thumbs-up-o: "\EA88";
+$pricon-eye: "\EA89";
 
 
 /* Glyphs */
@@ -666,6 +668,7 @@ $pricon-thumbs-up-o: "\EA88";
 .pricon-reply:before { content: $pricon-reply }
 .pricon-thumbs-up:before { content: $pricon-thumbs-up }
 .pricon-thumbs-up-o:before { content: $pricon-thumbs-up-o }
+.pricon-eye:before { content: $pricon-eye }
 
 
 /* Mixin */
