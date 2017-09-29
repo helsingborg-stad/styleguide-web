@@ -61,3 +61,8 @@
             border-radius: 8px;
         }
     }
+
+    @mixin disable-material {
+        box-shadow: none;
+        border-radius: 0;
+    }
