@@ -21,6 +21,9 @@ $screen-md-max: 960px;
 $screen-lg-min: $screen-md-max + 1;
 $screen-lg-max: 1280px;
 
+$screen-xl-min: $screen-lg-max + 1;
+$screen-xl-max: 1600;
+
 // ***************************************************************
 // *** 2. Media Queries
 // ***************************************************************
@@ -40,6 +43,10 @@ $screen-below-md: "(max-width: #{$screen-md-min})";
 $screen-lg: "(min-width: #{$screen-lg-min})";
 $screen-lg-up: "(min-width: #{$screen-lg-min})";
 $screen-below-lg: "(max-width: #{$screen-lg-min})";
+
+$screen-xl: "(min-width: #{$screen-xl-min})";
+$screen-xl-up: "(min-width: #{$screen-xl-min})";
+$screen-below-xl: "(max-width: #{$screen-xl-min})";
 
 // ***************************************************************
 // *** 3. Gutter

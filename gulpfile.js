@@ -108,6 +108,7 @@ gulp.task('sass-font-awesome', function () {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src([
+                node_modules + 'packery/dist/packery.pkgd.js',
                 node_modules + 'jquery/dist/jquery.js',
                 'plugins/jquery-ui-1.11.4/jquery-ui.js',
                 node_modules + 'es6-weakmap/dist/weakmap.min.js',
