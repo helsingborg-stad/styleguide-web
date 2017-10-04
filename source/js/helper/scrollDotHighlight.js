@@ -66,18 +66,18 @@ HelsingborgPrime.ScrollDot.Highlight = (function ($) {
         }.bind(this));
     };
 
-    Highlight.prototype.addWrapperClass = function (class) {
+    Highlight.prototype.addWrapperClass = function (c) {
         ScrollMenuWrapper.forEach(function(element) {
-            if(!$(element).hasClass(class)) {
-                $(element).addClass(class);
+            if(!$(element).hasClass(c)) {
+                $(element).addClass(c);
             }
         }.bind(this));
     };
 
-    Highlight.prototype.removeWrapperClass = function (class) {
+    Highlight.prototype.removeWrapperClass = function (c) {
         ScrollMenuWrapper.forEach(function(element) {
-            if($(element).hasClass(class)) {
-                $(element).removeClass(class);
+            if($(element).hasClass(c)) {
+                $(element).removeClass(c);
             }
         }.bind(this));
     };
