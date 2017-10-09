@@ -278,18 +278,13 @@ $link-image-size: 50px;
     margin: -$grid-gutter-md/4;
 
     .social-item {
+        @include wrapper-breakpoint(600, 100%, 33.333%);
+
         display: block;
         padding: $grid-gutter-md/4;
 
-        /* Extra "media query" wrapper aware */
-        max-width: 100%;
-        width: calc((600px - 100%) * 600);
-        min-width: 33.333%;
-
         @media screen and #{$screen-xl-up} {
-            max-width: 33.333%;
-            width: calc((960px - 100%) * 960);
-            min-width: 25%;
+            @include wrapper-breakpoint(960, 33.333%, 25%);
         }
 
         .material {
