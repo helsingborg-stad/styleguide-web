@@ -1,24 +1,10 @@
 .box {
     @include box;
-
-    &:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
-        @include material-radius;
-        @include material-shadow;
-    }
-
-    &.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
-        @include material-radius;
-        @include material-shadow;
-    }
-}
-
-body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.box-panel-secondary) {
-    box-shadow: none;
 }
 
 .box.box-plain {
+    @include disable-material;
     padding: 0;
-    box-shadow: none !important;
 }
 
 .box-border {
@@ -32,7 +18,10 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
 
 .box-content {
     @include box-content;
-    flex: 1 1 auto;
+}
+
+.box-image-container {
+    position: relative;
 }
 
 .box-content img {
@@ -40,28 +29,21 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     height: auto;
 }
 
-.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
-    background-color: #fff;
-}
-
 .box-image {
     width: 100%;
-    flex: 0 0 auto;
+    height: auto;
 }
 
 .box-card-post {
     .box-image {
         background-repeat: no-repeat;
         background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
         background-size: cover;
     }
 }
 
-.box-image-container {
-    position: relative;
+.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
+    background-color: #fff;
 }
 
 [data-equal-item] .box-image-container {

@@ -11083,7 +11083,7 @@ li.comment.comment-new {
   display: block;
   width: 100%;
   padding: 5px;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   /* line 7, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box[data-equal-item] {
     display: flex;
@@ -11131,79 +11131,52 @@ li.comment.comment-new {
   /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box .box-title.box-title-inherit {
     font-size: 1em; }
-  /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-  body:not(.material-no-radius) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
-    border-radius: 2px; }
-  /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-  body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
-    @media print {
-      /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-      body:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
-        box-shadow: none; } }
-  /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-  body:not(.material-no-radius) .box.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
-    border-radius: 2px; }
-  /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-  body:not(.material-no-shadow) .box.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
-    @media print {
-      /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
-      body:not(.material-no-shadow) .box.box-panel-secondary > :not(.box-title):not(.accordion-table-head) {
-        box-shadow: none; } }
 
-/* line 15, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
-body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.box-panel-secondary) {
-  box-shadow: none; }
+/* line 5, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+.box.box-plain, .box.box-light {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0; }
 
-/* line 19, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
-.box.box-plain {
-  padding: 0;
-  box-shadow: none !important; }
-
-/* line 24, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 10, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-border {
   border: 1px solid #e5e5e5; }
 
-/* line 28, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 14, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box + .box {
   margin-bottom: 0;
   margin-top: 15px; }
 
-/* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 19, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-content {
   padding: 10px;
-  font-size: .9em;
-  flex: 1 1 auto; }
+  font-size: .9em; }
 
-/* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 23, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+.box-image-container {
+  position: relative; }
+
+/* line 27, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-content img {
   max-width: 100%;
   height: auto; }
 
-/* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
-.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
-  background-color: #fff; }
-
-/* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 32, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-image {
   width: 100%;
-  flex: 0 0 auto; }
+  height: auto; }
 
-/* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 .box-card-post .box-image {
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
-.box-image-container {
-  position: relative; }
+/* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+.creamy .box:not(.box-news):not(.box-post-brick) .box-content {
+  background-color: #fff; }
 
-/* line 67, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
+/* line 49, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_box.scss */
 [data-equal-item] .box-image-container {
   flex: 0 0 auto; }
 
@@ -11214,10 +11187,20 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
   border: 1px solid #e5e5e5;
   color: #252525;
   position: relative; }
-  /* line 32, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+  /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-shadow) .box-index {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+    @media print {
+      /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+      body:not(.material-no-shadow) .box-index {
+        box-shadow: none; } }
+  /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-radius) .box-index {
+    border-radius: 2px; }
+  /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
   .box-index .box-content {
     margin-top: 5px; }
-  /* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+  /* line 40, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
   .box-index .label-category {
     position: absolute;
     bottom: 0;
@@ -11225,45 +11208,19 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     margin-left: 0;
     display: inline-block;
     border-radius: 0; }
-  /* line 45, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+  /* line 49, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
   .box-index time {
     display: block;
     margin-bottom: 10px; }
 
-/* line 51, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+/* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
 a.box-index {
   color: #252525; }
-  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+  /* line 58, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
   a.box-index:hover {
-    text-decoration: none;
-    background-color: #f4f4f4; }
-  /* line 59, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
-  a.box-index:after {
-    font-family: hbg-pricons;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: -15%;
-    content: "";
-    color: #fff;
-    position: absolute;
-    bottom: 3px;
-    right: 4px;
-    font-size: 12px; }
-  /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
-  a.box-index:before {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    right: -1px;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 17px;
-    border-right-color: #dc0ca8;
-    border-bottom-color: #dc0ca8; }
+    text-decoration: none; }
 
-/* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
+/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_index.scss */
 .box-index-title.link-item, .widget_archive a.box-index-title,
 .widget_categories a.box-index-title,
 .widget_meta a.box-index-title,
@@ -11279,13 +11236,23 @@ a.box-index {
   background-color: #712082;
   color: #fff;
   color: #fff; }
+  /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-shadow) .box-filled {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+    @media print {
+      /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+      body:not(.material-no-shadow) .box-filled {
+        box-shadow: none; } }
+  /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-radius) .box-filled {
+    border-radius: 2px; }
   @media print {
     /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_filled.scss */
     .box-filled {
       background-color: transparent !important;
       color: #252525 !important;
       border: 1px solid #e5e5e5; } }
-  /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+  /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box-filled .box-title,
   .box-filled .widgettitle,
   .box-filled > h1,
@@ -11304,25 +11271,25 @@ a.box-index {
   .box-filled .widget > h5,
   .box-filled .widget > h6 {
     padding: 10px 10px 0 10px; }
-  /* line 85, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+  /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box-filled > ul {
     padding: 10px; }
-  /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+  /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box-filled a:not(.btn):not(.page) {
     color: #fff;
     text-decoration: underline; }
     @media print {
-      /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+      /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
       .box-filled a:not(.btn):not(.page) {
         color: #252525; } }
-  /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+  /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box-filled .box-content {
     color: #fff; }
     @media print {
-      /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+      /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
       .box-filled .box-content {
         color: #252525; } }
-  /* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+  /* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   .box-filled .btn.btn-plain {
     color: #fff; }
   /* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_filled.scss */
@@ -11493,6 +11460,43 @@ a.box-index {
   .sidebar-left-sidebar [class*="grid-"]:nth-child(5n + 5) .box-filled {
     background-color: transparent !important;
     color: #252525 !important; } }
+
+/* line 32, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+.box-light a, .box-light .link-item, .box-light .widget_archive a, .widget_archive .box-light a, .box-light
+.widget_categories a,
+.widget_categories .box-light a, .box-light
+.widget_meta a,
+.widget_meta .box-light a, .box-light
+.widget_recent_entries a,
+.widget_recent_entries .box-light a, .box-light
+.widget_recent_comments a,
+.widget_recent_comments .box-light a {
+  text-decoration: underline; }
+
+/* line 36, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+.box-light .box-title {
+  font-weight: 300;
+  font-size: 1.3em; }
+
+/* line 41, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+.box-light .box-content {
+  padding: 0; }
+
+/* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+.box-light + .box-light {
+  border-top: 1px solid #f5f5f5; }
+  @media (min-width: 469px) and (max-width: 768px) {
+    /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+    .box-light + .box-light {
+      padding-top: 10px; } }
+  @media (min-width: 769px) and (max-width: 960px) {
+    /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+    .box-light + .box-light {
+      padding-top: 30px; } }
+  @media (min-width: 961px) {
+    /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_light.scss */
+    .box-light + .box-light {
+      padding-top: 30px; } }
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_author.scss */
 .box.box-author {
@@ -12089,24 +12093,31 @@ a.box-news:hover {
   background-color: #fff;
   border: 1px solid #e5e5e5;
   color: #252525; }
-  /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-shadow) .box-card {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+    @media print {
+      /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+      body:not(.material-no-shadow) .box-card {
+        box-shadow: none; } }
+  /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+  body:not(.material-no-radius) .box-card {
+    border-radius: 2px; }
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card h1, .box-card h2, .box-card h3, .box-card h4, .box-card .widget_calendar caption, .widget_calendar .box-card caption, .box-card h5, .box-card h6 {
     padding-bottom: 0; }
-  /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
-  .box-card.has-image {
-    text-align: center; }
-  /* line 60, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 58, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card .box-image,
   .box-card figure {
     width: 60%;
     max-width: 300px;
     border-radius: 50%;
-    margin: 20px 20% 10px 20%;
-    display: inline-block; }
-  /* line 69, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+    margin: 20px auto;
+    display: block; }
+  /* line 67, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card figure {
     padding-bottom: 0; }
-    /* line 72, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+    /* line 70, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
     .box-card figure:after {
       font-family: hbg-pricons;
       line-height: 1;
@@ -12115,54 +12126,50 @@ a.box-news:hover {
       -moz-osx-font-smoothing: grayscale;
       vertical-align: -15%;
       content: ""; }
-  /* line 78, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 76, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card .box-content h5 {
     font-size: 22.1px; }
-  /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 81, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  .box-card .box-image + .box-content {
+    text-align: center; }
+  /* line 85, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card .box-title {
     padding: 10px;
     padding-bottom: 0; }
-  /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 90, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card a[href^="mailto:"] {
     word-break: break-all; }
-  /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card .card-title {
     margin-bottom: 10px; }
-    /* line 95, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+    /* line 97, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
     .box-card .card-title span {
       display: block; }
-  /* line 100, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card .description {
     margin-top: 10px; }
-  /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+  /* line 106, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
   .box-card.vertical-card {
-    overflow: hidden;
-    text-align: left; }
-    /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
-    .box-card.vertical-card .box-image,
-    .box-card.vertical-card figure {
-      float: left;
-      width: 180px;
-      margin: 0;
-      border-radius: 0; }
-    @media screen and (min-width: 0) and (max-width: 468px) {
-      /* line 117, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+    overflow: hidden; }
+    @media screen and (min-width: 769px) {
+      /* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+      .box-card.vertical-card .box-content {
+        text-align: left; }
+      /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
       .box-card.vertical-card .box-image,
       .box-card.vertical-card figure {
-        width: 100%;
-        float: none;
-        max-width: 1000px; } }
+        float: left;
+        width: 180px;
+        margin: 0;
+        border-radius: 0; } }
     @media screen and (min-width: 469px) {
-      /* line 126, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
-      .box-card.vertical-card.has-image .box-content {
-        margin-left: 180px; }
-        /* line 129, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
-        .box-card.vertical-card.has-image .box-content ul, .box-card.vertical-card.has-image .box-content h1, .box-card.vertical-card.has-image .box-content h2, .box-card.vertical-card.has-image .box-content h3, .box-card.vertical-card.has-image .box-content h4, .box-card.vertical-card.has-image .box-content .widget_calendar caption, .widget_calendar .box-card.vertical-card.has-image .box-content caption, .box-card.vertical-card.has-image .box-content h5, .box-card.vertical-card.has-image .box-content h6 {
-          padding-left: 10px; } }
-  @media screen and (max-width: 769px) {
-    /* line 139, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
-    .box-card .box-content {
-      margin-left: 0; } }
+      /* line 125, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+      .box-card.vertical-card .box-image + .box-content {
+        margin-left: 190px; } }
+    @media screen and (max-width: 769px) {
+      /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_card.scss */
+      .box-card.vertical-card .box-image + .box-content {
+        margin-left: 0; } }
 
 /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/box/_grid-post.scss */
 .box-post-brick {
@@ -18179,7 +18186,7 @@ div.spinner {
   display: block;
   width: 100%;
   padding: 5px;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   /* line 7, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
   [class^="widget_"]:not(.widget_calendar)[data-equal-item] {
     display: flex;
@@ -18237,6 +18244,19 @@ div.spinner {
   .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) {
     background-color: #712082;
     color: #fff; }
+    /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+    body:not(.material-no-shadow) .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar), body:not(.material-no-shadow)
+    .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); }
+      @media print {
+        /* line 2, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+        body:not(.material-no-shadow) .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar), body:not(.material-no-shadow)
+        .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) {
+          box-shadow: none; } }
+    /* line 42, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
+    body:not(.material-no-radius) .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar), body:not(.material-no-radius)
+    .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) {
+      border-radius: 2px; }
     @media print {
       /* line 9, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget.scss */
       .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar),
@@ -18244,7 +18264,7 @@ div.spinner {
         background-color: transparent !important;
         color: #252525 !important;
         border: 1px solid #e5e5e5; } }
-    /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+    /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .box-title,
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .widgettitle,
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) > h1,
@@ -18282,30 +18302,30 @@ div.spinner {
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) .widget > h5,
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) .widget > h6 {
       padding: 10px 10px 0 10px; }
-    /* line 85, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+    /* line 88, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) > ul,
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) > ul {
       padding: 10px; }
-    /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+    /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page),
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page) {
       color: #fff;
       text-decoration: underline; }
       @media print {
-        /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+        /* line 92, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
         .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page),
         .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) a:not(.btn):not(.page) {
           color: #252525; } }
-    /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+    /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .box-content,
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) .box-content {
       color: #fff; }
       @media print {
-        /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+        /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
         .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .box-content,
         .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) .box-content {
           color: #252525; } }
-    /* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
+    /* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_box.scss */
     .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) .btn.btn-plain,
     .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) .btn.btn-plain {
       color: #fff; }

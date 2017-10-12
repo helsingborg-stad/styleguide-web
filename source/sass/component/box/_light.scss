@@ -1,0 +1,62 @@
+//
+// @name Light
+// @description Light box. Typically used in sidebars etc. If used in a looping grid the light boxes will be coloured according to the brand stripe colors.
+//
+// @page Boxes/Light
+//
+// @state .box-filled-1 - Use the first stripe color as setting-color
+// @state .box-filled-2 - Use the second stripe color as setting-color
+// @state .box-filled-3 - Use the third stripe color as setting-color
+// @state .box-filled-4 - Use the fourth stripe color as setting-color
+// @state .box-filled-5 - Use the fifth stripe color as setting-color
+//
+// @markup
+// <div class="box box-light box-light-2">
+//     <h4 class="box-title">Chupa chups</h4>
+//     <div class="box-content">
+//         <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>
+//     </div>
+// </div>
+// <div class="box box-light box-light-3">
+//     <h4 class="box-title">Chupa chups</h4>
+//     <div class="box-content">
+//         <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>
+//     </div>
+// </div>
+//
+
+.box-light {
+
+    @extend .box-plain;
+
+    a, .link-item {
+        text-decoration: underline;
+    }
+
+    .box-title {
+        font-weight: 300;
+        font-size: 1.3em;
+    }
+
+    .box-content {
+        padding: 0;
+    }
+
+}
+
+.box-light + .box-light {
+    border-top: 1px solid $gray-lighter;
+
+    @media #{$screen-sm} {
+        padding-top: $grid-gutter-sm;
+    }
+
+    @media #{$screen-md} {
+        padding-top: $grid-gutter-md;
+    }
+
+    @media #{$screen-lg} {
+        padding-top: $grid-gutter-lg;
+    }
+
+}

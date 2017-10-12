@@ -2,7 +2,7 @@
     display: block;
     width: 100%;
     padding: $content-gutter / 3;
-    margin-bottom: $grid-gutter-xs;
+    margin-bottom: $grid-gutter-md/2;
 
     &[data-equal-item] {
         display: flex;
@@ -56,6 +56,9 @@
 }
 
 @mixin box-filled {
+    @include material-shadow();
+    @include material-radius();
+
     background-color: $palette-2;
     color: #fff;
 
