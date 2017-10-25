@@ -1,0 +1,253 @@
+//
+// @name Timeline
+// @description Vertical timeline
+// @author Jonatan Hanson
+//
+// @page Timeline
+//
+//@state .timeline-side - Places image div closest to the timeline marker
+//
+// @markup
+// <div class="grid">
+// 	<div class="grid-md-12">
+// 		<ul class="timeline">
+// 			<li class="timeline-event">
+// 				<div class="timeline-date hidden-xs hidden-sm">
+// 					<span>24 Dec 2010</span>
+// 				</div>
+// 				<div class="timeline-marker">
+// 					<div class="timeline-date hidden-md hidden-lg">
+// 						<span>24 Dec</span><span>2010</span>
+// 					</div>
+// 				</div>
+// 				<div class="timeline-content">
+// 					<div class="grid">
+// 						<div class="grid-md-5 grid-lg-4 timeline-side">
+// 							<i class="pricon pricon-5x pricon-twitter-square"></i>
+// 						</div>
+// 						<div class="grid-md-7 grid-lg-8">
+// 							<h3>Sweet roll brownie</h3>
+// 							<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</li>
+// 			<li class="timeline-event">
+// 				<div class="timeline-date hidden-xs hidden-sm">
+// 					<span>5 Jan 2011</span>
+// 				</div>
+// 				<div class="timeline-marker">
+// 					<div class="timeline-date hidden-md hidden-lg">
+// 						<span>5 Jan</span><span>2011</span>
+// 					</div>
+// 				</div>
+// 				<div class="timeline-content">
+// 					<div class="grid">
+// 						<div class="grid-md-5 grid-lg-4 timeline-side">
+// 							<i class="pricon pricon-5x pricon-facebook-square"></i>
+// 						</div>
+// 						<div class="grid-md-7 grid-lg-8">
+// 							<h3>Sugar plum</h3>
+// 							<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</li>
+// 			<li class="timeline-event">
+// 				<div class="timeline-date hidden-xs hidden-sm">
+// 					<span>9 Jul 2015</span>
+// 				</div>
+// 				<div class="timeline-marker">
+// 					<div class="timeline-date hidden-md hidden-lg">
+// 						<span>9 Jul</span><span>2015</span>
+// 					</div>
+// 				</div>
+// 				<div class="timeline-content">
+// 					<div class="grid">
+// 						<div class="grid-md-12">
+// 							<img src="https:\/\/unsplash.it/400/250/?image=823" class="image">
+// 						</div>
+// 						<div class="grid-md-12">
+// 							<h3>Fruitcake</h3>
+// 							<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</li>
+// 			<li class="timeline-event">
+// 				<div class="timeline-date hidden-xs hidden-sm">
+// 					<span>25 Aug 2017</span>
+// 				</div>
+// 				<div class="timeline-marker">
+// 					<div class="timeline-date hidden-md hidden-lg">
+// 						<span>25 Aug</span><span>2017</span>
+// 					</div>
+// 				</div>
+// 				<div class="timeline-content">
+// 					<div class="grid">
+// 						<div class="grid-md-12">
+// 							<h3>Cheesecake chocolate cake</h3>
+// 							<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.
+// 	                		Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>
+// 	                	</div>
+// 	                </div>
+// 	            </div>
+// 	        </li>
+// 		</ul>
+// 	</div>
+// </div>
+
+.timeline {
+	$background-colors: $palette-1, $palette-2, $palette-3, $palette-4;
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+	img {
+		width: 100%;
+	}
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 2em;
+        width: 1px;
+        height: 100%;
+        background: $gray;
+
+        @media screen and #{$screen-md-up} {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .timeline-event {
+        position: relative;
+        margin-bottom: 2em;
+        color: #fff;
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .timeline-marker {
+        background: $gray;
+        position: absolute;
+        top: calc(50% - 1em);
+        left: 2em;
+        padding: .3em .5em;
+        transform: translateX(-50%);
+
+        @media screen and #{$screen-md-up} {
+            top: calc(50% - 1em);
+            width: 1.5em;
+            height: 1.5em;
+            padding: 0;
+            border: 6px solid #fff;
+            border-radius: 50%;
+            left: 50%;
+        }
+    }
+
+    .timeline-date {
+        text-align: center;
+        position: relative;
+        color: #fff;
+        font-size: 1em;
+
+        span {
+            display: block;
+        }
+
+        @media screen and #{$screen-md-up} {
+            text-align: left;
+            color: $gray;
+            top: calc(50% - 1em);
+            width: calc(50% - 2em);
+            position: absolute;
+            right: 0;
+
+            span {
+                display: inline;
+            }
+        }
+    }
+
+    .timeline-content {
+        position: relative;
+        margin-left: 6em;
+        padding: 1em;
+
+        @media screen and #{$screen-md-up} {
+            margin-left: 0;
+            width: calc(50% - 3em);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: calc(50% - 1em);
+            left: -0.7em;
+            border-top: 0.75em solid transparent;
+            border-bottom: 0.75em solid transparent;
+        }
+    }
+
+    @for $i from 1 through length($background-colors) {
+        :nth-child(#{length($background-colors)}n+#{$i}) {
+            .timeline-content {
+                background: nth($background-colors, $i);
+
+                &:before {
+                    border-right: 0.75em solid nth($background-colors, $i);
+
+                    @media screen and #{$screen-md-up} {
+                        left: auto;
+                        right: -0.7em;
+                        border-right: none;
+                        border-left: 0.75em solid nth($background-colors, $i);
+
+                        @if $i % 2 == 0 {
+                            border-right: 0.75em solid nth($background-colors, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    :nth-child(even) {
+        .timeline-content {
+            @media screen and #{$screen-md-up} {
+                float: right;
+
+                &:before {
+                    left: -0.7em;
+                    right: auto;
+                    border-left: none;
+                }
+            }
+        }
+
+        .timeline-date {
+            @media screen and #{$screen-md-up} {
+                text-align: right;
+                left: 0;
+            }
+        }
+    }
+
+    :nth-child(odd) .timeline-content {
+        @media screen and #{$screen-md-up} {
+            .grid > .timeline-side {
+            	order: 1;
+            }
+        }
+    }
+}
