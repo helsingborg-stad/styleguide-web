@@ -10,6 +10,12 @@
             "email": "sebastian.thulin@helsingborg.se"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/styleguide-web.git"
+        }
+    ],
     "require": {
         "philo/laravel-blade": "^3.1"
     }
