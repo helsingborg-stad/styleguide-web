@@ -126,7 +126,6 @@
     .timeline-event {
         position: relative;
         margin-bottom: 2em;
-        color: #fff;
 
         &:after {
             content: "";
@@ -182,6 +181,10 @@
         position: relative;
         margin-left: 6em;
         padding: 1em;
+
+		h1, h2, h3, p {
+			color: #fff;
+		}
 
         @media screen and #{$screen-md-up} {
             margin-left: 0;
