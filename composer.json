@@ -1,5 +1,6 @@
 {
     "name": "helsingborg-stad/hwstyleguide-web",
+    "type": "styleguide",
     "authors": [
         {
             "name": "Kristoffer Svanmark",
@@ -8,6 +9,16 @@
         {
             "name": "Sebastian Thulin",
             "email": "sebastian.thulin@helsingborg.se"
+        },
+        {
+            "name": "Nikolas Ramstedt",
+            "email": "nikolas.ramstedt@helsingborg.se"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/styleguide-web.git"
         }
     ],
     "require": {
