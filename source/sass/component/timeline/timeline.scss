@@ -20,9 +20,9 @@
 // 						<span>24 Dec</span><span>2010</span>
 // 					</div>
 // 				</div>
-// 				<div class="timeline-content">
+// 				<div class="timeline-content timeline-side">
 // 					<div class="grid">
-// 						<div class="grid-md-5 grid-lg-4 timeline-side">
+// 						<div class="grid-md-5 grid-lg-4">
 // 							<i class="pricon pricon-5x pricon-twitter-square"></i>
 // 						</div>
 // 						<div class="grid-md-7 grid-lg-8">
@@ -41,9 +41,9 @@
 // 						<span>5 Jan</span><span>2011</span>
 // 					</div>
 // 				</div>
-// 				<div class="timeline-content">
+// 				<div class="timeline-content timeline-side">
 // 					<div class="grid">
-// 						<div class="grid-md-5 grid-lg-4 timeline-side">
+// 						<div class="grid-md-5 grid-lg-4">
 // 							<i class="pricon pricon-5x pricon-facebook-square"></i>
 // 						</div>
 // 						<div class="grid-md-7 grid-lg-8">
@@ -181,8 +181,9 @@
         position: relative;
         margin-left: 6em;
         padding: 1em;
+		color: #fff;
 
-		h1, h2, h3, p {
+		h1, h2, h3, h4, h5 {
 			color: #fff;
 		}
 
@@ -246,11 +247,15 @@
         }
     }
 
-    :nth-child(odd) .timeline-content {
+    :nth-child(odd) .timeline-side {
         @media screen and #{$screen-md-up} {
-            .grid > .timeline-side {
-            	order: 1;
-            }
+			& > .grid {
+				flex-wrap: nowrap;
+
+				& > div[class*="grid"]:first-child {
+            		order: 1;
+            	}
+			}
         }
     }
 }
