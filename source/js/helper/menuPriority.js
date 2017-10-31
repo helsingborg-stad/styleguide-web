@@ -16,7 +16,7 @@ HelsingborgPrime.Helper.MenuPriority = (function ($) {
     var breakWasTwoOrMore = false;
 
     function MenuPriority() {
-        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify') && !$('#main-menu').hasClass('nav-no-overflow')) {
+        if ($('.header-jumbo').length > 0 && !$('#main-menu').hasClass('nav-justify') && !$('.header-jumbo').hasClass('nav-no-overflow')) {
             this.init();
         }
     }
