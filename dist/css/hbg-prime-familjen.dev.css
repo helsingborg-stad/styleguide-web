@@ -15759,22 +15759,22 @@ img[src$=".svg"].footer-signature {
     display: flex;
     justify-content: center;
     flex-direction: column; }
-    /* line 66, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
-    .section-featured .section-image :not(.section-image-caption p) {
+    /* line 65, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    .section-featured .section-image img, .section-featured .section-image svg, .section-featured .section-image i {
       font-size: calc(2em + 5vw); }
-    /* line 70, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 69, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img[src$=".jpg"],
     .section-featured .section-image img[src$=".jpeg"],
     .section-featured .section-image img[src$=".png"] {
       width: 100%;
       height: 100%; }
       @media screen and (max-width: 769px) {
-        /* line 70, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+        /* line 69, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
         .section-featured .section-image img[src$=".jpg"],
         .section-featured .section-image img[src$=".jpeg"],
         .section-featured .section-image img[src$=".png"] {
           height: auto; } }
-    /* line 81, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 80, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img[src$=".svg"],
     .section-featured .section-image svg,
     .section-featured .section-image i {
@@ -15787,36 +15787,36 @@ img[src$=".svg"].footer-signature {
       /* line 61, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured .section-image {
         margin-bottom: 30px; } }
-  /* line 98, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 97, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .section-article {
     margin-left: auto; }
-  /* line 104, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 103, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .section-article {
     margin-right: auto; }
   @media screen and (max-width: 961px) {
-    /* line 111, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 110, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured.image-left .section-article, .section-featured.image-right .section-article {
       margin-left: auto;
       margin-right: auto; } }
-  /* line 121, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 120, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-middle .section-content {
     align-items: center;
     display: flex; }
-  /* line 128, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 127, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-top .section-content {
     align-items: flex-start;
     display: flex; }
-  /* line 135, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 134, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-bottom .section-content {
     align-items: flex-end;
     display: flex; }
-  /* line 142, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 141, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-lg img {
     border: solid 10px; }
-  /* line 146, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 145, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-md img {
     border: solid 7px; }
-  /* line 150, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 149, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-sm img {
     border: solid 5px; }
 
