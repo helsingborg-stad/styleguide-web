@@ -15243,19 +15243,19 @@ img[src$=".svg"].footer-signature {
 
 /* Text color */
 /* line 80, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-.section.text-color-dark .section-article h1, .section.text-color-dark .section-article h2, .section.text-color-dark .section-article h3, .section.text-color-dark .section-article h4, .section.text-color-dark .section-article .widget_calendar caption, .widget_calendar .section.text-color-dark .section-article caption, .section.text-color-dark .section-article h5, .section.text-color-dark .section-article h6 {
+.section.text-color-dark .section-article h1, .section.text-color-dark .section-article h2, .section.text-color-dark .section-article h3, .section.text-color-dark .section-article h4, .section.text-color-dark .section-article .widget_calendar caption, .widget_calendar .section.text-color-dark .section-article caption, .section.text-color-dark .section-article h5, .section.text-color-dark .section-article h6, .section.text-color-dark .section-image-caption h1, .section.text-color-dark .section-image-caption h2, .section.text-color-dark .section-image-caption h3, .section.text-color-dark .section-image-caption h4, .section.text-color-dark .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-dark .section-image-caption caption, .section.text-color-dark .section-image-caption h5, .section.text-color-dark .section-image-caption h6 {
   color: #009AA6; }
 
 /* line 84, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-.section.text-color-dark .section-article p, .section.text-color-dark .section-article ul, .section.text-color-dark .section-article ol {
+.section.text-color-dark .section-article p, .section.text-color-dark .section-article ul, .section.text-color-dark .section-article ol, .section.text-color-dark .section-image-caption p, .section.text-color-dark .section-image-caption ul, .section.text-color-dark .section-image-caption ol {
   color: rgba(0, 0, 0, 0.87); }
 
 /* line 93, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-.section.text-color-light .section-article h1, .section.text-color-light .section-article h2, .section.text-color-light .section-article h3, .section.text-color-light .section-article h4, .section.text-color-light .section-article .widget_calendar caption, .widget_calendar .section.text-color-light .section-article caption, .section.text-color-light .section-article h5, .section.text-color-light .section-article h6 {
+.section.text-color-light .section-article h1, .section.text-color-light .section-article h2, .section.text-color-light .section-article h3, .section.text-color-light .section-article h4, .section.text-color-light .section-article .widget_calendar caption, .widget_calendar .section.text-color-light .section-article caption, .section.text-color-light .section-article h5, .section.text-color-light .section-article h6, .section.text-color-light .section-image-caption h1, .section.text-color-light .section-image-caption h2, .section.text-color-light .section-image-caption h3, .section.text-color-light .section-image-caption h4, .section.text-color-light .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-light .section-image-caption caption, .section.text-color-light .section-image-caption h5, .section.text-color-light .section-image-caption h6 {
   color: white; }
 
 /* line 97, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
-.section.text-color-light .section-article p, .section.text-color-light .section-article ul, .section.text-color-light .section-article ol {
+.section.text-color-light .section-article p, .section.text-color-light .section-article ul, .section.text-color-light .section-article ol, .section.text-color-light .section-image-caption p, .section.text-color-light .section-image-caption ul, .section.text-color-light .section-image-caption ol {
   color: white; }
 
 /* line 102, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section.scss */
@@ -15758,21 +15758,23 @@ img[src$=".svg"].footer-signature {
   .section-featured .section-image {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    font-size: calc(2em + 5vw); }
-    /* line 67, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    flex-direction: column; }
+    /* line 66, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    .section-featured .section-image :not(.section-image-caption p) {
+      font-size: calc(2em + 5vw); }
+    /* line 70, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img[src$=".jpg"],
     .section-featured .section-image img[src$=".jpeg"],
     .section-featured .section-image img[src$=".png"] {
       width: 100%;
       height: 100%; }
       @media screen and (max-width: 769px) {
-        /* line 67, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+        /* line 70, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
         .section-featured .section-image img[src$=".jpg"],
         .section-featured .section-image img[src$=".jpeg"],
         .section-featured .section-image img[src$=".png"] {
           height: auto; } }
-    /* line 78, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 81, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured .section-image img[src$=".svg"],
     .section-featured .section-image svg,
     .section-featured .section-image i {
@@ -15785,36 +15787,36 @@ img[src$=".svg"].footer-signature {
       /* line 61, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
       .section-featured .section-image {
         margin-bottom: 30px; } }
-  /* line 95, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 98, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-left .section-article {
     margin-left: auto; }
-  /* line 101, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 104, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-right .section-article {
     margin-right: auto; }
   @media screen and (max-width: 961px) {
-    /* line 108, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+    /* line 111, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
     .section-featured.image-left .section-article, .section-featured.image-right .section-article {
       margin-left: auto;
       margin-right: auto; } }
-  /* line 118, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 121, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-middle .section-content {
     align-items: center;
     display: flex; }
-  /* line 125, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 128, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-top .section-content {
     align-items: flex-start;
     display: flex; }
-  /* line 132, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 135, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.text-bottom .section-content {
     align-items: flex-end;
     display: flex; }
-  /* line 139, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 142, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-lg img {
     border: solid 10px; }
-  /* line 143, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 146, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-md img {
     border: solid 7px; }
-  /* line 147, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
+  /* line 150, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/section/section-featured.scss */
   .section-featured.image-frame-width-sm img {
     border: solid 5px; }
 
