@@ -62,7 +62,10 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        font-size: calc(2em + 5vw);
+
+        :not(.section-image-caption p) {
+            font-size: calc(2em + 5vw);
+        }
 
         img[src$=".jpg"],
         img[src$=".jpeg"],
