@@ -107,6 +107,7 @@
 
 	img {
 		width: 100%;
+        height: auto;
 	}
 
     &:before {
@@ -139,7 +140,7 @@
         position: absolute;
         top: calc(50% - 1em);
         left: 2em;
-        padding: .3em .5em;
+        padding: .25em .4em;
         transform: translateX(-50%);
 
         @media screen and #{$screen-md-up} {
@@ -157,13 +158,14 @@
         text-align: center;
         position: relative;
         color: #fff;
-        font-size: 1em;
+        font-size: 0.8em;
 
         span {
             display: block;
         }
 
         @media screen and #{$screen-md-up} {
+        	font-size: 1em;
             text-align: left;
             color: $gray;
             top: calc(50% - 1em);
@@ -179,7 +181,7 @@
 
     .timeline-content {
         position: relative;
-        margin-left: 6em;
+        margin-left: 4.8em;
         padding: 1em;
 		color: #fff;
 
