@@ -157,6 +157,8 @@
 // <i class="pricon pricon-chevron-left"></i> pricon-chevron-left<br>
 // <i class="pricon pricon-chevron-right"></i> pricon-chevron-right<br>
 // <i class="pricon pricon-chevron-up"></i> pricon-chevron-up<br>
+// <i class="pricon pricon-play"></i> pricon-play<br>
+// <i class="pricon pricon-pause"></i> pricon-pause<br>
 // 
 //
 @font-face {
@@ -537,6 +539,8 @@ $pricon-chevron-down: "\EA91";
 $pricon-chevron-left: "\EA92";
 $pricon-chevron-right: "\EA93";
 $pricon-chevron-up: "\EA94";
+$pricon-play: "\EB30";
+$pricon-pause: "\EC30";
 
 
 /* Glyphs */
@@ -681,6 +685,8 @@ $pricon-chevron-up: "\EA94";
 .pricon-chevron-left:before { content: $pricon-chevron-left }
 .pricon-chevron-right:before { content: $pricon-chevron-right }
 .pricon-chevron-up:before { content: $pricon-chevron-up }
+.pricon-play:before { content: $pricon-play }
+.pricon-pause:before { content: $pricon-pause }
 
 
 /* Mixin */
