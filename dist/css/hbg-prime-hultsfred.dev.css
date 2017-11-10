@@ -8272,7 +8272,7 @@ button.btn-icon {
 
 /* line 34, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
 .audio-player {
-  overflow: auto;
+  border: 1px solid #eee;
   height: 40px;
   line-height: 0;
   background-color: #f4f4f4; }
@@ -8288,12 +8288,13 @@ button.btn-icon {
     display: none; }
   /* line 46, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player .album-art {
+    background-color: #3e3e3f;
     height: 40px;
     width: 40px;
     position: relative;
     float: left;
-    margin-right: 10px; }
-  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+    margin: -1px 10px -1px -1px; }
+  /* line 55, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player .toggle-action-play,
   .audio-player .toggle-action-pause {
     position: absolute;
@@ -8304,33 +8305,56 @@ button.btn-icon {
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
     line-height: 37px;
-    text-align: center; }
-  /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+    text-align: center;
+    transition: background-color 300ms; }
+    /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+    .audio-player .toggle-action-play:hover,
+    .audio-player .toggle-action-pause:hover {
+      background-color: rgba(62, 62, 63, 0.6); }
+  /* line 69, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player .toggle-action-pause {
     display: none; }
-  /* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  /* line 74, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player.playing .toggle-action-pause {
     display: block; }
-  /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  /* line 77, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player.playing .toggle-action-play {
     display: none; }
-  /* line 76, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  /* line 82, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
   .audio-player .action-seek {
     float: left;
     width: calc(100% - 40px - 25px);
-    height: 2px;
     outline: 0;
     padding: 0;
     appearance: none;
     -webkit-appearance: none;
-    user-select: none;
-    color: #e5e5e5;
-    align-self: center;
-    z-index: 1;
-    cursor: pointer;
-    margin-top: 20px; }
+    margin-top: 18px;
+    cursor: pointer; }
+  /* line 96, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  .audio-player input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #acc6d3;
+    margin-top: -7px;
+    cursor: grab;
+    transition: all 200ms; }
+  /* line 109, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  .audio-player input[type=range]:focus {
+    outline: none; }
+  /* line 113, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  .audio-player input[type=range]::-webkit-slider-runnable-track {
+    height: 2px;
+    background: #e5e5e5;
+    border: none; }
+  /* line 119, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+  .audio-player input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #e5e5e5; }
 
-/* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
+/* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/audio/audio.scss */
 .audio-player + .audio-player {
   margin-top: 10px; }
 
