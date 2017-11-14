@@ -4,7 +4,6 @@ HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 HelsingborgPrime.Helper.FeatureDetector = (function ($) {
 
     function FeatureDetector() {
-        console.log("testing");
         this.detectFlexbox();
         this.detectWebp();
     }
