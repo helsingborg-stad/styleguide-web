@@ -19269,34 +19269,17 @@ HelsingborgPrime.Helper.FeatureDetector = (function ($) {
     }
 
     FeatureDetector.prototype.detectFlexbox = function () {
-        if (typeof document.createElement("p").style.flexWrap !== 'undefined' && document.createElement("p").style.flexWrap == '') {
-            return true;
-        }
-
-        $('html').addClass('no-flexbox');
-        return false;
+        !function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,l;for(var a in S)if(S.hasOwnProperty(a)){if(e=[],n=S[a],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],l=i.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),C.push((o?"":"no-")+l.join("-"))}}function s(e){var n=x.className,t=Modernizr._config.classPrefix||"";if(_&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),_?x.className.baseVal=n:x.className=n)}function i(e,n){return!!~(""+e).indexOf(n)}function l(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):_?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function f(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?f(o,t||n):o);return!1}function c(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function d(){var e=n.body;return e||(e=l(_?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var s,i,a,f,u="modernizr",c=l("div"),p=d();if(parseInt(r,10))for(;r--;)a=l("div"),a.id=o?o[r]:u+(r+1),c.appendChild(a);return s=l("style"),s.type="text/css",s.id="s"+u,(p.fake?p:c).appendChild(s),p.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=u,p.fake&&(p.style.background="",p.style.overflow="hidden",f=x.style.overflow,x.style.overflow="hidden",x.appendChild(p)),i=t(c,e),p.fake?(p.parentNode.removeChild(p),x.style.overflow=f,x.offsetHeight):c.parentNode.removeChild(c),!!i}function y(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(c(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+c(n[o])+":"+r+")");return s=s.join(" or "),m("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==p(e,null,"position")})}return t}function v(e,n,o,s){function f(){c&&(delete N.style,delete N.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var u=y(e,o);if(!r(u,"undefined"))return u}for(var c,p,d,m,v,g=["modernizr","tspan","samp"];!N.style&&g.length;)c=!0,N.modElem=l(g.shift()),N.style=N.modElem.style;for(d=e.length,p=0;d>p;p++)if(m=e[p],v=N.style[m],i(m,"-")&&(m=a(m)),N.style[m]!==t){if(s||r(o,"undefined"))return f(),"pfx"==n?m:!0;try{N.style[m]=o}catch(h){}if(N.style[m]!=v)return f(),"pfx"==n?m:!0}return f(),!1}function g(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+P.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?v(l,n,o,s):(l=(e+" "+z.join(i+" ")+i).split(" "),u(l,n,t))}function h(e,n,r){return g(e,t,t,n,r)}var C=[],S=[],w={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){S.push({name:e,fn:n,options:t})},addAsyncTest:function(e){S.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=w,Modernizr=new Modernizr;var x=n.documentElement,_="svg"===x.nodeName.toLowerCase(),b="Moz O ms Webkit",P=w._config.usePrefixes?b.split(" "):[];w._cssomPrefixes=P;var z=w._config.usePrefixes?b.toLowerCase().split(" "):[];w._domPrefixes=z;var E={elem:l("modernizr")};Modernizr._q.push(function(){delete E.elem});var N={style:E.elem.style};Modernizr._q.unshift(function(){delete N.style}),w.testAllProps=g,w.testAllProps=h,Modernizr.addTest("flexbox",h("flexBasis","1px",!0)),o(),s(C),delete w.addTest,delete w.addAsyncTest;for(var T=0;T<Modernizr._q.length;T++)Modernizr._q[T]();e.Modernizr=Modernizr}(window,document);
     };
 
     FeatureDetector.prototype.detectWebp = function () {
-
-        var webPsupport = (function() {
-          var webP = new Image();
-          webP.onload = WebP.onerror = function () {
-            callback(webP.height == 2);
-          };
-          webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-        });
-
-        if(webPsupport) {
-            $('html').addClass('webp');
-        } else {
-            $('html').addClass('no-webp');
-        }
+        !function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
     };
 
     return new FeatureDetector();
 
 })(jQuery);
+
 
 HelsingborgPrime = HelsingborgPrime || {};
 HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
@@ -20386,6 +20369,217 @@ HelsingborgPrime.ScrollDot.Highlight = (function ($) {
 
 })(jQuery);
 
+//
+// @name Cookie consent
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.CookieConsent = (function ($) {
+
+    var _cookieConsentVisible = false;
+    var _useLocalStorage = true;
+    var _animationSpeed = 1000;
+
+    function CookieConsent() {
+        this.init();
+    }
+
+    CookieConsent.prototype.init = function () {
+        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+
+        if (showCookieConsent && !this.hasAccepted()) {
+            this.displayConsent();
+
+            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                e.preventDefault();
+                var btn = $(e.target).closest('button');
+                this.accept();
+            }.bind(this));
+        }
+    };
+
+    CookieConsent.prototype.displayConsent = function() {
+        var wrapper = $('body');
+
+        if ($('#wrapper:first-child').length > 0) {
+            wrapper = $('#wrapper:first-child');
+        }
+
+        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
+        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
+            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
+        }
+
+        var buttonText = 'Got it';
+        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
+            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
+        }
+
+        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
+
+        wrapper.prepend('\
+            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
+                <div class="container"><div class="grid grid-table-md grid-va-middle">\
+                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
+                    <div class="grid-auto">' + consentText + '</div>\
+                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
+                </div></div>\
+            </div>\
+        ');
+
+        $('#cookie-consent').show();
+        _cookieConsentVisible = true;
+    };
+
+    CookieConsent.prototype.hasAccepted = function() {
+        if (_useLocalStorage) {
+            return window.localStorage.getItem('cookie-consent');
+        } else {
+            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
+        }
+    };
+
+    CookieConsent.prototype.accept = function() {
+        $('#cookie-consent').remove();
+        _cookieConsentVisible = false;
+
+        if (_useLocalStorage) {
+            try {
+                window.localStorage.setItem('cookie-consent', true);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        } else {
+            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
+        }
+    };
+
+    return new CookieConsent();
+
+})(jQuery);
+
+//
+// @name Modal
+// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.ModalLimit = (function ($) {
+
+    function ModalLimit() {
+    	this.init();
+
+        $('[data-action="modal-close"]').on('click', function (e) {
+            e.preventDefault();
+            $(e.target).parents('.modal').removeClass('modal-open').hide();
+        });
+    }
+
+    ModalLimit.prototype.init = function () {
+	    this.toggleModalClass();
+
+        $(window).bind('hashchange', function() {
+			this.toggleModalClass();
+		}.bind(this));
+
+        $('.modal a[href="#close"]').on('click', function (e) {
+            $('html, body').removeClass('overflow-hidden');
+        });
+    };
+
+    ModalLimit.prototype.toggleModalClass = function(){
+	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('html').removeClass('overflow-hidden');
+		}
+    };
+
+    return new ModalLimit();
+
+})(jQuery);
+
+//
+// @name Search top
+// @description  Open the top search
+//
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.SearchTop = (function ($) {
+
+    function SearchTop() {
+        this.bindEvents();
+    }
+
+    SearchTop.prototype.bindEvents = function () {
+        $('.toggle-search-top').on('click', function (e) {
+            this.toggle(e);
+        }.bind(this));
+    };
+
+    SearchTop.prototype.toggle = function (e) {
+        e.preventDefault();
+        $('.search-top').slideToggle(300);
+        $('.search-top').find('input[type=search]').focus();
+    };
+
+    return new SearchTop();
+
+})(jQuery);
+
+HelsingborgPrime = HelsingborgPrime || {};
+HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
+
+HelsingborgPrime.Prompt.Share = (function ($) {
+
+    function Share() {
+        $(function(){
+
+            this.handleEvents();
+
+        }.bind(this));
+    }
+
+    Share.prototype.openPopup = function(element) {
+        // Width and height of the popup
+        var width = 626;
+        var height = 305;
+
+        // Gets the href from the button/link
+        var url = $(element).closest('a').attr('href');
+
+        // Calculate popup position
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+        // Popup window features
+        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+
+        // Open popup
+        window.open(url, 'Share', windowFeatures);
+    }
+
+    /**
+     * Keeps track of events
+     * @return {void}
+     */
+    Share.prototype.handleEvents = function() {
+
+        $(document).on('click', '[data-action="share-popup"]', function (e) {
+            e.preventDefault();
+            this.openPopup(e.target);
+        }.bind(this));
+
+    }
+
+    return new Share();
+
+})(jQuery);
+
 var withinViewport = (function() {
 
   // Cutting the mustard
@@ -20618,214 +20812,3 @@ var withinViewport = (function() {
     return encodedFuncName;
   }});
 }));
-
-//
-// @name Cookie consent
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.CookieConsent = (function ($) {
-
-    var _cookieConsentVisible = false;
-    var _useLocalStorage = true;
-    var _animationSpeed = 1000;
-
-    function CookieConsent() {
-        this.init();
-    }
-
-    CookieConsent.prototype.init = function () {
-        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
-
-        if (showCookieConsent && !this.hasAccepted()) {
-            this.displayConsent();
-
-            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
-                e.preventDefault();
-                var btn = $(e.target).closest('button');
-                this.accept();
-            }.bind(this));
-        }
-    };
-
-    CookieConsent.prototype.displayConsent = function() {
-        var wrapper = $('body');
-
-        if ($('#wrapper:first-child').length > 0) {
-            wrapper = $('#wrapper:first-child');
-        }
-
-        var consentText = 'This website uses cookies to ensure you get the best experience browsing the website.';
-        if (HelsingborgPrime.Args.get('cookieConsent.message')) {
-            consentText = HelsingborgPrime.Args.get('cookieConsent.message') ? HelsingborgPrime.Args.get('cookieConsent.message') : 'This website is using cookies to give you the best experience possible.';
-        }
-
-        var buttonText = 'Got it';
-        if (HelsingborgPrime.Args.get('cookieConsent.button')) {
-            buttonText = HelsingborgPrime.Args.get('cookieConsent.button') ? HelsingborgPrime.Args.get('cookieConsent.button') : 'Okey';
-        }
-
-        var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
-
-        wrapper.prepend('\
-            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
-                <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
-                    <div class="grid-auto">' + consentText + '</div>\
-                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
-                </div></div>\
-            </div>\
-        ');
-
-        $('#cookie-consent').show();
-        _cookieConsentVisible = true;
-    };
-
-    CookieConsent.prototype.hasAccepted = function() {
-        if (_useLocalStorage) {
-            return window.localStorage.getItem('cookie-consent');
-        } else {
-            return HelsingborgPrime.Helper.Cookie.check('cookie-consent', true);
-        }
-    };
-
-    CookieConsent.prototype.accept = function() {
-        $('#cookie-consent').remove();
-        _cookieConsentVisible = false;
-
-        if (_useLocalStorage) {
-            try {
-                window.localStorage.setItem('cookie-consent', true);
-                return true;
-            } catch(e) {
-                return false;
-            }
-        } else {
-            HelsingborgPrime.Helper.Cookie.set('cookie-consent', true, 60);
-        }
-    };
-
-    return new CookieConsent();
-
-})(jQuery);
-
-//
-// @name Modal
-// @description  Prevent scrolling when modal is open (or #modal-* exists in url)
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.ModalLimit = (function ($) {
-
-    function ModalLimit() {
-    	this.init();
-
-        $('[data-action="modal-close"]').on('click', function (e) {
-            e.preventDefault();
-            $(e.target).parents('.modal').removeClass('modal-open').hide();
-        });
-    }
-
-    ModalLimit.prototype.init = function () {
-	    this.toggleModalClass();
-
-        $(window).bind('hashchange', function() {
-			this.toggleModalClass();
-		}.bind(this));
-
-        $('.modal a[href="#close"]').on('click', function (e) {
-            $('html, body').removeClass('overflow-hidden');
-        });
-    };
-
-    ModalLimit.prototype.toggleModalClass = function(){
-	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
-			$('html').addClass('overflow-hidden');
-		} else {
-			$('html').removeClass('overflow-hidden');
-		}
-    };
-
-    return new ModalLimit();
-
-})(jQuery);
-
-//
-// @name Search top
-// @description  Open the top search
-//
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.SearchTop = (function ($) {
-
-    function SearchTop() {
-        this.bindEvents();
-    }
-
-    SearchTop.prototype.bindEvents = function () {
-        $('.toggle-search-top').on('click', function (e) {
-            this.toggle(e);
-        }.bind(this));
-    };
-
-    SearchTop.prototype.toggle = function (e) {
-        e.preventDefault();
-        $('.search-top').slideToggle(300);
-        $('.search-top').find('input[type=search]').focus();
-    };
-
-    return new SearchTop();
-
-})(jQuery);
-
-HelsingborgPrime = HelsingborgPrime || {};
-HelsingborgPrime.Prompt = HelsingborgPrime.Prompt || {};
-
-HelsingborgPrime.Prompt.Share = (function ($) {
-
-    function Share() {
-        $(function(){
-
-            this.handleEvents();
-
-        }.bind(this));
-    }
-
-    Share.prototype.openPopup = function(element) {
-        // Width and height of the popup
-        var width = 626;
-        var height = 305;
-
-        // Gets the href from the button/link
-        var url = $(element).closest('a').attr('href');
-
-        // Calculate popup position
-        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
-        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
-
-        // Popup window features
-        var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-
-        // Open popup
-        window.open(url, 'Share', windowFeatures);
-    }
-
-    /**
-     * Keeps track of events
-     * @return {void}
-     */
-    Share.prototype.handleEvents = function() {
-
-        $(document).on('click', '[data-action="share-popup"]', function (e) {
-            e.preventDefault();
-            this.openPopup(e.target);
-        }.bind(this));
-
-    }
-
-    return new Share();
-
-})(jQuery);
