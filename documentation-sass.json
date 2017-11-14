@@ -12,25 +12,6 @@
    "grid",
    "main footer"
   ],
-  "typography": [
-   "article",
-   "headings",
-   "sub heading",
-   "label",
-   "lead",
-   "unordered list",
-   "ordered list",
-   "quotes",
-   "text alignment",
-   "font size",
-   "highlight",
-   "text color",
-   "underline",
-   "text transform",
-   "mark",
-   "small",
-   "truncate"
-  ],
   "accessibility": [
    "visibility"
   ],
@@ -47,11 +28,34 @@
    "spinner",
    "visibility"
   ],
+  "typography": [
+   "text alignment",
+   "font size",
+   "highlight",
+   "text color",
+   "underline",
+   "text transform",
+   "mark",
+   "small",
+   "truncate",
+   "article",
+   "headings",
+   "sub heading",
+   "label",
+   "lead",
+   "unordered list",
+   "ordered list",
+   "quotes"
+  ],
   "special": [
    "accordion",
    "modals",
    "slider",
    "tooltip"
+  ],
+  "media": [
+   "audioplayer",
+   "videoplayer"
   ],
   "blog": [
    "comments form",
@@ -66,9 +70,17 @@
    "news",
    "panel"
   ],
-  "media": [
-   "audioplayer",
-   "videoplayer"
+  "buttons": [
+   "base",
+   "primary",
+   "contrasted",
+   "light",
+   "danger",
+   "plain",
+   "themed",
+   "sizes",
+   "block button",
+   "offcanvas button"
   ],
   "navigation": [
    "dropdown",
@@ -81,18 +93,6 @@
    "scroll",
    "tabs",
    "tags"
-  ],
-  "buttons": [
-   "base",
-   "primary",
-   "contrasted",
-   "light",
-   "danger",
-   "plain",
-   "themed",
-   "sizes",
-   "block button",
-   "offcanvas button"
   ],
   "forms": [
    "datepicker",
@@ -131,11 +131,11 @@
   "stripe": [
    "general"
   ],
-  "timeline": [
-   "general"
-  ],
   "tables": [
    "basic"
+  ],
+  "timeline": [
+   "general"
   ],
   "wordpress": [
    "wp widget: calendar",
@@ -387,499 +387,6 @@
       }
      ],
      "helsingborg.se</a></li>": ""
-    }
-   ]
-  },
-  "typography": {
-   "article": [
-    {
-     "name": "Article",
-     "description": "<p>A full article with heading, lead and body text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Article"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "path": "~/source/sass/typography/_article.scss",
-       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    }
-   ],
-   "headings": [
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Headings"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-highlight",
-       "escaped": "text-highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
-      }
-     ]
-    }
-   ],
-   "sub heading": [
-    {
-     "name": "Sub heading",
-     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Sub heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<div class=\"sub-heading\">I love cake</div>",
-       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "label": [
-    {
-     "name": "Label",
-     "description": "<p>Label a text with a filled background</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Label"
-      }
-     ],
-     "state": [
-      {
-       "name": ".label-tag",
-       "escaped": "label-tag",
-       "description": "Adds arrow shape to label end"
-      },
-      {
-       "name": ".label-sm",
-       "escaped": "label-sm",
-       "description": "Smaller label"
-      },
-      {
-       "name": ".label-lg",
-       "escaped": "label-lg",
-       "description": "Larger label"
-      },
-      {
-       "name": ".label-theme",
-       "escaped": "label-theme",
-       "description": "Uses the current theme color"
-      },
-      {
-       "name": ".label-red-1",
-       "escaped": "label-red-1",
-       "description": "First color in red stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-blue-1",
-       "escaped": "label-blue-1",
-       "description": "First color in blue stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-green-1",
-       "escaped": "label-green-1",
-       "description": "First color in green stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-purple-1",
-       "escaped": "label-purple-1",
-       "description": "First color in purple stripe (color 1-5 available)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "path": "~/source/sass/typography/_label.scss",
-       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
-      }
-     ]
-    }
-   ],
-   "lead": [
-    {
-     "name": "Lead",
-     "description": "<p>A large paragraph to use as article lead.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Lead"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "path": "~/source/sass/typography/_lead.scss",
-       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
-      }
-     ]
-    }
-   ],
-   "unordered list": [
-    {
-     "name": "Unordered list",
-     "description": "<p>Stanrdard unordered list.</p>\n",
-     "state": [
-      {
-       "name": ".unordered-list",
-       "escaped": "unordered-list",
-       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Unordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "ordered list": [
-    {
-     "name": "Ordered list",
-     "description": "<p>Stanrdard ordered list.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Ordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
-      }
-     ]
-    }
-   ],
-   "quotes": [
-    {
-     "name": "Blockquote",
-     "description": "",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Quotes"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "path": "~/source/sass/typography/_quotes.scss",
-       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
-      }
-     ]
-    }
-   ],
-   "text alignment": [
-    {
-     "name": "Text alignment",
-     "description": "<p>Aligns text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text alignment"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "font size": [
-    {
-     "name": "Front size",
-     "description": "<p>Font size</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Font size"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-sm",
-       "escaped": "text-sm",
-       "description": "Small"
-      },
-      {
-       "name": ".text-md",
-       "escaped": "text-md",
-       "description": "Medium (default)"
-      },
-      {
-       "name": ".text-lg",
-       "escaped": "text-lg",
-       "description": "Large"
-      },
-      {
-       "name": ".text-xl",
-       "escaped": "text-xl",
-       "description": "Extra Large"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "highlight": [
-    {
-     "name": "Highlight",
-     "description": "<p>Highlights text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Highlight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text color": [
-    {
-     "name": "Text color",
-     "description": "<p>Modifiers to set the text color</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text color"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-dark-gray",
-       "escaped": "text-dark-gray",
-       "description": "Dark gray text color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "underline": [
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Underline"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text transform": [
-    {
-     "name": "Text transform",
-     "description": "<p>Transforms text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text transform"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "mark": [
-    {
-     "name": "Mark",
-     "description": "<p>Mark text to make it stand out.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Mark"
-      }
-     ],
-     "state": [
-      {
-       "name": ".mark-yellow",
-       "escaped": "mark-yellow",
-       "description": "Mark with yellow color"
-      },
-      {
-       "name": ".mark-blue",
-       "escaped": "mark-blue",
-       "description": "Mark with blue color"
-      },
-      {
-       "name": ".mark-green",
-       "escaped": "mark-green",
-       "description": "Mark with green color"
-      },
-      {
-       "name": ".mark-red",
-       "escaped": "mark-red",
-       "description": "Mark with red color"
-      },
-      {
-       "name": ".mark-purple",
-       "escaped": "mark-purple",
-       "description": "Mark with purple color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
-      }
-     ]
-    }
-   ],
-   "small": [
-    {
-     "name": "Small",
-     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Small"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<small>This is a small text</small>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<small>This is a small text</small>",
-       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
-      }
-     ]
-    }
-   ],
-   "truncate": [
-    {
-     "name": "Truncate",
-     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Truncate"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
-      }
-     ]
     }
    ]
   },
@@ -1312,6 +819,499 @@
     }
    ]
   },
+  "typography": {
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "font size": [
+    {
+     "name": "Front size",
+     "description": "<p>Font size</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Font size"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-sm",
+       "escaped": "text-sm",
+       "description": "Small"
+      },
+      {
+       "name": ".text-md",
+       "escaped": "text-md",
+       "description": "Medium (default)"
+      },
+      {
+       "name": ".text-lg",
+       "escaped": "text-lg",
+       "description": "Large"
+      },
+      {
+       "name": ".text-xl",
+       "escaped": "text-xl",
+       "description": "Extra Large"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text color": [
+    {
+     "name": "Text color",
+     "description": "<p>Modifiers to set the text color</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text color"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-dark-gray",
+       "escaped": "text-dark-gray",
+       "description": "Dark gray text color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text transform": [
+    {
+     "name": "Text transform",
+     "description": "<p>Transforms text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text transform"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "mark": [
+    {
+     "name": "Mark",
+     "description": "<p>Mark text to make it stand out.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Mark"
+      }
+     ],
+     "state": [
+      {
+       "name": ".mark-yellow",
+       "escaped": "mark-yellow",
+       "description": "Mark with yellow color"
+      },
+      {
+       "name": ".mark-blue",
+       "escaped": "mark-blue",
+       "description": "Mark with blue color"
+      },
+      {
+       "name": ".mark-green",
+       "escaped": "mark-green",
+       "description": "Mark with green color"
+      },
+      {
+       "name": ".mark-red",
+       "escaped": "mark-red",
+       "description": "Mark with red color"
+      },
+      {
+       "name": ".mark-purple",
+       "escaped": "mark-purple",
+       "description": "Mark with purple color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
+      }
+     ]
+    }
+   ],
+   "small": [
+    {
+     "name": "Small",
+     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Small"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<small>This is a small text</small>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<small>This is a small text</small>",
+       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
+      }
+     ]
+    }
+   ],
+   "truncate": [
+    {
+     "name": "Truncate",
+     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Truncate"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "article": [
+    {
+     "name": "Article",
+     "description": "<p>A full article with heading, lead and body text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Article"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "path": "~/source/sass/typography/_article.scss",
+       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    }
+   ],
+   "headings": [
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "sub heading": [
+    {
+     "name": "Sub heading",
+     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Sub heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<div class=\"sub-heading\">I love cake</div>",
+       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "label": [
+    {
+     "name": "Label",
+     "description": "<p>Label a text with a filled background</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Label"
+      }
+     ],
+     "state": [
+      {
+       "name": ".label-tag",
+       "escaped": "label-tag",
+       "description": "Adds arrow shape to label end"
+      },
+      {
+       "name": ".label-sm",
+       "escaped": "label-sm",
+       "description": "Smaller label"
+      },
+      {
+       "name": ".label-lg",
+       "escaped": "label-lg",
+       "description": "Larger label"
+      },
+      {
+       "name": ".label-theme",
+       "escaped": "label-theme",
+       "description": "Uses the current theme color"
+      },
+      {
+       "name": ".label-red-1",
+       "escaped": "label-red-1",
+       "description": "First color in red stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-blue-1",
+       "escaped": "label-blue-1",
+       "description": "First color in blue stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-green-1",
+       "escaped": "label-green-1",
+       "description": "First color in green stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-purple-1",
+       "escaped": "label-purple-1",
+       "description": "First color in purple stripe (color 1-5 available)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "path": "~/source/sass/typography/_label.scss",
+       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
+      }
+     ]
+    }
+   ],
+   "lead": [
+    {
+     "name": "Lead",
+     "description": "<p>A large paragraph to use as article lead.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Lead"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "path": "~/source/sass/typography/_lead.scss",
+       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
+   ],
+   "quotes": [
+    {
+     "name": "Blockquote",
+     "description": "",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Quotes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "path": "~/source/sass/typography/_quotes.scss",
+       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "special": {
    "accordion": [
     {
@@ -1527,6 +1527,54 @@
        "path": "~/source/sass/component/tooltip/_tooltip.scss",
        "example": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
        "escaped": "\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip below\"&gt;Tooltip below&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top&gt;Tooltip above&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left&gt;Tooltip left&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right&gt;Tooltip right&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/component/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -1798,352 +1846,6 @@
        "path": "~/source/sass/component/box/_panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/component/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "navigation": {
-   "dropdown": [
-    {
-     "name": "Dropdown",
-     "description": "<p>Dropdown menu</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Dropdown"
-      }
-     ],
-     "state": [
-      {
-       "name": ".dropdown-menu-arrow",
-       "escaped": "dropdown-menu-arrow",
-       "description": "Adds arrow to the dropdown menu"
-      },
-      {
-       "name": ".dropdown-menu-arrow-right",
-       "escaped": "dropdown-menu-arrow-right",
-       "description": "Moves the arrow to the right edge"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
-       "path": "~/source/sass/component/dropdown/_dropdown.scss",
-       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
-       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "breadcrumbs": [
-    {
-     "name": "Breadcrumbs",
-     "description": "<p>Indicate the current page&#39;s location within a navigational hierarchy using breadcrumbs.</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Breadcrumbs"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_breadcrumb.scss",
-       "example": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"breadcrumbs\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;Gummi bears&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "sidebar navigation": [
-    {
-     "name": "Navigation",
-     "description": "<p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Sidebar navigation"
-      }
-     ],
-     "state": [
-      {
-       "name": ".has-children",
-       "escaped": "has-children",
-       "description": "Indicates if a menu item has children (sub menu)"
-      },
-      {
-       "name": ".current-node",
-       "escaped": "current-node",
-       "description": "Indicates the currently active parent node"
-      },
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "Indicates currently active menu item"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
-       "path": "~/source/sass/component/navigation/_nav.scss",
-       "example": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
-       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav-aside\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Sweet apple pie&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"has-children\"&gt;&lt;a href=\"#\"&gt;Chocolate bar&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"current-node has-children\"&gt;\n            &lt;a href=\"#\"&gt;Marshmallow&lt;/a&gt;\n            &lt;ul class=\"sub-menu\"&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n                &lt;li class=\"current\"&gt;&lt;a href=\"#\"&gt;Sweet roll.&lt;/a&gt;&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Ice cream&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Pudding&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "navbar": [
-    {
-     "name": "Navigation bar",
-     "description": "<p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Navbar"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "Indicates the currently active menu item"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
-       "path": "~/source/sass/component/navigation/_navbar.scss",
-       "example": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
-       "escaped": "\n&lt;nav class=\"navbar hidden-xs hidden-sm\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-sm-12\"&gt;\n                &lt;ul class=\"nav nav-justify\"&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Brownie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Fruitcake&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Pie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Sweet lemon drops&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "pagination": [
-    {
-     "name": "Pagination",
-     "description": "<p>Standard pagination.</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Pagination"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active page number"
-      },
-      {
-       "name": ".paging-lg",
-       "escaped": "paging-lg",
-       "description": "Bigger paging"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pagination.scss",
-       "example": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"pagination\"&gt;\n    &lt;li&gt;&lt;a class=\"prev\" href=\"#\"&gt;&laquo; Previous&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;1&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;2&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page current\" href=\"#\"&gt;3&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;4&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;15&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"next\" href=\"#\"&gt;Next &raquo;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "pills": [
-    {
-     "name": "Pills",
-     "description": "<p>Pills navigagtion</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Pills"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pills.scss",
-       "example": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"nav nav-pills nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "help": [
-    {
-     "name": "Help",
-     "description": "<p>Help navigagtion</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Help"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pills.scss",
-       "example": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"nav nav-help nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "scroll": [
-    {
-     "name": "Vertical navbar",
-     "description": "<p>A vertical vanbar design to slide up &amp; down in the content.</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Scroll"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active dot"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_scroll-dots.scss",
-       "example": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"scroll-dots is-active\"&gt;\n    &lt;li&gt;&lt;a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#3\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#4\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#5\"&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "tabs": [
-    {
-     "name": "Navigation tabs",
-     "description": "<p>Horizontal navigation tabs</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Tabs"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active tab"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
-       "path": "~/source/sass/component/navigation/_tabs.scss",
-       "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
-       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Croissants&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Donuts&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "tags": [
-    {
-     "name": "Tags",
-     "description": "<p>List of tags constructed to be shown below articles.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Tags"
-      }
-     ],
-     "state": [
-      {
-       "name": ".show-tagsign",
-       "escaped": "show-tagsign",
-       "description": "Show # before tag-text."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_tags.scss",
-       "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -2449,6 +2151,304 @@
        "path": "~/source/sass/component/button/_button.scss",
        "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
        "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "navigation": {
+   "dropdown": [
+    {
+     "name": "Dropdown",
+     "description": "<p>Dropdown menu</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Dropdown"
+      }
+     ],
+     "state": [
+      {
+       "name": ".dropdown-menu-arrow",
+       "escaped": "dropdown-menu-arrow",
+       "description": "Adds arrow to the dropdown menu"
+      },
+      {
+       "name": ".dropdown-menu-arrow-right",
+       "escaped": "dropdown-menu-arrow-right",
+       "description": "Moves the arrow to the right edge"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "path": "~/source/sass/component/dropdown/_dropdown.scss",
+       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "breadcrumbs": [
+    {
+     "name": "Breadcrumbs",
+     "description": "<p>Indicate the current page&#39;s location within a navigational hierarchy using breadcrumbs.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Breadcrumbs"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_breadcrumb.scss",
+       "example": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"breadcrumbs\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;Gummi bears&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "sidebar navigation": [
+    {
+     "name": "Navigation",
+     "description": "<p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Sidebar navigation"
+      }
+     ],
+     "state": [
+      {
+       "name": ".has-children",
+       "escaped": "has-children",
+       "description": "Indicates if a menu item has children (sub menu)"
+      },
+      {
+       "name": ".current-node",
+       "escaped": "current-node",
+       "description": "Indicates the currently active parent node"
+      },
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/_nav.scss",
+       "example": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav-aside\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Sweet apple pie&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"has-children\"&gt;&lt;a href=\"#\"&gt;Chocolate bar&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"current-node has-children\"&gt;\n            &lt;a href=\"#\"&gt;Marshmallow&lt;/a&gt;\n            &lt;ul class=\"sub-menu\"&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n                &lt;li class=\"current\"&gt;&lt;a href=\"#\"&gt;Sweet roll.&lt;/a&gt;&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Ice cream&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Pudding&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "navbar": [
+    {
+     "name": "Navigation bar",
+     "description": "<p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Navbar"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates the currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "path": "~/source/sass/component/navigation/_navbar.scss",
+       "example": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "escaped": "\n&lt;nav class=\"navbar hidden-xs hidden-sm\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-sm-12\"&gt;\n                &lt;ul class=\"nav nav-justify\"&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Brownie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Fruitcake&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Pie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Sweet lemon drops&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "pagination": [
+    {
+     "name": "Pagination",
+     "description": "<p>Standard pagination.</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Pagination"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active page number"
+      },
+      {
+       "name": ".paging-lg",
+       "escaped": "paging-lg",
+       "description": "Bigger paging"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pagination.scss",
+       "example": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"pagination\"&gt;\n    &lt;li&gt;&lt;a class=\"prev\" href=\"#\"&gt;&laquo; Previous&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;1&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;2&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page current\" href=\"#\"&gt;3&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;4&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;15&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"next\" href=\"#\"&gt;Next &raquo;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "pills": [
+    {
+     "name": "Pills",
+     "description": "<p>Pills navigagtion</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Pills"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pills.scss",
+       "example": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"nav nav-pills nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "help": [
+    {
+     "name": "Help",
+     "description": "<p>Help navigagtion</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Help"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pills.scss",
+       "example": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"nav nav-help nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "scroll": [
+    {
+     "name": "Vertical navbar",
+     "description": "<p>A vertical vanbar design to slide up &amp; down in the content.</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Scroll"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active dot"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_scroll-dots.scss",
+       "example": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"scroll-dots is-active\"&gt;\n    &lt;li&gt;&lt;a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#3\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#4\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#5\"&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "tabs": [
+    {
+     "name": "Navigation tabs",
+     "description": "<p>Horizontal navigation tabs</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Tabs"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active tab"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/_tabs.scss",
+       "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Croissants&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Donuts&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "name": "Tags",
+     "description": "<p>List of tags constructed to be shown below articles.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Tags"
+      }
+     ],
+     "state": [
+      {
+       "name": ".show-tagsign",
+       "escaped": "show-tagsign",
+       "description": "Show # before tag-text."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_tags.scss",
+       "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -3123,38 +3123,6 @@
     }
    ]
   },
-  "timeline": {
-   "general": [
-    {
-     "name": "Timeline",
-     "description": "<p>Vertical timeline</p>\n",
-     "author": "Jonatan Hanson",
-     "page": [
-      {
-       "nav": "Timeline",
-       "section": "general"
-      }
-     ],
-     "state": [
-      {
-       "name": ".timeline-side",
-       "escaped": "timeline-side",
-       "description": "Places image div closest to the timeline marker"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t</div>\n</div>",
-       "path": "~/source/sass/component/timeline/timeline.scss",
-       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t</div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "tables": {
    "basic": [
     {
@@ -3201,6 +3169,38 @@
        "path": "~/source/sass/component/table/_table.scss",
        "example": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
        "escaped": "\n&lt;table class=\"table table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Yummie&lt;/th&gt;\n            &lt;th&gt;Much&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Gingerbread&lt;/td&gt;\n            &lt;td&gt;9&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Jelly-o&lt;/td&gt;\n            &lt;td&gt;8&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Apple pie&lt;/td&gt;\n            &lt;td&gt;10&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Candy canes I love muffin&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "timeline": {
+   "general": [
+    {
+     "name": "Timeline",
+     "description": "<p>Vertical timeline</p>\n",
+     "author": "Jonatan Hanson",
+     "page": [
+      {
+       "nav": "Timeline",
+       "section": "general"
+      }
+     ],
+     "state": [
+      {
+       "name": ".timeline-side",
+       "escaped": "timeline-side",
+       "description": "Places image div closest to the timeline marker"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t</div>\n</div>",
+       "path": "~/source/sass/component/timeline/timeline.scss",
+       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t</div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
