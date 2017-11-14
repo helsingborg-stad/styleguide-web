@@ -153,12 +153,14 @@
 // <i class="pricon pricon-thumbs-up"></i> pricon-thumbs-up<br>
 // <i class="pricon pricon-thumbs-up-o"></i> pricon-thumbs-up-o<br>
 // <i class="pricon pricon-eye"></i> pricon-eye<br>
+// <i class="pricon pricon-360"></i> pricon-360<br>
 // <i class="pricon pricon-chevron-down"></i> pricon-chevron-down<br>
 // <i class="pricon pricon-chevron-left"></i> pricon-chevron-left<br>
 // <i class="pricon pricon-chevron-right"></i> pricon-chevron-right<br>
 // <i class="pricon pricon-chevron-up"></i> pricon-chevron-up<br>
 // <i class="pricon pricon-play"></i> pricon-play<br>
 // <i class="pricon pricon-pause"></i> pricon-pause<br>
+// <i class="pricon pricon-camera"></i> pricon-camera<br>
 // 
 //
 @font-face {
@@ -535,12 +537,14 @@ $pricon-reply: "\EA86";
 $pricon-thumbs-up: "\EA87";
 $pricon-thumbs-up-o: "\EA88";
 $pricon-eye: "\EA89";
+$pricon-360: "\EA8A";
 $pricon-chevron-down: "\EA91";
 $pricon-chevron-left: "\EA92";
 $pricon-chevron-right: "\EA93";
 $pricon-chevron-up: "\EA94";
 $pricon-play: "\EB30";
 $pricon-pause: "\EC30";
+$pricon-camera: "\EC32";
 
 
 /* Glyphs */
@@ -681,12 +685,14 @@ $pricon-pause: "\EC30";
 .pricon-thumbs-up:before { content: $pricon-thumbs-up }
 .pricon-thumbs-up-o:before { content: $pricon-thumbs-up-o }
 .pricon-eye:before { content: $pricon-eye }
+.pricon-360:before { content: $pricon-360 }
 .pricon-chevron-down:before { content: $pricon-chevron-down }
 .pricon-chevron-left:before { content: $pricon-chevron-left }
 .pricon-chevron-right:before { content: $pricon-chevron-right }
 .pricon-chevron-up:before { content: $pricon-chevron-up }
 .pricon-play:before { content: $pricon-play }
 .pricon-pause:before { content: $pricon-pause }
+.pricon-camera:before { content: $pricon-camera }
 
 
 /* Mixin */
