@@ -75,7 +75,7 @@
 /* Text color */
 
 .section.text-color-dark {
-    .section-article {
+    .section-article, .section-image-caption {
 
         h1, h2, h3, h4, h5, h6 {
             color: $palette-4;
@@ -84,23 +84,31 @@
         p, ul, ol {
             color: rgba(0, 0, 0, 0.87);
         }
+
+        a, a:link, a:active, a:hover, a:visited {
+            color: rgba(0, 0, 0, 0.87);
+        }
     }
 }
 
 .section.text-color-light {
-    .section-article {
+    .section-article, .section-image-caption {
 
         h1, h2, h3, h4, h5, h6 {
-            color: white;
+            color: #fff;
         }
 
         p, ul, ol {
-            color: white;
+            color: #fff;
+        }
+
+        a, a:link, a:active, a:hover, a:visited {
+            color: #eee;
         }
     }
 
     a.no-color {
-        color: white;
+        color: #fff;
     }
 }
 
