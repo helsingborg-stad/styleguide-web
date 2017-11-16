@@ -11,8 +11,8 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
     	this.init();
 
         $('[data-action="modal-close"]').on('click', function (e) {
-            e.preventDefault();
             $(e.target).parents('.modal').removeClass('modal-open').hide();
+            $('html').removeClass('overflow-hidden');
         });
     }
 
@@ -24,15 +24,15 @@ HelsingborgPrime.Prompt.ModalLimit = (function ($) {
 		}.bind(this));
 
         $('.modal a[href="#close"]').on('click', function (e) {
-            $('html, body').removeClass('overflow-hidden');
+            $('html').removeClass('overflow-hidden');
         });
     };
 
     ModalLimit.prototype.toggleModalClass = function(){
 	    if (window.location.hash.indexOf('modal-') > 0 && $(window.location.hash).length > 0) {
-			$('html').addClass('overflow-hidden');
+			$('html').addClass('overflow-hidden').trigger('openModal');
 		} else {
-			$('html').removeClass('overflow-hidden');
+			$('html').removeClass('overflow-hidden').trigger('closeModal');
 		}
     };
 
