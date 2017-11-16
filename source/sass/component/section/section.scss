@@ -102,7 +102,7 @@
             color: #fff;
         }
 
-        a, a:link, a:active, a:hover, a:visited {
+        a:not(.btn), a:not(.btn):link, a:not(.btn):active, a:not(.btn):hover, a:not(.btn):visited {
             color: #eee;
         }
     }
