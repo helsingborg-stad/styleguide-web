@@ -221,6 +221,11 @@
     &.section-split.padding-sm .section-article {
         padding-top: 5vh;
         padding-bottom: 5vh;
+
+        @media screen and #{$screen-below-md} {
+            padding-top: $grid-gutter-md;
+            padding-bottom: $grid-gutter-md;
+        }
     }
 
     &.section-full.padding-md,
@@ -228,6 +233,11 @@
     &.section-split.padding-md .section-article {
         padding-top: 10vh;
         padding-bottom: 10vh;
+
+        @media screen and #{$screen-below-md} {
+            padding-top: $grid-gutter-md;
+            padding-bottom: $grid-gutter-md;
+        }
     }
 
     &.section-full.padding-lg,
@@ -235,6 +245,11 @@
     &.section-split.padding-lg .section-article {
         padding-top: 20vh;
         padding-bottom: 20vh;
+
+        @media screen and #{$screen-below-md} {
+            padding-top: $grid-gutter-md;
+            padding-bottom: $grid-gutter-md;
+        }
     }
 
     /* Heights */
