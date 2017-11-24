@@ -16297,16 +16297,23 @@ img[src$=".svg"].footer-signature {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  /* line 93, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
+    font-weight: 700; }
+    @media screen and (min-width: 0) and (max-width: 468px) {
+      /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+      .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
+        font-size: 1.5em; } }
+  /* line 103, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile-img {
     background-size: cover; }
-  /* line 98, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile .content * + * {
-    margin-top: 15px; }
-  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    margin-top: 1em !important; }
+  /* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile .content p {
     font-size: 17px; }
-  /* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 119, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile:not(.tile-img) .content:after {
     content: '';
     width: 100%;
@@ -16314,13 +16321,27 @@ img[src$=".svg"].footer-signature {
     display: block;
     background: white;
     margin-top: 0.5em; }
-  /* line 122, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
-  .tile.tile-v {
+  /* line 132, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  .tile.tile--xs-vertical {
     padding-top: 200%; }
-  /* line 126, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
-  .tile.tile-h {
+  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  .tile.tile--xs-horizontal {
     padding-top: 50%; }
-  /* line 131, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  @media screen and (min-width: 469px) {
+    /* line 141, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    .tile.tile--sm-vertical {
+      padding-top: 200%; }
+    /* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    .tile.tile--sm-horizontal {
+      padding-top: 50%; } }
+  @media screen and (min-width: 961px) {
+    /* line 151, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    .tile.tile--lg-vertical {
+      padding-top: 200%; }
+    /* line 155, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    .tile.tile--lg-horizontal {
+      padding-top: 50%; } }
+  /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile > * {
     padding: 1em;
     position: absolute;
@@ -16332,10 +16353,10 @@ img[src$=".svg"].footer-signature {
     align-items: flex-end;
     align-content: stretch; }
     @media (min-width: 469px) {
-      /* line 131, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+      /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
       .tile > * {
         padding: 1.25em; } }
-    /* line 147, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile > * > * {
       flex-grow: 1; }
 

@@ -90,13 +90,23 @@
         @include antialias;
     }
 
+    &.invert {
+        h1, h2, h3, h4 {
+            font-weight: 700;
+
+            @media screen and #{$screen-xs} {
+                font-size: 1.5em;
+            }
+        }
+    }
+
     &.tile-img {
         background-size: cover;
     }
 
     .content {
         * + * {
-            margin-top: $content-gutter;
+            margin-top: 1em !important;
         }
 
         p {
@@ -119,12 +129,32 @@
     //Square/Rectangle (horizontal or vertical)
     padding-top: 100%;
 
-    &.tile-v {
+    &.tile--xs-vertical {
         padding-top: 200%;
     }
 
-    &.tile-h {
+    &.tile--xs-horizontal {
         padding-top: 50%;
+    }
+
+    @media screen and #{$screen-sm-up} {
+        &.tile--sm-vertical {
+            padding-top: 200%;
+        }
+
+        &.tile--sm-horizontal {
+            padding-top: 50%;
+        }
+    }
+
+    @media screen and #{$screen-lg-up} {
+        &.tile--lg-vertical {
+            padding-top: 200%;
+        }
+
+       &.tile--lg-horizontal {
+            padding-top: 50%;
+        }
     }
 
     //Tile content container
