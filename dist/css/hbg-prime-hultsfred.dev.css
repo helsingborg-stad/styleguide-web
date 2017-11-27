@@ -16154,141 +16154,140 @@ img[src$=".svg"].footer-signature {
       /* line 16, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
       .section-tiles .container {
         max-width: 1280px;
-        margin: 0 auto;
-        margin-top: -60px; } }
+        margin: 0 auto; } }
 
-/* line 34, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 33, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+1) > .tile:not(.invert) {
   background-color: #acc6d3; }
-  /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile:not(.invert):hover {
     background-color: #bdd1dc; }
 
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 41, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+1) > .tile.invert {
   background-color: white;
   color: #acc6d3; }
-  /* line 46, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile.invert:hover {
     color: #bdd1dc; }
 
-/* line 51, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+1) > .tile.invert .content:after {
   background-color: #acc6d3; }
-  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile.invert .content:after:hover {
     background-color: #bdd1dc; }
 
-/* line 34, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 33, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+2) > .tile:not(.invert) {
   background-color: #3e3e3f; }
-  /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile:not(.invert):hover {
     background-color: #4b4b4c; }
 
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 41, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+2) > .tile.invert {
   background-color: white;
   color: #3e3e3f; }
-  /* line 46, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile.invert:hover {
     color: #4b4b4c; }
 
-/* line 51, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+2) > .tile.invert .content:after {
   background-color: #3e3e3f; }
-  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile.invert .content:after:hover {
     background-color: #4b4b4c; }
 
-/* line 34, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 33, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+3) > .tile:not(.invert) {
   background-color: #245588; }
-  /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile:not(.invert):hover {
     background-color: #29629c; }
 
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 41, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+3) > .tile.invert {
   background-color: white;
   color: #245588; }
-  /* line 46, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile.invert:hover {
     color: #29629c; }
 
-/* line 51, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+3) > .tile.invert .content:after {
   background-color: #245588; }
-  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile.invert .content:after:hover {
     background-color: #29629c; }
 
-/* line 34, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 33, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+4) > .tile:not(.invert) {
   background-color: #3d6a98; }
-  /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile:not(.invert):hover {
     background-color: #4477aa; }
 
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 41, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+4) > .tile.invert {
   background-color: white;
   color: #3d6a98; }
-  /* line 46, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile.invert:hover {
     color: #4477aa; }
 
-/* line 51, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+4) > .tile.invert .content:after {
   background-color: #3d6a98; }
-  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile.invert .content:after:hover {
     background-color: #4477aa; }
 
-/* line 34, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 33, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+5) > .tile:not(.invert) {
   background-color: #88abd0; }
-  /* line 37, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 36, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile:not(.invert):hover {
     background-color: #9ab8d7; }
 
-/* line 42, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 41, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+5) > .tile.invert {
   background-color: white;
   color: #88abd0; }
-  /* line 46, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 45, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile.invert:hover {
     color: #9ab8d7; }
 
-/* line 51, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 50, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+5) > .tile.invert .content:after {
   background-color: #88abd0; }
-  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile.invert .content:after:hover {
     background-color: #9ab8d7; }
 
-/* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+/* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
 .tile {
   color: white;
   font-size: 120%;
   padding-top: 100%; }
-  /* line 65, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 64, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile a:hover, .tile a {
     color: inherit;
     text-decoration: none; }
   @media (min-width: 469px) {
-    /* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 180%; } }
   @media (min-width: 961px) {
-    /* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 180%; } }
   @media (min-width: 1281px) {
-    /* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 61, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 220%; } }
-  /* line 84, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 83, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile h1, .tile h2, .tile h3, .tile h4, .tile .widget_calendar caption, .widget_calendar .tile caption {
     font-size: 1.3em;
     padding-bottom: 0;
@@ -16297,23 +16296,23 @@ img[src$=".svg"].footer-signature {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 93, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
     font-weight: 700; }
     @media screen and (min-width: 0) and (max-width: 468px) {
-      /* line 94, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+      /* line 93, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
       .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
         font-size: 1.5em; } }
-  /* line 103, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 102, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile-img {
     background-size: cover; }
-  /* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 107, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile .content * + * {
     margin-top: 1em !important; }
-  /* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 111, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile .content p {
     font-size: 17px; }
-  /* line 119, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 118, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile:not(.tile-img) .content:after {
     content: '';
     width: 100%;
@@ -16321,27 +16320,27 @@ img[src$=".svg"].footer-signature {
     display: block;
     background: white;
     margin-top: 0.5em; }
-  /* line 132, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 131, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile--xs-vertical {
     padding-top: 200%; }
-  /* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile--xs-horizontal {
     padding-top: 50%; }
   @media screen and (min-width: 469px) {
-    /* line 141, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--sm-vertical {
       padding-top: 200%; }
-    /* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 144, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--sm-horizontal {
       padding-top: 50%; } }
   @media screen and (min-width: 961px) {
-    /* line 151, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-vertical {
       padding-top: 200%; }
-    /* line 155, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 154, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-horizontal {
       padding-top: 50%; } }
-  /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+  /* line 160, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
   .tile > * {
     padding: 1em;
     position: absolute;
@@ -16353,10 +16352,10 @@ img[src$=".svg"].footer-signature {
     align-items: flex-end;
     align-content: stretch; }
     @media (min-width: 469px) {
-      /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+      /* line 160, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
       .tile > * {
         padding: 1.25em; } }
-    /* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
+    /* line 176, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/tiles/_tile-grid.scss */
     .tile > * > * {
       flex-grow: 1; }
 
