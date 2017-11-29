@@ -15195,7 +15195,7 @@ option {
         opacity: 1; }
   /* line 86, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer .widget_calendar caption, .widget_calendar .main-footer caption, .main-footer h5, .main-footer h6 {
-    color: #fff; }
+    color: #000; }
   /* line 90, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .widget_text {
     padding: 0; }
@@ -18882,8 +18882,8 @@ div.spinner {
   [class^="widget_"]:not(.widget_calendar) .box-title.box-title-inherit {
     font-size: 1em; }
   /* line 4, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget.scss */
-  [class^="widget_"]:not(.widget_calendar) *:not(.main-fotter) .textwidget,
-  [class^="widget_"]:not(.widget_calendar) *:not(.main-fotter) form {
+  [class^="widget_"]:not(.widget_calendar) *:not(.main-footer) .textwidget,
+  [class^="widget_"]:not(.widget_calendar) *:not(.main-footer) form {
     padding: 10px;
     font-size: .9em; }
   /* line 9, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget.scss */
