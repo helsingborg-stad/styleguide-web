@@ -2,6 +2,11 @@
 // ***  HIP CARD / SCHOOL TESTIMONIALS
 // ***************************************************************
 
+.section-school-testimonial {
+    padding-top: 10vh;
+    padding-bottom: calc(10vh - 30px);
+}
+
 .grid.no-gutter > [class*="grid-"] .hip-card > *:not(.image) {
     padding-left: 1.5em;
     padding-right: 1.5em;

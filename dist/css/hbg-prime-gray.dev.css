@@ -16360,62 +16360,67 @@ img[src$=".svg"].footer-signature {
       flex-grow: 1; }
 
 /* line 5, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+.section-school-testimonial {
+  padding-top: 10vh;
+  padding-bottom: calc(10vh - 30px); }
+
+/* line 10, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 .grid.no-gutter > [class*="grid-"] .hip-card > *:not(.image) {
   padding-left: 1.5em;
   padding-right: 1.5em; }
 
-/* line 10, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 15, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 .hip-card {
   margin-bottom: 30px; }
-  /* line 13, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 18, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .image img {
     max-width: 100%;
     width: 100%;
     height: auto; }
-  /* line 20, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 25, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .header > * {
     padding: 0; }
-  /* line 24, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 29, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .header *:first-child {
     font-size: 150%;
     line-height: 1;
     font-weight: 700; }
     @media (min-width: 469px) {
-      /* line 24, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+      /* line 29, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
       .hip-card .header *:first-child {
         font-size: 180%; } }
     @media (min-width: 1281px) {
-      /* line 24, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+      /* line 29, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
       .hip-card .header *:first-child {
         font-size: 240%; } }
-    /* line 38, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+    /* line 43, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
     .hip-card .header *:first-child + * {
       margin-top: 7.5px; }
-  /* line 44, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 49, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .content {
     font-size: 90%;
     font-style: italic; }
-  /* line 49, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card > * + * {
     margin-top: 15px; }
 
-/* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+1) > .hip-card > .header {
   color: #ddd; }
 
-/* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+2) > .hip-card > .header {
   color: #333; }
 
-/* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+3) > .hip-card > .header {
   color: #666; }
 
-/* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+4) > .hip-card > .header {
   color: #777; }
 
-/* line 58, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+5) > .hip-card > .header {
   color: #000; }
 
