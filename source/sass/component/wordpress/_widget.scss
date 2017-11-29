@@ -1,8 +1,8 @@
 [class^="widget_"]:not(.widget_calendar) {
     @include box;
 
-    *:not(.main-fotter) .textwidget,
-    *:not(.main-fotter) form {
+    *:not(.main-footer) .textwidget,
+    *:not(.main-footer) form {
         @include box-content;
     }
 
