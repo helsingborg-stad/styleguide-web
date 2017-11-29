@@ -15159,66 +15159,71 @@ option {
   box-shadow: inset 0 0 10vw rgba(0, 0, 0, 0.05);
   margin-top: 100px;
   padding: 40px 0;
-  font-size: .9em;
+  font-size: .85em;
   background-color: #f4f4f4;
   border-top: 1px solid #e8e8e8;
-  color: #464646; }
-  /* line 46, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  color: #424242;
+  line-height: 1.8em; }
+  /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .logotype {
     display: inline-block;
     margin-bottom: 10px;
     text-decoration: none; }
-    /* line 51, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+    /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
     .main-footer .logotype img, .main-footer .logotype svg {
       width: auto;
       height: 60px; }
-  /* line 57, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  /* line 58, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer a {
     color: #000;
     text-decoration: underline; }
-  /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  /* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer ul + ul {
     margin-top: 15px; }
   /* line 67, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
-  .main-footer .icons-list li {
-    display: inline-block;
-    line-height: 1; }
-    /* line 71, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
-    .main-footer .icons-list li + li {
-      margin-left: 10px; }
-    /* line 75, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
-    .main-footer .icons-list li a {
-      font-size: 3em;
-      opacity: .8; }
-      /* line 79, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
-      .main-footer .icons-list li a:hover {
-        opacity: 1; }
-  /* line 86, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  .main-footer .icons-list {
+    text-align: center; }
+    /* line 69, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+    .main-footer .icons-list li {
+      display: inline-block;
+      line-height: 1; }
+      /* line 73, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+      .main-footer .icons-list li + li {
+        margin-left: 10px; }
+      /* line 77, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+      .main-footer .icons-list li a {
+        transition: color 150ms;
+        color: #424242;
+        font-size: 3em; }
+        /* line 82, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+        .main-footer .icons-list li a:hover {
+          color: #000; }
+  /* line 89, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer .widget_calendar caption, .widget_calendar .main-footer caption, .main-footer h5, .main-footer h6 {
-    color: #000; }
-  /* line 90, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+    color: #009AA6; }
+  /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .widget_text {
     padding: 0; }
-  /* line 95, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  /* line 98, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .box .box-title,
   .main-footer .box .box-content {
     padding: 0;
     border: none; }
-  /* line 101, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+  /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .box .box-title {
     padding: 0 0 10px 0; }
 
-/* line 107, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 .markup-preview .main-footer {
   margin-top: 0;
   padding: 40px 20px; }
 
-/* line 112, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 115, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 .footer-signature {
   display: inline-block;
   width: 100px; }
 
-/* line 117, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 120, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 img[src$=".svg"].footer-signature {
   height: 100%; }
 
