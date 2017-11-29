@@ -29,7 +29,8 @@
    "text transform",
    "mark",
    "small",
-   "truncate"
+   "truncate",
+   "weight"
   ],
   "accessibility": [
    "visibility"
@@ -878,6 +879,28 @@
        "path": "~/source/sass/utility/_text.scss",
        "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
        "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "weight": [
+    {
+     "name": "Weight",
+     "description": "<p>Set fontweight</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Weight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
       }
      ]
     }
