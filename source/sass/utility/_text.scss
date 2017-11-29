@@ -355,3 +355,48 @@ small,
         margin-left: 0;
     }
 }
+
+
+//
+// @name Weight
+// @description Set fontweight
+// @page Typography/Weight
+//
+// @markup
+// <span class="weight-300">Weight 300</span>
+// <span class="weight-400">Weight 400</span>
+// <span class="weight-500">Weight 500</span>
+// <span class="weight-700">Weight 700</span>
+// <span class="weight-900">Weight 900</span>
+//
+
+.weight-300 {
+    font-weight: 300 !important;
+}
+
+.weight-400 {
+    font-weight: 400 !important;
+}
+
+.weight-500 {
+    font-weight: 500 !important;
+}
+
+.weight-700 {
+    font-weight: 700 !important;
+}
+
+.weight-900 {
+    font-weight: 900 !important;
+}
+
+
+
+
+@each $color in $palette-map {
+    $i: index($palette-map, $color);
+
+    .text-color-#{$i} {
+        color: $color !important;
+    }
+}
