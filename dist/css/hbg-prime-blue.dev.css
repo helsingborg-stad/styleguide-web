@@ -15208,22 +15208,24 @@ option {
   .main-footer .box .box-title,
   .main-footer .box .box-content {
     padding: 0;
-    border: none; }
-  /* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+    border: none;
+    background: none;
+    color: #005c86; }
+  /* line 106, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
   .main-footer .box .box-title {
     padding: 0 0 10px 0; }
 
-/* line 110, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 112, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 .markup-preview .main-footer {
   margin-top: 0;
   padding: 40px 20px; }
 
-/* line 115, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 117, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 .footer-signature {
   display: inline-block;
   width: 100px; }
 
-/* line 120, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
+/* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/footer/_footer.scss */
 img[src$=".svg"].footer-signature {
   height: 100%; }
 
