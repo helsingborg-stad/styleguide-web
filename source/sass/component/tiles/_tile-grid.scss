@@ -64,6 +64,10 @@
     position: relative;
     color: white;
 
+    a {
+        transition: background-color 200ms;
+    }
+
     a:hover, a {
         color: inherit;
         text-decoration: none;
