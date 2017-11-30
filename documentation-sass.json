@@ -54,14 +54,14 @@
    "slider",
    "tooltip"
   ],
+  "media": [
+   "audioplayer",
+   "videoplayer"
+  ],
   "blog": [
    "comments form",
    "comments",
    "post"
-  ],
-  "media": [
-   "audioplayer",
-   "videoplayer"
   ],
   "boxes": [
    "contact",
@@ -95,6 +95,9 @@
    "tabs",
    "tags"
   ],
+  "gallery": [
+   "image grid"
+  ],
   "forms": [
    "datepicker",
    "file",
@@ -108,34 +111,31 @@
    "select",
    "tag manager"
   ],
-  "gallery": [
-   "image grid"
-  ],
   "hero": [
    "hero"
   ],
   "notice": [
    "notice"
   ],
+  "search": [
+   "search form",
+   "search results"
+  ],
   "section": [
    "featured",
    "full",
    "split"
   ],
-  "search": [
-   "search form",
-   "search results"
-  ],
   "social": [
    "feed"
+  ],
+  "stripe": [
+   "general"
   ],
   "tables": [
    "basic"
   ],
   "timeline": [
-   "general"
-  ],
-  "stripe": [
    "general"
   ],
   "wordpress": [
@@ -1555,6 +1555,54 @@
     }
    ]
   },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/component/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "blog": {
    "comments form": [
     {
@@ -1640,54 +1688,6 @@
        "path": "~/source/sass/component/blog/_post.scss",
        "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
        "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/component/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2477,6 +2477,38 @@
     }
    ]
   },
+  "gallery": {
+   "image grid": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Gallery",
+       "section": "Image Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "path": "~/source/sass/component/gallery/_gallery.scss",
+       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "forms": {
    "datepicker": [
     {
@@ -2735,38 +2767,6 @@
     }
    ]
   },
-  "gallery": {
-   "image grid": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Gallery",
-       "section": "Image Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "path": "~/source/sass/component/gallery/_gallery.scss",
-       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "hero": {
    "hero": [
     {
@@ -2842,6 +2842,52 @@
        "path": "~/source/sass/component/notice/_notice.scss",
        "example": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
        "escaped": "\n&lt;div class=\"notice success\"&gt;\n     &lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; Sugar plum gummi bears.\n&lt;/div&gt;\n&lt;div class=\"notice warning\"&gt;\n     &lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; Lollipop cake candy canes.\n&lt;/div&gt;\n&lt;div class=\"notice danger\"&gt;\n     &lt;i class=\"pricon pricon-notice-error\"&gt;&lt;/i&gt; Jujubes oat cake sweet sugar plum.\n&lt;/div&gt;\n&lt;div class=\"notice info\"&gt;\n     &lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; Caramels chocolate cake ice cream.\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "search": {
+   "search form": [
+    {
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -3016,52 +3062,6 @@
     }
    ]
   },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "social": {
    "feed": [
     {
@@ -3089,6 +3089,58 @@
        "path": "~/source/sass/component/social/feed.scss",
        "example": "\n<ul class=\"social social-feed-v2\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
        "escaped": "\n&lt;ul class=\"social social-feed-v2\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "stripe": {
+   "general": [
+    {
+     "name": "Stripe",
+     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose. The default behaviour of the stripe is to inherit color from the currently active color theme.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "state": [
+      {
+       "name": ".stripe-red",
+       "escaped": "stripe-red",
+       "description": "Red stripe"
+      },
+      {
+       "name": ".stripe-blue",
+       "escaped": "stripe-blue",
+       "description": "Blue stripe"
+      },
+      {
+       "name": ".stripe-green",
+       "escaped": "stripe-green",
+       "description": "Green stripe"
+      },
+      {
+       "name": ".stripe-pruple",
+       "escaped": "stripe-pruple",
+       "description": "Purple stripe"
+      },
+      {
+       "name": ".has-stripe",
+       "escaped": "has-stripe",
+       "description": "Put this class on the parent container to get corretct padding-left for the stripe"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Stripe",
+       "section": "general"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "path": "~/source/sass/component/stripe/_stripe.scss",
+       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
+       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -3172,58 +3224,6 @@
        "path": "~/source/sass/component/timeline/timeline.scss",
        "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline-event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t</div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline-event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "stripe": {
-   "general": [
-    {
-     "name": "Stripe",
-     "description": "<p>The iconic Helsingborg brand stripe.<br><strong>ATTENTION:</strong> Do not use the gray stripe, it&#39;s only for demonstration purpose. The default behaviour of the stripe is to inherit color from the currently active color theme.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "state": [
-      {
-       "name": ".stripe-red",
-       "escaped": "stripe-red",
-       "description": "Red stripe"
-      },
-      {
-       "name": ".stripe-blue",
-       "escaped": "stripe-blue",
-       "description": "Blue stripe"
-      },
-      {
-       "name": ".stripe-green",
-       "escaped": "stripe-green",
-       "description": "Green stripe"
-      },
-      {
-       "name": ".stripe-pruple",
-       "escaped": "stripe-pruple",
-       "description": "Purple stripe"
-      },
-      {
-       "name": ".has-stripe",
-       "escaped": "has-stripe",
-       "description": "Put this class on the parent container to get corretct padding-left for the stripe"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Stripe",
-       "section": "general"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "path": "~/source/sass/component/stripe/_stripe.scss",
-       "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
-       "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

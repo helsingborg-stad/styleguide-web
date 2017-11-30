@@ -25,6 +25,8 @@
 
 //Colors
 .tile-grid {
+    background-color: #fff;
+
     @each $color in $palette-map {
         $total: length($palette-map);
         $i: index($palette-map, $color);
