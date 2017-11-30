@@ -140,7 +140,8 @@
     }
 
     @media screen and #{$screen-below-md} {
-        &.tile--xs-horizontal {
+        &.tile--xs-horizontal,
+        &.tile--sm-horizontal {
             padding-top: initial;
             a {
                 position: relative;
@@ -151,10 +152,6 @@
     @media screen and #{$screen-sm-up} {
         &.tile--sm-vertical {
             padding-top: 200%;
-        }
-
-        &.tile--sm-horizontal {
-            padding-top: 50%;
         }
     }
 

@@ -16343,26 +16343,23 @@ img[src$=".svg"].footer-signature {
     padding-top: 50%; }
   @media screen and (max-width: 769px) {
     /* line 143, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
-    .tile.tile--xs-horizontal {
+    .tile.tile--xs-horizontal, .tile.tile--sm-horizontal {
       padding-top: initial; }
-      /* line 145, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
-      .tile.tile--xs-horizontal a {
+      /* line 146, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+      .tile.tile--xs-horizontal a, .tile.tile--sm-horizontal a {
         position: relative; } }
   @media screen and (min-width: 469px) {
-    /* line 152, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 153, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--sm-vertical {
-      padding-top: 200%; }
-    /* line 156, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
-    .tile.tile--sm-horizontal {
-      padding-top: 50%; } }
+      padding-top: 200%; } }
   @media screen and (min-width: 961px) {
-    /* line 162, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 159, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-vertical {
       padding-top: 200%; }
-    /* line 166, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 163, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-horizontal {
       padding-top: 50%; } }
-  /* line 172, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 169, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile > * {
     padding: 1em;
     position: absolute;
@@ -16374,10 +16371,10 @@ img[src$=".svg"].footer-signature {
     align-items: flex-end;
     align-content: stretch; }
     @media (min-width: 469px) {
-      /* line 172, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+      /* line 169, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
       .tile > * {
         padding: 1.25em; } }
-    /* line 188, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 185, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile > * > * {
       flex-grow: 1; }
 
