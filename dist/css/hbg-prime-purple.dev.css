@@ -16181,10 +16181,11 @@ img[src$=".svg"].footer-signature {
 
 /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+1) > .tile.invert .content:after {
+  transition: background-color 200ms;
   background-color: #d35098; }
-  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile.invert .content:after:hover {
-    background-color: #d864a4; }
+    background-color: #ce3c8c; }
 
 /* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+2) > .tile:not(.invert) {
@@ -16203,10 +16204,11 @@ img[src$=".svg"].footer-signature {
 
 /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+2) > .tile.invert .content:after {
+  transition: background-color 200ms;
   background-color: #712082; }
-  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile.invert .content:after:hover {
-    background-color: #832596; }
+    background-color: #5f1b6e; }
 
 /* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+3) > .tile:not(.invert) {
@@ -16225,10 +16227,11 @@ img[src$=".svg"].footer-signature {
 
 /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+3) > .tile.invert .content:after {
+  transition: background-color 200ms;
   background-color: #a84c98; }
-  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile.invert .content:after:hover {
-    background-color: #b459a4; }
+    background-color: #964488; }
 
 /* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+4) > .tile:not(.invert) {
@@ -16247,10 +16250,11 @@ img[src$=".svg"].footer-signature {
 
 /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+4) > .tile.invert .content:after {
+  transition: background-color 200ms;
   background-color: #7b075e; }
-  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile.invert .content:after:hover {
-    background-color: #930870; }
+    background-color: #63064c; }
 
 /* line 33, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+5) > .tile:not(.invert) {
@@ -16269,33 +16273,34 @@ img[src$=".svg"].footer-signature {
 
 /* line 50, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile-grid *:nth-child(5n+5) > .tile.invert .content:after {
+  transition: background-color 200ms;
   background-color: #a61380; }
-  /* line 53, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile.invert .content:after:hover {
-    background-color: #bd1692; }
+    background-color: #8f106e; }
 
-/* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+/* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile {
   color: white;
   font-size: 120%;
   padding-top: 100%; }
-  /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 65, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile a:hover, .tile a {
     color: inherit;
     text-decoration: none; }
   @media (min-width: 469px) {
-    /* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 180%; } }
   @media (min-width: 961px) {
-    /* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 180%; } }
   @media (min-width: 1281px) {
-    /* line 61, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 62, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile {
       font-size: 220%; } }
-  /* line 83, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 84, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile h1, .tile h2, .tile h3, .tile h4, .tile .widget_calendar caption, .widget_calendar .tile caption {
     font-size: 1.3em;
     padding-bottom: 0;
@@ -16304,23 +16309,23 @@ img[src$=".svg"].footer-signature {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
     font-weight: 700; }
     @media screen and (min-width: 0) and (max-width: 468px) {
-      /* line 93, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+      /* line 94, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
       .tile.invert h1, .tile.invert h2, .tile.invert h3, .tile.invert h4, .tile.invert .widget_calendar caption, .widget_calendar .tile.invert caption {
         font-size: 1.5em; } }
-  /* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 103, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile-img {
     background-size: cover; }
-  /* line 107, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 108, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile .content * + * {
     margin-top: 1em !important; }
-  /* line 111, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 112, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile .content p {
     font-size: 17px; }
-  /* line 118, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 119, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile:not(.tile-img) .content:after {
     content: '';
     width: 100%;
@@ -16328,27 +16333,27 @@ img[src$=".svg"].footer-signature {
     display: block;
     background: white;
     margin-top: 0.5em; }
-  /* line 131, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile--xs-vertical {
     padding-top: 200%; }
-  /* line 135, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 136, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile--xs-horizontal {
     padding-top: 50%; }
   @media screen and (min-width: 469px) {
-    /* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 141, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--sm-vertical {
       padding-top: 200%; }
-    /* line 144, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 145, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--sm-horizontal {
       padding-top: 50%; } }
   @media screen and (min-width: 961px) {
-    /* line 150, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 151, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-vertical {
       padding-top: 200%; }
-    /* line 154, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--lg-horizontal {
       padding-top: 50%; } }
-  /* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+  /* line 161, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile > * {
     padding: 1em;
     position: absolute;
@@ -16360,10 +16365,10 @@ img[src$=".svg"].footer-signature {
     align-items: flex-end;
     align-content: stretch; }
     @media (min-width: 469px) {
-      /* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+      /* line 161, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
       .tile > * {
         padding: 1.25em; } }
-    /* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
+    /* line 177, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile > * > * {
       flex-grow: 1; }
 

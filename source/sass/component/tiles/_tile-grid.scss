@@ -48,10 +48,11 @@
             }
 
             &.invert .content:after {
+                transition: background-color 200ms;
                 background-color: $color;
 
                 &:hover {
-                    background-color: lighten($color, 5%);
+                    background-color: darken($color, 2%);
                 }
             }
         }
