@@ -60,6 +60,8 @@
 }
 
 .tile {
+    overflow: hidden;
+    position: relative;
     color: white;
 
     a:hover, a {
