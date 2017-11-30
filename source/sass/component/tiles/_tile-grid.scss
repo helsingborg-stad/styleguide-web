@@ -34,7 +34,7 @@
                 background-color: $color;
 
                 &:hover {
-                    background-color: lighten($color, 5%);
+                    background-color: darken($color, 2%);
                 }
             }
 
@@ -43,7 +43,7 @@
                 color: $color;
 
                 &:hover {
-                    color: lighten($color, 5%);
+                    color: darken($color, 2%);
                 }
             }
 
