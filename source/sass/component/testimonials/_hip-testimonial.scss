@@ -15,10 +15,15 @@
 .hip-card {
     margin-bottom: $content-gutter * 2;
 
-    .image img {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
+    .image {
+        max-height: 70vh;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
     }
 
     .header {

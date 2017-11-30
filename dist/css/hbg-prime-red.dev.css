@@ -16392,54 +16392,58 @@ img[src$=".svg"].footer-signature {
 .hip-card {
   margin-bottom: 30px; }
   /* line 18, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
-  .hip-card .image img {
-    max-width: 100%;
-    width: 100%;
-    height: auto; }
-  /* line 25, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+  .hip-card .image {
+    max-height: 70vh;
+    overflow: hidden; }
+    /* line 22, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+    .hip-card .image img {
+      max-width: 100%;
+      width: 100%;
+      height: auto; }
+  /* line 30, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .header > * {
     padding: 0; }
-  /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 34, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .header *:first-child {
     font-size: 150%;
     line-height: 1;
     font-weight: 700; }
     @media (min-width: 469px) {
-      /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+      /* line 34, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
       .hip-card .header *:first-child {
         font-size: 180%; } }
     @media (min-width: 1281px) {
-      /* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+      /* line 34, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
       .hip-card .header *:first-child {
         font-size: 240%; } }
-    /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+    /* line 48, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
     .hip-card .header *:first-child + * {
       margin-top: 7.5px; }
-  /* line 49, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card .content {
     font-size: 90%;
     font-style: italic; }
-  /* line 54, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+  /* line 59, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
   .hip-card > * + * {
     margin-top: 15px; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+1) > .hip-card > .header {
   color: #f7a600; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+2) > .hip-card > .header {
   color: #cb0050; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+3) > .hip-card > .header {
   color: #ec6701; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+4) > .hip-card > .header {
   color: #ae0b05; }
 
-/* line 63, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
+/* line 68, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/testimonials/_hip-testimonial.scss */
 *:nth-child(5n+5) > .hip-card > .header {
   color: #e3000f; }
 
