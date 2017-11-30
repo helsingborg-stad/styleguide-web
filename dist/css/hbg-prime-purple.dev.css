@@ -16341,7 +16341,7 @@ img[src$=".svg"].footer-signature {
   /* line 138, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile.tile--xs-horizontal {
     padding-top: 50%; }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 961px) {
     /* line 143, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile.tile--xs-horizontal, .tile.tile--sm-horizontal {
       padding-top: initial; }
