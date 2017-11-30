@@ -140,7 +140,7 @@
     }
 
     @media screen and #{$screen-below-md} {
-        &.tile--xs-vertical {
+        &.tile--xs-horizontal {
             padding-top: initial;
             a {
                 position: relative;
