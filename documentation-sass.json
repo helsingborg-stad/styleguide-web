@@ -48,15 +48,15 @@
    "spinner",
    "visibility"
   ],
-  "media": [
-   "audioplayer",
-   "videoplayer"
-  ],
   "special": [
    "accordion",
    "modals",
    "slider",
    "tooltip"
+  ],
+  "media": [
+   "audioplayer",
+   "videoplayer"
   ],
   "blog": [
    "comments form",
@@ -71,18 +71,6 @@
    "news",
    "panel"
   ],
-  "navigation": [
-   "dropdown",
-   "breadcrumbs",
-   "sidebar navigation",
-   "navbar",
-   "pagination",
-   "pills",
-   "help",
-   "scroll",
-   "tabs",
-   "tags"
-  ],
   "buttons": [
    "base",
    "primary",
@@ -94,6 +82,18 @@
    "sizes",
    "block button",
    "offcanvas button"
+  ],
+  "navigation": [
+   "dropdown",
+   "breadcrumbs",
+   "sidebar navigation",
+   "navbar",
+   "pagination",
+   "pills",
+   "help",
+   "scroll",
+   "tabs",
+   "tags"
   ],
   "forms": [
    "datepicker",
@@ -117,23 +117,23 @@
   "notice": [
    "notice"
   ],
-  "search": [
-   "search form",
-   "search results"
-  ],
   "section": [
    "featured",
    "full",
    "split"
   ],
+  "search": [
+   "search form",
+   "search results"
+  ],
   "social": [
    "feed"
   ],
-  "tables": [
-   "basic"
-  ],
   "stripe": [
    "general"
+  ],
+  "tables": [
+   "basic"
   ],
   "timeline": [
    "general"
@@ -1335,54 +1335,6 @@
     }
    ]
   },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/component/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "special": {
    "accordion": [
     {
@@ -1598,6 +1550,54 @@
        "path": "~/source/sass/component/tooltip/_tooltip.scss",
        "example": "\n<a href=\"#\" data-tooltip=\"This is a tooltip below\">Tooltip below</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top>Tooltip above</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left>Tooltip left</a><br>\n<a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right>Tooltip right</a>",
        "escaped": "\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip below\"&gt;Tooltip below&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top&gt;Tooltip above&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left&gt;Tooltip left&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right&gt;Tooltip right&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/component/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -1869,304 +1869,6 @@
        "path": "~/source/sass/component/box/_panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "navigation": {
-   "dropdown": [
-    {
-     "name": "Dropdown",
-     "description": "<p>Dropdown menu</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Dropdown"
-      }
-     ],
-     "state": [
-      {
-       "name": ".dropdown-menu-arrow",
-       "escaped": "dropdown-menu-arrow",
-       "description": "Adds arrow to the dropdown menu"
-      },
-      {
-       "name": ".dropdown-menu-arrow-right",
-       "escaped": "dropdown-menu-arrow-right",
-       "description": "Moves the arrow to the right edge"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
-       "path": "~/source/sass/component/dropdown/_dropdown.scss",
-       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
-       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "breadcrumbs": [
-    {
-     "name": "Breadcrumbs",
-     "description": "<p>Indicate the current page&#39;s location within a navigational hierarchy using breadcrumbs.</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Breadcrumbs"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_breadcrumb.scss",
-       "example": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"breadcrumbs\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;Gummi bears&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "sidebar navigation": [
-    {
-     "name": "Navigation",
-     "description": "<p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Sidebar navigation"
-      }
-     ],
-     "state": [
-      {
-       "name": ".has-children",
-       "escaped": "has-children",
-       "description": "Indicates if a menu item has children (sub menu)"
-      },
-      {
-       "name": ".current-node",
-       "escaped": "current-node",
-       "description": "Indicates the currently active parent node"
-      },
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "Indicates currently active menu item"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
-       "path": "~/source/sass/component/navigation/_nav.scss",
-       "example": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
-       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav-aside\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Sweet apple pie&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"has-children\"&gt;&lt;a href=\"#\"&gt;Chocolate bar&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"current-node has-children\"&gt;\n            &lt;a href=\"#\"&gt;Marshmallow&lt;/a&gt;\n            &lt;ul class=\"sub-menu\"&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n                &lt;li class=\"current\"&gt;&lt;a href=\"#\"&gt;Sweet roll.&lt;/a&gt;&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Ice cream&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Pudding&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "navbar": [
-    {
-     "name": "Navigation bar",
-     "description": "<p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>\n",
-     "author": "Kristoffer Svanmark, Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Navbar"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "Indicates the currently active menu item"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
-       "path": "~/source/sass/component/navigation/_navbar.scss",
-       "example": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
-       "escaped": "\n&lt;nav class=\"navbar hidden-xs hidden-sm\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-sm-12\"&gt;\n                &lt;ul class=\"nav nav-justify\"&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Brownie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Fruitcake&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Pie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Sweet lemon drops&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "pagination": [
-    {
-     "name": "Pagination",
-     "description": "<p>Standard pagination.</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Pagination"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active page number"
-      },
-      {
-       "name": ".paging-lg",
-       "escaped": "paging-lg",
-       "description": "Bigger paging"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pagination.scss",
-       "example": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"pagination\"&gt;\n    &lt;li&gt;&lt;a class=\"prev\" href=\"#\"&gt;&laquo; Previous&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;1&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;2&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page current\" href=\"#\"&gt;3&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;4&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;15&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"next\" href=\"#\"&gt;Next &raquo;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "pills": [
-    {
-     "name": "Pills",
-     "description": "<p>Pills navigagtion</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Pills"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pills.scss",
-       "example": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"nav nav-pills nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "help": [
-    {
-     "name": "Help",
-     "description": "<p>Help navigagtion</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Help"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_pills.scss",
-       "example": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"nav nav-help nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "scroll": [
-    {
-     "name": "Vertical navbar",
-     "description": "<p>A vertical vanbar design to slide up &amp; down in the content.</p>\n",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Scroll"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active dot"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_scroll-dots.scss",
-       "example": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"scroll-dots is-active\"&gt;\n    &lt;li&gt;&lt;a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#3\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#4\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#5\"&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "tabs": [
-    {
-     "name": "Navigation tabs",
-     "description": "<p>Horizontal navigation tabs</p>\n",
-     "author": "Kristoffer Svanmark",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Tabs"
-      }
-     ],
-     "state": [
-      {
-       "name": ".current",
-       "escaped": "current",
-       "description": "The currently active tab"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
-       "path": "~/source/sass/component/navigation/_tabs.scss",
-       "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
-       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Croissants&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Donuts&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
-      }
-     ]
-    }
-   ],
-   "tags": [
-    {
-     "name": "Tags",
-     "description": "<p>List of tags constructed to be shown below articles.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Navigation",
-       "section": "Tags"
-      }
-     ],
-     "state": [
-      {
-       "name": ".show-tagsign",
-       "escaped": "show-tagsign",
-       "description": "Show # before tag-text."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
-       "path": "~/source/sass/component/navigation/_tags.scss",
-       "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -2472,6 +2174,304 @@
        "path": "~/source/sass/component/button/_button.scss",
        "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
        "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "navigation": {
+   "dropdown": [
+    {
+     "name": "Dropdown",
+     "description": "<p>Dropdown menu</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Dropdown"
+      }
+     ],
+     "state": [
+      {
+       "name": ".dropdown-menu-arrow",
+       "escaped": "dropdown-menu-arrow",
+       "description": "Adds arrow to the dropdown menu"
+      },
+      {
+       "name": ".dropdown-menu-arrow-right",
+       "escaped": "dropdown-menu-arrow-right",
+       "description": "Moves the arrow to the right edge"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "path": "~/source/sass/component/dropdown/_dropdown.scss",
+       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "breadcrumbs": [
+    {
+     "name": "Breadcrumbs",
+     "description": "<p>Indicate the current page&#39;s location within a navigational hierarchy using breadcrumbs.</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Breadcrumbs"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_breadcrumb.scss",
+       "example": "\n<ul class=\"breadcrumbs\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li>Gummi bears</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"breadcrumbs\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;Gummi bears&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "sidebar navigation": [
+    {
+     "name": "Navigation",
+     "description": "<p>Vertical navigation a.k.a sidebar navigation with nestled sub menu support.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Sidebar navigation"
+      }
+     ],
+     "state": [
+      {
+       "name": ".has-children",
+       "escaped": "has-children",
+       "description": "Indicates if a menu item has children (sub menu)"
+      },
+      {
+       "name": ".current-node",
+       "escaped": "current-node",
+       "description": "Indicates the currently active parent node"
+      },
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/_nav.scss",
+       "example": "\n<nav>\n    <ul class=\"nav-aside\">\n        <li><a href=\"#\">Sweet apple pie</a></li>\n        <li class=\"has-children\"><a href=\"#\">Chocolate bar</a></li>\n        <li class=\"current-node has-children\">\n            <a href=\"#\">Marshmallow</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"#\">Caramels</a></li>\n                <li class=\"current\"><a href=\"#\">Sweet roll.</a></li>\n                <li><a href=\"#\">Ice cream</a></li>\n            </ul>\n        </li>\n        <li><a href=\"#\">Pudding</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav-aside\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Sweet apple pie&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"has-children\"&gt;&lt;a href=\"#\"&gt;Chocolate bar&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"current-node has-children\"&gt;\n            &lt;a href=\"#\"&gt;Marshmallow&lt;/a&gt;\n            &lt;ul class=\"sub-menu\"&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n                &lt;li class=\"current\"&gt;&lt;a href=\"#\"&gt;Sweet roll.&lt;/a&gt;&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"#\"&gt;Ice cream&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Pudding&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "navbar": [
+    {
+     "name": "Navigation bar",
+     "description": "<p>The navbar is typically used for the main menu. Using the class <code>.nav-justify</code> on the <code>ul</code> element will make the menu items fill the width of the navbar container.</p>\n",
+     "author": "Kristoffer Svanmark, Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Navbar"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "Indicates the currently active menu item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "path": "~/source/sass/component/navigation/_navbar.scss",
+       "example": "\n<nav class=\"navbar hidden-xs hidden-sm\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-sm-12\">\n                <ul class=\"nav nav-justify\">\n                    <li><a href=\"#\">Brownie</a></li>\n                    <li><a href=\"#\">Fruitcake</a></li>\n                    <li><a href=\"#\">Pie</a></li>\n                    <li><a href=\"#\">Sweet lemon drops</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</nav>",
+       "escaped": "\n&lt;nav class=\"navbar hidden-xs hidden-sm\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-sm-12\"&gt;\n                &lt;ul class=\"nav nav-justify\"&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Brownie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Fruitcake&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Pie&lt;/a&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"#\"&gt;Sweet lemon drops&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "pagination": [
+    {
+     "name": "Pagination",
+     "description": "<p>Standard pagination.</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Pagination"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active page number"
+      },
+      {
+       "name": ".paging-lg",
+       "escaped": "paging-lg",
+       "description": "Bigger paging"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pagination.scss",
+       "example": "\n<ul class=\"pagination\">\n    <li><a class=\"prev\" href=\"#\">&laquo; Previous</a></li>\n    <li><a class=\"page\" href=\"#\">1</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">2</a></li>\n    <li><a class=\"page current\" href=\"#\">3</a></li>\n    <li><a class=\"page\" href=\"#\">4</a></li>\n    <li class=\"ellipsis\"></li>\n    <li><a class=\"page\" href=\"#\">15</a></li>\n    <li><a class=\"next\" href=\"#\">Next &raquo;</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"pagination\"&gt;\n    &lt;li&gt;&lt;a class=\"prev\" href=\"#\"&gt;&laquo; Previous&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;1&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;2&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page current\" href=\"#\"&gt;3&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;4&lt;/a&gt;&lt;/li&gt;\n    &lt;li class=\"ellipsis\"&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"page\" href=\"#\"&gt;15&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"next\" href=\"#\"&gt;Next &raquo;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "pills": [
+    {
+     "name": "Pills",
+     "description": "<p>Pills navigagtion</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Pills"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pills.scss",
+       "example": "\n<ul class=\"nav nav-pills nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"nav nav-pills nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "help": [
+    {
+     "name": "Help",
+     "description": "<p>Help navigagtion</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Help"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_pills.scss",
+       "example": "\n<ul class=\"nav nav-help nav-horizontal\">\n    <li><a href=\"#\">Cupkae</a></li>\n    <li><a href=\"#\">Liquorice</a></li>\n    <li><a href=\"#\">Gummi bears</a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"nav nav-help nav-horizontal\"&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Cupkae&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Liquorice&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#\"&gt;Gummi bears&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "scroll": [
+    {
+     "name": "Vertical navbar",
+     "description": "<p>A vertical vanbar design to slide up &amp; down in the content.</p>\n",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Scroll"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active dot"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_scroll-dots.scss",
+       "example": "\n<ul class=\"scroll-dots is-active\">\n    <li><a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right></a></li>\n    <li><a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"></a></li>\n    <li><a href=\"#3\"></a></li>\n    <li><a href=\"#4\"></a></li>\n    <li><a href=\"#5\"></a></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"scroll-dots is-active\"&gt;\n    &lt;li&gt;&lt;a href=\"#1\" data-link-tooltip=\"First item\" data-tooltip-right&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a class=\"current\" href=\"#2\" data-link-tooltip=\"Second item\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#3\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#4\"&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;a href=\"#5\"&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "tabs": [
+    {
+     "name": "Navigation tabs",
+     "description": "<p>Horizontal navigation tabs</p>\n",
+     "author": "Kristoffer Svanmark",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Tabs"
+      }
+     ],
+     "state": [
+      {
+       "name": ".current",
+       "escaped": "current",
+       "description": "The currently active tab"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
+       "path": "~/source/sass/component/navigation/_tabs.scss",
+       "example": "\n<nav>\n    <ul class=\"nav nav-tabs\">\n        <li><a href=\"#\">Caramels</a></li>\n        <li><a href=\"#\">Croissants</a></li>\n        <li><a href=\"#\">Donuts</a></li>\n    </ul>\n</nav>",
+       "escaped": "\n&lt;nav&gt;\n    &lt;ul class=\"nav nav-tabs\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Caramels&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Croissants&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Donuts&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;"
+      }
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "name": "Tags",
+     "description": "<p>List of tags constructed to be shown below articles.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Navigation",
+       "section": "Tags"
+      }
+     ],
+     "state": [
+      {
+       "name": ".show-tagsign",
+       "escaped": "show-tagsign",
+       "description": "Show # before tag-text."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
+       "path": "~/source/sass/component/navigation/_tags.scss",
+       "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -2847,52 +2847,6 @@
     }
    ]
   },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "section": {
    "featured": [
     {
@@ -3062,6 +3016,52 @@
     }
    ]
   },
+  "search": {
+   "search form": [
+    {
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "social": {
    "feed": [
     {
@@ -3089,57 +3089,6 @@
        "path": "~/source/sass/component/social/feed.scss",
        "example": "\n<ul class=\"social social-feed-v2\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"social-text\">\n                 <img src=\"https://unsplash.it/300/200?image=468\"/>\n             </a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
        "escaped": "\n&lt;ul class=\"social social-feed-v2\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\"&gt;\n                 &lt;img src=\"https://unsplash.it/300/200?image=468\"/&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "tables": {
-   "basic": [
-    {
-     "name": "Basic Table",
-     "description": "",
-     "page": [
-      {
-       "nav": "Tables",
-       "section": "Basic"
-      }
-     ],
-     "state": [
-      {
-       "name": ".table-sm",
-       "escaped": "table-sm",
-       "description": "Small table"
-      },
-      {
-       "name": ".table-lg",
-       "escaped": "table-lg",
-       "description": "Large table"
-      },
-      {
-       "name": ".table-striped",
-       "escaped": "table-striped",
-       "description": "Zebra striped table"
-      },
-      {
-       "name": ".table-bordered",
-       "escaped": "table-bordered",
-       "description": "Borders between rows"
-      },
-      {
-       "name": ".table-hover",
-       "escaped": "table-hover",
-       "description": "Highlight table row on hover"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "path": "~/source/sass/component/table/_table.scss",
-       "example": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "escaped": "\n&lt;table class=\"table table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Yummie&lt;/th&gt;\n            &lt;th&gt;Much&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Gingerbread&lt;/td&gt;\n            &lt;td&gt;9&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Jelly-o&lt;/td&gt;\n            &lt;td&gt;8&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Apple pie&lt;/td&gt;\n            &lt;td&gt;10&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Candy canes I love muffin&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
       }
      ]
     }
@@ -3192,6 +3141,57 @@
        "path": "~/source/sass/component/stripe/_stripe.scss",
        "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
        "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "tables": {
+   "basic": [
+    {
+     "name": "Basic Table",
+     "description": "",
+     "page": [
+      {
+       "nav": "Tables",
+       "section": "Basic"
+      }
+     ],
+     "state": [
+      {
+       "name": ".table-sm",
+       "escaped": "table-sm",
+       "description": "Small table"
+      },
+      {
+       "name": ".table-lg",
+       "escaped": "table-lg",
+       "description": "Large table"
+      },
+      {
+       "name": ".table-striped",
+       "escaped": "table-striped",
+       "description": "Zebra striped table"
+      },
+      {
+       "name": ".table-bordered",
+       "escaped": "table-bordered",
+       "description": "Borders between rows"
+      },
+      {
+       "name": ".table-hover",
+       "escaped": "table-hover",
+       "description": "Highlight table row on hover"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "path": "~/source/sass/component/table/_table.scss",
+       "example": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "escaped": "\n&lt;table class=\"table table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Yummie&lt;/th&gt;\n            &lt;th&gt;Much&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Gingerbread&lt;/td&gt;\n            &lt;td&gt;9&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Jelly-o&lt;/td&gt;\n            &lt;td&gt;8&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Apple pie&lt;/td&gt;\n            &lt;td&gt;10&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Candy canes I love muffin&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
       }
      ]
     }

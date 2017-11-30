@@ -131,12 +131,17 @@
     //Square/Rectangle (horizontal or vertical)
     padding-top: 100%;
 
-    &.tile--xs-vertical {
-        padding-top: 200%;
-    }
-
     &.tile--xs-horizontal {
         padding-top: 50%;
+    }
+
+    @media screen and #{$screen-below-md} {
+        &.tile--xs-vertical {
+            padding-top: initial;
+            a {
+                position: relative;
+            }
+        }
     }
 
     @media screen and #{$screen-sm-up} {
