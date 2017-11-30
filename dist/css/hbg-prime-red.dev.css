@@ -16343,10 +16343,10 @@ img[src$=".svg"].footer-signature {
     padding-top: 50%; }
   @media screen and (max-width: 769px) {
     /* line 143, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
-    .tile.tile--xs-vertical {
+    .tile.tile--xs-horizontal {
       padding-top: initial; }
       /* line 145, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
-      .tile.tile--xs-vertical a {
+      .tile.tile--xs-horizontal a {
         position: relative; } }
   @media screen and (min-width: 469px) {
     /* line 152, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
