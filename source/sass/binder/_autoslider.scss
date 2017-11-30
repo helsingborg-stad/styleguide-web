@@ -25,3 +25,8 @@
         display: none;
     }
 }
+
+.js-autoslide:after {
+    content: 'flickity';
+    display: none;
+}

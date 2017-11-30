@@ -18875,6 +18875,11 @@ div.spinner {
     content: 'flickity';
     display: none; } }
 
+/* line 29, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/binder/_autoslider.scss */
+.js-autoslide:after {
+  content: 'flickity';
+  display: none; }
+
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/wordpress/_widget.scss */
 [class^="widget_"]:not(.widget_calendar) {
   display: block;
