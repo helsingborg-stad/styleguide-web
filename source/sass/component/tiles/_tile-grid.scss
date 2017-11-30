@@ -36,7 +36,7 @@
                 background-color: $color;
 
                 &:hover {
-                    background-color: darken($color, 2%);
+                    background-color: darken($color, 4%);
                 }
             }
 
@@ -45,7 +45,7 @@
                 color: $color;
 
                 &:hover {
-                    color: darken($color, 2%);
+                    color: darken($color, 4%);
                 }
             }
 
@@ -54,7 +54,7 @@
                 background-color: $color;
 
                 &:hover {
-                    background-color: darken($color, 2%);
+                    background-color: darken($color, 4%);
                 }
             }
         }
@@ -65,10 +65,7 @@
     overflow: hidden;
     position: relative;
     color: white;
-
-    a {
-        transition: background-color 200ms;
-    }
+    transition: background-color 200ms;
 
     a:hover, a {
         color: inherit;
