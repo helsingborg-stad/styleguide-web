@@ -14978,14 +14978,14 @@ option {
   /* line 298, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-image + .social-user {
     margin-top: -30px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
     background: none; }
     /* line 303, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-image + .social-user .social-author {
       color: #fff; }
   /* line 308, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-user {
-    padding: 10px 10px 0 10px;
+    padding: 20px 20px 0 20px;
     line-height: 0;
     position: relative;
     z-index: 8000; }
