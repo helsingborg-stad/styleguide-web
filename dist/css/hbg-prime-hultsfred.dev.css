@@ -14906,26 +14906,17 @@ option {
 .box-filled .social-feed-wrapper {
   padding: 10px 10px 0 10px; }
 
-/* line 276, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+/* line 229, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
 .social.social-feed-v2 {
-  margin: -7.5px; }
-  /* line 280, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  margin: -15px; }
+  /* line 233, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-item {
-    max-width: 33.333%;
-    width: calc((600px - 100%) * 600);
-    min-width: 100%;
     display: block;
-    padding: 7.5px; }
-    @media screen and (min-width: 1281px) {
-      /* line 280, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
-      .social.social-feed-v2 .social-item {
-        max-width: 25%;
-        width: calc((960px - 100%) * 960);
-        min-width: 33.333%; } }
-    /* line 290, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    padding: 15px; }
+    /* line 237, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-item .material {
       background: #fff; }
-    /* line 294, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 241, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-item .material:hover {
       cursor: hand;
       cursor: pointer; }
@@ -14936,15 +14927,15 @@ option {
           /* line 32, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/mixin/_material.scss */
           body:not(.material-no-shadow) .social.social-feed-v2 .social-item .material:hover {
             box-shadow: none; } }
-      /* line 301, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
-      .social.social-feed-v2 .social-item .material:hover .social-image img {
+      /* line 248, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+      .social.social-feed-v2 .social-item .material:hover .social-image a {
         opacity: .8;
         filter: blur(1px);
-        transform: scale(1.05); }
-      /* line 307, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+        background-size: 102% auto; }
+      /* line 254, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
       .social.social-feed-v2 .social-item .material:hover .social-image:before {
         opacity: .95; }
-  /* line 314, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 261, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-image {
     background-color: #0b0b0c;
     line-height: 0;
@@ -14952,13 +14943,13 @@ option {
     min-height: 50px;
     overflow: hidden;
     clip: rect(auto, auto, auto, auto); }
-    /* line 322, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
-    .social.social-feed-v2 .social-image img {
-      width: 100%;
-      opacity: 1;
-      transition: 300ms opacity, transform 400ms;
-      backface-visibility: hidden; }
-    /* line 329, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 269, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    .social.social-feed-v2 .social-image a {
+      transition: all 200ms;
+      display: block;
+      background-position: top center;
+      background-size: 100% auto; }
+    /* line 276, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-image:before {
       position: absolute;
       top: 50%;
@@ -14973,7 +14964,7 @@ option {
       opacity: 0;
       transition: 300ms opacity;
       transition-delay: 200ms; }
-    /* line 342, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 289, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-image:after {
       content: "";
       position: absolute;
@@ -14984,80 +14975,82 @@ option {
       top: auto;
       height: 40px;
       background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)); }
-  /* line 351, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 298, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-image + .social-user {
     margin-top: -30px;
     padding: 0 0 0 10px;
     background: none; }
-    /* line 356, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 303, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-image + .social-user .social-author {
       color: #fff; }
-  /* line 361, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 308, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-user {
     padding: 10px 10px 0 10px;
     line-height: 0;
     position: relative;
     z-index: 8000; }
-    /* line 368, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 315, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .user-image {
       border-radius: 50%;
       width: 50px;
       height: 50px;
       float: left; }
-    /* line 375, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 322, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .user-image img {
       border-radius: 50%;
       width: 50px;
       height: 50px; }
-    /* line 381, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 328, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .social-post-details {
       float: left;
       width: calc(100% - 60px);
-      margin-left: 10px;
       height: 50px;
       padding: 4px 0; }
-    /* line 389, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 335, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    .social.social-feed-v2 .social-user .user-image + .social-post-details {
+      margin-left: 10px; }
+    /* line 339, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .social-author,
     .social.social-feed-v2 .social-user .social-publish {
       display: block;
-      color: #464646;
+      color: #4a4a4a;
       text-decoration: none;
       line-height: 24px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    /* line 400, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 350, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .social-author {
       font-weight: bold;
       font-size: 1em; }
-    /* line 405, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 355, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-user .social-publish {
       font-size: .8em; }
-  /* line 410, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 360, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-content {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     font-size: .85em;
-    color: #464646; }
-    /* line 416, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    color: #4a4a4a; }
+    /* line 366, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-content a,
     .social.social-feed-v2 .social-content a:hover,
     .social.social-feed-v2 .social-content a:active,
     .social.social-feed-v2 .social-content a:visited {
-      color: #464646;
+      color: #4a4a4a;
       text-decoration: none;
       display: block; }
-  /* line 426, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 376, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-link-image + .social-link-text {
     padding-left: 60px; }
-  /* line 430, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 380, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-link {
     border: 1px solid #e5e5e5;
     background: #f4f4f4; }
-  /* line 436, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 386, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-text + .social-link {
     margin-top: 10px; }
-  /* line 440, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 390, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-link-image {
     width: 50px;
     height: 50px;
@@ -15065,92 +15058,95 @@ option {
     background-size: contain;
     background-position: center;
     float: left; }
-  /* line 449, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 399, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-link-text {
     display: block;
     width: auto;
     padding: 5px;
     line-height: 11px; }
-    /* line 455, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 405, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-link-text h4, .social.social-feed-v2 .social-link-text .widget_calendar caption, .widget_calendar .social.social-feed-v2 .social-link-text caption {
       font-size: .9em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    /* line 462, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 412, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-link-text p {
       font-size: .9em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-  /* line 470, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 420, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-user + .social-footer {
     margin-top: 10px; }
-  /* line 474, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 424, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-feed-v2 .social-footer {
-    padding: 5px 10px;
-    border-top: 1px solid #eee;
-    color: #464646; }
-    /* line 479, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    padding: 10px 20px;
+    border-top: 1px solid #f9f9f9;
+    color: #9b9b9b; }
+    /* line 429, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    .social.social-feed-v2 .social-footer i, .social.social-feed-v2 .social-footer a, .social.social-feed-v2 .social-footer span {
+      color: #9b9b9b; }
+    /* line 433, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-footer i {
       vertical-align: text-top;
       margin-right: 3px; }
-    /* line 484, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 438, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-footer .text-right {
       float: right;
       color: #979797;
       font-size: .7em; }
-    /* line 490, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 444, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-feed-v2 .social-footer .text-left {
       float: left;
       font-size: .8em; }
 
-/* line 498, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+/* line 452, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
 .social.social-compressed.social-feed-v2 {
   columns: 1; }
-  /* line 502, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 456, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-compressed.social-feed-v2 .social-item + .social-item {
     border-top: 1px solid #e5e5e5; }
-  /* line 506, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 460, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-compressed.social-feed-v2 .social-image {
     margin: 10px; }
-    /* line 509, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 463, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-compressed.social-feed-v2 .social-image:after {
       display: none; }
-  /* line 514, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 468, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-compressed.social-feed-v2 .social-text + .social-link {
     display: none; }
-  /* line 518, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 472, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-compressed.social-feed-v2 .social-user {
     padding: 10px 0 0 0;
     margin: 0;
     float: none; }
-    /* line 523, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 477, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-compressed.social-feed-v2 .social-user .user-image {
       display: none; }
-    /* line 527, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+    /* line 481, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
     .social.social-compressed.social-feed-v2 .social-user .social-post-details {
       padding-left: 0;
       height: auto;
       width: calc(100% - 20px); }
-      /* line 532, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+      /* line 486, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
       .social.social-compressed.social-feed-v2 .social-user .social-post-details a {
         font-size: 1em; }
-      /* line 536, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+      /* line 490, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
       .social.social-compressed.social-feed-v2 .social-user .social-post-details time {
         color: #979797;
         float: right; }
-      /* line 541, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+      /* line 495, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
       .social.social-compressed.social-feed-v2 .social-user .social-post-details a,
       .social.social-compressed.social-feed-v2 .social-user .social-post-details time {
         color: #000;
         display: inline; }
-  /* line 549, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+  /* line 503, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
   .social.social-compressed.social-feed-v2 .social-footer {
     background-color: #f4f4f4;
     margin-top: 10px; }
 
-/* line 555, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
+/* line 509, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/social/feed.scss */
 .social.social-feed-v2 + .btn {
   margin-top: 15px; }
 
@@ -16172,101 +16168,101 @@ img[src$=".svg"].footer-signature {
     background-color: #acc6d3; }
     /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+1) > .tile:not(.invert):hover {
-      background-color: #a5c1cf; }
+      background-color: #9fbdcc; }
   /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile.invert {
     background-color: white;
     color: #acc6d3; }
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+1) > .tile.invert:hover {
-      color: #a5c1cf; }
+      color: #9fbdcc; }
   /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+1) > .tile.invert .content:after {
     transition: background-color 200ms;
     background-color: #acc6d3; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+1) > .tile.invert .content:after:hover {
-      background-color: #a5c1cf; }
+      background-color: #9fbdcc; }
   /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile:not(.invert) {
     background-color: #3e3e3f; }
     /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+2) > .tile:not(.invert):hover {
-      background-color: #39393a; }
+      background-color: #343435; }
   /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile.invert {
     background-color: white;
     color: #3e3e3f; }
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+2) > .tile.invert:hover {
-      color: #39393a; }
+      color: #343435; }
   /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+2) > .tile.invert .content:after {
     transition: background-color 200ms;
     background-color: #3e3e3f; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+2) > .tile.invert .content:after:hover {
-      background-color: #39393a; }
+      background-color: #343435; }
   /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile:not(.invert) {
     background-color: #245588; }
     /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+3) > .tile:not(.invert):hover {
-      background-color: #225080; }
+      background-color: #204b78; }
   /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile.invert {
     background-color: white;
     color: #245588; }
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+3) > .tile.invert:hover {
-      color: #225080; }
+      color: #204b78; }
   /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+3) > .tile.invert .content:after {
     transition: background-color 200ms;
     background-color: #245588; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+3) > .tile.invert .content:after:hover {
-      background-color: #225080; }
+      background-color: #204b78; }
   /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile:not(.invert) {
     background-color: #3d6a98; }
     /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+4) > .tile:not(.invert):hover {
-      background-color: #3a6591; }
+      background-color: #376089; }
   /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile.invert {
     background-color: white;
     color: #3d6a98; }
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+4) > .tile.invert:hover {
-      color: #3a6591; }
+      color: #376089; }
   /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+4) > .tile.invert .content:after {
     transition: background-color 200ms;
     background-color: #3d6a98; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+4) > .tile.invert .content:after:hover {
-      background-color: #3a6591; }
+      background-color: #376089; }
   /* line 35, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile:not(.invert) {
     background-color: #88abd0; }
     /* line 38, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+5) > .tile:not(.invert):hover {
-      background-color: #81a6cd; }
+      background-color: #79a1ca; }
   /* line 43, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile.invert {
     background-color: white;
     color: #88abd0; }
     /* line 47, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+5) > .tile.invert:hover {
-      color: #81a6cd; }
+      color: #79a1ca; }
   /* line 52, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
   .tile-grid *:nth-child(5n+5) > .tile.invert .content:after {
     transition: background-color 200ms;
     background-color: #88abd0; }
     /* line 56, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
     .tile-grid *:nth-child(5n+5) > .tile.invert .content:after:hover {
-      background-color: #81a6cd; }
+      background-color: #79a1ca; }
 
 /* line 64, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/tiles/_tile-grid.scss */
 .tile {

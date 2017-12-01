@@ -8,13 +8,11 @@
 // @state .social-compressed - Apperance is adjusted to fit a narrow view horizontally.
 //
 // @markup
-// <ul class="social social-feed-v2" data-packery='{ "itemSelector": ".social-item", "percentPosition": true, "transitionDuration": 0 }'>
-//  <li class="social-item">
+// <ul class="social social-feed-v2 grid no-gutter" data-packery='{ "itemSelector": ".social-item", "percentPosition": true, "transitionDuration": 0 }'>
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -36,39 +34,10 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
-//          </div>
-//          <div class="social-user">
-//              <div class="user-image material-shadow-md">
-//                  <img src="https:\/\/unsplash.it/75/75?image=469"/>
-//              </div>
-//              <div class="social-post-details">
-//                  <a class="social-author" rel="author" href="#author">John Doe</a>
-//                  <time class="social-publish">9 hours ago</time>
-//              </div>
-//          </div>
-//          <div class="social-content">
-//              <a href="#post" class="social-text" class="social-text">
-//                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.
-//              </a>
-//          </div>
-//          <div class="social-footer clearfix">
-//              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
-//              <span class="text-right">posted on facebook</span>
-//          </div>
-//      </div>
-//  </li>
-//  <li class="social-item">
-//      <div class="material">
-//          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -83,13 +52,6 @@
 //              <a href="#post" class="social-text" class="social-text">
 //                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
-//              <a href="#link" class="social-link">
-//                  <span class="social-link-image" style="background-image: url(https:\/\/unsplash.it/75/75?image=169);"></span>
-//                  <span class="social-link-text">
-//                      <h4>Magna Bibendum Fermentum</h4>
-//                      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
-//                  </span>
-//              </a>
 //          </div>
 //          <div class="social-footer clearfix">
 //              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
@@ -97,12 +59,10 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -117,13 +77,6 @@
 //              <a href="#post" class="social-text" class="social-text">
 //                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
-//              <a href="#link" class="social-link">
-//                  <span class="social-link-image" style="background-image: url(https:\/\/unsplash.it/75/75?image=169);"></span>
-//                  <span class="social-link-text">
-//                      <h4>Magna Bibendum Fermentum</h4>
-//                      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
-//                  </span>
-//              </a>
 //          </div>
 //          <div class="social-footer clearfix">
 //              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
@@ -131,12 +84,10 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -151,13 +102,6 @@
 //              <a href="#post" class="social-text" class="social-text">
 //                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
-//              <a href="#link" class="social-link">
-//                  <span class="social-link-image" style="background-image: url(https:\/\/unsplash.it/75/75?image=169);"></span>
-//                  <span class="social-link-text">
-//                      <h4>Magna Bibendum Fermentum</h4>
-//                      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
-//                  </span>
-//              </a>
 //          </div>
 //          <div class="social-footer clearfix">
 //              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
@@ -165,12 +109,12 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//
+//
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -185,13 +129,6 @@
 //              <a href="#post" class="social-text" class="social-text">
 //                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
-//              <a href="#link" class="social-link">
-//                  <span class="social-link-image" style="background-image: url(https:\/\/unsplash.it/75/75?image=169);"></span>
-//                  <span class="social-link-text">
-//                      <h4>Magna Bibendum Fermentum</h4>
-//                      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
-//                  </span>
-//              </a>
 //          </div>
 //          <div class="social-footer clearfix">
 //              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
@@ -199,12 +136,12 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//
+//
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -219,12 +156,30 @@
 //              <a href="#post" class="social-text" class="social-text">
 //                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
-//              <a href="#link" class="social-link">
-//                  <span class="social-link-image" style="background-image: url(https:\/\/unsplash.it/75/75?image=169);"></span>
-//                  <span class="social-link-text">
-//                      <h4>Magna Bibendum Fermentum</h4>
-//                      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
-//                  </span>
+//          </div>
+//          <div class="social-footer clearfix">
+//              <span class="text-left"><i class="pricon pricon-thumbs-up"></i> 394 likes</span>
+//              <span class="text-right">posted on facebook</span>
+//          </div>
+//      </div>
+//  </li>
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
+//      <div class="material">
+//          <div class="social-image">
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
+//          </div>
+//          <div class="social-user">
+//              <div class="user-image material-shadow-md">
+//                  <img src="https:\/\/unsplash.it/75/75?image=469"/>
+//              </div>
+//              <div class="social-post-details">
+//                  <a class="social-author" rel="author" href="#author">John Doe</a>
+//                  <time class="social-publish">9 hours ago</time>
+//              </div>
+//          </div>
+//          <div class="social-content">
+//              <a href="#post" class="social-text" class="social-text">
+//                  Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.
 //              </a>
 //          </div>
 //          <div class="social-footer clearfix">
@@ -233,12 +188,10 @@
 //          </div>
 //      </div>
 //  </li>
-//  <li class="social-item">
+//  <li class="social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4">
 //      <div class="material">
 //          <div class="social-image">
-//              <a href="#post" class="social-text">
-//                  <img src="https:\/\/unsplash.it/300/200?image=468"/>
-//              </a>
+//              <a href="#post" class="ratio-16-9" style="background-image: url('https:\/\/unsplash.it/300/200?image=468');"></a>
 //          </div>
 //          <div class="social-user">
 //              <div class="user-image material-shadow-md">
@@ -275,17 +228,11 @@ $link-image-size: 50px;
 
 .social.social-feed-v2 {
 
-    margin: -$grid-gutter-md/4;
+    margin: -$grid-gutter-md/2;
 
     .social-item {
-        @include wrapper-breakpoint(600, 100%, 33.333%);
-
         display: block;
-        padding: $grid-gutter-md/4;
-
-        @media screen and #{$screen-xl-up} {
-            @include wrapper-breakpoint(960, 33.333%, 25%);
-        }
+        padding: $grid-gutter-md/2;
 
         .material {
             background: #fff;
@@ -298,10 +245,10 @@ $link-image-size: 50px;
 
             .social-image {
 
-                img {
+                a {
                     opacity: .8;
                     filter: blur(1px);
-                    transform: scale(1.05);
+                    background-size: 102% auto;
                 }
 
                 &:before {
@@ -319,11 +266,11 @@ $link-image-size: 50px;
         overflow: hidden;
         clip: rect(auto, auto, auto, auto);
 
-        img {
-            width: 100%;
-            opacity: 1;
-            transition: 300ms opacity, transform 400ms;
-            backface-visibility: hidden;
+        a {
+            transition: all 200ms;
+            display: block;
+            background-position: top center;
+            background-size: 100% auto;
         }
 
         &:before {
@@ -381,15 +328,18 @@ $link-image-size: 50px;
         .social-post-details {
             float: left;
             width: calc(100% - #{$grid-gutter-sm + $user-image-size});
-            margin-left: $grid-gutter-sm;
             height: $user-image-size;
             padding: 4px 0;
+        }
+
+        .user-image + .social-post-details {
+            margin-left: $grid-gutter-sm;
         }
 
         .social-author,
         .social-publish {
             display: block;
-            color: $gray-dark;
+            color: #4a4a4a;
             text-decoration: none;
             line-height: 24px;
             white-space: nowrap;
@@ -409,15 +359,15 @@ $link-image-size: 50px;
 
     .social-content {
         width: 100%;
-        padding: $box-padding;
+        padding: $box-padding * 2;
         font-size: .85em;
-        color: $gray-dark;
+        color: #4a4a4a;
 
         a,
         a:hover,
         a:active,
         a:visited {
-            color: $gray-dark;
+            color: #4a4a4a;
             text-decoration: none;
             display: block;
         }
@@ -472,9 +422,13 @@ $link-image-size: 50px;
     }
 
     .social-footer {
-        padding: $box-padding/2 $box-padding;
-        border-top: 1px solid #eee;
-        color: $gray-dark;
+        padding: $box-padding $grid-gutter-sm * 2;
+        border-top: 1px solid #f9f9f9;
+        color: #9b9b9b;
+
+        i, a, span {
+            color: #9b9b9b;
+        }
 
         i {
             vertical-align: text-top;
