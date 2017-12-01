@@ -275,6 +275,7 @@ $link-image-size: 50px;
 
         &:before {
             @include center();
+            pointer-events: none;
             font-family: "hbg-pricons";
             content: '#{$pricon-eye}';
             font-weight: 400;
