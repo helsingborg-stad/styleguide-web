@@ -25,6 +25,8 @@
 
 //Colors
 .tile-grid {
+    background-color: #fff;
+
     @each $color in $palette-map {
         $total: length($palette-map);
         $i: index($palette-map, $color);
@@ -34,7 +36,7 @@
                 background-color: $color;
 
                 &:hover {
-                    background-color: darken($color, 2%);
+                    background-color: darken($color, 4%);
                 }
             }
 
@@ -43,7 +45,7 @@
                 color: $color;
 
                 &:hover {
-                    color: darken($color, 2%);
+                    color: darken($color, 4%);
                 }
             }
 
@@ -52,7 +54,7 @@
                 background-color: $color;
 
                 &:hover {
-                    background-color: darken($color, 2%);
+                    background-color: darken($color, 4%);
                 }
             }
         }
@@ -63,6 +65,7 @@
     overflow: hidden;
     position: relative;
     color: white;
+    transition: background-color 200ms;
 
     a:hover, a {
         color: inherit;
@@ -135,8 +138,9 @@
         padding-top: 50%;
     }
 
-    @media screen and #{$screen-below-md} {
-        &.tile--xs-vertical {
+    @media screen and #{$screen-below-lg} {
+        &.tile--xs-horizontal,
+        &.tile--sm-horizontal {
             padding-top: initial;
             a {
                 position: relative;
@@ -147,10 +151,6 @@
     @media screen and #{$screen-sm-up} {
         &.tile--sm-vertical {
             padding-top: 200%;
-        }
-
-        &.tile--sm-horizontal {
-            padding-top: 50%;
         }
     }
 
