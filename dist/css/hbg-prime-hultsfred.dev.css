@@ -10332,22 +10332,75 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
     display: none; }
 
 /* line 172, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+.post-horizontal {
+  padding: 15px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3); }
+  @media (min-width: 769px) {
+    /* line 172, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    .post-horizontal {
+      padding: 25px; } }
+  /* line 181, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  .post-horizontal__content {
+    order: 2; }
+    @media (min-width: 769px) {
+      /* line 181, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+      .post-horizontal__content {
+        order: 0; } }
+    /* line 189, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    .post-horizontal__content .post-header li {
+      font-size: 0.85em;
+      color: #777; }
+    /* line 195, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    .post-horizontal__content article {
+      font-size: 0.8em;
+      padding-top: 10px;
+      margin-bottom: 10px; }
+      @media (min-width: 769px) {
+        /* line 195, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+        .post-horizontal__content article {
+          font-size: 0.9em; } }
+  /* line 206, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  .post-horizontal__image {
+    display: block;
+    background-size: cover;
+    width: 100%;
+    min-height: 230px;
+    height: 100%; }
+  /* line 214, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  .post-horizontal__content + .post-horizontal__image-container {
+    padding-bottom: 10px; }
+    @media (min-width: 769px) {
+      /* line 214, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+      .post-horizontal__content + .post-horizontal__image-container {
+        padding-bottom: 0; } }
+  /* line 222, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  .post-horizontal footer {
+    padding-top: 1em; }
+    /* line 225, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    .post-horizontal footer .grid + .grid {
+      margin-top: 15px; }
+    /* line 229, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    .post-horizontal footer .share .pricon {
+      font-size: 1em; }
+
+/* line 235, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post + .post {
   margin-top: 30px; }
 
-/* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
-.post-header h1 {
+/* line 240, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+.post-header h1, .post-header h2 {
   padding-bottom: 0; }
 
-/* line 181, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 244, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-header ul {
   font-size: .9em; }
-  /* line 184, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  /* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
   .post-header ul li {
     display: inline-block;
     vertical-align: middle;
     position: relative; }
-    /* line 190, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+    /* line 253, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
     .post-header ul li + li::before {
       display: inline-block;
       vertical-align: middle;
@@ -10357,27 +10410,27 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
       background-color: #e5e5e5;
       margin: 0 10px; }
 
-/* line 204, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 267, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-categories {
   display: inline-block; }
-  /* line 207, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  /* line 270, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
   .post-categories li {
     display: inline-block; }
 
-/* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 275, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-tags-wrapper + .post-categories-wrapper {
   margin-top: 5px; }
 
-/* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 279, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-categories-wrapper,
 .post-tags-wrapper {
   font-size: .9em; }
-  /* line 220, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  /* line 283, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
   .post-categories-wrapper ul,
   .post-tags-wrapper ul {
     display: inline-block; }
 
-/* line 226, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 289, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-author .post-author-image {
   display: inline-block;
   margin-right: 5px;
@@ -10390,23 +10443,23 @@ body:not(.material-no-shadow) .post .post-full, body:not(.material-no-shadow) .p
   top: -1.5px;
   background-size: cover;
   background-position: center center; }
-  /* line 242, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+  /* line 305, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
   .post-author .post-author-image img {
     display: none; }
 
-/* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 310, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-author.post-author-margin-left {
   margin-left: 5px; }
 
-/* line 252, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 315, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post-footer {
   font-size: .9em; }
 
-/* line 257, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 320, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post .post-footer [class*="grid-"]:first-child {
   padding-left: 0; }
 
-/* line 261, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
+/* line 324, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/blog/_post.scss */
 .post .post-footer [class*="grid-"]:last-child {
   padding-right: 0; }
 

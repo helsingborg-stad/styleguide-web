@@ -12,26 +12,6 @@
    "grid",
    "main footer"
   ],
-  "typography": [
-   "article",
-   "headings",
-   "sub heading",
-   "label",
-   "lead",
-   "unordered list",
-   "ordered list",
-   "quotes",
-   "text alignment",
-   "font size",
-   "highlight",
-   "text color",
-   "underline",
-   "text transform",
-   "mark",
-   "small",
-   "truncate",
-   "weight"
-  ],
   "accessibility": [
    "visibility"
   ],
@@ -48,15 +28,43 @@
    "spinner",
    "visibility"
   ],
+  "typography": [
+   "text alignment",
+   "font size",
+   "highlight",
+   "text color",
+   "underline",
+   "text transform",
+   "mark",
+   "small",
+   "truncate",
+   "weight",
+   "article",
+   "headings",
+   "sub heading",
+   "label",
+   "lead",
+   "unordered list",
+   "ordered list",
+   "quotes"
+  ],
   "special": [
    "accordion",
+   "modals",
    "slider",
-   "tooltip",
-   "modals"
+   "tooltip"
   ],
   "media": [
    "audioplayer",
    "videoplayer"
+  ],
+  "boxes": [
+   "contact",
+   "filled",
+   "post brick",
+   "index",
+   "news",
+   "panel"
   ],
   "blog": [
    "comments form",
@@ -75,14 +83,6 @@
    "sizes",
    "block button",
    "offcanvas button"
-  ],
-  "boxes": [
-   "contact",
-   "filled",
-   "post brick",
-   "index",
-   "news",
-   "panel"
   ],
   "navigation": [
    "dropdown",
@@ -118,14 +118,14 @@
   "notice": [
    "notice"
   ],
+  "search": [
+   "search form",
+   "search results"
+  ],
   "section": [
    "featured",
    "full",
    "split"
-  ],
-  "search": [
-   "search form",
-   "search results"
   ],
   "social": [
    "feed"
@@ -389,521 +389,6 @@
       }
      ],
      "helsingborg.se</a></li>": ""
-    }
-   ]
-  },
-  "typography": {
-   "article": [
-    {
-     "name": "Article",
-     "description": "<p>A full article with heading, lead and body text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Article"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "path": "~/source/sass/typography/_article.scss",
-       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    }
-   ],
-   "headings": [
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Headings"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-highlight",
-       "escaped": "text-highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
-      }
-     ]
-    }
-   ],
-   "sub heading": [
-    {
-     "name": "Sub heading",
-     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Sub heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<div class=\"sub-heading\">I love cake</div>",
-       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "label": [
-    {
-     "name": "Label",
-     "description": "<p>Label a text with a filled background</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Label"
-      }
-     ],
-     "state": [
-      {
-       "name": ".label-tag",
-       "escaped": "label-tag",
-       "description": "Adds arrow shape to label end"
-      },
-      {
-       "name": ".label-sm",
-       "escaped": "label-sm",
-       "description": "Smaller label"
-      },
-      {
-       "name": ".label-lg",
-       "escaped": "label-lg",
-       "description": "Larger label"
-      },
-      {
-       "name": ".label-theme",
-       "escaped": "label-theme",
-       "description": "Uses the current theme color"
-      },
-      {
-       "name": ".label-red-1",
-       "escaped": "label-red-1",
-       "description": "First color in red stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-blue-1",
-       "escaped": "label-blue-1",
-       "description": "First color in blue stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-green-1",
-       "escaped": "label-green-1",
-       "description": "First color in green stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-purple-1",
-       "escaped": "label-purple-1",
-       "description": "First color in purple stripe (color 1-5 available)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "path": "~/source/sass/typography/_label.scss",
-       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
-      }
-     ]
-    }
-   ],
-   "lead": [
-    {
-     "name": "Lead",
-     "description": "<p>A large paragraph to use as article lead.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Lead"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "path": "~/source/sass/typography/_lead.scss",
-       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
-      }
-     ]
-    }
-   ],
-   "unordered list": [
-    {
-     "name": "Unordered list",
-     "description": "<p>Stanrdard unordered list.</p>\n",
-     "state": [
-      {
-       "name": ".unordered-list",
-       "escaped": "unordered-list",
-       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Unordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "ordered list": [
-    {
-     "name": "Ordered list",
-     "description": "<p>Stanrdard ordered list.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Ordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
-      }
-     ]
-    }
-   ],
-   "quotes": [
-    {
-     "name": "Blockquote",
-     "description": "",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Quotes"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "path": "~/source/sass/typography/_quotes.scss",
-       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
-      }
-     ]
-    }
-   ],
-   "text alignment": [
-    {
-     "name": "Text alignment",
-     "description": "<p>Aligns text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text alignment"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "font size": [
-    {
-     "name": "Front size",
-     "description": "<p>Font size</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Font size"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-sm",
-       "escaped": "text-sm",
-       "description": "Small"
-      },
-      {
-       "name": ".text-md",
-       "escaped": "text-md",
-       "description": "Medium (default)"
-      },
-      {
-       "name": ".text-lg",
-       "escaped": "text-lg",
-       "description": "Large"
-      },
-      {
-       "name": ".text-xl",
-       "escaped": "text-xl",
-       "description": "Extra Large"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "highlight": [
-    {
-     "name": "Highlight",
-     "description": "<p>Highlights text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Highlight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text color": [
-    {
-     "name": "Text color",
-     "description": "<p>Modifiers to set the text color</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text color"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-dark-gray",
-       "escaped": "text-dark-gray",
-       "description": "Dark gray text color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "underline": [
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Underline"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text transform": [
-    {
-     "name": "Text transform",
-     "description": "<p>Transforms text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text transform"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "mark": [
-    {
-     "name": "Mark",
-     "description": "<p>Mark text to make it stand out.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Mark"
-      }
-     ],
-     "state": [
-      {
-       "name": ".mark-yellow",
-       "escaped": "mark-yellow",
-       "description": "Mark with yellow color"
-      },
-      {
-       "name": ".mark-blue",
-       "escaped": "mark-blue",
-       "description": "Mark with blue color"
-      },
-      {
-       "name": ".mark-green",
-       "escaped": "mark-green",
-       "description": "Mark with green color"
-      },
-      {
-       "name": ".mark-red",
-       "escaped": "mark-red",
-       "description": "Mark with red color"
-      },
-      {
-       "name": ".mark-purple",
-       "escaped": "mark-purple",
-       "description": "Mark with purple color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
-      }
-     ]
-    }
-   ],
-   "small": [
-    {
-     "name": "Small",
-     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Small"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<small>This is a small text</small>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<small>This is a small text</small>",
-       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
-      }
-     ]
-    }
-   ],
-   "truncate": [
-    {
-     "name": "Truncate",
-     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Truncate"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "weight": [
-    {
-     "name": "Weight",
-     "description": "<p>Set fontweight</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Weight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
-      }
-     ]
     }
    ]
   },
@@ -1336,6 +821,521 @@
     }
    ]
   },
+  "typography": {
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "font size": [
+    {
+     "name": "Front size",
+     "description": "<p>Font size</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Font size"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-sm",
+       "escaped": "text-sm",
+       "description": "Small"
+      },
+      {
+       "name": ".text-md",
+       "escaped": "text-md",
+       "description": "Medium (default)"
+      },
+      {
+       "name": ".text-lg",
+       "escaped": "text-lg",
+       "description": "Large"
+      },
+      {
+       "name": ".text-xl",
+       "escaped": "text-xl",
+       "description": "Extra Large"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text color": [
+    {
+     "name": "Text color",
+     "description": "<p>Modifiers to set the text color</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text color"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-dark-gray",
+       "escaped": "text-dark-gray",
+       "description": "Dark gray text color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text transform": [
+    {
+     "name": "Text transform",
+     "description": "<p>Transforms text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text transform"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "mark": [
+    {
+     "name": "Mark",
+     "description": "<p>Mark text to make it stand out.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Mark"
+      }
+     ],
+     "state": [
+      {
+       "name": ".mark-yellow",
+       "escaped": "mark-yellow",
+       "description": "Mark with yellow color"
+      },
+      {
+       "name": ".mark-blue",
+       "escaped": "mark-blue",
+       "description": "Mark with blue color"
+      },
+      {
+       "name": ".mark-green",
+       "escaped": "mark-green",
+       "description": "Mark with green color"
+      },
+      {
+       "name": ".mark-red",
+       "escaped": "mark-red",
+       "description": "Mark with red color"
+      },
+      {
+       "name": ".mark-purple",
+       "escaped": "mark-purple",
+       "description": "Mark with purple color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
+      }
+     ]
+    }
+   ],
+   "small": [
+    {
+     "name": "Small",
+     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Small"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<small>This is a small text</small>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<small>This is a small text</small>",
+       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
+      }
+     ]
+    }
+   ],
+   "truncate": [
+    {
+     "name": "Truncate",
+     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Truncate"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "weight": [
+    {
+     "name": "Weight",
+     "description": "<p>Set fontweight</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Weight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "article": [
+    {
+     "name": "Article",
+     "description": "<p>A full article with heading, lead and body text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Article"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "path": "~/source/sass/typography/_article.scss",
+       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    }
+   ],
+   "headings": [
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "sub heading": [
+    {
+     "name": "Sub heading",
+     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Sub heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<div class=\"sub-heading\">I love cake</div>",
+       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "label": [
+    {
+     "name": "Label",
+     "description": "<p>Label a text with a filled background</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Label"
+      }
+     ],
+     "state": [
+      {
+       "name": ".label-tag",
+       "escaped": "label-tag",
+       "description": "Adds arrow shape to label end"
+      },
+      {
+       "name": ".label-sm",
+       "escaped": "label-sm",
+       "description": "Smaller label"
+      },
+      {
+       "name": ".label-lg",
+       "escaped": "label-lg",
+       "description": "Larger label"
+      },
+      {
+       "name": ".label-theme",
+       "escaped": "label-theme",
+       "description": "Uses the current theme color"
+      },
+      {
+       "name": ".label-red-1",
+       "escaped": "label-red-1",
+       "description": "First color in red stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-blue-1",
+       "escaped": "label-blue-1",
+       "description": "First color in blue stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-green-1",
+       "escaped": "label-green-1",
+       "description": "First color in green stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-purple-1",
+       "escaped": "label-purple-1",
+       "description": "First color in purple stripe (color 1-5 available)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "path": "~/source/sass/typography/_label.scss",
+       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
+      }
+     ]
+    }
+   ],
+   "lead": [
+    {
+     "name": "Lead",
+     "description": "<p>A large paragraph to use as article lead.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Lead"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "path": "~/source/sass/typography/_lead.scss",
+       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
+   ],
+   "quotes": [
+    {
+     "name": "Blockquote",
+     "description": "",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Quotes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "path": "~/source/sass/typography/_quotes.scss",
+       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "special": {
    "accordion": [
     {
@@ -1372,6 +1372,81 @@
        "path": "~/source/sass/component/accordion/_accordion.scss",
        "example": "\n<div class=\"accordion accordion-icon accordion-list\">\n     <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-1\">\n            Ice cream\n        </label>\n        <div class=\"accordion-content\">\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-2\">\n            <h3>Sugar plum (H3)</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        </div>\n    </section>\n    <section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-3\">\n            <h3>Fruitcake</h3>\n        </label>\n        <div class=\"accordion-content\">\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        </div>\n    </section>\n\t<section class=\"accordion-section\">\n        <input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\">\n        <label class=\"accordion-toggle\" for=\"accordion-section-4\">\n            <h3>Jelly-o</h3>\n        </label>\n        <div class=\"accordion-content\">\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        </div>\n    </section>\n</div>",
        "escaped": "\n&lt;div class=\"accordion accordion-icon accordion-list\"&gt;\n     &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-1\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-1\"&gt;\n            Ice cream\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Ice cream cupcake tootsie roll jujubes tart. Icing tart sweet ice cream candy canes chupa chups marshmallow carrot cake powder. Powder wafer caramels cake jelly-o jelly biscuit dessert topping. Oat cake apple pie dessert cookie.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-2\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-2\"&gt;\n            &lt;h3&gt;Sugar plum (H3)&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Cupcake pudding cheesecake cake sugar plum. Apple pie marzipan bonbon tootsie roll tootsie roll jujubes cookie macaroon. Cake tart icing tiramisu marzipan liquorice.\n        &lt;/div&gt;\n    &lt;/section&gt;\n    &lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-3\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-3\"&gt;\n            &lt;h3&gt;Fruitcake&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.\n        &lt;/div&gt;\n    &lt;/section&gt;\n\t&lt;section class=\"accordion-section\"&gt;\n        &lt;input type=\"radio\" name=\"active-section\" id=\"accordion-section-4\"&gt;\n        &lt;label class=\"accordion-toggle\" for=\"accordion-section-4\"&gt;\n            &lt;h3&gt;Jelly-o&lt;/h3&gt;\n        &lt;/label&gt;\n        &lt;div class=\"accordion-content\"&gt;\n            Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love. Bear claw bear claw cupcake candy canes fruitcake pudding sweet. Chocolate croissant caramels.\n        &lt;/div&gt;\n    &lt;/section&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "modals": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Special",
+       "section": "Modals"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-2",
+       "escaped": "modal-backdrop-2",
+       "description": "Stripe color 2 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-3",
+       "escaped": "modal-backdrop-3",
+       "description": "Stripe color 3 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-4",
+       "escaped": "modal-backdrop-4",
+       "description": "Stripe color 4 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-5",
+       "escaped": "modal-backdrop-5",
+       "description": "Stripe color 5 as backdrop"
+      },
+      {
+       "name": ".modal-backdrop-black",
+       "escaped": "modal-backdrop-black",
+       "description": "Black backdrop"
+      },
+      {
+       "name": ".modal-backdrop-white",
+       "escaped": "modal-backdrop-white",
+       "description": "White backdrop"
+      },
+      {
+       "name": ".modal-large",
+       "escaped": "modal-large",
+       "description": "Big modal (100% width, 100vh height)"
+      },
+      {
+       "name": ".modal-medium",
+       "escaped": "modal-medium",
+       "description": "Medium modal (70% width)"
+      },
+      {
+       "name": ".modal-small",
+       "escaped": "modal-small",
+       "description": "Small modal (50% width)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "path": "~/source/sass/component/modal/_modal.scss",
+       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
+       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content material-shadow-lg\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
       }
      ]
     }
@@ -1479,81 +1554,6 @@
       }
      ]
     }
-   ],
-   "modals": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Special",
-       "section": "Modals"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-2",
-       "escaped": "modal-backdrop-2",
-       "description": "Stripe color 2 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-3",
-       "escaped": "modal-backdrop-3",
-       "description": "Stripe color 3 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-4",
-       "escaped": "modal-backdrop-4",
-       "description": "Stripe color 4 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-5",
-       "escaped": "modal-backdrop-5",
-       "description": "Stripe color 5 as backdrop"
-      },
-      {
-       "name": ".modal-backdrop-black",
-       "escaped": "modal-backdrop-black",
-       "description": "Black backdrop"
-      },
-      {
-       "name": ".modal-backdrop-white",
-       "escaped": "modal-backdrop-white",
-       "description": "White backdrop"
-      },
-      {
-       "name": ".modal-large",
-       "escaped": "modal-large",
-       "description": "Big modal (100% width, 100vh height)"
-      },
-      {
-       "name": ".modal-medium",
-       "escaped": "modal-medium",
-       "description": "Medium modal (70% width)"
-      },
-      {
-       "name": ".modal-small",
-       "escaped": "modal-small",
-       "description": "Small modal (50% width)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "path": "~/source/sass/component/modal/_modal.scss",
-       "example": "\n<a href=\"#modal-target\">Gummi bear modal</a>\n<div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<div class=\"modal-content material-shadow-lg\">\n   \t\t<div class=\"modal-header\">\n\t\t<a class=\"btn btn-close\" href=\"#close\"></a>\n       \t\t<h2 class=\"modal-title\">Gummi bears caramels</h2>\n     \t</div>\n     \t<div class=\"modal-body\">\n\t\t<article>\n                <p>Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.</p>\n                <p>Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.</p>\n                <p>Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.</p>\n                <p>Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.</p>\n       \t\t</article>\n\t</div>\n     \t<div class=\"modal-footer\">\n       \t\t<a href=\"#close\" class=\"btn btn-default\">Close</a>\n       \t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n     \t</div>\n   \t</div><!-- /.modal-content -->\n<a href=\"#close\" class=\"backdrop\"></a>\n</div><!-- /.modal -->",
-       "escaped": "\n&lt;a href=\"#modal-target\"&gt;Gummi bear modal&lt;/a&gt;\n&lt;div id=\"modal-target\" class=\"modal modal-backdrop-1 modal-medium\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"&gt;\n&lt;div class=\"modal-content material-shadow-lg\"&gt;\n   \t\t&lt;div class=\"modal-header\"&gt;\n\t\t&lt;a class=\"btn btn-close\" href=\"#close\"&gt;&lt;/a&gt;\n       \t\t&lt;h2 class=\"modal-title\"&gt;Gummi bears caramels&lt;/h2&gt;\n     \t&lt;/div&gt;\n     \t&lt;div class=\"modal-body\"&gt;\n\t\t&lt;article&gt;\n                &lt;p&gt;Pastry sweet topping lollipop chocolate cake cake I love lollipop. Gummies I love sesame snaps oat cake candy tart. Cake sugar plum chupa chups croissant brownie I love pudding dragée. Caramels liquorice apple pie marshmallow jujubes apple pie soufflé. Lemon drops croissant toffee gummi bears caramels I love. Pudding biscuit wafer bonbon pie danish dragée caramels pastry.&lt;/p&gt;\n                &lt;p&gt;Gingerbread I love jelly-o oat cake cookie. Icing sweet cookie sweet roll cotton candy sesame snaps candy canes I love muffin. Apple pie I love cotton candy sweet jelly-o cheesecake sweet roll. Marshmallow marshmallow jujubes. Jujubes danish lollipop sweet. Gummies I love tiramisu sugar plum.&lt;/p&gt;\n                &lt;p&gt;Liquorice donut tart tart tiramisu tootsie roll cheesecake brownie. Chocolate bonbon dessert. Halvah ice cream I love marshmallow gummi bears pudding dessert cheesecake. Carrot cake I love tiramisu toffee toffee. I love jujubes chocolate cake toffee I love sweet sesame snaps. Tart dessert candy canes lemon drops cake lemon drops pudding jelly-o. Pie tart danish candy gummi bears marshmallow. Ice cream cheesecake chupa chups oat cake apple pie jujubes. Sweet wafer marshmallow. Croissant wafer I love ice cream tootsie roll.&lt;/p&gt;\n                &lt;p&gt;Caramels bear claw biscuit chocolate cake I love. Tart cotton candy sweet liquorice. Carrot cake pastry donut cupcake tart. Tootsie roll I love cupcake carrot cake gingerbread I love donut. Lollipop gingerbread marshmallow brownie gummies apple pie tart donut. Chupa chups cupcake biscuit marshmallow croissant.&lt;/p&gt;\n       \t\t&lt;/article&gt;\n\t&lt;/div&gt;\n     \t&lt;div class=\"modal-footer\"&gt;\n       \t\t&lt;a href=\"#close\" class=\"btn btn-default\"&gt;Close&lt;/a&gt;\n       \t\t&lt;button type=\"button\" class=\"btn btn-primary\"&gt;Save changes&lt;/button&gt;\n     \t&lt;/div&gt;\n   \t&lt;/div&gt;&lt;!-- /.modal-content --&gt;\n&lt;a href=\"#close\" class=\"backdrop\"&gt;&lt;/a&gt;\n&lt;/div&gt;&lt;!-- /.modal --&gt;"
-      }
-     ]
-    }
    ]
   },
   "media": {
@@ -1599,6 +1599,187 @@
        "path": "~/source/sass/component/player/_player.scss",
        "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
        "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https:unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "boxes": {
+   "contact": [
+    {
+     "name": "Contact Card",
+     "description": "<p>View of a persons contactcard. Use buttons to link to profiles etc.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Contact"
+      }
+     ],
+     "state": [
+      {
+       "name": ".vertical-card",
+       "escaped": "vertical-card",
+       "description": "Show description on the right hand side in desktop (identical to mobile)."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_card.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;\n        &lt;span class=\"box box-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;John Doe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Cupcake king&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\"&gt;john.dow@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n\t\t\t   &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n   &lt;div class=\"grid-md-12\"&gt;\n        &lt;span class=\"box box-card vertical-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;Jane Roe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Macaroon princess&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\"&gt;jane.roe@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                     &lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ],
+     "helsingborg.se</a></li>": ""
+    }
+   ],
+   "filled": [
+    {
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars. If used in a looping grid the filled boxes will be coloured according to the brand stripe colors.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Filled"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_filled.scss",
+       "example": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa chups&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-4\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa cis&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;&lt;img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/&gt;&lt;/p&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "post brick": [
+    {
+     "name": "Post brick box",
+     "description": "<p>Display a post brick on image background</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Post brick"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_grid-post.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n         &lt;a class=\"box box-post-brick\" href=\"#\"&gt;\n            &lt;div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\"&gt;\n               &lt;img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n               &lt;span class=\"box-post-brick-date\"&gt;\n                   &lt;time&gt;19 february, 2016 09:48&lt;/time&gt;\n               &lt;/span&gt;\n               &lt;h3 class=\"post-title\"&gt;Jelly beans jujubes cupcake&lt;/h3&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-post-brick-lead\"&gt;\n               &lt;p&gt;Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.&lt;/p&gt;\n            &lt;/div&gt;\n       &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "index": [
+    {
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Index"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Candy canes donut jelly&lt;/h5&gt;\n                &lt;p&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "news": [
+    {
+     "name": "News",
+     "description": "<p>Used to feature news stories.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "News"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_news.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-news\"&gt;\n            &lt;img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"link-item link-item-light\"&gt;Candy canes chocolate cake&lt;/h5&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=600\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"box-title text-highlight\"&gt;Fruitcake toffee&lt;/h3&gt;\n                &lt;time datetime=\"2016-05-27 08:50:36\"&gt;2016-05-27 08:50&lt;/time&gt;\n                &lt;p&gt;Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=500\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"text-highlight\"&gt;Croissant oat cake&lt;/h3&gt;\n                &lt;p&gt;Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "panel": [
+    {
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
+     "page": [
+      {
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2016,187 +2197,6 @@
        "path": "~/source/sass/component/button/_button.scss",
        "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
        "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "boxes": {
-   "contact": [
-    {
-     "name": "Contact Card",
-     "description": "<p>View of a persons contactcard. Use buttons to link to profiles etc.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Contact"
-      }
-     ],
-     "state": [
-      {
-       "name": ".vertical-card",
-       "escaped": "vertical-card",
-       "description": "Show description on the right hand side in desktop (identical to mobile)."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_card.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;\n        &lt;span class=\"box box-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;John Doe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Cupcake king&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\"&gt;john.dow@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n\t\t\t   &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n   &lt;div class=\"grid-md-12\"&gt;\n        &lt;span class=\"box box-card vertical-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;Jane Roe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Macaroon princess&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\"&gt;jane.roe@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                     &lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
-    }
-   ],
-   "filled": [
-    {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars. If used in a looping grid the filled boxes will be coloured according to the brand stripe colors.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Filled"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_filled.scss",
-       "example": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa chups&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-4\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa cis&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;&lt;img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/&gt;&lt;/p&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "post brick": [
-    {
-     "name": "Post brick box",
-     "description": "<p>Display a post brick on image background</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Post brick"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_grid-post.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n         &lt;a class=\"box box-post-brick\" href=\"#\"&gt;\n            &lt;div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\"&gt;\n               &lt;img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n               &lt;span class=\"box-post-brick-date\"&gt;\n                   &lt;time&gt;19 february, 2016 09:48&lt;/time&gt;\n               &lt;/span&gt;\n               &lt;h3 class=\"post-title\"&gt;Jelly beans jujubes cupcake&lt;/h3&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-post-brick-lead\"&gt;\n               &lt;p&gt;Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.&lt;/p&gt;\n            &lt;/div&gt;\n       &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "index": [
-    {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Index"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Candy canes donut jelly&lt;/h5&gt;\n                &lt;p&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "news": [
-    {
-     "name": "News",
-     "description": "<p>Used to feature news stories.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "News"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_news.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-news\"&gt;\n            &lt;img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"link-item link-item-light\"&gt;Candy canes chocolate cake&lt;/h5&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=600\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"box-title text-highlight\"&gt;Fruitcake toffee&lt;/h3&gt;\n                &lt;time datetime=\"2016-05-27 08:50:36\"&gt;2016-05-27 08:50&lt;/time&gt;\n                &lt;p&gt;Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=500\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"text-highlight\"&gt;Croissant oat cake&lt;/h3&gt;\n                &lt;p&gt;Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "panel": [
-    {
-     "name": "Panel",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Panel"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-panel-primary",
-       "escaped": "box-panel-primary",
-       "description": "Promary look (Default)"
-      },
-      {
-       "name": ".box-panel-secondary",
-       "escaped": "box-panel-secondary",
-       "description": "Secondary look"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_panel.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2870,6 +2870,52 @@
     }
    ]
   },
+  "search": {
+   "search form": [
+    {
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "section": {
    "featured": [
     {
@@ -3034,52 +3080,6 @@
        "path": "~/source/sass/component/section/section-split.scss",
        "example": "\n<section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\">\n    <div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"></div>\n    <div class=\"container\">\n    <div class=\"grid\">\n     <div class=\"grid-xs-12 grid-md-7 grid-lg-6\">\n         <div class=\"vertical-alignment-wrapper\">\n             <article class=\"section-article\">\n                 <h2 class=\"section-title\">Cheesecake chocolate cake</h2>\n                 <div class=\"section-text\">\n                     <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n                     <p><a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\">Cotton candy donut</a></p>\n                 </div>\n             </article>\n         </div>\n     </div>\n    </div>\n    </div>\n    <div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item></div>\n</section>",
        "escaped": "\n&lt;section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\"&gt;\n    &lt;div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"&gt;&lt;/div&gt;\n    &lt;div class=\"container\"&gt;\n    &lt;div class=\"grid\"&gt;\n     &lt;div class=\"grid-xs-12 grid-md-7 grid-lg-6\"&gt;\n         &lt;div class=\"vertical-alignment-wrapper\"&gt;\n             &lt;article class=\"section-article\"&gt;\n                 &lt;h2 class=\"section-title\"&gt;Cheesecake chocolate cake&lt;/h2&gt;\n                 &lt;div class=\"section-text\"&gt;\n                     &lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n                     &lt;p&gt;&lt;a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\"&gt;Cotton candy donut&lt;/a&gt;&lt;/p&gt;\n                 &lt;/div&gt;\n             &lt;/article&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item&gt;&lt;/div&gt;\n&lt;/section&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
