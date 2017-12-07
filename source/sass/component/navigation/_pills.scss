@@ -117,6 +117,10 @@
          background-color: transparent;
     }
 
+    a:hover, label:hover {
+         cursor:pointer;
+    }
+
     li {
         line-height: 40px !important;
     }
