@@ -7725,7 +7725,52 @@ input[type="button"].btn::-moz-focus-inner {
   .box-filled .read-more:hover {
     background: rgba(0, 0, 0, 0.4); }
 
-/* line 142, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn.btn-floating {
+  width: 45px;
+  line-height: 45px;
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  border-radius: 100% !important;
+  position: relative;
+  text-align: center; }
+  /* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating.btn-sm {
+    width: 30px;
+    line-height: 30px; }
+  /* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating.btn-lg {
+    width: 60px;
+    line-height: 60px; }
+
+/* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating:before {
+  padding-top: 100%;
+  display: inline-block;
+  content: '';
+  float: left; }
+
+/* line 163, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 169, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating > i {
+  position: relative;
+  top: -1px; }
+
+/* line 174, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn.btn-floating {
+  transition: box-shadow 200ms ease;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25) !important; }
+  /* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating:hover {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.28) !important; }
+
+/* line 199, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-primary {
   background-color: #a84c98;
   border: 2px solid #a84c98;
@@ -7744,7 +7789,7 @@ input[type="button"].btn::-moz-focus-inner {
       color: #fff;
       background-color: #a84c98; }
 
-/* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 213, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-contrasted {
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -7763,11 +7808,11 @@ input[type="button"].btn::-moz-focus-inner {
     .btn.btn-contrasted.btn-outline:hover, .btn.btn-contrasted.btn-outline:focus {
       color: #fff;
       background-color: rgba(0, 0, 0, 0.5); }
-  /* line 159, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn.btn-contrasted:hover, .btn.btn-contrasted:focus {
     border-color: transparent; }
 
-/* line 175, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 232, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-light {
   background-color: #f5f5f5;
   border: 2px solid #f5f5f5;
@@ -7786,7 +7831,7 @@ input[type="button"].btn::-moz-focus-inner {
       color: #252525;
       background-color: #f5f5f5; }
 
-/* line 190, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-danger {
   background-color: #e3000f;
   border: 2px solid #e3000f;
@@ -7805,23 +7850,23 @@ input[type="button"].btn::-moz-focus-inner {
       color: #fff;
       background-color: #e3000f; }
 
-/* line 205, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 262, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 a.btn.btn-plain,
 .btn.btn-plain {
   background-color: transparent;
   color: #252525;
   border-color: transparent;
   padding: 0; }
-  /* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 269, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   a.btn.btn-plain:hover,
   .btn.btn-plain:hover {
     background-color: trapsarent; }
-  /* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 273, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   a.btn.btn-plain:active,
   .btn.btn-plain:active {
     box-shadow: none; }
 
-/* line 241, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 298, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-first {
   background-color: #d35098;
   border: 2px solid #d35098;
@@ -7840,7 +7885,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #d35098; }
 
-/* line 245, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 302, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-second {
   background-color: #712082;
   border: 2px solid #712082;
@@ -7859,7 +7904,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #712082; }
 
-/* line 249, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 306, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-third {
   background-color: #a84c98;
   border: 2px solid #a84c98;
@@ -7878,7 +7923,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #a84c98; }
 
-/* line 253, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 310, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-fourth {
   background-color: #7b075e;
   border: 2px solid #7b075e;
@@ -7897,7 +7942,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #7b075e; }
 
-/* line 257, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 314, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-fifth {
   background-color: #a61380;
   border: 2px solid #a61380;
@@ -7916,56 +7961,56 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #a61380; }
 
-/* line 276, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-sm {
   padding: 0.4em 0.6em;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1; }
 
-/* line 283, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 343, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-md {
   padding: 0.5em 0.9em;
   font-size: 0.9em;
   font-weight: 500;
   line-height: 1; }
 
-/* line 290, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 350, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-lg {
   padding: 0.5em 0.9em;
   font-size: 1.1em;
   font-weight: 500; }
 
-/* line 307, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 367, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block {
   display: block;
   width: 100%;
   text-align: center; }
 
-/* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 373, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block-lg {
   padding: 15px; }
 
-/* line 317, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 377, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block + .btn-block {
   margin-top: 15px; }
 
-/* line 321, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 381, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-icon,
 button.btn-icon {
   padding: 5px 10px;
   line-height: 1; }
 
-/* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 396, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-offcanvas {
   position: absolute;
   top: -100%;
   left: 0; }
-  /* line 341, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 401, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn-offcanvas:focus {
     top: 0;
     z-index: 99999; }
-  /* line 346, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 406, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn-offcanvas + .btn-offcanvas {
     margin-top: 0 !important; }
 

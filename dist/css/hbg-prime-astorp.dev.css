@@ -7725,7 +7725,52 @@ input[type="button"].btn::-moz-focus-inner {
   .box-filled .read-more:hover {
     background: rgba(0, 0, 0, 0.4); }
 
-/* line 142, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn.btn-floating {
+  width: 45px;
+  line-height: 45px;
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  border-radius: 100% !important;
+  position: relative;
+  text-align: center; }
+  /* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating.btn-sm {
+    width: 30px;
+    line-height: 30px; }
+  /* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating.btn-lg {
+    width: 60px;
+    line-height: 60px; }
+
+/* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating:before {
+  padding-top: 100%;
+  display: inline-block;
+  content: '';
+  float: left; }
+
+/* line 163, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 169, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn-floating > i {
+  position: relative;
+  top: -1px; }
+
+/* line 174, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+.btn.btn-floating {
+  transition: box-shadow 200ms ease;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25) !important; }
+  /* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  .btn.btn-floating:hover {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.28) !important; }
+
+/* line 199, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-primary {
   background-color: #a54e82;
   border: 2px solid #a54e82;
@@ -7744,7 +7789,7 @@ input[type="button"].btn::-moz-focus-inner {
       color: #fff;
       background-color: #a54e82; }
 
-/* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 213, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-contrasted {
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -7763,11 +7808,11 @@ input[type="button"].btn::-moz-focus-inner {
     .btn.btn-contrasted.btn-outline:hover, .btn.btn-contrasted.btn-outline:focus {
       color: #fff;
       background-color: rgba(0, 0, 0, 0.5); }
-  /* line 159, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn.btn-contrasted:hover, .btn.btn-contrasted:focus {
     border-color: transparent; }
 
-/* line 175, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 232, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-light {
   background-color: #f5f5f5;
   border: 2px solid #f5f5f5;
@@ -7786,7 +7831,7 @@ input[type="button"].btn::-moz-focus-inner {
       color: #252525;
       background-color: #f5f5f5; }
 
-/* line 190, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 247, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn.btn-danger {
   background-color: #e3000f;
   border: 2px solid #e3000f;
@@ -7805,23 +7850,23 @@ input[type="button"].btn::-moz-focus-inner {
       color: #fff;
       background-color: #e3000f; }
 
-/* line 205, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 262, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 a.btn.btn-plain,
 .btn.btn-plain {
   background-color: transparent;
   color: #252525;
   border-color: transparent;
   padding: 0; }
-  /* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 269, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   a.btn.btn-plain:hover,
   .btn.btn-plain:hover {
     background-color: trapsarent; }
-  /* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 273, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   a.btn.btn-plain:active,
   .btn.btn-plain:active {
     box-shadow: none; }
 
-/* line 241, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 298, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-first {
   background-color: #c6296e;
   border: 2px solid #c6296e;
@@ -7840,7 +7885,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #c6296e; }
 
-/* line 245, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 302, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-second {
   background-color: #712082;
   border: 2px solid #712082;
@@ -7859,7 +7904,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #712082; }
 
-/* line 249, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 306, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-third {
   background-color: #a54e82;
   border: 2px solid #a54e82;
@@ -7878,7 +7923,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #a54e82; }
 
-/* line 253, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 310, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-fourth {
   background-color: #660033;
   border: 2px solid #660033;
@@ -7897,7 +7942,7 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #660033; }
 
-/* line 257, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 314, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-theme-fifth {
   background-color: #a61380;
   border: 2px solid #a61380;
@@ -7916,56 +7961,56 @@ a.btn.btn-plain,
       color: #fff;
       background-color: #a61380; }
 
-/* line 276, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-sm {
   padding: 0.4em 0.6em;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1; }
 
-/* line 283, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 343, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-md {
   padding: 0.5em 0.9em;
   font-size: 0.9em;
   font-weight: 500;
   line-height: 1; }
 
-/* line 290, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 350, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-lg {
   padding: 0.5em 0.9em;
   font-size: 1.1em;
   font-weight: 500; }
 
-/* line 307, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 367, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block {
   display: block;
   width: 100%;
   text-align: center; }
 
-/* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 373, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block-lg {
   padding: 15px; }
 
-/* line 317, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 377, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-block + .btn-block {
   margin-top: 15px; }
 
-/* line 321, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 381, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-icon,
 button.btn-icon {
   padding: 5px 10px;
   line-height: 1; }
 
-/* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+/* line 396, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
 .btn-offcanvas {
   position: absolute;
   top: -100%;
   left: 0; }
-  /* line 341, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 401, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn-offcanvas:focus {
     top: 0;
     z-index: 99999; }
-  /* line 346, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
+  /* line 406, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
   .btn-offcanvas + .btn-offcanvas {
     margin-top: 0 !important; }
 
@@ -15338,7 +15383,7 @@ img[src$=".svg"].footer-signature {
   width: 100%; }
 
 /* Overlay Effect */
-/* line 54, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 53, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay .overlay {
   top: 0;
   position: absolute;
@@ -15347,68 +15392,68 @@ img[src$=".svg"].footer-signature {
   left: 0;
   z-index: 3000; }
 
-/* line 63, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 62, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay .container {
   position: relative;
   z-index: 4000 !important; }
 
-/* line 69, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 68, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-hi .overlay {
   opacity: 0.25; }
 
-/* line 73, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 72, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-md .overlay {
   opacity: 0.50; }
 
-/* line 77, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 76, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-overlay.effect-overlay-opacity-lo .overlay {
   opacity: 0.75; }
 
 /* Text color */
-/* line 88, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 87, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-dark .section-article h1, .section.text-color-dark .section-article h2, .section.text-color-dark .section-article h3, .section.text-color-dark .section-article h4, .section.text-color-dark .section-article .widget_calendar caption, .widget_calendar .section.text-color-dark .section-article caption, .section.text-color-dark .section-article h5, .section.text-color-dark .section-article h6, .section.text-color-dark .section-image-caption h1, .section.text-color-dark .section-image-caption h2, .section.text-color-dark .section-image-caption h3, .section.text-color-dark .section-image-caption h4, .section.text-color-dark .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-dark .section-image-caption caption, .section.text-color-dark .section-image-caption h5, .section.text-color-dark .section-image-caption h6 {
   color: #660033; }
 
-/* line 92, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 91, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-dark .section-article p, .section.text-color-dark .section-article ul, .section.text-color-dark .section-article ol, .section.text-color-dark .section-image-caption p, .section.text-color-dark .section-image-caption ul, .section.text-color-dark .section-image-caption ol {
   color: rgba(0, 0, 0, 0.87); }
 
-/* line 96, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 95, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-dark .section-article a, .section.text-color-dark .section-article a:link, .section.text-color-dark .section-article a:active, .section.text-color-dark .section-article a:hover, .section.text-color-dark .section-article a:visited, .section.text-color-dark .section-image-caption a, .section.text-color-dark .section-image-caption a:link, .section.text-color-dark .section-image-caption a:active, .section.text-color-dark .section-image-caption a:hover, .section.text-color-dark .section-image-caption a:visited {
   color: rgba(0, 0, 0, 0.87); }
 
-/* line 105, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 104, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-light .section-article h1, .section.text-color-light .section-article h2, .section.text-color-light .section-article h3, .section.text-color-light .section-article h4, .section.text-color-light .section-article .widget_calendar caption, .widget_calendar .section.text-color-light .section-article caption, .section.text-color-light .section-article h5, .section.text-color-light .section-article h6, .section.text-color-light .section-image-caption h1, .section.text-color-light .section-image-caption h2, .section.text-color-light .section-image-caption h3, .section.text-color-light .section-image-caption h4, .section.text-color-light .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-light .section-image-caption caption, .section.text-color-light .section-image-caption h5, .section.text-color-light .section-image-caption h6 {
   color: #fff; }
 
-/* line 109, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 108, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-light .section-article p, .section.text-color-light .section-article ul, .section.text-color-light .section-article ol, .section.text-color-light .section-image-caption p, .section.text-color-light .section-image-caption ul, .section.text-color-light .section-image-caption ol {
   color: #fff; }
 
-/* line 113, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 112, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-light .section-article a:not(.btn), .section.text-color-light .section-article a:not(.btn):link, .section.text-color-light .section-article a:not(.btn):active, .section.text-color-light .section-article a:not(.btn):hover, .section.text-color-light .section-article a:not(.btn):visited, .section.text-color-light .section-image-caption a:not(.btn), .section.text-color-light .section-image-caption a:not(.btn):link, .section.text-color-light .section-image-caption a:not(.btn):active, .section.text-color-light .section-image-caption a:not(.btn):hover, .section.text-color-light .section-image-caption a:not(.btn):visited {
   color: #eee; }
 
-/* line 118, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 117, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.text-color-light a.no-color {
   color: #fff; }
 
 /* Justify text */
-/* line 127, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 126, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.justify-text .section-text p, .section.justify-text .section-text ul, .section.justify-text .section-text ol, .section.justify-text .section-text h1, .section.justify-text .section-text h2:not(.section-title), .section.justify-text .section-text h3, .section.justify-text .section-text h4, .section.justify-text .section-text .widget_calendar caption, .widget_calendar .section.justify-text .section-text caption, .section.justify-text .section-text h5, .section.justify-text .section-text h6 {
   text-align: justify; }
 
 /* Font size */
 @media screen and (min-width: 961px) {
-  /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 134, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.fontsize-large h2.section-title {
     font-size: 3rem; }
-  /* line 139, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 138, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.fontsize-xlarge h2.section-title {
     font-size: 4rem; } }
 
 /* Effects */
-/* line 152, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 151, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section-featured.effect-multiply:after,
 .section-featured.effect-blur:after,
 .section-featured.effect-inner-shadow:after,
@@ -15426,239 +15471,239 @@ img[src$=".svg"].footer-signature {
 
 /* Paralax effect */
 @media screen and (min-width: 769px) {
-  /* line 162, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 161, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.effect-parallax {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; } }
 
 /* Multiply effect */
-/* line 172, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 171, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section-full.effect-multiply,
 .section-featured.effect-multiply {
   background-blend-mode: multiply; }
-  /* line 176, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 175, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section-full.effect-multiply .container,
   .section-featured.effect-multiply .container {
     position: relative;
     z-index: 2000; }
-  /* line 181, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 180, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section-full.effect-multiply:after,
   .section-featured.effect-multiply:after {
     opacity: .7; }
 
-/* line 186, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 185, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section-split.effect-multiply .section-image {
   background-blend-mode: multiply; }
 
 /* Blur effect */
-/* line 193, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 192, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-blur .container {
   position: relative;
   z-index: 2000; }
 
-/* line 198, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 197, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-blur:after {
   filter: blur(2px); }
 
-/* line 204, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 203, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-blur:not(.effect-multiply):after {
   margin: -5px; }
 
 /* Inner shadow effect */
-/* line 212, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 211, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-inner-shadow .container {
   position: relative;
   z-index: 2000; }
 
-/* line 217, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 216, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.effect-inner-shadow:after {
   box-shadow: inset 0 0 300px rgba(0, 0, 0, 0.35); }
 
 /* Coverage & vertical padding */
-/* line 224, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 223, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section {
   /* Paddings */
   /* Heights */ }
-  /* line 227, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 226, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.padding-sm, .section.section-featured.padding-sm,
   .section.section-split.padding-sm .section-article {
     padding-top: 5vh;
     padding-bottom: 5vh; }
     @media screen and (max-width: 769px) {
-      /* line 227, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+      /* line 226, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
       .section.section-full.padding-sm, .section.section-featured.padding-sm,
       .section.section-split.padding-sm .section-article {
         padding-top: 30px;
         padding-bottom: 30px; } }
-  /* line 239, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 238, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.padding-md, .section.section-featured.padding-md,
   .section.section-split.padding-md .section-article {
     padding-top: 10vh;
     padding-bottom: 10vh; }
     @media screen and (max-width: 769px) {
-      /* line 239, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+      /* line 238, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
       .section.section-full.padding-md, .section.section-featured.padding-md,
       .section.section-split.padding-md .section-article {
         padding-top: 30px;
         padding-bottom: 30px; } }
-  /* line 251, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 250, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.padding-lg, .section.section-featured.padding-lg,
   .section.section-split.padding-lg .section-article {
     padding-top: 20vh;
     padding-bottom: 20vh; }
     @media screen and (max-width: 769px) {
-      /* line 251, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+      /* line 250, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
       .section.section-full.padding-lg, .section.section-featured.padding-lg,
       .section.section-split.padding-lg .section-article {
         padding-top: 30px;
         padding-bottom: 30px; } }
-  /* line 264, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 263, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.section-sm, .section.section-featured.section-sm,
   .section.section-split.section-sm .section-article {
     min-height: 60px; }
-  /* line 270, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 269, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.section-md, .section.section-featured.section-md,
   .section.section-split.section-md .section-article {
     min-height: 40vh; }
-  /* line 276, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 275, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .section.section-full.section-lg, .section.section-featured.section-lg,
   .section.section-split.section-lg .section-article {
     min-height: 97vh; }
 
 /* Titles */
-/* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 287, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h1, .section .section-article .h1 {
   font-size: 2.7rem;
   color: #660033; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 287, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h1, .section .section-article .h1 {
       font-size: 1.8rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 287, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h1, .section .section-article .h1 {
       font-size: 2rem; } }
 
-/* line 301, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 300, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h2, .section .section-article .h2 {
   font-size: 2.5rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 301, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 300, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h2, .section .section-article .h2 {
       font-size: 1.6rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 301, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 300, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h2, .section .section-article .h2 {
       font-size: 1.5rem; } }
 
-/* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 312, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h3, .section .section-article .h3 {
   font-size: 2rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 312, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h3, .section .section-article .h3 {
       font-size: 1.3rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 313, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 312, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h3, .section .section-article .h3 {
       font-size: 1.2rem; } }
 
-/* line 325, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 324, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
   font-size: 1.15rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 325, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 324, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
       font-size: 1.15rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 325, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 324, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h4, .section .section-article .widget_calendar caption, .widget_calendar .section .section-article caption, .section .section-article .h4 {
       font-size: 1.15rem; } }
 
-/* line 337, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h5, .section .section-article .h5 {
   font-size: 1.1rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 337, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h5, .section .section-article .h5 {
       font-size: 1.1rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 337, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 336, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h5, .section .section-article .h5 {
       font-size: 1.1rem; } }
 
-/* line 349, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 348, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section .section-article h6, .section .section-article .h6 {
   font-size: 1.1rem; }
   @media screen and (min-width: 0) and (max-width: 468px) {
-    /* line 349, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 348, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h6, .section .section-article .h6 {
       font-size: 1rem; } }
   @media screen and (min-width: 469px) and (max-width: 768px) {
-    /* line 349, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+    /* line 348, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
     .section .section-article h6, .section .section-article .h6 {
       font-size: 1rem; } }
 
 /* Image focusing */
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-left-top, .section.image-focus-left-top:after,
 .section.image-focus-left-top .section-image {
   background-position: left top; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-center-top, .section.image-focus-center-top:after,
 .section.image-focus-center-top .section-image {
   background-position: center top; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-right-top, .section.image-focus-right-top:after,
 .section.image-focus-right-top .section-image {
   background-position: right top; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-left-center, .section.image-focus-left-center:after,
 .section.image-focus-left-center .section-image {
   background-position: left center; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-center-center, .section.image-focus-center-center:after,
 .section.image-focus-center-center .section-image {
   background-position: center center; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-right-center, .section.image-focus-right-center:after,
 .section.image-focus-right-center .section-image {
   background-position: right center; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-left-bottom, .section.image-focus-left-bottom:after,
 .section.image-focus-left-bottom .section-image {
   background-position: left bottom; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-center-bottom, .section.image-focus-center-bottom:after,
 .section.image-focus-center-bottom .section-image {
   background-position: center bottom; }
 
-/* line 372, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 371, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .section.image-focus-right-bottom, .section.image-focus-right-bottom:after,
 .section.image-focus-right-bottom .section-image {
   background-position: right bottom; }
 
 /* Margin to submodules */
-/* line 381, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 380, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .grid + .grid.section-submodules {
   margin-top: 60px; }
 
 /* General animations */
-/* line 387, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 386, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .scroll-animations-enabled .section.animate .section-content,
 .scroll-animations-enabled .section.animate .section-submodules,
 .scroll-animations-enabled .section.animate .section-image {
   opacity: 0; }
 
-/* line 393, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 392, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .scroll-animations-enabled .section.animate.animated .section-content,
 .scroll-animations-enabled .section.animate.animated .section-submodules,
 .scroll-animations-enabled .section.animate.animated .section-image {
@@ -15691,35 +15736,35 @@ img[src$=".svg"].footer-signature {
     opacity: 1; } }
 
 /* Section divider */
-/* line 440, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 439, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section.padding-sm:not(.section-split) {
   padding-top: calc(5vh + (5.5vw * 1)) !important; }
 
-/* line 444, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 443, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section.padding-md:not(.section-split) {
   padding-top: calc(10vh + (5.5vw * 1)) !important; }
 
-/* line 448, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 447, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section.padding-lg:not(.section-split) {
   padding-top: calc(20vh + (5.5vw * 1)) !important; }
 
-/* line 452, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 451, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section-split.padding-sm .section-article {
   padding-top: calc(5vh + (5.5vw * 1)) !important; }
 
-/* line 455, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 454, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section-split.padding-md .section-article {
   padding-top: calc(10vh + (5.5vw * 1)) !important; }
 
-/* line 458, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 457, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .has-divider + div .section-split.padding-lg .section-article {
   padding-top: calc(20vh + (5.5vw * 1)) !important; }
 
-/* line 464, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 463, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .divider-skew, .divider-skew-reverse {
   position: relative;
   overflow: visible; }
-  /* line 468, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 467, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .divider-skew:after, .divider-skew-reverse:after {
     content: '';
     width: 100%;
@@ -15729,20 +15774,20 @@ img[src$=".svg"].footer-signature {
     bottom: -2.75vw;
     z-index: 4000;
     pointer-events: none; }
-  /* line 479, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+  /* line 478, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
   .divider-skew .container, .divider-skew-reverse .container {
     z-index: 5000;
     position: relative; }
 
-/* line 485, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 484, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .divider-skew:after {
   transform: skew(0, 3deg); }
 
-/* line 489, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 488, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 .divider-skew-reverse:after {
   transform: skew(0, -3deg); }
 
-/* line 493, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
+/* line 492, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/section/section.scss */
 html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
   height: 100%; }
 

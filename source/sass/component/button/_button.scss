@@ -123,6 +123,63 @@ input[type="button"].btn::-moz-focus-inner {
 }
 
 //
+// @name Floating button
+// @description Circle shaped button with icon
+//
+// @page Buttons/Floating button
+//
+// @markup
+// <a href="#main-content" class="btn btn-floating btn-lg"><i class="pricon pricon-plus"></i></a>
+//
+
+.btn.btn-floating {
+    width: $content-gutter * 3;
+    line-height: $content-gutter * 3;
+    padding: 0;
+    margin: 0;
+    border: none !important;
+    border-radius: 100% !important;
+    position: relative;
+    text-align: center;
+
+    &.btn-sm {
+        width: $content-gutter * 2;
+        line-height: $content-gutter * 2;
+    }
+
+    &.btn-lg {
+        width: $content-gutter * 4;
+        line-height: $content-gutter * 4;
+    }
+}
+
+.btn-floating:before {
+    padding-top: 100%;
+    display: inline-block;
+    content: '';
+    float: left;
+}
+
+.btn-floating:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn-floating > i {
+    position: relative;
+    top: -1px;
+}
+
+.btn.btn-floating {
+    transition: box-shadow 200ms ease;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.25) !important;
+    &:hover {
+        box-shadow: 0px 3px 3px rgba(0,0,0,.28) !important;
+    }
+}
+
+//
 // @name Button: Primary
 // @description Buttons
 //
@@ -271,6 +328,9 @@ a.btn.btn-plain,
 // <button class="btn btn-sm">Small button</button>
 // <button class="btn">Default button</button>
 // <button class="btn btn-lg">Large button</button>
+// <button class="btn btn-floating btn-sm"><i class="pricon pricon-plus"></i></button>
+// <button class="btn btn-floating"><i class="pricon pricon-plus"></i></button>
+// <button class="btn btn-floating btn-lg"><i class="pricon pricon-plus"></i></button>
 //
 
 .btn-sm {
