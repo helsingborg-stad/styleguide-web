@@ -129,6 +129,37 @@
     }
 }
 
+.dropdown-toggle.btn-floating:focus {
+    outline: 0;
+}
+
+.btn-floating + .dropdown-menu.dropdown-menu-arrow {
+    margin-top: 15px;
+}
+
+.btn-floating + .dropdown-menu.dropdown-menu-arrow.dropdown-menu--up {
+    margin-top: initial;
+    margin-bottom: 15px;
+}
+
 .dropdown-open {
     display: block;
+}
+
+
+.dropdown-menu.dropdown-menu--up {
+    top: initial;
+    bottom: 100%;
+    margin-top: initial;
+
+    &:before, &:after {
+        top: 100%;
+        bottom: initial;
+        transform: rotate(180deg);
+    }
+}
+
+.dropdown-menu.dropdown-menu--right {
+    text-align: right;
+    right: 0;
 }
