@@ -7726,7 +7726,7 @@ input[type="button"].btn::-moz-focus-inner {
     background: rgba(0, 0, 0, 0.4); }
 
 /* line 135, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-.btn.btn-floating {
+.btn.btn-floating, .btn.btn-floating.dropdown-toggle {
   width: 45px;
   line-height: 45px;
   padding: 0;
@@ -7736,38 +7736,38 @@ input[type="button"].btn::-moz-focus-inner {
   position: relative;
   text-align: center; }
   /* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-  .btn.btn-floating.btn-sm {
+  .btn.btn-floating.btn-sm, .btn.btn-floating.dropdown-toggle.btn-sm {
     width: 30px;
     line-height: 30px; }
   /* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-  .btn.btn-floating.btn-lg {
+  .btn.btn-floating.btn-lg, .btn.btn-floating.dropdown-toggle.btn-lg {
     width: 60px;
     line-height: 60px; }
 
 /* line 156, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-.btn-floating:before {
+.btn.btn-floating:before, .btn.btn-floating.dropdown-toggle:before {
   padding-top: 100%;
   display: inline-block;
   content: '';
   float: left; }
 
 /* line 163, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-.btn-floating:after {
+.btn.btn-floating:after, .btn.btn-floating.dropdown-toggle:after {
   content: "";
   display: table;
   clear: both; }
 
 /* line 169, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-.btn-floating > i {
+.btn.btn-floating > i, .btn.btn-floating.dropdown-toggle > i {
   position: relative;
   top: -1px; }
 
 /* line 174, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-.btn.btn-floating {
+.btn.btn-floating, .btn.btn-floating.dropdown-toggle {
   transition: box-shadow 200ms ease;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25) !important; }
   /* line 177, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
-  .btn.btn-floating:hover {
+  .btn.btn-floating:hover, .btn.btn-floating.dropdown-toggle:hover {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.28) !important; }
 
 /* line 199, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/button/_button.scss */
@@ -14713,8 +14713,37 @@ option {
     overflow: auto; }
 
 /* line 132, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.dropdown-toggle.btn-floating:focus {
+  outline: 0; }
+
+/* line 136, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.btn-floating + .dropdown-menu.dropdown-menu-arrow {
+  margin-top: 15px; }
+
+/* line 140, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.btn-floating + .dropdown-menu.dropdown-menu-arrow.dropdown-menu--up {
+  margin-top: initial;
+  margin-bottom: 15px; }
+
+/* line 145, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
 .dropdown-open {
   display: block; }
+
+/* line 150, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.dropdown-menu.dropdown-menu--up {
+  top: initial;
+  bottom: 100%;
+  margin-top: initial; }
+  /* line 155, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+  .dropdown-menu.dropdown-menu--up:before, .dropdown-menu.dropdown-menu--up:after {
+    top: 100%;
+    bottom: initial;
+    transform: rotate(180deg); }
+
+/* line 162, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.dropdown-menu.dropdown-menu--right {
+  text-align: right;
+  right: 0; }
 
 /* line 6, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/share/_share.scss */
 .share-social a {
