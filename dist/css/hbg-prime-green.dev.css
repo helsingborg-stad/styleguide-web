@@ -9342,6 +9342,38 @@ body .tag {
     background-color: transparent;
     text-decoration: underline; }
 
+/* line 96, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge input[type="checkbox"]:checked + a {
+  border-color: #50811b !important;
+  background-color: #50811b; }
+
+/* line 101, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge input[type="checkbox"]:checked + a label {
+  color: white; }
+
+/* line 105, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge label {
+  font-weight: bold;
+  color: grey; }
+
+/* line 110, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge input {
+  display: none !important; }
+
+/* line 114, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge a {
+  border: 2px solid grey !important;
+  border-radius: 20px 20px !important;
+  background-color: transparent; }
+
+/* line 120, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge a:hover, .nav-pills--badge label:hover {
+  cursor: pointer; }
+
+/* line 124, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge li {
+  line-height: 40px !important; }
+
 /* line 1, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/navigation/_mobile.scss */
 .nav-toggle {
   display: none; }

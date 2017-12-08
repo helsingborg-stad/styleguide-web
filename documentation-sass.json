@@ -12,26 +12,6 @@
    "grid",
    "main footer"
   ],
-  "typography": [
-   "article",
-   "headings",
-   "sub heading",
-   "label",
-   "lead",
-   "unordered list",
-   "ordered list",
-   "quotes",
-   "text alignment",
-   "font size",
-   "highlight",
-   "text color",
-   "underline",
-   "text transform",
-   "mark",
-   "small",
-   "truncate",
-   "weight"
-  ],
   "accessibility": [
    "visibility"
   ],
@@ -47,6 +27,26 @@
    "placeholders",
    "spinner",
    "visibility"
+  ],
+  "typography": [
+   "text alignment",
+   "font size",
+   "highlight",
+   "text color",
+   "underline",
+   "text transform",
+   "mark",
+   "small",
+   "truncate",
+   "weight",
+   "article",
+   "headings",
+   "sub heading",
+   "label",
+   "lead",
+   "unordered list",
+   "ordered list",
+   "quotes"
   ],
   "special": [
    "accordion",
@@ -127,9 +127,6 @@
    "full",
    "split"
   ],
-  "social": [
-   "feed"
-  ],
   "stripe": [
    "general"
   ],
@@ -147,6 +144,9 @@
    "wp widget: search",
    "wp widget: text",
    "wp utility: caption"
+  ],
+  "social": [
+   "feed"
   ]
  },
  "pages": {
@@ -389,521 +389,6 @@
       }
      ],
      "helsingborg.se</a></li>": ""
-    }
-   ]
-  },
-  "typography": {
-   "article": [
-    {
-     "name": "Article",
-     "description": "<p>A full article with heading, lead and body text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Article"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "path": "~/source/sass/typography/_article.scss",
-       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    }
-   ],
-   "headings": [
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Headings"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-highlight",
-       "escaped": "text-highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
-      }
-     ]
-    }
-   ],
-   "sub heading": [
-    {
-     "name": "Sub heading",
-     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Sub heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<div class=\"sub-heading\">I love cake</div>",
-       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "label": [
-    {
-     "name": "Label",
-     "description": "<p>Label a text with a filled background</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Label"
-      }
-     ],
-     "state": [
-      {
-       "name": ".label-tag",
-       "escaped": "label-tag",
-       "description": "Adds arrow shape to label end"
-      },
-      {
-       "name": ".label-sm",
-       "escaped": "label-sm",
-       "description": "Smaller label"
-      },
-      {
-       "name": ".label-lg",
-       "escaped": "label-lg",
-       "description": "Larger label"
-      },
-      {
-       "name": ".label-theme",
-       "escaped": "label-theme",
-       "description": "Uses the current theme color"
-      },
-      {
-       "name": ".label-red-1",
-       "escaped": "label-red-1",
-       "description": "First color in red stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-blue-1",
-       "escaped": "label-blue-1",
-       "description": "First color in blue stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-green-1",
-       "escaped": "label-green-1",
-       "description": "First color in green stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-purple-1",
-       "escaped": "label-purple-1",
-       "description": "First color in purple stripe (color 1-5 available)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "path": "~/source/sass/typography/_label.scss",
-       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
-      }
-     ]
-    }
-   ],
-   "lead": [
-    {
-     "name": "Lead",
-     "description": "<p>A large paragraph to use as article lead.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Lead"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "path": "~/source/sass/typography/_lead.scss",
-       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
-      }
-     ]
-    }
-   ],
-   "unordered list": [
-    {
-     "name": "Unordered list",
-     "description": "<p>Stanrdard unordered list.</p>\n",
-     "state": [
-      {
-       "name": ".unordered-list",
-       "escaped": "unordered-list",
-       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Unordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "ordered list": [
-    {
-     "name": "Ordered list",
-     "description": "<p>Stanrdard ordered list.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Ordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
-      }
-     ]
-    }
-   ],
-   "quotes": [
-    {
-     "name": "Blockquote",
-     "description": "",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Quotes"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "path": "~/source/sass/typography/_quotes.scss",
-       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
-      }
-     ]
-    }
-   ],
-   "text alignment": [
-    {
-     "name": "Text alignment",
-     "description": "<p>Aligns text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text alignment"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "font size": [
-    {
-     "name": "Front size",
-     "description": "<p>Font size</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Font size"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-sm",
-       "escaped": "text-sm",
-       "description": "Small"
-      },
-      {
-       "name": ".text-md",
-       "escaped": "text-md",
-       "description": "Medium (default)"
-      },
-      {
-       "name": ".text-lg",
-       "escaped": "text-lg",
-       "description": "Large"
-      },
-      {
-       "name": ".text-xl",
-       "escaped": "text-xl",
-       "description": "Extra Large"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "highlight": [
-    {
-     "name": "Highlight",
-     "description": "<p>Highlights text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Highlight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text color": [
-    {
-     "name": "Text color",
-     "description": "<p>Modifiers to set the text color</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text color"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-dark-gray",
-       "escaped": "text-dark-gray",
-       "description": "Dark gray text color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "underline": [
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Underline"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text transform": [
-    {
-     "name": "Text transform",
-     "description": "<p>Transforms text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text transform"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "mark": [
-    {
-     "name": "Mark",
-     "description": "<p>Mark text to make it stand out.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Mark"
-      }
-     ],
-     "state": [
-      {
-       "name": ".mark-yellow",
-       "escaped": "mark-yellow",
-       "description": "Mark with yellow color"
-      },
-      {
-       "name": ".mark-blue",
-       "escaped": "mark-blue",
-       "description": "Mark with blue color"
-      },
-      {
-       "name": ".mark-green",
-       "escaped": "mark-green",
-       "description": "Mark with green color"
-      },
-      {
-       "name": ".mark-red",
-       "escaped": "mark-red",
-       "description": "Mark with red color"
-      },
-      {
-       "name": ".mark-purple",
-       "escaped": "mark-purple",
-       "description": "Mark with purple color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
-      }
-     ]
-    }
-   ],
-   "small": [
-    {
-     "name": "Small",
-     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Small"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<small>This is a small text</small>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<small>This is a small text</small>",
-       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
-      }
-     ]
-    }
-   ],
-   "truncate": [
-    {
-     "name": "Truncate",
-     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Truncate"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "weight": [
-    {
-     "name": "Weight",
-     "description": "<p>Set fontweight</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Weight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
-      }
-     ]
     }
    ]
   },
@@ -1331,6 +816,521 @@
        "name": ".print-only",
        "escaped": "print-only",
        "description": "Display only in print"
+      }
+     ]
+    }
+   ]
+  },
+  "typography": {
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "font size": [
+    {
+     "name": "Front size",
+     "description": "<p>Font size</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Font size"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-sm",
+       "escaped": "text-sm",
+       "description": "Small"
+      },
+      {
+       "name": ".text-md",
+       "escaped": "text-md",
+       "description": "Medium (default)"
+      },
+      {
+       "name": ".text-lg",
+       "escaped": "text-lg",
+       "description": "Large"
+      },
+      {
+       "name": ".text-xl",
+       "escaped": "text-xl",
+       "description": "Extra Large"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text color": [
+    {
+     "name": "Text color",
+     "description": "<p>Modifiers to set the text color</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text color"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-dark-gray",
+       "escaped": "text-dark-gray",
+       "description": "Dark gray text color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text transform": [
+    {
+     "name": "Text transform",
+     "description": "<p>Transforms text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text transform"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "mark": [
+    {
+     "name": "Mark",
+     "description": "<p>Mark text to make it stand out.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Mark"
+      }
+     ],
+     "state": [
+      {
+       "name": ".mark-yellow",
+       "escaped": "mark-yellow",
+       "description": "Mark with yellow color"
+      },
+      {
+       "name": ".mark-blue",
+       "escaped": "mark-blue",
+       "description": "Mark with blue color"
+      },
+      {
+       "name": ".mark-green",
+       "escaped": "mark-green",
+       "description": "Mark with green color"
+      },
+      {
+       "name": ".mark-red",
+       "escaped": "mark-red",
+       "description": "Mark with red color"
+      },
+      {
+       "name": ".mark-purple",
+       "escaped": "mark-purple",
+       "description": "Mark with purple color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
+      }
+     ]
+    }
+   ],
+   "small": [
+    {
+     "name": "Small",
+     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Small"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<small>This is a small text</small>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<small>This is a small text</small>",
+       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
+      }
+     ]
+    }
+   ],
+   "truncate": [
+    {
+     "name": "Truncate",
+     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Truncate"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "weight": [
+    {
+     "name": "Weight",
+     "description": "<p>Set fontweight</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Weight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "article": [
+    {
+     "name": "Article",
+     "description": "<p>A full article with heading, lead and body text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Article"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "path": "~/source/sass/typography/_article.scss",
+       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    }
+   ],
+   "headings": [
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "sub heading": [
+    {
+     "name": "Sub heading",
+     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Sub heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<div class=\"sub-heading\">I love cake</div>",
+       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "label": [
+    {
+     "name": "Label",
+     "description": "<p>Label a text with a filled background</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Label"
+      }
+     ],
+     "state": [
+      {
+       "name": ".label-tag",
+       "escaped": "label-tag",
+       "description": "Adds arrow shape to label end"
+      },
+      {
+       "name": ".label-sm",
+       "escaped": "label-sm",
+       "description": "Smaller label"
+      },
+      {
+       "name": ".label-lg",
+       "escaped": "label-lg",
+       "description": "Larger label"
+      },
+      {
+       "name": ".label-theme",
+       "escaped": "label-theme",
+       "description": "Uses the current theme color"
+      },
+      {
+       "name": ".label-red-1",
+       "escaped": "label-red-1",
+       "description": "First color in red stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-blue-1",
+       "escaped": "label-blue-1",
+       "description": "First color in blue stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-green-1",
+       "escaped": "label-green-1",
+       "description": "First color in green stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-purple-1",
+       "escaped": "label-purple-1",
+       "description": "First color in purple stripe (color 1-5 available)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "path": "~/source/sass/typography/_label.scss",
+       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
+      }
+     ]
+    }
+   ],
+   "lead": [
+    {
+     "name": "Lead",
+     "description": "<p>A large paragraph to use as article lead.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Lead"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "path": "~/source/sass/typography/_lead.scss",
+       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
+   ],
+   "quotes": [
+    {
+     "name": "Blockquote",
+     "description": "",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Quotes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "path": "~/source/sass/typography/_quotes.scss",
+       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
       }
      ]
     }
@@ -2229,10 +2229,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "modifier": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
        "path": "~/source/sass/component/dropdown/_dropdown.scss",
-       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
-       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
+       "example": "\n<span class=\"dropdown\">\n    <span class=\"btn btn-primary dropdown-toggle\">Actions</span>\n    <ul class=\"dropdown-menu\">\n        <li><a href=\"#\">Open</a></li>\n        <li><a href=\"#\">Delete</a></li>\n        <li class=\"divider\"></li>\n        <li><a href=\"#\">Add new</a></li>\n    </ul>\n</span>",
+       "escaped": "\n&lt;span class=\"dropdown\"&gt;\n    &lt;span class=\"btn btn-primary dropdown-toggle\"&gt;Actions&lt;/span&gt;\n    &lt;ul class=\"dropdown-menu\"&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Open&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Delete&lt;/a&gt;&lt;/li&gt;\n        &lt;li class=\"divider\"&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Add new&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/span&gt;"
       }
      ]
     }
@@ -3085,38 +3085,6 @@
     }
    ]
   },
-  "social": {
-   "feed": [
-    {
-     "name": "Feed",
-     "description": "<p>New generation social feed apparence</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Social",
-       "section": "Feed"
-      }
-     ],
-     "state": [
-      {
-       "name": ".social-compressed",
-       "escaped": "social-compressed",
-       "description": "Apperance is adjusted to fit a narrow view horizontally."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
-       "path": "~/source/sass/component/social/feed.scss",
-       "example": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
-       "escaped": "\n&lt;ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "stripe": {
    "general": [
     {
@@ -3403,6 +3371,38 @@
        "path": "~/source/sass/component/wordpress/_wp-caption.scss",
        "example": "\n<div class=\"wp-caption alignnone\">\n <img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\">\n <p class=\"wp-caption-text\">Gingerbread gummies lollipop chocolate cake.</p>\n</div>",
        "escaped": "\n&lt;div class=\"wp-caption alignnone\"&gt;\n &lt;img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\"&gt;\n &lt;p class=\"wp-caption-text\"&gt;Gingerbread gummies lollipop chocolate cake.&lt;/p&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "social": {
+   "feed": [
+    {
+     "name": "Feed",
+     "description": "<p>New generation social feed apparence</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Social",
+       "section": "Feed"
+      }
+     ],
+     "state": [
+      {
+       "name": ".social-compressed",
+       "escaped": "social-compressed",
+       "description": "Apperance is adjusted to fit a narrow view horizontally."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
+       "path": "~/source/sass/component/social/feed.scss",
+       "example": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
+       "escaped": "\n&lt;ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
       }
      ]
     }
