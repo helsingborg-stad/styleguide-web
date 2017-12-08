@@ -91,3 +91,37 @@
         }
     }
 }
+
+.nav-pills--badge {
+    input[type="checkbox"]:checked + a {
+        border-color: $palette-4 !important;
+        background-color: $palette-4;
+    }
+
+    input[type="checkbox"]:checked + a label {
+        color: white;
+    }
+
+   label {
+        font-weight: bold;
+        color: grey;
+    }
+
+   input {
+        display: none !important;
+    }
+
+    a {
+         border: 2px solid grey !important;
+         border-radius: 20px 20px !important;
+         background-color: transparent;
+    }
+
+    a:hover, label:hover {
+         cursor:pointer;
+    }
+
+    li {
+        line-height: 40px !important;
+    }
+}
