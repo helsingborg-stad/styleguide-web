@@ -135,10 +135,11 @@ input[type="button"].btn::-moz-focus-inner {
 .btn.btn-floating, .btn.btn-floating.dropdown-toggle {
     width: $content-gutter * 3;
     line-height: $content-gutter * 3;
-    padding: 0;
+    padding: 0 !important;
     margin: 0;
     border: none !important;
     border-radius: 100% !important;
+    outline: 0;
     position: relative;
     text-align: center;
 
@@ -148,8 +149,8 @@ input[type="button"].btn::-moz-focus-inner {
     }
 
     &.btn-lg {
-        width: $content-gutter * 4;
-        line-height: $content-gutter * 4;
+        width: $content-gutter * 3.5;
+        line-height: $content-gutter * 3.5;
     }
 }
 

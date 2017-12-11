@@ -19010,7 +19010,14 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
 
     function Dropdown() {
         this.handleEvents();
+        this.jsDropDown();
     }
+
+    Dropdown.prototype.jsDropDown = function () {
+        $(document).on('click touchstart', $('.js-dropdown__toggle'), function(e) {
+            $(e.target).closest('.js-dropdown').toggleClass('is-open');
+        }.bind(this));
+    };
 
     Dropdown.prototype.handleEvents = function () {
         $('[data-dropdown]').on('click', function (e) {

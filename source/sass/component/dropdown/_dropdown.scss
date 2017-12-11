@@ -19,7 +19,7 @@
 // </span>
 //
 
-.dropdown {
+.dropdown:not(.ui) {
     position: relative;
     display: inline-block;
 
@@ -163,3 +163,144 @@
     text-align: right;
     right: 0;
 }
+
+
+//
+// @name Dropdown (JS)
+// @description JS powered dropdown menu
+//
+// @page Navigation/Dropdown
+//
+//
+// @markup
+//<div class="c-dropdown js-dropdown">
+//  <button class="c-dropdown__toggle js-dropdown__toggle">Toggle</button>
+//  <div class="c-dropdown__menu">
+//    <ul>
+//      <li><a href="#">List item</a></li>
+//      <li><a href="#">List item</a></li>
+//      <li><a href="#">List item</a></li>
+//    </ul>
+//  </div>
+//</div>
+//
+
+@keyframes c-dropdown-zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.c-dropdown {
+    position: relative;
+}
+.c-dropdown__toggle {}
+.c-dropdown__toggle--caret-left:before,
+.c-dropdown__toggle--caret-right:after {
+    @include pricon($pricon-caret-down);
+    font-size: .9em;
+    display: inline-block;
+}
+
+.js-dropdown.is-open {
+    .c-dropdown__toggle--caret-left:before,
+    .c-dropdown__toggle--caret-right:after {
+        transform: rotate(180deg);
+    }
+}
+
+.c-dropdown__toggle--caret-left:before {
+    margin-right: $content-gutter / 2;
+}
+
+
+.c-dropdown__toggle--caret-right:after {
+    margin-left: $content-gutter / 2;
+}
+
+.js-dropdown.is-open .c-dropdown__toggle--rotate-plus {
+    i.pricon-plus:before {
+        transform: rotate(45deg);
+        transition: transform 100ms ease;
+    }
+}
+
+.c-dropdown__menu {
+    display: none;
+    background: white;
+}
+
+.js-dropdown.is-open .c-dropdown__menu,
+.js-dropdown__menu.is-open {
+    display: block;
+}
+
+.c-dropdown .c-dropdown__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: $content-gutter * 10;
+    padding: $content-gutter * 0.5 0;
+
+    @include material-shadow-medium();
+    @include material-radius();
+}
+
+.c-dropdown__menu.c-dropdown__menu--up {
+    top: initial;
+    bottom: 100%;
+}
+
+.c-dropdown__menu.c-dropdown__menu--right {
+    left: initial;
+    right: 0;
+    text-align: right;
+}
+
+.c-dropdown__menu.c-dropdown__menu--bubble:before {
+    content: '';
+    position: absolute;
+    @include arrow('up', $content-gutter, #fff);
+}
+.c-dropdown__menu.c-dropdown__menu--bubble {
+    margin-top: $content-gutter * 1.25;
+    &:before {
+        bottom: 99.5%;
+        left: $content-gutter * 0.75;
+    }
+
+    &.c-dropdown__menu--right:before {
+        left: initial;
+        right: $content-gutter * 0.75;
+    }
+
+    &.c-dropdown__menu--up {
+        margin-top: initial;
+        margin-bottom: $content-gutter * 1.25;
+    }
+
+    &.c-dropdown__menu--up:before {
+        bottom: initial;
+        top: 99.5%;
+        transform: rotate(180deg);
+    }
+}
+
+.o-dropdown-links {
+    a {
+        color: $black;
+        padding: $content-gutter/4 $content-gutter;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+._nav-dropdown {
+    .o-dropdown-links {
+        a {
+            color: $black !important;
+            padding: $content-gutter/4 $content-gutter !important;
+        }
+    }
+}
+
+
