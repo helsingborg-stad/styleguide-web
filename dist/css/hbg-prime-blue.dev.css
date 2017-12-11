@@ -14895,14 +14895,19 @@ option {
     top: 99.5%;
     transform: rotate(180deg); }
 
-/* line 289, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+/* line 288, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+.js-dropdown.is-open .c-dropdown__menu--zoom-in {
+  animation-name: c-dropdown-zoom;
+  animation-duration: 200ms; }
+
+/* line 294, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
 .o-dropdown-links a {
   color: #000;
   padding: 3.75px 15px;
   display: inline-block;
   width: 100%; }
 
-/* line 299, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
+/* line 304, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/component/dropdown/_dropdown.scss */
 ._nav-dropdown .o-dropdown-links a {
   color: #000 !important;
   padding: 3.75px 15px !important; }

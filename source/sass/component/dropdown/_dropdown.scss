@@ -285,6 +285,11 @@
     }
 }
 
+.js-dropdown.is-open .c-dropdown__menu--zoom-in {
+    animation-name: c-dropdown-zoom;
+    animation-duration: 200ms;
+}
+
 .o-dropdown-links {
     a {
         color: $black;
