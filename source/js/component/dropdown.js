@@ -15,7 +15,7 @@ HelsingborgPrime.Component.Dropdown = (function ($) {
     Dropdown.prototype.jsDropDown = function () {
         $(document).on('click', $('.js-dropdown__toggle'), function(e) {
             $(e.target).closest('.js-dropdown').toggleClass('is-open');
-        }.bind(this));
+        });
     };
 
     Dropdown.prototype.handleEvents = function () {
