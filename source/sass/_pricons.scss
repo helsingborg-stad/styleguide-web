@@ -164,6 +164,8 @@
 // <i class="pricon pricon-pause"></i> pricon-pause<br>
 // <i class="pricon pricon-camera"></i> pricon-camera<br>
 // <i class="pricon pricon-enter"></i> pricon-enter<br>
+// <i class="pricon pricon-filter"></i> pricon-filter<br>
+// <i class="pricon pricon-pen"></i> pricon-pen<br>
 // 
 //
 @font-face {
@@ -551,6 +553,8 @@ $pricon-play: "\EB30";
 $pricon-pause: "\EC30";
 $pricon-camera: "\EC32";
 $pricon-enter: "\EC39";
+$pricon-filter: "\EC40";
+$pricon-pen: "\EC41";
 
 
 /* Glyphs */
@@ -702,6 +706,8 @@ $pricon-enter: "\EC39";
 .pricon-pause:before { content: $pricon-pause }
 .pricon-camera:before { content: $pricon-camera }
 .pricon-enter:before { content: $pricon-enter }
+.pricon-filter:before { content: $pricon-filter }
+.pricon-pen:before { content: $pricon-pen }
 
 
 /* Mixin */
