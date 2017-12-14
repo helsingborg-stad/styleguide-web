@@ -4,7 +4,8 @@ $(function(jQuery) {
     var $window         = $(window),
     win_height_padded   = $window.height() * 1.1,
     targetWrapper       = '.animate',
-    target;
+    target,
+    animationOffset     = 0.3;
 
     //Scroll event
     $window.on('scroll', revealOnScroll);
@@ -19,7 +20,7 @@ $(function(jQuery) {
 
           var animationTarget = $(this).offset().top;
 
-          if (scrolled >= animationTarget - win_height_padded + (win_height_padded * 0.3)) {
+          if (scrolled >= animationTarget - win_height_padded + (win_height_padded * animationOffset)) {
             //console.log(this);
             $(this).addClass('animated');
           }
