@@ -61,3 +61,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
