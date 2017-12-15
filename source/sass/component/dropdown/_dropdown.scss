@@ -230,7 +230,9 @@
 }
 
 .js-dropdown.is-open .c-dropdown__menu,
-.js-dropdown__menu.is-open {
+.js-dropdown__menu.is-open,
+.no-js .c-dropdown .c-dropdown__toggle:focus + .c-dropdown__menu,
+.no-js .c-dropdown .c-dropdown__toggle:active + .c-dropdown__menu  {
     display: block;
 }
 
