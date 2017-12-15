@@ -4866,6 +4866,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 65, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/layout/_reset.scss */
+img {
+  image-rendering: -webkit-optimize-contrast; }
+
 /* line 4, /Users/Nikolas/Documents/Vagrant/www-hbg/hbgprime.dev/public/source/sass/layout/_scaffolding.scss */
 *,
 *:after,
