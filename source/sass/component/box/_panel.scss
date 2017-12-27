@@ -127,7 +127,7 @@
             padding: $content-gutter/1.5 $content-gutter;
         }
 
-        li + li {
+        li + li:not(.timeline-event) {
             border-top: 1px solid $creamy-darker;
         }
 
