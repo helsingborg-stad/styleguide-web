@@ -10,18 +10,18 @@
 // @markup
 // <div class="grid">
 // 	<div class="grid-md-12">
-//      <div class="timeline-box">
+//      <div class="box-content">
 // 		<ul class="timeline">
-// 			<li class="timeline-event">
-// 				<div class="timeline-date hidden-xs hidden-sm">
+// 			<li class="timeline__event">
+// 				<div class="timeline__date hidden-xs hidden-sm">
 // 					<span>24 Dec 2010</span>
 // 				</div>
-// 				<div class="timeline-marker">
-// 					<div class="timeline-date hidden-md hidden-lg">
+// 				<div class="timeline__marker">
+// 					<div class="timeline__date hidden-md hidden-lg">
 // 						<span>24 Dec</span><span>2010</span>
 // 					</div>
 // 				</div>
-// 				<div class="timeline-content timeline-side">
+// 				<div class="timeline__content timeline-side">
 // 					<div class="grid">
 // 						<div class="grid-md-5 grid-lg-4">
 // 							<i class="pricon pricon-5x pricon-twitter-square"></i>
@@ -33,16 +33,16 @@
 // 					</div>
 // 				</div>
 // 			</li>
-// 			<li class="timeline-event">
-// 				<div class="timeline-date hidden-xs hidden-sm">
+// 			<li class="timeline__event">
+// 				<div class="timeline__date hidden-xs hidden-sm">
 // 					<span>5 Jan 2011</span>
 // 				</div>
-// 				<div class="timeline-marker">
+// 				<div class="timeline__marker">
 // 					<div class="timeline-date hidden-md hidden-lg">
 // 						<span>5 Jan</span><span>2011</span>
 // 					</div>
 // 				</div>
-// 				<div class="timeline-content timeline-side">
+// 				<div class="timeline__content timeline-side">
 // 					<div class="grid">
 // 						<div class="grid-md-5 grid-lg-4">
 // 							<i class="pricon pricon-5x pricon-facebook-square"></i>
@@ -54,11 +54,11 @@
 // 					</div>
 // 				</div>
 // 			</li>
-// 			<li class="timeline-event">
+// 			<li class="timeline__event">
 // 				<div class="timeline-date hidden-xs hidden-sm">
 // 					<span>9 Jul 2015</span>
 // 				</div>
-// 				<div class="timeline-marker">
+// 				<div class="timeline__marker">
 // 					<div class="timeline-date hidden-md hidden-lg">
 // 						<span>9 Jul</span><span>2015</span>
 // 					</div>
@@ -75,16 +75,16 @@
 // 					</div>
 // 				</div>
 // 			</li>
-// 			<li class="timeline-event">
-// 				<div class="timeline-date hidden-xs hidden-sm">
+// 			<li class="timeline__event">
+// 				<div class="timeline__date hidden-xs hidden-sm">
 // 					<span>25 Aug 2017</span>
 // 				</div>
-// 				<div class="timeline-marker">
-// 					<div class="timeline-date hidden-md hidden-lg">
+// 				<div class="timeline__marker">
+// 					<div class="timeline__date hidden-md hidden-lg">
 // 						<span>25 Aug</span><span>2017</span>
 // 					</div>
 // 				</div>
-// 				<div class="timeline-content">
+// 				<div class="timeline__content">
 // 					<div class="grid">
 // 						<div class="grid-md-12">
 // 							<h3>Cheesecake chocolate cake</h3>
@@ -105,12 +105,6 @@
     padding: 0;
     list-style: none;
 
-    img {
-        padding: 0 0 0.5em 0;
-        width: 100%;
-        height: auto;
-    }
-
     &:before {
         content: "";
         position: absolute;
@@ -121,7 +115,17 @@
         padding-bottom: 10px;
     }
 
-    .timeline-event {
+    a:hover {
+        text-decoration: none;
+    }
+
+    img {
+        padding: 0 0 0.5em 0;
+        width: 100%;
+        height: auto;
+    }
+
+    &__event {
         position: relative;
 
         &:not(:last-child) {
@@ -135,7 +139,7 @@
         }
     }
 
-    .timeline-marker {
+    &__marker {
         background: $gray;
         position: absolute;
         top: 0.7em;
@@ -145,7 +149,7 @@
         border-radius: 3px;
     }
 
-    .timeline-date {
+    &__date {
         text-align: center;
         position: relative;
         color: #fff;
@@ -156,12 +160,12 @@
         }
     }
 
-    .timeline-title {
+    &__title {
         font-size: 1.1em;
         color: #fff;
     }
 
-    .timeline-content {
+    &__content {
         font-size: 0.8em;
         position: relative;
         margin-left: 4.8em;
@@ -181,164 +185,169 @@
     }
 }
 
-.box-panel > .box-content > .timeline {
-    $background-colors: $palette-1, $palette-2, $palette-3, $palette-4;
-    .timeline-content .timeline-date {
-        display: none;
-    }
+.timeline {
+    .box-panel .box-content & {
+        $background-colors: $palette-1, $palette-2, $palette-3, $palette-4;
 
-    @media screen and #{$screen-md-up} {
-        &:before {
-            left: 50%;
-            transform: translateX(-50%);
+        &__content__date {
+            display: none;
         }
 
-        .timeline-marker {
-            top: calc(50% - 1em);
-            width: 1.5em;
-            height: 1.5em;
-            padding: 0;
-            border: 6px solid #fff;
-            border-radius: 50%;
-            left: 50%;
-        }
-
-        .timeline-date {
-            font-size: 1em;
-            text-align: left;
-            color: $gray;
-            top: calc(50% - 1em);
-            width: calc(50% - 2em);
-            position: absolute;
-            right: 0;
-
-            span {
-                display: inline;
-            }
-        }
-
-        .timeline-content {
-            font-size: 0.9em;
-            margin-left: 0;
-            width: calc(50% - 3em);
-
+        @media screen and #{$screen-md-up} {
             &:before {
-                top: calc(50% - 1em);
+                left: 50%;
+                transform: translateX(-50%);
             }
-        }
 
-        .timeline-title {
-            font-size: 1.3em;
-        }
-    }
+            &__marker {
+                top: calc(50% - 1em);
+                width: 1.5em;
+                height: 1.5em;
+                padding: 0;
+                border: 6px solid #fff;
+                border-radius: 50%;
+                left: 50%;
+            }
 
-    @for $i from 1 through length($background-colors) {
-        :nth-child(#{length($background-colors)}n+#{$i}) {
-            .timeline-content {
-                background: nth($background-colors, $i);
+            &__date {
+                font-size: 1em;
+                text-align: left;
+                color: $gray;
+                top: calc(50% - 1em);
+                width: calc(50% - 2em);
+                position: absolute;
+                right: 0;
+
+                span {
+                    display: inline;
+                }
+            }
+
+            &__content {
+                font-size: 0.9em;
+                margin-left: 0;
+                width: calc(50% - 3em);
 
                 &:before {
-                    border-right: 0.75em solid nth($background-colors, $i);
+                    top: calc(50% - 1em);
+                }
+            }
 
-                    @media screen and #{$screen-md-up} {
-                        left: auto;
-                        right: -0.7em;
-                        border-right: none;
-                        border-left: 0.75em solid nth($background-colors, $i);
+            &__title {
+                font-size: 1.3em;
+            }
+        }
 
-                        @if $i % 2 == 0 {
-                            border-right: 0.75em solid nth($background-colors, $i);
+        @for $i from 1 through length($background-colors) {
+            :nth-child(#{length($background-colors)}n+#{$i}) {
+                .timeline__content {
+                    background: nth($background-colors, $i);
+
+                    &:before {
+                        border-right: 0.75em solid nth($background-colors, $i);
+
+                        @media screen and #{$screen-md-up} {
+                            left: auto;
+                            right: -0.7em;
+                            border-right: none;
+                            border-left: 0.75em solid nth($background-colors, $i);
+
+                            @if $i % 2 == 0 {
+                                border-right: 0.75em solid nth($background-colors, $i);
+                            }
                         }
                     }
                 }
             }
         }
-    }
 
-    :nth-child(even) {
-        .timeline-content {
-            @media screen and #{$screen-md-up} {
-                float: right;
+        :nth-child(even) {
+            .timeline__content {
+                @media screen and #{$screen-md-up} {
+                    float: right;
 
-                &:before {
-                    left: -0.7em;
-                    right: auto;
-                    border-left: none;
+                    &:before {
+                        left: -0.7em;
+                        right: auto;
+                        border-left: none;
+                    }
+                }
+            }
+
+            .timeline__date {
+                @media screen and #{$screen-md-up} {
+                    text-align: right;
+                    left: 0;
                 }
             }
         }
 
-        .timeline-date {
+        :nth-child(odd) .timeline__side {
             @media screen and #{$screen-md-up} {
-                text-align: right;
-                left: 0;
-            }
-        }
-    }
+                & > .grid {
+                    flex-wrap: nowrap;
 
-    :nth-child(odd) .timeline-side {
-        @media screen and #{$screen-md-up} {
-            & > .grid {
-                flex-wrap: nowrap;
-
-                & > div[class*="grid"]:first-child {
-                    order: 1;
+                    & > div[class*="grid"]:first-child {
+                        order: 1;
+                    }
                 }
             }
         }
     }
 }
 
-.box-filled > .box-content > .timeline {
-    &:before {
-        background: #fff;
-        left: 0.6em;
-    }
-
-    .timeline-event > .timeline-date, .timeline-event > .timeline-marker > .timeline-date {
-        display: none;
-    }
-
-    .timeline-side > .grid {
-        flex-wrap: nowrap;
-
-        & > div[class*="grid"]:first-child {
-            order: 1;
-        }
-    }
-
-    .timeline-content {
-        margin-left: 3em;
-        background: #fff;
-        color: $gray-dark;
-
+.timeline {
+    .box-filled .box-content & {
         &:before {
-            border-right: 0.75em solid #fff;
+            background: #fff;
+            left: 0.6em;
         }
 
-        .timeline-date {
-            font-size: 0.8em;
-            color: $palette-1;
-            text-align: left;
+        &__date, &__marker &__date {
+            display: none;
+        }
 
-            span {
-                display: inline;
+        &__side > .grid {
+            flex-wrap: nowrap;
+
+            & > div[class*="grid"]:first-child {
+                order: 1;
             }
         }
-    }
 
-    .timeline-title {
-        color: $gray-dark;
-    }
+        &__content {
+            margin-left: 3em;
+            background: #fff;
+            color: $gray-dark;
 
-    .timeline-marker {
-        left: 0.6em;
-        width: 1.1em;
-        height: 1.1em;
-        padding: 0;
-        border-radius: 50%;
+            &:before {
+                border-right: 0.75em solid #fff;
+            }
 
-        background: #fff;
-        border: 4px solid lighten($palette-3, 10%);
+            &__date {
+                font-size: 0.8em;
+                color: $palette-1;
+                text-align: left;
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        &__title {
+            color: $gray-dark;
+        }
+
+        &__marker {
+            left: 0.6em;
+            width: 1.1em;
+            height: 1.1em;
+            padding: 0;
+            border-radius: 50%;
+
+            background: #fff;
+            border: 4px solid lighten($palette-3, 10%);
+        }
     }
 }
