@@ -17194,11 +17194,6 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
   padding: 0;
   list-style: none; }
   /* line 108, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline img {
-    padding: 0 0 0.5em 0;
-    width: 100%;
-    height: auto; }
-  /* line 114, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
   .timeline:before {
     content: "";
     position: absolute;
@@ -17207,19 +17202,27 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
     height: 100%;
     background: #979797;
     padding-bottom: 10px; }
-  /* line 124, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline .timeline-event {
+  /* line 118, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline a:hover {
+    text-decoration: none; }
+  /* line 122, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline img {
+    padding: 0 0 0.5em 0;
+    width: 100%;
+    height: auto; }
+  /* line 128, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline__event {
     position: relative; }
-    /* line 127, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .timeline .timeline-event:not(:last-child) {
-      margin-bottom: 1em; }
     /* line 131, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .timeline .timeline-event:after {
+    .timeline__event:not(:last-child) {
+      margin-bottom: 1em; }
+    /* line 135, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .timeline__event:after {
       content: "";
       display: table;
       clear: both; }
-  /* line 138, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline .timeline-marker {
+  /* line 142, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline__marker {
     background: #979797;
     position: absolute;
     top: 0.7em;
@@ -17227,29 +17230,29 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
     padding: .25em .4em;
     transform: translateX(-50%);
     border-radius: 3px; }
-  /* line 148, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline .timeline-date {
+  /* line 152, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline__date {
     text-align: center;
     position: relative;
     color: #fff;
     font-size: 0.7em; }
-    /* line 154, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .timeline .timeline-date span {
+    /* line 158, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .timeline__date span {
       display: block; }
-  /* line 159, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline .timeline-title {
+  /* line 163, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline__title {
     font-size: 1.1em;
     color: #fff; }
-  /* line 164, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .timeline .timeline-content {
+  /* line 168, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .timeline__content {
     font-size: 0.8em;
     position: relative;
     margin-left: 4.8em;
     padding: 1em;
     color: #fff;
     border-radius: 3px; }
-    /* line 172, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .timeline .timeline-content:before {
+    /* line 176, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .timeline__content:before {
       content: "";
       position: absolute;
       display: block;
@@ -17258,17 +17261,17 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
       border-top: 0.75em solid transparent;
       border-bottom: 0.75em solid transparent; }
 
-/* line 186, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-panel > .box-content > .timeline .timeline-content .timeline-date {
+/* line 192, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-panel .box-content .timeline__content__date {
   display: none; }
 
 @media screen and (min-width: 769px) {
-  /* line 191, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline:before {
+  /* line 197, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline:before {
     left: 50%;
     transform: translateX(-50%); }
-  /* line 196, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline .timeline-marker {
+  /* line 202, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline__marker {
     top: calc(50% - 1em);
     width: 1.5em;
     height: 1.5em;
@@ -17276,8 +17279,8 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
     border: 6px solid #fff;
     border-radius: 50%;
     left: 50%; }
-  /* line 206, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline .timeline-date {
+  /* line 212, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline__date {
     font-size: 1em;
     text-align: left;
     color: #979797;
@@ -17285,73 +17288,73 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
     width: calc(50% - 2em);
     position: absolute;
     right: 0; }
-    /* line 215, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .box-panel > .box-content > .timeline .timeline-date span {
+    /* line 221, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .box-panel .box-content .timeline__date span {
       display: inline; }
-  /* line 220, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline .timeline-content {
+  /* line 226, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline__content {
     font-size: 0.9em;
     margin-left: 0;
     width: calc(50% - 3em); }
-    /* line 225, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .box-panel > .box-content > .timeline .timeline-content:before {
+    /* line 231, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .box-panel .box-content .timeline__content:before {
       top: calc(50% - 1em); }
-  /* line 230, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline .timeline-title {
+  /* line 236, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline__title {
     font-size: 1.3em; } }
 
-/* line 237, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-panel > .box-content > .timeline :nth-child(4n+1) .timeline-content {
+/* line 243, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-panel .box-content .timeline :nth-child(4n+1) .timeline__content {
   background: #FFDD00; }
-  /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(4n+1) .timeline-content:before {
+  /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(4n+1) .timeline__content:before {
     border-right: 0.75em solid #FFDD00; }
     @media screen and (min-width: 769px) {
-      /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-      .box-panel > .box-content > .timeline :nth-child(4n+1) .timeline-content:before {
+      /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+      .box-panel .box-content .timeline :nth-child(4n+1) .timeline__content:before {
         left: auto;
         right: -0.7em;
         border-right: none;
         border-left: 0.75em solid #FFDD00; } }
 
-/* line 237, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-panel > .box-content > .timeline :nth-child(4n+2) .timeline-content {
+/* line 243, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-panel .box-content .timeline :nth-child(4n+2) .timeline__content {
   background: #F36E21; }
-  /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(4n+2) .timeline-content:before {
+  /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(4n+2) .timeline__content:before {
     border-right: 0.75em solid #F36E21; }
     @media screen and (min-width: 769px) {
-      /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-      .box-panel > .box-content > .timeline :nth-child(4n+2) .timeline-content:before {
+      /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+      .box-panel .box-content .timeline :nth-child(4n+2) .timeline__content:before {
         left: auto;
         right: -0.7em;
         border-right: none;
         border-left: 0.75em solid #F36E21;
         border-right: 0.75em solid #F36E21; } }
 
-/* line 237, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-panel > .box-content > .timeline :nth-child(4n+3) .timeline-content {
+/* line 243, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-panel .box-content .timeline :nth-child(4n+3) .timeline__content {
   background: #E2007A; }
-  /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(4n+3) .timeline-content:before {
+  /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(4n+3) .timeline__content:before {
     border-right: 0.75em solid #E2007A; }
     @media screen and (min-width: 769px) {
-      /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-      .box-panel > .box-content > .timeline :nth-child(4n+3) .timeline-content:before {
+      /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+      .box-panel .box-content .timeline :nth-child(4n+3) .timeline__content:before {
         left: auto;
         right: -0.7em;
         border-right: none;
         border-left: 0.75em solid #E2007A; } }
 
-/* line 237, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-panel > .box-content > .timeline :nth-child(4n+4) .timeline-content {
+/* line 243, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-panel .box-content .timeline :nth-child(4n+4) .timeline__content {
   background: #009AA6; }
-  /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(4n+4) .timeline-content:before {
+  /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(4n+4) .timeline__content:before {
     border-right: 0.75em solid #009AA6; }
     @media screen and (min-width: 769px) {
-      /* line 240, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-      .box-panel > .box-content > .timeline :nth-child(4n+4) .timeline-content:before {
+      /* line 246, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+      .box-panel .box-content .timeline :nth-child(4n+4) .timeline__content:before {
         left: auto;
         right: -0.7em;
         border-right: none;
@@ -17359,68 +17362,68 @@ html[data-useragent*="Windows"][data-useragent*="rv:11"] .section.section-full {
         border-right: 0.75em solid #009AA6; } }
 
 @media screen and (min-width: 769px) {
-  /* line 259, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(even) .timeline-content {
+  /* line 265, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(even) .timeline__content {
     float: right; }
-    /* line 263, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .box-panel > .box-content > .timeline :nth-child(even) .timeline-content:before {
+    /* line 269, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .box-panel .box-content .timeline :nth-child(even) .timeline__content:before {
       left: -0.7em;
       right: auto;
       border-left: none; } }
 
 @media screen and (min-width: 769px) {
-  /* line 271, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(even) .timeline-date {
+  /* line 277, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(even) .timeline__date {
     text-align: right;
     left: 0; } }
 
 @media screen and (min-width: 769px) {
-  /* line 281, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-panel > .box-content > .timeline :nth-child(odd) .timeline-side > .grid {
+  /* line 287, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-panel .box-content .timeline :nth-child(odd) .timeline__side > .grid {
     flex-wrap: nowrap; }
-    /* line 284, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .box-panel > .box-content > .timeline :nth-child(odd) .timeline-side > .grid > div[class*="grid"]:first-child {
+    /* line 290, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .box-panel .box-content .timeline :nth-child(odd) .timeline__side > .grid > div[class*="grid"]:first-child {
       order: 1; } }
 
-/* line 293, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline:before {
+/* line 301, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline:before {
   background: #fff;
   left: 0.6em; }
 
-/* line 298, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline .timeline-event > .timeline-date, .box-filled > .box-content > .timeline .timeline-event > .timeline-marker > .timeline-date {
+/* line 306, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline__date, .box-filled .box-content .timeline__marker .box-filled .box-content .timeline__date {
   display: none; }
 
-/* line 302, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline .timeline-side > .grid {
+/* line 310, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline__side > .grid {
   flex-wrap: nowrap; }
-  /* line 305, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-filled > .box-content > .timeline .timeline-side > .grid > div[class*="grid"]:first-child {
+  /* line 313, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-filled .box-content .timeline__side > .grid > div[class*="grid"]:first-child {
     order: 1; }
 
-/* line 310, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline .timeline-content {
+/* line 318, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline__content {
   margin-left: 3em;
   background: #fff;
   color: #464646; }
-  /* line 315, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-filled > .box-content > .timeline .timeline-content:before {
+  /* line 323, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-filled .box-content .timeline__content:before {
     border-right: 0.75em solid #fff; }
-  /* line 319, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-  .box-filled > .box-content > .timeline .timeline-content .timeline-date {
+  /* line 327, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+  .box-filled .box-content .timeline__content__date {
     font-size: 0.8em;
     color: #FFDD00;
     text-align: left; }
-    /* line 324, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-    .box-filled > .box-content > .timeline .timeline-content .timeline-date span {
+    /* line 332, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+    .box-filled .box-content .timeline__content__date span {
       display: inline; }
 
-/* line 330, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline .timeline-title {
+/* line 338, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline__title {
   color: #464646; }
 
-/* line 334, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
-.box-filled > .box-content > .timeline .timeline-marker {
+/* line 342, /Users/tommymorberg/Sites/vagrant/public/hbgprime.dev/source/sass/component/timeline/timeline.scss */
+.box-filled .box-content .timeline__marker {
   left: 0.6em;
   width: 1.1em;
   height: 1.1em;
