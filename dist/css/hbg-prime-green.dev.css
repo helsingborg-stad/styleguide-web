@@ -9379,6 +9379,10 @@ body .tag {
 .nav-pills--badge li {
   line-height: 40px !important; }
 
+/* line 129, /Users/kp/helsingborg/vagrant/public/hbgprime.dev/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge:last-of-type {
+  margin-bottom: 15px; }
+
 /* line 1, /Users/kp/helsingborg/vagrant/public/hbgprime.dev/source/sass/component/navigation/_mobile.scss */
 .nav-toggle {
   display: none; }
