@@ -5795,11 +5795,6 @@ b {
   .grid-va-bottom [class*="grid-"] {
     vertical-align: bottom; }
 
-/* line 291, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid.scss */
-.grid .filter-content section {
-  width: 100%;
-  background-color: transparent !important; }
-
 /* line 3, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/layout/_grid-flexbox.scss */
 :not(.no-flexbox):not(.is-draggable) .grid {
   display: flex;
@@ -10305,6 +10300,10 @@ body .tag {
 /* line 124, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_pills.scss */
 .nav-pills--badge li {
   line-height: 40px !important; }
+
+/* line 129, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_pills.scss */
+.nav-pills--badge:last-of-type {
+  margin-bottom: 15px; }
 
 /* line 1, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/navigation/_mobile.scss */
 .nav-toggle {
