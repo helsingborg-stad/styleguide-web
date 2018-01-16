@@ -263,7 +263,7 @@ gulp.task('quick', function () {
 //BrowserSync
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "hbgprime.dev"
+        proxy: "sections.multi.dev"
     });
 });
 
