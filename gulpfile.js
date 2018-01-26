@@ -60,4 +60,9 @@ gulp.task('patch', function() { return inc('patch'); })
 gulp.task('minor', function() { return inc('minor'); })
 gulp.task('major', function() { return inc('major'); })
 
+
+gulp.task('bem', function (callback) {
+    return runSequence('build:bem', 'watch:bem', callback);
+});
+
 require('require-dir')('./gulp');
