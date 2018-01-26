@@ -97,6 +97,19 @@ article table,
     }
 }
 
+/* Respect border-width up to 10 px */
+@for $i from 0 through 10 {
+    article table[border="#{$i}"] {
+        thead, tbody {
+            th + th,
+            td + td,
+            tr + tr {
+                border-width: #{$i}px;
+            }
+        }
+    }
+}
+
 article table,
 .table-bordered {
     thead {
