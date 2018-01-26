@@ -14386,167 +14386,204 @@ article table,
   background-color: #f5f5f5; }
 
 /* Respect border-width up to 10 px */
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="0"] thead th + th,
-article table[border="0"] thead td + td,
-article table[border="0"] thead tr + tr, article table[border="0"] tbody th + th,
-article table[border="0"] tbody td + td,
-article table[border="0"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="0"] {
   border-width: 0px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="0"] thead th + th,
+  article table[border="0"] thead td + td,
+  article table[border="0"] thead tr + tr, article table[border="0"] tbody th + th,
+  article table[border="0"] tbody td + td,
+  article table[border="0"] tbody tr + tr {
+    border-width: 0px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="1"] thead th + th,
-article table[border="1"] thead td + td,
-article table[border="1"] thead tr + tr, article table[border="1"] tbody th + th,
-article table[border="1"] tbody td + td,
-article table[border="1"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="1"] {
   border-width: 1px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="1"] thead th + th,
+  article table[border="1"] thead td + td,
+  article table[border="1"] thead tr + tr, article table[border="1"] tbody th + th,
+  article table[border="1"] tbody td + td,
+  article table[border="1"] tbody tr + tr {
+    border-width: 1px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="2"] thead th + th,
-article table[border="2"] thead td + td,
-article table[border="2"] thead tr + tr, article table[border="2"] tbody th + th,
-article table[border="2"] tbody td + td,
-article table[border="2"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="2"] {
   border-width: 2px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="2"] thead th + th,
+  article table[border="2"] thead td + td,
+  article table[border="2"] thead tr + tr, article table[border="2"] tbody th + th,
+  article table[border="2"] tbody td + td,
+  article table[border="2"] tbody tr + tr {
+    border-width: 2px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="3"] thead th + th,
-article table[border="3"] thead td + td,
-article table[border="3"] thead tr + tr, article table[border="3"] tbody th + th,
-article table[border="3"] tbody td + td,
-article table[border="3"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="3"] {
   border-width: 3px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="3"] thead th + th,
+  article table[border="3"] thead td + td,
+  article table[border="3"] thead tr + tr, article table[border="3"] tbody th + th,
+  article table[border="3"] tbody td + td,
+  article table[border="3"] tbody tr + tr {
+    border-width: 3px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="4"] thead th + th,
-article table[border="4"] thead td + td,
-article table[border="4"] thead tr + tr, article table[border="4"] tbody th + th,
-article table[border="4"] tbody td + td,
-article table[border="4"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="4"] {
   border-width: 4px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="4"] thead th + th,
+  article table[border="4"] thead td + td,
+  article table[border="4"] thead tr + tr, article table[border="4"] tbody th + th,
+  article table[border="4"] tbody td + td,
+  article table[border="4"] tbody tr + tr {
+    border-width: 4px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="5"] thead th + th,
-article table[border="5"] thead td + td,
-article table[border="5"] thead tr + tr, article table[border="5"] tbody th + th,
-article table[border="5"] tbody td + td,
-article table[border="5"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="5"] {
   border-width: 5px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="5"] thead th + th,
+  article table[border="5"] thead td + td,
+  article table[border="5"] thead tr + tr, article table[border="5"] tbody th + th,
+  article table[border="5"] tbody td + td,
+  article table[border="5"] tbody tr + tr {
+    border-width: 5px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="6"] thead th + th,
-article table[border="6"] thead td + td,
-article table[border="6"] thead tr + tr, article table[border="6"] tbody th + th,
-article table[border="6"] tbody td + td,
-article table[border="6"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="6"] {
   border-width: 6px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="6"] thead th + th,
+  article table[border="6"] thead td + td,
+  article table[border="6"] thead tr + tr, article table[border="6"] tbody th + th,
+  article table[border="6"] tbody td + td,
+  article table[border="6"] tbody tr + tr {
+    border-width: 6px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="7"] thead th + th,
-article table[border="7"] thead td + td,
-article table[border="7"] thead tr + tr, article table[border="7"] tbody th + th,
-article table[border="7"] tbody td + td,
-article table[border="7"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="7"] {
   border-width: 7px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="7"] thead th + th,
+  article table[border="7"] thead td + td,
+  article table[border="7"] thead tr + tr, article table[border="7"] tbody th + th,
+  article table[border="7"] tbody td + td,
+  article table[border="7"] tbody tr + tr {
+    border-width: 7px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="8"] thead th + th,
-article table[border="8"] thead td + td,
-article table[border="8"] thead tr + tr, article table[border="8"] tbody th + th,
-article table[border="8"] tbody td + td,
-article table[border="8"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="8"] {
   border-width: 8px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="8"] thead th + th,
+  article table[border="8"] thead td + td,
+  article table[border="8"] thead tr + tr, article table[border="8"] tbody th + th,
+  article table[border="8"] tbody td + td,
+  article table[border="8"] tbody tr + tr {
+    border-width: 8px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="9"] thead th + th,
-article table[border="9"] thead td + td,
-article table[border="9"] thead tr + tr, article table[border="9"] tbody th + th,
-article table[border="9"] tbody td + td,
-article table[border="9"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="9"] {
   border-width: 9px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="9"] thead th + th,
+  article table[border="9"] thead td + td,
+  article table[border="9"] thead tr + tr, article table[border="9"] tbody th + th,
+  article table[border="9"] tbody td + td,
+  article table[border="9"] tbody tr + tr {
+    border-width: 9px; }
 
-/* line 104, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="10"] thead th + th,
-article table[border="10"] thead td + td,
-article table[border="10"] thead tr + tr, article table[border="10"] tbody th + th,
-article table[border="10"] tbody td + td,
-article table[border="10"] tbody tr + tr {
+/* line 102, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="10"] {
   border-width: 10px; }
+  /* line 105, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  article table[border="10"] thead th + th,
+  article table[border="10"] thead td + td,
+  article table[border="10"] thead tr + tr, article table[border="10"] tbody th + th,
+  article table[border="10"] tbody td + td,
+  article table[border="10"] tbody tr + tr {
+    border-width: 10px; }
 
-/* line 116, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+article table[border="0"] {
+  box-shadow: none; }
+
+/* line 121, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table thead th + th,
 article table thead td + td,
 .table-bordered thead th + th,
 .table-bordered thead td + td {
   border-left: 1px solid #e5e5e5; }
 
-/* line 123, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 128, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table tbody tr + tr,
 .table-bordered tbody tr + tr {
   border-top: 1px solid #e5e5e5; }
 
-/* line 127, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table tbody td + td,
 .table-bordered tbody td + td {
   border-left: 1px solid #e5e5e5; }
 
-/* line 135, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table-hover tbody tr:hover {
   background-color: #e8f7d7; }
 
-/* line 142, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 147, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table-hover.table-striped tbody tr:nth-child(even):hover {
   background-color: #e3f5cf; }
 
-/* line 150, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table.table-va-top th, .table.table-va-top td {
   vertical-align: top; }
 
-/* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 table.table-sm {
   font-size: .8em; }
-  /* line 158, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 163, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   table.table-sm th, table.table-sm td {
     padding: 7.5px 10px; }
 
-/* line 163, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 table.table-lg {
   font-size: 1.1em; }
-  /* line 166, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 171, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   table.table-lg th, table.table-lg td {
     padding: 10px 15px; }
 
-/* line 171, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .box-filled .table,
 .box-filled .modularity-table {
   margin-top: 10px;
   font-size: .8em;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.3); }
-  /* line 178, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 183, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table *,
   .box-filled .modularity-table * {
     border-color: rgba(255, 255, 255, 0.3); }
-  /* line 182, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 187, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table tbody,
   .box-filled .table tfoot,
   .box-filled .modularity-table tbody,
   .box-filled .modularity-table tfoot {
     background-color: transparent; }
-  /* line 187, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 192, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table thead,
   .box-filled .modularity-table thead {
     background-color: rgba(255, 255, 255, 0.2); }
-  /* line 191, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 196, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-striped tbody tr:nth-child(2n),
   .box-filled .modularity-table.table-striped tbody tr:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.2); }
-  /* line 197, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-hover tbody tr:hover,
   .box-filled .modularity-table.table-hover tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.3); }
-  /* line 204, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 209, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-hover.table-striped tbody tr:nth-child(even):hover,
   .box-filled .modularity-table.table-hover.table-striped tbody tr:nth-child(even):hover {
     background-color: rgba(255, 255, 255, 0.3); }
