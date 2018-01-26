@@ -1,3 +1,15 @@
+// ==========================================================================
+//
+// TASKS:
+//
+// "gulp"                       -   Build and watch combined
+// "gulp watch"                 -   Watch for file changes and compile changed files
+// "gulp build"                 -   Build assets
+// "gulp icons"                 -   Build icons
+// "gulp patch/minor/major"     -   Bump package version
+//
+// ==========================================================================
+
 var gulp = require('gulp');
 
 var runSequence = require('run-sequence');
