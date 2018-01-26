@@ -111,7 +111,7 @@ article table,
     }
 }
 
-article table[border="0"] {
+body:not(.material-no-shadow) article table[border="0"] {
     box-shadow: none;
 }
 

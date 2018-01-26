@@ -14508,82 +14508,82 @@ article table[border="10"] {
     border-width: 10px; }
 
 /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="0"] {
+body:not(.material-no-shadow) article table[border="0"] {
   box-shadow: none; }
 
-/* line 122, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 121, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table thead th + th,
 article table thead td + td,
 .table-bordered thead th + th,
 .table-bordered thead td + td {
   border-left: 1px solid #e5e5e5; }
 
-/* line 129, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 128, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table tbody tr + tr,
 .table-bordered tbody tr + tr {
   border-top: 1px solid #e5e5e5; }
 
-/* line 133, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 132, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 article table tbody td + td,
 .table-bordered tbody td + td {
   border-left: 1px solid #e5e5e5; }
 
-/* line 141, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 140, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table-hover tbody tr:hover {
   background-color: #d9fcff; }
 
-/* line 148, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 147, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table-hover.table-striped tbody tr:nth-child(even):hover {
   background-color: #cffcff; }
 
-/* line 156, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 155, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .table.table-va-top th, .table.table-va-top td {
   vertical-align: top; }
 
-/* line 161, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 160, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 table.table-sm {
   font-size: .8em; }
-  /* line 164, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 163, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   table.table-sm th, table.table-sm td {
     padding: 7.5px 10px; }
 
-/* line 169, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 168, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 table.table-lg {
   font-size: 1.1em; }
-  /* line 172, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 171, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   table.table-lg th, table.table-lg td {
     padding: 10px 15px; }
 
-/* line 177, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+/* line 176, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
 .box-filled .table,
 .box-filled .modularity-table {
   margin-top: 10px;
   font-size: .8em;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.3); }
-  /* line 184, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 183, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table *,
   .box-filled .modularity-table * {
     border-color: rgba(255, 255, 255, 0.3); }
-  /* line 188, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 187, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table tbody,
   .box-filled .table tfoot,
   .box-filled .modularity-table tbody,
   .box-filled .modularity-table tfoot {
     background-color: transparent; }
-  /* line 193, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 192, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table thead,
   .box-filled .modularity-table thead {
     background-color: rgba(255, 255, 255, 0.2); }
-  /* line 197, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 196, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-striped tbody tr:nth-child(2n),
   .box-filled .modularity-table.table-striped tbody tr:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.2); }
-  /* line 203, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 202, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-hover tbody tr:hover,
   .box-filled .modularity-table.table-hover tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.3); }
-  /* line 210, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
+  /* line 209, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
   .box-filled .table.table-hover.table-striped tbody tr:nth-child(even):hover,
   .box-filled .modularity-table.table-hover.table-striped tbody tr:nth-child(even):hover {
     background-color: rgba(255, 255, 255, 0.3); }

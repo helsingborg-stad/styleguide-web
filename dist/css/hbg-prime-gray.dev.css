@@ -14508,7 +14508,7 @@ article table[border="10"] {
     border-width: 10px; }
 
 /* line 114, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
-article table[border="0"] {
+body:not(.material-no-shadow) article table[border="0"] {
   box-shadow: none; }
 
 /* line 121, /Volumes/Lagring/vagrant/public/hbgprime.dev/source/sass/component/table/_table.scss */
