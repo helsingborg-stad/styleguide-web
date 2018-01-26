@@ -100,6 +100,7 @@ article table,
 /* Respect border-width up to 10 px */
 @for $i from 0 through 10 {
     article table[border="#{$i}"] {
+        border-width: #{$i}px;
         thead, tbody {
             th + th,
             td + td,
@@ -108,6 +109,10 @@ article table,
             }
         }
     }
+}
+
+article table[border="0"] {
+    box-shadow: none;
 }
 
 article table,
