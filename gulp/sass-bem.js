@@ -51,7 +51,7 @@ gulp.task('sass-dev:bem', function() {
 });
 
 gulp.task('inject:bem', function(callback) {
-    return runSequence(['inject:tools', 'inject:generic', 'inject:elements', 'inject:objects', 'inject:components', 'inject:utilities'], callback);
+    return runSequence('inject:tools', 'inject:generic', 'inject:elements', 'inject:objects', 'inject:components', 'inject:utilities', callback);
 });
 
 function injectConfig(layer) {

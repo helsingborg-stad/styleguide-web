@@ -33,16 +33,11 @@
     }
 
     .c-site-header__logo {
+        //Temp fix
         h1 {padding-bottom: 0;}
 
         img, svg {
             max-width: 18rem;
         }
     }
-}
-
-.c-navbar--header {
-    .c-navbar__item {}
-    .c-navbar__sub {}
-    .c-navbar__sub_item {}
 }
