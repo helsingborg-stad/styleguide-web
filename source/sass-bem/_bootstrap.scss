@@ -48,13 +48,16 @@
 // endinject
 
 // inject:objects
+@import "./source/sass-bem/objects/_burger.scss";
 // endinject
 
 // inject:components
-@import "./source/sass-bem/components/header.scss";
+@import "./source/sass-bem/components/_header.scss";
+@import "./source/sass-bem/components/_navbar.scss";
 // endinject
 
 // inject:utilities
+@import "./source/sass-bem/utilities/_text.scss";
 // endinject
 
 
