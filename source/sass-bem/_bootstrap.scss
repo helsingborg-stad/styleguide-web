@@ -1,0 +1,65 @@
+/* ==========================================================================
+
+    Bootstrap.scss
+
+    Included layers/folders with description:
+
+    - Settings      – used with preprocessors and contain font, colors definitions, etc.
+    - Tools         – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+    - Generic       – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+    - Elements      – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+    - Objects       – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+    - Components    – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+    - Utilities     – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+
+    Inspiration: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+   ========================================================================== */
+
+/* Settings */
+@import 'settings/typography';
+@import 'settings/colors';
+@import 'settings/grid';
+@import 'settings/icons';
+@import 'settings/button';
+@import 'settings/z-index';
+@import 'settings/table';
+@import 'settings/box';
+
+// inject:tools
+@import "./source/sass-bem/tools/_arrow.scss";
+@import "./source/sass-bem/tools/_blur.scss";
+@import "./source/sass-bem/tools/_box.scss";
+@import "./source/sass-bem/tools/_breakpoint.scss";
+@import "./source/sass-bem/tools/_forms.scss";
+@import "./source/sass-bem/tools/_generator.scss";
+@import "./source/sass-bem/tools/_gradient.scss";
+@import "./source/sass-bem/tools/_grid.scss";
+@import "./source/sass-bem/tools/_material.scss";
+@import "./source/sass-bem/tools/_mixins.scss";
+@import "./source/sass-bem/tools/_positioning.scss";
+@import "./source/sass-bem/tools/_render.scss";
+// endinject
+
+// inject:generic
+// endinject
+
+// inject:elements
+// endinject
+
+// inject:objects
+@import "./source/sass-bem/objects/_burger.scss";
+// endinject
+
+// inject:components
+@import "./source/sass-bem/components/_header.scss";
+@import "./source/sass-bem/components/_navbar.scss";
+// endinject
+
+// inject:utilities
+@import "./source/sass-bem/utilities/_text.scss";
+// endinject
+
+
+
+

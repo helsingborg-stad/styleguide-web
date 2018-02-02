@@ -1,0 +1,19 @@
+.c-navbar {
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+
+    .c-navbar__item {}
+    .c-navbar__item:not(:last-child) {
+        margin-right: $content-gutter;
+    }
+    .c-navbar__sub {
+        display: none;
+    }
+
+    .c-navbar__item.is-open .c-navbar__sub {
+        display: block;
+    }
+
+    .c-navbar__sub_item {}
+}
