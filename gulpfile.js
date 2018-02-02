@@ -50,7 +50,7 @@ gulp.task('instructions', function() {
 function inc(importance) {
     return gulp.src(['./package.json'])
         .pipe(bump({type: importance}))
-        .pipe(gulp.dest('../'))
+        .pipe(gulp.dest('./'))
         .pipe(git.commit('Bumps package version'))
         .pipe(filter('package.json'))
         .pipe(tag_version());
