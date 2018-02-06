@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var copy = require('gulp-copy');
+var sourcemaps = require('gulp-sourcemaps');
 
 var node_modules = 'node_modules/';
 
@@ -20,7 +21,9 @@ gulp.task('scripts', function() {
                 node_modules + 'flickity/dist/flickity.pkgd.min.js',
                 'source/js/**/*.js'
             ])
+            .pipe(sourcemaps.init())
             .pipe(concat('hbg-prime.dev.js'))
+            .pipe(sourcemaps.write())
             .pipe(gulp.dest('dist/js'))
             .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
