@@ -168,6 +168,7 @@
 // <i class="pricon pricon-filter"></i> pricon-filter<br>
 // <i class="pricon pricon-pen"></i> pricon-pen<br>
 // <i class="pricon pricon-unchecked"></i> pricon-unchecked<br>
+// <i class="pricon pricon-bell"></i> pricon-bell<br>
 // 
 //
 @font-face {
@@ -559,6 +560,7 @@ $pricon-enter: "\EC39";
 $pricon-filter: "\EC40";
 $pricon-pen: "\EC41";
 $pricon-unchecked: "\EC50";
+$pricon-bell: "\EC70";
 
 
 /* Glyphs */
@@ -714,6 +716,7 @@ $pricon-unchecked: "\EC50";
 .pricon-filter:before { content: $pricon-filter }
 .pricon-pen:before { content: $pricon-pen }
 .pricon-unchecked:before { content: $pricon-unchecked }
+.pricon-bell:before { content: $pricon-bell }
 
 
 /* Mixin */
