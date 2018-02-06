@@ -56,12 +56,14 @@ HelsingborgPrime.Component.GalleryPopup = (function ($) {
 			}
 
             $(this).addClass('gallery-active');
+            $(this).trigger('openLightBox');
 		});
 
 		$(document).on('click', '#lightbox', function () {
-			$(this).fadeOut(300).hide(0);
+			$(this).fadeOut(300).hide(0)
             $('.gallery-active').removeClass('gallery-active');
 			window.location.hash = 'lightbox-closed';
+            $(this).trigger('closeLightBox');
 		});
 
     };
