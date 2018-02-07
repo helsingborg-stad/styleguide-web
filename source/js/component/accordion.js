@@ -12,32 +12,22 @@ HelsingborgPrime.Component.Accordion = (function ($) {
     }
 
     Accordion.prototype.init = function () {
-        
+
         var click = false;
 
-        $(document).on('focus', '.accordion-toggle', function(e) { 
-                        
-            if(!click)
-            {
+        $(document).on('focus', '.accordion-toggle', function(e) {
+            if(!click) {
                 $(this).parent().find('.accordion-content').show();
                 $(this).addClass("minus");
             }
-
             click = false;
-                
         });
-                
-                
-        $(document).on('mousedown', '.accordion-toggle', function(e) { 
 
+        $(document).on('mousedown', '.accordion-toggle', function(e) {
             click = true;
-
             $(this).parent().find('.accordion-content').toggle();
-            
             $(this).toggleClass("minus");
-            
             $(this).blur();
-
         });
     };
 
