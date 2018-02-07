@@ -35,8 +35,8 @@
         padding-right: $padding-left;
 
         &::before {
-            color: rgba(0,0,0,.5);
             @include pricon($pricon-unchecked);
+            color: rgba(0,0,0,.5);
             display: inline-block;
             width: 20px;
             height: 20px;
@@ -46,7 +46,6 @@
         }
 
         &--checked {
-            text-decoration: line-through;
             color: rgba(0,0,0,.5);
 
             &::before {
