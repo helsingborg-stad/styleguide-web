@@ -12,41 +12,33 @@ HelsingborgPrime.Component.Accordion = (function ($) {
     }
 
     Accordion.prototype.init = function () {
-        $(document).on('click', 'label.accordion-toggle', function(e) {
-            var $input = $('#' + $(this).attr('for'));
+        
+        var click = false;
 
-            if ($input.prop('checked') === false) {
-                window.location.hash = '#' + $(this).attr('for');
-            } else {
-                if ($input.is('[type="radio"]')) {
-                    var name = $input.attr('name');
-                    var value = $input.val();
-                    var id = $input.attr('id');
-
-                    var $parent = $input.parent('section');
-                    $input.remove();
-
-                    setTimeout(function () {
-                        $parent.prepend('<input type="radio" name="' + name + '" value="' + value + '" id="' + id + '">');
-                    }, 1);
-
-                }
-
-                window.location.hash = '_';
+        $(document).on('focus', '.accordion-toggle', function(e) { 
+                        
+            if(!click)
+            {
+                $(this).parent().find('.accordion-content').show();
+                $(this).addClass("minus");
             }
-		});
 
-        $('.accordion-search input').on('input', function (e) {
-            var where = $(e.target).parents('.accordion');
-            var what = $(e.target).val();
+            click = false;
+                
+        });
+                
+                
+        $(document).on('mousedown', '.accordion-toggle', function(e) { 
 
-            this.filter(what, where);
-        }.bind(this));
-    };
+            click = true;
 
-    Accordion.prototype.filter = function(what, where) {
-        where.find('.accordion-section').hide();
-        where.find('.accordion-section:icontains(' + what + ')').show();
+            $(this).parent().find('.accordion-content').toggle();
+            
+            $(this).toggleClass("minus");
+            
+            $(this).blur();
+
+        });
     };
 
     return new Accordion();

@@ -11,8 +11,7 @@
 // @markup
 // <div class="accordion accordion-icon accordion-list">
 //      <section class="accordion-section">
-//         <input type="radio" name="active-section" id="accordion-section-1">
-//         <label class="accordion-toggle" for="accordion-section-1">
+//         <label tabindex="0" class="accordion-toggle" for="accordion-section-1">
 //             Ice cream
 //         </label>
 //         <div class="accordion-content">
@@ -20,8 +19,7 @@
 //         </div>
 //     </section>
 //     <section class="accordion-section">
-//         <input type="radio" name="active-section" id="accordion-section-2">
-//         <label class="accordion-toggle" for="accordion-section-2">
+//         <label tabindex="0" class="accordion-toggle" for="accordion-section-2">
 //             <h3>Sugar plum (H3)</h3>
 //         </label>
 //         <div class="accordion-content">
@@ -29,17 +27,15 @@
 //         </div>
 //     </section>
 //     <section class="accordion-section">
-//         <input type="radio" name="active-section" id="accordion-section-3">
-//         <label class="accordion-toggle" for="accordion-section-3">
+//         <label tabindex="0" class="accordion-toggle" for="accordion-section-3">
 //             <h3>Fruitcake</h3>
 //         </label>
 //         <div class="accordion-content">
 //             I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.
 //         </div>
 //     </section>
-//		<section class="accordion-section">
-//         <input type="radio" name="active-section" id="accordion-section-4">
-//         <label class="accordion-toggle" for="accordion-section-4">
+//      <section class="accordion-section">
+//         <label tabindex="0" class="accordion-toggle" for="accordion-section-4">
 //             <h3>Jelly-o</h3>
 //         </label>
 //         <div class="accordion-content">
@@ -63,7 +59,7 @@
 }
 
 .accordion + .accordion {
-	margin-top: $content-gutter;
+    margin-top: $content-gutter;
 }
 
 .accordion-table-head {
@@ -72,12 +68,13 @@
     padding-right: 40px;
 }
 
+
 .accordion-icon {
     .accordion-toggle {
         position: relative;
 
         &:before {
-            @include pricon($pricon-plus-o);
+           /* @include pricon($pricon-plus-o);*/
             @include center(false, true);
             right: 0;
             font-size: 1em;
@@ -90,6 +87,8 @@
         }
     }
 }
+
+
 
 .accordion-search {
     background-color: $creamy;
@@ -106,22 +105,22 @@
 .accordion-box,
 .accordion-list {
 
-	.accordion-toggle,
-	.accordion-content {
-		padding: $grid-gutter-sm $grid-gutter-sm * 1.5;
+    .accordion-toggle,
+    .accordion-content {
+        padding: $grid-gutter-sm $grid-gutter-sm * 1.5;
 
-		&:before {
-			right: $grid-gutter-sm * 1.5;
-		}
-	}
+        &:before {
+            right: $grid-gutter-sm * 1.5;
+        }
+    }
 
     .accordion-toggle {
         @include gradient(#fff, lighten($creamy, 2%));
     }
 
-	.accordion-content {
+    .accordion-content {
         position: relative;
-		padding: $grid-gutter-sm * 2;
+        padding: $grid-gutter-sm * 2;
 
         &::after {
             display: block;
@@ -133,66 +132,66 @@
             height: 5px;
             @include gradient(rgba(#000, .05), rgba(#000, 0))
         }
-	}
+    }
 
-	&.boxes-medium,
-	&.box-medium,
-	&.list-medium {
-		.accordion-toggle,
-		.accordion-content {
-			padding: $grid-gutter-md $grid-gutter-md * 1.5;
+    &.boxes-medium,
+    &.box-medium,
+    &.list-medium {
+        .accordion-toggle,
+        .accordion-content {
+            padding: $grid-gutter-md $grid-gutter-md * 1.5;
 
-			&:before {
-				right: $grid-gutter-md * 1.5;
-			}
-		}
+            &:before {
+                right: $grid-gutter-md * 1.5;
+            }
+        }
 
-		.accordion-content {
+        .accordion-content {
             padding: $grid-gutter-md * 2;
         }
 
         .accordion-table-head {
             padding: $grid-gutter-md/2 $grid-gutter-md;
         }
-	}
+    }
 
-	&.boxes-large,
-	&.box-large,
-	&.list-large {
-		.accordion-toggle,
-		.accordion-content {
-			padding: $grid-gutter-lg $grid-gutter-lg * 1.5;
+    &.boxes-large,
+    &.box-large,
+    &.list-large {
+        .accordion-toggle,
+        .accordion-content {
+            padding: $grid-gutter-lg $grid-gutter-lg * 1.5;
 
-			&:before {
-				right: $grid-gutter-lg * 1.5;
-			}
-		}
+            &:before {
+                right: $grid-gutter-lg * 1.5;
+            }
+        }
 
-		.accordion-content {
-			padding: $grid-gutter-lg * 2;
-		}
+        .accordion-content {
+            padding: $grid-gutter-lg * 2;
+        }
 
         .accordion-table-head {
             padding: $grid-gutter-lg/2 $grid-gutter-lg;
         }
-	}
+    }
 
-	.accordion-section {
-		border: 1px solid $creamy-darker;
-	}
+    .accordion-section {
+        border: 1px solid $creamy-darker;
+    }
 
     .accordion-search + .accordion-section {
         border-top: none;
     }
 
-	.accordion-content {
-		border-top: 1px solid $creamy-darker;
-	}
+    .accordion-content {
+        border-top: 1px solid $creamy-darker;
+    }
 
-	.accordion-toggle {
-		h1, h2, h3, h4, h5, h6 {
-			padding: 0;
-			margin: 0;
+    .accordion-toggle {
+        h1, h2, h3, h4, h5, h6 {
+            padding: 0;
+            margin: 0;
             font-weight: normal;
 
             .fa,
@@ -201,8 +200,8 @@
                 width: 1.1em;
                 text-align: center;
             }
-		}
-	}
+        }
+    }
 
 }
 
@@ -213,14 +212,14 @@
 }
 
 .accordion-list {
-	.accordion-section + .accordion-section {
-		margin-top: 0;
-		border-top: none;
-	}
+    .accordion-section + .accordion-section {
+        margin-top: 0;
+        border-top: none;
+    }
 
-	.accordion-section:nth-child(odd) {
-		background: rgba(#000,.01);
-	}
+    .accordion-section:nth-child(odd) {
+        background: rgba(#000,.01);
+    }
 }
 
 .accordion-list.accordion-list-small {
@@ -375,4 +374,21 @@ body:not(.material-no-shadow) .box-content .accordion {
 [data-accordion-nav="prev"] .pricon {
     margin-right: 5px;
 }
+
+.accordion-toggle:before {
+       @include pricon($pricon-plus-o);
+}
+
+.minus:before {
+    @include pricon($pricon-minus-o);
+}
+
+
+
+
+
+
+
+
+
 
