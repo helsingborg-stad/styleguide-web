@@ -41,6 +41,7 @@ HelsingborgPrime.Component.Accordion = (function ($) {
         });
 
         $('.accordion-search input').on('input', function (e) {
+
             var where = $(e.target).parents('.accordion');
             var what = $(e.target).val();
 
@@ -50,7 +51,17 @@ HelsingborgPrime.Component.Accordion = (function ($) {
 
     Accordion.prototype.filter = function(what, where) {
         where.find('.accordion-section').find('.accordion-content').hide();
-        where.find('.accordion-section:icontains(' + what + ')').find('.accordion-content').show();
+        where.find('.accordion-section').find('.accordion-toggle').removeClass('minus');
+
+        if(what != '')
+        {
+            where.find('.accordion-section:icontains(' + what + ')').find('.accordion-content').show();
+
+            if(!where.find('.accordion-section:icontains(' + what + ')').find('.accordion-toggle').hasClass('minus')){
+                where.find('.accordion-section:icontains(' + what + ')').find('.accordion-toggle').addClass('minus');
+            }
+        }
+        
     };
 
     return new Accordion();
