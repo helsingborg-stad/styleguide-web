@@ -50,7 +50,14 @@ HelsingborgPrime.Component.Accordion = (function ($) {
 
     Accordion.prototype.filter = function(what, where) {
         where.find('.accordion-section').find('.accordion-content').hide();
+        where.find('.accordion-section').find('.accordion-toggle').removeClass('minus');
+
         where.find('.accordion-section:icontains(' + what + ')').find('.accordion-content').show();
+
+        if(!where.find('.accordion-section:icontains(' + what + ')').find('.accordion-toggle').hasClass('minus')){
+            where.find('.accordion-section:icontains(' + what + ')').find('.accordion-toggle').addClass('minus');
+        }
+        
     };
 
     return new Accordion();
