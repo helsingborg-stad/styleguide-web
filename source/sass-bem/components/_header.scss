@@ -34,6 +34,10 @@
         padding-bottom: 0;
     }
 
+    a {
+        display: block;
+    }
+
     img,
     svg {
         height: auto;
@@ -45,7 +49,7 @@
 
 .c-header--primary {
     .c-header__row {
-        padding: $content-gutter * 3 $content-gutter;
+        padding: $content-gutter * 2 $content-gutter;
     }
 }
 
