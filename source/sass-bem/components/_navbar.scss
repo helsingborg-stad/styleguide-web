@@ -3,10 +3,37 @@
     flex-wrap: no-wrap;
     align-items: center;
 
-    .c-navbar__item {}
-    .c-navbar__item:not(:last-child) {
-        margin-right: $content-gutter;
+    /* TEMP */
+    margin: -$content-gutter;
+
+    .c-navbar__item {
+        position: relative;
+        a {
+            display: block;
+            padding: $content-gutter;
+        }
     }
+
+    .c-navbar__item.is-current,
+    .c-navbar__item.is-current-ancestor:not(.c-navbar__sub) {
+        &:after {
+            bottom: 0;
+            left: 50%;
+            border: solid transparent;
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(#fff, 0);
+            border-bottom-color: #fff;
+            border-width: 8px;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .c-navbar__item.is-current-ancestor {
+
+    }
+
     .c-navbar__sub {
         display: none;
     }
