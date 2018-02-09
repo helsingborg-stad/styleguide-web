@@ -42,5 +42,9 @@
         display: block;
     }
 
+    .c-navbar__item_button:hover {
+        cursor: pointer;
+    }
+
     .c-navbar__sub_item {}
 }

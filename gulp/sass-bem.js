@@ -103,7 +103,7 @@ gulp.task('inject:components', function() {
     var config = injectConfig(layer);
 
     return gulp.src('./source/sass-bem/_bootstrap.scss')
-        .pipe(inject(gulp.src(['./source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
+        .pipe(inject(gulp.src([node_modules + 'hamburgers/_sass/hamburgers/hamburgers.scss', './source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
         .pipe(gulp.dest('./source/sass-bem'));
 });
 
