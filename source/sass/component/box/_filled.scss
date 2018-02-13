@@ -43,6 +43,12 @@
     }
 }
 
+.box-filled {
+    .box-title + .box-content {
+        padding-top: $content-gutter;
+    }
+}
+
 .box-filled .box-index-title {
     color: #fff !important;
 }
