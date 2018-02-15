@@ -50,12 +50,14 @@
 
 a.box-index {
     color: $base-font-color;
+    transition: 300ms background;
 
     &:hover {
         text-decoration: none;
         background-color: $creamy;
     }
 
+    /*
     &:after {
         @include pricon($pricon-right-fat-arrow);
         color: #fff;
@@ -76,8 +78,7 @@ a.box-index {
         border-right-color: lighten($palette-4, 20%);
         border-bottom-color: lighten($palette-4, 20%);
     }
-
-
+    */
 }
 
 .box-index-title.link-item {

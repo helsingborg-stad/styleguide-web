@@ -1,7 +1,7 @@
 @mixin box {
     display: block;
     width: 100%;
-    padding: $content-gutter / 3;
+    padding: 0;
     margin-bottom: $grid-gutter-xs;
 
     &[data-equal-item] {
@@ -79,11 +79,11 @@
     .widget > h4,
     .widget > h5,
     .widget > h6 {
-        padding: $content-gutter/1.5 $content-gutter/1.5 0 $content-gutter/1.5;
+        padding: $box-padding $box-padding 0 $box-padding;
     }
 
     > ul {
-        padding: $content-gutter/1.5;
+        padding: $box-padding;
     }
 
     a:not(.btn):not(.page) {
