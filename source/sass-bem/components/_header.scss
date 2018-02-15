@@ -44,12 +44,22 @@
         width: 100%;
         max-width: 18rem;
         display: block;
+
+        max-height: 50px;
+
+        @media all and #{$screen-sm-up} {
+            max-height: initial;
+        }
     }
 }
 
 .c-header--primary {
     .c-header__row {
-        padding: $content-gutter * 2 $content-gutter;
+        padding: $content-gutter $content-gutter;
+
+        @media all and #{$screen-sm-up} {
+            padding: $content-gutter * 2 $content-gutter;
+        }
     }
 }
 
