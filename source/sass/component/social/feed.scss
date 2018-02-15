@@ -298,7 +298,7 @@ $link-image-size: 50px;
 
     .social-image + .social-user {
         margin-top: -30px;
-        padding: 0 $box-padding*2;
+        padding: 0 $box-padding;
         background: none;
 
         .social-author {
@@ -308,7 +308,7 @@ $link-image-size: 50px;
 
     .social-user {
         @extend .clearfix;
-        padding: $box-padding*2 $box-padding*2 0 $box-padding*2;
+        padding: $box-padding $box-padding 0 $box-padding;
         line-height: 0;
         position: relative;
         z-index: $level-8;
@@ -360,7 +360,7 @@ $link-image-size: 50px;
 
     .social-content {
         width: 100%;
-        padding: $box-padding * 2;
+        padding: $box-padding;
         font-size: .85em;
         color: #4a4a4a;
 
@@ -423,7 +423,7 @@ $link-image-size: 50px;
     }
 
     .social-footer {
-        padding: $box-padding $grid-gutter-sm * 2;
+        padding: $box-padding/2 $grid-gutter-sm * 2;
         border-top: 1px solid #f9f9f9;
         color: #9b9b9b;
 
