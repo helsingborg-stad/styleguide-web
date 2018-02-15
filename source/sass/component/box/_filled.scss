@@ -44,7 +44,9 @@
 }
 
 .box-filled {
-    .box-title + .box-content {
+    .box-title + ul,
+    .box-title + div,
+    .box-title + p {
         padding-top: $content-gutter;
     }
 }
