@@ -49,11 +49,12 @@
 // endinject
 
 // inject:objects
+@import "./source/sass-bem/objects/_box.scss";
 @import "./source/sass-bem/objects/_reset.scss";
 // endinject
 
 // inject:components
-@import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "./source/sass-bem/components/_box.scss";
 @import "./source/sass-bem/components/_header.scss";
 @import "./source/sass-bem/components/_navbar.scss";
 // endinject
