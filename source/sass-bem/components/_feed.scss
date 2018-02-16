@@ -1,4 +1,8 @@
 .c-feed {
+    .c-feed__header {
+        position: relative;
+    }
+
     &:hover .c-feed__title {
         color: $palette-4;
     }
