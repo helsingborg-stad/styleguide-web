@@ -62,3 +62,13 @@ $grid-gutter-lg: 30px;
 // ***************************************************************
 
 $grid-column-count: 12;
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $screen-sm-min,
+  md: $screen-md-min,
+  lg: $screen-lg-min,
+  xl: $screen-xl-min
+);

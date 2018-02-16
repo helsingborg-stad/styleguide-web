@@ -55,15 +55,16 @@
 
 // inject:components
 @import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-@import "./source/sass-bem/components/_box.scss";
+@import "./source/sass-bem/components/_card.scss";
+@import "./source/sass-bem/components/_feed.scss";
 @import "./source/sass-bem/components/_header.scss";
 @import "./source/sass-bem/components/_navbar.scss";
+@import "./source/sass-bem/components/_posts.scss";
 // endinject
 
 // inject:utilities
+@import "./source/sass-bem/utilities/_display.scss";
+@import "./source/sass-bem/utilities/_flex.scss";
+@import "./source/sass-bem/utilities/_spacing.scss";
 @import "./source/sass-bem/utilities/_text.scss";
 // endinject
-
-
-
-

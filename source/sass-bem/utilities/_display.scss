@@ -1,0 +1,27 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+    .u-display-none#{$prefix}         { display: none; }
+    .u-display-inline#{$prefix}       { display: inline; }
+    .u-display-inline-block#{$prefix} { display: inline-block; }
+    .u-display-block#{$prefix}        { display: block; }
+    .u-display-table#{$prefix}        { display: table; }
+    .u-display-table-row#{$prefix}    { display: table-row; }
+    .u-display-table-cell#{$prefix}   { display: table-cell; }
+    .u-display-flex#{$prefix}         { display: flex; }
+    .u-display-inline-flex#{$prefix}  { display: inline-flex; }
+  }
+}
+
+@media print {
+    .u-display-none\@print        { display: none; }
+    .u-display-inline\@print      { display: inline; }
+    .u-display-inline-block\@print{ display: inline-block; }
+    .u-display-block\@print       { display: block; }
+    .u-display-table\@print       { display: table; }
+    .u-display-table-row\@print   { display: table-row; }
+    .u-display-table-cell\@print  { display: table-cell; }
+    .u-display-flex\@print        { display: flex; }
+    .u-display-inline-flex\@print { display: inline-flex; }
+}

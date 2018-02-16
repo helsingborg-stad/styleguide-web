@@ -1,0 +1,11 @@
+.c-feed {
+    &:hover .c-feed__title {
+        color: $palette-4;
+    }
+}
+
+.c-feed.c-feed--rss {
+    .c-feed__source:before {
+        content: '-';
+    }
+}
