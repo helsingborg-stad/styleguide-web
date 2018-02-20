@@ -13,24 +13,24 @@
     max-width: $screen-lg-max;
 
     @media screen and (max-width: $screen-lg-max + 60) {
-        margin: auto 30px;
+        margin: 0 30px;
     }
 
     @media #{$screen-sm} {
-        margin: auto 20px;
+        margin: 0 20px;
     }
 
     @media #{$screen-xs} {
-        margin: auto 10px;
+        margin: 0 10px;
     }
 }
 
 .container.container-fullwidth {
     @media #{$screen-sm} {
-        margin: auto 20px;
+        margin: 0 20px;
     }
 
     @media #{$screen-xs} {
-        margin: auto 10px;
+        margin: 0 10px;
     }
 }
