@@ -44,12 +44,6 @@
         width: 100%;
         max-width: 18rem;
         display: block;
-
-        max-height: 50px;
-
-        @media all and #{$screen-sm-up} {
-            max-height: initial;
-        }
     }
 }
 
