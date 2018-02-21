@@ -55,14 +55,14 @@
    "slider",
    "tooltip"
   ],
-  "media": [
-   "audioplayer",
-   "videoplayer"
-  ],
   "blog": [
    "comments form",
    "comments",
    "post"
+  ],
+  "media": [
+   "audioplayer",
+   "videoplayer"
   ],
   "boxes": [
    "contact",
@@ -1586,54 +1586,6 @@
     }
    ]
   },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/component/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/component/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "blog": {
    "comments form": [
     {
@@ -1719,6 +1671,54 @@
        "path": "~/source/sass/component/blog/_post.scss",
        "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
        "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/component/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/component/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
       }
      ]
     }
