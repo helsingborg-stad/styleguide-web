@@ -40,7 +40,7 @@
     }
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle:not(.pricon)::after{
     display: inline-block;
     content: '';
     @include pricon($pricon-caret-down);
