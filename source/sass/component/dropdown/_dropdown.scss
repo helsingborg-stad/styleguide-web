@@ -113,6 +113,10 @@
         }
     }
 
+    li + li {
+        margin-left: 0px;
+    }
+
     .divider {
         height: 1px;
         background-color: $creamy-darker;
