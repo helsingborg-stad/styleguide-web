@@ -16,7 +16,7 @@
 
 .modularity-mod-text .box-content ul:not(.social-feed),
 .mce-content-body ul,
-article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed),
+article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed):not(.dropdown-menu),
 .unordered-list {
     padding-left: $content-gutter * 2;
 
