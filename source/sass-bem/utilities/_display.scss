@@ -11,17 +11,21 @@
     .u-display-table-cell#{$prefix}   { display: table-cell; }
     .u-display-flex#{$prefix}         { display: flex; }
     .u-display-inline-flex#{$prefix}  { display: inline-flex; }
+
+    .u-invisible#{$prefix}            { visibility: hidden; }
+    .u-visible#{$prefix}              { visibility: visible; }
+
   }
 }
 
 @media print {
-    .u-display-none\@print        { display: none; }
-    .u-display-inline\@print      { display: inline; }
-    .u-display-inline-block\@print{ display: inline-block; }
-    .u-display-block\@print       { display: block; }
-    .u-display-table\@print       { display: table; }
-    .u-display-table-row\@print   { display: table-row; }
-    .u-display-table-cell\@print  { display: table-cell; }
-    .u-display-flex\@print        { display: flex; }
-    .u-display-inline-flex\@print { display: inline-flex; }
+    .u-display-none\@print            { display: none; }
+    .u-display-inline\@print          { display: inline; }
+    .u-display-inline-block\@print    { display: inline-block; }
+    .u-display-block\@print           { display: block; }
+    .u-display-table\@print           { display: table; }
+    .u-display-table-row\@print       { display: table-row; }
+    .u-display-table-cell\@print      { display: table-cell; }
+    .u-display-flex\@print            { display: flex; }
+    .u-display-inline-flex\@print     { display: inline-flex; }
 }
