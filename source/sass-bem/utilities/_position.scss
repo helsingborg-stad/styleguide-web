@@ -36,6 +36,10 @@ $positions: static, relative, absolute, fixed, sticky;
   z-index: $level-10;
 }
 
+.u-sticky-top {
+  position: sticky;
+}
+
 .u-cover {
   position: absolute;
   top: 0;
