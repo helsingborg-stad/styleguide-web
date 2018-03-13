@@ -23,7 +23,7 @@ gulp.task('default', function (callback) {
 });
 
 gulp.task('build', function (callback) {
-    return runSequence('sass-font-awesome', 'build:sass', 'build:scripts', callback);
+    return runSequence('sass-font-awesome', 'build:sass', 'build:bem', 'build:scripts', callback);
 });
 
 gulp.task('build:sass', function (callback) {
@@ -41,6 +41,7 @@ gulp.task('icons', function (callback) {
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['build:scripts']);
     gulp.watch('source/sass/**/*.scss', ['build:sass']);
+    gulp.watch('source/sass-bem/**/*.scss', ['build:bem']);
 });
 
 gulp.task('instructions', function() {
