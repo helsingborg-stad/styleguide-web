@@ -30,10 +30,10 @@
     text-overflow: ellipsis;
 }
 
-.u-truncate-ignore-hover {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.u-truncate-ignore-hover:hover {
+    background-color: #fff;
+    width: auto;
+    overflow: visible;
 }
 
 /* Text size */
