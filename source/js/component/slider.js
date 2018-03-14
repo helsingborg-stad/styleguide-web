@@ -12,6 +12,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
     function Slider() {
         this.preloadImage();
         this.triggerAutoplay();
+        this.pauseAndPlay();
 
         $('.slider').each(function (index, element) {
             var $slider = $(element);
@@ -35,6 +36,9 @@ HelsingborgPrime.Component.Slider = (function ($) {
             $('.slider').each(function (index, element) {
                 this.detectIfIsCollapsed(element);
             }.bind(this));
+
+            this.pauseAndPlayVisibleIcon();
+
         }.bind(this));
     }
 
@@ -89,6 +93,53 @@ HelsingborgPrime.Component.Slider = (function ($) {
             });
         },300);
     };
+
+    /**
+     * Pause & play Visibility
+     */
+    Slider.prototype.pauseAndPlayVisibleIcon = function () {
+        if ($(window).width() > 1024) {
+            $('.slider-video').hover(
+                function () {
+                    $('.embeded-mini-toolbar').fadeIn(300);
+                },
+                function () {
+                    $('.embeded-mini-toolbar').fadeOut(300);
+                }
+            );
+        }
+    };
+
+    /**
+     * Pause & play icon on video
+     */
+    Slider.prototype.pauseAndPlay = function () {
+
+        this.pauseAndPlayVisibleIcon();
+
+        $('.embed-control').on('click', function () {
+            var sliderVideoId = $(this).closest('.slider-video').find('video').prop('id');
+            var videoPlayer = document.getElementById(sliderVideoId);
+
+            if ($(this).hasClass('embeded-pause')) {
+                videoPlayer.pause();
+            }
+
+            if ($(this).hasClass('embeded-play')) {
+                videoPlayer.play();
+            }
+
+            $('.embed-control').each(function() {
+                if ($(this).hasClass('hidden')) {
+                    $(this).removeClass('hidden');
+                }
+                else {
+                    $(this).addClass('hidden');
+                }
+            });
+        }).bind(this);
+    };
+
 
     return new Slider();
 
