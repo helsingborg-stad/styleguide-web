@@ -99,14 +99,16 @@ HelsingborgPrime.Component.Slider = (function ($) {
      */
     Slider.prototype.pauseAndPlayVisibleIcon = function () {
         if ($(window).width() > 1024) {
-            $('.slider-video').hover(
-                function () {
-                    $('.embeded-mini-toolbar').fadeIn(300);
-                },
-                function () {
-                    $('.embeded-mini-toolbar').fadeOut(300);
-                }
-            );
+            if ( $('.embeded-mini-toolbar').hasClass('slider-show-on-hover') ) {
+                $('.slider-video').hover(
+                    function () {
+                        $('.embeded-mini-toolbar').fadeIn(300);
+                    },
+                    function () {
+                        $('.embeded-mini-toolbar').fadeOut(300);
+                    }
+                );
+            }
         }
     };
 

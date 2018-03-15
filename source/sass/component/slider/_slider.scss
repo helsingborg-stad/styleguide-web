@@ -170,28 +170,43 @@ article {
     }
 
     .embeded-mini-toolbar {
-        display: none;
-        @media screen and (max-width: $screen-lg-max) {
-            display: block;
+        &.slider-show-on-hover {
+            display:none;
+            @media screen and (max-width: $screen-lg-max) {
+                display: block;
+            }
         }
+
+        $opac: 0.2;
+        $cssClassName: 2;
+        @while $opac <= 1 {
+            &.slider-icon-opacity-#{$cssClassName} {
+                opacity: #{$opac};
+            }
+            $cssClassName : $cssClassName + 1;
+            $opac: $opac + 0.1;
+        }
+
         position: absolute;
         z-index: 20;
-        bottom: 10px;
-        right: 20px;
+        bottom: 70px;
+        right: 60px;
+        @media screen and (max-width: $screen-xs-max) {
+            bottom: 10px;
+            right: 20px;
+        }
 
         .pricon-badge {
-            padding: 16px;
-            opacity: 0.6;
-            @media screen and (max-width: $screen-lg-max) {
-                opacity: 1;
-            }
-            &:hover {
-                opacity: 1;
-            }
-        }
-        i {
+            padding: 32px;
             color: #fff;
             cursor: pointer;
+            @media screen and (max-width: $screen-xs-max) {
+                padding:21px;
+                font-size: 17px !important;
+            }
+            &:hover {
+                opacity: 1 !important;
+            }
         }
     }
 
