@@ -182,6 +182,9 @@ article {
         .pricon-badge {
             padding: 16px;
             opacity: 0.6;
+            @media screen and (max-width: $screen-lg-max) {
+                opacity: 1;
+            }
             &:hover {
                 opacity: 1;
             }
