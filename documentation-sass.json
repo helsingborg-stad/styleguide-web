@@ -110,11 +110,11 @@
    "select",
    "tag manager"
   ],
-  "hero": [
-   "hero"
-  ],
   "gallery": [
    "image grid"
+  ],
+  "hero": [
+   "hero"
   ],
   "notice": [
    "notice"
@@ -2808,30 +2808,6 @@
     }
    ]
   },
-  "hero": {
-   "hero": [
-    {
-     "name": "Hero",
-     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
-     "page": [
-      {
-       "nav": "Hero",
-       "section": "Hero"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/hero/_hero.scss",
-       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "gallery": {
    "image grid": [
     {
@@ -2859,6 +2835,30 @@
        "path": "~/source/sass/component/gallery/_gallery.scss",
        "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
        "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/hero/_hero.scss",
+       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
