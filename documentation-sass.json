@@ -12,6 +12,26 @@
    "grid",
    "main footer"
   ],
+  "typography": [
+   "article",
+   "headings",
+   "sub heading",
+   "label",
+   "lead",
+   "unordered list",
+   "ordered list",
+   "quotes",
+   "text alignment",
+   "font size",
+   "highlight",
+   "text color",
+   "underline",
+   "text transform",
+   "mark",
+   "small",
+   "truncate",
+   "weight"
+  ],
   "accessibility": [
    "visibility"
   ],
@@ -28,26 +48,6 @@
    "placeholders",
    "spinner",
    "visibility"
-  ],
-  "typography": [
-   "text alignment",
-   "font size",
-   "highlight",
-   "text color",
-   "underline",
-   "text transform",
-   "mark",
-   "small",
-   "truncate",
-   "weight",
-   "article",
-   "headings",
-   "sub heading",
-   "label",
-   "lead",
-   "unordered list",
-   "ordered list",
-   "quotes"
   ],
   "special": [
    "accordion",
@@ -110,11 +110,11 @@
    "select",
    "tag manager"
   ],
-  "hero": [
-   "hero"
-  ],
   "gallery": [
    "image grid"
+  ],
+  "hero": [
+   "hero"
   ],
   "notice": [
    "notice"
@@ -137,9 +137,6 @@
   "tables": [
    "basic"
   ],
-  "timeline": [
-   "general"
-  ],
   "wordpress": [
    "wp widget: calendar",
    "wp widget: archive, categories, meta-data",
@@ -148,6 +145,9 @@
    "wp widget: search",
    "wp widget: text",
    "wp utility: caption"
+  ],
+  "timeline": [
+   "general"
   ]
  },
  "pages": {
@@ -214,10 +214,10 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<i class=\"pricon pricon-link-item\"></i> pricon-link-item<br>\n<i class=\"pricon pricon-user-o\"></i> pricon-user-o<br>\n<i class=\"pricon pricon-external-link\"></i> pricon-external-link<br>\n<i class=\"pricon pricon-file-pdf\"></i> pricon-file-pdf<br>\n<i class=\"pricon pricon-file-text\"></i> pricon-file-text<br>\n<i class=\"pricon pricon-file-image\"></i> pricon-file-image<br>\n<i class=\"pricon pricon-file-audio\"></i> pricon-file-audio<br>\n<i class=\"pricon pricon-file-video\"></i> pricon-file-video<br>\n<i class=\"pricon pricon-file-archive\"></i> pricon-file-archive<br>\n<i class=\"pricon pricon-github\"></i> pricon-github<br>\n<i class=\"pricon pricon-presentation\"></i> pricon-presentation<br>\n<i class=\"pricon pricon-file\"></i> pricon-file<br>\n<i class=\"pricon pricon-phone\"></i> pricon-phone<br>\n<i class=\"pricon pricon-smartphone\"></i> pricon-smartphone<br>\n<i class=\"pricon pricon-email\"></i> pricon-email<br>\n<i class=\"pricon pricon-picture\"></i> pricon-picture<br>\n<i class=\"pricon pricon-user\"></i> pricon-user<br>\n<i class=\"pricon pricon-picture-add\"></i> pricon-picture-add<br>\n<i class=\"pricon pricon-plus-o\"></i> pricon-plus-o<br>\n<i class=\"pricon pricon-caret-down\"></i> pricon-caret-down<br>\n<i class=\"pricon pricon-caret-up\"></i> pricon-caret-up<br>\n<i class=\"pricon pricon-check\"></i> pricon-check<br>\n<i class=\"pricon pricon-check-o\"></i> pricon-check-o<br>\n<i class=\"pricon pricon-notice-warning\"></i> pricon-notice-warning<br>\n<i class=\"pricon pricon-notice-danger\"></i> pricon-notice-danger<br>\n<i class=\"pricon pricon-compass\"></i> pricon-compass<br>\n<i class=\"pricon pricon-info-o\"></i> pricon-info-o<br>\n<i class=\"pricon pricon-question-o\"></i> pricon-question-o<br>\n<i class=\"pricon pricon-linkedin-square\"></i> pricon-linkedin-square<br>\n<i class=\"pricon pricon-twitter-square\"></i> pricon-twitter-square<br>\n<i class=\"pricon pricon-facebook-square\"></i> pricon-facebook-square<br>\n<i class=\"pricon pricon-instagram\"></i> pricon-instagram<br>\n<i class=\"pricon pricon-print\"></i> pricon-print<br>\n<i class=\"pricon pricon-listen-ear\"></i> pricon-listen-ear<br>\n<i class=\"pricon pricon-volume\"></i> pricon-volume<br>\n<i class=\"pricon pricon-search\"></i> pricon-search<br>\n<i class=\"pricon pricon-edit\"></i> pricon-edit<br>\n<i class=\"pricon pricon-minus-o\"></i> pricon-minus-o<br>\n<i class=\"pricon pricon-twitter\"></i> pricon-twitter<br>\n<i class=\"pricon pricon-linkedin\"></i> pricon-linkedin<br>\n<i class=\"pricon pricon-facebook\"></i> pricon-facebook<br>\n<i class=\"pricon pricon-settings\"></i> pricon-settings<br>\n<i class=\"pricon pricon-location-pin\"></i> pricon-location-pin<br>\n<i class=\"pricon pricon-next\"></i> pricon-next<br>\n<i class=\"pricon pricon-previous\"></i> pricon-previous<br>\n<i class=\"pricon pricon-back\"></i> pricon-back<br>\n<i class=\"pricon pricon-caret-right\"></i> pricon-caret-right<br>\n<i class=\"pricon pricon-play-o\"></i> pricon-play-o<br>\n<i class=\"pricon pricon-forbidden\"></i> pricon-forbidden<br>\n<i class=\"pricon pricon-sort-asc\"></i> pricon-sort-asc<br>\n<i class=\"pricon pricon-sort-desc\"></i> pricon-sort-desc<br>\n<i class=\"pricon pricon-sort\"></i> pricon-sort<br>\n<i class=\"pricon pricon-helsingborg\"></i> pricon-helsingborg<br>\n<i class=\"pricon pricon-calendar\"></i> pricon-calendar<br>\n<i class=\"pricon pricon-home\"></i> pricon-home<br>\n<i class=\"pricon pricon-language\"></i> pricon-language<br>\n<i class=\"pricon pricon-globe\"></i> pricon-globe<br>\n<i class=\"pricon pricon-star\"></i> pricon-star<br>\n<i class=\"pricon pricon-text-size\"></i> pricon-text-size<br>\n<i class=\"pricon pricon-share\"></i> pricon-share<br>\n<i class=\"pricon pricon-heart-minus\"></i> pricon-heart-minus<br>\n<i class=\"pricon pricon-heart-plus\"></i> pricon-heart-plus<br>\n<i class=\"pricon pricon-heart\"></i> pricon-heart<br>\n<i class=\"pricon pricon-standby\"></i> pricon-standby<br>\n<i class=\"pricon pricon-breifcase\"></i> pricon-breifcase<br>\n<i class=\"pricon pricon-lightbulb\"></i> pricon-lightbulb<br>\n<i class=\"pricon pricon-clipboard\"></i> pricon-clipboard<br>\n<i class=\"pricon pricon-picture-user\"></i> pricon-picture-user<br>\n<i class=\"pricon pricon-target\"></i> pricon-target<br>\n<i class=\"pricon pricon-paintbrush\"></i> pricon-paintbrush<br>\n<i class=\"pricon pricon-forbidden-circle\"></i> pricon-forbidden-circle<br>\n<i class=\"pricon pricon-smiley-angry\"></i> pricon-smiley-angry<br>\n<i class=\"pricon pricon-smiley-cool\"></i> pricon-smiley-cool<br>\n<i class=\"pricon pricon-smiley-cry\"></i> pricon-smiley-cry<br>\n<i class=\"pricon pricon-smiley-flirty\"></i> pricon-smiley-flirty<br>\n<i class=\"pricon pricon-smiley-oh\"></i> pricon-smiley-oh<br>\n<i class=\"pricon pricon-smiley-sad\"></i> pricon-smiley-sad<br>\n<i class=\"pricon pricon-smiley-smile\"></i> pricon-smiley-smile<br>\n<i class=\"pricon pricon-smiley-super-happy\"></i> pricon-smiley-super-happy<br>\n<i class=\"pricon pricon-smiley-thounge\"></i> pricon-smiley-thounge<br>\n<i class=\"pricon pricon-plus\"></i> pricon-plus<br>\n<i class=\"pricon pricon-notice-info\"></i> pricon-notice-info<br>\n<i class=\"pricon pricon-clock\"></i> pricon-clock<br>\n<i class=\"pricon pricon-wifi\"></i> pricon-wifi<br>\n<i class=\"pricon pricon-construction\"></i> pricon-construction<br>\n<i class=\"pricon pricon-sun\"></i> pricon-sun<br>\n<i class=\"pricon pricon-music\"></i> pricon-music<br>\n<i class=\"pricon pricon-calendar-check\"></i> pricon-calendar-check<br>\n<i class=\"pricon pricon-money\"></i> pricon-money<br>\n<i class=\"pricon pricon-bus\"></i> pricon-bus<br>\n<i class=\"pricon pricon-car\"></i> pricon-car<br>\n<i class=\"pricon pricon-house\"></i> pricon-house<br>\n<i class=\"pricon pricon-park\"></i> pricon-park<br>\n<i class=\"pricon pricon-bike\"></i> pricon-bike<br>\n<i class=\"pricon pricon-boat\"></i> pricon-boat<br>\n<i class=\"pricon pricon-coffee\"></i> pricon-coffee<br>\n<i class=\"pricon pricon-commute\"></i> pricon-commute<br>\n<i class=\"pricon pricon-healthcare\"></i> pricon-healthcare<br>\n<i class=\"pricon pricon-run\"></i> pricon-run<br>\n<i class=\"pricon pricon-swim\"></i> pricon-swim<br>\n<i class=\"pricon pricon-tent\"></i> pricon-tent<br>\n<i class=\"pricon pricon-apple\"></i> pricon-apple<br>\n<i class=\"pricon pricon-archive\"></i> pricon-archive<br>\n<i class=\"pricon pricon-bag\"></i> pricon-bag<br>\n<i class=\"pricon pricon-budget\"></i> pricon-budget<br>\n<i class=\"pricon pricon-diagram-increase\"></i> pricon-diagram-increase<br>\n<i class=\"pricon pricon-discuss\"></i> pricon-discuss<br>\n<i class=\"pricon pricon-dog\"></i> pricon-dog<br>\n<i class=\"pricon pricon-balloon\"></i> pricon-balloon<br>\n<i class=\"pricon pricon-handshake\"></i> pricon-handshake<br>\n<i class=\"pricon pricon-info\"></i> pricon-info<br>\n<i class=\"pricon pricon-man\"></i> pricon-man<br>\n<i class=\"pricon pricon-people\"></i> pricon-people<br>\n<i class=\"pricon pricon-recycling\"></i> pricon-recycling<br>\n<i class=\"pricon pricon-reload\"></i> pricon-reload<br>\n<i class=\"pricon pricon-sports\"></i> pricon-sports<br>\n<i class=\"pricon pricon-usb\"></i> pricon-usb<br>\n<i class=\"pricon pricon-vote\"></i> pricon-vote<br>\n<i class=\"pricon pricon-woman\"></i> pricon-woman<br>\n<i class=\"pricon pricon-cake\"></i> pricon-cake<br>\n<i class=\"pricon pricon-close\"></i> pricon-close<br>\n<i class=\"pricon pricon-down\"></i> pricon-down<br>\n<i class=\"pricon pricon-up\"></i> pricon-up<br>\n<i class=\"pricon pricon-sign-language\"></i> pricon-sign-language<br>\n<i class=\"pricon pricon-easy-read\"></i> pricon-easy-read<br>\n<i class=\"pricon pricon-union-jack\"></i> pricon-union-jack<br>\n<i class=\"pricon pricon-loading-o\"></i> pricon-loading-o<br>\n<i class=\"pricon pricon-right-skinny-arrow\"></i> pricon-right-skinny-arrow<br>\n<i class=\"pricon pricon-left-skinny-arrow\"></i> pricon-left-skinny-arrow<br>\n<i class=\"pricon pricon-right-fat-arrow\"></i> pricon-right-fat-arrow<br>\n<i class=\"pricon pricon-left-fat-arrow\"></i> pricon-left-fat-arrow<br>\n<i class=\"pricon pricon-comments\"></i> pricon-comments<br>\n<i class=\"pricon pricon-close-o\"></i> pricon-close-o<br>\n<i class=\"pricon pricon-reply\"></i> pricon-reply<br>\n<i class=\"pricon pricon-thumbs-up\"></i> pricon-thumbs-up<br>\n<i class=\"pricon pricon-thumbs-up-o\"></i> pricon-thumbs-up-o<br>\n<i class=\"pricon pricon-eye\"></i> pricon-eye<br>\n<i class=\"pricon pricon-360\"></i> pricon-360<br>\n<i class=\"pricon pricon-eye-hide\"></i> pricon-eye-hide<br>\n<i class=\"pricon pricon-chevron-down\"></i> pricon-chevron-down<br>\n<i class=\"pricon pricon-chevron-left\"></i> pricon-chevron-left<br>\n<i class=\"pricon pricon-chevron-right\"></i> pricon-chevron-right<br>\n<i class=\"pricon pricon-chevron-up\"></i> pricon-chevron-up<br>\n<i class=\"pricon pricon-arrow-down\"></i> pricon-arrow-down<br>\n<i class=\"pricon pricon-arrow-up\"></i> pricon-arrow-up<br>\n<i class=\"pricon pricon-play\"></i> pricon-play<br>\n<i class=\"pricon pricon-pause\"></i> pricon-pause<br>\n<i class=\"pricon pricon-camera\"></i> pricon-camera<br>\n<i class=\"pricon pricon-enter\"></i> pricon-enter<br>\n<i class=\"pricon pricon-filter\"></i> pricon-filter<br>\n<i class=\"pricon pricon-pen\"></i> pricon-pen<br>\n<i class=\"pricon pricon-unchecked\"></i> pricon-unchecked<br>\n<i class=\"pricon pricon-bell\"></i> pricon-bell<br>\n<i class=\"pricon pricon-star-o\"></i> pricon-star-o<br>\n<i class=\"pricon pricon-menu-dots\"></i> pricon-menu-dots<br>",
+       "modifier": "\n<i class=\"pricon pricon-link-item\"></i> pricon-link-item<br>\n<i class=\"pricon pricon-user-o\"></i> pricon-user-o<br>\n<i class=\"pricon pricon-external-link\"></i> pricon-external-link<br>\n<i class=\"pricon pricon-file-pdf\"></i> pricon-file-pdf<br>\n<i class=\"pricon pricon-file-text\"></i> pricon-file-text<br>\n<i class=\"pricon pricon-file-image\"></i> pricon-file-image<br>\n<i class=\"pricon pricon-file-audio\"></i> pricon-file-audio<br>\n<i class=\"pricon pricon-file-video\"></i> pricon-file-video<br>\n<i class=\"pricon pricon-file-archive\"></i> pricon-file-archive<br>\n<i class=\"pricon pricon-github\"></i> pricon-github<br>\n<i class=\"pricon pricon-presentation\"></i> pricon-presentation<br>\n<i class=\"pricon pricon-file\"></i> pricon-file<br>\n<i class=\"pricon pricon-phone\"></i> pricon-phone<br>\n<i class=\"pricon pricon-smartphone\"></i> pricon-smartphone<br>\n<i class=\"pricon pricon-email\"></i> pricon-email<br>\n<i class=\"pricon pricon-picture\"></i> pricon-picture<br>\n<i class=\"pricon pricon-user\"></i> pricon-user<br>\n<i class=\"pricon pricon-picture-add\"></i> pricon-picture-add<br>\n<i class=\"pricon pricon-plus-o\"></i> pricon-plus-o<br>\n<i class=\"pricon pricon-caret-down\"></i> pricon-caret-down<br>\n<i class=\"pricon pricon-caret-up\"></i> pricon-caret-up<br>\n<i class=\"pricon pricon-check\"></i> pricon-check<br>\n<i class=\"pricon pricon-check-o\"></i> pricon-check-o<br>\n<i class=\"pricon pricon-notice-warning\"></i> pricon-notice-warning<br>\n<i class=\"pricon pricon-notice-danger\"></i> pricon-notice-danger<br>\n<i class=\"pricon pricon-compass\"></i> pricon-compass<br>\n<i class=\"pricon pricon-info-o\"></i> pricon-info-o<br>\n<i class=\"pricon pricon-question-o\"></i> pricon-question-o<br>\n<i class=\"pricon pricon-linkedin-square\"></i> pricon-linkedin-square<br>\n<i class=\"pricon pricon-twitter-square\"></i> pricon-twitter-square<br>\n<i class=\"pricon pricon-facebook-square\"></i> pricon-facebook-square<br>\n<i class=\"pricon pricon-instagram\"></i> pricon-instagram<br>\n<i class=\"pricon pricon-print\"></i> pricon-print<br>\n<i class=\"pricon pricon-listen-ear\"></i> pricon-listen-ear<br>\n<i class=\"pricon pricon-volume\"></i> pricon-volume<br>\n<i class=\"pricon pricon-search\"></i> pricon-search<br>\n<i class=\"pricon pricon-edit\"></i> pricon-edit<br>\n<i class=\"pricon pricon-minus-o\"></i> pricon-minus-o<br>\n<i class=\"pricon pricon-twitter\"></i> pricon-twitter<br>\n<i class=\"pricon pricon-linkedin\"></i> pricon-linkedin<br>\n<i class=\"pricon pricon-facebook\"></i> pricon-facebook<br>\n<i class=\"pricon pricon-settings\"></i> pricon-settings<br>\n<i class=\"pricon pricon-location-pin\"></i> pricon-location-pin<br>\n<i class=\"pricon pricon-next\"></i> pricon-next<br>\n<i class=\"pricon pricon-previous\"></i> pricon-previous<br>\n<i class=\"pricon pricon-back\"></i> pricon-back<br>\n<i class=\"pricon pricon-caret-right\"></i> pricon-caret-right<br>\n<i class=\"pricon pricon-play-o\"></i> pricon-play-o<br>\n<i class=\"pricon pricon-forbidden\"></i> pricon-forbidden<br>\n<i class=\"pricon pricon-sort-asc\"></i> pricon-sort-asc<br>\n<i class=\"pricon pricon-sort-desc\"></i> pricon-sort-desc<br>\n<i class=\"pricon pricon-sort\"></i> pricon-sort<br>\n<i class=\"pricon pricon-helsingborg\"></i> pricon-helsingborg<br>\n<i class=\"pricon pricon-calendar\"></i> pricon-calendar<br>\n<i class=\"pricon pricon-home\"></i> pricon-home<br>\n<i class=\"pricon pricon-language\"></i> pricon-language<br>\n<i class=\"pricon pricon-globe\"></i> pricon-globe<br>\n<i class=\"pricon pricon-star\"></i> pricon-star<br>\n<i class=\"pricon pricon-text-size\"></i> pricon-text-size<br>\n<i class=\"pricon pricon-share\"></i> pricon-share<br>\n<i class=\"pricon pricon-heart-minus\"></i> pricon-heart-minus<br>\n<i class=\"pricon pricon-heart-plus\"></i> pricon-heart-plus<br>\n<i class=\"pricon pricon-heart\"></i> pricon-heart<br>\n<i class=\"pricon pricon-standby\"></i> pricon-standby<br>\n<i class=\"pricon pricon-breifcase\"></i> pricon-breifcase<br>\n<i class=\"pricon pricon-lightbulb\"></i> pricon-lightbulb<br>\n<i class=\"pricon pricon-clipboard\"></i> pricon-clipboard<br>\n<i class=\"pricon pricon-picture-user\"></i> pricon-picture-user<br>\n<i class=\"pricon pricon-target\"></i> pricon-target<br>\n<i class=\"pricon pricon-paintbrush\"></i> pricon-paintbrush<br>\n<i class=\"pricon pricon-forbidden-circle\"></i> pricon-forbidden-circle<br>\n<i class=\"pricon pricon-smiley-angry\"></i> pricon-smiley-angry<br>\n<i class=\"pricon pricon-smiley-cool\"></i> pricon-smiley-cool<br>\n<i class=\"pricon pricon-smiley-cry\"></i> pricon-smiley-cry<br>\n<i class=\"pricon pricon-smiley-flirty\"></i> pricon-smiley-flirty<br>\n<i class=\"pricon pricon-smiley-oh\"></i> pricon-smiley-oh<br>\n<i class=\"pricon pricon-smiley-sad\"></i> pricon-smiley-sad<br>\n<i class=\"pricon pricon-smiley-smile\"></i> pricon-smiley-smile<br>\n<i class=\"pricon pricon-smiley-super-happy\"></i> pricon-smiley-super-happy<br>\n<i class=\"pricon pricon-smiley-thounge\"></i> pricon-smiley-thounge<br>\n<i class=\"pricon pricon-plus\"></i> pricon-plus<br>\n<i class=\"pricon pricon-notice-info\"></i> pricon-notice-info<br>\n<i class=\"pricon pricon-clock\"></i> pricon-clock<br>\n<i class=\"pricon pricon-wifi\"></i> pricon-wifi<br>\n<i class=\"pricon pricon-construction\"></i> pricon-construction<br>\n<i class=\"pricon pricon-sun\"></i> pricon-sun<br>\n<i class=\"pricon pricon-music\"></i> pricon-music<br>\n<i class=\"pricon pricon-calendar-check\"></i> pricon-calendar-check<br>\n<i class=\"pricon pricon-money\"></i> pricon-money<br>\n<i class=\"pricon pricon-bus\"></i> pricon-bus<br>\n<i class=\"pricon pricon-car\"></i> pricon-car<br>\n<i class=\"pricon pricon-house\"></i> pricon-house<br>\n<i class=\"pricon pricon-park\"></i> pricon-park<br>\n<i class=\"pricon pricon-bike\"></i> pricon-bike<br>\n<i class=\"pricon pricon-boat\"></i> pricon-boat<br>\n<i class=\"pricon pricon-coffee\"></i> pricon-coffee<br>\n<i class=\"pricon pricon-commute\"></i> pricon-commute<br>\n<i class=\"pricon pricon-healthcare\"></i> pricon-healthcare<br>\n<i class=\"pricon pricon-run\"></i> pricon-run<br>\n<i class=\"pricon pricon-swim\"></i> pricon-swim<br>\n<i class=\"pricon pricon-tent\"></i> pricon-tent<br>\n<i class=\"pricon pricon-apple\"></i> pricon-apple<br>\n<i class=\"pricon pricon-archive\"></i> pricon-archive<br>\n<i class=\"pricon pricon-bag\"></i> pricon-bag<br>\n<i class=\"pricon pricon-budget\"></i> pricon-budget<br>\n<i class=\"pricon pricon-diagram-increase\"></i> pricon-diagram-increase<br>\n<i class=\"pricon pricon-discuss\"></i> pricon-discuss<br>\n<i class=\"pricon pricon-dog\"></i> pricon-dog<br>\n<i class=\"pricon pricon-balloon\"></i> pricon-balloon<br>\n<i class=\"pricon pricon-handshake\"></i> pricon-handshake<br>\n<i class=\"pricon pricon-info\"></i> pricon-info<br>\n<i class=\"pricon pricon-man\"></i> pricon-man<br>\n<i class=\"pricon pricon-people\"></i> pricon-people<br>\n<i class=\"pricon pricon-recycling\"></i> pricon-recycling<br>\n<i class=\"pricon pricon-reload\"></i> pricon-reload<br>\n<i class=\"pricon pricon-sports\"></i> pricon-sports<br>\n<i class=\"pricon pricon-usb\"></i> pricon-usb<br>\n<i class=\"pricon pricon-vote\"></i> pricon-vote<br>\n<i class=\"pricon pricon-woman\"></i> pricon-woman<br>\n<i class=\"pricon pricon-cake\"></i> pricon-cake<br>\n<i class=\"pricon pricon-close\"></i> pricon-close<br>\n<i class=\"pricon pricon-down\"></i> pricon-down<br>\n<i class=\"pricon pricon-up\"></i> pricon-up<br>\n<i class=\"pricon pricon-sign-language\"></i> pricon-sign-language<br>\n<i class=\"pricon pricon-easy-read\"></i> pricon-easy-read<br>\n<i class=\"pricon pricon-union-jack\"></i> pricon-union-jack<br>\n<i class=\"pricon pricon-loading-o\"></i> pricon-loading-o<br>\n<i class=\"pricon pricon-right-skinny-arrow\"></i> pricon-right-skinny-arrow<br>\n<i class=\"pricon pricon-left-skinny-arrow\"></i> pricon-left-skinny-arrow<br>\n<i class=\"pricon pricon-right-fat-arrow\"></i> pricon-right-fat-arrow<br>\n<i class=\"pricon pricon-left-fat-arrow\"></i> pricon-left-fat-arrow<br>\n<i class=\"pricon pricon-comments\"></i> pricon-comments<br>\n<i class=\"pricon pricon-close-o\"></i> pricon-close-o<br>\n<i class=\"pricon pricon-reply\"></i> pricon-reply<br>\n<i class=\"pricon pricon-thumbs-up\"></i> pricon-thumbs-up<br>\n<i class=\"pricon pricon-thumbs-up-o\"></i> pricon-thumbs-up-o<br>\n<i class=\"pricon pricon-eye\"></i> pricon-eye<br>\n<i class=\"pricon pricon-360\"></i> pricon-360<br>\n<i class=\"pricon pricon-eye-hide\"></i> pricon-eye-hide<br>\n<i class=\"pricon pricon-chevron-down\"></i> pricon-chevron-down<br>\n<i class=\"pricon pricon-chevron-left\"></i> pricon-chevron-left<br>\n<i class=\"pricon pricon-chevron-right\"></i> pricon-chevron-right<br>\n<i class=\"pricon pricon-chevron-up\"></i> pricon-chevron-up<br>\n<i class=\"pricon pricon-arrow-down\"></i> pricon-arrow-down<br>\n<i class=\"pricon pricon-arrow-up\"></i> pricon-arrow-up<br>\n<i class=\"pricon pricon-play\"></i> pricon-play<br>\n<i class=\"pricon pricon-pause\"></i> pricon-pause<br>\n<i class=\"pricon pricon-camera\"></i> pricon-camera<br>\n<i class=\"pricon pricon-enter\"></i> pricon-enter<br>\n<i class=\"pricon pricon-filter\"></i> pricon-filter<br>\n<i class=\"pricon pricon-pen\"></i> pricon-pen<br>\n<i class=\"pricon pricon-unchecked\"></i> pricon-unchecked<br>\n<i class=\"pricon pricon-bell\"></i> pricon-bell<br>\n<i class=\"pricon pricon-star-o\"></i> pricon-star-o<br>\n<i class=\"pricon pricon-menu-dots\"></i> pricon-menu-dots<br>\n<i class=\"pricon pricon-group\"></i> pricon-group<br>",
        "path": "~/source/sass/_pricons.scss",
-       "example": "\n<i class=\"pricon pricon-link-item\"></i> pricon-link-item<br>\n<i class=\"pricon pricon-user-o\"></i> pricon-user-o<br>\n<i class=\"pricon pricon-external-link\"></i> pricon-external-link<br>\n<i class=\"pricon pricon-file-pdf\"></i> pricon-file-pdf<br>\n<i class=\"pricon pricon-file-text\"></i> pricon-file-text<br>\n<i class=\"pricon pricon-file-image\"></i> pricon-file-image<br>\n<i class=\"pricon pricon-file-audio\"></i> pricon-file-audio<br>\n<i class=\"pricon pricon-file-video\"></i> pricon-file-video<br>\n<i class=\"pricon pricon-file-archive\"></i> pricon-file-archive<br>\n<i class=\"pricon pricon-github\"></i> pricon-github<br>\n<i class=\"pricon pricon-presentation\"></i> pricon-presentation<br>\n<i class=\"pricon pricon-file\"></i> pricon-file<br>\n<i class=\"pricon pricon-phone\"></i> pricon-phone<br>\n<i class=\"pricon pricon-smartphone\"></i> pricon-smartphone<br>\n<i class=\"pricon pricon-email\"></i> pricon-email<br>\n<i class=\"pricon pricon-picture\"></i> pricon-picture<br>\n<i class=\"pricon pricon-user\"></i> pricon-user<br>\n<i class=\"pricon pricon-picture-add\"></i> pricon-picture-add<br>\n<i class=\"pricon pricon-plus-o\"></i> pricon-plus-o<br>\n<i class=\"pricon pricon-caret-down\"></i> pricon-caret-down<br>\n<i class=\"pricon pricon-caret-up\"></i> pricon-caret-up<br>\n<i class=\"pricon pricon-check\"></i> pricon-check<br>\n<i class=\"pricon pricon-check-o\"></i> pricon-check-o<br>\n<i class=\"pricon pricon-notice-warning\"></i> pricon-notice-warning<br>\n<i class=\"pricon pricon-notice-danger\"></i> pricon-notice-danger<br>\n<i class=\"pricon pricon-compass\"></i> pricon-compass<br>\n<i class=\"pricon pricon-info-o\"></i> pricon-info-o<br>\n<i class=\"pricon pricon-question-o\"></i> pricon-question-o<br>\n<i class=\"pricon pricon-linkedin-square\"></i> pricon-linkedin-square<br>\n<i class=\"pricon pricon-twitter-square\"></i> pricon-twitter-square<br>\n<i class=\"pricon pricon-facebook-square\"></i> pricon-facebook-square<br>\n<i class=\"pricon pricon-instagram\"></i> pricon-instagram<br>\n<i class=\"pricon pricon-print\"></i> pricon-print<br>\n<i class=\"pricon pricon-listen-ear\"></i> pricon-listen-ear<br>\n<i class=\"pricon pricon-volume\"></i> pricon-volume<br>\n<i class=\"pricon pricon-search\"></i> pricon-search<br>\n<i class=\"pricon pricon-edit\"></i> pricon-edit<br>\n<i class=\"pricon pricon-minus-o\"></i> pricon-minus-o<br>\n<i class=\"pricon pricon-twitter\"></i> pricon-twitter<br>\n<i class=\"pricon pricon-linkedin\"></i> pricon-linkedin<br>\n<i class=\"pricon pricon-facebook\"></i> pricon-facebook<br>\n<i class=\"pricon pricon-settings\"></i> pricon-settings<br>\n<i class=\"pricon pricon-location-pin\"></i> pricon-location-pin<br>\n<i class=\"pricon pricon-next\"></i> pricon-next<br>\n<i class=\"pricon pricon-previous\"></i> pricon-previous<br>\n<i class=\"pricon pricon-back\"></i> pricon-back<br>\n<i class=\"pricon pricon-caret-right\"></i> pricon-caret-right<br>\n<i class=\"pricon pricon-play-o\"></i> pricon-play-o<br>\n<i class=\"pricon pricon-forbidden\"></i> pricon-forbidden<br>\n<i class=\"pricon pricon-sort-asc\"></i> pricon-sort-asc<br>\n<i class=\"pricon pricon-sort-desc\"></i> pricon-sort-desc<br>\n<i class=\"pricon pricon-sort\"></i> pricon-sort<br>\n<i class=\"pricon pricon-helsingborg\"></i> pricon-helsingborg<br>\n<i class=\"pricon pricon-calendar\"></i> pricon-calendar<br>\n<i class=\"pricon pricon-home\"></i> pricon-home<br>\n<i class=\"pricon pricon-language\"></i> pricon-language<br>\n<i class=\"pricon pricon-globe\"></i> pricon-globe<br>\n<i class=\"pricon pricon-star\"></i> pricon-star<br>\n<i class=\"pricon pricon-text-size\"></i> pricon-text-size<br>\n<i class=\"pricon pricon-share\"></i> pricon-share<br>\n<i class=\"pricon pricon-heart-minus\"></i> pricon-heart-minus<br>\n<i class=\"pricon pricon-heart-plus\"></i> pricon-heart-plus<br>\n<i class=\"pricon pricon-heart\"></i> pricon-heart<br>\n<i class=\"pricon pricon-standby\"></i> pricon-standby<br>\n<i class=\"pricon pricon-breifcase\"></i> pricon-breifcase<br>\n<i class=\"pricon pricon-lightbulb\"></i> pricon-lightbulb<br>\n<i class=\"pricon pricon-clipboard\"></i> pricon-clipboard<br>\n<i class=\"pricon pricon-picture-user\"></i> pricon-picture-user<br>\n<i class=\"pricon pricon-target\"></i> pricon-target<br>\n<i class=\"pricon pricon-paintbrush\"></i> pricon-paintbrush<br>\n<i class=\"pricon pricon-forbidden-circle\"></i> pricon-forbidden-circle<br>\n<i class=\"pricon pricon-smiley-angry\"></i> pricon-smiley-angry<br>\n<i class=\"pricon pricon-smiley-cool\"></i> pricon-smiley-cool<br>\n<i class=\"pricon pricon-smiley-cry\"></i> pricon-smiley-cry<br>\n<i class=\"pricon pricon-smiley-flirty\"></i> pricon-smiley-flirty<br>\n<i class=\"pricon pricon-smiley-oh\"></i> pricon-smiley-oh<br>\n<i class=\"pricon pricon-smiley-sad\"></i> pricon-smiley-sad<br>\n<i class=\"pricon pricon-smiley-smile\"></i> pricon-smiley-smile<br>\n<i class=\"pricon pricon-smiley-super-happy\"></i> pricon-smiley-super-happy<br>\n<i class=\"pricon pricon-smiley-thounge\"></i> pricon-smiley-thounge<br>\n<i class=\"pricon pricon-plus\"></i> pricon-plus<br>\n<i class=\"pricon pricon-notice-info\"></i> pricon-notice-info<br>\n<i class=\"pricon pricon-clock\"></i> pricon-clock<br>\n<i class=\"pricon pricon-wifi\"></i> pricon-wifi<br>\n<i class=\"pricon pricon-construction\"></i> pricon-construction<br>\n<i class=\"pricon pricon-sun\"></i> pricon-sun<br>\n<i class=\"pricon pricon-music\"></i> pricon-music<br>\n<i class=\"pricon pricon-calendar-check\"></i> pricon-calendar-check<br>\n<i class=\"pricon pricon-money\"></i> pricon-money<br>\n<i class=\"pricon pricon-bus\"></i> pricon-bus<br>\n<i class=\"pricon pricon-car\"></i> pricon-car<br>\n<i class=\"pricon pricon-house\"></i> pricon-house<br>\n<i class=\"pricon pricon-park\"></i> pricon-park<br>\n<i class=\"pricon pricon-bike\"></i> pricon-bike<br>\n<i class=\"pricon pricon-boat\"></i> pricon-boat<br>\n<i class=\"pricon pricon-coffee\"></i> pricon-coffee<br>\n<i class=\"pricon pricon-commute\"></i> pricon-commute<br>\n<i class=\"pricon pricon-healthcare\"></i> pricon-healthcare<br>\n<i class=\"pricon pricon-run\"></i> pricon-run<br>\n<i class=\"pricon pricon-swim\"></i> pricon-swim<br>\n<i class=\"pricon pricon-tent\"></i> pricon-tent<br>\n<i class=\"pricon pricon-apple\"></i> pricon-apple<br>\n<i class=\"pricon pricon-archive\"></i> pricon-archive<br>\n<i class=\"pricon pricon-bag\"></i> pricon-bag<br>\n<i class=\"pricon pricon-budget\"></i> pricon-budget<br>\n<i class=\"pricon pricon-diagram-increase\"></i> pricon-diagram-increase<br>\n<i class=\"pricon pricon-discuss\"></i> pricon-discuss<br>\n<i class=\"pricon pricon-dog\"></i> pricon-dog<br>\n<i class=\"pricon pricon-balloon\"></i> pricon-balloon<br>\n<i class=\"pricon pricon-handshake\"></i> pricon-handshake<br>\n<i class=\"pricon pricon-info\"></i> pricon-info<br>\n<i class=\"pricon pricon-man\"></i> pricon-man<br>\n<i class=\"pricon pricon-people\"></i> pricon-people<br>\n<i class=\"pricon pricon-recycling\"></i> pricon-recycling<br>\n<i class=\"pricon pricon-reload\"></i> pricon-reload<br>\n<i class=\"pricon pricon-sports\"></i> pricon-sports<br>\n<i class=\"pricon pricon-usb\"></i> pricon-usb<br>\n<i class=\"pricon pricon-vote\"></i> pricon-vote<br>\n<i class=\"pricon pricon-woman\"></i> pricon-woman<br>\n<i class=\"pricon pricon-cake\"></i> pricon-cake<br>\n<i class=\"pricon pricon-close\"></i> pricon-close<br>\n<i class=\"pricon pricon-down\"></i> pricon-down<br>\n<i class=\"pricon pricon-up\"></i> pricon-up<br>\n<i class=\"pricon pricon-sign-language\"></i> pricon-sign-language<br>\n<i class=\"pricon pricon-easy-read\"></i> pricon-easy-read<br>\n<i class=\"pricon pricon-union-jack\"></i> pricon-union-jack<br>\n<i class=\"pricon pricon-loading-o\"></i> pricon-loading-o<br>\n<i class=\"pricon pricon-right-skinny-arrow\"></i> pricon-right-skinny-arrow<br>\n<i class=\"pricon pricon-left-skinny-arrow\"></i> pricon-left-skinny-arrow<br>\n<i class=\"pricon pricon-right-fat-arrow\"></i> pricon-right-fat-arrow<br>\n<i class=\"pricon pricon-left-fat-arrow\"></i> pricon-left-fat-arrow<br>\n<i class=\"pricon pricon-comments\"></i> pricon-comments<br>\n<i class=\"pricon pricon-close-o\"></i> pricon-close-o<br>\n<i class=\"pricon pricon-reply\"></i> pricon-reply<br>\n<i class=\"pricon pricon-thumbs-up\"></i> pricon-thumbs-up<br>\n<i class=\"pricon pricon-thumbs-up-o\"></i> pricon-thumbs-up-o<br>\n<i class=\"pricon pricon-eye\"></i> pricon-eye<br>\n<i class=\"pricon pricon-360\"></i> pricon-360<br>\n<i class=\"pricon pricon-eye-hide\"></i> pricon-eye-hide<br>\n<i class=\"pricon pricon-chevron-down\"></i> pricon-chevron-down<br>\n<i class=\"pricon pricon-chevron-left\"></i> pricon-chevron-left<br>\n<i class=\"pricon pricon-chevron-right\"></i> pricon-chevron-right<br>\n<i class=\"pricon pricon-chevron-up\"></i> pricon-chevron-up<br>\n<i class=\"pricon pricon-arrow-down\"></i> pricon-arrow-down<br>\n<i class=\"pricon pricon-arrow-up\"></i> pricon-arrow-up<br>\n<i class=\"pricon pricon-play\"></i> pricon-play<br>\n<i class=\"pricon pricon-pause\"></i> pricon-pause<br>\n<i class=\"pricon pricon-camera\"></i> pricon-camera<br>\n<i class=\"pricon pricon-enter\"></i> pricon-enter<br>\n<i class=\"pricon pricon-filter\"></i> pricon-filter<br>\n<i class=\"pricon pricon-pen\"></i> pricon-pen<br>\n<i class=\"pricon pricon-unchecked\"></i> pricon-unchecked<br>\n<i class=\"pricon pricon-bell\"></i> pricon-bell<br>\n<i class=\"pricon pricon-star-o\"></i> pricon-star-o<br>\n<i class=\"pricon pricon-menu-dots\"></i> pricon-menu-dots<br>",
-       "escaped": "\n&lt;i class=\"pricon pricon-link-item\"&gt;&lt;/i&gt; pricon-link-item&lt;br&gt;\n&lt;i class=\"pricon pricon-user-o\"&gt;&lt;/i&gt; pricon-user-o&lt;br&gt;\n&lt;i class=\"pricon pricon-external-link\"&gt;&lt;/i&gt; pricon-external-link&lt;br&gt;\n&lt;i class=\"pricon pricon-file-pdf\"&gt;&lt;/i&gt; pricon-file-pdf&lt;br&gt;\n&lt;i class=\"pricon pricon-file-text\"&gt;&lt;/i&gt; pricon-file-text&lt;br&gt;\n&lt;i class=\"pricon pricon-file-image\"&gt;&lt;/i&gt; pricon-file-image&lt;br&gt;\n&lt;i class=\"pricon pricon-file-audio\"&gt;&lt;/i&gt; pricon-file-audio&lt;br&gt;\n&lt;i class=\"pricon pricon-file-video\"&gt;&lt;/i&gt; pricon-file-video&lt;br&gt;\n&lt;i class=\"pricon pricon-file-archive\"&gt;&lt;/i&gt; pricon-file-archive&lt;br&gt;\n&lt;i class=\"pricon pricon-github\"&gt;&lt;/i&gt; pricon-github&lt;br&gt;\n&lt;i class=\"pricon pricon-presentation\"&gt;&lt;/i&gt; pricon-presentation&lt;br&gt;\n&lt;i class=\"pricon pricon-file\"&gt;&lt;/i&gt; pricon-file&lt;br&gt;\n&lt;i class=\"pricon pricon-phone\"&gt;&lt;/i&gt; pricon-phone&lt;br&gt;\n&lt;i class=\"pricon pricon-smartphone\"&gt;&lt;/i&gt; pricon-smartphone&lt;br&gt;\n&lt;i class=\"pricon pricon-email\"&gt;&lt;/i&gt; pricon-email&lt;br&gt;\n&lt;i class=\"pricon pricon-picture\"&gt;&lt;/i&gt; pricon-picture&lt;br&gt;\n&lt;i class=\"pricon pricon-user\"&gt;&lt;/i&gt; pricon-user&lt;br&gt;\n&lt;i class=\"pricon pricon-picture-add\"&gt;&lt;/i&gt; pricon-picture-add&lt;br&gt;\n&lt;i class=\"pricon pricon-plus-o\"&gt;&lt;/i&gt; pricon-plus-o&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-down\"&gt;&lt;/i&gt; pricon-caret-down&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-up\"&gt;&lt;/i&gt; pricon-caret-up&lt;br&gt;\n&lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; pricon-check&lt;br&gt;\n&lt;i class=\"pricon pricon-check-o\"&gt;&lt;/i&gt; pricon-check-o&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; pricon-notice-warning&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-danger\"&gt;&lt;/i&gt; pricon-notice-danger&lt;br&gt;\n&lt;i class=\"pricon pricon-compass\"&gt;&lt;/i&gt; pricon-compass&lt;br&gt;\n&lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; pricon-info-o&lt;br&gt;\n&lt;i class=\"pricon pricon-question-o\"&gt;&lt;/i&gt; pricon-question-o&lt;br&gt;\n&lt;i class=\"pricon pricon-linkedin-square\"&gt;&lt;/i&gt; pricon-linkedin-square&lt;br&gt;\n&lt;i class=\"pricon pricon-twitter-square\"&gt;&lt;/i&gt; pricon-twitter-square&lt;br&gt;\n&lt;i class=\"pricon pricon-facebook-square\"&gt;&lt;/i&gt; pricon-facebook-square&lt;br&gt;\n&lt;i class=\"pricon pricon-instagram\"&gt;&lt;/i&gt; pricon-instagram&lt;br&gt;\n&lt;i class=\"pricon pricon-print\"&gt;&lt;/i&gt; pricon-print&lt;br&gt;\n&lt;i class=\"pricon pricon-listen-ear\"&gt;&lt;/i&gt; pricon-listen-ear&lt;br&gt;\n&lt;i class=\"pricon pricon-volume\"&gt;&lt;/i&gt; pricon-volume&lt;br&gt;\n&lt;i class=\"pricon pricon-search\"&gt;&lt;/i&gt; pricon-search&lt;br&gt;\n&lt;i class=\"pricon pricon-edit\"&gt;&lt;/i&gt; pricon-edit&lt;br&gt;\n&lt;i class=\"pricon pricon-minus-o\"&gt;&lt;/i&gt; pricon-minus-o&lt;br&gt;\n&lt;i class=\"pricon pricon-twitter\"&gt;&lt;/i&gt; pricon-twitter&lt;br&gt;\n&lt;i class=\"pricon pricon-linkedin\"&gt;&lt;/i&gt; pricon-linkedin&lt;br&gt;\n&lt;i class=\"pricon pricon-facebook\"&gt;&lt;/i&gt; pricon-facebook&lt;br&gt;\n&lt;i class=\"pricon pricon-settings\"&gt;&lt;/i&gt; pricon-settings&lt;br&gt;\n&lt;i class=\"pricon pricon-location-pin\"&gt;&lt;/i&gt; pricon-location-pin&lt;br&gt;\n&lt;i class=\"pricon pricon-next\"&gt;&lt;/i&gt; pricon-next&lt;br&gt;\n&lt;i class=\"pricon pricon-previous\"&gt;&lt;/i&gt; pricon-previous&lt;br&gt;\n&lt;i class=\"pricon pricon-back\"&gt;&lt;/i&gt; pricon-back&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-right\"&gt;&lt;/i&gt; pricon-caret-right&lt;br&gt;\n&lt;i class=\"pricon pricon-play-o\"&gt;&lt;/i&gt; pricon-play-o&lt;br&gt;\n&lt;i class=\"pricon pricon-forbidden\"&gt;&lt;/i&gt; pricon-forbidden&lt;br&gt;\n&lt;i class=\"pricon pricon-sort-asc\"&gt;&lt;/i&gt; pricon-sort-asc&lt;br&gt;\n&lt;i class=\"pricon pricon-sort-desc\"&gt;&lt;/i&gt; pricon-sort-desc&lt;br&gt;\n&lt;i class=\"pricon pricon-sort\"&gt;&lt;/i&gt; pricon-sort&lt;br&gt;\n&lt;i class=\"pricon pricon-helsingborg\"&gt;&lt;/i&gt; pricon-helsingborg&lt;br&gt;\n&lt;i class=\"pricon pricon-calendar\"&gt;&lt;/i&gt; pricon-calendar&lt;br&gt;\n&lt;i class=\"pricon pricon-home\"&gt;&lt;/i&gt; pricon-home&lt;br&gt;\n&lt;i class=\"pricon pricon-language\"&gt;&lt;/i&gt; pricon-language&lt;br&gt;\n&lt;i class=\"pricon pricon-globe\"&gt;&lt;/i&gt; pricon-globe&lt;br&gt;\n&lt;i class=\"pricon pricon-star\"&gt;&lt;/i&gt; pricon-star&lt;br&gt;\n&lt;i class=\"pricon pricon-text-size\"&gt;&lt;/i&gt; pricon-text-size&lt;br&gt;\n&lt;i class=\"pricon pricon-share\"&gt;&lt;/i&gt; pricon-share&lt;br&gt;\n&lt;i class=\"pricon pricon-heart-minus\"&gt;&lt;/i&gt; pricon-heart-minus&lt;br&gt;\n&lt;i class=\"pricon pricon-heart-plus\"&gt;&lt;/i&gt; pricon-heart-plus&lt;br&gt;\n&lt;i class=\"pricon pricon-heart\"&gt;&lt;/i&gt; pricon-heart&lt;br&gt;\n&lt;i class=\"pricon pricon-standby\"&gt;&lt;/i&gt; pricon-standby&lt;br&gt;\n&lt;i class=\"pricon pricon-breifcase\"&gt;&lt;/i&gt; pricon-breifcase&lt;br&gt;\n&lt;i class=\"pricon pricon-lightbulb\"&gt;&lt;/i&gt; pricon-lightbulb&lt;br&gt;\n&lt;i class=\"pricon pricon-clipboard\"&gt;&lt;/i&gt; pricon-clipboard&lt;br&gt;\n&lt;i class=\"pricon pricon-picture-user\"&gt;&lt;/i&gt; pricon-picture-user&lt;br&gt;\n&lt;i class=\"pricon pricon-target\"&gt;&lt;/i&gt; pricon-target&lt;br&gt;\n&lt;i class=\"pricon pricon-paintbrush\"&gt;&lt;/i&gt; pricon-paintbrush&lt;br&gt;\n&lt;i class=\"pricon pricon-forbidden-circle\"&gt;&lt;/i&gt; pricon-forbidden-circle&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-angry\"&gt;&lt;/i&gt; pricon-smiley-angry&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-cool\"&gt;&lt;/i&gt; pricon-smiley-cool&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-cry\"&gt;&lt;/i&gt; pricon-smiley-cry&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-flirty\"&gt;&lt;/i&gt; pricon-smiley-flirty&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-oh\"&gt;&lt;/i&gt; pricon-smiley-oh&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-sad\"&gt;&lt;/i&gt; pricon-smiley-sad&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-smile\"&gt;&lt;/i&gt; pricon-smiley-smile&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-super-happy\"&gt;&lt;/i&gt; pricon-smiley-super-happy&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-thounge\"&gt;&lt;/i&gt; pricon-smiley-thounge&lt;br&gt;\n&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt; pricon-plus&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-info\"&gt;&lt;/i&gt; pricon-notice-info&lt;br&gt;\n&lt;i class=\"pricon pricon-clock\"&gt;&lt;/i&gt; pricon-clock&lt;br&gt;\n&lt;i class=\"pricon pricon-wifi\"&gt;&lt;/i&gt; pricon-wifi&lt;br&gt;\n&lt;i class=\"pricon pricon-construction\"&gt;&lt;/i&gt; pricon-construction&lt;br&gt;\n&lt;i class=\"pricon pricon-sun\"&gt;&lt;/i&gt; pricon-sun&lt;br&gt;\n&lt;i class=\"pricon pricon-music\"&gt;&lt;/i&gt; pricon-music&lt;br&gt;\n&lt;i class=\"pricon pricon-calendar-check\"&gt;&lt;/i&gt; pricon-calendar-check&lt;br&gt;\n&lt;i class=\"pricon pricon-money\"&gt;&lt;/i&gt; pricon-money&lt;br&gt;\n&lt;i class=\"pricon pricon-bus\"&gt;&lt;/i&gt; pricon-bus&lt;br&gt;\n&lt;i class=\"pricon pricon-car\"&gt;&lt;/i&gt; pricon-car&lt;br&gt;\n&lt;i class=\"pricon pricon-house\"&gt;&lt;/i&gt; pricon-house&lt;br&gt;\n&lt;i class=\"pricon pricon-park\"&gt;&lt;/i&gt; pricon-park&lt;br&gt;\n&lt;i class=\"pricon pricon-bike\"&gt;&lt;/i&gt; pricon-bike&lt;br&gt;\n&lt;i class=\"pricon pricon-boat\"&gt;&lt;/i&gt; pricon-boat&lt;br&gt;\n&lt;i class=\"pricon pricon-coffee\"&gt;&lt;/i&gt; pricon-coffee&lt;br&gt;\n&lt;i class=\"pricon pricon-commute\"&gt;&lt;/i&gt; pricon-commute&lt;br&gt;\n&lt;i class=\"pricon pricon-healthcare\"&gt;&lt;/i&gt; pricon-healthcare&lt;br&gt;\n&lt;i class=\"pricon pricon-run\"&gt;&lt;/i&gt; pricon-run&lt;br&gt;\n&lt;i class=\"pricon pricon-swim\"&gt;&lt;/i&gt; pricon-swim&lt;br&gt;\n&lt;i class=\"pricon pricon-tent\"&gt;&lt;/i&gt; pricon-tent&lt;br&gt;\n&lt;i class=\"pricon pricon-apple\"&gt;&lt;/i&gt; pricon-apple&lt;br&gt;\n&lt;i class=\"pricon pricon-archive\"&gt;&lt;/i&gt; pricon-archive&lt;br&gt;\n&lt;i class=\"pricon pricon-bag\"&gt;&lt;/i&gt; pricon-bag&lt;br&gt;\n&lt;i class=\"pricon pricon-budget\"&gt;&lt;/i&gt; pricon-budget&lt;br&gt;\n&lt;i class=\"pricon pricon-diagram-increase\"&gt;&lt;/i&gt; pricon-diagram-increase&lt;br&gt;\n&lt;i class=\"pricon pricon-discuss\"&gt;&lt;/i&gt; pricon-discuss&lt;br&gt;\n&lt;i class=\"pricon pricon-dog\"&gt;&lt;/i&gt; pricon-dog&lt;br&gt;\n&lt;i class=\"pricon pricon-balloon\"&gt;&lt;/i&gt; pricon-balloon&lt;br&gt;\n&lt;i class=\"pricon pricon-handshake\"&gt;&lt;/i&gt; pricon-handshake&lt;br&gt;\n&lt;i class=\"pricon pricon-info\"&gt;&lt;/i&gt; pricon-info&lt;br&gt;\n&lt;i class=\"pricon pricon-man\"&gt;&lt;/i&gt; pricon-man&lt;br&gt;\n&lt;i class=\"pricon pricon-people\"&gt;&lt;/i&gt; pricon-people&lt;br&gt;\n&lt;i class=\"pricon pricon-recycling\"&gt;&lt;/i&gt; pricon-recycling&lt;br&gt;\n&lt;i class=\"pricon pricon-reload\"&gt;&lt;/i&gt; pricon-reload&lt;br&gt;\n&lt;i class=\"pricon pricon-sports\"&gt;&lt;/i&gt; pricon-sports&lt;br&gt;\n&lt;i class=\"pricon pricon-usb\"&gt;&lt;/i&gt; pricon-usb&lt;br&gt;\n&lt;i class=\"pricon pricon-vote\"&gt;&lt;/i&gt; pricon-vote&lt;br&gt;\n&lt;i class=\"pricon pricon-woman\"&gt;&lt;/i&gt; pricon-woman&lt;br&gt;\n&lt;i class=\"pricon pricon-cake\"&gt;&lt;/i&gt; pricon-cake&lt;br&gt;\n&lt;i class=\"pricon pricon-close\"&gt;&lt;/i&gt; pricon-close&lt;br&gt;\n&lt;i class=\"pricon pricon-down\"&gt;&lt;/i&gt; pricon-down&lt;br&gt;\n&lt;i class=\"pricon pricon-up\"&gt;&lt;/i&gt; pricon-up&lt;br&gt;\n&lt;i class=\"pricon pricon-sign-language\"&gt;&lt;/i&gt; pricon-sign-language&lt;br&gt;\n&lt;i class=\"pricon pricon-easy-read\"&gt;&lt;/i&gt; pricon-easy-read&lt;br&gt;\n&lt;i class=\"pricon pricon-union-jack\"&gt;&lt;/i&gt; pricon-union-jack&lt;br&gt;\n&lt;i class=\"pricon pricon-loading-o\"&gt;&lt;/i&gt; pricon-loading-o&lt;br&gt;\n&lt;i class=\"pricon pricon-right-skinny-arrow\"&gt;&lt;/i&gt; pricon-right-skinny-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-left-skinny-arrow\"&gt;&lt;/i&gt; pricon-left-skinny-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-right-fat-arrow\"&gt;&lt;/i&gt; pricon-right-fat-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-left-fat-arrow\"&gt;&lt;/i&gt; pricon-left-fat-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-comments\"&gt;&lt;/i&gt; pricon-comments&lt;br&gt;\n&lt;i class=\"pricon pricon-close-o\"&gt;&lt;/i&gt; pricon-close-o&lt;br&gt;\n&lt;i class=\"pricon pricon-reply\"&gt;&lt;/i&gt; pricon-reply&lt;br&gt;\n&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; pricon-thumbs-up&lt;br&gt;\n&lt;i class=\"pricon pricon-thumbs-up-o\"&gt;&lt;/i&gt; pricon-thumbs-up-o&lt;br&gt;\n&lt;i class=\"pricon pricon-eye\"&gt;&lt;/i&gt; pricon-eye&lt;br&gt;\n&lt;i class=\"pricon pricon-360\"&gt;&lt;/i&gt; pricon-360&lt;br&gt;\n&lt;i class=\"pricon pricon-eye-hide\"&gt;&lt;/i&gt; pricon-eye-hide&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-down\"&gt;&lt;/i&gt; pricon-chevron-down&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-left\"&gt;&lt;/i&gt; pricon-chevron-left&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-right\"&gt;&lt;/i&gt; pricon-chevron-right&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-up\"&gt;&lt;/i&gt; pricon-chevron-up&lt;br&gt;\n&lt;i class=\"pricon pricon-arrow-down\"&gt;&lt;/i&gt; pricon-arrow-down&lt;br&gt;\n&lt;i class=\"pricon pricon-arrow-up\"&gt;&lt;/i&gt; pricon-arrow-up&lt;br&gt;\n&lt;i class=\"pricon pricon-play\"&gt;&lt;/i&gt; pricon-play&lt;br&gt;\n&lt;i class=\"pricon pricon-pause\"&gt;&lt;/i&gt; pricon-pause&lt;br&gt;\n&lt;i class=\"pricon pricon-camera\"&gt;&lt;/i&gt; pricon-camera&lt;br&gt;\n&lt;i class=\"pricon pricon-enter\"&gt;&lt;/i&gt; pricon-enter&lt;br&gt;\n&lt;i class=\"pricon pricon-filter\"&gt;&lt;/i&gt; pricon-filter&lt;br&gt;\n&lt;i class=\"pricon pricon-pen\"&gt;&lt;/i&gt; pricon-pen&lt;br&gt;\n&lt;i class=\"pricon pricon-unchecked\"&gt;&lt;/i&gt; pricon-unchecked&lt;br&gt;\n&lt;i class=\"pricon pricon-bell\"&gt;&lt;/i&gt; pricon-bell&lt;br&gt;\n&lt;i class=\"pricon pricon-star-o\"&gt;&lt;/i&gt; pricon-star-o&lt;br&gt;\n&lt;i class=\"pricon pricon-menu-dots\"&gt;&lt;/i&gt; pricon-menu-dots&lt;br&gt;"
+       "example": "\n<i class=\"pricon pricon-link-item\"></i> pricon-link-item<br>\n<i class=\"pricon pricon-user-o\"></i> pricon-user-o<br>\n<i class=\"pricon pricon-external-link\"></i> pricon-external-link<br>\n<i class=\"pricon pricon-file-pdf\"></i> pricon-file-pdf<br>\n<i class=\"pricon pricon-file-text\"></i> pricon-file-text<br>\n<i class=\"pricon pricon-file-image\"></i> pricon-file-image<br>\n<i class=\"pricon pricon-file-audio\"></i> pricon-file-audio<br>\n<i class=\"pricon pricon-file-video\"></i> pricon-file-video<br>\n<i class=\"pricon pricon-file-archive\"></i> pricon-file-archive<br>\n<i class=\"pricon pricon-github\"></i> pricon-github<br>\n<i class=\"pricon pricon-presentation\"></i> pricon-presentation<br>\n<i class=\"pricon pricon-file\"></i> pricon-file<br>\n<i class=\"pricon pricon-phone\"></i> pricon-phone<br>\n<i class=\"pricon pricon-smartphone\"></i> pricon-smartphone<br>\n<i class=\"pricon pricon-email\"></i> pricon-email<br>\n<i class=\"pricon pricon-picture\"></i> pricon-picture<br>\n<i class=\"pricon pricon-user\"></i> pricon-user<br>\n<i class=\"pricon pricon-picture-add\"></i> pricon-picture-add<br>\n<i class=\"pricon pricon-plus-o\"></i> pricon-plus-o<br>\n<i class=\"pricon pricon-caret-down\"></i> pricon-caret-down<br>\n<i class=\"pricon pricon-caret-up\"></i> pricon-caret-up<br>\n<i class=\"pricon pricon-check\"></i> pricon-check<br>\n<i class=\"pricon pricon-check-o\"></i> pricon-check-o<br>\n<i class=\"pricon pricon-notice-warning\"></i> pricon-notice-warning<br>\n<i class=\"pricon pricon-notice-danger\"></i> pricon-notice-danger<br>\n<i class=\"pricon pricon-compass\"></i> pricon-compass<br>\n<i class=\"pricon pricon-info-o\"></i> pricon-info-o<br>\n<i class=\"pricon pricon-question-o\"></i> pricon-question-o<br>\n<i class=\"pricon pricon-linkedin-square\"></i> pricon-linkedin-square<br>\n<i class=\"pricon pricon-twitter-square\"></i> pricon-twitter-square<br>\n<i class=\"pricon pricon-facebook-square\"></i> pricon-facebook-square<br>\n<i class=\"pricon pricon-instagram\"></i> pricon-instagram<br>\n<i class=\"pricon pricon-print\"></i> pricon-print<br>\n<i class=\"pricon pricon-listen-ear\"></i> pricon-listen-ear<br>\n<i class=\"pricon pricon-volume\"></i> pricon-volume<br>\n<i class=\"pricon pricon-search\"></i> pricon-search<br>\n<i class=\"pricon pricon-edit\"></i> pricon-edit<br>\n<i class=\"pricon pricon-minus-o\"></i> pricon-minus-o<br>\n<i class=\"pricon pricon-twitter\"></i> pricon-twitter<br>\n<i class=\"pricon pricon-linkedin\"></i> pricon-linkedin<br>\n<i class=\"pricon pricon-facebook\"></i> pricon-facebook<br>\n<i class=\"pricon pricon-settings\"></i> pricon-settings<br>\n<i class=\"pricon pricon-location-pin\"></i> pricon-location-pin<br>\n<i class=\"pricon pricon-next\"></i> pricon-next<br>\n<i class=\"pricon pricon-previous\"></i> pricon-previous<br>\n<i class=\"pricon pricon-back\"></i> pricon-back<br>\n<i class=\"pricon pricon-caret-right\"></i> pricon-caret-right<br>\n<i class=\"pricon pricon-play-o\"></i> pricon-play-o<br>\n<i class=\"pricon pricon-forbidden\"></i> pricon-forbidden<br>\n<i class=\"pricon pricon-sort-asc\"></i> pricon-sort-asc<br>\n<i class=\"pricon pricon-sort-desc\"></i> pricon-sort-desc<br>\n<i class=\"pricon pricon-sort\"></i> pricon-sort<br>\n<i class=\"pricon pricon-helsingborg\"></i> pricon-helsingborg<br>\n<i class=\"pricon pricon-calendar\"></i> pricon-calendar<br>\n<i class=\"pricon pricon-home\"></i> pricon-home<br>\n<i class=\"pricon pricon-language\"></i> pricon-language<br>\n<i class=\"pricon pricon-globe\"></i> pricon-globe<br>\n<i class=\"pricon pricon-star\"></i> pricon-star<br>\n<i class=\"pricon pricon-text-size\"></i> pricon-text-size<br>\n<i class=\"pricon pricon-share\"></i> pricon-share<br>\n<i class=\"pricon pricon-heart-minus\"></i> pricon-heart-minus<br>\n<i class=\"pricon pricon-heart-plus\"></i> pricon-heart-plus<br>\n<i class=\"pricon pricon-heart\"></i> pricon-heart<br>\n<i class=\"pricon pricon-standby\"></i> pricon-standby<br>\n<i class=\"pricon pricon-breifcase\"></i> pricon-breifcase<br>\n<i class=\"pricon pricon-lightbulb\"></i> pricon-lightbulb<br>\n<i class=\"pricon pricon-clipboard\"></i> pricon-clipboard<br>\n<i class=\"pricon pricon-picture-user\"></i> pricon-picture-user<br>\n<i class=\"pricon pricon-target\"></i> pricon-target<br>\n<i class=\"pricon pricon-paintbrush\"></i> pricon-paintbrush<br>\n<i class=\"pricon pricon-forbidden-circle\"></i> pricon-forbidden-circle<br>\n<i class=\"pricon pricon-smiley-angry\"></i> pricon-smiley-angry<br>\n<i class=\"pricon pricon-smiley-cool\"></i> pricon-smiley-cool<br>\n<i class=\"pricon pricon-smiley-cry\"></i> pricon-smiley-cry<br>\n<i class=\"pricon pricon-smiley-flirty\"></i> pricon-smiley-flirty<br>\n<i class=\"pricon pricon-smiley-oh\"></i> pricon-smiley-oh<br>\n<i class=\"pricon pricon-smiley-sad\"></i> pricon-smiley-sad<br>\n<i class=\"pricon pricon-smiley-smile\"></i> pricon-smiley-smile<br>\n<i class=\"pricon pricon-smiley-super-happy\"></i> pricon-smiley-super-happy<br>\n<i class=\"pricon pricon-smiley-thounge\"></i> pricon-smiley-thounge<br>\n<i class=\"pricon pricon-plus\"></i> pricon-plus<br>\n<i class=\"pricon pricon-notice-info\"></i> pricon-notice-info<br>\n<i class=\"pricon pricon-clock\"></i> pricon-clock<br>\n<i class=\"pricon pricon-wifi\"></i> pricon-wifi<br>\n<i class=\"pricon pricon-construction\"></i> pricon-construction<br>\n<i class=\"pricon pricon-sun\"></i> pricon-sun<br>\n<i class=\"pricon pricon-music\"></i> pricon-music<br>\n<i class=\"pricon pricon-calendar-check\"></i> pricon-calendar-check<br>\n<i class=\"pricon pricon-money\"></i> pricon-money<br>\n<i class=\"pricon pricon-bus\"></i> pricon-bus<br>\n<i class=\"pricon pricon-car\"></i> pricon-car<br>\n<i class=\"pricon pricon-house\"></i> pricon-house<br>\n<i class=\"pricon pricon-park\"></i> pricon-park<br>\n<i class=\"pricon pricon-bike\"></i> pricon-bike<br>\n<i class=\"pricon pricon-boat\"></i> pricon-boat<br>\n<i class=\"pricon pricon-coffee\"></i> pricon-coffee<br>\n<i class=\"pricon pricon-commute\"></i> pricon-commute<br>\n<i class=\"pricon pricon-healthcare\"></i> pricon-healthcare<br>\n<i class=\"pricon pricon-run\"></i> pricon-run<br>\n<i class=\"pricon pricon-swim\"></i> pricon-swim<br>\n<i class=\"pricon pricon-tent\"></i> pricon-tent<br>\n<i class=\"pricon pricon-apple\"></i> pricon-apple<br>\n<i class=\"pricon pricon-archive\"></i> pricon-archive<br>\n<i class=\"pricon pricon-bag\"></i> pricon-bag<br>\n<i class=\"pricon pricon-budget\"></i> pricon-budget<br>\n<i class=\"pricon pricon-diagram-increase\"></i> pricon-diagram-increase<br>\n<i class=\"pricon pricon-discuss\"></i> pricon-discuss<br>\n<i class=\"pricon pricon-dog\"></i> pricon-dog<br>\n<i class=\"pricon pricon-balloon\"></i> pricon-balloon<br>\n<i class=\"pricon pricon-handshake\"></i> pricon-handshake<br>\n<i class=\"pricon pricon-info\"></i> pricon-info<br>\n<i class=\"pricon pricon-man\"></i> pricon-man<br>\n<i class=\"pricon pricon-people\"></i> pricon-people<br>\n<i class=\"pricon pricon-recycling\"></i> pricon-recycling<br>\n<i class=\"pricon pricon-reload\"></i> pricon-reload<br>\n<i class=\"pricon pricon-sports\"></i> pricon-sports<br>\n<i class=\"pricon pricon-usb\"></i> pricon-usb<br>\n<i class=\"pricon pricon-vote\"></i> pricon-vote<br>\n<i class=\"pricon pricon-woman\"></i> pricon-woman<br>\n<i class=\"pricon pricon-cake\"></i> pricon-cake<br>\n<i class=\"pricon pricon-close\"></i> pricon-close<br>\n<i class=\"pricon pricon-down\"></i> pricon-down<br>\n<i class=\"pricon pricon-up\"></i> pricon-up<br>\n<i class=\"pricon pricon-sign-language\"></i> pricon-sign-language<br>\n<i class=\"pricon pricon-easy-read\"></i> pricon-easy-read<br>\n<i class=\"pricon pricon-union-jack\"></i> pricon-union-jack<br>\n<i class=\"pricon pricon-loading-o\"></i> pricon-loading-o<br>\n<i class=\"pricon pricon-right-skinny-arrow\"></i> pricon-right-skinny-arrow<br>\n<i class=\"pricon pricon-left-skinny-arrow\"></i> pricon-left-skinny-arrow<br>\n<i class=\"pricon pricon-right-fat-arrow\"></i> pricon-right-fat-arrow<br>\n<i class=\"pricon pricon-left-fat-arrow\"></i> pricon-left-fat-arrow<br>\n<i class=\"pricon pricon-comments\"></i> pricon-comments<br>\n<i class=\"pricon pricon-close-o\"></i> pricon-close-o<br>\n<i class=\"pricon pricon-reply\"></i> pricon-reply<br>\n<i class=\"pricon pricon-thumbs-up\"></i> pricon-thumbs-up<br>\n<i class=\"pricon pricon-thumbs-up-o\"></i> pricon-thumbs-up-o<br>\n<i class=\"pricon pricon-eye\"></i> pricon-eye<br>\n<i class=\"pricon pricon-360\"></i> pricon-360<br>\n<i class=\"pricon pricon-eye-hide\"></i> pricon-eye-hide<br>\n<i class=\"pricon pricon-chevron-down\"></i> pricon-chevron-down<br>\n<i class=\"pricon pricon-chevron-left\"></i> pricon-chevron-left<br>\n<i class=\"pricon pricon-chevron-right\"></i> pricon-chevron-right<br>\n<i class=\"pricon pricon-chevron-up\"></i> pricon-chevron-up<br>\n<i class=\"pricon pricon-arrow-down\"></i> pricon-arrow-down<br>\n<i class=\"pricon pricon-arrow-up\"></i> pricon-arrow-up<br>\n<i class=\"pricon pricon-play\"></i> pricon-play<br>\n<i class=\"pricon pricon-pause\"></i> pricon-pause<br>\n<i class=\"pricon pricon-camera\"></i> pricon-camera<br>\n<i class=\"pricon pricon-enter\"></i> pricon-enter<br>\n<i class=\"pricon pricon-filter\"></i> pricon-filter<br>\n<i class=\"pricon pricon-pen\"></i> pricon-pen<br>\n<i class=\"pricon pricon-unchecked\"></i> pricon-unchecked<br>\n<i class=\"pricon pricon-bell\"></i> pricon-bell<br>\n<i class=\"pricon pricon-star-o\"></i> pricon-star-o<br>\n<i class=\"pricon pricon-menu-dots\"></i> pricon-menu-dots<br>\n<i class=\"pricon pricon-group\"></i> pricon-group<br>",
+       "escaped": "\n&lt;i class=\"pricon pricon-link-item\"&gt;&lt;/i&gt; pricon-link-item&lt;br&gt;\n&lt;i class=\"pricon pricon-user-o\"&gt;&lt;/i&gt; pricon-user-o&lt;br&gt;\n&lt;i class=\"pricon pricon-external-link\"&gt;&lt;/i&gt; pricon-external-link&lt;br&gt;\n&lt;i class=\"pricon pricon-file-pdf\"&gt;&lt;/i&gt; pricon-file-pdf&lt;br&gt;\n&lt;i class=\"pricon pricon-file-text\"&gt;&lt;/i&gt; pricon-file-text&lt;br&gt;\n&lt;i class=\"pricon pricon-file-image\"&gt;&lt;/i&gt; pricon-file-image&lt;br&gt;\n&lt;i class=\"pricon pricon-file-audio\"&gt;&lt;/i&gt; pricon-file-audio&lt;br&gt;\n&lt;i class=\"pricon pricon-file-video\"&gt;&lt;/i&gt; pricon-file-video&lt;br&gt;\n&lt;i class=\"pricon pricon-file-archive\"&gt;&lt;/i&gt; pricon-file-archive&lt;br&gt;\n&lt;i class=\"pricon pricon-github\"&gt;&lt;/i&gt; pricon-github&lt;br&gt;\n&lt;i class=\"pricon pricon-presentation\"&gt;&lt;/i&gt; pricon-presentation&lt;br&gt;\n&lt;i class=\"pricon pricon-file\"&gt;&lt;/i&gt; pricon-file&lt;br&gt;\n&lt;i class=\"pricon pricon-phone\"&gt;&lt;/i&gt; pricon-phone&lt;br&gt;\n&lt;i class=\"pricon pricon-smartphone\"&gt;&lt;/i&gt; pricon-smartphone&lt;br&gt;\n&lt;i class=\"pricon pricon-email\"&gt;&lt;/i&gt; pricon-email&lt;br&gt;\n&lt;i class=\"pricon pricon-picture\"&gt;&lt;/i&gt; pricon-picture&lt;br&gt;\n&lt;i class=\"pricon pricon-user\"&gt;&lt;/i&gt; pricon-user&lt;br&gt;\n&lt;i class=\"pricon pricon-picture-add\"&gt;&lt;/i&gt; pricon-picture-add&lt;br&gt;\n&lt;i class=\"pricon pricon-plus-o\"&gt;&lt;/i&gt; pricon-plus-o&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-down\"&gt;&lt;/i&gt; pricon-caret-down&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-up\"&gt;&lt;/i&gt; pricon-caret-up&lt;br&gt;\n&lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; pricon-check&lt;br&gt;\n&lt;i class=\"pricon pricon-check-o\"&gt;&lt;/i&gt; pricon-check-o&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; pricon-notice-warning&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-danger\"&gt;&lt;/i&gt; pricon-notice-danger&lt;br&gt;\n&lt;i class=\"pricon pricon-compass\"&gt;&lt;/i&gt; pricon-compass&lt;br&gt;\n&lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; pricon-info-o&lt;br&gt;\n&lt;i class=\"pricon pricon-question-o\"&gt;&lt;/i&gt; pricon-question-o&lt;br&gt;\n&lt;i class=\"pricon pricon-linkedin-square\"&gt;&lt;/i&gt; pricon-linkedin-square&lt;br&gt;\n&lt;i class=\"pricon pricon-twitter-square\"&gt;&lt;/i&gt; pricon-twitter-square&lt;br&gt;\n&lt;i class=\"pricon pricon-facebook-square\"&gt;&lt;/i&gt; pricon-facebook-square&lt;br&gt;\n&lt;i class=\"pricon pricon-instagram\"&gt;&lt;/i&gt; pricon-instagram&lt;br&gt;\n&lt;i class=\"pricon pricon-print\"&gt;&lt;/i&gt; pricon-print&lt;br&gt;\n&lt;i class=\"pricon pricon-listen-ear\"&gt;&lt;/i&gt; pricon-listen-ear&lt;br&gt;\n&lt;i class=\"pricon pricon-volume\"&gt;&lt;/i&gt; pricon-volume&lt;br&gt;\n&lt;i class=\"pricon pricon-search\"&gt;&lt;/i&gt; pricon-search&lt;br&gt;\n&lt;i class=\"pricon pricon-edit\"&gt;&lt;/i&gt; pricon-edit&lt;br&gt;\n&lt;i class=\"pricon pricon-minus-o\"&gt;&lt;/i&gt; pricon-minus-o&lt;br&gt;\n&lt;i class=\"pricon pricon-twitter\"&gt;&lt;/i&gt; pricon-twitter&lt;br&gt;\n&lt;i class=\"pricon pricon-linkedin\"&gt;&lt;/i&gt; pricon-linkedin&lt;br&gt;\n&lt;i class=\"pricon pricon-facebook\"&gt;&lt;/i&gt; pricon-facebook&lt;br&gt;\n&lt;i class=\"pricon pricon-settings\"&gt;&lt;/i&gt; pricon-settings&lt;br&gt;\n&lt;i class=\"pricon pricon-location-pin\"&gt;&lt;/i&gt; pricon-location-pin&lt;br&gt;\n&lt;i class=\"pricon pricon-next\"&gt;&lt;/i&gt; pricon-next&lt;br&gt;\n&lt;i class=\"pricon pricon-previous\"&gt;&lt;/i&gt; pricon-previous&lt;br&gt;\n&lt;i class=\"pricon pricon-back\"&gt;&lt;/i&gt; pricon-back&lt;br&gt;\n&lt;i class=\"pricon pricon-caret-right\"&gt;&lt;/i&gt; pricon-caret-right&lt;br&gt;\n&lt;i class=\"pricon pricon-play-o\"&gt;&lt;/i&gt; pricon-play-o&lt;br&gt;\n&lt;i class=\"pricon pricon-forbidden\"&gt;&lt;/i&gt; pricon-forbidden&lt;br&gt;\n&lt;i class=\"pricon pricon-sort-asc\"&gt;&lt;/i&gt; pricon-sort-asc&lt;br&gt;\n&lt;i class=\"pricon pricon-sort-desc\"&gt;&lt;/i&gt; pricon-sort-desc&lt;br&gt;\n&lt;i class=\"pricon pricon-sort\"&gt;&lt;/i&gt; pricon-sort&lt;br&gt;\n&lt;i class=\"pricon pricon-helsingborg\"&gt;&lt;/i&gt; pricon-helsingborg&lt;br&gt;\n&lt;i class=\"pricon pricon-calendar\"&gt;&lt;/i&gt; pricon-calendar&lt;br&gt;\n&lt;i class=\"pricon pricon-home\"&gt;&lt;/i&gt; pricon-home&lt;br&gt;\n&lt;i class=\"pricon pricon-language\"&gt;&lt;/i&gt; pricon-language&lt;br&gt;\n&lt;i class=\"pricon pricon-globe\"&gt;&lt;/i&gt; pricon-globe&lt;br&gt;\n&lt;i class=\"pricon pricon-star\"&gt;&lt;/i&gt; pricon-star&lt;br&gt;\n&lt;i class=\"pricon pricon-text-size\"&gt;&lt;/i&gt; pricon-text-size&lt;br&gt;\n&lt;i class=\"pricon pricon-share\"&gt;&lt;/i&gt; pricon-share&lt;br&gt;\n&lt;i class=\"pricon pricon-heart-minus\"&gt;&lt;/i&gt; pricon-heart-minus&lt;br&gt;\n&lt;i class=\"pricon pricon-heart-plus\"&gt;&lt;/i&gt; pricon-heart-plus&lt;br&gt;\n&lt;i class=\"pricon pricon-heart\"&gt;&lt;/i&gt; pricon-heart&lt;br&gt;\n&lt;i class=\"pricon pricon-standby\"&gt;&lt;/i&gt; pricon-standby&lt;br&gt;\n&lt;i class=\"pricon pricon-breifcase\"&gt;&lt;/i&gt; pricon-breifcase&lt;br&gt;\n&lt;i class=\"pricon pricon-lightbulb\"&gt;&lt;/i&gt; pricon-lightbulb&lt;br&gt;\n&lt;i class=\"pricon pricon-clipboard\"&gt;&lt;/i&gt; pricon-clipboard&lt;br&gt;\n&lt;i class=\"pricon pricon-picture-user\"&gt;&lt;/i&gt; pricon-picture-user&lt;br&gt;\n&lt;i class=\"pricon pricon-target\"&gt;&lt;/i&gt; pricon-target&lt;br&gt;\n&lt;i class=\"pricon pricon-paintbrush\"&gt;&lt;/i&gt; pricon-paintbrush&lt;br&gt;\n&lt;i class=\"pricon pricon-forbidden-circle\"&gt;&lt;/i&gt; pricon-forbidden-circle&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-angry\"&gt;&lt;/i&gt; pricon-smiley-angry&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-cool\"&gt;&lt;/i&gt; pricon-smiley-cool&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-cry\"&gt;&lt;/i&gt; pricon-smiley-cry&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-flirty\"&gt;&lt;/i&gt; pricon-smiley-flirty&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-oh\"&gt;&lt;/i&gt; pricon-smiley-oh&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-sad\"&gt;&lt;/i&gt; pricon-smiley-sad&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-smile\"&gt;&lt;/i&gt; pricon-smiley-smile&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-super-happy\"&gt;&lt;/i&gt; pricon-smiley-super-happy&lt;br&gt;\n&lt;i class=\"pricon pricon-smiley-thounge\"&gt;&lt;/i&gt; pricon-smiley-thounge&lt;br&gt;\n&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt; pricon-plus&lt;br&gt;\n&lt;i class=\"pricon pricon-notice-info\"&gt;&lt;/i&gt; pricon-notice-info&lt;br&gt;\n&lt;i class=\"pricon pricon-clock\"&gt;&lt;/i&gt; pricon-clock&lt;br&gt;\n&lt;i class=\"pricon pricon-wifi\"&gt;&lt;/i&gt; pricon-wifi&lt;br&gt;\n&lt;i class=\"pricon pricon-construction\"&gt;&lt;/i&gt; pricon-construction&lt;br&gt;\n&lt;i class=\"pricon pricon-sun\"&gt;&lt;/i&gt; pricon-sun&lt;br&gt;\n&lt;i class=\"pricon pricon-music\"&gt;&lt;/i&gt; pricon-music&lt;br&gt;\n&lt;i class=\"pricon pricon-calendar-check\"&gt;&lt;/i&gt; pricon-calendar-check&lt;br&gt;\n&lt;i class=\"pricon pricon-money\"&gt;&lt;/i&gt; pricon-money&lt;br&gt;\n&lt;i class=\"pricon pricon-bus\"&gt;&lt;/i&gt; pricon-bus&lt;br&gt;\n&lt;i class=\"pricon pricon-car\"&gt;&lt;/i&gt; pricon-car&lt;br&gt;\n&lt;i class=\"pricon pricon-house\"&gt;&lt;/i&gt; pricon-house&lt;br&gt;\n&lt;i class=\"pricon pricon-park\"&gt;&lt;/i&gt; pricon-park&lt;br&gt;\n&lt;i class=\"pricon pricon-bike\"&gt;&lt;/i&gt; pricon-bike&lt;br&gt;\n&lt;i class=\"pricon pricon-boat\"&gt;&lt;/i&gt; pricon-boat&lt;br&gt;\n&lt;i class=\"pricon pricon-coffee\"&gt;&lt;/i&gt; pricon-coffee&lt;br&gt;\n&lt;i class=\"pricon pricon-commute\"&gt;&lt;/i&gt; pricon-commute&lt;br&gt;\n&lt;i class=\"pricon pricon-healthcare\"&gt;&lt;/i&gt; pricon-healthcare&lt;br&gt;\n&lt;i class=\"pricon pricon-run\"&gt;&lt;/i&gt; pricon-run&lt;br&gt;\n&lt;i class=\"pricon pricon-swim\"&gt;&lt;/i&gt; pricon-swim&lt;br&gt;\n&lt;i class=\"pricon pricon-tent\"&gt;&lt;/i&gt; pricon-tent&lt;br&gt;\n&lt;i class=\"pricon pricon-apple\"&gt;&lt;/i&gt; pricon-apple&lt;br&gt;\n&lt;i class=\"pricon pricon-archive\"&gt;&lt;/i&gt; pricon-archive&lt;br&gt;\n&lt;i class=\"pricon pricon-bag\"&gt;&lt;/i&gt; pricon-bag&lt;br&gt;\n&lt;i class=\"pricon pricon-budget\"&gt;&lt;/i&gt; pricon-budget&lt;br&gt;\n&lt;i class=\"pricon pricon-diagram-increase\"&gt;&lt;/i&gt; pricon-diagram-increase&lt;br&gt;\n&lt;i class=\"pricon pricon-discuss\"&gt;&lt;/i&gt; pricon-discuss&lt;br&gt;\n&lt;i class=\"pricon pricon-dog\"&gt;&lt;/i&gt; pricon-dog&lt;br&gt;\n&lt;i class=\"pricon pricon-balloon\"&gt;&lt;/i&gt; pricon-balloon&lt;br&gt;\n&lt;i class=\"pricon pricon-handshake\"&gt;&lt;/i&gt; pricon-handshake&lt;br&gt;\n&lt;i class=\"pricon pricon-info\"&gt;&lt;/i&gt; pricon-info&lt;br&gt;\n&lt;i class=\"pricon pricon-man\"&gt;&lt;/i&gt; pricon-man&lt;br&gt;\n&lt;i class=\"pricon pricon-people\"&gt;&lt;/i&gt; pricon-people&lt;br&gt;\n&lt;i class=\"pricon pricon-recycling\"&gt;&lt;/i&gt; pricon-recycling&lt;br&gt;\n&lt;i class=\"pricon pricon-reload\"&gt;&lt;/i&gt; pricon-reload&lt;br&gt;\n&lt;i class=\"pricon pricon-sports\"&gt;&lt;/i&gt; pricon-sports&lt;br&gt;\n&lt;i class=\"pricon pricon-usb\"&gt;&lt;/i&gt; pricon-usb&lt;br&gt;\n&lt;i class=\"pricon pricon-vote\"&gt;&lt;/i&gt; pricon-vote&lt;br&gt;\n&lt;i class=\"pricon pricon-woman\"&gt;&lt;/i&gt; pricon-woman&lt;br&gt;\n&lt;i class=\"pricon pricon-cake\"&gt;&lt;/i&gt; pricon-cake&lt;br&gt;\n&lt;i class=\"pricon pricon-close\"&gt;&lt;/i&gt; pricon-close&lt;br&gt;\n&lt;i class=\"pricon pricon-down\"&gt;&lt;/i&gt; pricon-down&lt;br&gt;\n&lt;i class=\"pricon pricon-up\"&gt;&lt;/i&gt; pricon-up&lt;br&gt;\n&lt;i class=\"pricon pricon-sign-language\"&gt;&lt;/i&gt; pricon-sign-language&lt;br&gt;\n&lt;i class=\"pricon pricon-easy-read\"&gt;&lt;/i&gt; pricon-easy-read&lt;br&gt;\n&lt;i class=\"pricon pricon-union-jack\"&gt;&lt;/i&gt; pricon-union-jack&lt;br&gt;\n&lt;i class=\"pricon pricon-loading-o\"&gt;&lt;/i&gt; pricon-loading-o&lt;br&gt;\n&lt;i class=\"pricon pricon-right-skinny-arrow\"&gt;&lt;/i&gt; pricon-right-skinny-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-left-skinny-arrow\"&gt;&lt;/i&gt; pricon-left-skinny-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-right-fat-arrow\"&gt;&lt;/i&gt; pricon-right-fat-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-left-fat-arrow\"&gt;&lt;/i&gt; pricon-left-fat-arrow&lt;br&gt;\n&lt;i class=\"pricon pricon-comments\"&gt;&lt;/i&gt; pricon-comments&lt;br&gt;\n&lt;i class=\"pricon pricon-close-o\"&gt;&lt;/i&gt; pricon-close-o&lt;br&gt;\n&lt;i class=\"pricon pricon-reply\"&gt;&lt;/i&gt; pricon-reply&lt;br&gt;\n&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; pricon-thumbs-up&lt;br&gt;\n&lt;i class=\"pricon pricon-thumbs-up-o\"&gt;&lt;/i&gt; pricon-thumbs-up-o&lt;br&gt;\n&lt;i class=\"pricon pricon-eye\"&gt;&lt;/i&gt; pricon-eye&lt;br&gt;\n&lt;i class=\"pricon pricon-360\"&gt;&lt;/i&gt; pricon-360&lt;br&gt;\n&lt;i class=\"pricon pricon-eye-hide\"&gt;&lt;/i&gt; pricon-eye-hide&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-down\"&gt;&lt;/i&gt; pricon-chevron-down&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-left\"&gt;&lt;/i&gt; pricon-chevron-left&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-right\"&gt;&lt;/i&gt; pricon-chevron-right&lt;br&gt;\n&lt;i class=\"pricon pricon-chevron-up\"&gt;&lt;/i&gt; pricon-chevron-up&lt;br&gt;\n&lt;i class=\"pricon pricon-arrow-down\"&gt;&lt;/i&gt; pricon-arrow-down&lt;br&gt;\n&lt;i class=\"pricon pricon-arrow-up\"&gt;&lt;/i&gt; pricon-arrow-up&lt;br&gt;\n&lt;i class=\"pricon pricon-play\"&gt;&lt;/i&gt; pricon-play&lt;br&gt;\n&lt;i class=\"pricon pricon-pause\"&gt;&lt;/i&gt; pricon-pause&lt;br&gt;\n&lt;i class=\"pricon pricon-camera\"&gt;&lt;/i&gt; pricon-camera&lt;br&gt;\n&lt;i class=\"pricon pricon-enter\"&gt;&lt;/i&gt; pricon-enter&lt;br&gt;\n&lt;i class=\"pricon pricon-filter\"&gt;&lt;/i&gt; pricon-filter&lt;br&gt;\n&lt;i class=\"pricon pricon-pen\"&gt;&lt;/i&gt; pricon-pen&lt;br&gt;\n&lt;i class=\"pricon pricon-unchecked\"&gt;&lt;/i&gt; pricon-unchecked&lt;br&gt;\n&lt;i class=\"pricon pricon-bell\"&gt;&lt;/i&gt; pricon-bell&lt;br&gt;\n&lt;i class=\"pricon pricon-star-o\"&gt;&lt;/i&gt; pricon-star-o&lt;br&gt;\n&lt;i class=\"pricon pricon-menu-dots\"&gt;&lt;/i&gt; pricon-menu-dots&lt;br&gt;\n&lt;i class=\"pricon pricon-group\"&gt;&lt;/i&gt; pricon-group&lt;br&gt;"
       }
      ]
     }
@@ -390,6 +390,521 @@
       }
      ],
      "helsingborg.se</a></li>": ""
+    }
+   ]
+  },
+  "typography": {
+   "article": [
+    {
+     "name": "Article",
+     "description": "<p>A full article with heading, lead and body text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Article"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "path": "~/source/sass/typography/_article.scss",
+       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
+       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
+      }
+     ]
+    }
+   ],
+   "headings": [
+    {
+     "name": "Headings",
+     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Headings"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-highlight",
+       "escaped": "text-highlight",
+       "description": "Will highlight any heading in the current theme color"
+      },
+      {
+       "name": ".underline",
+       "escaped": "underline",
+       "description": "Underlines the heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
+       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
+      }
+     ]
+    }
+   ],
+   "sub heading": [
+    {
+     "name": "Sub heading",
+     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Sub heading"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
+       "path": "~/source/sass/typography/_headings.scss",
+       "example": "\n<div class=\"sub-heading\">I love cake</div>",
+       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "label": [
+    {
+     "name": "Label",
+     "description": "<p>Label a text with a filled background</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Label"
+      }
+     ],
+     "state": [
+      {
+       "name": ".label-tag",
+       "escaped": "label-tag",
+       "description": "Adds arrow shape to label end"
+      },
+      {
+       "name": ".label-sm",
+       "escaped": "label-sm",
+       "description": "Smaller label"
+      },
+      {
+       "name": ".label-lg",
+       "escaped": "label-lg",
+       "description": "Larger label"
+      },
+      {
+       "name": ".label-theme",
+       "escaped": "label-theme",
+       "description": "Uses the current theme color"
+      },
+      {
+       "name": ".label-red-1",
+       "escaped": "label-red-1",
+       "description": "First color in red stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-blue-1",
+       "escaped": "label-blue-1",
+       "description": "First color in blue stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-green-1",
+       "escaped": "label-green-1",
+       "description": "First color in green stripe (color 1-5 available)"
+      },
+      {
+       "name": ".label-purple-1",
+       "escaped": "label-purple-1",
+       "description": "First color in purple stripe (color 1-5 available)"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "path": "~/source/sass/typography/_label.scss",
+       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
+       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
+      }
+     ]
+    }
+   ],
+   "lead": [
+    {
+     "name": "Lead",
+     "description": "<p>A large paragraph to use as article lead.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Lead"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "path": "~/source/sass/typography/_lead.scss",
+       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
+       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
+      }
+     ]
+    }
+   ],
+   "unordered list": [
+    {
+     "name": "Unordered list",
+     "description": "<p>Stanrdard unordered list.</p>\n",
+     "state": [
+      {
+       "name": ".unordered-list",
+       "escaped": "unordered-list",
+       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
+      }
+     ],
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Unordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "ordered list": [
+    {
+     "name": "Ordered list",
+     "description": "<p>Stanrdard ordered list.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Ordered list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "path": "~/source/sass/typography/_list.scss",
+       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
+       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
+      }
+     ]
+    }
+   ],
+   "quotes": [
+    {
+     "name": "Blockquote",
+     "description": "",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Quotes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "path": "~/source/sass/typography/_quotes.scss",
+       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
+       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
+      }
+     ]
+    }
+   ],
+   "text alignment": [
+    {
+     "name": "Text alignment",
+     "description": "<p>Aligns text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text alignment"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "font size": [
+    {
+     "name": "Front size",
+     "description": "<p>Font size</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Font size"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-sm",
+       "escaped": "text-sm",
+       "description": "Small"
+      },
+      {
+       "name": ".text-md",
+       "escaped": "text-md",
+       "description": "Medium (default)"
+      },
+      {
+       "name": ".text-lg",
+       "escaped": "text-lg",
+       "description": "Large"
+      },
+      {
+       "name": ".text-xl",
+       "escaped": "text-xl",
+       "description": "Extra Large"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<div class=\"text-left\">Left aligned text</div>",
+       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "highlight": [
+    {
+     "name": "Highlight",
+     "description": "<p>Highlights text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Highlight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
+       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text color": [
+    {
+     "name": "Text color",
+     "description": "<p>Modifiers to set the text color</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text color"
+      }
+     ],
+     "state": [
+      {
+       "name": ".text-dark-gray",
+       "escaped": "text-dark-gray",
+       "description": "Dark gray text color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
+       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "underline": [
+    {
+     "name": "Underline",
+     "description": "<p>Underlines text.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Underline"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-underline\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "text transform": [
+    {
+     "name": "Text transform",
+     "description": "<p>Transforms text</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Text transform"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
+       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "mark": [
+    {
+     "name": "Mark",
+     "description": "<p>Mark text to make it stand out.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Mark"
+      }
+     ],
+     "state": [
+      {
+       "name": ".mark-yellow",
+       "escaped": "mark-yellow",
+       "description": "Mark with yellow color"
+      },
+      {
+       "name": ".mark-blue",
+       "escaped": "mark-blue",
+       "description": "Mark with blue color"
+      },
+      {
+       "name": ".mark-green",
+       "escaped": "mark-green",
+       "description": "Mark with green color"
+      },
+      {
+       "name": ".mark-red",
+       "escaped": "mark-red",
+       "description": "Mark with red color"
+      },
+      {
+       "name": ".mark-purple",
+       "escaped": "mark-purple",
+       "description": "Mark with purple color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
+       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
+      }
+     ]
+    }
+   ],
+   "small": [
+    {
+     "name": "Small",
+     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Small"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<small>This is a small text</small>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<small>This is a small text</small>",
+       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
+      }
+     ]
+    }
+   ],
+   "truncate": [
+    {
+     "name": "Truncate",
+     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Truncate"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
+       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
+      }
+     ]
+    }
+   ],
+   "weight": [
+    {
+     "name": "Weight",
+     "description": "<p>Set fontweight</p>\n",
+     "page": [
+      {
+       "nav": "Typography",
+       "section": "Weight"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "path": "~/source/sass/utility/_text.scss",
+       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
+       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
+      }
+     ]
     }
    ]
   },
@@ -846,521 +1361,6 @@
        "name": ".print-only",
        "escaped": "print-only",
        "description": "Display only in print"
-      }
-     ]
-    }
-   ]
-  },
-  "typography": {
-   "text alignment": [
-    {
-     "name": "Text alignment",
-     "description": "<p>Aligns text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text alignment"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>\n<div class=\"text-center\">Center aligned text</div>\n<div class=\"text-right\">Right aligned text</div>\n<div class=\"text-justify\">Justified text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;\n&lt;div class=\"text-center\"&gt;Center aligned text&lt;/div&gt;\n&lt;div class=\"text-right\"&gt;Right aligned text&lt;/div&gt;\n&lt;div class=\"text-justify\"&gt;Justified text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "font size": [
-    {
-     "name": "Front size",
-     "description": "<p>Font size</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Font size"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-sm",
-       "escaped": "text-sm",
-       "description": "Small"
-      },
-      {
-       "name": ".text-md",
-       "escaped": "text-md",
-       "description": "Medium (default)"
-      },
-      {
-       "name": ".text-lg",
-       "escaped": "text-lg",
-       "description": "Large"
-      },
-      {
-       "name": ".text-xl",
-       "escaped": "text-xl",
-       "description": "Extra Large"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"text-left\">Left aligned text</div>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<div class=\"text-left\">Left aligned text</div>",
-       "escaped": "\n&lt;div class=\"text-left\"&gt;Left aligned text&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "highlight": [
-    {
-     "name": "Highlight",
-     "description": "<p>Highlights text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Highlight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-highlight\">Highlighted</span>",
-       "escaped": "\n&lt;span class=\"text-highlight\"&gt;Highlighted&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text color": [
-    {
-     "name": "Text color",
-     "description": "<p>Modifiers to set the text color</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text color"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-dark-gray",
-       "escaped": "text-dark-gray",
-       "description": "Dark gray text color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-dark-gray\">Dark gray</span>",
-       "escaped": "\n&lt;span class=\"text-dark-gray\"&gt;Dark gray&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "underline": [
-    {
-     "name": "Underline",
-     "description": "<p>Underlines text.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Underline"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-underline\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-underline\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-underline\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "text transform": [
-    {
-     "name": "Text transform",
-     "description": "<p>Transforms text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Text transform"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"text-uppercase\">Underlined</span>\n<span class=\"text-lowercase\">Underlined</span>\n<span class=\"text-capitalize\">Underlined</span>",
-       "escaped": "\n&lt;span class=\"text-uppercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-lowercase\"&gt;Underlined&lt;/span&gt;\n&lt;span class=\"text-capitalize\"&gt;Underlined&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "mark": [
-    {
-     "name": "Mark",
-     "description": "<p>Mark text to make it stand out.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Mark"
-      }
-     ],
-     "state": [
-      {
-       "name": ".mark-yellow",
-       "escaped": "mark-yellow",
-       "description": "Mark with yellow color"
-      },
-      {
-       "name": ".mark-blue",
-       "escaped": "mark-blue",
-       "description": "Mark with blue color"
-      },
-      {
-       "name": ".mark-green",
-       "escaped": "mark-green",
-       "description": "Mark with green color"
-      },
-      {
-       "name": ".mark-red",
-       "escaped": "mark-red",
-       "description": "Mark with red color"
-      },
-      {
-       "name": ".mark-purple",
-       "escaped": "mark-purple",
-       "description": "Mark with purple color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\nOne of the words in this sentence is <mark>marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-yellow\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-blue\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-green\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-red\">marked</mark>.<br>\nOne of the words in this sentence is <mark class=\"mark-purple\">marked</mark>.",
-       "escaped": "\nOne of the words in this sentence is &lt;mark&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-yellow\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-blue\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-green\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-red\"&gt;marked&lt;/mark&gt;.&lt;br&gt;\nOne of the words in this sentence is &lt;mark class=\"mark-purple\"&gt;marked&lt;/mark&gt;."
-      }
-     ]
-    }
-   ],
-   "small": [
-    {
-     "name": "Small",
-     "description": "<p>Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Small"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<small>This is a small text</small>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<small>This is a small text</small>",
-       "escaped": "\n&lt;small&gt;This is a small text&lt;/small&gt;"
-      }
-     ]
-    }
-   ],
-   "truncate": [
-    {
-     "name": "Truncate",
-     "description": "<p>Forces a string to not break into multiple rows, truncates it with ellipsis (…). Overflow shows on hover.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Truncate"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"truncate\">This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.</span>",
-       "escaped": "\n&lt;span class=\"truncate\"&gt;This is a long text that hopefully will be forced into one line and truncated with ellipsis. Hover it to show the overflowing part.&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "weight": [
-    {
-     "name": "Weight",
-     "description": "<p>Set fontweight</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Weight"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "path": "~/source/sass/utility/_text.scss",
-       "example": "\n<span class=\"weight-300\">Weight 300</span>\n<span class=\"weight-400\">Weight 400</span>\n<span class=\"weight-500\">Weight 500</span>\n<span class=\"weight-700\">Weight 700</span>\n<span class=\"weight-900\">Weight 900</span>",
-       "escaped": "\n&lt;span class=\"weight-300\"&gt;Weight 300&lt;/span&gt;\n&lt;span class=\"weight-400\"&gt;Weight 400&lt;/span&gt;\n&lt;span class=\"weight-500\"&gt;Weight 500&lt;/span&gt;\n&lt;span class=\"weight-700\"&gt;Weight 700&lt;/span&gt;\n&lt;span class=\"weight-900\"&gt;Weight 900&lt;/span&gt;"
-      }
-     ]
-    }
-   ],
-   "article": [
-    {
-     "name": "Article",
-     "description": "<p>A full article with heading, lead and body text</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Article"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "path": "~/source/sass/typography/_article.scss",
-       "example": "\n<article>\n     <h1>Candy tootsie roll cookie</h1>\n     <p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>\n     <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n     <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n     <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>\n</article>",
-       "escaped": "\n&lt;article&gt;\n     &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n     &lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;\n     &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n     &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n     &lt;p&gt;Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.&lt;/p&gt;\n&lt;/article&gt;"
-      }
-     ]
-    }
-   ],
-   "headings": [
-    {
-     "name": "Headings",
-     "description": "<p>Headings for use within articles and more. Please always set the <code>id</code> attribute on headings to enable anchor-linking.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Headings"
-      }
-     ],
-     "state": [
-      {
-       "name": ".text-highlight",
-       "escaped": "text-highlight",
-       "description": "Will highlight any heading in the current theme color"
-      },
-      {
-       "name": ".underline",
-       "escaped": "underline",
-       "description": "Underlines the heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<h1 id=\"anchor-1\" class=\"{$state}\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<h1 id=\"anchor-1\">Heading 1</h1>\n<h2 id=\"anchor-2\">Heading 2</h2>\n<h3 id=\"anchor-3\">Heading 3</h3>\n<h4 id=\"anchor-4\">Heading 4</h4>\n<h5 id=\"anchor-5\">Heading 5</h5>\n<h6 id=\"anchor-6\">Heading 6</h6>",
-       "escaped": "\n&lt;h1 id=\"anchor-1\"&gt;Heading 1&lt;/h1&gt;\n&lt;h2 id=\"anchor-2\"&gt;Heading 2&lt;/h2&gt;\n&lt;h3 id=\"anchor-3\"&gt;Heading 3&lt;/h3&gt;\n&lt;h4 id=\"anchor-4\"&gt;Heading 4&lt;/h4&gt;\n&lt;h5 id=\"anchor-5\"&gt;Heading 5&lt;/h5&gt;\n&lt;h6 id=\"anchor-6\"&gt;Heading 6&lt;/h6&gt;"
-      }
-     ]
-    }
-   ],
-   "sub heading": [
-    {
-     "name": "Sub heading",
-     "description": "<p>Subheading element to combine with a ordinary heading</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Sub heading"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"sub-heading\">I love cake</div>",
-       "path": "~/source/sass/typography/_headings.scss",
-       "example": "\n<div class=\"sub-heading\">I love cake</div>",
-       "escaped": "\n&lt;div class=\"sub-heading\"&gt;I love cake&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "label": [
-    {
-     "name": "Label",
-     "description": "<p>Label a text with a filled background</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Label"
-      }
-     ],
-     "state": [
-      {
-       "name": ".label-tag",
-       "escaped": "label-tag",
-       "description": "Adds arrow shape to label end"
-      },
-      {
-       "name": ".label-sm",
-       "escaped": "label-sm",
-       "description": "Smaller label"
-      },
-      {
-       "name": ".label-lg",
-       "escaped": "label-lg",
-       "description": "Larger label"
-      },
-      {
-       "name": ".label-theme",
-       "escaped": "label-theme",
-       "description": "Uses the current theme color"
-      },
-      {
-       "name": ".label-red-1",
-       "escaped": "label-red-1",
-       "description": "First color in red stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-blue-1",
-       "escaped": "label-blue-1",
-       "description": "First color in blue stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-green-1",
-       "escaped": "label-green-1",
-       "description": "First color in green stripe (color 1-5 available)"
-      },
-      {
-       "name": ".label-purple-1",
-       "escaped": "label-purple-1",
-       "description": "First color in purple stripe (color 1-5 available)"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "path": "~/source/sass/typography/_label.scss",
-       "example": "\nI love tiramisu I love. Topping I love cake <span class=\"label label-red-2\">carrot cake</span> fruitcake topping.",
-       "escaped": "\nI love tiramisu I love. Topping I love cake &lt;span class=\"label label-red-2\"&gt;carrot cake&lt;/span&gt; fruitcake topping."
-      }
-     ]
-    }
-   ],
-   "lead": [
-    {
-     "name": "Lead",
-     "description": "<p>A large paragraph to use as article lead.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Lead"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "path": "~/source/sass/typography/_lead.scss",
-       "example": "\n<p class=\"lead\">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>",
-       "escaped": "\n&lt;p class=\"lead\"&gt;Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.&lt;/p&gt;"
-      }
-     ]
-    }
-   ],
-   "unordered list": [
-    {
-     "name": "Unordered list",
-     "description": "<p>Stanrdard unordered list.</p>\n",
-     "state": [
-      {
-       "name": ".unordered-list",
-       "escaped": "unordered-list",
-       "description": "Applies the style to lists used outside <code>article</code>. There's no need to apply this class when using <code>ul</code> inside an <code>article</code>"
-      }
-     ],
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Unordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ul class=\"unordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"unordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ],
-   "ordered list": [
-    {
-     "name": "Ordered list",
-     "description": "<p>Stanrdard ordered list.</p>\n",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Ordered list"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "path": "~/source/sass/typography/_list.scss",
-       "example": "\n<ol class=\"ordered-list\">\n    <li>Cupcake</li>\n    <li>Brownie</li>\n    <li>Gingerbread</li>\n</ol>",
-       "escaped": "\n&lt;ol class=\"ordered-list\"&gt;\n    &lt;li&gt;Cupcake&lt;/li&gt;\n    &lt;li&gt;Brownie&lt;/li&gt;\n    &lt;li&gt;Gingerbread&lt;/li&gt;\n&lt;/ol&gt;"
-      }
-     ]
-    }
-   ],
-   "quotes": [
-    {
-     "name": "Blockquote",
-     "description": "",
-     "page": [
-      {
-       "nav": "Typography",
-       "section": "Quotes"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "path": "~/source/sass/typography/_quotes.scss",
-       "example": "\n<blockquote>\n    <p>Jujubes jelly beans <strong>marshmallow</strong> danish brownie lollipop pudding. Apple pie wafer donut <strong>cake soufflé</strong> bonbon. Powder icing pastry carrot cake gummies tart tiramisu.</p>\n</blockquote>",
-       "escaped": "\n&lt;blockquote&gt;\n    &lt;p&gt;Jujubes jelly beans &lt;strong&gt;marshmallow&lt;/strong&gt; danish brownie lollipop pudding. Apple pie wafer donut &lt;strong&gt;cake soufflé&lt;/strong&gt; bonbon. Powder icing pastry carrot cake gummies tart tiramisu.&lt;/p&gt;\n&lt;/blockquote&gt;"
       }
      ]
     }
@@ -2808,30 +2808,6 @@
     }
    ]
   },
-  "hero": {
-   "hero": [
-    {
-     "name": "Hero",
-     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
-     "page": [
-      {
-       "nav": "Hero",
-       "section": "Hero"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/hero/_hero.scss",
-       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "gallery": {
    "image grid": [
     {
@@ -2859,6 +2835,30 @@
        "path": "~/source/sass/component/gallery/_gallery.scss",
        "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
        "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/hero/_hero.scss",
+       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -3270,38 +3270,6 @@
     }
    ]
   },
-  "timeline": {
-   "general": [
-    {
-     "name": "Timeline",
-     "description": "<p>Vertical timeline</p>\n",
-     "author": "Jonatan Hanson",
-     "page": [
-      {
-       "nav": "Timeline",
-       "section": "general"
-      }
-     ],
-     "state": [
-      {
-       "name": ".timeline-side",
-       "escaped": "timeline-side",
-       "description": "Places image div closest to the timeline marker"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
-       "path": "~/source/sass/component/timeline/timeline.scss",
-       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n     &lt;div class=\"box-content\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t    &lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "wordpress": {
    "wp widget: calendar": [
     {
@@ -3453,6 +3421,38 @@
        "path": "~/source/sass/component/wordpress/_wp-caption.scss",
        "example": "\n<div class=\"wp-caption alignnone\">\n <img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\">\n <p class=\"wp-caption-text\">Gingerbread gummies lollipop chocolate cake.</p>\n</div>",
        "escaped": "\n&lt;div class=\"wp-caption alignnone\"&gt;\n &lt;img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\"&gt;\n &lt;p class=\"wp-caption-text\"&gt;Gingerbread gummies lollipop chocolate cake.&lt;/p&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "timeline": {
+   "general": [
+    {
+     "name": "Timeline",
+     "description": "<p>Vertical timeline</p>\n",
+     "author": "Jonatan Hanson",
+     "page": [
+      {
+       "nav": "Timeline",
+       "section": "general"
+      }
+     ],
+     "state": [
+      {
+       "name": ".timeline-side",
+       "escaped": "timeline-side",
+       "description": "Places image div closest to the timeline marker"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
+       "path": "~/source/sass/component/timeline/timeline.scss",
+       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n     &lt;div class=\"box-content\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t    &lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

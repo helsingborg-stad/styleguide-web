@@ -171,6 +171,7 @@
 // <i class="pricon pricon-bell"></i> pricon-bell<br>
 // <i class="pricon pricon-star-o"></i> pricon-star-o<br>
 // <i class="pricon pricon-menu-dots"></i> pricon-menu-dots<br>
+// <i class="pricon pricon-group"></i> pricon-group<br>
 // 
 //
 @font-face {
@@ -565,6 +566,7 @@ $pricon-unchecked: "\EC50";
 $pricon-bell: "\EC70";
 $pricon-star-o: "\EC80";
 $pricon-menu-dots: "\EC85";
+$pricon-group: "\EC95";
 
 
 /* Glyphs */
@@ -723,6 +725,7 @@ $pricon-menu-dots: "\EC85";
 .pricon-bell:before { content: $pricon-bell }
 .pricon-star-o:before { content: $pricon-star-o }
 .pricon-menu-dots:before { content: $pricon-menu-dots }
+.pricon-group:before { content: $pricon-group }
 
 
 /* Mixin */
