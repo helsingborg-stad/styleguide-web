@@ -18,6 +18,27 @@ HelsingborgPrime.Helper.LocalStorageReferer = (function ($) {
         }    
     };
 
+
+    /**
+     * Fetches url parameter
+     * @author Johan Silvergrund
+     * @this {getUrlParameter}
+     * @param string sParam
+     */
+    LocalStorageReferer.prototype.getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+    
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+    
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
     
     /**
      * Check local storage
@@ -38,9 +59,17 @@ HelsingborgPrime.Helper.LocalStorageReferer = (function ($) {
      */
     LocalStorageReferer.prototype.setStorage = function() {
         var storeHistory = this.checkStorage('refUrlStorage');
-        if (storeHistory != window.location.href)
-            refUrlStorageHistory = localStorage.setItem('refUrlStorageHistory', storeHistory );
-        refUrlStorage = localStorage.setItem('refUrlStorage', window.location.href );
+        if (storeHistory != window.location.href) {
+            if (this.getUrlParameter('modularityForm')) {
+                refUrlStorageHistory = localStorage.setItem('refUrlStorageHistory', decodeURIComponent(this.getUrlParameter('modularityForm')));
+                refUrlStorage = localStorage.setItem('refUrlStorageHistory', decodeURIComponent(this.getUrlParameter('modularityReferrer')));
+            }
+            else {
+                refUrlStorageHistory = localStorage.setItem('refUrlStorageHistory', storeHistory );
+                refUrlStorage = localStorage.setItem('refUrlStorage', window.location.href );
+            }     
+        }    
+        
         this.addStorageRefererToDoom();      
     };
     
