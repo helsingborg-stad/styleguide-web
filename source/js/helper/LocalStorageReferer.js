@@ -80,7 +80,7 @@ HelsingborgPrime.Helper.LocalStorageReferer = (function ($) {
      * @this {addStorageRefererToDoom}
      */
     LocalStorageReferer.prototype.addStorageRefererToDoom = function() {
-        if($('.mod-form').find('#modularity-form-history').length !== 0) {
+        if ($('#modularity-form-history').length !== 0) {
             $('#modularity-form-history').val(this.checkStorage('refUrlStorageHistory'));
             $('#modularity-form-url').val(this.checkStorage('refUrlStorage'));
         } 
