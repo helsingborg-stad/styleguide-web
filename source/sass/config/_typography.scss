@@ -6,7 +6,7 @@ $base-font-family: system, "Segoe UI", Tahoma, -apple-system; // Using local fon
     $base-font-family: $override-base-font-family;
 }
 
-$base-font-size: 17px;
+$base-font-size: 1rem; //16px
 @if variable-exists(override-base-font-size) {
     $base-font-size: $override-base-font-size;
 }
