@@ -27,6 +27,7 @@ $code-font-family: 'Fira Sans', 'Monaco', 'Consolas', 'Menlo', 'Lucida Console',
 // ***************************************************************
 // *** Content
 // ***************************************************************
-$content-gutter: 15px;
+$content-gutter: 1rem; //16px
+$content-gutter-fixed: 16px; //1rem
 
-$mark-padding: 0 .15em;
+$mark-padding: 0 .125rem; //2px

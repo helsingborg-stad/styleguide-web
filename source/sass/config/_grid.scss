@@ -3,7 +3,6 @@
 // * 2. Media Queries
 // * 3. Gutter
 // * 4. Grid columns
-// *
 
 // ***************************************************************
 // *** 1. Breakpoints
@@ -52,10 +51,10 @@ $screen-below-xl: "(max-width: #{$screen-xl-min})";
 // *** 3. Gutter
 // ***************************************************************
 
-$grid-gutter-xs: 10px;
-$grid-gutter-sm: 10px;
-$grid-gutter-md: 30px;
-$grid-gutter-lg: 30px;
+$grid-gutter-xs: 8px;
+$grid-gutter-sm: 8px;
+$grid-gutter-md: 32px;
+$grid-gutter-lg: 32px;
 
 // ***************************************************************
 // *** 4. Grid columns
