@@ -10,19 +10,19 @@
 // ***************************************************************
 
 $screen-xs-min: 0;
-$screen-xs-max: 468px;
+$screen-xs-max: 29.25em; //468px
 
-$screen-sm-min: $screen-xs-max + 1;
-$screen-sm-max: 768px;
+$screen-sm-min: $screen-xs-max + 0.0625em; //1px
+$screen-sm-max: 48em; //768px
 
-$screen-md-min: $screen-sm-max + 1;
-$screen-md-max: 960px;
+$screen-md-min: $screen-sm-max + 0.0625em; //1px
+$screen-md-max: 60em; //960px
 
-$screen-lg-min: $screen-md-max + 1;
-$screen-lg-max: 1280px;
+$screen-lg-min: $screen-md-max + 0.0625em; //1px
+$screen-lg-max: 80em; //1280px
 
-$screen-xl-min: $screen-lg-max + 1;
-$screen-xl-max: 1600;
+$screen-xl-min: $screen-lg-max + 0.0625em; //1px
+$screen-xl-max: 100em; //1600px
 
 // ***************************************************************
 // *** 2. Media Queries
