@@ -1,0 +1,39 @@
+//
+// @name Card
+// @description Nullam quis risus eget urna mollis ornare vel eu leo.
+//
+// @page Card/Card
+//
+// @state :disabled - Disabled button
+// @state .btn-sm - Small button
+// @state .btn-lg - Large button
+// @state .btn-outline - Outline button
+//
+// @markup
+// <div class="c-card">
+// <div class="c-card__body">
+// <h4 class="c-card__title">Card title</h4>
+// <p class="c-card__text">Sed posuere consectetur est at lobortis.</p>
+// </div>
+// </div>
+//
+
+.c-card {
+    border: solid 1px;
+
+    & .c-card__title:not(:last-child),
+    & a .c-card__title:not(:last-child), {
+        margin-bottom: $content-gutter/2;
+    }
+
+    & .c-card__text {}
+    & .c-card__body {
+        padding: $content-gutter;
+    }
+}
+
+.c-card {
+    & .c-card__header {}
+    & .c-card__footer {}
+}
+
