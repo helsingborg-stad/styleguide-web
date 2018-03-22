@@ -13,6 +13,7 @@
 // <button class="btn">Button base</button>
 // <button class="btn disabled">Button base</button>
 // <button class="btn btn-outline">Button base</button>
+
 //
 
 button.btn::-moz-focus-inner,
@@ -62,7 +63,7 @@ input[type="button"].btn::-moz-focus-inner {
     font-family: $base-font-family;
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
-    line-height: 1.3;
+    line-height: 1;
     text-decoration: none;
     cursor: pointer;
     margin: 0;
@@ -352,6 +353,7 @@ a.btn.btn-plain,
     padding: $btn-lg-padding;
     font-size: $btn-lg-font-size;
     font-weight: $btn-lg-font-weight;
+    line-height: 1;
 }
 
 //
