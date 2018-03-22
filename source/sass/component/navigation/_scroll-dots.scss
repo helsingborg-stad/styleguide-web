@@ -79,7 +79,7 @@
         color: #000;
         padding: 3px 8px;
         line-height: $base-line-height - 5px;
-        font-size: $base-font-size - 5px;
+        font-size: $base-font-size - ($base-font-size * 0.25);
         font-weight: normal;
         overflow: hidden;
         transform: scale(.8);
