@@ -85,6 +85,13 @@
    "block button",
    "offcanvas button"
   ],
+  "card": [
+   "card",
+   "image",
+   "header",
+   "footer",
+   "list"
+  ],
   "navigation": [
    "dropdown",
    "breadcrumbs",
@@ -116,17 +123,22 @@
   "hero": [
    "hero"
   ],
+  "list": [
+   "basic list",
+   "action",
+   "flush"
+  ],
   "notice": [
    "notice"
+  ],
+  "search": [
+   "search form",
+   "search results"
   ],
   "section": [
    "featured",
    "full",
    "split"
-  ],
-  "search": [
-   "search form",
-   "search results"
   ],
   "social": [
    "feed"
@@ -2232,6 +2244,140 @@
     }
    ]
   },
+  "card": {
+   "card": [
+    {
+     "name": "Card",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Card"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-4\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Sed posuere consectetur est at lobortis.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "image": [
+    {
+     "name": "Image",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Image"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-outline",
+       "escaped": "btn-outline",
+       "description": "Outline button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Sed posuere consectetur est at lobortis.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Sed posuere consectetur est at lobortis.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__image\"&gt;\n             &lt;img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Sed posuere consectetur est at lobortis.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "header": [
+    {
+     "name": "Header",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Header"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/h4&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "footer": [
+    {
+     "name": "Footer",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             Footer content\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "list": [
+    {
+     "name": "List",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "List"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;ul class=\"c-list c-list--flush\"&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Condimentum Ipsum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Justo Quam\n             &lt;/div&gt;\n         &lt;/ul&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;div class=\"c-list c-list--flush\"&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Condimentum Ipsum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Justo Quam\n             &lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "navigation": {
    "dropdown": [
     {
@@ -2864,6 +3010,93 @@
     }
    ]
   },
+  "list": {
+   "basic list": [
+    {
+     "name": "Basic list",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "List",
+       "section": "Basic list"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
+       "path": "~/source/sass/component/list/_list.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;ul class=\"c-list\"&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Sem Vehicula Ullamcorper\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Venenatis Dapibus Etiam Bibendum\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Ipsum Quam\n         &lt;/li&gt;\n     &lt;/ul&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "action": [
+    {
+     "name": "Active, disabled, button & links",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "List",
+       "section": "Action"
+      }
+     ],
+     "state": [
+      {
+       "name": ".is-active",
+       "escaped": "is-active",
+       "description": "Active list item"
+      },
+      {
+       "name": ".is-disabled",
+       "escaped": "is-disabled",
+       "description": "Disabled list item"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-4\">\n     <ul class=\"c-list\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item is-active\">\n             Active item\n         </li>\n         <li class=\"c-list__item is-disabled\">\n             Disabled item\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-list\">\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Malesuada Aenean Vulputate\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Pharetra Tortor Commodo Porta\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action is-active\">\n             Active link\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action is-disabled\">\n             Disabled link\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Ipsum Quam\n         </a>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-list\">\n         <button class=\"c-list__item c-list__action\">\n             Malesuada Aenean Vulputate\n         </button>\n         <button class=\"c-list__item c-list__action\">\n             Pharetra Tortor Commodo Porta\n         </button>\n         <button class=\"c-list__item c-list__action is-active\">\n             Active button\n         </button>\n         <button class=\"c-list__item c-list__action is-disabled\">\n             Disabled button\n         </button>\n         <button class=\"c-list__item c-list__action\">\n             Ipsum Quam\n         </button>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/component/list/_list.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-4\">\n     <ul class=\"c-list\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item is-active\">\n             Active item\n         </li>\n         <li class=\"c-list__item is-disabled\">\n             Disabled item\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-list\">\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Malesuada Aenean Vulputate\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Pharetra Tortor Commodo Porta\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action is-active\">\n             Active link\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action is-disabled\">\n             Disabled link\n         </a>\n         <a href=\"#\" class=\"c-list__item c-list__action\">\n             Ipsum Quam\n         </a>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-4\">\n     <div class=\"c-list\">\n         <button class=\"c-list__item c-list__action\">\n             Malesuada Aenean Vulputate\n         </button>\n         <button class=\"c-list__item c-list__action\">\n             Pharetra Tortor Commodo Porta\n         </button>\n         <button class=\"c-list__item c-list__action is-active\">\n             Active button\n         </button>\n         <button class=\"c-list__item c-list__action is-disabled\">\n             Disabled button\n         </button>\n         <button class=\"c-list__item c-list__action\">\n             Ipsum Quam\n         </button>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-4\"&gt;\n     &lt;ul class=\"c-list\"&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item is-active\"&gt;\n             Active item\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item is-disabled\"&gt;\n             Disabled item\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Ipsum Quam\n         &lt;/li&gt;\n     &lt;/ul&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-4\"&gt;\n     &lt;div class=\"c-list\"&gt;\n         &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/a&gt;\n         &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/a&gt;\n         &lt;a href=\"#\" class=\"c-list__item c-list__action is-active\"&gt;\n             Active link\n         &lt;/a&gt;\n         &lt;a href=\"#\" class=\"c-list__item c-list__action is-disabled\"&gt;\n             Disabled link\n         &lt;/a&gt;\n         &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n             Ipsum Quam\n         &lt;/a&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-4\"&gt;\n     &lt;div class=\"c-list\"&gt;\n         &lt;button class=\"c-list__item c-list__action\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/button&gt;\n         &lt;button class=\"c-list__item c-list__action\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/button&gt;\n         &lt;button class=\"c-list__item c-list__action is-active\"&gt;\n             Active button\n         &lt;/button&gt;\n         &lt;button class=\"c-list__item c-list__action is-disabled\"&gt;\n             Disabled button\n         &lt;/button&gt;\n         &lt;button class=\"c-list__item c-list__action\"&gt;\n             Ipsum Quam\n         &lt;/button&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "flush": [
+    {
+     "name": "Flush",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "List",
+       "section": "Flush"
+      }
+     ],
+     "state": [
+      {
+       "name": ".c-list--flush",
+       "escaped": "c-list--flush",
+       "description": "Remove borders"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list c-list--flush\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
+       "path": "~/source/sass/component/list/_list.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list c-list--flush\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;ul class=\"c-list c-list--flush\"&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Sem Vehicula Ullamcorper\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Venenatis Dapibus Etiam Bibendum\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Ipsum Quam\n         &lt;/li&gt;\n     &lt;/ul&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "notice": {
    "notice": [
     {
@@ -2915,6 +3148,52 @@
        "path": "~/source/sass/component/notice/_notice.scss",
        "example": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
        "escaped": "\n&lt;div class=\"notice success\"&gt;\n     &lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; Sugar plum gummi bears.\n&lt;/div&gt;\n&lt;div class=\"notice warning\"&gt;\n     &lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; Lollipop cake candy canes.\n&lt;/div&gt;\n&lt;div class=\"notice danger\"&gt;\n     &lt;i class=\"pricon pricon-notice-error\"&gt;&lt;/i&gt; Jujubes oat cake sweet sugar plum.\n&lt;/div&gt;\n&lt;div class=\"notice info\"&gt;\n     &lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; Caramels chocolate cake ice cream.\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "search": {
+   "search form": [
+    {
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -3084,52 +3363,6 @@
        "path": "~/source/sass/component/section/section-split.scss",
        "example": "\n<section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\">\n    <div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"></div>\n    <div class=\"container\">\n    <div class=\"grid\">\n     <div class=\"grid-xs-12 grid-md-7 grid-lg-6\">\n         <div class=\"vertical-alignment-wrapper\">\n             <article class=\"section-article\">\n                 <h2 class=\"section-title\">Cheesecake chocolate cake</h2>\n                 <div class=\"section-text\">\n                     <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n                     <p><a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\">Cotton candy donut</a></p>\n                 </div>\n             </article>\n         </div>\n     </div>\n    </div>\n    </div>\n    <div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item></div>\n</section>",
        "escaped": "\n&lt;section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\"&gt;\n    &lt;div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"&gt;&lt;/div&gt;\n    &lt;div class=\"container\"&gt;\n    &lt;div class=\"grid\"&gt;\n     &lt;div class=\"grid-xs-12 grid-md-7 grid-lg-6\"&gt;\n         &lt;div class=\"vertical-alignment-wrapper\"&gt;\n             &lt;article class=\"section-article\"&gt;\n                 &lt;h2 class=\"section-title\"&gt;Cheesecake chocolate cake&lt;/h2&gt;\n                 &lt;div class=\"section-text\"&gt;\n                     &lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n                     &lt;p&gt;&lt;a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\"&gt;Cotton candy donut&lt;/a&gt;&lt;/p&gt;\n                 &lt;/div&gt;\n             &lt;/article&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item&gt;&lt;/div&gt;\n&lt;/section&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
