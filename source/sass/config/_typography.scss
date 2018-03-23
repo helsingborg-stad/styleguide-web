@@ -9,6 +9,7 @@ $code-font-family: 'Fira Sans', 'Monaco', 'Consolas', 'Menlo', 'Lucida Console',
 // ***************************************************************
 $base-font-size: 1rem !default; //16px
 $small-font-size: 0.875rem !default; //14px
+$xs-font-size: 0.875rem !default; //14px
 $large-font-size: 1.1875rem !default; //19px
 
 $print-font-size: $small-font-size !default;
@@ -17,11 +18,13 @@ $print-font-size: $small-font-size !default;
 // *** Line height
 // ***************************************************************
 $base-line-height: 1.5 !default;
+$small-line-height: 1.14285714286 !default; //14px
 
 // ***************************************************************
 // *** Text colors
 // ***************************************************************
 $base-font-color: #252525 !default;
+$disabled-font-color: rgba(#252525, 0.4) !default;
 
 // ***************************************************************
 // *** Content
