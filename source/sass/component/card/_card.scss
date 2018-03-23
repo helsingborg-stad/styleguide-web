@@ -10,30 +10,86 @@
 // @state .btn-outline - Outline button
 //
 // @markup
+// <div class="grid">
+// <div class="grid-s-12 grid-md-4">
 // <div class="c-card">
 // <div class="c-card__body">
 // <h4 class="c-card__title">Card title</h4>
 // <p class="c-card__text">Sed posuere consectetur est at lobortis.</p>
+// <a href="#" class="c-card__link">Card link</a>
+// <a href="#" class="c-card__link">Card link</a>
+// </div>
+// </div>
+// </div>
+// <div class="grid-s-12 grid-md-4">
+// <div class="c-card">
+// <h4 class="c-card__header">
+// Card with header
+// </h4>
+// <div class="c-card__body">
+// <p class="c-card__text">Sed posuere consectetur est at lobortis.</p>
+// </div>
+// </div>
+// </div>
+// <div class="grid-s-12 grid-md-4">
+// <div class="c-card">
+// <div class="c-card__body">
+// <h4 class="c-card__title">Card with footer</h4>
+// <p class="c-card__text">Sed posuere consectetur est at lobortis.</p>
+// </div>
+// <div class="c-card__footer">
+// <a href="#" class="btn">Button within card</a>
+// </div>
+// </div>
 // </div>
 // </div>
 //
 
 .c-card {
     border: solid 1px;
+    border-color: $creamy-darker;
 
-    & .c-card__title:not(:last-child),
-    & a .c-card__title:not(:last-child), {
-        margin-bottom: $content-gutter/2;
+    .c-card__body {
+        padding: $content-gutter * 1.5;
     }
 
-    & .c-card__text {}
-    & .c-card__body {
-        padding: $content-gutter;
+    .c-card__link + .c-card__link {
+        margin-left: $content-gutter/2;
     }
+
+    .c-card__title:not(:last-child),
+    .c-card__text:not(:last-child) {
+        margin-bottom: $content-gutter;
+    }
+
+    .c-card__title {
+        font-size: $large-font-size;
+        line-height: 1.5rem;
+    }
+
+    .c-card__text {}
 }
 
 .c-card {
-    & .c-card__header {}
-    & .c-card__footer {}
+    .c-card__header,
+    .c-card__footer {
+        padding: $content-gutter ($content-gutter * 1.5);
+    }
+
+    .c-card__header {
+        border-bottom: solid 1px;
+    }
+    .c-card__footer {
+        border-top: solid 1px;
+    }
+
+    .c-card__footer,
+    .c-card__header {
+        border-color: $creamy-darker;
+    }
+    .c-card__header,
+    .c-card__footer {
+        background: $creamy;
+    }
 }
 
