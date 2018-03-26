@@ -18,7 +18,7 @@ $palette-5: #e3000f;
 $palette-5-safe: #e3000f;
 $palette-5-text: #fff;
 
-@import '../config/typography';
-@import '../config/colors';
+@import '../settings/config/typography';
+@import '../settings/config/colors';
 
 @import '../pricons';
