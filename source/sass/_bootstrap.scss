@@ -1,226 +1,221 @@
 @import '../../node_modules/flickity/dist/flickity';
 
-// ***************************************************************
-// *** Configuration
-// ***************************************************************
-@import 'config/typography';
-@import 'config/colors';
-@import 'config/grid';
-@import 'config/icons';
-@import 'config/button';
-@import 'config/z-index';
-@import 'config/table';
-@import 'config/box';
+//Settings
+@import 'settings/variables';
 
-// ***************************************************************
-// *** Icons
-// ***************************************************************
+@import 'settings/config/typography';
+@import 'settings/config/colors';
+@import 'settings/config/grid';
+@import 'settings/config/icons';
+@import 'settings/config/button';
+@import 'settings/config/z-index';
+@import 'settings/config/table';
+@import 'settings/config/box';
+@import 'settings/config/wp';
+
 @import 'pricons';
 @import 'font-awesome.min';
 
-// ***************************************************************
-// *** Animations
-// ***************************************************************
-@import 'animation/slide-in-blurred';
-@import 'animation/animate-css';
-@import 'animation/reveal-animation';
+//Tools
+@import 'tools/mixins/mixins';
+@import 'tools/mixins/positioning';
+@import 'tools/mixins/forms';
+@import 'tools/mixins/arrow';
+@import 'tools/mixins/gradient';
+@import 'tools/mixins/grid';
+@import 'tools/mixins/breakpoint';
+@import 'tools/mixins/box';
+@import 'tools/mixins/material';
+@import 'tools/mixins/render';
+@import 'tools/mixins/blur';
+@import 'tools/mixins/generator';
 
-// ***************************************************************
-// *** Tools
-// ***************************************************************
-@import 'mixin/mixins';
-@import 'mixin/positioning';
-@import 'mixin/forms';
-@import 'mixin/arrow';
-@import 'mixin/gradient';
-@import 'mixin/grid';
-@import 'mixin/breakpoint';
-@import 'mixin/box';
-@import 'mixin/material';
-@import 'mixin/render';
-@import 'mixin/blur';
-@import 'mixin/generator';
+//Generic
+@import 'generic/reset';
+@import 'generic/scaffolding';
+
+//Elements
+
+//Objects
+@import 'objects/animation/animate-css';
+@import 'objects/animation/reveal-animation';
+@import 'objects/animation/slide-in-blurred';
+
+@import 'objects/container/container';
+@import 'objects/grid/grid';
+@import 'objects/grid/grid-flexbox';
+
+@import 'objects/animation/slide-in-blurred';
+@import 'objects/animation/animate-css';
+@import 'objects/animation/reveal-animation';
+
+@import 'objects/typography/headings';
+@import 'objects/typography/lead';
+@import 'objects/typography/article';
+@import 'objects/typography/list';
+@import 'objects/typography/link';
+@import 'objects/typography/label';
+@import 'objects/typography/quotes';
+
+@import 'objects/layout/float';
+@import 'objects/layout/print';
+@import 'objects/layout/responsive-elements';
+@import 'objects/layout/section';
+@import 'objects/layout/sidebars';
+@import 'objects/layout/wp-editor';
+
+//Components
+@import 'components/code/code';
+@import 'components/card/card';
+@import 'components/list/list';
+@import 'components/button/button';
+@import 'components/collapse/collapse';
+
+@import 'components/header/common';
+@import 'components/header/business';
+@import 'components/header/casual';
+@import 'components/header/jumbo';
+
+@import 'components/hero/hero';
+
+@import 'components/audio/audio';
+
+@import 'components/navigation/nav';
+@import 'components/navigation/navbar';
+@import 'components/navigation/navbar-dropdown';
+@import 'components/navigation/tabs';
+@import 'components/navigation/breadcrumb';
+@import 'components/navigation/pagination';
+@import 'components/navigation/tags';
+@import 'components/navigation/pills';
+@import 'components/navigation/mobile';
+@import 'components/navigation/scroll-dots';
+
+@import 'components/modal/modal';
+@import 'components/accordion/accordion';
+
+@import 'components/blog/post';
+@import 'components/blog/comments';
+@import 'components/blog/comments-form';
+
+@import 'components/tooltip/tooltip';
+
+@import 'components/notice/notice';
+
+@import 'components/stripe/stripe';
+
+@import 'components/box/box';
+@import 'components/box/index';
+@import 'components/box/filled';
+@import 'components/box/author';
+@import 'components/box/panel';
+@import 'components/box/news';
+@import 'components/box/card';
+@import 'components/box/grid-post';
+@import 'components/box/iframe';
+@import 'components/box/script';
+
+@import 'components/gallery/gallery';
+
+@import 'components/slider/slider';
+@import 'components/slider/animate';
+
+@import 'components/player/player';
+
+@import 'components/table/table';
+@import 'components/table/datatable';
+
+@import 'components/form/general';
+@import 'components/form/input';
+@import 'components/form/file';
+@import 'components/form/select';
+@import 'components/form/input-group';
+@import 'components/form/datepicker';
+@import 'components/form/image-upload';
+@import 'components/form/segmented';
+@import 'components/form/tag-manager';
+
+@import 'components/form/gravity-forms';
+
+@import 'components/dropdown/dropdown';
+
+@import 'components/share/share';
+
+@import 'components/search/search-form';
+@import 'components/search/search-results';
+
+@import 'components/social-feed/story';
+@import 'components/social/feed';
+
+@import 'components/footer/footer';
+
+@import 'components/error/404';
+
+@import 'components/section/section';
+@import 'components/section/section-split';
+@import 'components/section/section-full';
+@import 'components/section/section-featured';
+
+@import 'components/timeline/timeline';
+
+@import 'components/tiles/tiles';
+@import 'components/testimonials/hip-testimonial';
+
+@import 'components/wordpress/widget';
+@import 'components/wordpress/widget-nav-menu';
+@import 'components/wordpress/widget-calendar';
+@import 'components/wordpress/widget-lists';
+@import 'components/wordpress/widget-rss';
+@import 'components/wordpress/widget-search';
+@import 'components/wordpress/widget-text';
+@import 'components/wordpress/wp-caption';
+
+@import 'components/modal/animate';
+
+//Trumps
+@import 'trumps/binder/autoslider';
+
+@import 'trumps/wp';
+@import 'trumps/material';
+
+//Trumps - Utilities
+@import 'trumps/utilities/localfont';
+@import 'trumps/utilities/text';
+@import 'trumps/utilities/margin';
+@import 'trumps/utilities/link-item';
+@import 'trumps/utilities/interaction';
+@import 'trumps/utilities/loading';
+@import 'trumps/utilities/checklist';
+@import 'trumps/utilities/creamy';
+@import 'trumps/utilities/visibility';
+@import 'trumps/utilities/accessibility';
+@import 'trumps/utilities/aspect-ratio';
+@import 'trumps/utilities/video-background';
+@import 'trumps/utilities/readspeaker';
+@import 'trumps/utilities/placeholders';
+@import 'trumps/utilities/tagline';
+@import 'trumps/utilities/translate';
+@import 'trumps/utilities/position';
+@import 'trumps/utilities/wp';
+@import 'trumps/utilities/image';
+@import 'trumps/utilities/explain';
+@import 'trumps/utilities/material';
+@import 'trumps/utilities/blipper';
+@import 'trumps/utilities/backdrop';
+@import 'trumps/utilities/spinner';
+@import 'trumps/utilities/scroll-elevator';
+@import 'trumps/utilities/shape';
 
 // ***************************************************************
 // *** Layout
 // ***************************************************************
-@import 'layout/reset';
-@import 'layout/scaffolding';
-@import 'layout/container';
-@import 'layout/grid';
-@import 'layout/grid-flexbox';
-@import 'layout/section';
-@import 'layout/float';
-@import 'layout/sidebars';
-@import 'layout/print';
-@import 'layout/responsive-elements';
-@import 'layout/wp-editor';
 
-// ***************************************************************
-// *** Typography
-// ***************************************************************
-
-@import 'typography/headings';
-@import 'typography/lead';
-@import 'typography/article';
-@import 'typography/list';
-@import 'typography/link';
-@import 'typography/label';
-@import 'typography/quotes';
-
-// ***************************************************************
-// *** Components
-// ***************************************************************
-@import 'component/code/code';
-@import 'component/card/card';
-@import 'component/list/list';
-@import 'component/button/button';
-
-@import 'component/header/common';
-@import 'component/header/business';
-@import 'component/header/casual';
-@import 'component/header/jumbo';
-
-@import 'component/hero/hero';
-
-@import 'component/audio/audio';
-
-@import 'component/navigation/nav';
-@import 'component/navigation/navbar';
-@import 'component/navigation/navbar-dropdown';
-@import 'component/navigation/tabs';
-@import 'component/navigation/breadcrumb';
-@import 'component/navigation/pagination';
-@import 'component/navigation/tags';
-@import 'component/navigation/pills';
-@import 'component/navigation/mobile';
-@import 'component/navigation/scroll-dots';
-
-@import 'component/modal/modal';
-@import 'component/accordion/accordion';
-
-@import 'component/blog/post';
-@import 'component/blog/comments';
-@import 'component/blog/comments-form';
-
-@import 'component/tooltip/tooltip';
-
-@import 'component/notice/notice';
-
-@import 'component/stripe/stripe';
-
-@import 'component/box/box';
-@import 'component/box/index';
-@import 'component/box/filled';
-@import 'component/box/author';
-@import 'component/box/panel';
-@import 'component/box/news';
-@import 'component/box/card';
-@import 'component/box/grid-post';
-@import 'component/box/iframe';
-@import 'component/box/script';
-
-@import 'component/gallery/gallery';
-
-@import 'component/slider/slider';
-@import 'component/slider/animate';
-
-@import 'component/player/player';
-
-@import 'component/table/table';
-@import 'component/table/datatable';
-
-@import 'component/form/general';
-@import 'component/form/input';
-@import 'component/form/file';
-@import 'component/form/select';
-@import 'component/form/input-group';
-@import 'component/form/datepicker';
-@import 'component/form/image-upload';
-@import 'component/form/segmented';
-@import 'component/form/tag-manager';
-
-@import 'component/form/gravity-forms';
-
-@import 'component/dropdown/dropdown';
-
-@import 'component/share/share';
-
-@import 'component/search/search-form';
-@import 'component/search/search-results';
-
-@import 'component/social-feed/story';
-@import 'component/social/feed';
-
-@import 'component/footer/footer';
-
-@import 'component/error/404';
-
-@import 'component/section/section';
-@import 'component/section/section-split';
-@import 'component/section/section-full';
-@import 'component/section/section-featured';
-
-@import 'component/timeline/timeline';
-
-@import 'component/tiles/tiles';
-@import 'component/testimonials/hip-testimonial';
-
-// ***************************************************************
-// *** Utilities
-// ***************************************************************
-@import 'utility/localfont';
-@import 'utility/text';
-@import 'utility/margin';
-@import 'utility/link-item';
-@import 'utility/interaction';
-@import 'utility/loading';
-@import 'utility/checklist';
-@import 'utility/creamy';
-@import 'utility/visibility';
-@import 'utility/accessibility';
-@import 'utility/aspect-ratio';
-@import 'utility/video-background';
-@import 'utility/readspeaker';
-@import 'utility/placeholders';
-@import 'utility/tagline';
-@import 'utility/translate';
-@import 'utility/position';
-@import 'utility/wp';
-@import 'utility/image';
-@import 'utility/explain';
-@import 'utility/material';
-@import 'utility/blipper';
-@import 'utility/backdrop';
-@import 'utility/spinner';
-@import 'utility/scroll-elevator';
-@import 'utility/shape';
-
-// ***************************************************************
-// *** JS-Binders
-// ***************************************************************
-@import 'binder/autoslider';
-
-// ***************************************************************
-// *** Wordpress standard
-// ***************************************************************
-@import 'component/wordpress/widget';
-@import 'component/wordpress/widget-nav-menu';
-@import 'component/wordpress/widget-calendar';
-@import 'component/wordpress/widget-lists';
-@import 'component/wordpress/widget-rss';
-@import 'component/wordpress/widget-search';
-@import 'component/wordpress/widget-text';
-
-@import 'component/wordpress/wp-caption';
-
-// ***************************************************************
-// *** Animation components
-// ***************************************************************
-@import 'component/modal/animate';
-
-// ***************************************************************
-// *** Trumps
-// ***************************************************************
-@import 'trumps/wp';
-@import 'trumps/material';
+//@import 'layout/container';
+//@import 'layout/grid';
+//@import 'layout/grid-flexbox';
+//@import 'layout/section';
+//@import 'layout/float';
+//@import 'layout/sidebars';
+//@import 'layout/print';
+//@import 'layout/responsive-elements';
+//@import 'layout/wp-editor';

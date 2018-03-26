@@ -30,17 +30,15 @@
 //
 
 //
-// @name Active, disabled, button & links
+// @name Active items
 // @description Nullam quis risus eget urna mollis ornare vel eu leo.
 //
-// @page List/Action
+// @page List/Active items
 //
-// @state .is-active - Active list item
-// @state .is-disabled - Disabled list item
 //
 // @markup
 // <div class="grid">
-//  <div class="grid-s-12 grid-md-4">
+//  <div class="grid-s-12 grid-md-6">
 //      <ul class="c-list">
 //          <li class="c-list__item">
 //              Malesuada Aenean Vulputate
@@ -51,15 +49,58 @@
 //          <li class="c-list__item is-active">
 //              Active item
 //          </li>
-//          <li class="c-list__item is-disabled">
-//              Disabled item
+//          <li class="c-list__item">
+//              Ipsum Quam
 //          </li>
 //          <li class="c-list__item">
 //              Ipsum Quam
 //          </li>
 //      </ul>
 //  </div>
-//  <div class="grid-s-12 grid-md-4">
+// </div>
+//
+
+//
+// @name Disabled items
+// @description Nullam quis risus eget urna mollis ornare vel eu leo.
+//
+// @page List/Disabled items
+//
+//
+// @markup
+// <div class="grid">
+//  <div class="grid-s-12 grid-md-6">
+//      <ul class="c-list">
+//          <li class="c-list__item">
+//              Malesuada Aenean Vulputate
+//          </li>
+//          <li class="c-list__item">
+//              Pharetra Tortor Commodo Porta
+//          </li>
+//          <li class="c-list__item is-disabled">
+//              Disabled item
+//          </li>
+//          <li class="c-list__item">
+//              Ipsum Quam
+//          </li>
+//          <li class="c-list__item">
+//              Ipsum Quam
+//          </li>
+//      </ul>
+//  </div>
+// </div>
+//
+
+//
+// @name Links
+// @description Nullam quis risus eget urna mollis ornare vel eu leo.
+//
+// @page List/Links
+//
+//
+// @markup
+// <div class="grid">
+//  <div class="grid-s-12 grid-md-6">
 //      <div class="c-list">
 //          <a href="#" class="c-list__item c-list__action">
 //              Malesuada Aenean Vulputate
@@ -78,7 +119,18 @@
 //          </a>
 //      </div>
 //  </div>
-//  <div class="grid-s-12 grid-md-4">
+// </div>
+//
+
+//
+// @name Buttons
+// @description Nullam quis risus eget urna mollis ornare vel eu leo.
+//
+// @page List/Buttons
+//
+// @markup
+// <div class="grid">
+//  <div class="grid-s-12 grid-md-6">
 //      <div class="c-list">
 //          <button class="c-list__item c-list__action">
 //              Malesuada Aenean Vulputate
@@ -94,6 +146,24 @@
 //          </button>
 //          <button class="c-list__item c-list__action">
 //              Ipsum Quam
+//          </button>
+//      </div>
+//  </div>
+// </div>
+//
+
+//
+// @name Check / Radio buttons
+// @description Nullam quis risus eget urna mollis ornare vel eu leo.
+//
+// @page List/Buttons
+//
+// @markup
+// <div class="grid">
+//  <div class="grid-s-12 grid-md-6">
+//      <div class="c-list c-list--form">
+//          <button class="c-list__item c-list__action">
+//              Malesuada Aenean Vulputate
 //          </button>
 //      </div>
 //  </div>
@@ -164,6 +234,7 @@
         width: 100%;
         font-size: inherit;
         line-height: inherit;
+        background: initial;
 
         &:hover:not(.is-active, .is-disabled) {
             background-color: $creamy;
@@ -186,8 +257,4 @@
             border-bottom: 0;
         }
     }
-}
-
-.c-list.c-list--flush {
-
 }
