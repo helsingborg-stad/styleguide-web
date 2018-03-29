@@ -1,0 +1,28 @@
+@mixin mq($screen, $orientation: null, $condition: 'min') {
+    $query-string: 'screen';
+
+    @if $condition == 'min' {
+        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)})';
+    } @else if $condition == 'max' {
+        $query-string: $query-string ' and (max-width: #{get-breakpoint($screen, max)})';
+    } @else if $condition == 'only' {
+        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)}) and (max-width: #{get-breakpoint($screen, max)})';
+    }
+
+    @if $orientation == 'landscape' or $orientation == 'portrait' {
+        $query-string: $query-string ' and (orientation: #{$orientation})';
+    }
+
+    @if $screen == 'print'{
+        $query-string: 'print';
+    }
+
+    @if $condition == 'min' and get-breakpoint($screen) == 0 {
+        @content;
+    } @else {
+        @media #{$query-string}
+        {
+            @content;
+        }
+    }
+}
