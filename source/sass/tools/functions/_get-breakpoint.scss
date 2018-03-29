@@ -1,0 +1,24 @@
+$get-media-query-map: $breakpoints-map;
+
+@function get-breakpoint($screen, $value: 'min') {
+    @if map-has-key($get-media-query-map, $screen) {
+        $length: length(map-keys($get-media-query-map));
+
+        @if $value == 'max' {
+            @if $length > index(map-keys($get-media-query-map), $screen) {
+                @return nth(map-values($get-media-query-map), index(map-keys($get-media-query-map), $screen) + 1)  - 0.0625em;
+            }
+
+            @else {
+                @return 0em;
+            }
+        }
+
+        @elseif $value == 'min' {
+            @return map-get($get-media-query-map, $screen);
+        }
+
+    } @else {
+        @return (strip-unit($screen) / 16) * 1em;
+    }
+}
