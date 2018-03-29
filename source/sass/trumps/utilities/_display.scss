@@ -1,0 +1,14 @@
+$display-list: block, inline, inline-block, flex, inline-flex, none;
+
+@each $breakpoint in map-keys($breakpoints-map) {
+    @include mq($breakpoint) {
+        $suffix: get-breakpoint-suffix($breakpoint);
+
+        @each $display in $display-list {
+            .u-display-#{$display}#{$suffix} {
+                display: $display !important;
+            }
+        }
+    }
+}
+
