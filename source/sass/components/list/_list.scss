@@ -4,11 +4,51 @@
 //
 // @page List/Basic list
 //
+// @state .c-list--sm - Less vertical padding
+// @state .c-list--xs - Minimal vertical padding
 //
 // @markup
 // <div class="grid">
-//  <div class="grid-s-12 grid-md-6">
+//  <div class="grid-s-12 grid-md-4">
 //      <ul class="c-list">
+//          <li class="c-list__item">
+//              Malesuada Aenean Vulputate
+//          </li>
+//          <li class="c-list__item">
+//              Pharetra Tortor Commodo Porta
+//          </li>
+//          <li class="c-list__item">
+//              Sem Vehicula Ullamcorper
+//          </li>
+//          <li class="c-list__item">
+//              Venenatis Dapibus Etiam Bibendum
+//          </li>
+//          <li class="c-list__item">
+//              Ipsum Quam
+//          </li>
+//      </ul>
+//  </div>
+//  <div class="grid-s-12 grid-md-4">
+//      <ul class="c-list c-list--sm">
+//          <li class="c-list__item">
+//              Malesuada Aenean Vulputate
+//          </li>
+//          <li class="c-list__item">
+//              Pharetra Tortor Commodo Porta
+//          </li>
+//          <li class="c-list__item">
+//              Sem Vehicula Ullamcorper
+//          </li>
+//          <li class="c-list__item">
+//              Venenatis Dapibus Etiam Bibendum
+//          </li>
+//          <li class="c-list__item">
+//              Ipsum Quam
+//          </li>
+//      </ul>
+//  </div>
+//  <div class="grid-s-12 grid-md-4">
+//      <ul class="c-list c-list--xs">
 //          <li class="c-list__item">
 //              Malesuada Aenean Vulputate
 //          </li>
@@ -256,5 +296,17 @@
         .c-list__item:last-child {
             border-bottom: 0;
         }
+    }
+}
+
+.c-list.c-list--sm {
+    .c-list__item {
+        padding: ($content-gutter * 0.5) ($content-gutter * 1.5);
+    }
+}
+
+.c-list.c-list--xs {
+    .c-list__item {
+        padding: ($content-gutter * 0.25) ($content-gutter * 1.5);
     }
 }
