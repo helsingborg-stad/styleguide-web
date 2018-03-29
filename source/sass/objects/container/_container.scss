@@ -12,3 +12,21 @@
     margin: 0 auto;
     max-width: $screen-lg-max;
 }
+
+@each $container, $widths in $container-max-width {
+    $class: 'container';
+
+    @if $container != 'default' {
+        $class: '#{$class}.container--#{$container}';
+    }
+
+    @each $screen, $width in $widths {
+        @if map-has-key($breakpoints-map, $screen) {
+            @include mq($screen) {
+                .o-#{$class} {
+                    max-width: $width;
+                }
+            }
+        }
+    }
+}
