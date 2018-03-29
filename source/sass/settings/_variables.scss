@@ -1,0 +1,150 @@
+// ==========================================================================
+// Baseline
+// ==========================================================================
+$base-line: 0.5rem !default;
+$fixed-base-line: 8px !default;
+
+// ==========================================================================
+// Spacer
+// ==========================================================================
+$spacer: $base-line * 2 !default;
+$fixed-spacer: $fixed-base-line * 2 !default;
+
+$spacers-map: (
+    0 : 0,
+    1 : $spacer / 4,
+    2 : $spacer / 2,
+    3 : $spacer,
+    4 : $spacer * 2,
+    5 : $spacer * 4,
+    auto: auto
+) !default;
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+$breakpoints-map: (
+    xs : 0,         //0px
+    sm : 29.25em,   //468px
+    md : 48em,      //768px
+    lg : 60em,      //960px
+    xl : 80em,      //1280px
+    xxl : 100em,    //1600px
+    print : print
+) !default;
+
+// ==========================================================================
+// Borders
+// ==========================================================================
+$borders-map: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px
+);
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+$grid-columns: 12 !default;
+
+$grid-gutters: (
+    xs : $fixed-spacer,
+    sm : $fixed-spacer,
+    md : $fixed-spacer * 2,
+    lg : $fixed-spacer * 2,
+    xl : $fixed-spacer * 2,
+    xxl : $fixed-spacer * 2
+) !default;
+
+// ==========================================================================
+// Containers
+// ==========================================================================
+$container-max-width: (
+    default: (
+        xs: 400px,
+        sm: 700px,
+        lg: 800px,
+        xl: 800px,
+        xxl: 800px
+    )
+) !default;
+
+// ==========================================================================
+// Widths
+// ==========================================================================
+$widths: 10, 20, 25, 50, 75, 100 !default;
+
+// ==========================================================================
+// Palette Colors
+// ==========================================================================
+$palette-gray-1: #fff;
+$palette-gray-2: #333;
+$palette-gray-3: #666;
+$palette-gray-4: #777;
+$palette-gray-5: #000;
+
+$palette-red-1: #f7a600;
+$palette-red-2: #cb0050;
+$palette-red-3: #ec6701;
+$palette-red-4: #ae0b05;
+$palette-red-5: #e3000f;
+
+$palette-blue-1: #4db4e7;
+$palette-blue-2: #0069b4;
+$palette-blue-3: #5ba1d8;
+$palette-blue-4: #005c86;
+$palette-blue-5: #0095db;
+
+$palette-green-1: #afca05;
+$palette-green-2: #11a636;
+$palette-green-3: #a0c855;
+$palette-green-4: #50811b;
+$palette-green-5: #76b828;
+
+$palette-purple-1: #d35098;
+$palette-purple-2: #712082;
+$palette-purple-3: #a84c98;
+$palette-purple-4: #7b075e;
+$palette-purple-5: #a61380;
+
+$palette-1: $palette-gray-1 !default;
+$palette-2: $palette-gray-2 !default;
+$palette-3: $palette-gray-3 !default;
+$palette-4: $palette-gray-4 !default;
+$palette-5: $palette-gray-5 !default;
+
+$color-map-palette: (
+    palette-1: $palette-1,
+    palette-2: $palette-2,
+    palette-3: $palette-3,
+    palette-4: $palette-4,
+    palette-5: $palette-5
+);
+
+// ==========================================================================
+// Site Colors
+// ==========================================================================
+$color-primary: $palette-3 !default;
+$color-secondary: $palette-5 !default;
+
+$color-map-brand: (
+    primary: $color-primary,
+    secondary: $color-secondary
+) !default;
+
+// ==========================================================================
+// State Colors
+// ==========================================================================
+
+$color-danger: #FFD700 !default;
+$color-warning: #e3000f !default;
+$color-info: #b1f5ff !default;
+$color-success: #11a636 !default;
+
+$color-map-state: (
+    danger: $color-danger,
+    warning: $color-warning,
+    info: $color-info,
+    success: $color-success
+) !default;
