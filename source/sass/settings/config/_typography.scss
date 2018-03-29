@@ -24,7 +24,8 @@ $small-line-height: 1.14285714286 !default; //14px
 // *** Text colors
 // ***************************************************************
 $base-font-color: #252525 !default;
-$disabled-font-color: rgba(#252525, 0.4) !default;
+$secondary-font-color: rgba($base-font-color, 0.8) !default;
+$disabled-font-color: rgba($base-font-color, 0.4) !default;
 
 // ***************************************************************
 // *** Content
@@ -33,3 +34,17 @@ $content-gutter: 1rem  !default; //16px
 $content-gutter-fixed: 16px  !default; //1rem
 
 $mark-padding: 0 .125rem  !default; //2px
+
+$spacer: 1rem !default;
+$spacer-s: $spacer/2;
+$spacer-xs: $spacer/4;
+$spacer-l: $spacer * 2;
+$spacer-xl: $spacer * 4;
+
+$fixed-spacer: 16px;
+$fixed-spacer-xs: $fixed-spacer/2;
+$fixed-spacer-xxs: $fixed-spacer/4;
+$fixed-spacer-l: $fixed-spacer * 2;
+$fixed-spacer-xl: $fixed-spacer * 4;
+
+
