@@ -1,3 +1,5 @@
+@import 'settings/variables';
+
 @import '../../node_modules/flickity/dist/flickity';
 
 //Settings
@@ -5,6 +7,7 @@
 
 @import 'settings/config/typography';
 @import 'settings/config/colors';
+@import 'settings/config/social-colors';
 @import 'settings/config/grid';
 @import 'settings/config/icons';
 @import 'settings/config/button';
@@ -13,10 +16,21 @@
 @import 'settings/config/box';
 @import 'settings/config/wp';
 
+
 @import 'pricons';
 @import 'font-awesome.min';
 
 //Tools
+
+//New Functions
+@import 'tools/functions/strip-unit';
+@import 'tools/functions/get-breakpoint';
+@import 'tools/functions/get-breakpoint-suffix';
+
+//New mixins
+@import 'tools/mixins/mq';
+
+//Old mixins
 @import 'tools/mixins/mixins';
 @import 'tools/mixins/positioning';
 @import 'tools/mixins/forms';
@@ -29,6 +43,7 @@
 @import 'tools/mixins/render';
 @import 'tools/mixins/blur';
 @import 'tools/mixins/generator';
+@import 'tools/mixins/spacers';
 
 //Generic
 @import 'generic/reset';
@@ -56,6 +71,7 @@
 @import 'objects/typography/link';
 @import 'objects/typography/label';
 @import 'objects/typography/quotes';
+@import 'objects/typography/text';
 
 @import 'objects/layout/float';
 @import 'objects/layout/print';
@@ -65,6 +81,12 @@
 @import 'objects/layout/wp-editor';
 
 //Components
+
+//BEM Components
+
+
+//Old Components
+@import 'components/archive/archive';
 @import 'components/code/code';
 @import 'components/card/card';
 @import 'components/list/list';
@@ -179,6 +201,8 @@
 @import 'trumps/material';
 
 //Trumps - Utilities
+
+//Old utilities
 @import 'trumps/utilities/localfont';
 @import 'trumps/utilities/text';
 @import 'trumps/utilities/margin';
@@ -206,16 +230,9 @@
 @import 'trumps/utilities/scroll-elevator';
 @import 'trumps/utilities/shape';
 
-// ***************************************************************
-// *** Layout
-// ***************************************************************
-
-//@import 'layout/container';
-//@import 'layout/grid';
-//@import 'layout/grid-flexbox';
-//@import 'layout/section';
-//@import 'layout/float';
-//@import 'layout/sidebars';
-//@import 'layout/print';
-//@import 'layout/responsive-elements';
-//@import 'layout/wp-editor';
+//BEM Utilities
+@import 'trumps/utilities/spacer';
+@import 'trumps/utilities/flex';
+@import 'trumps/utilities/border';
+@import 'trumps/utilities/width';
+@import 'trumps/utilities/display';
