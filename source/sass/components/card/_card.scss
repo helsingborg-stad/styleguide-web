@@ -181,8 +181,9 @@
 .c-card {
     border: solid 1px;
     border-color: $creamy-darker;
-    overflow: hidden;
     background: white;
+    display: block;
+    width: 100%;
 
     .c-card__body {
         padding: ($content-gutter * 1.5);
@@ -197,17 +198,27 @@
         margin-bottom: $content-gutter;
     }
 
+    .c-card__sub {
+        margin-top: - ($content-gutter * 0.75);
+        display: block;
+    }
+
     .c-card__title {
         font-size: $large-font-size;
         line-height: 1.5rem;
     }
 
-    .c-card__text {}
+    .c-card__text {
+        p + p {
+            margin-top: $content-gutter;
+        }
+    }
 
     .c-card__image img,
     img.c-card__image {
         width: 100%;
         display: block;
+        overflow: hidden;
     }
 }
 
@@ -234,3 +245,12 @@
     }
 }
 
+a.c-card.c-card--action:hover,
+a.c-card.c-card--action:active,
+a.c-card.c-card--action:focus {
+    text-decoration: none;
+}
+
+a.c-card.c-card--action:hover {
+    background: $creamy;
+}
