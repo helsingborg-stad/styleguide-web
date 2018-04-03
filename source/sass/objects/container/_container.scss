@@ -10,7 +10,7 @@
 
 .container:not(.container-fullwidth) {
     margin: 0 auto;
-    max-width: $screen-lg-max;
+    max-width: 1280px;
 }
 
 @each $container, $widths in $container-max-width {
