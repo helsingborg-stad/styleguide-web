@@ -43,7 +43,7 @@
 @import 'tools/mixins/render';
 @import 'tools/mixins/blur';
 @import 'tools/mixins/generator';
-@import 'tools/mixins/spacers';
+@import 'tools/mixins/directional-classes';
 
 //Generic
 @import 'generic/reset';
@@ -230,7 +230,7 @@
 @import 'trumps/utilities/shape';
 
 //BEM Utilities
-@import 'trumps/utilities/spacer';
+@import 'trumps/utilities/padding';
 @import 'trumps/utilities/flex';
 @import 'trumps/utilities/border';
 @import 'trumps/utilities/width';

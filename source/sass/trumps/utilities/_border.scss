@@ -1,1 +1,7 @@
-@include generateSpacers($borders-map, border, b);
+$u-b-styles: (
+    1: solid 1px,
+    2: solid 2px,
+    3: solid 3px,
+    4: solid 4px
+) !default;
+@include directionalClasses($u-b-styles, border, b);

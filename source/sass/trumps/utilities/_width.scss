@@ -1,7 +1,13 @@
-@each $breakpoint in map-keys($breakpoints-map) {
-    @include mq($breakpoint) {
-        @each $width in $widths {
-            $suffix: get-breakpoint-suffix($breakpoint);
+$width-breakpoints: map-keys($breakpoints-map) !default;
+$width-map: (
+    100: 100%,
+    50: 50%
+) !default;
+
+@each $screen in $width-breakpoints {
+    @include mq($screen) {
+        @each $width, $value in $width-map {
+            $suffix: get-breakpoint-suffix($screen);
             .u-w-#{$width}#{$suffix} { width: $width !important; }
             .u-mw-#{$width}#{$suffix} { max-width: $width !important; }
         }

@@ -1,0 +1,2 @@
+$u-p-styles: $spacers-map !default;
+@include directionalClasses($u-p-styles, padding, p);
