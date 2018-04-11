@@ -64,14 +64,6 @@
    "comments",
    "post"
   ],
-  "boxes": [
-   "contact",
-   "filled",
-   "post brick",
-   "index",
-   "news",
-   "panel"
-  ],
   "buttons": [
    "base",
    "floating button",
@@ -84,6 +76,26 @@
    "sizes",
    "block button",
    "offcanvas button"
+  ],
+  "boxes": [
+   "contact",
+   "filled",
+   "post brick",
+   "index",
+   "news",
+   "panel"
+  ],
+  "navigation": [
+   "dropdown",
+   "breadcrumbs",
+   "sidebar navigation",
+   "navbar",
+   "pagination",
+   "pills",
+   "help",
+   "scroll",
+   "tabs",
+   "tags"
   ],
   "forms": [
    "datepicker",
@@ -98,35 +110,23 @@
    "select",
    "tag manager"
   ],
-  "navigation": [
-   "dropdown",
-   "breadcrumbs",
-   "sidebar navigation",
-   "navbar",
-   "pagination",
-   "pills",
-   "help",
-   "scroll",
-   "tabs",
-   "tags"
-  ],
   "gallery": [
    "image grid"
+  ],
+  "hero": [
+   "hero"
   ],
   "notice": [
    "notice"
   ],
-  "hero": [
-   "hero"
+  "search": [
+   "search form",
+   "search results"
   ],
   "section": [
    "featured",
    "full",
    "split"
-  ],
-  "search": [
-   "search form",
-   "search results"
   ],
   "social": [
    "feed"
@@ -1724,187 +1724,6 @@
     }
    ]
   },
-  "boxes": {
-   "contact": [
-    {
-     "name": "Contact Card",
-     "description": "<p>View of a persons contactcard. Use buttons to link to profiles etc.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Contact"
-      }
-     ],
-     "state": [
-      {
-       "name": ".vertical-card",
-       "escaped": "vertical-card",
-       "description": "Show description on the right hand side in desktop (identical to mobile)."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_card.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;\n        &lt;span class=\"box box-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;John Doe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Cupcake king&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\"&gt;john.dow@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n\t\t\t   &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n   &lt;div class=\"grid-md-12\"&gt;\n        &lt;span class=\"box box-card vertical-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;Jane Roe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Macaroon princess&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\"&gt;jane.roe@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                     &lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
-    }
-   ],
-   "filled": [
-    {
-     "name": "Filled",
-     "description": "<p>Filled box. Typically used in sidebars. If used in a looping grid the filled boxes will be coloured according to the brand stripe colors.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Filled"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-filled-1",
-       "escaped": "box-filled-1",
-       "description": "Use the first stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-2",
-       "escaped": "box-filled-2",
-       "description": "Use the second stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-3",
-       "escaped": "box-filled-3",
-       "description": "Use the third stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-4",
-       "escaped": "box-filled-4",
-       "description": "Use the fourth stripe color as background-color"
-      },
-      {
-       "name": ".box-filled-5",
-       "escaped": "box-filled-5",
-       "description": "Use the fifth stripe color as background-color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_filled.scss",
-       "example": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa chups&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-4\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa cis&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;&lt;img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/&gt;&lt;/p&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "post brick": [
-    {
-     "name": "Post brick box",
-     "description": "<p>Display a post brick on image background</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Post brick"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_grid-post.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n         &lt;a class=\"box box-post-brick\" href=\"#\"&gt;\n            &lt;div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\"&gt;\n               &lt;img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n               &lt;span class=\"box-post-brick-date\"&gt;\n                   &lt;time&gt;19 february, 2016 09:48&lt;/time&gt;\n               &lt;/span&gt;\n               &lt;h3 class=\"post-title\"&gt;Jelly beans jujubes cupcake&lt;/h3&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-post-brick-lead\"&gt;\n               &lt;p&gt;Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.&lt;/p&gt;\n            &lt;/div&gt;\n       &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "index": [
-    {
-     "name": "Index",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Index"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_index.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Candy canes donut jelly&lt;/h5&gt;\n                &lt;p&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "news": [
-    {
-     "name": "News",
-     "description": "<p>Used to feature news stories.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "News"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_news.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-news\"&gt;\n            &lt;img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"link-item link-item-light\"&gt;Candy canes chocolate cake&lt;/h5&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=600\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"box-title text-highlight\"&gt;Fruitcake toffee&lt;/h3&gt;\n                &lt;time datetime=\"2016-05-27 08:50:36\"&gt;2016-05-27 08:50&lt;/time&gt;\n                &lt;p&gt;Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=500\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"text-highlight\"&gt;Croissant oat cake&lt;/h3&gt;\n                &lt;p&gt;Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "panel": [
-    {
-     "name": "Panel",
-     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
-     "page": [
-      {
-       "nav": "Boxes",
-       "section": "Panel"
-      }
-     ],
-     "state": [
-      {
-       "name": ".box-panel-primary",
-       "escaped": "box-panel-primary",
-       "description": "Promary look (Default)"
-      },
-      {
-       "name": ".box-panel-secondary",
-       "escaped": "box-panel-secondary",
-       "description": "Secondary look"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/box/_panel.scss",
-       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "buttons": {
    "base": [
     {
@@ -2232,259 +2051,182 @@
     }
    ]
   },
-  "forms": {
-   "datepicker": [
+  "boxes": {
+   "contact": [
     {
-     "name": "Datepicker",
-     "description": "<p>Datepicker input</p>\n",
+     "name": "Contact Card",
+     "description": "<p>View of a persons contactcard. Use buttons to link to profiles etc.</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Datepicker"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"form-group\">\n    <label for=\"date\">Date</label>\n    <input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\">\n</div>",
-       "path": "~/source/sass/component/form/_datepicker.scss",
-       "example": "\n<div class=\"form-group\">\n    <label for=\"date\">Date</label>\n    <input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\">\n</div>",
-       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"date\"&gt;Date&lt;/label&gt;\n    &lt;input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\"&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "file": [
-    {
-     "name": "File input",
-     "description": "<p>File upload input</p>\n",
-     "page": [
-      {
-       "nav": "Forms",
-       "section": "File"
+       "nav": "Boxes",
+       "section": "Contact"
       }
      ],
      "state": [
       {
-       "name": ".invalid",
-       "escaped": "invalid",
-       "description": "Invalid input value"
+       "name": ".vertical-card",
+       "escaped": "vertical-card",
+       "description": "Show description on the right hand side in desktop (identical to mobile)."
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
-       "path": "~/source/sass/component/form/_file.scss",
-       "example": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
-       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label&gt;Upload file(s)&lt;/label&gt;\n    &lt;label class=\"input-file\"&gt;\n       &lt;input type=\"file\" name=\"file[]\"&gt;\n       &lt;span&gt;Select file…&lt;/span&gt;\n    &lt;/label&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "basic form": [
-    {
-     "name": "Form",
-     "description": "<p>Basic form</p>\n",
-     "page": [
-      {
-       "nav": "Forms",
-       "section": "Basic form"
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_card.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-4\">\n        <span class=\"box box-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\">\n            <div class=\"box-content\">\n                <h5>John Doe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Cupcake king</li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n\t\t\t\t\t<li><a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\">john.dow@helsingborg.se</a></li>\n\t\t\t\t\t<li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n\t\t\t   </ul>\n            </div>\n        </span>\n    </div>\n</div>\n<div class=\"grid\">\n   <div class=\"grid-md-12\">\n        <span class=\"box box-card vertical-card\">\n            <img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\">\n            <div class=\"box-content\">\n                <h5>Jane Roe</h5>\n                <ul>\n\t\t\t\t\t<li class=\"card-title\">Macaroon princess</li>\n                     <li><a class=\"link-item\" href=\"tel:+4673000000\">073 00 00 00</a></li>\n                     <li><a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\">jane.roe@helsingborg.se</a></li>\n                     <li class=\"small description\">Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</li>\n                </ul>\n            </div>\n        </span>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;\n        &lt;span class=\"box box-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=64\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;John Doe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Cupcake king&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:john.doe@helsingborg.se\"&gt;john.dow@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n\t\t\t   &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n   &lt;div class=\"grid-md-12\"&gt;\n        &lt;span class=\"box box-card vertical-card\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/267/267/?image=823\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5&gt;Jane Roe&lt;/h5&gt;\n                &lt;ul&gt;\n\t\t\t\t\t&lt;li class=\"card-title\"&gt;Macaroon princess&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"tel:+4673000000\"&gt;073 00 00 00&lt;/a&gt;&lt;/li&gt;\n                     &lt;li&gt;&lt;a class=\"link-item\" href=\"mailto:jane.roe@helsingborg.se\"&gt;jane.roe@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                     &lt;li class=\"small description\"&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/span&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"yummie\">Yummie</label>\n        <select name=\"yummie\" id=\"yummie\">\n            <option value=\"Gingerbread\">Gingerbread</option>\n            <option value=\"Brownie\">Brownie</option>\n            <option value=\"Candy canes\">Candy canes</option>\n            <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n            <option value=\"Macaroon\">Macaroon</option>\n            <option value=\"Lollipop\">Lollipop</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
-       "path": "~/source/sass/component/form/_general.scss",
-       "example": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"yummie\">Yummie</label>\n        <select name=\"yummie\" id=\"yummie\">\n            <option value=\"Gingerbread\">Gingerbread</option>\n            <option value=\"Brownie\">Brownie</option>\n            <option value=\"Candy canes\">Candy canes</option>\n            <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n            <option value=\"Macaroon\">Macaroon</option>\n            <option value=\"Lollipop\">Lollipop</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
-       "escaped": "\n&lt;form method=\"post\" action=\"/\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"yummie\"&gt;Yummie&lt;/label&gt;\n        &lt;select name=\"yummie\" id=\"yummie\"&gt;\n            &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n            &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n            &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n            &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n            &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n            &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n        &lt;/select&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
+     "helsingborg.se</a></li>": ""
     }
    ],
-   "horizontal form": [
+   "filled": [
     {
-     "name": "Horizontal form",
-     "description": "<p>A basic horizontal form</p>\n",
+     "name": "Filled",
+     "description": "<p>Filled box. Typically used in sidebars. If used in a looping grid the filled boxes will be coloured according to the brand stripe colors.</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Horizontal form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
-       "path": "~/source/sass/component/form/_general.scss",
-       "example": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
-       "escaped": "\n&lt;form method=\"post\" action=\"/\" class=\"form-horizontal\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "image upload": [
-    {
-     "name": "Image upload",
-     "description": "<p>Drag and drop ui for image uploading</p>\n",
-     "page": [
-      {
-       "nav": "Forms",
-       "section": "Image upload"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"image-upload\">\n    <div class=\"placeholder\">\n        <span class=\"fa-stack fa-2x\">\n            <i class=\"fa fa-picture-o fa-stack-2x\"></i>\n            <i class=\"fa fa-plus-circle fa-stack-1x\"></i>\n        </span>\n        <div class=\"placeholder-text\">\n            <span class=\"placeholder-text-drag\">Drag a photo here</span>\n            <span class=\"placeholder-text-browse\">\n                <em class=\"placeholder-text-or\">or</em>\n                <button class=\"btn btn-secondary\">Select a photo</button>\n            </span>\n        </div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/form/_image-upload.scss",
-       "example": "\n<div class=\"image-upload\">\n    <div class=\"placeholder\">\n        <span class=\"fa-stack fa-2x\">\n            <i class=\"fa fa-picture-o fa-stack-2x\"></i>\n            <i class=\"fa fa-plus-circle fa-stack-1x\"></i>\n        </span>\n        <div class=\"placeholder-text\">\n            <span class=\"placeholder-text-drag\">Drag a photo here</span>\n            <span class=\"placeholder-text-browse\">\n                <em class=\"placeholder-text-or\">or</em>\n                <button class=\"btn btn-secondary\">Select a photo</button>\n            </span>\n        </div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"image-upload\"&gt;\n    &lt;div class=\"placeholder\"&gt;\n        &lt;span class=\"fa-stack fa-2x\"&gt;\n            &lt;i class=\"fa fa-picture-o fa-stack-2x\"&gt;&lt;/i&gt;\n            &lt;i class=\"fa fa-plus-circle fa-stack-1x\"&gt;&lt;/i&gt;\n        &lt;/span&gt;\n        &lt;div class=\"placeholder-text\"&gt;\n            &lt;span class=\"placeholder-text-drag\"&gt;Drag a photo here&lt;/span&gt;\n            &lt;span class=\"placeholder-text-browse\"&gt;\n                &lt;em class=\"placeholder-text-or\"&gt;or&lt;/em&gt;\n                &lt;button class=\"btn btn-secondary\"&gt;Select a photo&lt;/button&gt;\n            &lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "input group": [
-    {
-     "name": "Input group",
-     "description": "<p>Grouped input combination. Use <code>.input-group-addon</code> to append text or use <code>.input-group-addon-btn</code> to append buttons.</p>\n",
-     "page": [
-      {
-       "nav": "Forms",
-       "section": "Input group"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"pricon pricon-file\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
-       "path": "~/source/sass/component/form/_input-group.scss",
-       "example": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"pricon pricon-file\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
-       "escaped": "\n&lt;div class=\"input-group\"&gt;\n    &lt;span class=\"input-group-addon\"&gt;&lt;i class=\"pricon pricon-file\"&gt;&lt;/i&gt;&lt;/span&gt;\n    &lt;input type=\"text\" name=\"keyword\" class=\"form-control\"&gt;\n    &lt;span class=\"input-group-addon-btn\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/span&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "input": [
-    {
-     "name": "Inputs",
-     "description": "<p>Input fields</p>\n",
-     "page": [
-      {
-       "nav": "Forms",
-       "section": "Input"
+       "nav": "Boxes",
+       "section": "Filled"
       }
      ],
      "state": [
       {
-       "name": ".invalid (or :invalid)",
-       "escaped": "invalid (or  :invalid)",
-       "description": "Invalid input value"
+       "name": ".box-filled-1",
+       "escaped": "box-filled-1",
+       "description": "Use the first stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-2",
+       "escaped": "box-filled-2",
+       "description": "Use the second stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-3",
+       "escaped": "box-filled-3",
+       "description": "Use the third stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-4",
+       "escaped": "box-filled-4",
+       "description": "Use the fourth stripe color as background-color"
+      },
+      {
+       "name": ".box-filled-5",
+       "escaped": "box-filled-5",
+       "description": "Use the fifth stripe color as background-color"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\" required></textarea>\n</div>",
-       "path": "~/source/sass/component/form/_input.scss",
-       "example": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\" required></textarea>\n</div>",
-       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"firstname\"&gt;First name&lt;/label&gt;\n    &lt;input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\"&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"disabledInput\"&gt;Disabled input&lt;/label&gt;\n    &lt;input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"textarea\"&gt;Textarea&lt;/label&gt;\n    &lt;textarea id=\"textarea\" required&gt;&lt;/textarea&gt;\n&lt;/div&gt;"
+       "modifier": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_filled.scss",
+       "example": "\n<div class=\"box box-filled box-filled-3\">\n    <h4 class=\"box-title\">Chupa chups</h4>\n    <div class=\"box-content\">\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>\n<div class=\"box box-filled box-filled-4\">\n    <h4 class=\"box-title\">Chupa cis</h4>\n    <div class=\"box-content\">\n        <p><img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/></p>\n        <p>Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.</p>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"box box-filled box-filled-3\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa chups&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"box box-filled box-filled-4\"&gt;\n    &lt;h4 class=\"box-title\"&gt;Chupa cis&lt;/h4&gt;\n    &lt;div class=\"box-content\"&gt;\n        &lt;p&gt;&lt;img src=\"https://unsplash.it/1000/600/?image=446\" width=\"1000\" height=\"600\" alt=\"This will be smaller than orginal size.\"/&gt;&lt;/p&gt;\n        &lt;p&gt;Candy canes donut jelly caramels chocolate cake chupa chups caramels wafer. I love tart danish croissant gummies gummi bears. Tiramisu croissant cheesecake chocolate cake.&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
    ],
-   "checkboxes": [
+   "post brick": [
     {
-     "name": "Checkboxes and radiobuttons",
-     "description": "",
+     "name": "Post brick box",
+     "description": "<p>Display a post brick on image background</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Checkboxes"
+       "nav": "Boxes",
+       "section": "Post brick"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
-       "path": "~/source/sass/component/form/_input.scss",
-       "example": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
-       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"checkbox\"&gt;\n        &lt;input type=\"checkbox\"&gt; Check me\n    &lt;/label&gt;\n    &lt;label class=\"checkbox disabled\"&gt;\n        &lt;input type=\"checkbox\" disabled&gt; But you can't check me\n    &lt;/label&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 1\n    &lt;/label&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 2\n    &lt;/label&gt;\n&lt;/div&gt;"
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_grid-post.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n         <a class=\"box box-post-brick\" href=\"#\">\n            <div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\">\n               <img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\">\n            </div>\n            <div class=\"box-content\">\n               <span class=\"box-post-brick-date\">\n                   <time>19 february, 2016 09:48</time>\n               </span>\n               <h3 class=\"post-title\">Jelly beans jujubes cupcake</h3>\n            </div>\n            <div class=\"box-post-brick-lead\">\n               <p>Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.</p>\n            </div>\n       </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n         &lt;a class=\"box box-post-brick\" href=\"#\"&gt;\n            &lt;div style=\"background-image:url(https://unsplash.it/1200/800/?image=513);\" class=\"box-image\"&gt;\n               &lt;img alt=\"Explicabo accusantium est necessitatibus\" src=\"https://unsplash.it/1200/800/?image=513\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n               &lt;span class=\"box-post-brick-date\"&gt;\n                   &lt;time&gt;19 february, 2016 09:48&lt;/time&gt;\n               &lt;/span&gt;\n               &lt;h3 class=\"post-title\"&gt;Jelly beans jujubes cupcake&lt;/h3&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-post-brick-lead\"&gt;\n               &lt;p&gt;Gummies cake marzipan tootsie roll oat cake cupcake. Jelly beans jujubes cupcake cotton candy cupcake gummi bears jelly bonbon croissant. Sweet gingerbread tootsie roll tootsie roll bonbon gingerbread marshmallow cake oat cake. Bear claw candy toffee marshmallow pie macaroon lemon drops powder. Dessert powder chocolate chocolate cake. Jelly-o cupcake ice cream cupcake cheesecake. Jelly beans candy cookie halvah chocolate cake marzipan.&lt;/p&gt;\n            &lt;/div&gt;\n       &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
    ],
-   "segment control": [
+   "index": [
     {
-     "name": "Segment control",
-     "description": "<p>A control for segmentating radiobuttons or checkboxes</p>\n",
+     "name": "Index",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Segment control"
+       "nav": "Boxes",
+       "section": "Index"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<ul class=\"segmented-control\">\n    <li>\n        <input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\">\n        <label for=\"search-level-subscriptions\" class=\"checkbox inline-block\">Subscriptions</label>\n    </li>\n    <li>\n        <input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\">\n        <label for=\"search-level-all\" class=\"checkbox inline-block\">All</label>\n    </li>\n    <li>\n        <input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\">\n        <label for=\"search-level-current\" class=\"checkbox inline-block\">Current</label>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/form/_segmented.scss",
-       "example": "\n<ul class=\"segmented-control\">\n    <li>\n        <input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\">\n        <label for=\"search-level-subscriptions\" class=\"checkbox inline-block\">Subscriptions</label>\n    </li>\n    <li>\n        <input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\">\n        <label for=\"search-level-all\" class=\"checkbox inline-block\">All</label>\n    </li>\n    <li>\n        <input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\">\n        <label for=\"search-level-current\" class=\"checkbox inline-block\">Current</label>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"segmented-control\"&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\"&gt;\n        &lt;label for=\"search-level-subscriptions\" class=\"checkbox inline-block\"&gt;Subscriptions&lt;/label&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\"&gt;\n        &lt;label for=\"search-level-all\" class=\"checkbox inline-block\"&gt;All&lt;/label&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\"&gt;\n        &lt;label for=\"search-level-current\" class=\"checkbox inline-block\"&gt;Current&lt;/label&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_index.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <a href=\"#\" class=\"box box-index\">\n            <img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\">\n            <div class=\"box-content\">\n                <h5 class=\"box-index-title link-item\">Candy canes donut jelly</h5>\n                <p>Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.</p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-index\"&gt;\n            &lt;img class=\"box-image\" src=\"https://unsplash.it/610/250/?image=442\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"box-index-title link-item\"&gt;Candy canes donut jelly&lt;/h5&gt;\n                &lt;p&gt;Macaroon pastry sweet pastry lollipop tootsie roll candy canes sweet roll. Candy canes lollipop cake I love. Candy canes I love ice cream caramels I love I love.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
    ],
-   "select": [
+   "news": [
     {
-     "name": "Select",
-     "description": "<p>Select field. Single and multiple choises.</p>\n",
+     "name": "News",
+     "description": "<p>Used to feature news stories.</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Select"
+       "nav": "Boxes",
+       "section": "News"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<select name=\"yummie\">\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" disabled>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" multiple>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>",
-       "path": "~/source/sass/component/form/_select.scss",
-       "example": "\n<select name=\"yummie\">\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" disabled>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" multiple>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>",
-       "escaped": "\n&lt;select name=\"yummie\"&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"yummie\" disabled&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"yummie\" multiple&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;"
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_news.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-lg-6\">\n        <a href=\"#\" class=\"box box-news\">\n            <img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\">\n            <div class=\"box-content\">\n                <h5 class=\"link-item link-item-light\">Candy canes chocolate cake</h5>\n            </div>\n        </a>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=600\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"box-title text-highlight\">Fruitcake toffee</h3>\n                <time datetime=\"2016-05-27 08:50:36\">2016-05-27 08:50</time>\n                <p>Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n    <div class=\"grid-lg-12\">\n        <a href=\"#\" class=\"box box-news box-news-horizontal\">\n            <div class=\"box-image-container\">\n                <img src=\"https://unsplash.it/200/130/?image=500\">\n            </div>\n            <div class=\"box-content\">\n                <h3 class=\"text-highlight\">Croissant oat cake</h3>\n                <p>Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.</p>\n                <p><span class=\"link-item\">Read more</span></p>\n            </div>\n        </a>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-6\"&gt;\n        &lt;a href=\"#\" class=\"box box-news\"&gt;\n            &lt;img src=\"https://unsplash.it/420/280/?image=400\" alt=\"Kommunalanställd\"&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h5 class=\"link-item link-item-light\"&gt;Candy canes chocolate cake&lt;/h5&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=600\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"box-title text-highlight\"&gt;Fruitcake toffee&lt;/h3&gt;\n                &lt;time datetime=\"2016-05-27 08:50:36\"&gt;2016-05-27 08:50&lt;/time&gt;\n                &lt;p&gt;Chocolate candy cookie ice cream fruitcake toffee cake. Jujubes sesame snaps oat cake jujubes toffee sweet. Caramels danish candy candy canes croissant.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-lg-12\"&gt;\n        &lt;a href=\"#\" class=\"box box-news box-news-horizontal\"&gt;\n            &lt;div class=\"box-image-container\"&gt;\n                &lt;img src=\"https://unsplash.it/200/130/?image=500\"&gt;\n            &lt;/div&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;h3 class=\"text-highlight\"&gt;Croissant oat cake&lt;/h3&gt;\n                &lt;p&gt;Dessert muffin tart cheesecake toffee sweet roll. Halvah pudding jelly muffin soufflé. Bonbon ice cream gummies cotton candy halvah. Jelly chupa chups icing cookie.&lt;/p&gt;\n                &lt;p&gt;&lt;span class=\"link-item\"&gt;Read more&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
    ],
-   "tag manager": [
+   "panel": [
     {
-     "name": "Tag manager",
-     "description": "<p>Tags input and list (js dependet)</p>\n",
+     "name": "Panel",
+     "description": "<p>Box that usally is of type <code>&lt;a&gt;</code> (can also be used on other elements) and represents an entrance to a sub section.</p>\n",
      "page": [
       {
-       "nav": "Forms",
-       "section": "Tag manager"
+       "nav": "Boxes",
+       "section": "Panel"
+      }
+     ],
+     "state": [
+      {
+       "name": ".box-panel-primary",
+       "escaped": "box-panel-primary",
+       "description": "Promary look (Default)"
+      },
+      {
+       "name": ".box-panel-secondary",
+       "escaped": "box-panel-secondary",
+       "description": "Secondary look"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
-       "path": "~/source/sass/component/form/_tag-manager.scss",
-       "example": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"tag-manager\" data-input-name=\"tags\"&gt;\n    &lt;div class=\"tag-manager-input\"&gt;\n        &lt;div class=\"input-group\"&gt;\n            &lt;input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\"&gt;\n            &lt;span class=\"input-group-addon-btn\"&gt;&lt;button name=\"add-tag\" class=\"btn\"&gt;Add&lt;/button&gt;&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"tag-manager-selected\"&gt;\n        &lt;label class=\"label-sm\"&gt;Tags&lt;/label&gt;\n        &lt;ul class=\"tags\"&gt;\n            &lt;li&gt;\n                &lt;button class=\"btn btn-plain\" data-action=\"remove\"&gt;&times;&lt;/button&gt;\n                Predefined tag\n                &lt;input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\"&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/box/_panel.scss",
+       "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2808,6 +2550,264 @@
     }
    ]
   },
+  "forms": {
+   "datepicker": [
+    {
+     "name": "Datepicker",
+     "description": "<p>Datepicker input</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Datepicker"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label for=\"date\">Date</label>\n    <input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\">\n</div>",
+       "path": "~/source/sass/component/form/_datepicker.scss",
+       "example": "\n<div class=\"form-group\">\n    <label for=\"date\">Date</label>\n    <input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\">\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"date\"&gt;Date&lt;/label&gt;\n    &lt;input type=\"text\" name=\"date\" id=\"date\" placeholder=\"Select date…\" class=\"datepicker\"&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "file": [
+    {
+     "name": "File input",
+     "description": "<p>File upload input</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "File"
+      }
+     ],
+     "state": [
+      {
+       "name": ".invalid",
+       "escaped": "invalid",
+       "description": "Invalid input value"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
+       "path": "~/source/sass/component/form/_file.scss",
+       "example": "\n<div class=\"form-group\">\n    <label>Upload file(s)</label>\n    <label class=\"input-file\">\n       <input type=\"file\" name=\"file[]\">\n       <span>Select file…</span>\n    </label>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label&gt;Upload file(s)&lt;/label&gt;\n    &lt;label class=\"input-file\"&gt;\n       &lt;input type=\"file\" name=\"file[]\"&gt;\n       &lt;span&gt;Select file…&lt;/span&gt;\n    &lt;/label&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "basic form": [
+    {
+     "name": "Form",
+     "description": "<p>Basic form</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Basic form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"yummie\">Yummie</label>\n        <select name=\"yummie\" id=\"yummie\">\n            <option value=\"Gingerbread\">Gingerbread</option>\n            <option value=\"Brownie\">Brownie</option>\n            <option value=\"Candy canes\">Candy canes</option>\n            <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n            <option value=\"Macaroon\">Macaroon</option>\n            <option value=\"Lollipop\">Lollipop</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "path": "~/source/sass/component/form/_general.scss",
+       "example": "\n<form method=\"post\" action=\"/\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"yummie\">Yummie</label>\n        <select name=\"yummie\" id=\"yummie\">\n            <option value=\"Gingerbread\">Gingerbread</option>\n            <option value=\"Brownie\">Brownie</option>\n            <option value=\"Candy canes\">Candy canes</option>\n            <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n            <option value=\"Macaroon\">Macaroon</option>\n            <option value=\"Lollipop\">Lollipop</option>\n        </select>\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "escaped": "\n&lt;form method=\"post\" action=\"/\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"yummie\"&gt;Yummie&lt;/label&gt;\n        &lt;select name=\"yummie\" id=\"yummie\"&gt;\n            &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n            &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n            &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n            &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n            &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n            &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n        &lt;/select&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "horizontal form": [
+    {
+     "name": "Horizontal form",
+     "description": "<p>A basic horizontal form</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Horizontal form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "path": "~/source/sass/component/form/_general.scss",
+       "example": "\n<form method=\"post\" action=\"/\" class=\"form-horizontal\">\n    <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\">\n    </div>\n    <div class=\"form-group\">\n        <label for=\"email\">Email address</label>\n        <input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\">\n    </div>\n    <div class=\"form-group\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </div>\n</form>",
+       "escaped": "\n&lt;form method=\"post\" action=\"/\" class=\"form-horizontal\"&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"name\"&gt;Name&lt;/label&gt;\n        &lt;input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Name\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"email\"&gt;Email address&lt;/label&gt;\n        &lt;input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Email\"&gt;\n    &lt;/div&gt;\n    &lt;div class=\"form-group\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "image upload": [
+    {
+     "name": "Image upload",
+     "description": "<p>Drag and drop ui for image uploading</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Image upload"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"image-upload\">\n    <div class=\"placeholder\">\n        <span class=\"fa-stack fa-2x\">\n            <i class=\"fa fa-picture-o fa-stack-2x\"></i>\n            <i class=\"fa fa-plus-circle fa-stack-1x\"></i>\n        </span>\n        <div class=\"placeholder-text\">\n            <span class=\"placeholder-text-drag\">Drag a photo here</span>\n            <span class=\"placeholder-text-browse\">\n                <em class=\"placeholder-text-or\">or</em>\n                <button class=\"btn btn-secondary\">Select a photo</button>\n            </span>\n        </div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/form/_image-upload.scss",
+       "example": "\n<div class=\"image-upload\">\n    <div class=\"placeholder\">\n        <span class=\"fa-stack fa-2x\">\n            <i class=\"fa fa-picture-o fa-stack-2x\"></i>\n            <i class=\"fa fa-plus-circle fa-stack-1x\"></i>\n        </span>\n        <div class=\"placeholder-text\">\n            <span class=\"placeholder-text-drag\">Drag a photo here</span>\n            <span class=\"placeholder-text-browse\">\n                <em class=\"placeholder-text-or\">or</em>\n                <button class=\"btn btn-secondary\">Select a photo</button>\n            </span>\n        </div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"image-upload\"&gt;\n    &lt;div class=\"placeholder\"&gt;\n        &lt;span class=\"fa-stack fa-2x\"&gt;\n            &lt;i class=\"fa fa-picture-o fa-stack-2x\"&gt;&lt;/i&gt;\n            &lt;i class=\"fa fa-plus-circle fa-stack-1x\"&gt;&lt;/i&gt;\n        &lt;/span&gt;\n        &lt;div class=\"placeholder-text\"&gt;\n            &lt;span class=\"placeholder-text-drag\"&gt;Drag a photo here&lt;/span&gt;\n            &lt;span class=\"placeholder-text-browse\"&gt;\n                &lt;em class=\"placeholder-text-or\"&gt;or&lt;/em&gt;\n                &lt;button class=\"btn btn-secondary\"&gt;Select a photo&lt;/button&gt;\n            &lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "input group": [
+    {
+     "name": "Input group",
+     "description": "<p>Grouped input combination. Use <code>.input-group-addon</code> to append text or use <code>.input-group-addon-btn</code> to append buttons.</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Input group"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"pricon pricon-file\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "path": "~/source/sass/component/form/_input-group.scss",
+       "example": "\n<div class=\"input-group\">\n    <span class=\"input-group-addon\"><i class=\"pricon pricon-file\"></i></span>\n    <input type=\"text\" name=\"keyword\" class=\"form-control\">\n    <span class=\"input-group-addon-btn\">\n        <input type=\"submit\" class=\"btn btn-primary\" value=\"Send\">\n    </span>\n</div>",
+       "escaped": "\n&lt;div class=\"input-group\"&gt;\n    &lt;span class=\"input-group-addon\"&gt;&lt;i class=\"pricon pricon-file\"&gt;&lt;/i&gt;&lt;/span&gt;\n    &lt;input type=\"text\" name=\"keyword\" class=\"form-control\"&gt;\n    &lt;span class=\"input-group-addon-btn\"&gt;\n        &lt;input type=\"submit\" class=\"btn btn-primary\" value=\"Send\"&gt;\n    &lt;/span&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "input": [
+    {
+     "name": "Inputs",
+     "description": "<p>Input fields</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Input"
+      }
+     ],
+     "state": [
+      {
+       "name": ".invalid (or :invalid)",
+       "escaped": "invalid (or  :invalid)",
+       "description": "Invalid input value"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\" required></textarea>\n</div>",
+       "path": "~/source/sass/component/form/_input.scss",
+       "example": "\n<div class=\"form-group\">\n    <label for=\"firstname\">First name</label>\n    <input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\">\n</div>\n<div class=\"form-group\">\n    <label for=\"disabledInput\">Disabled input</label>\n    <input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled>\n</div>\n<div class=\"form-group\">\n    <label for=\"textarea\">Textarea</label>\n    <textarea id=\"textarea\" required></textarea>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"firstname\"&gt;First name&lt;/label&gt;\n    &lt;input type=\"text\" name=\"firstname\" id=\"firstname\" placeholder=\"First name\"&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"disabledInput\"&gt;Disabled input&lt;/label&gt;\n    &lt;input type=\"text\" name=\"disabledInput\" id=\"disabledInput\" placeholder=\"Disabled input[text]\" disabled&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label for=\"textarea\"&gt;Textarea&lt;/label&gt;\n    &lt;textarea id=\"textarea\" required&gt;&lt;/textarea&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "checkboxes": [
+    {
+     "name": "Checkboxes and radiobuttons",
+     "description": "",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Checkboxes"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
+       "path": "~/source/sass/component/form/_input.scss",
+       "example": "\n<div class=\"form-group\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\"> Check me\n    </label>\n    <label class=\"checkbox disabled\">\n        <input type=\"checkbox\" disabled> But you can't check me\n    </label>\n</div>\n<div class=\"form-group\">\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 1\n    </label>\n    <label class=\"radio\">\n        <input type=\"radio\" name=\"radio\"> Alternative 2\n    </label>\n</div>",
+       "escaped": "\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"checkbox\"&gt;\n        &lt;input type=\"checkbox\"&gt; Check me\n    &lt;/label&gt;\n    &lt;label class=\"checkbox disabled\"&gt;\n        &lt;input type=\"checkbox\" disabled&gt; But you can't check me\n    &lt;/label&gt;\n&lt;/div&gt;\n&lt;div class=\"form-group\"&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 1\n    &lt;/label&gt;\n    &lt;label class=\"radio\"&gt;\n        &lt;input type=\"radio\" name=\"radio\"&gt; Alternative 2\n    &lt;/label&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "segment control": [
+    {
+     "name": "Segment control",
+     "description": "<p>A control for segmentating radiobuttons or checkboxes</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Segment control"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"segmented-control\">\n    <li>\n        <input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\">\n        <label for=\"search-level-subscriptions\" class=\"checkbox inline-block\">Subscriptions</label>\n    </li>\n    <li>\n        <input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\">\n        <label for=\"search-level-all\" class=\"checkbox inline-block\">All</label>\n    </li>\n    <li>\n        <input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\">\n        <label for=\"search-level-current\" class=\"checkbox inline-block\">Current</label>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/form/_segmented.scss",
+       "example": "\n<ul class=\"segmented-control\">\n    <li>\n        <input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\">\n        <label for=\"search-level-subscriptions\" class=\"checkbox inline-block\">Subscriptions</label>\n    </li>\n    <li>\n        <input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\">\n        <label for=\"search-level-all\" class=\"checkbox inline-block\">All</label>\n    </li>\n    <li>\n        <input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\">\n        <label for=\"search-level-current\" class=\"checkbox inline-block\">Current</label>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"segmented-control\"&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-subscriptions\" type=\"radio\" name=\"level\" value=\"subscriptions\"&gt;\n        &lt;label for=\"search-level-subscriptions\" class=\"checkbox inline-block\"&gt;Subscriptions&lt;/label&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-all\" type=\"radio\" name=\"level\" value=\"all\"&gt;\n        &lt;label for=\"search-level-all\" class=\"checkbox inline-block\"&gt;All&lt;/label&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;input id=\"search-level-current\" type=\"radio\" name=\"level\" value=\"current\"&gt;\n        &lt;label for=\"search-level-current\" class=\"checkbox inline-block\"&gt;Current&lt;/label&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ],
+   "select": [
+    {
+     "name": "Select",
+     "description": "<p>Select field. Single and multiple choises.</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Select"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<select name=\"yummie\">\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" disabled>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" multiple>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>",
+       "path": "~/source/sass/component/form/_select.scss",
+       "example": "\n<select name=\"yummie\">\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" disabled>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>\n<select name=\"yummie\" multiple>\n    <option value=\"Gingerbread\">Gingerbread</option>\n    <option value=\"Brownie\">Brownie</option>\n    <option value=\"Candy canes\">Candy canes</option>\n    <option value=\"Marzipan jujubes\">Marzipan jujubes</option>\n    <option value=\"Macaroon\">Macaroon</option>\n    <option value=\"Lollipop\">Lollipop</option>\n</select>",
+       "escaped": "\n&lt;select name=\"yummie\"&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"yummie\" disabled&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;\n&lt;select name=\"yummie\" multiple&gt;\n    &lt;option value=\"Gingerbread\"&gt;Gingerbread&lt;/option&gt;\n    &lt;option value=\"Brownie\"&gt;Brownie&lt;/option&gt;\n    &lt;option value=\"Candy canes\"&gt;Candy canes&lt;/option&gt;\n    &lt;option value=\"Marzipan jujubes\"&gt;Marzipan jujubes&lt;/option&gt;\n    &lt;option value=\"Macaroon\"&gt;Macaroon&lt;/option&gt;\n    &lt;option value=\"Lollipop\"&gt;Lollipop&lt;/option&gt;\n&lt;/select&gt;"
+      }
+     ]
+    }
+   ],
+   "tag manager": [
+    {
+     "name": "Tag manager",
+     "description": "<p>Tags input and list (js dependet)</p>\n",
+     "page": [
+      {
+       "nav": "Forms",
+       "section": "Tag manager"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
+       "path": "~/source/sass/component/form/_tag-manager.scss",
+       "example": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"tag-manager\" data-input-name=\"tags\"&gt;\n    &lt;div class=\"tag-manager-input\"&gt;\n        &lt;div class=\"input-group\"&gt;\n            &lt;input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\"&gt;\n            &lt;span class=\"input-group-addon-btn\"&gt;&lt;button name=\"add-tag\" class=\"btn\"&gt;Add&lt;/button&gt;&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"tag-manager-selected\"&gt;\n        &lt;label class=\"label-sm\"&gt;Tags&lt;/label&gt;\n        &lt;ul class=\"tags\"&gt;\n            &lt;li&gt;\n                &lt;button class=\"btn btn-plain\" data-action=\"remove\"&gt;&times;&lt;/button&gt;\n                Predefined tag\n                &lt;input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\"&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "gallery": {
    "image grid": [
     {
@@ -2835,6 +2835,30 @@
        "path": "~/source/sass/component/gallery/_gallery.scss",
        "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
        "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/component/hero/_hero.scss",
+       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2896,25 +2920,47 @@
     }
    ]
   },
-  "hero": {
-   "hero": [
+  "search": {
+   "search form": [
     {
-     "name": "Hero",
-     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "name": "Large search form",
+     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
      "page": [
       {
-       "nav": "Hero",
-       "section": "Hero"
+       "nav": "Search",
+       "section": "Search form"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "path": "~/source/sass/component/hero/_hero.scss",
-       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "path": "~/source/sass/component/search/_search-form.scss",
+       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
+       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
+      }
+     ]
+    }
+   ],
+   "search results": [
+    {
+     "name": "Search results",
+     "description": "<p>A list of search results.</p>\n",
+     "page": [
+      {
+       "nav": "Search",
+       "section": "Search results"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "path": "~/source/sass/component/search/_search-results.scss",
+       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -3084,52 +3130,6 @@
        "path": "~/source/sass/component/section/section-split.scss",
        "example": "\n<section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\">\n    <div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"></div>\n    <div class=\"container\">\n    <div class=\"grid\">\n     <div class=\"grid-xs-12 grid-md-7 grid-lg-6\">\n         <div class=\"vertical-alignment-wrapper\">\n             <article class=\"section-article\">\n                 <h2 class=\"section-title\">Cheesecake chocolate cake</h2>\n                 <div class=\"section-text\">\n                     <p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n                     <p><a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\">Cotton candy donut</a></p>\n                 </div>\n             </article>\n         </div>\n     </div>\n    </div>\n    </div>\n    <div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item></div>\n</section>",
        "escaped": "\n&lt;section class=\"section section-split image-focus-right-top image-left text-middle background-1 section-md padding-md text-md\"&gt;\n    &lt;div class=\"section-image-mobile hidden-md hidden-lg ratio-16-9\" style=\"background-image: url(https://unsplash.it/800/450?image=1001);\"&gt;&lt;/div&gt;\n    &lt;div class=\"container\"&gt;\n    &lt;div class=\"grid\"&gt;\n     &lt;div class=\"grid-xs-12 grid-md-7 grid-lg-6\"&gt;\n         &lt;div class=\"vertical-alignment-wrapper\"&gt;\n             &lt;article class=\"section-article\"&gt;\n                 &lt;h2 class=\"section-title\"&gt;Cheesecake chocolate cake&lt;/h2&gt;\n                 &lt;div class=\"section-text\"&gt;\n                     &lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake. Sesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n                     &lt;p&gt;&lt;a class=\"btn btn-lg btn-btn\" href=\"https://www.youtube.com/watch?v=ug4c2mqlE_0\"&gt;Cotton candy donut&lt;/a&gt;&lt;/p&gt;\n                 &lt;/div&gt;\n             &lt;/article&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"section-image hidden-xs hidden-sm\" style=\"background-image: url(https://unsplash.it/500/600?image=1001);\" data-equal-item&gt;&lt;/div&gt;\n&lt;/section&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "search": {
-   "search form": [
-    {
-     "name": "Large search form",
-     "description": "<p>The search form basiclly is a input-group (find docs under Forms/Input group).</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "path": "~/source/sass/component/search/_search-form.scss",
-       "example": "\n<form class=\"search\" method=\"get\" action=\"/\">\n   <label for=\"search-keyword\" class=\"sr-only\">Sök på Helsingborg.se</label>\n   <div class=\"input-group input-group-lg\">\n       <input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\">\n       <span class=\"input-group-addon-btn\">\n           <input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\">\n       </span>\n   </div>\n</form>",
-       "escaped": "\n&lt;form class=\"search\" method=\"get\" action=\"/\"&gt;\n   &lt;label for=\"search-keyword\" class=\"sr-only\"&gt;Sök på Helsingborg.se&lt;/label&gt;\n   &lt;div class=\"input-group input-group-lg\"&gt;\n       &lt;input id=\"search-keyword\" autocomplete=\"off\" class=\"form-control form-control-lg\" type=\"search\" name=\"s\" placeholder=\"Search cupcakes\"&gt;\n       &lt;span class=\"input-group-addon-btn\"&gt;\n           &lt;input type=\"submit\" class=\"btn btn-primary btn-lg\" value=\"Search\"&gt;\n       &lt;/span&gt;\n   &lt;/div&gt;\n&lt;/form&gt;"
-      }
-     ]
-    }
-   ],
-   "search results": [
-    {
-     "name": "Search results",
-     "description": "<p>A list of search results.</p>\n",
-     "page": [
-      {
-       "nav": "Search",
-       "section": "Search results"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "path": "~/source/sass/component/search/_search-results.scss",
-       "example": "\n<ul class=\"search-result-list\">\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Sweet roll brownie jelly</a></h3>\n            <p>Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n    <li>\n        <div class=\"search-result-item\">\n            <span class=\"search-result-date\">13 jan 2016</span>\n            <h3><a href=\"#\" class=\"link-item\">Candy canes bear claw</a></h3>\n            <p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…</p>\n            <div class=\"search-result-info\">\n                <span class=\"search-result-url\"><i class=\"fa fa-globe\"></i> <a href=\"#\">www.helsingborg.se/startsida/forskola-och-utbildning/forskola/</a></span>\n            </div>\n        </div>\n    </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"search-result-list\"&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Sweet roll brownie jelly&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Jujubes oat cake sweet sugar plum cupcake. Bonbon pudding I love I love soufflé. Halvah I love pie pudding…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n        &lt;div class=\"search-result-item\"&gt;\n            &lt;span class=\"search-result-date\"&gt;13 jan 2016&lt;/span&gt;\n            &lt;h3&gt;&lt;a href=\"#\" class=\"link-item\"&gt;Candy canes bear claw&lt;/a&gt;&lt;/h3&gt;\n            &lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert…&lt;/p&gt;\n            &lt;div class=\"search-result-info\"&gt;\n                &lt;span class=\"search-result-url\"&gt;&lt;i class=\"fa fa-globe\"&gt;&lt;/i&gt; &lt;a href=\"#\"&gt;www.helsingborg.se/startsida/forskola-och-utbildning/forskola/&lt;/a&gt;&lt;/span&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
