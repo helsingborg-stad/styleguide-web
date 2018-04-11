@@ -226,13 +226,13 @@ li.comment.comment-new {
             margin-right: $content-gutter / 2;
         }
 
-        a {
+        span > a {
             color: $gray;
             font-size: .9em;
             text-decoration: none !important;
         }
 
-        a:hover{
+        span > a:hover{
             color: $palette-4;
         }
 
