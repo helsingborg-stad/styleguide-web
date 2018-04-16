@@ -2,13 +2,13 @@
 // Baseline
 // ==========================================================================
 $base-line: 0.5rem !default;
-$fixed-base-line: 8px !default;
+$base-line-fixed: 8px !default;
 
 // ==========================================================================
 // Spacer
 // ==========================================================================
 $spacer: $base-line * 2 !default;
-$fixed-spacer: $fixed-base-line * 2 !default;
+$spacer-fixed: $base-line-fixed * 2 !default;
 
 $spacers-map: (
     0 : 0,
@@ -34,27 +34,17 @@ $breakpoints-map: (
 ) !default;
 
 // ==========================================================================
-// Borders
-// ==========================================================================
-$borders-map: (
-    1: solid 1px,
-    2: solid 2px,
-    3: solid 3px,
-    4: solid 4px
-);
-
-// ==========================================================================
 // Grid
 // ==========================================================================
 $grid-columns: 12 !default;
 
 $grid-gutters: (
-    xs : $fixed-spacer,
-    sm : $fixed-spacer,
-    md : $fixed-spacer * 2,
-    lg : $fixed-spacer * 2,
-    xl : $fixed-spacer * 2,
-    xxl : $fixed-spacer * 2
+    xs : $spacer-fixed,
+    sm : $spacer-fixed,
+    md : $spacer-fixed * 2,
+    lg : $spacer-fixed * 2,
+    xl : $spacer-fixed * 2,
+    xxl : $spacer-fixed * 2
 ) !default;
 
 // ==========================================================================

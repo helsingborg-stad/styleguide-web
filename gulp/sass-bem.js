@@ -67,7 +67,7 @@ gulp.task('inject:tools', function() {
     var config = injectConfig(layer);
 
     return gulp.src('./source/sass-bem/_bootstrap.scss')
-        .pipe(inject(gulp.src(['./source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
+        .pipe(inject(gulp.src(['./source/sass/' + layer + '/**/*.scss', './source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
         .pipe(gulp.dest('./source/sass-bem'));
 });
 

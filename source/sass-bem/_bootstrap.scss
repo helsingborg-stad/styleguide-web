@@ -17,29 +17,37 @@
    ========================================================================== */
 
 /* Settings */
-@import 'settings/typography';
-@import 'settings/colors';
-@import 'settings/grid';
-@import 'settings/icons';
-@import 'settings/button';
-@import 'settings/z-index';
-@import 'settings/table';
-@import 'settings/box';
-@import 'settings/hamburger';
+@import '../sass/settings/_variables';
+@import '../sass/settings/config/typography';
+@import '../sass/settings/config/colors';
+@import '../sass/settings/config/social-colors';
+@import '../sass/settings/config/grid';
+@import '../sass/settings/config/icons';
+@import '../sass/settings/config/button';
+@import '../sass/settings/config/z-index';
+@import '../sass/settings/config/table';
+@import '../sass/settings/config/box';
+@import '../sass/settings/config/wp';
 
 // inject:tools
-@import "./source/sass-bem/tools/_arrow.scss";
-@import "./source/sass-bem/tools/_blur.scss";
-@import "./source/sass-bem/tools/_box.scss";
-@import "./source/sass-bem/tools/_breakpoint.scss";
-@import "./source/sass-bem/tools/_forms.scss";
-@import "./source/sass-bem/tools/_generator.scss";
-@import "./source/sass-bem/tools/_gradient.scss";
-@import "./source/sass-bem/tools/_grid.scss";
-@import "./source/sass-bem/tools/_material.scss";
-@import "./source/sass-bem/tools/_mixins.scss";
-@import "./source/sass-bem/tools/_positioning.scss";
-@import "./source/sass-bem/tools/_render.scss";
+@import "./source/sass/tools/functions/_get-breakpoint-suffix.scss";
+@import "./source/sass/tools/functions/_get-breakpoint.scss";
+@import "./source/sass/tools/functions/_rem.scss";
+@import "./source/sass/tools/functions/_strip-unit.scss";
+@import "./source/sass/tools/mixins/_arrow.scss";
+@import "./source/sass/tools/mixins/_blur.scss";
+@import "./source/sass/tools/mixins/_box.scss";
+@import "./source/sass/tools/mixins/_breakpoint.scss";
+@import "./source/sass/tools/mixins/_directional-classes.scss";
+@import "./source/sass/tools/mixins/_forms.scss";
+@import "./source/sass/tools/mixins/_generator.scss";
+@import "./source/sass/tools/mixins/_gradient.scss";
+@import "./source/sass/tools/mixins/_grid.scss";
+@import "./source/sass/tools/mixins/_material.scss";
+@import "./source/sass/tools/mixins/_mixins.scss";
+@import "./source/sass/tools/mixins/_mq.scss";
+@import "./source/sass/tools/mixins/_positioning.scss";
+@import "./source/sass/tools/mixins/_render.scss";
 // endinject
 
 // inject:generic
@@ -49,23 +57,19 @@
 // endinject
 
 // inject:objects
-@import "./source/sass-bem/objects/_box.scss";
 @import "./source/sass-bem/objects/_reset.scss";
-@import "./source/sass-bem/objects/_visibility-toggle.scss";
 // endinject
 
 // inject:components
 @import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-@import "./source/sass-bem/components/_card.scss";
+@import "./source/sass-bem/components/_c-brand.scss";
+@import "./source/sass-bem/components/_c-nav.scss";
 @import "./source/sass-bem/components/_feed.scss";
-@import "./source/sass-bem/components/_header.scss";
-@import "./source/sass-bem/components/_navbar.scss";
-@import "./source/sass-bem/components/_posts.scss";
 // endinject
 
 // inject:utilities
-@import "./source/sass-bem/utilities/_display.scss";
-@import "./source/sass-bem/utilities/_flex.scss";
+@import "./source/sass-bem/utilities/_align.scss";
+@import "./source/sass-bem/utilities/_clearfix.scss";
 @import "./source/sass-bem/utilities/_spacing.scss";
 @import "./source/sass-bem/utilities/_text.scss";
 // endinject

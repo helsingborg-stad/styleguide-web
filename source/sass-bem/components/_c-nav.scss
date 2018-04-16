@@ -1,12 +1,12 @@
-.c-navbar {
+.c-nav {
     display: flex;
     flex-wrap: no-wrap;
     align-items: center;
 
     /* TEMP */
-    margin: -$content-gutter;
+    // margin: -$content-gutter;
 
-    .c-navbar__item {
+    .c-nav__item {
         position: relative;
         a {
             display: block;
@@ -14,8 +14,8 @@
         }
     }
 
-    .c-navbar__item.is-current,
-    .c-navbar__item.is-current-ancestor:not(.c-navbar__sub) {
+    .c-nav__item.is-current,
+    .c-nav__item.is-current-ancestor:not(.c-navbar__sub) {
         &:after {
             bottom: 0;
             left: 50%;
@@ -30,21 +30,21 @@
         }
     }
 
-    .c-navbar__item.is-current-ancestor {
+    .c-nav__item.is-current-ancestor {
 
     }
 
-    .c-navbar__sub {
+    .c-nav__sub {
         display: none;
     }
 
-    .c-navbar__item.is-open .c-navbar__sub {
+    .c-nav__item.is-open .c-nav__sub {
         display: block;
     }
 
-    .c-navbar__item_button:hover {
+    .c-nav__item:hover {
         cursor: pointer;
     }
 
-    .c-navbar__sub_item {}
+    .c-nav__item {}
 }
