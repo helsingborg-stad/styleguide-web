@@ -3,3 +3,15 @@
     flex-wrap: no-wrap;
     align-items: center;
 }
+
+.c-navbar {
+    padding: $spacer 0;
+}
+
+.c-navbar.c-navbar--sm {
+    padding: $spacer/2 0;
+}
+.c-navbar.c-navbar--lg {
+    padding: $spacer*2 0;
+}
+
