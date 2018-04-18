@@ -376,7 +376,9 @@ body:not(.material-no-shadow) .box-content .accordion {
 }
 
 .accordion-toggle:before {
-       @include pricon($pricon-plus-o);
+    margin-top:4px;
+    float:right;
+    @include pricon($pricon-plus-o);
 }
 
 .minus:before {
