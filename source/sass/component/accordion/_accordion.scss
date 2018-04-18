@@ -375,16 +375,6 @@ body:not(.material-no-shadow) .box-content .accordion {
     margin-right: 5px;
 }
 
-.accordion-toggle:before {
-    margin-top:4px;
-    float:right;
-    @include pricon($pricon-plus-o);
-}
-
-.minus:before {
-    @include pricon($pricon-minus-o);
-}
-
 
 
 
