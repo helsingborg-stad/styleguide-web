@@ -51,7 +51,7 @@
 // ***************************************************************
 // *** Grid column gutter
 // ***************************************************************
-[class*="grid-"] {
+[class*="grid-"]:not([class*="grid--"]) {
     min-height: 1px;
     padding-left: $grid-gutter-xs / 2;
     padding-right: $grid-gutter-xs / 2;
