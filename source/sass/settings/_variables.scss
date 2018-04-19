@@ -1,22 +1,23 @@
 // ==========================================================================
 // Baseline
 // ==========================================================================
-$base-line: 0.5rem !default;
-$base-line-fixed: 8px !default;
+$base-line: 8px !default;
+$base-line-content: 0.5rem !default;
 
 // ==========================================================================
 // Spacer
 // ==========================================================================
-$spacer: $base-line * 2 !default;
-$spacer-fixed: $base-line-fixed * 2 !default;
+$spacer: $base-line * 4 !default;
 
 $spacers-map: (
     0 : 0,
-    1 : $spacer / 4,
-    2 : $spacer / 2,
-    3 : $spacer,
-    4 : $spacer * 2,
-    5 : $spacer * 4,
+    1 : $base-line,      //8px
+    2 : $base-line * 2,  //16px
+    3 : $base-line * 4,  //32px
+    4 : $base-line * 6,  //48px
+    5 : $base-line * 8,  //64px
+    6 : $base-line * 10, //80px
+    7 : $base-line * 12, //96px
     auto: auto
 ) !default;
 
@@ -39,12 +40,12 @@ $breakpoints-map: (
 $grid-columns: 12 !default;
 
 $grid-gutters: (
-    xs : $spacer-fixed,
-    sm : $spacer-fixed,
-    md : $spacer-fixed * 2,
-    lg : $spacer-fixed * 2,
-    xl : $spacer-fixed * 2,
-    xxl : $spacer-fixed * 2
+    xs : $base-line * 3,
+    sm : $base-line * 3,
+    md : $base-line * 4,
+    lg : $base-line * 4,
+    xl : $base-line * 4,
+    xxl : $base-line * 4
 ) !default;
 
 // ==========================================================================
@@ -115,8 +116,36 @@ $color-map-palette: (
 // ==========================================================================
 // Site Colors
 // ==========================================================================
-$color-primary: $palette-3 !default;
-$color-secondary: $palette-5 !default;
+
+//Brand
+$color-primary: $palette-4 !default;
+$color-primary-2: $palette-5 !default;
+$color-primary-3: $palette-3 !default;
+
+$color-secondary: $palette-1 !default;
+$color-secondary-2: $palette-2 !default;
+
+//Netural
+$color-dark: rgba(#000000, 0.87);
+$color-dark-muted: rgba(#000000, 0.54);
+$color-dark-disabled:rgba(#000000, 0.38);
+$color-light: rgba(#FFFFFF, 1);
+$color-light-muted: rgba(#FFFFFF, 0.7);
+$color-light-disabled: rgba(#FFFFFF, 0.5);
+
+$color-gray: gray;
+$color-gray-light: gray;
+$color-creamy: gray;
+
+//State
+$color-danger: #FFD700 !default;
+$color-warning: #e3000f !default;
+$color-info: #b1f5ff !default;
+$color-success: #11a636 !default;
+
+//Muted & Disabled
+$color-muted: black;
+$color-disabled: black;
 
 $color-map-brand: (
     primary: $color-primary,
@@ -126,12 +155,6 @@ $color-map-brand: (
 // ==========================================================================
 // State Colors
 // ==========================================================================
-
-$color-danger: #FFD700 !default;
-$color-warning: #e3000f !default;
-$color-info: #b1f5ff !default;
-$color-success: #11a636 !default;
-
 $color-map-state: (
     danger: $color-danger,
     warning: $color-warning,
