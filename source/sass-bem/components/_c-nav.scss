@@ -48,3 +48,14 @@
 
     .c-nav__item {}
 }
+
+.c-nav.c-nav--small {
+    font-size: 14px;
+    .c-nav__link {
+        padding: $content-gutter/2;
+    }
+}
+
+.c-nav.c-nav--large {
+    font-size: 19px;
+}
