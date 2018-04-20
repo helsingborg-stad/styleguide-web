@@ -5,7 +5,7 @@
 }
 
 .c-navbar {
-    padding: $spacer 0;
+    padding: $spacer/2 0;
 }
 
 .c-navbar.c-navbar--hard {
@@ -13,11 +13,14 @@
 }
 
 .c-navbar.c-navbar--lg {
-    padding: $spacer*2 0;
+    padding: $spacer/2 0;
+
+    @include mq(lg) {
+        padding: $spacer 0;
+    }
 }
 
-.c-navbar.c-navbar--sm {
-    padding: $spacer/2 0;
-}
+
+
 
 
