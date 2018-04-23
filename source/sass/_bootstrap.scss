@@ -11,6 +11,7 @@
 @import 'settings/z-index';
 @import 'settings/table';
 @import 'settings/box';
+@import 'settings/wp';
 
 // ***************************************************************
 // *** Icons
@@ -21,18 +22,18 @@
 // ***************************************************************
 // *** Tools
 // ***************************************************************
-@import 'tools/mixin/mixins';
-@import 'tools/mixin/positioning';
-@import 'tools/mixin/forms';
-@import 'tools/mixin/arrow';
-@import 'tools/mixin/gradient';
-@import 'tools/mixin/grid';
-@import 'tools/mixin/breakpoint';
-@import 'tools/mixin/box';
-@import 'tools/mixin/material';
-@import 'tools/mixin/render';
-@import 'tools/mixin/blur';
-@import 'tools/mixin/generator';
+@import 'tools/mixins/mixins';
+@import 'tools/mixins/positioning';
+@import 'tools/mixins/forms';
+@import 'tools/mixins/arrow';
+@import 'tools/mixins/gradient';
+@import 'tools/mixins/grid';
+@import 'tools/mixins/breakpoint';
+@import 'tools/mixins/box';
+@import 'tools/mixins/material';
+@import 'tools/mixins/render';
+@import 'tools/mixins/blur';
+@import 'tools/mixins/generator';
 
 // ***************************************************************
 // *** Generic
