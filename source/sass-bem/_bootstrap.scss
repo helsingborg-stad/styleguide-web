@@ -17,36 +17,26 @@
    ========================================================================== */
 
 /* Settings */
-@import '../sass/settings/_variables';
-@import '../sass/settings/config/typography';
-@import '../sass/settings/config/colors';
-@import '../sass/settings/config/social-colors';
-@import '../sass/settings/config/grid';
-@import '../sass/settings/config/icons';
-@import '../sass/settings/config/button';
-@import '../sass/settings/config/z-index';
-@import '../sass/settings/config/table';
-@import '../sass/settings/config/box';
-@import '../sass/settings/config/wp';
-@import '../sass/settings/config/hamburger';
+@import '../sass/settings/typography';
+@import '../sass/settings/colors';
+@import '../sass/settings/grid';
+@import '../sass/settings/icons';
+@import '../sass/settings/button';
+@import '../sass/settings/z-index';
+@import '../sass/settings/table';
+@import '../sass/settings/box';
 
 // inject:tools
-@import "./source/sass/tools/functions/_get-breakpoint-suffix.scss";
-@import "./source/sass/tools/functions/_get-breakpoint.scss";
-@import "./source/sass/tools/functions/_rem.scss";
-@import "./source/sass/tools/functions/_strip-unit.scss";
 @import "./source/sass/tools/mixins/_arrow.scss";
 @import "./source/sass/tools/mixins/_blur.scss";
 @import "./source/sass/tools/mixins/_box.scss";
 @import "./source/sass/tools/mixins/_breakpoint.scss";
-@import "./source/sass/tools/mixins/_directional-classes.scss";
 @import "./source/sass/tools/mixins/_forms.scss";
 @import "./source/sass/tools/mixins/_generator.scss";
 @import "./source/sass/tools/mixins/_gradient.scss";
 @import "./source/sass/tools/mixins/_grid.scss";
 @import "./source/sass/tools/mixins/_material.scss";
 @import "./source/sass/tools/mixins/_mixins.scss";
-@import "./source/sass/tools/mixins/_mq.scss";
 @import "./source/sass/tools/mixins/_positioning.scss";
 @import "./source/sass/tools/mixins/_render.scss";
 // endinject
