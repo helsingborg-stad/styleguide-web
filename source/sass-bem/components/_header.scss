@@ -1,70 +1,74 @@
-.c-header__row {
-    display: flex;
-    flex-wrap: no-wrap;
-    align-items: center;
-    padding: $content-gutter $content-gutter;
-}
+.s-bem-deprecated {
 
-.c-header__item {
-    display: flex;
-    flex-wrap: no-wrap;
-    align-items: center;
-    flex-grow: 1;
-
-    &.c-header__item--left {
-        justify-content: flex-start;
-    }
-
-    &.c-header__item--right {
-        justify-content: flex-end;
-    }
-
-    &.c-header__item--center {
-        justify-content: center;
-    }
-}
-
-.c-header__item:not(:last-child) {
-    margin-right: $content-gutter * 2;
-}
-
-.c-header__logo {
-    //Temp fix
-    h1 {
-        padding-bottom: 0;
-    }
-
-    a {
-        display: block;
-    }
-
-    img,
-    svg {
-        height: auto;
-        width: 100%;
-        max-width: 18rem;
-        display: block;
-    }
-}
-
-.c-header--primary {
     .c-header__row {
+        display: flex;
+        flex-wrap: no-wrap;
+        align-items: center;
         padding: $content-gutter $content-gutter;
+    }
 
-        @media all and #{$screen-sm-up} {
-            padding: $content-gutter * 2 $content-gutter;
+    .c-header__item {
+        display: flex;
+        flex-wrap: no-wrap;
+        align-items: center;
+        flex-grow: 1;
+
+        &.c-header__item--left {
+            justify-content: flex-start;
+        }
+
+        &.c-header__item--right {
+            justify-content: flex-end;
+        }
+
+        &.c-header__item--center {
+            justify-content: center;
         }
     }
-}
 
-.c-header--top {
-    .c-header__row {
-        padding: $content-gutter * 0.75 $content-gutter;
+    .c-header__item:not(:last-child) {
+        margin-right: $content-gutter * 2;
     }
-    font-size: 80%;
-    line-height: 1;
 
-    a.pricon:before {
-        vertical-align: top;
+    .c-header__logo {
+        //Temp fix
+        h1 {
+            padding-bottom: 0;
+        }
+
+        a {
+            display: block;
+        }
+
+        img,
+        svg {
+            height: auto;
+            width: 100%;
+            max-width: 18rem;
+            display: block;
+        }
     }
+
+    .c-header--primary {
+        .c-header__row {
+            padding: $content-gutter $content-gutter;
+
+            @media all and #{$screen-sm-up} {
+                padding: $content-gutter * 2 $content-gutter;
+            }
+        }
+    }
+
+    .c-header--top {
+        .c-header__row {
+            padding: $content-gutter * 0.75 $content-gutter;
+        }
+        font-size: 80%;
+        line-height: 1;
+
+        a.pricon:before {
+            vertical-align: top;
+        }
+    }
+
 }
