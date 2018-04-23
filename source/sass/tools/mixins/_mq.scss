@@ -1,0 +1,83 @@
+$mq-breakpoints: (
+    xs : 0,         //0px
+    sm : 29.25em,   //468px
+    md : 48em,      //768px
+    lg : 60em,      //960px
+    xl : 80em,      //1280px
+    xxl : 100em,    //1600px
+    print : print
+) !default;
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function get-breakpoint-suffix($screen) {
+    @if map-has-key($mq-breakpoints, $screen) {
+        @if map-get($mq-breakpoints, $screen) == 0 {
+            @return '';
+        } @else {
+            @return \@#{$screen};
+        }
+    }
+}
+
+@function get-breakpoint($screen, $value: 'min') {
+    @if map-has-key($mq-breakpoints, $screen) {
+        $length: length(map-keys($mq-breakpoints));
+
+        @if $value == 'max' {
+            @if $length > index(map-keys($mq-breakpoints), $screen) {
+                @return nth(map-values($mq-breakpoints), index(map-keys($mq-breakpoints), $screen) + 1)  - 0.0625em;
+            }
+
+            @else {
+                @return 0em;
+            }
+        }
+
+        @elseif $value == 'min' {
+            @return map-get($mq-breakpoints, $screen);
+        }
+
+    } @else {
+        @return (strip-unit($screen) / 16) * 1em;
+    }
+}
+
+
+@mixin mq($screen, $orientation: null, $condition: 'min') {
+    $query-string: 'screen';
+
+    @if $condition == 'min' {
+        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)})';
+    } @else if $condition == 'max' {
+        $query-string: $query-string ' and (max-width: #{get-breakpoint($screen, max)})';
+    } @else if $condition == 'only' {
+        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)}) and (max-width: #{get-breakpoint($screen, max)})';
+    }
+
+    @if $orientation == 'landscape' or $orientation == 'portrait' {
+        $query-string: $query-string ' and (orientation: #{$orientation})';
+    }
+
+    @if $screen == 'print'{
+        $query-string: 'print';
+    }
+
+    @if $condition == 'min' and get-breakpoint($screen) == 0 {
+        @content;
+    } @else {
+        @media #{$query-string}
+        {
+            @content;
+        }
+    }
+}
