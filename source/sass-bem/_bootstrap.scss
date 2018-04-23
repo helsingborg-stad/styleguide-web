@@ -16,6 +16,8 @@
 
    ========================================================================== */
 
+$spacer: 30px;
+
 /* Settings */
 @import '../sass/settings/typography';
 @import '../sass/settings/colors';
@@ -25,6 +27,7 @@
 @import '../sass/settings/z-index';
 @import '../sass/settings/table';
 @import '../sass/settings/box';
+@import "settings/hamburger";
 
 // inject:tools
 @import "./source/sass/tools/mixins/_arrow.scss";
@@ -37,6 +40,7 @@
 @import "./source/sass/tools/mixins/_grid.scss";
 @import "./source/sass/tools/mixins/_material.scss";
 @import "./source/sass/tools/mixins/_mixins.scss";
+@import "./source/sass/tools/mixins/_mq.scss";
 @import "./source/sass/tools/mixins/_positioning.scss";
 @import "./source/sass/tools/mixins/_render.scss";
 // endinject
@@ -55,7 +59,12 @@
 
 // inject:components
 @import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "./source/sass-bem/components/_c-brand.scss";
+@import "./source/sass-bem/components/_c-footer.scss";
+@import "./source/sass-bem/components/_c-nav.scss";
+@import "./source/sass-bem/components/_c-navbar.scss";
 @import "./source/sass-bem/components/_feed.scss";
+@import "./source/sass-bem/components/_hamburger.scss";
 @import "./source/sass-bem/components/_header.scss";
 @import "./source/sass-bem/components/_navbar.scss";
 @import "./source/sass-bem/components/_posts.scss";
