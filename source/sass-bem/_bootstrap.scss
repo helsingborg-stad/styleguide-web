@@ -16,8 +16,6 @@
 
    ========================================================================== */
 
-$spacer: 30px;
-
 /* Settings */
 @import '../sass/settings/typography';
 @import '../sass/settings/colors';
@@ -28,6 +26,8 @@ $spacer: 30px;
 @import '../sass/settings/table';
 @import '../sass/settings/box';
 @import "settings/hamburger";
+
+$spacer: $content-gutter * 2;
 
 // inject:tools
 @import "./source/sass/tools/mixins/_arrow.scss";
