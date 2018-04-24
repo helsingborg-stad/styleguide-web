@@ -10,9 +10,9 @@
 
 .container:not(.container-fullwidth) {
     margin: 0 auto;
-    max-width: $screen-lg-max;
+    max-width: 1280px;
 
-    @media screen and (max-width: $screen-lg-max + 60) {
+    @media screen and (max-width: $screen-lg-max + 3.75em) {
         margin: 0 30px;
     }
 
