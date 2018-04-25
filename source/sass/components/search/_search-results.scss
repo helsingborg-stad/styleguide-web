@@ -30,7 +30,7 @@
 //
 
 .search-result-list {
-    li + li {
+    .search-result-item  + .search-result-item {
         margin-top: $content-gutter * 1.5;
         padding-top: $content-gutter * 1.5;
         border-top: 1px solid $creamy-darker;
