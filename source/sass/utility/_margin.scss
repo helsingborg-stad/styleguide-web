@@ -65,11 +65,11 @@
 }
 
 .gutter-sm:not(.gutter-margin) {
-    padding: $content-gutter / 1.5;
+    padding: $content-gutter / 2;
 }
 
 .gutter-sm.gutter-margin {
-    margin: $content-gutter / 1.5;
+    margin: $content-gutter / 2;
 }
 
 .gutter-lg:not(.gutter-margin) {
