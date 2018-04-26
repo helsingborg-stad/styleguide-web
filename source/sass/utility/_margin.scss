@@ -155,3 +155,44 @@
     margin-top: 0;
     margin-left: 0;
 }
+
+// ==========================================================================
+// BEM Margin Utility
+//
+// SYNTAX: u-m{sides}-{size}@{mediaQuery}
+//
+// Sides:
+// t - Top
+// b - Bottom
+// l - Left
+// r - Right
+// x - left & right
+// y - top & bottom
+// blank - all sides
+//
+//
+// Example
+// .u-mt-0 {
+//      margin-top: 0px !important;
+// }
+// .u-mx-0 {
+//      margin-left: 0px !important;
+//      margin-right: 0px !important;
+// }
+// ==========================================================================
+
+$u-margin-base: 8px !default;
+$u-margin-styles: (
+    0 : 0,
+    1 : $u-margin-base/2,   //4px
+    2 : $u-margin-base * 1, //8px
+    3 : $u-margin-base * 2, //16px
+    4 : $u-margin-base * 3, //24
+    5 : $u-margin-base * 4, //32
+    6 : $u-margin-base * 6, //48
+    7 : $u-margin-base * 8, //64
+    8 : $u-margin-base * 10, //80px
+    auto: auto
+) !default;
+
+@include directionalClasses($u-margin-styles, margin, m);

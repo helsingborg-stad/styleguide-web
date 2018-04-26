@@ -1,0 +1,39 @@
+// ==========================================================================
+// BEM Padding Utility
+//
+//
+// SYNTAX: u-p{sides}-{size}@{mediaQuery}
+//
+// Sides:
+// t - Top
+// b - Bottom
+// l - Left
+// r - Right
+// x - left & right
+// y - top & bottom
+// blank - all sides
+//
+//
+// Example
+// .u-pt-0 {
+//      padding-top: 0px !important;
+// }
+// .u-px-0 {
+//      padding-left: 0px !important;
+//      padding-right: 0px !important;
+// }
+// ==========================================================================
+$u-padding-base: 8px !default;
+$u-padding-styles: (
+    0 : 0,
+    1 : $u-padding-base/2,   //4px
+    2 : $u-padding-base * 1, //8px
+    3 : $u-padding-base * 2, //16px
+    4 : $u-padding-base * 3, //24
+    5 : $u-padding-base * 4, //32
+    6 : $u-padding-base * 6, //48
+    7 : $u-padding-base * 8, //64
+    8 : $u-padding-base * 10 //80px
+) !default;
+
+@include directionalClasses($u-padding-styles, padding, p);
