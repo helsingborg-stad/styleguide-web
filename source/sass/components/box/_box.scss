@@ -47,6 +47,7 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
 .box-image {
     width: 100%;
     flex: 0 0 auto;
+    display: block;
 }
 
 .box-card-post {
