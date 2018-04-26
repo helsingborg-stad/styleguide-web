@@ -30,11 +30,12 @@
     }
 
     li .date {
-        margin-top: 3px;
+        margin-top: 4px;
     }
 
     .box-title,
     .widgettitle,
+    .box-index-title,
     > h1,
     > h2,
     > h3,
@@ -47,7 +48,8 @@
     .widget > h4,
     .widget > h5,
     .widget > h6 {
-        font-size: 1.2em;
+        font-size: 19px;
+        line-height: 24px;
     }
 
     .box-title.box-title-inherit {
@@ -114,5 +116,5 @@
 
 @mixin box-content {
     padding: $box-padding;
-    font-size: .9em;
+    font-size: 15px;
 }

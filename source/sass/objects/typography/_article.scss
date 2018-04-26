@@ -74,7 +74,7 @@ article {
 	h4 + p,
 	h5 + p,
 	h6 + p {
-		margin-top: 0em;
+		margin-top: 0.5rem;
 	}
 
 	p:first-of-type:not(:first-child) {
@@ -132,7 +132,7 @@ article + .page-footer {
 }
 
 .page-footer {
-	font-size: .9em;
+	font-size: 14px;
 }
 
 .mce-content-body img[data-wp-more="printbreak"] {
