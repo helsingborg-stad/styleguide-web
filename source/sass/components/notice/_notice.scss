@@ -28,7 +28,7 @@
 
 .notice {
     display: block;
-    padding: .5em .8em;
+    padding: 8px 16px;
     background-color: $creamy;
     color: $base-font-color;
 
@@ -40,7 +40,7 @@
     .pricon,
     .fa {
         display: inline-block;
-        margin-right: .3em;
+        margin-right: 8px;
         font-size: 1.5em;
         vertical-align: -7%;
     }
@@ -51,7 +51,7 @@
     }
 
     & + .notice {
-        margin-top: 5px;
+        margin-top: 4px;
     }
 
     &.bottom-fixed {
@@ -63,7 +63,7 @@
     }
 
     .grid-col-icon {
-        margin-right: 5px;
+        margin-right: 4px;
     }
 }
 
@@ -71,7 +71,7 @@
     html:not(.no-flexbox) .notice .grid-auto {
         flex: 1 1 auto;
         flex-basis: 100%;
-        padding: 5px 0;
+        padding: 4px 0;
     }
 }
 
@@ -82,7 +82,7 @@
 
 .notice-content,
 .grid + .grid.notice-content {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .notices .notice + .notice {
@@ -119,8 +119,8 @@
     }
 
     [class*="grid-"] {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 
