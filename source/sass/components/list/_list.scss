@@ -29,7 +29,7 @@
 //      </ul>
 //  </div>
 //  <div class="grid-s-12 grid-md-4">
-//      <ul class="c-list c-list--sm">
+//      <ul class="c-list c-list--lg">
 //          <li class="c-list__item">
 //              Malesuada Aenean Vulputate
 //          </li>
@@ -48,7 +48,7 @@
 //      </ul>
 //  </div>
 //  <div class="grid-s-12 grid-md-4">
-//      <ul class="c-list c-list--xs">
+//      <ul class="c-list c-list--sm">
 //          <li class="c-list__item">
 //              Malesuada Aenean Vulputate
 //          </li>
@@ -244,7 +244,7 @@
 
 .c-list {
     .c-list__item {
-        padding: ($content-gutter * 0.75) ($content-gutter * 1.5);
+        padding: ($content-gutter * 0.5) ($content-gutter * 1.5);
         border: solid 1px;
         border-color: $creamy-darker;
     }
@@ -299,13 +299,13 @@
     }
 }
 
-.c-list.c-list--sm {
+.c-list.c-list--lg {
     .c-list__item {
-        padding: ($content-gutter * 0.5) ($content-gutter * 1.5);
+        padding: ($content-gutter) ($content-gutter * 1.5);
     }
 }
 
-.c-list.c-list--xs {
+.c-list.c-list--sm {
     .c-list__item {
         padding: ($content-gutter * 0.25) ($content-gutter * 1.5);
     }
