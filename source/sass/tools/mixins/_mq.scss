@@ -81,3 +81,69 @@ $mq-breakpoints: (
         }
     }
 }
+
+
+/*
+ *  Generates directional classes (eg. margin-left, margin-right, margin-top), mainly used for utility classes
+ *
+ *  @param $map sass-map - Styles to include, keys will define the size (which will be used as className) and the value defines the propety value (eg. (0: 0px, 1: 1rem, 2: 2rem))
+ *  @param $propety string - Style propety (eg. margin, padding, border or other directional (left, right, top, bottom) style)
+ *  @param $className string - Class name that will be combined with the direction, eg. className 'm' will generate m, mx (top & bot), my (left & right), ml (left), mr (right), mt, mb
+ *  @param $breakpoints list - List of breakpoints to loop through (eg. $list: xs, md, lg; will generate classes for each breakpoint (adding @breakpoint suffix)), defaults to all breakpoints
+ *  @param $important boolean - Will add !important to each style if set to true
+ *  @param $nameSpace string - Namesapce to prefix each class with - Defaults to 'u' (utility)
+ *
+ *
+ * @example
+ *
+ *  $style-map: (
+ *     0: 0,
+ *     2: 2rem
+ *  );
+ *  @include directionalClasses($style-map, margin, 'm');
+ *
+ */
+@mixin directionalClasses($styles, $propety, $className, $breakpoints: map-keys($mq-breakpoints), $important: true, $nameSpace: 'u') {
+    @each $screen in $breakpoints {
+        $suffix: get-breakpoint-suffix($screen);
+
+        @include mq($screen) {
+            @each $size, $value in $styles {
+
+                @if ($important == true) {
+                    $value: #{$value} !important;
+                }
+
+                .#{$nameSpace}-#{$className}-#{$size}#{$suffix} {
+                    #{$propety}: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}x-#{$size}#{$suffix} {
+                    #{$propety}-left: #{$value};
+                    #{$propety}-right: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}y-#{$size}#{$suffix} {
+                    #{$propety}-top: #{$value};
+                    #{$propety}-bottom: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}t-#{$size}#{$suffix} {
+                    #{$propety}-top: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}b-#{$size}#{$suffix} {
+                    #{$propety}-bottom: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}l-#{$size}#{$suffix} {
+                    #{$propety}-left: #{$value};
+                }
+
+                .#{$nameSpace}-#{$className}r-#{$size}#{$suffix} {
+                    #{$propety}-right: #{$value};
+                }
+            }
+        }
+    }
+}
