@@ -22,7 +22,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.useAjax = function (target) {
-        if ($(target).parents('li').first().children("ul").length) {
+        if ($(target).closest('li').first().children("ul").length) {
             return false;
         }
 
@@ -38,7 +38,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
             return false;
         }
 
-        $(target).parents('li').first().addClass('is-loading');
+        $(target).closest('li').first().addClass('is-loading');
 
         $.ajax({
             url: HbgPrimeArgs.api.root + 'municipio/v1/navigation/' + parentId,
@@ -48,13 +48,13 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
             }
         }).done(function (response) {
             if (response.length !== "") {
-                $(target).parents('li').first().append(response);
+                $(target).closest('li').first().append(response);
                 $(target).siblings('.sub-menu');
             } else {
                 window.location.href = $(target).attr('href');
             }
 
-            $(target).parents('li').first().removeClass('is-loading');
+            $(target).closest('li').first().removeClass('is-loading');
         }.bind(target)).fail(function () {
             window.location.href = $(target).attr('href');
         }.bind(target));
@@ -65,7 +65,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parents('li').first().toggleClass('is-expanded');
+        $(target).closest('li').first().toggleClass('is-expanded');
     };
 
     return new ToggleSubmenuItems();
