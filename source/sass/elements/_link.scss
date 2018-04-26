@@ -37,7 +37,7 @@ a.link-box,
     display: block;
     position: relative;
     background-color: $palette-2;
-    padding: 5px 10px;
+    padding: 8px 16px;
     border-radius: 3px;
     overflow: hidden;
     color: #fff;
@@ -45,6 +45,10 @@ a.link-box,
     &:hover {
         background-color: darken($palette-2, 5%);
     }
+}
+
+.link-box.network-title {
+    display: block;
 }
 
 a.link-box:nth-of-type(2),
@@ -63,5 +67,5 @@ a.link-box:nth-of-type(4),
 }
 
 .link-box + .link-box {
-    margin-top: 5px;
+    margin-top: 8px;
 }
