@@ -26,7 +26,7 @@
     }
 
     p + p {
-        margin-top: $content-gutter/1.5;
+        margin-top: $content-gutter * 0.75;
     }
 
     li .date {
