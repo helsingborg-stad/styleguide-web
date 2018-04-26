@@ -105,10 +105,10 @@ input[type="button"].btn::-moz-focus-inner {
     color: $base-font-color !important;
     text-decoration: none !important;
 
-    &::before {
-        @include pricon($pricon-link-item);
-        margin-right: 7px;
-    }
+    // &::before {
+    //     @include pricon($pricon-link-item);
+    //     margin-right: 7px;
+    // }
 }
 
 .box-filled .read-more {
