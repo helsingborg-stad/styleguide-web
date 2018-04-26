@@ -106,7 +106,7 @@ input[type="button"].btn::-moz-focus-inner {
     text-decoration: none !important;
 
     &::before {
-        @include pricon($pricon-plus-o);
+        @include pricon($pricon-link-item);
         margin-right: 7px;
     }
 }
