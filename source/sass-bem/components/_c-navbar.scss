@@ -15,11 +15,9 @@ body:not(.s-bem-deprecated) {
     }
 
     .c-navbar.c-navbar--lg {
-        padding: $spacer/2 0;
-
-        // @include mq(lg) {
-        //     padding: $spacer 0;
-        // }
+        @include mq(lg) {
+            padding: $spacer 0;
+        }
     }
 
 }
