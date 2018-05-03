@@ -53,35 +53,84 @@ $mq-breakpoints: (
 }
 
 
-@mixin mq($screen, $orientation: null, $condition: 'min') {
-    $query-string: 'screen';
-
-    @if $condition == 'min' {
-        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)})';
-    } @else if $condition == 'max' {
-        $query-string: $query-string ' and (max-width: #{get-breakpoint($screen, max)})';
-    } @else if $condition == 'only' {
-        $query-string: $query-string ' and (min-width: #{get-breakpoint($screen, min)}) and (max-width: #{get-breakpoint($screen, max)})';
-    }
-
-    @if $orientation == 'landscape' or $orientation == 'portrait' {
-        $query-string: $query-string ' and (orientation: #{$orientation})';
-    }
-
-    @if $screen == 'print'{
-        $query-string: 'print';
-    }
-
-    @if $condition == 'min' and get-breakpoint($screen) == 0 {
-        @content;
+@function mq-px-to-em($value, $base: 16) {
+    @if unit($value) == 'px' {
+        @return strip-unit($value) / $base * 1em;
+    } @elseif unit($value) == 'em' {
+        @return $value;
+    } @elseif unitless($value) {
+        @return $value / $base * 1em;
     } @else {
-        @media #{$query-string}
-        {
-            @content;
-        }
+        @return 0;
     }
 }
 
+/*
+ *  @mixin mq
+ *  @param $from null/px/em/print - min width value
+ *  @param $until null/px/em/print - max width value
+ *  @param $orientation landscape/portrait - orientation
+ *  @param $and string - additional condition eg. "and (min-height: 200px)"
+ */
+
+@mixin mq($from: null, $until: null, $orientation: null, $and: null) {
+    $queryString: 'screen';
+    $min-width: null;
+    $max-width: null;
+
+    //Min-width
+    @if ($from != null and $from != 'print') {
+        @if map-has-key($mq-breakpoints, $from) {
+            $min-width: mq-px-to-em(map-get($mq-breakpoints, $from));
+        } @else {
+            $min-width: mq-px-to-em($from);
+        }
+    }
+
+    //Max-width
+    @if ($until != null and $until != 'print') {
+        @if map-has-key($mq-breakpoints, $until) {
+            $max-width: mq-px-to-em(map-get($mq-breakpoints, $until)) - mq-px-to-em(1px);
+        } @else {
+            $max-width: mq-px-to-em($until);
+        }
+    }
+
+    //Build media query string
+    @if $min-width != null and strip-unit($min-width) > 0 {
+        $queryString: '#{$queryString} and (min-width: #{$min-width})';
+    }
+
+    @if $max-width != null and strip-unit($max-width) > 0 {
+        $queryString: '#{$queryString} and (max-width: #{$max-width})';
+    }
+
+    //Orientation
+    @if $orientation == 'landscape' {
+        $queryString: '#{$queryString} and (orientation:landscape)';
+    } @elseif $orientation == 'portrait' {
+        $queryString: '#{$queryString} and (orientation:portrait)';
+    }
+
+    //Additional condition
+    @if $and != null {
+        $queryString: '#{$queryString} #{$and}';
+    }
+
+    //Reset media query string to print
+    @if $from == 'print' or $until == 'print' {
+        $queryString: 'print';
+    }
+
+    //Wrap content in media query if a query is defined, else only output content
+    @if $queryString != 'screen' {
+        @media #{$queryString} {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
 
 /*
  *  Generates directional classes (eg. margin-left, margin-right, margin-top), mainly used for utility classes
@@ -103,6 +152,7 @@ $mq-breakpoints: (
  *  @include directionalClasses($style-map, margin, 'm');
  *
  */
+
 @mixin directionalClasses($styles, $propety, $className, $breakpoints: map-keys($mq-breakpoints), $important: true, $nameSpace: 'u') {
     @each $screen in $breakpoints {
         $suffix: get-breakpoint-suffix($screen);
