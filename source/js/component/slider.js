@@ -13,7 +13,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
         this.preloadImage();
         this.triggerAutoplay();
         this.pauseAndPlay();
-
+        
         $('.slider').each(function (index, element) {
             var $slider = $(element);
 
@@ -120,6 +120,9 @@ HelsingborgPrime.Component.Slider = (function ($) {
         this.pauseAndPlayVisibleIcon();
 
         $('.embed-control').on('click', function () {
+            event.stopPropagation();
+            event.preventDefault();
+
             var sliderVideoId = $(this).closest('.slide').find('.slider-video').find('video').prop('id');
             var videoPlayer = document.getElementById(sliderVideoId);
 
