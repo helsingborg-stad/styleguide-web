@@ -100,7 +100,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
     Slider.prototype.pauseAndPlayVisibleIcon = function () {
         if ($(window).width() > 1024) {
             if ( $('.embeded-mini-toolbar').hasClass('slider-show-on-hover') ) {
-                $('.slider-video').hover(
+                $('.slider').hover(
                     function () {
                         $('.embeded-mini-toolbar').fadeIn(300);
                     },
@@ -120,7 +120,7 @@ HelsingborgPrime.Component.Slider = (function ($) {
         this.pauseAndPlayVisibleIcon();
 
         $('.embed-control').on('click', function () {
-            var sliderVideoId = $(this).closest('.slider-video').find('video').prop('id');
+            var sliderVideoId = $(this).closest('.slide').find('.slider-video').find('video').prop('id');
             var videoPlayer = document.getElementById(sliderVideoId);
 
             if ($(this).hasClass('embeded-pause')) {
