@@ -29,6 +29,7 @@
 
 $spacer: $content-gutter * 2;
 
+@import '../../node_modules/hbg-mix/source/hbg-mix';
 // inject:tools
 @import "./source/sass/tools/mixins/_arrow.scss";
 @import "./source/sass/tools/mixins/_blur.scss";
@@ -40,7 +41,6 @@ $spacer: $content-gutter * 2;
 @import "./source/sass/tools/mixins/_grid.scss";
 @import "./source/sass/tools/mixins/_material.scss";
 @import "./source/sass/tools/mixins/_mixins.scss";
-@import "./source/sass/tools/mixins/_mq.scss";
 @import "./source/sass/tools/mixins/_positioning.scss";
 @import "./source/sass/tools/mixins/_render.scss";
 // endinject

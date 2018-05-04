@@ -23,6 +23,8 @@
 // ***************************************************************
 // *** Tools
 // ***************************************************************
+@import '../../node_modules/hbg-mix/source/hbg-mix';
+
 @import 'tools/mixins/mixins';
 @import 'tools/mixins/positioning';
 @import 'tools/mixins/forms';
@@ -36,8 +38,6 @@
 @import 'tools/mixins/blur';
 @import 'tools/mixins/generator';
 
-//New
-@import 'tools/mixins/mq';
 
 // ***************************************************************
 // *** Generic
