@@ -12,16 +12,10 @@
     margin: 0 auto;
     max-width: 1280px;
 
-    @media screen and (max-width: $screen-lg-max + 3.75em) {
-        margin: 0 30px;
-    }
+    padding: 0 24px;
 
-    @media #{$screen-sm} {
-        margin: 0 20px;
-    }
-
-    @media #{$screen-xs} {
-        margin: 0 10px;
+    @include mq(md) {
+        padding: 0 40px;
     }
 }
 
@@ -34,3 +28,4 @@
         margin: 0 10px;
     }
 }
+
