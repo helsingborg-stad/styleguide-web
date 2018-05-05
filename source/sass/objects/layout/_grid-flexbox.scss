@@ -12,15 +12,9 @@
         }
     }
 
-    [class*="grid-"] {
-        flex: 1 0 auto;
-        flex-basis: 100%;
-        max-width: 100%;
-        float: none;
-    }
-
     .grid-auto {
-        flex: 1 1 auto;
+        max-width: 100%;
+        flex-grow: 1;
         flex-basis: 0;
     }
 
