@@ -26,6 +26,7 @@ gulp.task('build:sass:bem', function (callback) {
 
 gulp.task('watch:bem', function() {
     gulp.watch('source/sass-bem/**/*.scss', ['build:sass:bem']);
+    gulp.watch('source/sass/**/*.scss', ['build:sass:bem']);
 });
 
 gulp.task('sass-dist:bem', function() {
