@@ -1,18 +1,6 @@
 .site-header > .container {
     position: relative;
-    padding: $content-gutter 0;
 
-    @media screen and (min-width: 769px) {
-        > .grid {
-            display: table;
-            width: 100%;
-
-            [class*="grid-"] {
-                vertical-align: middle;
-                float: none;
-            }
-        }
-    }
 }
 
 .site-header.header-casual,
