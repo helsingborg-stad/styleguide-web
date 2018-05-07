@@ -1,3 +1,49 @@
+// ==========================================================================
+// Margin Utility
+// SYNTAX: u-m{sides}-{size}@{mediaQuery}
+//
+// Sides:
+// t - Top
+// b - Bottom
+// l - Left
+// r - Right
+// x - left & right
+// y - top & bottom
+// blank - all sides
+//
+//
+// Example
+// .u-mt-0 {
+//      margin-top: 0px !important;
+// }
+// .u-mx-0 {
+//      margin-left: 0px !important;
+//      margin-right: 0px !important;
+// }
+// ==========================================================================
+@include mixLoopStyles(
+    '.u-m',
+    (
+        '-0'    : (margin: 0px !important),
+        '-1'    : (margin: $baseline !important),
+        '-2'    : (margin: $baseline * 2!important),
+        '-3'    : (margin: $baseline * 3 !important),
+        '-4'    : (margin: $baseline * 4 !important),
+        '-5'    : (margin: $baseline * 5 !important),
+        '-6'    : (margin: $baseline * 6 !important),
+        '-7'    : (margin: $baseline * 7 !important),
+        '-8'    : (margin: $baseline * 8 !important),
+        '-auto' : (margin: auto !important),
+
+    ),
+    (
+        'l' : 'margin-left',
+        'r' : 'margin-right',
+        't' : 'margin-top',
+        'b' : 'margin-bottom',
+    )
+);
+
 //
 // @name Margin resetters
 // @description Set margins to zero
@@ -10,6 +56,27 @@
 //
 // @page Utilities/Margin resetters
 //
+
+// $colorMap: (
+//     'primary': (
+//         'base' : $color-primary,
+//         'muted' : $color-primary,
+//         'disabled' : $color-primary,
+//         'hover' : darken($color-primary, 5%),
+//     ),
+//     'secondary': (
+//         'base' : $color-secondary,
+//         'muted' : $color-secondary,
+//         'disabled' : $color-secondary,
+//         'hover' : darken($color-secondary, 5%),
+//     )
+// );
+
+// @include mixColorStyles('.u-bordertest-', 'border-color', ('primary', 'secondary'));
+
+
+
+
 
 .no-margin {
     margin: 0 !important;
@@ -156,43 +223,6 @@
     margin-left: 0;
 }
 
-// ==========================================================================
-// BEM Margin Utility
-//
-// SYNTAX: u-m{sides}-{size}@{mediaQuery}
-//
-// Sides:
-// t - Top
-// b - Bottom
-// l - Left
-// r - Right
-// x - left & right
-// y - top & bottom
-// blank - all sides
-//
-//
-// Example
-// .u-mt-0 {
-//      margin-top: 0px !important;
-// }
-// .u-mx-0 {
-//      margin-left: 0px !important;
-//      margin-right: 0px !important;
-// }
-// ==========================================================================
 
-$u-margin-base: 8px !default;
-$u-margin-styles: (
-    0 : 0,
-    1 : $u-margin-base/2,   //4px
-    2 : $u-margin-base * 1, //8px
-    3 : $u-margin-base * 2, //16px
-    4 : $u-margin-base * 3, //24
-    5 : $u-margin-base * 4, //32
-    6 : $u-margin-base * 6, //48
-    7 : $u-margin-base * 8, //64
-    8 : $u-margin-base * 10, //80px
-    auto: auto
-) !default;
 
-@include directionalClasses($u-margin-styles, margin, m);
+
