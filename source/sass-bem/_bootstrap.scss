@@ -28,8 +28,6 @@
 @import '../sass/settings/box';
 @import "settings/hamburger";
 
-$spacer: $content-gutter * 2;
-
 @import '../../node_modules/hbg-mix/source/hbg-mix';
 // inject:tools
 @import "./source/sass/tools/mixins/_arrow.scss";

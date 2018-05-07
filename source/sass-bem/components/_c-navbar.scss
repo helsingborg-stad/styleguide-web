@@ -7,7 +7,7 @@ body:not(.s-bem-deprecated) {
     }
 
     .c-navbar {
-        padding: $spacer/2 0;
+        padding: $baseline*2 0;
     }
 
     .c-navbar.c-navbar--hard {
@@ -16,7 +16,7 @@ body:not(.s-bem-deprecated) {
 
     .c-navbar.c-navbar--lg {
         @include mq(lg) {
-            padding: $spacer 0;
+            padding: $baseline*4 0;
         }
     }
 

@@ -1,15 +1,15 @@
 .c-footer {
-    padding: $spacer*2 0;
+    padding: $baseline*8 0;
 }
 
 .c-footer.c-footer--sm {
-    padding: $spacer 0;
+    padding: $baseline*4 0;
 }
 
 .c-footer.c-footer--lg {
-    padding: $spacer*4 0;
+    padding: $baseline*16 0;
 }
 
 .c-footer.c-footer--xl {
-    padding: $spacer*6 0;
+    padding: $baseline*24 0;
 }
