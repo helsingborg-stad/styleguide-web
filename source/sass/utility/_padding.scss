@@ -37,6 +37,8 @@
         '-8'    : (padding: $baseline * 8 !important)
     ),
     (
+        'x' : ('padding-left', 'padding-right'),
+        'y' : ('padding-top', 'padding-bottom'),
         'l' : 'padding-left',
         'r' : 'padding-right',
         't' : 'padding-top',
