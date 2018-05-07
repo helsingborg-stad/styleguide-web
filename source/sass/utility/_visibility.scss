@@ -13,33 +13,19 @@
 // @state .print-only - Display only in print
 //
 
-.hidden {
-	display: none !important;
-}
 
-.hidden-xs {
-	@media screen and #{$screen-xs} {
-		display: none !important;
-	}
-}
+@include mixResponsiveStyles(
+    (
+        '.u-hidden' : (display: none !important),
+    )
+);
 
-.hidden-sm {
-	@media screen and #{$screen-sm} {
-		display: none !important;
-	}
-}
-
-.hidden-md {
-	@media screen and #{$screen-md} {
-		display: none !important;
-	}
-}
-
-.hidden-lg {
-	@media screen and #{$screen-lg} {
-		display: none !important;
-	}
-}
+//Prevent deprecated from breaking
+.hidden {@extend .u-hidden;}
+.hidden-xs {@extend .u-hidden\@xs;}
+.hidden-sm {@extend .u-hidden\@sm;}
+.hidden-md {@extend .u-hidden\@md;}
+.hidden-lg {@extend .u-hidden\@lg;}
 
 .block-level {
 	display: block;
