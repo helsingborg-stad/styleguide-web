@@ -52,7 +52,7 @@ gulp.task('sass-dev:bem', function() {
 });
 
 gulp.task('inject:bem', function(callback) {
-    return runSequence('inject:tools', 'inject:generic', 'inject:elements', 'inject:objects', 'inject:components', 'inject:utilities', callback);
+    return runSequence('inject:tools', 'inject:generic', 'inject:elements', 'inject:objects', 'inject:components', 'inject:scope', 'inject:utilities', callback);
 });
 
 function injectConfig(layer) {
@@ -107,6 +107,16 @@ gulp.task('inject:components', function() {
         .pipe(inject(gulp.src([node_modules + 'hamburgers/_sass/hamburgers/hamburgers.scss', './source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
         .pipe(gulp.dest('./source/sass-bem'));
 });
+
+gulp.task('inject:scope', function() {
+    var layer = 'scope';
+    var config = injectConfig(layer);
+
+    return gulp.src('./source/sass-bem/_bootstrap.scss')
+        .pipe(inject(gulp.src(['./source/sass-bem/' + layer + '/**/*.scss'], {read: false}, {relative: false}), config))
+        .pipe(gulp.dest('./source/sass-bem'));
+});
+
 
 gulp.task('inject:utilities', function() {
     var layer = 'utilities';

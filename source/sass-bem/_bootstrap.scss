@@ -69,6 +69,10 @@
 @import "./source/sass-bem/components/_posts.scss";
 // endinject
 
+// inject:scope
+@import "./source/sass-bem/scope/_s-navbar.scss";
+// endinject
+
 // inject:utilities
 @import "./source/sass-bem/utilities/_align.scss";
 @import "./source/sass-bem/utilities/_clearfix.scss";
