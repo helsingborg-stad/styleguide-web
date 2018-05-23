@@ -13,9 +13,10 @@
 // </ul>
 //
 .breadcrumbs {
-    margin: $content-gutter * 1.5 0;
+    @extend %o-text-small;
+    line-height: 24px;
+
     color: $gray-dark;
-    font-size: 15px;
 
     i {
         vertical-align: text-top;

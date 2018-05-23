@@ -2,7 +2,6 @@
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: $grid-gutter-xs;
 
     &[data-equal-item] {
         display: flex;
@@ -11,18 +10,6 @@
         .box-content {
             flex: 1 1 auto;
         }
-    }
-
-    @media #{$screen-sm} {
-        margin-bottom: $grid-gutter-sm;
-    }
-
-    @media #{$screen-md} {
-        margin-bottom: $grid-gutter-md;
-    }
-
-    @media #{$screen-lg} {
-        margin-bottom: $grid-gutter-lg;
     }
 
     p + p {

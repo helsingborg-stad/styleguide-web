@@ -142,6 +142,26 @@ $grid-gutters: (
     }
 }
 
+.grid--columns {
+    > [class*="grid-"]:not(.grid, [class*="grid--"]) {
+        margin-bottom: $baseline * 4;
+    }
+}
+
+.modularity-mod-index {
+    margin-bottom: $baseline * -4;
+}
+
+//Temporary scope fix!
+.modularity-mod-index > .grid,
+.modularity-mod-posts > .grid {
+    @extend .grid--columns;
+}
+
+.customer-feedback-container {
+    margin-bottom: $baseline * 4;
+}
+
 .grid.grid-va-middle {
     align-items: center;
 }

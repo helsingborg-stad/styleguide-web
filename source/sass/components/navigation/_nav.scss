@@ -206,7 +206,7 @@
 }
 
 .nav-aside {
-    margin-bottom: $content-gutter;
+    margin-bottom: $baseline * 4;
 
     [data-load-submenu] {
         outline: 1px solid $creamy;

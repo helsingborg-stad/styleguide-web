@@ -16,8 +16,6 @@
 
 .mce-content-body,
 article {
-	margin-bottom: $content-gutter * 3;
-
 	em {
 		font-style: italic;
 	}
@@ -78,7 +76,7 @@ article {
 	}
 
 	p:first-of-type:not(:first-child) {
-		margin-top: 15px;
+		margin-top: 16px;
 	}
 
 	img {

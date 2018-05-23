@@ -1,10 +1,10 @@
-@media #{$screen-below-lg} {
-    .sidebar-right-sidebar.grid-md-12 {
-        margin-top: $content-gutter * 2;
-    }
-}
+// @media #{$screen-below-lg} {
+//     .sidebar-right-sidebar.grid-md-12 {
+//         margin-top: $content-gutter * 2;
+//     }
+// }
 
-@media #{$screen-below-md} {
+@include mq(0, md) {
     .sidebar-left-sidebar {
         order: 3;
     }
@@ -15,6 +15,6 @@
 }
 
 
-.sidebar-content-area-bottom {
-    margin-bottom: $content-gutter * 2;
-}
+// .sidebar-content-area-bottom {
+//     margin-bottom: $content-gutter * 2;
+// }
