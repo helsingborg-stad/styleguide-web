@@ -8,10 +8,36 @@
 
     .c-nav__item {
         position: relative;
-        a {
-            display: block;
-            padding: $content-gutter;
+    }
+
+    .c-nav__link,
+    .c-nav__action {
+        display: block;
+        padding: $baseline*2 $baseline*2;
+        color: $color-dark-muted;
+
+        &:hover {
+            color: $color-dark;
+            text-decoration: none;
         }
+    }
+
+    .hamburger .hamburger-inner,
+    .hamburger .hamburger-inner:after,
+    .hamburger .hamburger-inner:before {
+        background-color: $color-dark-muted;
+    }
+
+
+    .hamburger:hover .hamburger-inner,
+    .hamburger:hover .hamburger-inner:after,
+    .hamburger:hover .hamburger-inner:before {
+        background-color: black;
+    }
+
+
+    .c-nav__action.pricon:before {
+        margin-right: $baseline;
     }
 
     .c-nav__item.is-current,
@@ -51,7 +77,9 @@
 
 .c-nav.c-nav--small {
     font-size: 14px;
-    .c-nav__link {
+
+    .c-nav__link,
+    .c-nav__action {
         padding: $content-gutter/2;
     }
 }

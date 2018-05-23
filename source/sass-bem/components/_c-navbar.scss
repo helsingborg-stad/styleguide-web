@@ -2,24 +2,29 @@ body:not(.s-bem-deprecated) {
 
     .c-navbar .c-navbar__body {
         display: flex;
-        flex-wrap: no-wrap;
-        align-items: center;
+        flex-wrap: nowrap;
+        align-items: stretch;
     }
 
-    .c-navbar {
+    .c-navbar .c-navbar__item {
         padding: $baseline*2 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .c-navbar.c-navbar--small .c-navbar__item {
+        padding: $baseline*1.5 0;
+    }
+
+    .c-navbar.c-navbar--large .c-navbar__item {
+        @include mq(md) {
+            padding: $baseline*3 0;
+        }
     }
 
     .c-navbar.c-navbar--hard {
         padding: 0 0;
     }
-
-    .c-navbar.c-navbar--lg {
-        @include mq(lg) {
-            padding: $baseline*4 0;
-        }
-    }
-
 }
 
 

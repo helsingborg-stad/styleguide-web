@@ -45,7 +45,6 @@
 
     .logotype {
         display: inline-block;
-        margin-bottom: 10px;
         text-decoration: none;
 
         img, svg {
@@ -70,7 +69,7 @@
             line-height: 1;
 
             & + li {
-                margin-left: $grid-gutter-sm;
+                margin-left: $baseline;
             }
 
             a {

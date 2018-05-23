@@ -14,8 +14,8 @@ $color-primary-3: $palette-3 !default;
 $color-secondary: $palette-1 !default;
 $color-secondary-2: $palette-2 !default;
 
-$color-dark: rgba(#000000, 0.87) !default;
-$color-dark-muted: rgba(#000000, 0.54) !default;
+$color-dark: rgba(#000000, 0.95) !default;
+$color-dark-muted: rgba(#000000, 0.60) !default;
 $color-dark-disabled:rgba(#000000, 0.38) !default;
 
 $color-light: rgba(#FFFFFF, 1) !default;
@@ -73,8 +73,8 @@ $link-color-hover: lighten($link-color, 20%) !default;
 //Breakpoints
 $breakpoints-map: (
     xs : 0,         //0px
-    sm : 29.25em,   //468px
-    md : 56em,      //800px
+    sm : 32.5em,    //520px
+    md : 56em,      //980px
     lg : 78em,      //1248px
     xl : 100em      //1600px
 ) !default;

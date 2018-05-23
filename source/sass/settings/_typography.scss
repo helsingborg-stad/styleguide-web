@@ -1,12 +1,12 @@
 // ***************************************************************
 // *** Base font
 // ***************************************************************
-$base-font-family: system, "Segoe UI", Tahoma, -apple-system; // Using local fonts (localfont.scss)
+// $base-font-family: system, "Segoe UI", Tahoma, -apple-system; // Using local fonts (localfont.scss)
 @if variable-exists(override-base-font-family) {
     $base-font-family: $override-base-font-family;
 }
 
-$base-font-size: 16px;
+// $base-font-size: 16px;
 @if variable-exists(override-base-font-size) {
     $base-font-size: $override-base-font-size;
 }
@@ -16,7 +16,7 @@ $base-font-color: #252525;
     $base-font-color: $override-base-font-color;
 }
 
-$base-line-height: 1.5;
+// $base-line-height: 1.5;
 $print-font-size: 13px;
 
 // ***************************************************************
