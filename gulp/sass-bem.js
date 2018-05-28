@@ -36,6 +36,7 @@ gulp.task('sass-dist:bem', function() {
             .pipe(rename({prefix: 'hbg-prime-', suffix: '.min'}))
             .pipe(cleanCSS({debug: true}))
             .pipe(gulp.dest('dist/css-bem'))
+            .pipe(copy('dist/' + package.version + '/css-bem/', {prefix: 2}))
             .pipe(browserSync.stream());
 });
 
