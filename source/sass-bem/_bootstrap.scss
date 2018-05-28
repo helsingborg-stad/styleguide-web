@@ -60,17 +60,15 @@
 @import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 @import "./source/sass-bem/components/_c-brand.scss";
 @import "./source/sass-bem/components/_c-footer.scss";
-@import "./source/sass-bem/components/_c-nav.scss";
+@import "./source/sass-bem/components/_c-header.scss";
 @import "./source/sass-bem/components/_c-navbar.scss";
 @import "./source/sass-bem/components/_feed.scss";
 @import "./source/sass-bem/components/_hamburger.scss";
-@import "./source/sass-bem/components/_header.scss";
-@import "./source/sass-bem/components/_navbar.scss";
 @import "./source/sass-bem/components/_posts.scss";
 // endinject
 
 // inject:scope
-@import "./source/sass-bem/scope/_s-navbar.scss";
+@import "./source/sass-bem/scope/_s-header.scss";
 // endinject
 
 // inject:utilities
