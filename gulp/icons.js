@@ -51,7 +51,8 @@ gulp.task('iconfont', ['icons-scale'], function () {
                 fontPath: '../fonts/',
                 className: 'pricon'
               }))
-              .pipe(gulp.dest('source/sass/'));
+              .pipe(gulp.dest('source/sass/'))
+              .pipe(copy('dist/' + package.version + '/fonts/', {prefix: 2}));
 
             gulp.src('source/icons/pricons.json')
               .pipe(consolidate('lodash', {
@@ -63,5 +64,5 @@ gulp.task('iconfont', ['icons-scale'], function () {
               .pipe(gulp.dest('dist/'))
         })
         .pipe(gulp.dest('dist/fonts/'))
-        .pipe(copy('dist/' + package.version + '/fonts/', {prefix: 2}));;
+        .pipe(copy('dist/' + package.version + '/fonts/', {prefix: 2}));
 });
