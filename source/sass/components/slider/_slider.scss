@@ -188,8 +188,8 @@ article {
         }
 
         position: absolute;
-        z-index: 20;
-        bottom: 70px;
+        z-index: 3;
+        bottom: 60px;
         right: 60px;
         @media screen and (max-width: $screen-xs-max) {
             bottom: 10px;
