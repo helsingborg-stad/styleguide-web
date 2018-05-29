@@ -25,6 +25,7 @@ gulp.task('scripts', function() {
             .pipe(concat('hbg-prime.dev.js'))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('dist/js'))
+            .pipe(copy('dist/' + package.version + '/js/', {prefix: 2}))
             .pipe(rename('hbg-prime.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('dist/js'))
