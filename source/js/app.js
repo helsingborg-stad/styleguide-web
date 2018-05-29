@@ -83,7 +83,7 @@ jQuery.expr[':'].icontains = function (a, i, m) {
  *  Modularity - Post filters  - Toogle
  * */
 var postFilters = document.getElementById("post-filter");
-var disablePostFilterJs = postFilters.classList.contains('disable-post-filter-js');
+var disablePostFilterJs = document.querySelector('disable-post-filter-js');
 
 if (postFilters && !disablePostFilterJs) {
 
