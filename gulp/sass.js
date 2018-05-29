@@ -33,6 +33,7 @@ gulp.task('sass-dev', function() {
             .pipe(rename({prefix: 'hbg-prime-', suffix: '.dev'}))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('dist/css'))
+            .pipe(copy('dist/' + package.version + '/css/', {prefix: 2}))
             .pipe(browserSync.stream());
 });
 
