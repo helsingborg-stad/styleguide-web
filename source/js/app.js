@@ -78,3 +78,30 @@ jQuery.expr[':'].icontains = function(a, i, m) {
   return jQuery(a).text().toUpperCase()
       .indexOf(m[3].toUpperCase()) >= 0;
 };
+
+
+document.querySelector('.toogle').addEventListener('click', function(e) {
+    this.classList.toggle('hidden');
+    var toogleElement = this.getAttribute('data-toogle');
+    [].map.call(document.querySelectorAll(toogleElement), function(el) {
+        el.classList.toggle('hidden');
+    });
+});
+
+document.querySelector('#filter-keyword').addEventListener('click', function(e) {
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+    if (x >= 768) {
+        if (document.getElementById('show-date-filter').classList.contains('hidden')) {
+            document.getElementById('show-date-filter').classList.remove('hidden');
+        }
+        if (!document.getElementById('date-filter').classList.contains('hidden')) {
+            document.getElementById('date-filter').classList.add('hidden');
+        }
+    }
+
+});
