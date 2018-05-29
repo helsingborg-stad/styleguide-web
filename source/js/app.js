@@ -83,7 +83,9 @@ jQuery.expr[':'].icontains = function (a, i, m) {
  *  Modularity - Post filters  - Toogle
  * */
 var postFilters = document.getElementById("post-filter");
-if (postFilters) {
+var disablePostFilterJs = postFilters.classList.contains('disable-post-filter-js');
+
+if (postFilters && !disablePostFilterJs) {
 
     document.querySelector('.toogle').addEventListener('click', function (e) {
         this.classList.toggle('hidden');
