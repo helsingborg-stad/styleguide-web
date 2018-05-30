@@ -82,33 +82,46 @@ jQuery.expr[':'].icontains = function (a, i, m) {
 /**
  *  Modularity - Post filters  - Toogle
  * */
-var postFilters = document.getElementById("post-filter");
-var disablePostFilterJs = document.querySelector('disable-post-filter-js');
+var screenSize = function () {
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth;
+    return x;
+};
+
+var postFilters = document.getElementById("post-filter"),
+    disablePostFilterJs = document.querySelector('disable-post-filter-js');
 
 if (postFilters && !disablePostFilterJs) {
-
     document.querySelector('.toogle').addEventListener('click', function (e) {
         this.classList.toggle('hidden');
         var toogleElement = this.getAttribute('data-toogle');
-        [].map.call(document.querySelectorAll(toogleElement), function (el) {
-            el.classList.toggle('hidden');
+        [].map.call(document.querySelectorAll(toogleElement), function (element) {
+            element.classList.toggle('hidden');
         });
     });
-
     document.querySelector('#filter-keyword').addEventListener('click', function (e) {
-        var w = window,
-            d = document,
-            e = d.documentElement,
-            g = d.getElementsByTagName('body')[0],
-            x = w.innerWidth || e.clientWidth || g.clientWidth;
-
-        if (x >= 768) {
+        var x = screenSize();
+        if (x >= 895) {
             if (document.getElementById('show-date-filter').classList.contains('hidden')) {
                 document.getElementById('show-date-filter').classList.remove('hidden');
             }
             if (!document.getElementById('date-filter').classList.contains('hidden')) {
                 document.getElementById('date-filter').classList.add('hidden');
             }
+        }
+    });
+    window.addEventListener('resize', function (event) {
+        var x = screenSize();
+        if (x >= 895) {
+            document.getElementById('show-date-filter').classList.remove('hidden');
+            document.getElementById('date-filter').classList.add('hidden');
+        }
+        else {
+            document.getElementById('show-date-filter').classList.add('hidden');
+            document.getElementById('date-filter').classList.remove('hidden');
         }
     });
 }
