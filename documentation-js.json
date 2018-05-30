@@ -43,6 +43,7 @@
      "description": "<p>Sliding content</p>\n"
     },
     {
+<<<<<<< HEAD
      "name": "Cookie consent"
     },
     {
@@ -54,6 +55,8 @@
      "description": "<p>Open the top search</p>\n"
     },
     {
+=======
+>>>>>>> fcc8894186a162da9079fe37d5e043657cafd14a
      "name": "Cookies"
     },
     {
@@ -110,6 +113,20 @@
        "escaped": "\n&lt;div class=\"grid\" data-equal-container&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\" data-equal-item&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
+<<<<<<< HEAD
+=======
+    },
+    {
+     "name": "Cookie consent"
+    },
+    {
+     "name": "Modal",
+     "description": "<p>Prevent scrolling when modal is open (or #modal-* exists in url)</p>\n"
+    },
+    {
+     "name": "Search top",
+     "description": "<p>Open the top search</p>\n"
+>>>>>>> fcc8894186a162da9079fe37d5e043657cafd14a
     }
    ]
   }
