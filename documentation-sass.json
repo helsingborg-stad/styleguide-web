@@ -41,20 +41,20 @@
    "spinner",
    "visibility"
   ],
-  "special": [
-   "accordion",
-   "modals",
-   "slider",
-   "tooltip"
+  "blog": [
+   "comments form",
+   "comments",
+   "post"
   ],
   "media": [
    "audioplayer",
    "videoplayer"
   ],
-  "blog": [
-   "comments form",
-   "comments",
-   "post"
+  "special": [
+   "accordion",
+   "modals",
+   "slider",
+   "tooltip"
   ],
   "boxes": [
    "contact",
@@ -63,19 +63,6 @@
    "index",
    "news",
    "panel"
-  ],
-  "buttons": [
-   "base",
-   "floating button",
-   "primary",
-   "contrasted",
-   "light",
-   "danger",
-   "plain",
-   "themed",
-   "sizes",
-   "block button",
-   "offcanvas button"
   ],
   "card": [
    "card",
@@ -96,13 +83,18 @@
    "tabs",
    "tags"
   ],
-  "layout": [
-   "main footer",
-   "container",
-   "pull left",
-   "pull right",
-   "clearfix",
-   "grid"
+  "buttons": [
+   "base",
+   "floating button",
+   "primary",
+   "contrasted",
+   "light",
+   "danger",
+   "plain",
+   "themed",
+   "sizes",
+   "block button",
+   "offcanvas button"
   ],
   "forms": [
    "datepicker",
@@ -117,8 +109,19 @@
    "select",
    "tag manager"
   ],
+  "layout": [
+   "main footer",
+   "container",
+   "pull left",
+   "pull right",
+   "clearfix",
+   "grid"
+  ],
   "gallery": [
    "image grid"
+  ],
+  "notice": [
+   "notice"
   ],
   "hero": [
    "hero"
@@ -131,9 +134,6 @@
    "buttons",
    "flush"
   ],
-  "notice": [
-   "notice"
-  ],
   "search": [
    "search form",
    "search results"
@@ -143,16 +143,13 @@
    "full",
    "split"
   ],
+  "tables": [
+   "basic"
+  ],
   "social": [
    "feed"
   ],
   "stripe": [
-   "general"
-  ],
-  "tables": [
-   "basic"
-  ],
-  "timeline": [
    "general"
   ],
   "wordpress": [
@@ -163,6 +160,9 @@
    "wp widget: search",
    "wp widget: text",
    "wp utility: caption"
+  ],
+  "timeline": [
+   "general"
   ]
  },
  "pages": {
@@ -1234,6 +1234,144 @@
     }
    ]
   },
+  "blog": {
+   "comments form": [
+    {
+     "name": "Comment form",
+     "description": "<p>Standard WordPress comment form, ignore the markup please use the comment_form() WP function to show comment form</p>\n",
+     "page": [
+      {
+       "nav": "Blog",
+       "section": "Comments form"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div id=\"respond\" class=\"comment-respond\">\n<h3 id=\"reply-title\" class=\"comment-reply-title\">Kommentera\n<small><a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\">Avbryt svar</a></small></h3>          <form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\">\n<p class=\"logged-in-as\"><a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\">Inloggad som Random hero</a>. <a href=\"#\">Logga ut?</a></p><div class=\"fake-hide\"><input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"></div><div class=\"fake-hide\"><input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"></div><p class=\"comment-form-comment\"><label for=\"comment\">Kommentar</label> <textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"></textarea></p><p class=\"form-submit\"><input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"> <input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\">\n<input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\">\n</p><input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>\n<style>.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}</style><div class=\"fake-hide\"><img src=\"#\"></div>           </form>\n</div>",
+       "path": "~/source/sass/components/blog/_comments-form.scss",
+       "example": "\n<div id=\"respond\" class=\"comment-respond\">\n<h3 id=\"reply-title\" class=\"comment-reply-title\">Kommentera\n<small><a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\">Avbryt svar</a></small></h3>          <form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\">\n<p class=\"logged-in-as\"><a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\">Inloggad som Random hero</a>. <a href=\"#\">Logga ut?</a></p><div class=\"fake-hide\"><input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"></div><div class=\"fake-hide\"><input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"></div><p class=\"comment-form-comment\"><label for=\"comment\">Kommentar</label> <textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"></textarea></p><p class=\"form-submit\"><input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"> <input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\">\n<input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\">\n</p><input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>\n<style>.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}</style><div class=\"fake-hide\"><img src=\"#\"></div>           </form>\n</div>",
+       "escaped": "\n&lt;div id=\"respond\" class=\"comment-respond\"&gt;\n&lt;h3 id=\"reply-title\" class=\"comment-reply-title\"&gt;Kommentera\n&lt;small&gt;&lt;a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\"&gt;Avbryt svar&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;          &lt;form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\"&gt;\n&lt;p class=\"logged-in-as\"&gt;&lt;a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\"&gt;Inloggad som Random hero&lt;/a&gt;. &lt;a href=\"#\"&gt;Logga ut?&lt;/a&gt;&lt;/p&gt;&lt;div class=\"fake-hide\"&gt;&lt;input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"&gt;&lt;/div&gt;&lt;div class=\"fake-hide\"&gt;&lt;input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"&gt;&lt;/div&gt;&lt;p class=\"comment-form-comment\"&gt;&lt;label for=\"comment\"&gt;Kommentar&lt;/label&gt; &lt;textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"&gt;&lt;/textarea&gt;&lt;/p&gt;&lt;p class=\"form-submit\"&gt;&lt;input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"&gt; &lt;input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\"&gt;\n&lt;input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\"&gt;\n&lt;/p&gt;&lt;input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"&gt;&lt;script&gt;(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();&lt;/script&gt;\n&lt;style&gt;.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}&lt;/style&gt;&lt;div class=\"fake-hide\"&gt;&lt;img src=\"#\"&gt;&lt;/div&gt;           &lt;/form&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "comments": [
+    {
+     "name": "Comments",
+     "description": "<p>List of comments</p>\n",
+     "page": [
+      {
+       "nav": "Blog",
+       "section": "Comments"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"comments-wrapper\">\n    <ul class=\"comments\" id=\"comments\">\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                         <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>",
+       "path": "~/source/sass/components/blog/_comments.scss",
+       "example": "\n<div class=\"comments-wrapper\">\n    <ul class=\"comments\" id=\"comments\">\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                         <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>",
+       "escaped": "\n&lt;div class=\"comments-wrapper\"&gt;\n    &lt;ul class=\"comments\" id=\"comments\"&gt;\n        &lt;li class=\"comment\" id=\"comment-9999\"&gt;\n            &lt;div class=\"author-image\"&gt;\n                &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n            &lt;div class=\"comment-body\"&gt;\n                &lt;div class=\"comment-header\"&gt;\n                    &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero&lt;/a&gt;&lt;/em&gt;\n                    &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-content\"&gt;\n                    &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-footer\"&gt;\n                    &lt;span class=\"like\"&gt;\n                        &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                    &lt;/span&gt;\n                    &lt;span class=\"reply\"&gt;\n                        &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                    &lt;/span&gt;\n                &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;ul class=\"answers\"&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 2&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                         &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 3&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li class=\"comment\" id=\"comment-9999\"&gt;\n            &lt;div class=\"author-image\"&gt;\n                &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n            &lt;/div&gt;\n            &lt;div class=\"comment-body\"&gt;\n                &lt;div class=\"comment-header\"&gt;\n                    &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero&lt;/a&gt;&lt;/em&gt;\n                    &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-content\"&gt;\n                    &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-footer\"&gt;\n                    &lt;span class=\"like\"&gt;\n                        &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                    &lt;/span&gt;\n                    &lt;span class=\"reply\"&gt;\n                        &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                    &lt;/span&gt;\n                &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;ul class=\"answers\"&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 2&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 3&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "post": [
+    {
+     "name": "Post",
+     "description": "<p>A simple blog post</p>\n",
+     "page": [
+      {
+       "nav": "Blog",
+       "section": "Post"
+      }
+     ],
+     "state": [
+      {
+       "name": ".post-full",
+       "escaped": "post-full",
+       "description": "Shows the full post"
+      },
+      {
+       "name": ".post-collapsed",
+       "escaped": "post-collapsed",
+       "description": "Collapsed post (faded out content)"
+      },
+      {
+       "name": ".post-compressed",
+       "escaped": "post-compressed",
+       "description": "Minimal post"
+      },
+      {
+       "name": ".post-single",
+       "escaped": "post-single",
+       "description": "Single post"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
+       "path": "~/source/sass/components/blog/_post.scss",
+       "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
+       "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/components/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/components/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "special": {
    "accordion": [
     {
@@ -1454,144 +1592,6 @@
     }
    ]
   },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/components/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/components/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "blog": {
-   "comments form": [
-    {
-     "name": "Comment form",
-     "description": "<p>Standard WordPress comment form, ignore the markup please use the comment_form() WP function to show comment form</p>\n",
-     "page": [
-      {
-       "nav": "Blog",
-       "section": "Comments form"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div id=\"respond\" class=\"comment-respond\">\n<h3 id=\"reply-title\" class=\"comment-reply-title\">Kommentera\n<small><a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\">Avbryt svar</a></small></h3>          <form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\">\n<p class=\"logged-in-as\"><a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\">Inloggad som Random hero</a>. <a href=\"#\">Logga ut?</a></p><div class=\"fake-hide\"><input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"></div><div class=\"fake-hide\"><input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"></div><p class=\"comment-form-comment\"><label for=\"comment\">Kommentar</label> <textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"></textarea></p><p class=\"form-submit\"><input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"> <input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\">\n<input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\">\n</p><input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>\n<style>.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}</style><div class=\"fake-hide\"><img src=\"#\"></div>           </form>\n</div>",
-       "path": "~/source/sass/components/blog/_comments-form.scss",
-       "example": "\n<div id=\"respond\" class=\"comment-respond\">\n<h3 id=\"reply-title\" class=\"comment-reply-title\">Kommentera\n<small><a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\">Avbryt svar</a></small></h3>          <form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\">\n<p class=\"logged-in-as\"><a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\">Inloggad som Random hero</a>. <a href=\"#\">Logga ut?</a></p><div class=\"fake-hide\"><input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"></div><div class=\"fake-hide\"><input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"></div><p class=\"comment-form-comment\"><label for=\"comment\">Kommentar</label> <textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"></textarea></p><p class=\"form-submit\"><input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"> <input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\">\n<input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\">\n</p><input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>\n<style>.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}</style><div class=\"fake-hide\"><img src=\"#\"></div>           </form>\n</div>",
-       "escaped": "\n&lt;div id=\"respond\" class=\"comment-respond\"&gt;\n&lt;h3 id=\"reply-title\" class=\"comment-reply-title\"&gt;Kommentera\n&lt;small&gt;&lt;a rel=\"nofollow\" id=\"cancel-comment-reply-link\" href=\"/nyheter/nya-klarspraksseminarier-den-20-22-november/comment-page-1/#respond\" style=\"display:none;\"&gt;Avbryt svar&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;          &lt;form action=\"#\" method=\"post\" id=\"commentform\" class=\"comment-form\"&gt;\n&lt;p class=\"logged-in-as\"&gt;&lt;a href=\"#\" aria-label=\"Inloggad som Random hero. Redigera din profil.\"&gt;Inloggad som Random hero&lt;/a&gt;. &lt;a href=\"#\"&gt;Logga ut?&lt;/a&gt;&lt;/p&gt;&lt;div class=\"fake-hide\"&gt;&lt;input name=\"931dc17c3e18362_fi\" type=\"text\" value=\"445bbe0145edb56\" size=\"30\"&gt;&lt;/div&gt;&lt;div class=\"fake-hide\"&gt;&lt;input class=\"hidden\" name=\"931dc17c3e18362_bl\" type=\"text\" size=\"30\"&gt;&lt;/div&gt;&lt;p class=\"comment-form-comment\"&gt;&lt;label for=\"comment\"&gt;Kommentar&lt;/label&gt; &lt;textarea id=\"comment\" name=\"comment\" cols=\"45\" rows=\"8\" maxlength=\"65525\" aria-required=\"true\" required=\"required\"&gt;&lt;/textarea&gt;&lt;/p&gt;&lt;p class=\"form-submit\"&gt;&lt;input name=\"submit\" type=\"submit\" id=\"submit\" class=\"btn btn-primary\" value=\"Skicka kommentar\"&gt; &lt;input type=\"hidden\" name=\"comment_post_ID\" value=\"7662\" id=\"comment_post_ID\"&gt;\n&lt;input type=\"hidden\" name=\"comment_parent\" id=\"comment_parent\" value=\"0\"&gt;\n&lt;/p&gt;&lt;input type=\"hidden\" id=\"_wp_unfiltered_html_comment_disabled\" name=\"_wp_unfiltered_html_comment\" value=\"bfc33d1b01\"&gt;&lt;script&gt;(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();&lt;/script&gt;\n&lt;style&gt;.fake-hide {width: 1px; height: 1px; opacity: 0.0001; position: absolute; overflow: hidden;}&lt;/style&gt;&lt;div class=\"fake-hide\"&gt;&lt;img src=\"#\"&gt;&lt;/div&gt;           &lt;/form&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "comments": [
-    {
-     "name": "Comments",
-     "description": "<p>List of comments</p>\n",
-     "page": [
-      {
-       "nav": "Blog",
-       "section": "Comments"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"comments-wrapper\">\n    <ul class=\"comments\" id=\"comments\">\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                         <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>",
-       "path": "~/source/sass/components/blog/_comments.scss",
-       "example": "\n<div class=\"comments-wrapper\">\n    <ul class=\"comments\" id=\"comments\">\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                         <a href=\"#\"><img src=\"https:unsplash.it/200/200?image=1005\"></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n        <li class=\"comment\" id=\"comment-9999\">\n            <div class=\"author-image\">\n                <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n            </div>\n            <div class=\"comment-body\">\n                <div class=\"comment-header\">\n                    <em class=\"author-name\"><a href=\"#\">Random hero</a></em>\n                    <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                </div>\n                <div class=\"comment-content\">\n                    <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                </div>\n                <div class=\"comment-footer\">\n                    <span class=\"like\">\n                        <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                    </span>\n                    <span class=\"reply\">\n                        <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                    </span>\n                </div>\n            </div>\n            <ul class=\"answers\">\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 2</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">0</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n                <li class=\"answer\" id=\"answer-9999\">\n                    <div class=\"author-image\">\n                        <a href=\"#\"><i class=\"pricon pricon-2x pricon-user-o\"></i></a>\n                    </div>\n                    <div class=\"comment-body\">\n                        <div class=\"comment-header\">\n                            <em class=\"author-name\"><a href=\"#\">Random hero 3</a></em>\n                            <time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\">20 minuter sedan</time>\n                        </div>\n                        <div class=\"comment-content\">\n                            <p>Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.</p>\n                        </div>\n                        <div class=\"comment-footer\">\n                            <span class=\"like\">\n                                <a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"><span id=\"like-count\">11</span></a>\n                            </span>\n                            <span class=\"reply\">\n                                <a class=\"comment-reply-link\" href=\"#\">Svara</a>\n                            </span>\n                        </div>\n                    </div>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>",
-       "escaped": "\n&lt;div class=\"comments-wrapper\"&gt;\n    &lt;ul class=\"comments\" id=\"comments\"&gt;\n        &lt;li class=\"comment\" id=\"comment-9999\"&gt;\n            &lt;div class=\"author-image\"&gt;\n                &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n            &lt;div class=\"comment-body\"&gt;\n                &lt;div class=\"comment-header\"&gt;\n                    &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero&lt;/a&gt;&lt;/em&gt;\n                    &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-content\"&gt;\n                    &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-footer\"&gt;\n                    &lt;span class=\"like\"&gt;\n                        &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                    &lt;/span&gt;\n                    &lt;span class=\"reply\"&gt;\n                        &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                    &lt;/span&gt;\n                &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;ul class=\"answers\"&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 2&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                         &lt;a href=\"#\"&gt;&lt;img src=\"https:unsplash.it/200/200?image=1005\"&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 3&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n        &lt;li class=\"comment\" id=\"comment-9999\"&gt;\n            &lt;div class=\"author-image\"&gt;\n                &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n            &lt;/div&gt;\n            &lt;div class=\"comment-body\"&gt;\n                &lt;div class=\"comment-header\"&gt;\n                    &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero&lt;/a&gt;&lt;/em&gt;\n                    &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-content\"&gt;\n                    &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                &lt;/div&gt;\n                &lt;div class=\"comment-footer\"&gt;\n                    &lt;span class=\"like\"&gt;\n                        &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                    &lt;/span&gt;\n                    &lt;span class=\"reply\"&gt;\n                        &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                    &lt;/span&gt;\n                &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;ul class=\"answers\"&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 2&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;0&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n                &lt;li class=\"answer\" id=\"answer-9999\"&gt;\n                    &lt;div class=\"author-image\"&gt;\n                        &lt;a href=\"#\"&gt;&lt;i class=\"pricon pricon-2x pricon-user-o\"&gt;&lt;/i&gt;&lt;/a&gt;\n                    &lt;/div&gt;\n                    &lt;div class=\"comment-body\"&gt;\n                        &lt;div class=\"comment-header\"&gt;\n                            &lt;em class=\"author-name\"&gt;&lt;a href=\"#\"&gt;Random hero 3&lt;/a&gt;&lt;/em&gt;\n                            &lt;time data-tooltip=\"2017-08-22 kl. 08:36\" data-tooltip-right datetime=\"2017-08-22 06:36:28\"&gt;20 minuter sedan&lt;/time&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-content\"&gt;\n                            &lt;p&gt;Lorem ipsum curabitur donec tempor nullam senectus curabitur taciti quis eget ultrices varius lacinia purus sodales pulvinar, ornare himenaeos per feugiat lacus sagittis venenatis interdum, amet ultricies sodales maecenas nostra porta.&lt;/p&gt;\n                        &lt;/div&gt;\n                        &lt;div class=\"comment-footer\"&gt;\n                            &lt;span class=\"like\"&gt;\n                                &lt;a class=\"like-button active\" href=\"#\" data-comment-id=\"9999\"&gt;&lt;span id=\"like-count\"&gt;11&lt;/span&gt;&lt;/a&gt;\n                            &lt;/span&gt;\n                            &lt;span class=\"reply\"&gt;\n                                &lt;a class=\"comment-reply-link\" href=\"#\"&gt;Svara&lt;/a&gt;\n                            &lt;/span&gt;\n                        &lt;/div&gt;\n                    &lt;/div&gt;\n                &lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "post": [
-    {
-     "name": "Post",
-     "description": "<p>A simple blog post</p>\n",
-     "page": [
-      {
-       "nav": "Blog",
-       "section": "Post"
-      }
-     ],
-     "state": [
-      {
-       "name": ".post-full",
-       "escaped": "post-full",
-       "description": "Shows the full post"
-      },
-      {
-       "name": ".post-collapsed",
-       "escaped": "post-collapsed",
-       "description": "Collapsed post (faded out content)"
-      },
-      {
-       "name": ".post-compressed",
-       "escaped": "post-compressed",
-       "description": "Minimal post"
-      },
-      {
-       "name": ".post-single",
-       "escaped": "post-single",
-       "description": "Single post"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
-       "path": "~/source/sass/components/blog/_post.scss",
-       "example": "\n<div class=\"post post-collapsed\">\n    <header class=\"post-header\">\n        <h1>Candy tootsie roll cookie</h1>\n        <ul>\n            <li class=\"post-author\">\n                <span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"><img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"></span>\n                <span class=\"post-author-name\">Baker</span>\n            </li>\n            <li class=\"post-date\">\n                <time>19 february, 2016 10:46</time>\n            </li>\n            <li class=\"post-comments\">\n                <a href=\"#\">Comments (0)</a>\n            </li>\n        </ul>\n    </header>\n    <article>\n        <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>\n        <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>\n    </article>\n    <footer class=\"grid-table\">\n        <div class=\"grid-md-6\"><strong>Published:</strong> 2016-01-01</div>\n        <div class=\"grid-md-6 text-right\">Share</div>\n    </footer>\n</div>",
-       "escaped": "\n&lt;div class=\"post post-collapsed\"&gt;\n    &lt;header class=\"post-header\"&gt;\n        &lt;h1&gt;Candy tootsie roll cookie&lt;/h1&gt;\n        &lt;ul&gt;\n            &lt;li class=\"post-author\"&gt;\n                &lt;span style=\"background-image:url('https://unsplash.it/200/300?image=1005');\" class=\"post-author-image\"&gt;&lt;img alt=\"Baker Bakersson\" src=\"https://unsplash.it/200/300?image=1005\"&gt;&lt;/span&gt;\n                &lt;span class=\"post-author-name\"&gt;Baker&lt;/span&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-date\"&gt;\n                &lt;time&gt;19 february, 2016 10:46&lt;/time&gt;\n            &lt;/li&gt;\n            &lt;li class=\"post-comments\"&gt;\n                &lt;a href=\"#\"&gt;Comments (0)&lt;/a&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/header&gt;\n    &lt;article&gt;\n        &lt;p&gt;Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.&lt;/p&gt;\n        &lt;p&gt;Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.&lt;/p&gt;\n    &lt;/article&gt;\n    &lt;footer class=\"grid-table\"&gt;\n        &lt;div class=\"grid-md-6\"&gt;&lt;strong&gt;Published:&lt;/strong&gt; 2016-01-01&lt;/div&gt;\n        &lt;div class=\"grid-md-6 text-right\"&gt;Share&lt;/div&gt;\n    &lt;/footer&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "boxes": {
    "contact": [
     {
@@ -1768,333 +1768,6 @@
        "path": "~/source/sass/components/box/_panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "buttons": {
-   "base": [
-    {
-     "name": "Button base",
-     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Base"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      },
-      {
-       "name": ".btn-outline",
-       "escaped": "btn-outline",
-       "description": "Outline button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>\n<button class=\"btn btn-outline\">Button base</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>\n<button class=\"btn btn-outline\">Button base</button>",
-       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn btn-outline\"&gt;Button base&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "floating button": [
-    {
-     "name": "Floating button",
-     "description": "<p>Circle shaped button with icon</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Floating button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></a>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<a href=\"#main-content\" class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></a>",
-       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-floating btn-lg\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/a&gt;"
-      }
-     ]
-    }
-   ],
-   "primary": [
-    {
-     "name": "Button: Primary",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Primary"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      },
-      {
-       "name": ".btn-outline",
-       "escaped": "btn-outline",
-       "description": "Outline button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>\n<button class=\"btn btn-outline btn-primary\">Primary button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>\n<button class=\"btn btn-outline btn-primary\">Primary button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-primary\"&gt;Primary button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "contrasted": [
-    {
-     "name": "Button: Contrasted",
-     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Contrasted"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "light": [
-    {
-     "name": "Button: Light",
-     "description": "<p>Light button should be used on dark backgrounds</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Light"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-light\">Light button</button>\n<button class=\"btn btn-light disabled\">Light disabled button</button>\n<button class=\"btn btn-outline btn-light\">Light button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-light\">Light button</button>\n<button class=\"btn btn-light disabled\">Light disabled button</button>\n<button class=\"btn btn-outline btn-light\">Light button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-light\"&gt;Light button&lt;/button&gt;\n&lt;button class=\"btn btn-light disabled\"&gt;Light disabled button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-light\"&gt;Light button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "danger": [
-    {
-     "name": "Button: Danger",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Danger"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-danger\">Danger button</button>\n<button class=\"btn btn-danger disabled\">Disabled Danger button</button>\n<button class=\"btn btn-outline btn-danger\">Danger button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-danger\">Danger button</button>\n<button class=\"btn btn-danger disabled\">Disabled Danger button</button>\n<button class=\"btn btn-outline btn-danger\">Danger button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Danger button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Disabled Danger button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-danger\"&gt;Danger button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "plain": [
-    {
-     "name": "Button: Plain",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Plain"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
-       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "themed": [
-    {
-     "name": "Button: Themed buttons",
-     "description": "<p>Buttons with color theme colors</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Themed"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-theme-first",
-       "escaped": "btn-theme-first",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-second",
-       "escaped": "btn-theme-second",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-third",
-       "escaped": "btn-theme-third",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fourth",
-       "escaped": "btn-theme-fourth",
-       "description": ""
-      },
-      {
-       "name": ".btn-theme-fifth",
-       "escaped": "btn-theme-fifth",
-       "description": ""
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
-       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "sizes": [
-    {
-     "name": "Button size",
-     "description": "<p>Buttons</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Sizes"
-      }
-     ],
-     "state": [
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>\n<button class=\"btn btn-floating btn-sm\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>\n<button class=\"btn btn-floating btn-sm\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></button>",
-       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;\n&lt;button class=\"btn btn-floating btn-sm\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;\n&lt;button class=\"btn btn-floating\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;\n&lt;button class=\"btn btn-floating btn-lg\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "block button": [
-    {
-     "name": "Block button",
-     "description": "<p>Block button spans the full width of the container</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Block button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
-       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
-      }
-     ]
-    }
-   ],
-   "offcanvas button": [
-    {
-     "name": "Offcanvas button",
-     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
-     "page": [
-      {
-       "nav": "Buttons",
-       "section": "Offcanvas button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "path": "~/source/sass/components/button/_button.scss",
-       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
-       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
       }
      ]
     }
@@ -2552,137 +2225,239 @@
     }
    ]
   },
-  "layout": {
-   "main footer": [
+  "buttons": {
+   "base": [
     {
-     "name": "Main Footer",
-     "description": "<p>The website&#39;s main footer</p>\n",
+     "name": "Button base",
+     "description": "<p>The button base with modifiers that can be applied on all types of buttons. The <coce>.btn</code> class can be used on <code>button</code> and <code>a</code> elements.</p>\n",
      "page": [
       {
-       "nav": "Layout",
-       "section": "Main Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "path": "~/source/sass/components/footer/_footer.scss",
-       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
-    }
-   ],
-   "container": [
-    {
-     "name": "Container",
-     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Container"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container\"></div>",
-       "path": "~/source/sass/objects/layout/_container.scss",
-       "example": "\n<div class=\"container\"></div>",
-       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull left": [
-    {
-     "name": "Pull left",
-     "description": "<p>Floats an element to the left edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull left"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull right": [
-    {
-     "name": "Pull right",
-     "description": "<p>Floats an element to the right edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull right"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "clearfix": [
-    {
-     "name": "Clearfix",
-     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Clearfix"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "grid": [
-    {
-     "name": "Grid",
-     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Grid"
+       "nav": "Buttons",
+       "section": "Base"
       }
      ],
      "state": [
       {
-       "name": ".grid-md-fit-content",
-       "escaped": "grid-md-fit-content",
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-outline",
+       "escaped": "btn-outline",
+       "description": "Outline button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>\n<button class=\"btn btn-outline\">Button base</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn\">Button base</button>\n<button class=\"btn disabled\">Button base</button>\n<button class=\"btn btn-outline\">Button base</button>",
+       "escaped": "\n&lt;button class=\"btn\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn disabled\"&gt;Button base&lt;/button&gt;\n&lt;button class=\"btn btn-outline\"&gt;Button base&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "floating button": [
+    {
+     "name": "Floating button",
+     "description": "<p>Circle shaped button with icon</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Floating button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></a>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<a href=\"#main-content\" class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></a>",
+       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-floating btn-lg\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/a&gt;"
+      }
+     ]
+    }
+   ],
+   "primary": [
+    {
+     "name": "Button: Primary",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Primary"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-outline",
+       "escaped": "btn-outline",
+       "description": "Outline button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>\n<button class=\"btn btn-outline btn-primary\">Primary button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-primary\">Primary button</button>\n<button class=\"btn btn-primary disabled\">Primary button</button>\n<button class=\"btn btn-outline btn-primary\">Primary button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-primary\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-primary disabled\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-primary\"&gt;Primary button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "contrasted": [
+    {
+     "name": "Button: Contrasted",
+     "description": "<p>Uses a 50% black foreground color to contrast to any background.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Contrasted"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-contrasted\">Primary button</button>\n<button class=\"btn btn-contrasted disabled\">Primary disabled button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-contrasted\"&gt;Primary button&lt;/button&gt;\n&lt;button class=\"btn btn-contrasted disabled\"&gt;Primary disabled button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "light": [
+    {
+     "name": "Button: Light",
+     "description": "<p>Light button should be used on dark backgrounds</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Light"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-light\">Light button</button>\n<button class=\"btn btn-light disabled\">Light disabled button</button>\n<button class=\"btn btn-outline btn-light\">Light button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-light\">Light button</button>\n<button class=\"btn btn-light disabled\">Light disabled button</button>\n<button class=\"btn btn-outline btn-light\">Light button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-light\"&gt;Light button&lt;/button&gt;\n&lt;button class=\"btn btn-light disabled\"&gt;Light disabled button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-light\"&gt;Light button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "danger": [
+    {
+     "name": "Button: Danger",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Danger"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-danger\">Danger button</button>\n<button class=\"btn btn-danger disabled\">Disabled Danger button</button>\n<button class=\"btn btn-outline btn-danger\">Danger button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-danger\">Danger button</button>\n<button class=\"btn btn-danger disabled\">Disabled Danger button</button>\n<button class=\"btn btn-outline btn-danger\">Danger button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-danger\"&gt;Danger button&lt;/button&gt;\n&lt;button class=\"btn btn-danger disabled\"&gt;Disabled Danger button&lt;/button&gt;\n&lt;button class=\"btn btn-outline btn-danger\"&gt;Danger button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "plain": [
+    {
+     "name": "Button: Plain",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Plain"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<a href=\"#\" class=\"btn btn-plain\">Plain button</a>\n<button class=\"btn btn-plain\">Plain button</button>",
+       "escaped": "\n&lt;a href=\"#\" class=\"btn btn-plain\"&gt;Plain button&lt;/a&gt;\n&lt;button class=\"btn btn-plain\"&gt;Plain button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "themed": [
+    {
+     "name": "Button: Themed buttons",
+     "description": "<p>Buttons with color theme colors</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Themed"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-theme-first",
+       "escaped": "btn-theme-first",
        "description": ""
       },
       {
-       "name": ".grid-md-auto",
-       "escaped": "grid-md-auto",
+       "name": ".btn-theme-second",
+       "escaped": "btn-theme-second",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-third",
+       "escaped": "btn-theme-third",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fourth",
+       "escaped": "btn-theme-fourth",
+       "description": ""
+      },
+      {
+       "name": ".btn-theme-fifth",
+       "escaped": "btn-theme-fifth",
        "description": ""
       }
      ],
@@ -2690,10 +2465,88 @@
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "path": "~/source/sass/objects/layout/_grid.scss",
-       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
+       "modifier": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-theme-first\">First color</button>\n<button class=\"btn btn-theme-second\">Second color</button>\n<button class=\"btn btn-theme-third\">Third color</button>\n<button class=\"btn btn-theme-fourth\">Fourth color</button>\n<button class=\"btn btn-theme-fifth\">Fifth color</button>",
+       "escaped": "\n&lt;button class=\"btn btn-theme-first\"&gt;First color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-second\"&gt;Second color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-third\"&gt;Third color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fourth\"&gt;Fourth color&lt;/button&gt;\n&lt;button class=\"btn btn-theme-fifth\"&gt;Fifth color&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "sizes": [
+    {
+     "name": "Button size",
+     "description": "<p>Buttons</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Sizes"
+      }
+     ],
+     "state": [
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>\n<button class=\"btn btn-floating btn-sm\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-sm\">Small button</button>\n<button class=\"btn\">Default button</button>\n<button class=\"btn btn-lg\">Large button</button>\n<button class=\"btn btn-floating btn-sm\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating\"><i class=\"pricon pricon-plus\"></i></button>\n<button class=\"btn btn-floating btn-lg\"><i class=\"pricon pricon-plus\"></i></button>",
+       "escaped": "\n&lt;button class=\"btn btn-sm\"&gt;Small button&lt;/button&gt;\n&lt;button class=\"btn\"&gt;Default button&lt;/button&gt;\n&lt;button class=\"btn btn-lg\"&gt;Large button&lt;/button&gt;\n&lt;button class=\"btn btn-floating btn-sm\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;\n&lt;button class=\"btn btn-floating\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;\n&lt;button class=\"btn btn-floating btn-lg\"&gt;&lt;i class=\"pricon pricon-plus\"&gt;&lt;/i&gt;&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "block button": [
+    {
+     "name": "Block button",
+     "description": "<p>Block button spans the full width of the container</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Block button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<button class=\"btn btn-block\">Block button</button>\n<button class=\"btn btn-block btn-primary\">Block button</button>",
+       "escaped": "\n&lt;button class=\"btn btn-block\"&gt;Block button&lt;/button&gt;\n&lt;button class=\"btn btn-block btn-primary\"&gt;Block button&lt;/button&gt;"
+      }
+     ]
+    }
+   ],
+   "offcanvas button": [
+    {
+     "name": "Offcanvas button",
+     "description": "<p>Button that&#39;s outside the canvas (window) until it&#39;s focused. Mainly used for keyboard navigation shortcuts.</p>\n",
+     "page": [
+      {
+       "nav": "Buttons",
+       "section": "Offcanvas button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "path": "~/source/sass/components/button/_button.scss",
+       "example": "\n<a href=\"#main-content\" class=\"btn btn-offcanvas\">Jump to main content</a>",
+       "escaped": "\n&lt;a href=\"#main-content\" class=\"btn btn-offcanvas\"&gt;Jump to main content&lt;/a&gt;"
       }
      ]
     }
@@ -2957,6 +2810,153 @@
     }
    ]
   },
+  "layout": {
+   "main footer": [
+    {
+     "name": "Main Footer",
+     "description": "<p>The website&#39;s main footer</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Main Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "path": "~/source/sass/components/footer/_footer.scss",
+       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
+      }
+     ],
+     "helsingborg.se</a></li>": ""
+    }
+   ],
+   "container": [
+    {
+     "name": "Container",
+     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Container"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container\"></div>",
+       "path": "~/source/sass/objects/layout/_container.scss",
+       "example": "\n<div class=\"container\"></div>",
+       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull left": [
+    {
+     "name": "Pull left",
+     "description": "<p>Floats an element to the left edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull left"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull right": [
+    {
+     "name": "Pull right",
+     "description": "<p>Floats an element to the right edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull right"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "clearfix": [
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Clearfix"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "grid": [
+    {
+     "name": "Grid",
+     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".grid-md-fit-content",
+       "escaped": "grid-md-fit-content",
+       "description": ""
+      },
+      {
+       "name": ".grid-md-auto",
+       "escaped": "grid-md-auto",
+       "description": ""
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "path": "~/source/sass/objects/layout/_grid.scss",
+       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "gallery": {
    "image grid": [
     {
@@ -2984,6 +2984,62 @@
        "path": "~/source/sass/components/gallery/_gallery.scss",
        "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
        "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "notice": {
+   "notice": [
+    {
+     "name": "Notice",
+     "description": "<p>Notice to inform or warn the user.</p>\n",
+     "page": [
+      {
+       "nav": "Notice",
+       "section": "Notice"
+      }
+     ],
+     "state": [
+      {
+       "name": ".notice-lg",
+       "escaped": "notice-lg",
+       "description": "Larger notice"
+      },
+      {
+       "name": ".notice-sm",
+       "escaped": "notice-sm",
+       "description": "Smaller notice"
+      },
+      {
+       "name": ".notice-fullwidth",
+       "escaped": "notice-fullwidth",
+       "description": "Used when filling window width to hide left and right borders"
+      },
+      {
+       "name": ".warning",
+       "escaped": "warning",
+       "description": "Yellow warning color"
+      },
+      {
+       "name": ".danger",
+       "escaped": "danger",
+       "description": "Red danger color"
+      },
+      {
+       "name": ".info",
+       "escaped": "info",
+       "description": "Blue info color"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
+       "path": "~/source/sass/components/notice/_notice.scss",
+       "example": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
+       "escaped": "\n&lt;div class=\"notice success\"&gt;\n     &lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; Sugar plum gummi bears.\n&lt;/div&gt;\n&lt;div class=\"notice warning\"&gt;\n     &lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; Lollipop cake candy canes.\n&lt;/div&gt;\n&lt;div class=\"notice danger\"&gt;\n     &lt;i class=\"pricon pricon-notice-error\"&gt;&lt;/i&gt; Jujubes oat cake sweet sugar plum.\n&lt;/div&gt;\n&lt;div class=\"notice info\"&gt;\n     &lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; Caramels chocolate cake ice cream.\n&lt;/div&gt;"
       }
      ]
     }
@@ -3181,62 +3237,6 @@
        "path": "~/source/sass/components/list/_list.scss",
        "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list c-list--flush\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;ul class=\"c-list c-list--flush\"&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Sem Vehicula Ullamcorper\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Venenatis Dapibus Etiam Bibendum\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Ipsum Quam\n         &lt;/li&gt;\n     &lt;/ul&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "notice": {
-   "notice": [
-    {
-     "name": "Notice",
-     "description": "<p>Notice to inform or warn the user.</p>\n",
-     "page": [
-      {
-       "nav": "Notice",
-       "section": "Notice"
-      }
-     ],
-     "state": [
-      {
-       "name": ".notice-lg",
-       "escaped": "notice-lg",
-       "description": "Larger notice"
-      },
-      {
-       "name": ".notice-sm",
-       "escaped": "notice-sm",
-       "description": "Smaller notice"
-      },
-      {
-       "name": ".notice-fullwidth",
-       "escaped": "notice-fullwidth",
-       "description": "Used when filling window width to hide left and right borders"
-      },
-      {
-       "name": ".warning",
-       "escaped": "warning",
-       "description": "Yellow warning color"
-      },
-      {
-       "name": ".danger",
-       "escaped": "danger",
-       "description": "Red danger color"
-      },
-      {
-       "name": ".info",
-       "escaped": "info",
-       "description": "Blue info color"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
-       "path": "~/source/sass/components/notice/_notice.scss",
-       "example": "\n<div class=\"notice success\">\n     <i class=\"pricon pricon-check\"></i> Sugar plum gummi bears.\n</div>\n<div class=\"notice warning\">\n     <i class=\"pricon pricon-notice-warning\"></i> Lollipop cake candy canes.\n</div>\n<div class=\"notice danger\">\n     <i class=\"pricon pricon-notice-error\"></i> Jujubes oat cake sweet sugar plum.\n</div>\n<div class=\"notice info\">\n     <i class=\"pricon pricon-info-o\"></i> Caramels chocolate cake ice cream.\n</div>",
-       "escaped": "\n&lt;div class=\"notice success\"&gt;\n     &lt;i class=\"pricon pricon-check\"&gt;&lt;/i&gt; Sugar plum gummi bears.\n&lt;/div&gt;\n&lt;div class=\"notice warning\"&gt;\n     &lt;i class=\"pricon pricon-notice-warning\"&gt;&lt;/i&gt; Lollipop cake candy canes.\n&lt;/div&gt;\n&lt;div class=\"notice danger\"&gt;\n     &lt;i class=\"pricon pricon-notice-error\"&gt;&lt;/i&gt; Jujubes oat cake sweet sugar plum.\n&lt;/div&gt;\n&lt;div class=\"notice info\"&gt;\n     &lt;i class=\"pricon pricon-info-o\"&gt;&lt;/i&gt; Caramels chocolate cake ice cream.\n&lt;/div&gt;"
       }
      ]
     }
@@ -3457,6 +3457,57 @@
     }
    ]
   },
+  "tables": {
+   "basic": [
+    {
+     "name": "Basic Table",
+     "description": "",
+     "page": [
+      {
+       "nav": "Tables",
+       "section": "Basic"
+      }
+     ],
+     "state": [
+      {
+       "name": ".table-sm",
+       "escaped": "table-sm",
+       "description": "Small table"
+      },
+      {
+       "name": ".table-lg",
+       "escaped": "table-lg",
+       "description": "Large table"
+      },
+      {
+       "name": ".table-striped",
+       "escaped": "table-striped",
+       "description": "Zebra striped table"
+      },
+      {
+       "name": ".table-bordered",
+       "escaped": "table-bordered",
+       "description": "Borders between rows"
+      },
+      {
+       "name": ".table-hover",
+       "escaped": "table-hover",
+       "description": "Highlight table row on hover"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "path": "~/source/sass/components/table/_table.scss",
+       "example": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
+       "escaped": "\n&lt;table class=\"table table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Yummie&lt;/th&gt;\n            &lt;th&gt;Much&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Gingerbread&lt;/td&gt;\n            &lt;td&gt;9&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Jelly-o&lt;/td&gt;\n            &lt;td&gt;8&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Apple pie&lt;/td&gt;\n            &lt;td&gt;10&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Candy canes I love muffin&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "social": {
    "feed": [
     {
@@ -3536,89 +3587,6 @@
        "path": "~/source/sass/components/stripe/_stripe.scss",
        "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
        "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "tables": {
-   "basic": [
-    {
-     "name": "Basic Table",
-     "description": "",
-     "page": [
-      {
-       "nav": "Tables",
-       "section": "Basic"
-      }
-     ],
-     "state": [
-      {
-       "name": ".table-sm",
-       "escaped": "table-sm",
-       "description": "Small table"
-      },
-      {
-       "name": ".table-lg",
-       "escaped": "table-lg",
-       "description": "Large table"
-      },
-      {
-       "name": ".table-striped",
-       "escaped": "table-striped",
-       "description": "Zebra striped table"
-      },
-      {
-       "name": ".table-bordered",
-       "escaped": "table-bordered",
-       "description": "Borders between rows"
-      },
-      {
-       "name": ".table-hover",
-       "escaped": "table-hover",
-       "description": "Highlight table row on hover"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "path": "~/source/sass/components/table/_table.scss",
-       "example": "\n<table class=\"table table-striped table-hover\">\n    <thead>\n        <tr>\n            <th>Yummie</th>\n            <th>Much</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Gingerbread</td>\n            <td>9</td>\n        </tr>\n        <tr>\n            <td>Jelly-o</td>\n            <td>8</td>\n        </tr>\n        <tr>\n            <td>Apple pie</td>\n            <td>10</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"3\"><small>Candy canes I love muffin</small></td>\n        </tr>\n    </tfoot>\n</table>",
-       "escaped": "\n&lt;table class=\"table table-striped table-hover\"&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Yummie&lt;/th&gt;\n            &lt;th&gt;Much&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Gingerbread&lt;/td&gt;\n            &lt;td&gt;9&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Jelly-o&lt;/td&gt;\n            &lt;td&gt;8&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Apple pie&lt;/td&gt;\n            &lt;td&gt;10&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n    &lt;tfoot&gt;\n        &lt;tr&gt;\n            &lt;td colspan=\"3\"&gt;&lt;small&gt;Candy canes I love muffin&lt;/small&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tfoot&gt;\n&lt;/table&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "timeline": {
-   "general": [
-    {
-     "name": "Timeline",
-     "description": "<p>Vertical timeline</p>\n",
-     "author": "Jonatan Hanson",
-     "page": [
-      {
-       "nav": "Timeline",
-       "section": "general"
-      }
-     ],
-     "state": [
-      {
-       "name": ".timeline-side",
-       "escaped": "timeline-side",
-       "description": "Places image div closest to the timeline marker"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
-       "path": "~/source/sass/components/timeline/timeline.scss",
-       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n     &lt;div class=\"box-content\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t    &lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -3775,6 +3743,38 @@
        "path": "~/source/sass/components/wordpress/_wp-caption.scss",
        "example": "\n<div class=\"wp-caption alignnone\">\n <img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\">\n <p class=\"wp-caption-text\">Gingerbread gummies lollipop chocolate cake.</p>\n</div>",
        "escaped": "\n&lt;div class=\"wp-caption alignnone\"&gt;\n &lt;img class=\"wp-image-2634 size-large\" src=\"https:unsplash.it/458/354?image=0\" alt=\"Hemtjanst2\"&gt;\n &lt;p class=\"wp-caption-text\"&gt;Gingerbread gummies lollipop chocolate cake.&lt;/p&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "timeline": {
+   "general": [
+    {
+     "name": "Timeline",
+     "description": "<p>Vertical timeline</p>\n",
+     "author": "Jonatan Hanson",
+     "page": [
+      {
+       "nav": "Timeline",
+       "section": "general"
+      }
+     ],
+     "state": [
+      {
+       "name": ".timeline-side",
+       "escaped": "timeline-side",
+       "description": "Places image div closest to the timeline marker"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
+       "path": "~/source/sass/components/timeline/timeline.scss",
+       "example": "\n<div class=\"grid\">\n\t<div class=\"grid-md-12\">\n     <div class=\"box-content\">\n\t\t<ul class=\"timeline\">\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>24 Dec 2010</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>24 Dec</span><span>2010</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-twitter-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sweet roll brownie</h3>\n\t\t\t\t\t\t\t<p>Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>5 Jan 2011</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>5 Jan</span><span>2011</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content timeline-side\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-5 grid-lg-4\">\n\t\t\t\t\t\t\t<i class=\"pricon pricon-5x pricon-facebook-square\"></i>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-7 grid-lg-8\">\n\t\t\t\t\t\t\t<h3>Sugar plum</h3>\n\t\t\t\t\t\t\t<p>Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline-date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>9 Jul 2015</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline-date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>9 Jul</span><span>2015</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline-content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Fruitcake</h3>\n\t\t\t\t\t\t\t<p>I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"timeline__event\">\n\t\t\t\t<div class=\"timeline__date hidden-xs hidden-sm\">\n\t\t\t\t\t<span>25 Aug 2017</span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__marker\">\n\t\t\t\t\t<div class=\"timeline__date hidden-md hidden-lg\">\n\t\t\t\t\t\t<span>25 Aug</span><span>2017</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"timeline__content\">\n\t\t\t\t\t<div class=\"grid\">\n\t\t\t\t\t\t<div class=\"grid-md-12\">\n\t\t\t\t\t\t\t<h3>Cheesecake chocolate cake</h3>\n\t\t\t\t\t\t\t<p>Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.</p>\n\t                \t</div>\n\t                </div>\n\t            </div>\n\t        </li>\n\t\t</ul>\n\t    </div>\n\t</div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n\t&lt;div class=\"grid-md-12\"&gt;\n     &lt;div class=\"box-content\"&gt;\n\t\t&lt;ul class=\"timeline\"&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;24 Dec 2010&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;24 Dec&lt;/span&gt;&lt;span&gt;2010&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-twitter-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sweet roll brownie&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Oat cake jelly-o wafer cake candy canes. Sweet pastry dragée biscuit dragée lemon drops I love.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;5 Jan 2011&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;5 Jan&lt;/span&gt;&lt;span&gt;2011&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content timeline-side\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-5 grid-lg-4\"&gt;\n\t\t\t\t\t\t\t&lt;i class=\"pricon pricon-5x pricon-facebook-square\"&gt;&lt;/i&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-7 grid-lg-8\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Sugar plum&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Biscuit jujubes candy canes bear claw donut. I love tootsie roll I love cheesecake apple pie lollipop jelly. Marshmallow marzipan lemon drops dessert.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline-date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;9 Jul 2015&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline-date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;9 Jul&lt;/span&gt;&lt;span&gt;2015&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline-content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;img src=\"https://unsplash.it/400/250/?image=823\" class=\"image\"&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Fruitcake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;I love apple pie fruitcake. Fruitcake I love danish toffee jelly beans croissant candy canes caramels. Biscuit wafer icing gingerbread sweet dragée sesame snaps.&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/li&gt;\n\t\t\t&lt;li class=\"timeline__event\"&gt;\n\t\t\t\t&lt;div class=\"timeline__date hidden-xs hidden-sm\"&gt;\n\t\t\t\t\t&lt;span&gt;25 Aug 2017&lt;/span&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__marker\"&gt;\n\t\t\t\t\t&lt;div class=\"timeline__date hidden-md hidden-lg\"&gt;\n\t\t\t\t\t\t&lt;span&gt;25 Aug&lt;/span&gt;&lt;span&gt;2017&lt;/span&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div class=\"timeline__content\"&gt;\n\t\t\t\t\t&lt;div class=\"grid\"&gt;\n\t\t\t\t\t\t&lt;div class=\"grid-md-12\"&gt;\n\t\t\t\t\t\t\t&lt;h3&gt;Cheesecake chocolate cake&lt;/h3&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Chocolate bar jujubes pastry halvah. Jujubes soufflé cotton candy. Liquorice bear claw carrot cake.\n\t                \t\tSesame snaps dessert sesame snaps donut soufflé danish bonbon. Toffee powder macaroon tiramisu apple pie sweet donut.&lt;/p&gt;\n\t                \t&lt;/div&gt;\n\t                &lt;/div&gt;\n\t            &lt;/div&gt;\n\t        &lt;/li&gt;\n\t\t&lt;/ul&gt;\n\t    &lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }

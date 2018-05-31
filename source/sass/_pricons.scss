@@ -738,3 +738,30 @@ $pricon-group: "\EC95";
     vertical-align: $vertical-align;
     content: $icon;
 }
+
+.pricon.cursor {
+    cursor:pointer;
+}
+
+/**
+ * Usage: Adjusting icons up or down 1px - 5px
+ * top: pricon--padding-t-1 to pricon--padding-t-5
+ * bottom: pricon--padding-b-1 to pricon--padding-b-5
+ *
+ **/
+
+$t-pixls: 0;
+@while $t-pixls <= 5 {
+    .pricon--padding-t-#{$t-pixls}::before {
+        padding-top: #{$t-pixls}px;
+    }
+    $t-pixls: $t-pixls + 1;
+}
+
+$b-pixls: 0;
+@while $b-pixls <= 5 {
+    .pricon--padding-b-#{$b-pixls}::before {
+        padding-bottom: #{$b-pixls}px;
+    }
+    $b-pixls: $b-pixls + 1;
+}
