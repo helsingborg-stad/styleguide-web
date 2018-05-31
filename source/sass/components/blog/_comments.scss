@@ -157,6 +157,10 @@
 li.comment.comment-new {
     margin-bottom: $content-gutter * 2;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     li.answer {
         margin-bottom: $content-gutter * 2;
     }
