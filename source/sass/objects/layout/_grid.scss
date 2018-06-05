@@ -153,6 +153,10 @@ $grid-gutters: (
     }
 }
 
+.grid--margins {
+     @extend .grid--columns;
+}
+
 .modularity-mod-index {
     margin-bottom: $baseline * -4;
 }
