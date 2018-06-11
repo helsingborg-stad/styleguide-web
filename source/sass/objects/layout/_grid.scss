@@ -157,10 +157,6 @@ $grid-gutters: (
      @extend .grid--columns;
 }
 
-.modularity-mod-index {
-    margin-bottom: $baseline * -4;
-}
-
 //Temporary scope fix!
 .modularity-mod-index > .grid,
 .modularity-mod-posts > .grid {
