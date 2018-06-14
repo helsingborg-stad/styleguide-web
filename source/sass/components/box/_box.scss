@@ -61,6 +61,10 @@ body:not(.material-no-radius) .main-footer .box:not(.box-news-horizontal):not(.b
     }
 }
 
+.box.box-filled .box-title:last-child {
+    padding-bottom: 32px;
+}
+
 .box-image-container {
     position: relative;
 }
