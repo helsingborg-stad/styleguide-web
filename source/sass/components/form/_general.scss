@@ -2,6 +2,8 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
 textarea,
 select,
 button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     border-radius: 0;
 }
