@@ -41,6 +41,14 @@
    "spinner",
    "visibility"
   ],
+  "layout": [
+   "container",
+   "pull left",
+   "pull right",
+   "clearfix",
+   "grid",
+   "main footer"
+  ],
   "special": [
    "accordion",
    "modals",
@@ -95,14 +103,6 @@
    "scroll",
    "tabs",
    "tags"
-  ],
-  "layout": [
-   "main footer",
-   "container",
-   "pull left",
-   "pull right",
-   "clearfix",
-   "grid"
   ],
   "gallery": [
    "image grid"
@@ -1231,6 +1231,153 @@
        "description": "Display only in print"
       }
      ]
+    }
+   ]
+  },
+  "layout": {
+   "container": [
+    {
+     "name": "Container",
+     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Container"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container\"></div>",
+       "path": "~/source/sass/objects/layout/_container.scss",
+       "example": "\n<div class=\"container\"></div>",
+       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull left": [
+    {
+     "name": "Pull left",
+     "description": "<p>Floats an element to the left edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull left"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull right": [
+    {
+     "name": "Pull right",
+     "description": "<p>Floats an element to the right edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull right"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "clearfix": [
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Clearfix"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "grid": [
+    {
+     "name": "Grid",
+     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".grid-md-fit-content",
+       "escaped": "grid-md-fit-content",
+       "description": ""
+      },
+      {
+       "name": ".grid-md-auto",
+       "escaped": "grid-md-auto",
+       "description": ""
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "path": "~/source/sass/objects/layout/_grid.scss",
+       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "main footer": [
+    {
+     "name": "Main Footer",
+     "description": "<p>The website&#39;s main footer</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Main Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "path": "~/source/sass/components/footer/_footer.scss",
+       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
+      }
+     ],
+     "helsingborg.se</a></li>": ""
     }
    ]
   },
@@ -2547,153 +2694,6 @@
        "path": "~/source/sass/components/navigation/_tags.scss",
        "example": "\n<ul class=\"tags show-tagsign\">\n    <li><span class=\"tag\"><a href=\"#\">Cupcake</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Jelly-o</a></span></li>\n    <li><span class=\"tag\"><a href=\"#\">Candy canes</a></span></li>\n</ul>",
        "escaped": "\n&lt;ul class=\"tags show-tagsign\"&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Cupcake&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Jelly-o&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n    &lt;li&gt;&lt;span class=\"tag\"&gt;&lt;a href=\"#\"&gt;Candy canes&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "layout": {
-   "main footer": [
-    {
-     "name": "Main Footer",
-     "description": "<p>The website&#39;s main footer</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Main Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "path": "~/source/sass/components/footer/_footer.scss",
-       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
-    }
-   ],
-   "container": [
-    {
-     "name": "Container",
-     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Container"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container\"></div>",
-       "path": "~/source/sass/objects/layout/_container.scss",
-       "example": "\n<div class=\"container\"></div>",
-       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull left": [
-    {
-     "name": "Pull left",
-     "description": "<p>Floats an element to the left edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull left"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull right": [
-    {
-     "name": "Pull right",
-     "description": "<p>Floats an element to the right edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull right"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "clearfix": [
-    {
-     "name": "Clearfix",
-     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Clearfix"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "grid": [
-    {
-     "name": "Grid",
-     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".grid-md-fit-content",
-       "escaped": "grid-md-fit-content",
-       "description": ""
-      },
-      {
-       "name": ".grid-md-auto",
-       "escaped": "grid-md-auto",
-       "description": ""
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "path": "~/source/sass/objects/layout/_grid.scss",
-       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
       }
      ]
     }
