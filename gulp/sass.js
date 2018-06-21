@@ -26,7 +26,7 @@ gulp.task('sass-dist', function() {
 });
 
 gulp.task('sass-dev', function() {
-    return gulp.src('source/sass/themes/*.scss')
+    return gulp.src('source/sass/themes/purple.scss') // Ändra tillbakla till *
             .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(sass({ sourceComments: true }).on('error', sass.logError))
@@ -55,7 +55,7 @@ gulp.task('sass-font-awesome', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "hbgprime.dev"
+        proxy: "hbgprime.local"
     });
 });
 

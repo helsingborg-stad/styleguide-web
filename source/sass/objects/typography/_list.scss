@@ -39,6 +39,7 @@ article ul:not(.nav, .slider-items, .line-numbers, .player-playlist, .social-fee
     }
 }
 
+
 article .mod-inlaylist ul.nav {
     margin-top: 0;
 }
@@ -102,4 +103,18 @@ li + li.title {
 
 .list-item-spacing li + li {
     margin-top: 8px;
+}
+
+.mod-contacts .accordion-content li::before {
+    background-color: transparent !important;
+}
+
+.mod-contacts .accordion-content ul {
+    padding-left: 0px !important;
+}
+
+.mod-contacts .accordion-content a:hover {
+    background-color:transparent !important;
+    overflow: auto !important;
+    width: unset;
 }
