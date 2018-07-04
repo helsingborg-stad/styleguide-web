@@ -8,6 +8,7 @@ body:not(.s-bem-deprecated) {
 
     .c-header__body {
         align-items: center;
+        flex-wrap: nowrap;
     }
 
     .c-header.c-header--small {}
@@ -17,6 +18,7 @@ body:not(.s-bem-deprecated) {
         }
     }
 }
+
 
 // ==========================================================================
 // Deprecated
