@@ -26,7 +26,7 @@ gulp.task('sass-dist', function() {
 });
 
 gulp.task('sass-dev', function() {
-    return gulp.src('source/sass/themes/purple.scss') // Ändra tillbakla till *
+    return gulp.src('source/sass/themes/*.scss')
             .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(sass({ sourceComments: true }).on('error', sass.logError))
