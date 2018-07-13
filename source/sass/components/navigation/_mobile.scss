@@ -17,7 +17,6 @@
 
     a {
         color: #fff;
-        padding: $baseline +6;
 
         &:hover {
             background-color: $palette-3;
@@ -40,7 +39,7 @@
 
     .has-children,
     .page_item_has_children,
-    .menu-item-has-children {
+    .menu-item-has-children, {
         > a::after {
             color: rgba(#fff, .5);
         }
