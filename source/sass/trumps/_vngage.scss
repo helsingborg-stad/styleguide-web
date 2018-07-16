@@ -1,4 +1,4 @@
-@include mq(0, xs) {
+@media only screen and (max-width: 767px) {
     .vngage-banner {
         .vngage-tab {
             bottom: 0px !important;
@@ -6,13 +6,14 @@
             transform: rotate(0deg) !important;
             right: -6px !important;
             z-index:10000 !important;
-            &::after {
+            &:after {
                 transform: rotate(0deg) !important;
             }
-            &::before {
+            &:before {
                 right: 138px !important;
             }
         }
+
         .vngage-tab-text {
             padding-right: 27px !important;
         }
