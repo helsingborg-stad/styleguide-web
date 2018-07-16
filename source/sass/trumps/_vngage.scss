@@ -1,0 +1,26 @@
+@include mq(0, xs) {
+    .vngage-banner {
+        .vngage-tab {
+            bottom: 0px !important;
+            top: unset !important;
+            transform: rotate(0deg) !important;
+            right: -6px !important;
+            z-index:10000 !important;
+            &::after {
+                transform: rotate(0deg) !important;
+            }
+            &::before {
+                right: 138px !important;
+            }
+        }
+        .vngage-tab-text {
+            padding-right: 27px !important;
+        }
+        .vngage-overlay {
+            z-index: 9998 !important;
+        }
+        .vngage-content {
+            z-index: 9999 !important;
+        }
+    }
+}
