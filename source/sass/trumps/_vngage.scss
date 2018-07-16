@@ -7,11 +7,10 @@
         z-index: 10000 !important;
         &:after {
             transform: rotate(0deg) !important;
+            right: 138px !important;
         }
     }
-    .vngage-tab:before {
-        right: 138px !important;
-    }
+  
     .vngage-tab-text {
         padding-right: 27px !important;
     }
