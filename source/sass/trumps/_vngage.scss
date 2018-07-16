@@ -1,4 +1,5 @@
-@media only screen and (max-width: 610px) {
+//@media only screen and (max-width: 610px) {
+@include mq(xs, 610px){
     .vngage-tab {
         bottom: 0px !important;
         top: unset !important;
