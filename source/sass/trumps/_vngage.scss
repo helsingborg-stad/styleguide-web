@@ -7,12 +7,17 @@
         z-index: 10000 !important;
         &:after {
             transform: rotate(0deg) !important;
-            right: 138px !important;
+            bottom: 3px;
+            right: 176px !important;
         }
     }
-  
+
     .vngage-tab-text {
-        padding-right: 27px !important;
+        right: 158px !important;
+        padding-right: 27px!important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        font-size:1.2em !important;
     }
     .vngage-overlay {
         z-index: 9998 !important;
