@@ -37,6 +37,10 @@
     }
 }
 
+ul.search-result-list li + li {
+    margin-top: 32px;
+}
+
 .search-result-item {
     max-width: 700px;
 }
