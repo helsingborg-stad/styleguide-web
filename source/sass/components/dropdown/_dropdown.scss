@@ -96,7 +96,7 @@
     }
 
     li {
-        a {
+        > a {
             display: block;
             padding: 3px 10px;
             color: $base-font-color;
