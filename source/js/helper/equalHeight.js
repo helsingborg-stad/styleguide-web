@@ -20,7 +20,11 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
     function EqualHeight() {
         // Initialize if flexbox not supported
         if (!this.supportsFlexbox()) {
-            this.init();
+            
+            $(window).on('load', function () {
+                this.init();
+                console.log('YO');
+            }.bind(this));
 
             $(window).on('resize', function () {
                 this.destroy();
