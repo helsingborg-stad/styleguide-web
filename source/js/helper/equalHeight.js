@@ -26,6 +26,12 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
                 this.destroy();
                 this.init();
             }.bind(this));
+
+            $(window).on('load', function () {
+                this.destroy();
+                this.init();
+            }.bind(this));
+
         }
     }
 
