@@ -123,4 +123,10 @@ if (postFilters && !disablePostFilterJs) {
             document.getElementById('date-filter').classList.remove('hidden');
         }
     });
+
 }
+
+/* Flickity patch - Reload window doesn't set correct height */
+jQuery(window).load( function() {
+    window.dispatchEvent(new Event('resize'));
+});

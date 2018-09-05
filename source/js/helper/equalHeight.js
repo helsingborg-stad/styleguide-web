@@ -23,7 +23,7 @@ HelsingborgPrime.Helper.EqualHeight = (function ($) {
             
             $(window).on('load', function () {
                 this.init();
-                console.log('YO');
+
             }.bind(this));
 
             $(window).on('resize', function () {
