@@ -104,6 +104,7 @@ ol.player-playlist {
     }
 
     iframe {
+        background-color: #000;
         @include cover();
     }
 
