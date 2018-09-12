@@ -133,13 +133,17 @@
 
         &:not(.social-feed) {
             a {
-                display: table;
+                display: block;
 
                 &:hover {
                     text-decoration: none !important;
 
                     .title {
                         text-decoration: underline !important;
+                    }
+
+                    time {
+                        float: right;
                     }
                 }
             }
