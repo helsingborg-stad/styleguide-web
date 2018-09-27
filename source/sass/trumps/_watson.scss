@@ -18,6 +18,7 @@
 #watson-fab-icon:before {
     z-index: 1;
     position: relative;
+    color: white;
 }
 
 #watson-fab-text {
@@ -57,6 +58,14 @@ div#message-container {
     color: white !important;
 }
 
-#message-container #messages .message {
-    border-radius: 16px !important;
+// #message-container #messages .message {
+//     border-radius: 16px !important;
+// }
+
+.message.message-option.watson-font {
+    border-radius: 0px !important;
+    border: none !important;
+    color: #b10000 !important;
+    text-decoration: underline;
+    padding: 4px 8px !important;
 }
