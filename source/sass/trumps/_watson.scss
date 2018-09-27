@@ -1,0 +1,62 @@
+#watson-fab-icon {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    padding-left: 0;
+    left: -12px;
+}
+
+#watson-fab-icon:after {
+    @extend .sally, .sally-red, .is-stand-by;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 0;
+}
+
+#watson-fab-icon:before {
+    z-index: 1;
+    position: relative;
+}
+
+#watson-fab-text {
+    font-size: 18px !important;
+    position: relative;
+    left: -12px;
+    color: $base-font-color;
+    line-height: 1.2 !important;
+    max-width: 146px;
+}
+
+div#watson-fab {
+    background: white;
+}
+
+div#watson-header {
+    background-color: $creamy !important;
+    color: $base-font-color !important;
+}
+
+div#message-container {
+    background-color: white;
+}
+
+#message-container #messages .watson-message {
+    background-color: $creamy !important;
+    color: $base-font-color !important;
+}
+
+#watson-box #message-send {
+    background-color: $palette-3 !important;
+    width: 48px !important;
+}
+
+#message-container #messages .user-message {
+    background-color: $palette-4 !important;
+    color: white !important;
+}
+
+#message-container #messages .message {
+    border-radius: 16px !important;
+}

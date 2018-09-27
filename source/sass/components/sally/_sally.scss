@@ -1,0 +1,18 @@
+.sally {
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+}
+
+.sally-red {
+    background-image: linear-gradient(#f7a600, #cb0050);
+}
+
+.is-stand-by {
+    animation: sallyStandBy 4000ms infinite linear;
+}
+
+@keyframes sallyStandBy {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
