@@ -102,7 +102,7 @@ div#message-container {
 #watson-header:before {
     @extend .sally, .sally-red, .is-stand-by;
     position: absolute;
-    top: 12px;
+    top: 11px;
     left: 12px;
     content: '';
     z-index: 0;
