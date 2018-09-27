@@ -7,7 +7,7 @@
 }
 
 #watson-fab-icon:after {
-    @extend .sally, .sally-red, .is-stand-by;
+    @extend .sally, .is-stand-by;
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@ div#message-container {
     position: relative;
 }
 #watson-header:before {
-    @extend .sally, .sally-red, .is-stand-by;
+    @extend .sally, .is-stand-by;
     position: absolute;
     top: 11px;
     left: 12px;

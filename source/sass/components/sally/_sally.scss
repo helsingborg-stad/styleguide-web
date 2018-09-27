@@ -2,10 +2,7 @@
     border-radius: 100%;
     width: 64px;
     height: 64px;
-}
-
-.sally-red {
-    background-image: linear-gradient(#f7a600, #cb0050);
+    background-image: linear-gradient($palette-1, $palette-2);
 }
 
 .is-stand-by {
