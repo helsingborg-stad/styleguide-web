@@ -75,6 +75,12 @@ div#message-container {
 #watson-box #message-send {
     background-color: $palette-4 !important;
     width: 48px !important;
+    height: 40px !important;
+    border: none !important;
+
+    div svg {
+        width: 1.8em;
+    }
 }
 
 #message-container #messages .user-message {
