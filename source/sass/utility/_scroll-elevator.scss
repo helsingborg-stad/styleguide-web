@@ -2,7 +2,7 @@
     visibility: hidden;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
     opacity: 0;
     transition: visibility 0ms, opacity 300ms ease-in-out;
 
@@ -27,13 +27,27 @@
             line-height: 40px;
             @include pricon($pricon-up, middle);
         }
-
         &:hover {
-
+            background-color: $palette-3;
         }
+
+    }
+    &.minimalButtonHideRight {
+        animation: hideRight 0.3s ease-in forwards 3s;
+
+    }
+    &.minimalButtonHide {
+        transform: translateX(88%);
     }
 }
-
+@keyframes  hideRight {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(88%);
+    }
+}
 .show-scroll-elevator .scroll-elevator {
     display: block;
     visibility: visible;
