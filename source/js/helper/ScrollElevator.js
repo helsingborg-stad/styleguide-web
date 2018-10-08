@@ -62,8 +62,10 @@ HelsingborgPrime.Helper.ScrollElevator = (function ($) {
                 this.hideElevator();
                 return;
             }
+
             this.showElevator();
             return;
+
 
         }.bind(this));
     };
@@ -72,13 +74,19 @@ HelsingborgPrime.Helper.ScrollElevator = (function ($) {
     ScrollElevator.prototype.showElevator = function() {
         $('body').addClass('show-scroll-elevator');
         var storage = localStorage.getItem('scrollStorage');
+        var preventRunningMoreThanOnce;
         if (storage) {
+            $('.scroll-elevator').removeClass('minimalButtonHideRight');
             $('.scroll-elevator').addClass('minimalButtonHide');
         } else {
-            $('.scroll-elevator').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-                $('.scroll-elevator').addClass('minimalButtonHideRight');
-                localStorage.setItem('scrollStorage', 'true');
-            });
+                if (preventRunningMoreThanOnce) {
+                    $('.scroll-elevator').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+                        $('.scroll-elevator').addClass('minimalButtonHideRight');
+                        localStorage.setItem('scrollStorage', 'true');
+                        preventRunningMoreThanOnce = true;
+                    });
+                }
+
         }
     };
 
