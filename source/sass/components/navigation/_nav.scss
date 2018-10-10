@@ -143,8 +143,8 @@
         display: block;
     }
 
-    .is-expanded.is-loading > [data-load-submenu],
-    .is-expanded.is-loading > div > [data-load-submenu] {
+    .sidebar-menu .is-loading > [data-load-submenu],
+    .sidebar-menu .is-loading > div > [data-load-submenu] {
         .icon {
             animation: 500ms spinme infinite;
         }
@@ -154,7 +154,9 @@
             @include pricon($pricon-loading-o);
         }
     }
-
+    .is-expanded .icon{
+        animation: unset;
+    }
     // Indicates currently active menu item that has children
     .has-children.current,
     .has-children.current-node,
