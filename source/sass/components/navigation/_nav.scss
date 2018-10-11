@@ -143,8 +143,8 @@
         display: block;
     }
 
-    .sidebar-menu .is-loading > [data-load-submenu],
-    .sidebar-menu .is-loading > div > [data-load-submenu] {
+    .is-loading > [data-load-submenu],
+    .is-loading > div > [data-load-submenu] {
         .icon {
             animation: 500ms spinme infinite;
         }
