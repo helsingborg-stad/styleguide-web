@@ -147,6 +147,18 @@ $grid-gutters: (
     }
 }
 
+
+.grid.sm-gutter {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    > [class*="grid-"]:not(.grid, [class*="grid--"]) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
 .grid--columns {
     > [class*="grid-"]:not(.grid, [class*="grid--"]) {
         margin-bottom: $baseline * 4;
