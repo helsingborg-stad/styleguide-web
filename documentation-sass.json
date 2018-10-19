@@ -77,13 +77,6 @@
    "block button",
    "offcanvas button"
   ],
-  "card": [
-   "card",
-   "image",
-   "header",
-   "footer",
-   "list"
-  ],
   "navigation": [
    "dropdown",
    "breadcrumbs",
@@ -96,6 +89,13 @@
    "tabs",
    "tags"
   ],
+  "card": [
+   "card",
+   "image",
+   "header",
+   "footer",
+   "list"
+  ],
   "layout": [
    "main footer",
    "container",
@@ -103,6 +103,9 @@
    "pull right",
    "clearfix",
    "grid"
+  ],
+  "gallery": [
+   "image grid"
   ],
   "forms": [
    "datepicker",
@@ -116,9 +119,6 @@
    "segment control",
    "select",
    "tag manager"
-  ],
-  "gallery": [
-   "image grid"
   ],
   "hero": [
    "hero"
@@ -2100,140 +2100,6 @@
     }
    ]
   },
-  "card": {
-   "card": [
-    {
-     "name": "Card",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Card"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "image": [
-    {
-     "name": "Image",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Image"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      },
-      {
-       "name": ".btn-outline",
-       "escaped": "btn-outline",
-       "description": "Outline button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__image\"&gt;\n             &lt;img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "header": [
-    {
-     "name": "Header",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Header"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/h4&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "footer": [
-    {
-     "name": "Footer",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             Footer content\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "list": [
-    {
-     "name": "List",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "List"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;ul class=\"c-list c-list--flush\"&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Condimentum Ipsum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Justo Quam\n             &lt;/div&gt;\n         &lt;/ul&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;div class=\"c-list c-list--flush\"&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Condimentum Ipsum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Justo Quam\n             &lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
   "navigation": {
    "dropdown": [
     {
@@ -2552,6 +2418,140 @@
     }
    ]
   },
+  "card": {
+   "card": [
+    {
+     "name": "Card",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Card"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "image": [
+    {
+     "name": "Image",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Image"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-outline",
+       "escaped": "btn-outline",
+       "description": "Outline button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__image\"&gt;\n             &lt;img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "header": [
+    {
+     "name": "Header",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Header"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/h4&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "footer": [
+    {
+     "name": "Footer",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             Footer content\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "list": [
+    {
+     "name": "List",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "List"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;ul class=\"c-list c-list--flush\"&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Condimentum Ipsum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Justo Quam\n             &lt;/div&gt;\n         &lt;/ul&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;div class=\"c-list c-list--flush\"&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Condimentum Ipsum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Justo Quam\n             &lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "layout": {
    "main footer": [
     {
@@ -2694,6 +2694,38 @@
        "path": "~/source/sass/objects/layout/_grid.scss",
        "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
        "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "gallery": {
+   "image grid": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Gallery",
+       "section": "Image Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "path": "~/source/sass/components/gallery/_gallery.scss",
+       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }
@@ -2952,38 +2984,6 @@
        "path": "~/source/sass/components/form/_tag-manager.scss",
        "example": "\n<div class=\"tag-manager\" data-input-name=\"tags\">\n    <div class=\"tag-manager-input\">\n        <div class=\"input-group\">\n            <input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\">\n            <span class=\"input-group-addon-btn\"><button name=\"add-tag\" class=\"btn\">Add</button></span>\n        </div>\n    </div>\n    <div class=\"tag-manager-selected\">\n        <label class=\"label-sm\">Tags</label>\n        <ul class=\"tags\">\n            <li>\n                <button class=\"btn btn-plain\" data-action=\"remove\">&times;</button>\n                Predefined tag\n                <input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\">\n            </li>\n        </ul>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"tag-manager\" data-input-name=\"tags\"&gt;\n    &lt;div class=\"tag-manager-input\"&gt;\n        &lt;div class=\"input-group\"&gt;\n            &lt;input type=\"text\" name=\"tag\" class=\"form-control\" placeholder=\"Add tags…\" autocomplete=\"off\"&gt;\n            &lt;span class=\"input-group-addon-btn\"&gt;&lt;button name=\"add-tag\" class=\"btn\"&gt;Add&lt;/button&gt;&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"tag-manager-selected\"&gt;\n        &lt;label class=\"label-sm\"&gt;Tags&lt;/label&gt;\n        &lt;ul class=\"tags\"&gt;\n            &lt;li&gt;\n                &lt;button class=\"btn btn-plain\" data-action=\"remove\"&gt;&times;&lt;/button&gt;\n                Predefined tag\n                &lt;input type=\"hidden\" name=\"tags[]\" value=\"{{ $item }}\"&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "gallery": {
-   "image grid": [
-    {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Gallery",
-       "section": "Image Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "path": "~/source/sass/components/gallery/_gallery.scss",
-       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
       }
      ]
     }

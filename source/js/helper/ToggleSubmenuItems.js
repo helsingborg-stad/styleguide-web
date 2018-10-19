@@ -43,6 +43,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
         $.ajax({
             url: HbgPrimeArgs.api.root + 'municipio/v1/navigation/' + parentId,
             method: 'GET',
+            cache: false,
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('X-WP-Nonce', HbgPrimeArgs.api.nonce);
             }
