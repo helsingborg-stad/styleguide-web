@@ -315,13 +315,15 @@ small,
     font-weight: 900 !important;
 }
 
-
-
-
 @each $color in $palette-map {
     $i: index($palette-map, $color);
 
     .text-color-#{$i} {
         color: $color !important;
     }
+}
+
+
+.u-font-inherit {
+    font: inherit;
 }
