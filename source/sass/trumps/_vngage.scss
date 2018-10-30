@@ -1,7 +1,15 @@
+.vngage-banner.vngage-dooreye.vngage-active {
+    bottom:45px !important;
+}
+.vngage-banner.vngage-dooreye.vngage-active .vngage-tab,
+.vngage-banner.vngage-dooreye.vngage-inactive .vngage-tab {
+    bottom:12px !important;
+}
+
 @media only screen and (max-width: 610px) {
 
     .vngage-tab {
-        bottom: 0px !important;
+        bottom:12px; !important;
         top: unset !important;
         transform: rotate(0deg) !important;
         right: -6px !important;
