@@ -37,6 +37,10 @@
             }
         }
     }
-
+    .vngage-banner.vngage-dooreye.vngage-active .vngage-tab, .vngage-banner.vngage-dooreye.vngage-inactive .vngage-tab {
+        background-size: 21px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
 
 }
