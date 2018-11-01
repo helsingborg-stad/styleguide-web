@@ -41,23 +41,15 @@
    "spinner",
    "visibility"
   ],
+  "media": [
+   "audioplayer",
+   "videoplayer"
+  ],
   "special": [
    "accordion",
    "modals",
    "slider",
    "tooltip"
-  ],
-  "media": [
-   "audioplayer",
-   "videoplayer"
-  ],
-  "layout": [
-   "container",
-   "pull left",
-   "pull right",
-   "clearfix",
-   "grid",
-   "main footer"
   ],
   "blog": [
    "comments form",
@@ -72,13 +64,6 @@
    "news",
    "panel"
   ],
-  "card": [
-   "card",
-   "image",
-   "header",
-   "footer",
-   "list"
-  ],
   "buttons": [
    "base",
    "floating button",
@@ -92,6 +77,13 @@
    "block button",
    "offcanvas button"
   ],
+  "card": [
+   "card",
+   "image",
+   "header",
+   "footer",
+   "list"
+  ],
   "navigation": [
    "dropdown",
    "breadcrumbs",
@@ -104,8 +96,13 @@
    "tabs",
    "tags"
   ],
-  "gallery": [
-   "image grid"
+  "layout": [
+   "main footer",
+   "container",
+   "pull left",
+   "pull right",
+   "clearfix",
+   "grid"
   ],
   "forms": [
    "datepicker",
@@ -120,6 +117,12 @@
    "select",
    "tag manager"
   ],
+  "gallery": [
+   "image grid"
+  ],
+  "hero": [
+   "hero"
+  ],
   "list": [
    "basic list",
    "active items",
@@ -127,9 +130,6 @@
    "links",
    "buttons",
    "flush"
-  ],
-  "hero": [
-   "hero"
   ],
   "notice": [
    "notice"
@@ -143,11 +143,11 @@
    "full",
    "split"
   ],
-  "stripe": [
-   "general"
-  ],
   "social": [
    "feed"
+  ],
+  "stripe": [
+   "general"
   ],
   "tables": [
    "basic"
@@ -1234,6 +1234,54 @@
     }
    ]
   },
+  "media": {
+   "audioplayer": [
+    {
+     "name": "HTML 5 Audio player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "AudioPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "path": "~/source/sass/components/audio/audio.scss",
+       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
+       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "videoplayer": [
+    {
+     "name": "Video Player",
+     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Media",
+       "section": "VideoPlayer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "path": "~/source/sass/components/player/_player.scss",
+       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
+       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "special": {
    "accordion": [
     {
@@ -1451,201 +1499,6 @@
        "escaped": "\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip below\"&gt;Tooltip below&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip above\" data-tooltip-top&gt;Tooltip above&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip left\" data-tooltip-left&gt;Tooltip left&lt;/a&gt;&lt;br&gt;\n&lt;a href=\"#\" data-tooltip=\"This is a tooltip right\" data-tooltip-right&gt;Tooltip right&lt;/a&gt;"
       }
      ]
-    }
-   ]
-  },
-  "media": {
-   "audioplayer": [
-    {
-     "name": "HTML 5 Audio player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "AudioPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "path": "~/source/sass/components/audio/audio.scss",
-       "example": "\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>\n<div class=\"audio-player\">\n <audio controls controlsList=\"nodownload\">\n     <source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\">\n </audio>\n <div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\">\n     <a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"></a>\n     <a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"></a>\n </div>\n <input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/>\n</div>",
-       "escaped": "\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=996');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;\n&lt;div class=\"audio-player\"&gt;\n &lt;audio controls controlsList=\"nodownload\"&gt;\n     &lt;source src=\"/dist/audio/test2.mp3\" type=\"audio/mpeg\"&gt;\n &lt;/audio&gt;\n &lt;div class=\"album-art\" style=\"background-image: url('https://picsum.photos/50/50?image=837');\"&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-play pricon pricon-play\"&gt;&lt;/a&gt;\n     &lt;a href=\"#play\" class=\"toggle-action-pause pricon pricon-pause\"&gt;&lt;/a&gt;\n &lt;/div&gt;\n &lt;input type=\"range\" class=\"action-seek\" value=\"0\" max=\"100\" step=\"0.01\"/&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "videoplayer": [
-    {
-     "name": "Video Player",
-     "description": "<p><span class=\"label label-theme\">JavaScript dependent</span> Video player.</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Media",
-       "section": "VideoPlayer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "path": "~/source/sass/components/player/_player.scss",
-       "example": "\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\">\n    <a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>\n<div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\">\n    <a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"></a>\n</div>",
-       "escaped": "\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=890');\"&gt;\n    &lt;a href=\"#video-player-GQxqaoJNx_E\" data-video-id=\"GQxqaoJNx_E\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"player ratio-16-9\" style=\"background-image:url('https://unsplash.it/800/800/?image=892');\"&gt;\n    &lt;a href=\"#video-player-101935278\" data-video-id=\"101935278\" data-unavailable=\"Video playback unavailable, activate enable JavaScript to enable.\"&gt;&lt;/a&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "layout": {
-   "container": [
-    {
-     "name": "Container",
-     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Container"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container\"></div>",
-       "path": "~/source/sass/objects/layout/_container.scss",
-       "example": "\n<div class=\"container\"></div>",
-       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull left": [
-    {
-     "name": "Pull left",
-     "description": "<p>Floats an element to the left edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull left"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "pull right": [
-    {
-     "name": "Pull right",
-     "description": "<p>Floats an element to the right edge of the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Pull right"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "clearfix": [
-    {
-     "name": "Clearfix",
-     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Clearfix"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"clearfix\"></div>",
-       "path": "~/source/sass/objects/layout/_float.scss",
-       "example": "\n<div class=\"clearfix\"></div>",
-       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "grid": [
-    {
-     "name": "Grid",
-     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".grid-md-fit-content",
-       "escaped": "grid-md-fit-content",
-       "description": ""
-      },
-      {
-       "name": ".grid-md-auto",
-       "escaped": "grid-md-auto",
-       "description": ""
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "path": "~/source/sass/objects/layout/_grid.scss",
-       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
-       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "main footer": [
-    {
-     "name": "Main Footer",
-     "description": "<p>The website&#39;s main footer</p>\n",
-     "page": [
-      {
-       "nav": "Layout",
-       "section": "Main Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "path": "~/source/sass/components/footer/_footer.scss",
-       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
-       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
-      }
-     ],
-     "helsingborg.se</a></li>": ""
     }
    ]
   },
@@ -1915,140 +1768,6 @@
        "path": "~/source/sass/components/box/_panel.scss",
        "example": "\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <div class=\"box-content\">\n                <p>Primary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <div class=\"box-content\">\n                <p>Secondary box with plain text content.</p>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"grid\">\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-primary\">\n            <h4 class=\"box-title\">Primary panel box</h4>\n            <ul>\n                <li>This is a box panel</li>\n                <li>Displaying a list</li>\n                <li><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\">Do not click here</a></li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"grid-md-6\">\n        <div class=\"box box-panel box-panel-secondary\">\n            <h4 class=\"box-title\">Secondary panel box</h4>\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr>\n                        <th>First column</th>\n                        <th>Second column</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>This is</td>\n                        <td>a box panel</td>\n                    </tr>\n                    <tr>\n                        <td>Displaying</td>\n                        <td>a table</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Primary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;div class=\"box-content\"&gt;\n                &lt;p&gt;Secondary box with plain text content.&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid\"&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-primary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Primary panel box&lt;/h4&gt;\n            &lt;ul&gt;\n                &lt;li&gt;This is a box panel&lt;/li&gt;\n                &lt;li&gt;Displaying a list&lt;/li&gt;\n                &lt;li&gt;&lt;a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"link-item\"&gt;Do not click here&lt;/a&gt;&lt;/li&gt;\n            &lt;/ul&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"grid-md-6\"&gt;\n        &lt;div class=\"box box-panel box-panel-secondary\"&gt;\n            &lt;h4 class=\"box-title\"&gt;Secondary panel box&lt;/h4&gt;\n            &lt;table class=\"table table-striped\"&gt;\n                &lt;thead&gt;\n                    &lt;tr&gt;\n                        &lt;th&gt;First column&lt;/th&gt;\n                        &lt;th&gt;Second column&lt;/th&gt;\n                    &lt;/tr&gt;\n                &lt;/thead&gt;\n                &lt;tbody&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;This is&lt;/td&gt;\n                        &lt;td&gt;a box panel&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Displaying&lt;/td&gt;\n                        &lt;td&gt;a table&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/tbody&gt;\n            &lt;/table&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "card": {
-   "card": [
-    {
-     "name": "Card",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Card"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "image": [
-    {
-     "name": "Image",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Image"
-      }
-     ],
-     "state": [
-      {
-       "name": ":disabled",
-       "escaped": ":disabled",
-       "description": "Disabled button"
-      },
-      {
-       "name": ".btn-sm",
-       "escaped": "btn-sm",
-       "description": "Small button"
-      },
-      {
-       "name": ".btn-lg",
-       "escaped": "btn-lg",
-       "description": "Large button"
-      },
-      {
-       "name": ".btn-outline",
-       "escaped": "btn-outline",
-       "description": "Outline button"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__image\"&gt;\n             &lt;img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "header": [
-    {
-     "name": "Header",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Header"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/h4&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "footer": [
-    {
-     "name": "Footer",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "Footer"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             Footer content\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ],
-   "list": [
-    {
-     "name": "List",
-     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
-     "page": [
-      {
-       "nav": "Card",
-       "section": "List"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
-       "path": "~/source/sass/components/card/_card.scss",
-       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
-       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;ul class=\"c-list c-list--flush\"&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Condimentum Ipsum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Justo Quam\n             &lt;/div&gt;\n         &lt;/ul&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;div class=\"c-list c-list--flush\"&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Condimentum Ipsum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Justo Quam\n             &lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -2381,6 +2100,140 @@
     }
    ]
   },
+  "card": {
+   "card": [
+    {
+     "name": "Card",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Card"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "image": [
+    {
+     "name": "Image",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Image"
+      }
+     ],
+     "state": [
+      {
+       "name": ":disabled",
+       "escaped": ":disabled",
+       "description": "Disabled button"
+      },
+      {
+       "name": ".btn-sm",
+       "escaped": "btn-sm",
+       "description": "Small button"
+      },
+      {
+       "name": ".btn-lg",
+       "escaped": "btn-lg",
+       "description": "Large button"
+      },
+      {
+       "name": ".btn-outline",
+       "escaped": "btn-outline",
+       "description": "Outline button"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__image\">\n             <img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\">\n         </div>\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card title</h4>\n             <p class=\"c-card__text\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;img class=\"c-card__image\" src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__image\"&gt;\n             &lt;img src=\"https:helsingborg.se/wp-content/uploads/2014/12/cyklist_groningen_420x280.jpg\"&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card title&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "header": [
+    {
+     "name": "Header",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Header"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with header\n         </h4>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__header\">\n             Card with header\n         </div>\n         <div class=\"c-card__body\">\n             <p class=\"c-card__text\">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/h4&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__header\"&gt;\n             Card with header\n         &lt;/div&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;p class=\"c-card__text\"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "footer": [
+    {
+     "name": "Footer",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "Footer"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             Footer content\n         </div>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <div class=\"c-card__body\">\n             <h4 class=\"c-card__title\">Card with footer</h4>\n             <p class=\"c-card__text\">SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>\n         </div>\n         <div class=\"c-card__footer\">\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n             <a href=\"#\" class=\"c-card__link\">Card link</a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             Footer content\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;div class=\"c-card__body\"&gt;\n             &lt;h4 class=\"c-card__title\"&gt;Card with footer&lt;/h4&gt;\n             &lt;p class=\"c-card__text\"&gt;SCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;\n         &lt;/div&gt;\n         &lt;div class=\"c-card__footer\"&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-card__link\"&gt;Card link&lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "list": [
+    {
+     "name": "List",
+     "description": "<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>\n",
+     "page": [
+      {
+       "nav": "Card",
+       "section": "List"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "path": "~/source/sass/components/card/_card.scss",
+       "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <ul class=\"c-list c-list--flush\">\n             <div class=\"c-list__item\">\n                 Tellus Inceptos Commodo\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Pharetra Aenean Condimentum\n             </div>\n             <div class=\"c-list__item\">\n                 Condimentum Ipsum\n             </div>\n             <div class=\"c-list__item\">\n                 Tortor Justo Quam\n             </div>\n         </ul>\n     </div>\n </div>\n <div class=\"grid-s-12 grid-md-6\">\n     <div class=\"c-card\">\n         <h4 class=\"c-card__header\">\n             Card with list\n         </h4>\n         <div class=\"c-list c-list--flush\">\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tellus Inceptos Commodo\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Pharetra Aenean Condimentum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Condimentum Ipsum\n             </a>\n             <a href=\"#\" class=\"c-list__item c-list__action\">\n                 Tortor Justo Quam\n             </a>\n         </div>\n     </div>\n </div>\n</div>",
+       "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;ul class=\"c-list c-list--flush\"&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Condimentum Ipsum\n             &lt;/div&gt;\n             &lt;div class=\"c-list__item\"&gt;\n                 Tortor Justo Quam\n             &lt;/div&gt;\n         &lt;/ul&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;div class=\"c-card\"&gt;\n         &lt;h4 class=\"c-card__header\"&gt;\n             Card with list\n         &lt;/h4&gt;\n         &lt;div class=\"c-list c-list--flush\"&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tellus Inceptos Commodo\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Pharetra Aenean Condimentum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Condimentum Ipsum\n             &lt;/a&gt;\n             &lt;a href=\"#\" class=\"c-list__item c-list__action\"&gt;\n                 Tortor Justo Quam\n             &lt;/a&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "navigation": {
    "dropdown": [
     {
@@ -2699,33 +2552,148 @@
     }
    ]
   },
-  "gallery": {
-   "image grid": [
+  "layout": {
+   "main footer": [
     {
-     "name": "Modals",
-     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
-     "author": "Sebastian Thulin",
+     "name": "Main Footer",
+     "description": "<p>The website&#39;s main footer</p>\n",
      "page": [
       {
-       "nav": "Gallery",
-       "section": "Image Grid"
-      }
-     ],
-     "state": [
-      {
-       "name": ".modal-backdrop-1",
-       "escaped": "modal-backdrop-1",
-       "description": "Stripe color 1 as backdrop"
+       "nav": "Layout",
+       "section": "Main Footer"
       }
      ],
      "markup": [
       {
        "lang": "markup",
        "description": "",
-       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "path": "~/source/sass/components/gallery/_gallery.scss",
-       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
-       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+       "modifier": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "path": "~/source/sass/components/footer/_footer.scss",
+       "example": "\n<footer class=\"main-footer\">\n    <div class=\"container\">\n        <div class=\"grid\">\n            <div class=\"grid-lg-12\">\n                <a href=\"/\" class=\"logotype\"><img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"></a>\n            </div>\n        </div>\n        <div class=\"grid\">\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Telefonnummer</strong></li>\n                    <li>Helsingborg kontaktcenter: 042-10 50 00</li>\n                </ul>\n                <ul>\n                    <li><strong>E-post</strong></li>\n                    <li><a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\">kontaktcenter@helsingborg.se</a></li>\n                </ul>\n            </div>\n            <div class=\"grid-lg-6\">\n                <ul>\n                    <li><strong>Postadress</strong></li>\n                    <li>Namn på verksamheten<br>251 89 Helsingborg</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</footer>",
+       "escaped": "\n&lt;footer class=\"main-footer\"&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-12\"&gt;\n                &lt;a href=\"/\" class=\"logotype\"&gt;&lt;img src=\"http://www.helsingborg.se/wp-content/themes/This-is-Helsingborg/assets/images/helsingborg-neg.svg\" alt=\"Helsingborg Stad\" width=\"239\" height=\"68\"&gt;&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=\"grid\"&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Telefonnummer&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Helsingborg kontaktcenter: 042-10 50 00&lt;/li&gt;\n                &lt;/ul&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;E-post&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;&lt;a href=\"mailto:kontaktcenter@helsingborg.se\" class=\"link-item link-item-light\"&gt;kontaktcenter@helsingborg.se&lt;/a&gt;&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n            &lt;div class=\"grid-lg-6\"&gt;\n                &lt;ul&gt;\n                    &lt;li&gt;&lt;strong&gt;Postadress&lt;/strong&gt;&lt;/li&gt;\n                    &lt;li&gt;Namn på verksamheten&lt;br&gt;251 89 Helsingborg&lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/footer&gt;"
+      }
+     ],
+     "helsingborg.se</a></li>": ""
+    }
+   ],
+   "container": [
+    {
+     "name": "Container",
+     "description": "<p>A container with a maximum width of <code>$screen-lg-max</code></p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Container"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container\"></div>",
+       "path": "~/source/sass/objects/layout/_container.scss",
+       "example": "\n<div class=\"container\"></div>",
+       "escaped": "\n&lt;div class=\"container\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull left": [
+    {
+     "name": "Pull left",
+     "description": "<p>Floats an element to the left edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull left"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-left\">Floating to the left</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-left\"&gt;Floating to the left&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "pull right": [
+    {
+     "name": "Pull right",
+     "description": "<p>Floats an element to the right edge of the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Pull right"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"pull-right\">Floating to the right</div>\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"pull-right\"&gt;Floating to the right&lt;/div&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "clearfix": [
+    {
+     "name": "Clearfix",
+     "description": "<p>Used to clear floats. Can be used either on a div after a floated element or directly on the container.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Clearfix"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"clearfix\"></div>",
+       "path": "~/source/sass/objects/layout/_float.scss",
+       "example": "\n<div class=\"clearfix\"></div>",
+       "escaped": "\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;"
+      }
+     ]
+    }
+   ],
+   "grid": [
+    {
+     "name": "Grid",
+     "description": "<p>HbgPrime&#39;s grid system is a 12 column responsive grid.<br><strong>ATTENTION:</strong> Remove the <code>.grid-example</code> class before using.</p>\n",
+     "page": [
+      {
+       "nav": "Layout",
+       "section": "Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".grid-md-fit-content",
+       "escaped": "grid-md-fit-content",
+       "description": ""
+      },
+      {
+       "name": ".grid-md-auto",
+       "escaped": "grid-md-auto",
+       "description": ""
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "path": "~/source/sass/objects/layout/_grid.scss",
+       "example": "\n<div class=\"container-fluid\">\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-3\">grid-md-3</div>\n    <div class=\"grid-md-9\">grid-md-9</div>\n</div>\n<div class=\"grid grid-example\">\n    <div class=\"grid-md-4\">ett</div>\n    <div class=\"grid-md-4\">två<br>tre</div>\n    <div class=\"grid-md-4\">fyra</div>\n    <div class=\"grid-md-4\">fem</div>\n    <div class=\"grid-md-4\">sex<br>sju</div>\n    <div class=\"grid-md-4\">åtta</div>\n</div>\n </div>",
+       "escaped": "\n&lt;div class=\"container-fluid\"&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-3\"&gt;grid-md-3&lt;/div&gt;\n    &lt;div class=\"grid-md-9\"&gt;grid-md-9&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"grid grid-example\"&gt;\n    &lt;div class=\"grid-md-4\"&gt;ett&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;två&lt;br&gt;tre&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fyra&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;fem&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;sex&lt;br&gt;sju&lt;/div&gt;\n    &lt;div class=\"grid-md-4\"&gt;åtta&lt;/div&gt;\n&lt;/div&gt;\n &lt;/div&gt;"
       }
      ]
     }
@@ -2989,6 +2957,62 @@
     }
    ]
   },
+  "gallery": {
+   "image grid": [
+    {
+     "name": "Modals",
+     "description": "<p>CSS only modal box (exception for positioning).</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Gallery",
+       "section": "Image Grid"
+      }
+     ],
+     "state": [
+      {
+       "name": ".modal-backdrop-1",
+       "escaped": "modal-backdrop-1",
+       "description": "Stripe color 1 as backdrop"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "path": "~/source/sass/components/gallery/_gallery.scss",
+       "example": "\n<ul class=\"image-gallery grid grid-gallery\">\n    <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/>\n        </a>\n     </li>\n     <li class=\"grid-md-3\">\n        <a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\">\n            <img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/>\n        </a>\n     </li>\n</ul>",
+       "escaped": "\n&lt;ul class=\"image-gallery grid grid-gallery\"&gt;\n    &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=557\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=577\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n     &lt;li class=\"grid-md-3\"&gt;\n        &lt;a class=\"box lightbox-trigger\" href=\"https://unsplash.it/2000/1400/?image=582\" data-caption=\"Caption text Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\"&gt;\n            &lt;img alt=\"Image alt text\" src=\"https://unsplash.it/200/150/?image=582\"/&gt;\n        &lt;/a&gt;\n     &lt;/li&gt;\n&lt;/ul&gt;"
+      }
+     ]
+    }
+   ]
+  },
+  "hero": {
+   "hero": [
+    {
+     "name": "Hero",
+     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
+     "page": [
+      {
+       "nav": "Hero",
+       "section": "Hero"
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "path": "~/source/sass/components/hero/_hero.scss",
+       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
+       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "list": {
    "basic list": [
     {
@@ -3157,30 +3181,6 @@
        "path": "~/source/sass/components/list/_list.scss",
        "example": "\n<div class=\"grid\">\n <div class=\"grid-s-12 grid-md-6\">\n     <ul class=\"c-list c-list--flush\">\n         <li class=\"c-list__item\">\n             Malesuada Aenean Vulputate\n         </li>\n         <li class=\"c-list__item\">\n             Pharetra Tortor Commodo Porta\n         </li>\n         <li class=\"c-list__item\">\n             Sem Vehicula Ullamcorper\n         </li>\n         <li class=\"c-list__item\">\n             Venenatis Dapibus Etiam Bibendum\n         </li>\n         <li class=\"c-list__item\">\n             Ipsum Quam\n         </li>\n     </ul>\n </div>\n</div>",
        "escaped": "\n&lt;div class=\"grid\"&gt;\n &lt;div class=\"grid-s-12 grid-md-6\"&gt;\n     &lt;ul class=\"c-list c-list--flush\"&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Malesuada Aenean Vulputate\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Pharetra Tortor Commodo Porta\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Sem Vehicula Ullamcorper\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Venenatis Dapibus Etiam Bibendum\n         &lt;/li&gt;\n         &lt;li class=\"c-list__item\"&gt;\n             Ipsum Quam\n         &lt;/li&gt;\n     &lt;/ul&gt;\n &lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "hero": {
-   "hero": [
-    {
-     "name": "Hero",
-     "description": "<p>Hero image. Typically used with the brand stripe as in the following example.</p>\n",
-     "page": [
-      {
-       "nav": "Hero",
-       "section": "Hero"
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "path": "~/source/sass/components/hero/_hero.scss",
-       "example": "\n<div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\">\n    <div class=\"stripe\">\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n        <div></div>\n    </div>\n</div>",
-       "escaped": "\n&lt;div class=\"hero\" style=\"height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');\"&gt;\n    &lt;div class=\"stripe\"&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"
       }
      ]
     }
@@ -3457,6 +3457,38 @@
     }
    ]
   },
+  "social": {
+   "feed": [
+    {
+     "name": "Feed",
+     "description": "<p>New generation social feed apparence</p>\n",
+     "author": "Sebastian Thulin",
+     "page": [
+      {
+       "nav": "Social",
+       "section": "Feed"
+      }
+     ],
+     "state": [
+      {
+       "name": ".social-compressed",
+       "escaped": "social-compressed",
+       "description": "Apperance is adjusted to fit a narrow view horizontally."
+      }
+     ],
+     "markup": [
+      {
+       "lang": "markup",
+       "description": "",
+       "modifier": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
+       "path": "~/source/sass/components/social/feed.scss",
+       "example": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
+       "escaped": "\n&lt;ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
+      }
+     ]
+    }
+   ]
+  },
   "stripe": {
    "general": [
     {
@@ -3504,38 +3536,6 @@
        "path": "~/source/sass/components/stripe/_stripe.scss",
        "example": "\n<div class=\"stripe\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-red\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-blue\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-green\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>\n<div class=\"stripe stripe-purple\">\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n    <div></div>\n</div>",
        "escaped": "\n&lt;div class=\"stripe\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-red\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-blue\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-green\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"stripe stripe-purple\"&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n&lt;/div&gt;"
-      }
-     ]
-    }
-   ]
-  },
-  "social": {
-   "feed": [
-    {
-     "name": "Feed",
-     "description": "<p>New generation social feed apparence</p>\n",
-     "author": "Sebastian Thulin",
-     "page": [
-      {
-       "nav": "Social",
-       "section": "Feed"
-      }
-     ],
-     "state": [
-      {
-       "name": ".social-compressed",
-       "escaped": "social-compressed",
-       "description": "Apperance is adjusted to fit a narrow view horizontally."
-      }
-     ],
-     "markup": [
-      {
-       "lang": "markup",
-       "description": "",
-       "modifier": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
-       "path": "~/source/sass/components/social/feed.scss",
-       "example": "\n<ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n <li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\">\n     <div class=\"material\">\n         <div class=\"social-image\">\n             <a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"></a>\n         </div>\n         <div class=\"social-user\">\n             <div class=\"user-image material-shadow-md\">\n                 <img src=\"https://unsplash.it/75/75?image=469\"/>\n             </div>\n             <div class=\"social-post-details\">\n                 <a class=\"social-author\" rel=\"author\" href=\"#author\">John Doe</a>\n                 <time class=\"social-publish\">9 hours ago</time>\n             </div>\n         </div>\n         <div class=\"social-content\">\n             <a href=\"#post\" class=\"social-text\" class=\"social-text\">\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             </a>\n             <a href=\"#link\" class=\"social-link\">\n                 <span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"></span>\n                 <span class=\"social-link-text\">\n                     <h4>Magna Bibendum Fermentum</h4>\n                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>\n                 </span>\n             </a>\n         </div>\n         <div class=\"social-footer clearfix\">\n             <span class=\"text-left\"><i class=\"pricon pricon-thumbs-up\"></i> 394 likes</span>\n             <span class=\"text-right\">posted on facebook</span>\n         </div>\n     </div>\n </li>\n</ul>\n<a class=\"btn btn-primary btn-block\" href=\"#feed\">View all posts</a>",
-       "escaped": "\n&lt;ul class=\"social social-feed-v2 grid no-gutter\" data-packery='{ \"itemSelector\": \".social-item\", \"percentPosition\": true, \"transitionDuration\": 0 }'&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n &lt;li class=\"social-item grid-xs-12 grid-sm-6 grid-md-6 grid-lg-4\"&gt;\n     &lt;div class=\"material\"&gt;\n         &lt;div class=\"social-image\"&gt;\n             &lt;a href=\"#post\" class=\"ratio-16-9\" style=\"background-image: url('https://unsplash.it/300/200?image=468');\"&gt;&lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-user\"&gt;\n             &lt;div class=\"user-image material-shadow-md\"&gt;\n                 &lt;img src=\"https://unsplash.it/75/75?image=469\"/&gt;\n             &lt;/div&gt;\n             &lt;div class=\"social-post-details\"&gt;\n                 &lt;a class=\"social-author\" rel=\"author\" href=\"#author\"&gt;John Doe&lt;/a&gt;\n                 &lt;time class=\"social-publish\"&gt;9 hours ago&lt;/time&gt;\n             &lt;/div&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-content\"&gt;\n             &lt;a href=\"#post\" class=\"social-text\" class=\"social-text\"&gt;\n                 Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.\n             &lt;/a&gt;\n             &lt;a href=\"#link\" class=\"social-link\"&gt;\n                 &lt;span class=\"social-link-image\" style=\"background-image: url(https://unsplash.it/75/75?image=169);\"&gt;&lt;/span&gt;\n                 &lt;span class=\"social-link-text\"&gt;\n                     &lt;h4&gt;Magna Bibendum Fermentum&lt;/h4&gt;\n                     &lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;\n                 &lt;/span&gt;\n             &lt;/a&gt;\n         &lt;/div&gt;\n         &lt;div class=\"social-footer clearfix\"&gt;\n             &lt;span class=\"text-left\"&gt;&lt;i class=\"pricon pricon-thumbs-up\"&gt;&lt;/i&gt; 394 likes&lt;/span&gt;\n             &lt;span class=\"text-right\"&gt;posted on facebook&lt;/span&gt;\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/li&gt;\n&lt;/ul&gt;\n&lt;a class=\"btn btn-primary btn-block\" href=\"#feed\"&gt;View all posts&lt;/a&gt;"
       }
      ]
     }
