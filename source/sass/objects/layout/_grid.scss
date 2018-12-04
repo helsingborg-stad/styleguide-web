@@ -172,7 +172,8 @@ $grid-gutters: (
 //Temporary scope fix!
 .modularity-mod-index > .grid,
 .modularity-mod-posts > .grid,
-.modularity-mod-contact > .grid {
+.modularity-mod-contact > .grid,
+.mod-posts > .grid {
     @extend .grid--columns;
 }
 
