@@ -4,7 +4,9 @@ HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 HelsingborgPrime.Helper.HyperForm = (function ($) {
 
     function HyperForm() {
-        this.confirmValidationFields();
+        document.addEventListener("DOMContentLoaded", function() {
+            this.confirmValidationFields();
+        }.bind(this));
     }
 
     HyperForm.prototype.confirmValidationFields = function() {
