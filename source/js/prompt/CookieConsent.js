@@ -15,16 +15,21 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
     }
 
     CookieConsent.prototype.init = function () {
-        var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
+        try {
+            var showCookieConsent = (HelsingborgPrime.Args.get('cookieConsent.show')) ? HelsingborgPrime.Args.get('cookieConsent.show') : true;
 
-        if (showCookieConsent && !this.hasAccepted()) {
-            this.displayConsent();
+            if (showCookieConsent && !this.hasAccepted()) {
+                this.displayConsent();
 
-            $(document).on('click', '[data-action="cookie-consent"]', function (e) {
-                e.preventDefault();
-                var btn = $(e.target).closest('button');
-                this.accept();
-            }.bind(this));
+                $(document).on('click', '[data-action="cookie-consent"]', function (e) {
+                    e.preventDefault();
+                    var btn = $(e.target).closest('button');
+                    this.accept();
+                }.bind(this));
+            }
+
+        } catch(err) {
+            console.log(err);
         }
     };
 
