@@ -92,8 +92,10 @@
             color: rgba(0, 0, 0, 0.87);
         }
 
-        a, a:link, a:active, a:hover, a:visited {
-            color: rgba(0, 0, 0, 0.87);
+        a:not(.btn-outline) {
+            &:link, &:active, &:hover, &:visited {
+                color: rgba(0, 0, 0, 0.87);
+            }
         }
     }
 }
