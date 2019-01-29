@@ -48,6 +48,13 @@
     span {
         display: inline-block;
         vertical-align: middle;
+        max-width: 90%;
+    }
+
+    a,
+    .link {
+        color: white;
+        text-decoration: underline;
     }
 
     & + .notice {
@@ -75,7 +82,7 @@
     }
 }
 
-[data-action="toggle-notice-content"] {
+[data-action='toggle-notice-content'] {
     position: relative;
     top: -2px;
 }
@@ -103,11 +110,11 @@
 }
 
 .notice-sm {
-    font-size: .9em;
-    padding: .2em .5em;
+    font-size: 0.9em;
+    padding: 0.2em 0.5em;
 
     &.pricon-space-right::before {
-        margin-right: .2em;
+        margin-right: 0.2em;
     }
 
     &.pricon::before {
@@ -118,7 +125,7 @@
         margin-right: 0px;
     }
 
-    [class*="grid-"] {
+    [class*='grid-'] {
         padding-left: 8px;
         padding-right: 8px;
     }
