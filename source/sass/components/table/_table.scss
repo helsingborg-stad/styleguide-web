@@ -44,7 +44,6 @@
 article table,
 .mce-item-table,
 .modularity-table {
-
     @include material-radius;
     @include material-shadow;
 
@@ -84,7 +83,8 @@ article table,
 }
 
 .mce-item-table {
-    th, td {
+    th,
+    td {
         min-width: 30px;
     }
 }
@@ -99,9 +99,10 @@ article table,
 
 /* Respect border-width up to 10 px */
 @for $i from 0 through 10 {
-    article table[border="#{$i}"] {
+    article table[border='#{$i}'] {
         border-width: #{$i}px;
-        thead, tbody {
+        thead,
+        tbody {
             th + th,
             td + td,
             tr + tr {
@@ -111,7 +112,7 @@ article table,
     }
 }
 
-body:not(.material-no-shadow) article table[border="0"] {
+body:not(.material-no-shadow) article table[border='0'] {
     box-shadow: none;
 }
 
@@ -152,15 +153,17 @@ article table,
 }
 
 .table.table-va-top {
-    th, td {
+    th,
+    td {
         vertical-align: top;
     }
 }
 
 table.table-sm {
-    font-size: .8em;
+    font-size: 0.8em;
 
-    th, td {
+    th,
+    td {
         padding: $cell-padding-sm;
     }
 }
@@ -168,7 +171,8 @@ table.table-sm {
 table.table-lg {
     font-size: 1.1em;
 
-    th, td {
+    th,
+    td {
         padding: $cell-padding-lg;
     }
 }
@@ -176,12 +180,12 @@ table.table-lg {
 .box-filled .table,
 .box-filled .modularity-table {
     margin-top: 10px;
-    font-size: .8em;
+    font-size: 0.8em;
     border: none;
-    border-top: 1px solid rgba(#fff, .3);
+    border-top: 1px solid rgba(#fff, 0.3);
 
     * {
-        border-color: rgba(#fff, .3);
+        border-color: rgba(#fff, 0.3);
     }
 
     tbody,
@@ -190,26 +194,31 @@ table.table-lg {
     }
 
     thead {
-       background-color: rgba(#fff, .2);
+        background-color: rgba(#fff, 0.2);
     }
 
     &.table-striped tbody tr:nth-child(2n) {
-        background-color: rgba(#fff, .2);
+        background-color: rgba(#fff, 0.2);
     }
 
     &.table-hover {
         tbody {
             tr:hover {
-                background-color: rgba(#fff, .3);
+                background-color: rgba(#fff, 0.3);
             }
         }
 
         &.table-striped {
             tbody {
                 tr:nth-child(even):hover {
-                    background-color: rgba(#fff, .3);
+                    background-color: rgba(#fff, 0.3);
                 }
             }
         }
     }
+}
+
+.table.table--plain {
+    border: none;
+    box-shadow: none !important;
 }
