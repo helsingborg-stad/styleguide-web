@@ -165,6 +165,10 @@ $eventBorderRadius: 4px;
 .calendar__year {
     text-align: center;
     font-weight: bold;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
 
 .calendar__day {
