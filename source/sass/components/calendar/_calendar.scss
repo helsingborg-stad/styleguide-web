@@ -34,6 +34,8 @@ $eventBorderRadius: 4px;
     width: 100%;
     background: $calendarBackground;
     color: $calendarColor;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 /**
@@ -48,6 +50,9 @@ $eventBorderRadius: 4px;
 }
 
 .calendar__body {
+    @include mq('lg') {
+        padding: 24px;
+    }
     flex-direction: column;
     // height: 500px;
 }
@@ -110,9 +115,11 @@ $eventBorderRadius: 4px;
      * .calendar__cell--offset-3 ... etc
      */
 }
+
 .calendar__week:not(:last-child) .calendar__row--bg {
     border-bottom: solid 1px $calendarBorderColor;
 }
+
 .calendar__cell--bg {
     background: $calendarBackground;
     width: 100%;
@@ -140,7 +147,10 @@ $eventBorderRadius: 4px;
  * Calendar Header
  */
 .calendar__header {
-    padding-top: 16px;
+    padding: 16px 0 8px 0;
+    @include mq('lg') {
+        padding: 16px 24px 8px 24px;
+    }
     background: $calendarHeaderBackground;
     color: $calendarHeaderColor;
 
@@ -173,7 +183,7 @@ $eventBorderRadius: 4px;
 
 .calendar__day {
     text-align: left;
-    padding: 0px 8px;
+    padding: 0px 24px;
 }
 
 .calendar__year {
@@ -189,12 +199,12 @@ $eventBorderRadius: 4px;
 }
 .calendar__nav--prev {
     text-align: left;
-    padding-left: 16px;
+    padding-left: 24px;
 }
 
 .calendar__nav--next {
     text-align: right;
-    padding-right: 16px;
+    padding-right: 24px;
 }
 
 .calendar__title {
@@ -206,7 +216,7 @@ $eventBorderRadius: 4px;
  */
 .calendar__date {
     text-align: left;
-    padding: 16px 8px;
+    padding: 16px 24px;
     height: 100%;
     font-size: 13px;
 }
