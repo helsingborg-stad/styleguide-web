@@ -139,10 +139,6 @@ $eventBorderRadius: 4px;
     position: relative;
 }
 
-.calendar__header,
-.calendar__body {
-}
-
 /**
  * Calendar Header
  */
@@ -237,7 +233,7 @@ $eventBorderRadius: 4px;
 }
 
 .calendar__event.is-active {
-    background-color: #11a636;
+    background-color: $cellEventBackground;
 }
 
 .calendar__event.is-disabled {
@@ -264,7 +260,7 @@ $eventBorderRadius: 4px;
 }
 
 .calendar__event {
-    background: $cellEventBackground;
+    background: #11a636;
     color: $cellEventColor;
     overflow: hidden;
     width: calc(100% - 16px);
