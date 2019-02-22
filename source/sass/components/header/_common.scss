@@ -33,17 +33,12 @@
             color: #fff;
         }
 
-        .logotype svg,
-        .logotype path {
-            fill: #fff;
-        }
-
         .logotype .h1 {
             color: #fff;
         }
     }
 
-    .site-header.header-transparent.header-dark, {
+    .site-header.header-transparent.header-dark {
         color: $base-font-color;
 
         .navbar ul.nav > li > a {
@@ -52,11 +47,6 @@
 
         .navbar:not(.is-sticky-scroll) ul.nav > li > a {
             color: $base-font-color;
-        }
-
-        .logotype svg,
-        .logotype path {
-            fill: $base-font-color;
         }
 
         .logotype .h1 {
