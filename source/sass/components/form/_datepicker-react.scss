@@ -1,0 +1,32 @@
+/**
+ * * * * * * * * * * *
+ * Datepicker component for React
+ * * * * * * * * * * *
+ *
+ */
+
+.DayPickerInput {
+    width: 100%;
+
+    &-OverlayWrapper {
+        z-index: $level-10;
+    }
+}
+
+.DayPicker-Day {
+    line-height: normal;
+    border-radius: 2px;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: $palette-3;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+    background-color: darken($palette-3, 5%);
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled)
+.DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+    background-color: $creamy-darker;
+}
