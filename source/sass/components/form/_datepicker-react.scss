@@ -13,6 +13,14 @@
     }
 }
 
+.DayPickerInput.form-control {
+    z-index: auto;
+
+    > input {
+        float: none;
+    }
+}
+
 .DayPicker-Day {
     line-height: normal;
     border-radius: 2px;
