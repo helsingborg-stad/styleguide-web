@@ -176,6 +176,7 @@
 // <i class="pricon pricon-angle-left"></i> pricon-angle-left<br>
 // <i class="pricon pricon-angle-down"></i> pricon-angle-down<br>
 // <i class="pricon pricon-angle-up"></i> pricon-angle-up<br>
+// <i class="pricon pricon-ticket"></i> pricon-ticket<br>
 // 
 //
 @font-face {
@@ -575,6 +576,7 @@ $pricon-angle-right: "\EC96";
 $pricon-angle-left: "\EC97";
 $pricon-angle-down: "\EC98";
 $pricon-angle-up: "\EC99";
+$pricon-ticket: "\ED0A";
 
 
 /* Glyphs */
@@ -738,6 +740,7 @@ $pricon-angle-up: "\EC99";
 .pricon-angle-left:before { content: $pricon-angle-left }
 .pricon-angle-down:before { content: $pricon-angle-down }
 .pricon-angle-up:before { content: $pricon-angle-up }
+.pricon-ticket:before { content: $pricon-ticket }
 
 
 /* Mixin */
