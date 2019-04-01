@@ -7,6 +7,7 @@
 
 .is-stand-by {
     animation: sallyStandBy 4000ms infinite linear;
+    -webkit-backface-visibility: hidden;
     will-change: transform;
 }
 
