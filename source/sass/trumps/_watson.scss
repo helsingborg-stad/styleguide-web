@@ -119,3 +119,10 @@ div#message-container {
     bottom: 14vmin;
     right: 4vmin;
 }
+
+// Flicker fix
+#watson-fab-icon, #watson-header {
+    transform: translate3D(0, 0, 0);
+    -webkit-transform: translate3D(0, 0, 0);
+}
+
