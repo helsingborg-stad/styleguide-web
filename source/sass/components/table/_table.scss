@@ -221,4 +221,9 @@ table.table-lg {
 .table.table--plain {
     border: none;
     box-shadow: none !important;
+
+    td {
+        padding: 0;
+        border: 0;
+    }
 }
