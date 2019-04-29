@@ -23,5 +23,11 @@
     ],
     "require": {
         "philo/laravel-blade": "^3.1"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "sh setup.sh",
+            "cd ./v2/ | git pull"
+        ]
     }
 }
