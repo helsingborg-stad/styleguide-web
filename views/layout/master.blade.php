@@ -99,7 +99,21 @@
         </div>
     </nav>
 
+    
+
     <div class="container">
+
+        <div class="grid" style="margin-bottom: 32px;">
+            <div class="grid-xs-12">
+                <!-- notice.blade.php -->
+                <div class="notice info">
+                    <span class="c-notice__label">
+                        We are working on something new! <a href="http://v2.styleguide.helsingborg.se/">Check it out here! </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
         <div class="grid">
             <div class="grid-md-3">
                 @include('layout.navigation')
