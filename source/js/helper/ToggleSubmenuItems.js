@@ -32,6 +32,7 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
         var markup = '';
         var parentId = this.getItemId(target);
+        var blogId = this.getBlogId(target); 
 
         if(typeof parentId == 'undefined') {
             window.location.href = $(target).siblings("a").attr('href');
@@ -44,6 +45,9 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
             url: HbgPrimeArgs.api.root + 'municipio/v1/navigation/' + parentId,
             method: 'GET',
             cache: false,
+            data: {
+                blogId: blogId
+            },
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('X-WP-Nonce', HbgPrimeArgs.api.nonce);
             }
@@ -63,6 +67,10 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
 
     ToggleSubmenuItems.prototype.getItemId = function (target) {
         return $(target).data('load-submenu');
+    };
+
+    ToggleSubmenuItems.prototype.getBlogId = function (target) {
+        return $(target).data('load-blog-id');
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
