@@ -1,4 +1,4 @@
-HelsingborgPrime = HelsingborgPrime || {};
+var HelsingborgPrime = HelsingborgPrime || {};
 HelsingborgPrime.Helper = HelsingborgPrime.Helper || {};
 
 HelsingborgPrime.Helper.ScrollElevator = (function ($) {
